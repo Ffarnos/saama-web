@@ -1,0 +1,4 @@
+[build.environment]
+    NODE_VERSION = "18.16.0"
+    NPM_VERSION = "9.5.1"
+    NVM_VERSION = "1.1.9"
