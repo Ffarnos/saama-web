@@ -17,9 +17,9 @@ const Index = () => {
         <TerapiaText scale={1.8}>
           GÉNESIS
         </TerapiaText>
-        <StartButton onClick={()=>navigate('/CirculoBase')}>
+        <StartButton onClick={()=>navigate('/circulo-base')}>
           <ResponsiveText scale={0.6} bold color={"white"}>
-            Comenzar Terapia
+            INICIAR CONEXION
           </ResponsiveText>
         </StartButton>
       </CenterContainer>
@@ -60,10 +60,10 @@ const Container = styled.div`
   align-items: center;
   height: 100vh;
 
-`
+`;
 
 const StartButton = styled.div`
-  border: 1.5px solid #bebdbd;
+  border: 2px solid #eaeaea;
   border-radius: 5px;
   padding: 10px 20px;
   user-select: none;
