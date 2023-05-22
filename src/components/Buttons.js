@@ -115,36 +115,6 @@ const ButtonBig = styled.div`
   
 `;
 
-const generateCircleStyles = (index, totalCircles) => {
-    const angle = (index / totalCircles) * 360; // Calcular el ángulo de posición
-    let radius = 220; // Radio del círculo grande
-    let circleSize = 80; // Tamaño de los círculos pequeños
-
-    if (window.innerWidth <= 420) {
-        circleSize = 40;
-        radius = 140;
-    }
-    else if (window.innerWidth <= 490) {
-        circleSize = 50;
-        radius = 170;
-    }
-    else if (window.innerWidth <= 560) {
-        circleSize = 70
-        radius = 190;
-    }
-
-
-    const centerX = -circleSize / 2; // Posición X del centro del contenedor (ajustado mediante translate)
-    const centerY = -circleSize / 2; // Posición Y del centro del contenedor (ajustado mediante translate)
-
-    const x = Math.cos((angle * Math.PI) / 180) * radius;
-    const y = Math.sin((angle * Math.PI) / 180) * radius;
-
-    return {
-        angle: `${angle}`,
-    };
-};
-
 let pi = 3.141592653589793;
 
 const Button = styled.div`
