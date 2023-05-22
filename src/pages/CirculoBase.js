@@ -2,6 +2,7 @@ import * as React from "react"
 import styled from 'styled-components';
 import Buttons from "../components/Buttons";
 import ResponsiveText from "../components/ResponsiveText";
+import NoSSR from "../NoSSR";
 
 const CirculoBase = () => {
     const petalos = [
@@ -80,7 +81,7 @@ const CirculoBase = () => {
     ];
 
     return <Background>
-            <Buttons petalos={petalos} bigButtonTitle={"COMENZAR TERAPIA"}/>
+        <NoSSR loadComponent={() => require('../components/Buttons').default} petalos={petalos} bigButtonTitle={"COMENZAR TERAPIA"}/>
     </Background>;
 }
 
