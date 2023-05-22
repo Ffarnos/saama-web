@@ -17,7 +17,7 @@ const Index = () => {
         <TerapiaText scale={1.8}>
           GÉNESIS
         </TerapiaText>
-        <StartButton onClick={()=>navigate('/circulo-base')}>
+        <StartButton onClick={()=>navigate('/CirculoBase')}>
           <ResponsiveText scale={0.6} bold color={"white"}>
             INICIAR CONEXION
           </ResponsiveText>
