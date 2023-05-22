@@ -6,6 +6,7 @@ import ResponsiveText from "../components/ResponsiveText";
 const CirculoBase = () => {
     const petalos = [
         {
+            index: 0,
             name: '1',
             colorBorder: "red",
             cantidad: 10,
@@ -13,6 +14,7 @@ const CirculoBase = () => {
             colorSigMenu: "green",
         },
         {
+            index: 1,
             name: '2',
             colorBorder: "greenLight",
             cantidad: 20,
@@ -20,6 +22,7 @@ const CirculoBase = () => {
             colorSigMenu: "green",
         },
         {
+            index: 2,
             name: '3',
             colorBorder: "yellow",
             cantidad: 5,
@@ -27,6 +30,7 @@ const CirculoBase = () => {
             colorSigMenu: "green",
         },
         {
+            index: 3,
             name: '4',
             colorBorder: "blue",
             cantidad: 12,
@@ -34,6 +38,7 @@ const CirculoBase = () => {
             colorSigMenu: "green",
         },
         {
+            index: 4,
             name: '5',
             colorBorder: "blueLight",
             cantidad: 4,
@@ -41,6 +46,7 @@ const CirculoBase = () => {
             colorSigMenu: "green",
         },
         {
+            index: 5,
             name: '6',
             colorBorder: "orange",
             cantidad: 8,
@@ -48,6 +54,7 @@ const CirculoBase = () => {
             colorSigMenu: "green",
         },
         {
+            index: 6,
             name: '7',
             colorBorder: "purple",
             cantidad: 3,
@@ -55,6 +62,7 @@ const CirculoBase = () => {
             colorSigMenu: "green",
         },
         {
+            index: 7,
             name: '8',
             colorBorder: "white",
             cantidad: 1,
@@ -62,6 +70,7 @@ const CirculoBase = () => {
             colorSigMenu: "green",
         },
         {
+            index: 8,
             name: '9',
             colorBorder: "red",
             cantidad: 10,
@@ -71,10 +80,7 @@ const CirculoBase = () => {
     ];
 
     return <Background>
-        <Container>
-            <Title scale={1} color="white">CIRCULO BASE</Title>
-            <Buttons petalos={petalos}/>
-        </Container>
+            <Buttons petalos={petalos} bigButtonTitle={"COMENZAR TERAPIA"}/>
     </Background>;
 }
 
@@ -94,7 +100,7 @@ const Container = styled.div`
 `;
 
 const Background = styled.div`
-  background-color: #e0e0e0;
+  background-color: white;
   width: 100%;
   height: 100%;
   position: absolute;
