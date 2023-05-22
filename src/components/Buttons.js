@@ -28,24 +28,6 @@ const Buttons = ({petalos,bigButtonTitle}) => {
     );
 };
 
-const resizeObserver = new ResizeObserver(entries => {
-    for (let entry of entries) {
-        handleScreenResize();
-    }
-});
-
-
-function handleScreenResize() {
-    window.location.reload();
-}
-
-
-const TextContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-`;
 
 const ButtonsContainerCenter = styled.div`
   display: flex;
