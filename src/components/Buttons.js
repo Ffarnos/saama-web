@@ -13,10 +13,10 @@ const Buttons = ({petalos,bigButtonTitle}) => {
             <ButtonsContainer>
                 {petalos.map((petalo) => (
                     <Button
-                        onClick={() => console.log('click')}
+                        onClick={() => console.log((petalo.index / petalos.length) * 360)}
                         bordercolor={getColorWithText(petalo.colorBorder)}
                         key={petalo.index}
-                        style={generateCircleStyles(petalo.index, petalos.length)}
+                        angle={(petalo.index / petalos.length) * 360}
                     >
                         <ResponsiveText scale={0.8} color={'#6e6e6e'}>
                             {petalo.name}
@@ -47,38 +47,6 @@ const ButtonsContainer = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-const generateCircleStyles = (index, totalCircles) => {
-    const angle = (index / totalCircles) * 360; // Calcular el ángulo de posición
-    let radius = 220; // Radio del círculo grande
-    let circleSize = 80; // Tamaño de los círculos pequeños
-
-    if (window.innerWidth <= 420) {
-        circleSize = 40;
-        radius = 140;
-    }
-    else if (window.innerWidth <= 490) {
-        circleSize = 50;
-        radius = 170;
-    }
-    else if (window.innerWidth <= 560) {
-        circleSize = 70
-        radius = 190;
-    }
-
-
-    const centerX = -circleSize / 2; // Posición X del centro del contenedor (ajustado mediante translate)
-    const centerY = -circleSize / 2; // Posición Y del centro del contenedor (ajustado mediante translate)
-
-    const x = Math.cos((angle * Math.PI) / 180) * radius;
-    const y = Math.sin((angle * Math.PI) / 180) * radius;
-
-    return {
-        top: `${centerY + y}px`,
-        left: `${centerX + x}px`,
-        width: `${circleSize}px`,
-        height: `${circleSize}px`,
-    };
-};
 
 const getColorWithText = (text) => {
     switch (text) {
@@ -143,9 +111,41 @@ const ButtonBig = styled.div`
     width: 150px;
     height: 150px;
   }
+  
+  
 `;
 
+const generateCircleStyles = (index, totalCircles) => {
+    const angle = (index / totalCircles) * 360; // Calcular el ángulo de posición
+    let radius = 220; // Radio del círculo grande
+    let circleSize = 80; // Tamaño de los círculos pequeños
 
+    if (window.innerWidth <= 420) {
+        circleSize = 40;
+        radius = 140;
+    }
+    else if (window.innerWidth <= 490) {
+        circleSize = 50;
+        radius = 170;
+    }
+    else if (window.innerWidth <= 560) {
+        circleSize = 70
+        radius = 190;
+    }
+
+
+    const centerX = -circleSize / 2; // Posición X del centro del contenedor (ajustado mediante translate)
+    const centerY = -circleSize / 2; // Posición Y del centro del contenedor (ajustado mediante translate)
+
+    const x = Math.cos((angle * Math.PI) / 180) * radius;
+    const y = Math.sin((angle * Math.PI) / 180) * radius;
+
+    return {
+        angle: `${angle}`,
+    };
+};
+
+let pi = 3.141592653589793;
 
 const Button = styled.div`
   background-color: white;
@@ -159,7 +159,32 @@ const Button = styled.div`
   border: 7px solid ${props => props.bordercolor};
   box-shadow: inset 0 5px 8px 0 rgba(56, 55, 55, 0.75),
   0 5px 8px 0 rgba(0, 0, 0, 0.75);
+  top: calc((-80px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 220px));
+  left: calc((-80px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 220px));
+  width: 80px;
+  height: 80px;
+  
+  @media (max-width: 420px) {
+    top: calc((-40px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 140px));
+    left: calc((-40px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 140px));
+    width: 40px;
+    height: 40px;
+  }
 
+  @media (max-width: 490px) and (min-width: 420px) {
+    top: calc((-50px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 170px));
+    left: calc((-50px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 170px));
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (max-width: 560px) and (min-width: 490px) {
+    top: calc((-70px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 190px));
+    left: calc((-70px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 190px));
+    width: 70px;
+    height: 70px;
+  }
+  
   :hover {
     filter: brightness(0.6);
   }
