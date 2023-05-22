@@ -1,8 +1,9 @@
 import * as React from "react"
 import styled from 'styled-components';
 import ResponsiveText from "./ResponsiveText";
+import {navigate} from "gatsby";
 
-const Buttons = ({petalos,bigButtonTitle}) => {
+const Buttons = ({petalos,bigButtonTitle, numbers, sig}) => {
     return (
         <ButtonsContainerCenter>
             <ButtonBig>
@@ -13,10 +14,10 @@ const Buttons = ({petalos,bigButtonTitle}) => {
             <ButtonsContainer>
                 {petalos.map((petalo) => (
                     <Button
-                        onClick={() => console.log((petalo.index / petalos.length) * 360)}
+                        onClick={() =>console.log("Click")}
                         bordercolor={getColorWithText(petalo.colorBorder)}
                         key={petalo.index}
-                        angle={(petalo.index / petalos.length) * 360}
+                        angle={(petalo.index / numbers) * 360}
                     >
                         <ResponsiveText scale={0.8} color={'#6e6e6e'}>
                             {petalo.name}
@@ -97,19 +98,28 @@ const ButtonBig = styled.div`
 
   margin-left: 17px;
 
-  @media (max-width: 380px) {
-    width: 110px;
-    height: 110px;
+  @media (max-width: 370px) {
+    width: 120px;
+    height: 120px;
+  }
+  @media (max-width: 410px) and (min-width: 370px) {
+    width: 140px;
+    height: 140px;
+  }
+  
+  @media (max-width: 465px) and (min-width: 410px) {
+    width: 160px;
+    height: 160px;
   }
 
-  @media (max-width: 450px) and (min-width: 380px) {
-    width: 130px;
-    height: 130px;
+  @media (max-width: 540px) and (min-width: 465px) {
+    width: 180px;
+    height: 180px;
   }
 
-  @media (max-width: 520px) and (min-width: 450px) {
-    width: 150px;
-    height: 150px;
+  @media (max-width: 620px) and (min-width: 540px) {
+    width: 200px;
+    height: 200px;
   }
   
   
@@ -126,41 +136,52 @@ const Button = styled.div`
   cursor: pointer;
   position: absolute;
   user-select: none;
-  border: 7px solid ${props => props.bordercolor};
-  box-shadow: inset 0 5px 8px 0 rgba(56, 55, 55, 0.75),
-  0 5px 8px 0 rgba(0, 0, 0, 0.75);
-  top: calc((-80px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 220px));
-  left: calc((-80px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 220px));
-  width: 80px;
-  height: 80px;
-  
-  @media (max-width: 420px) {
-    top: calc((-40px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 140px));
-    left: calc((-40px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 140px));
+  box-shadow: 0 15px 15px 0 rgba(56, 56, 56, 0.75), 0 0 0 7px ${props => props.bordercolor};
+  top: calc((-100px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 240px));
+  left: calc((-100px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 240px));
+  width: 100px;
+  height: 100px;
+
+  @media (max-width: 370px) {
+    top: calc((-40px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 120px));
+    left: calc((-40px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 120px));
     width: 40px;
     height: 40px;
   }
 
-  @media (max-width: 490px) and (min-width: 420px) {
-    top: calc((-50px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 170px));
-    left: calc((-50px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 170px));
-    width: 50px;
-    height: 50px;
+  @media (max-width: 410px) and (min-width: 370px) {
+    top: calc((-60px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 140px));
+    left: calc((-60px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 140px));
+    width: 60px;
+    height: 60px;
   }
 
-  @media (max-width: 560px) and (min-width: 490px) {
-    top: calc((-70px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 190px));
-    left: calc((-70px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 190px));
-    width: 70px;
-    height: 70px;
+  @media (max-width: 465px) and (min-width: 410px) {
+    top: calc((-60px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 160px));
+    left: calc((-60px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 160px));
+    width: 60px;
+    height: 60px;
   }
-  
+
+  @media (max-width: 540px) and (min-width: 465px) {
+    top: calc((-80px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 180px));
+    left: calc((-80px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 180px));
+    width: 80px;
+    height: 80px;
+  }
+
+  @media (max-width: 620px) and (min-width: 540px) {
+    top: calc((-90px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 210px));
+    left: calc((-90px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 210px));
+    width: 90px;
+    height: 90px;
+  }
+
   :hover {
     filter: brightness(0.6);
   }
 
 `;
-
 
 
 export default Buttons;
