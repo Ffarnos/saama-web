@@ -2,6 +2,7 @@ import * as React from "react"
 import styled from 'styled-components';
 import Buttons from "../components/Buttons";
 import ResponsiveText from "../components/ResponsiveText";
+import backgroundImage from '../images/portada.webp';
 import {navigate} from "gatsby";
 
 const CirculoBase = () => {
@@ -69,7 +70,15 @@ const CirculoBase = () => {
             <Title scale={0.8} color={"#6e6e6e"}>
                 CIRCULO BASE
             </Title>
-            <Buttons petalos={petalos} bigButtonTitle={"COMENZAR TERAPIA"} numbers={11} sig={true}/>
+            <Buttons
+                petalos={petalos}
+                bigButtonTitle={"COMENZAR TERAPIA"}
+                numbers={11}
+                circuloBase={true}
+                onClick={(petaloName)=> {
+                    navigate('/circulo-base/petalo-' + petaloName)
+                }}
+            />
         </Container>
     </Background>;
 }
@@ -79,7 +88,7 @@ const CirculoBase = () => {
 const Title = styled(ResponsiveText)`
     letter-spacing: 15px;
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin-bottom: -20px;
+    margin-bottom: -30px;
 `;
 
 const Container = styled.div`
@@ -90,10 +99,13 @@ const Container = styled.div`
 `;
 
 const Background = styled.div`
-  background-color: white;
+  background-image: url(${backgroundImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
 `;
