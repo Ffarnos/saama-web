@@ -1,9 +1,8 @@
 import * as React from "react"
 import styled from 'styled-components';
 import ResponsiveText from "./ResponsiveText";
-import {navigate} from "gatsby";
 
-const Buttons = ({petalos,bigButtonTitle, numbers, sig}) => {
+const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick}) => {
     return (
         <ButtonsContainerCenter>
             <ButtonBig>
@@ -12,18 +11,31 @@ const Buttons = ({petalos,bigButtonTitle, numbers, sig}) => {
                 </ResponsiveText>
             </ButtonBig>
             <ButtonsContainer>
-                {petalos.map((petalo) => (
+                {circuloBase && petalos.map((petalo) => (
                     <Button
-                        onClick={() =>console.log("Click")}
+                        onClick={()=>onClick(petalo.name)}
                         bordercolor={getColorWithText(petalo.colorBorder)}
                         key={petalo.index}
-                        angle={(petalo.index / numbers) * 360}
+                        angle={(petalo.index / 11) * 360}
                     >
                         <ResponsiveText scale={0.8} color={'#6e6e6e'}>
                             {petalo.name}
                         </ResponsiveText>
                     </Button>
                 ))}
+                {!circuloBase && Array.of(0,1,2,3,4,5,6,7,8,9).map((number) => (
+                    <Button
+                        onClick={()=>onClick(number)}
+                        key={number}
+                        bordercolor={getColorWithNumber(number)}
+                        angle={(number / 10) * 360}
+                    >
+                        <ResponsiveText scale={0.8} color={'#6e6e6e'}>
+                            {number}
+                        </ResponsiveText>
+                    </Button>
+                    ))}
+
             </ButtonsContainer>
         </ButtonsContainerCenter>
     );
@@ -78,6 +90,30 @@ const getColorWithText = (text) => {
     }
 };
 
+const getColorWithNumber = (number) => {
+    switch (number) {
+        case 1:
+            return "#c21212";
+        case 2:
+            return "#ced750";
+        case 3:
+            return "#5052d7";
+        case 4:
+            return "#026908";
+        case 5:
+            return "#d78850";
+        case 6:
+            return "#a050d7";
+        case 7:
+            return "#4f4421";
+        case 8:
+            return "#50d757";
+        case 9:
+            return "#5682be";
+        default:
+            return "#ecc2e1";
+    }
+};
 
 const ButtonBig = styled.div`
   background-color: #ffffff;
@@ -95,8 +131,6 @@ const ButtonBig = styled.div`
   :hover {
     filter: brightness(0.6);
   }
-
-  margin-left: 17px;
 
   @media (max-width: 370px) {
     width: 120px;
@@ -137,10 +171,10 @@ const Button = styled.div`
   position: absolute;
   user-select: none;
   box-shadow: 0 15px 15px 0 rgba(56, 56, 56, 0.75), 0 0 0 7px ${props => props.bordercolor};
-  top: calc((-100px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 240px));
-  left: calc((-100px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 240px));
-  width: 100px;
-  height: 100px;
+  top: calc((-85px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 230px));
+  left: calc((-85px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 230px));
+  width: 85px;
+  height: 85px;
 
   @media (max-width: 370px) {
     top: calc((-40px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 120px));
