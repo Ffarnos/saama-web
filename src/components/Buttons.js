@@ -1,11 +1,34 @@
 import * as React from "react"
 import styled from 'styled-components';
 import ResponsiveText from "./ResponsiveText";
+import NavigationButtons from "./NavigationButtons";
+import {navigate} from "gatsby";
+import {useEffect} from "react";
 
 const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick}) => {
-    return (
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (event.key === 'Enter')
+                navigate("/circulo-base")
+             else if (event.key === 'Backspace')
+                navigate("/")
+            else if (event.key === 'ArrowLeft')
+                navigate(-1)
+            else if (event.key === 'ArrowRight')
+                navigate(+1)
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+
+
+        return (
         <ButtonsContainerCenter>
-            <ButtonBig>
+            <ButtonBig onClick={()=>navigate("/circulo-base")}>
                 <ResponsiveText scale={0.55} color={"#6e6e6e"}>
                     {bigButtonTitle}
                 </ResponsiveText>
@@ -37,7 +60,9 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick}) => {
                     ))}
 
             </ButtonsContainer>
+            <NavigationButtons/>
         </ButtonsContainerCenter>
+
     );
 };
 
