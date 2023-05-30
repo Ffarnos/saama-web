@@ -4,21 +4,35 @@ import ResponsiveText from "./ResponsiveText";
 import Buttons from "./Buttons";
 import {useState} from "react";
 import {navigate} from "gatsby";
-import {Alert} from "@mui/material";
+import {Alert, TextField} from "@mui/material";
 
 
 const createdPages = require('../../../createdPages.json');
 
 const PetalosTemplate = ({ pageContext }) => {
-    const { linkName,title, image} = pageContext
+    const { linkName,title,image} = pageContext
     const [showAlert, setShowAlert] = useState(false);
     const [input, setInput] = useState(0);
     const imagePath = "/images/"+ image + ".webp";
+
+    const handleChange = (event) => {
+        setInput(event.target.value);
+    };
+
+
     return <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Container>
+            <NoCircleContainer>
             <Title scale={0.8} color={"#6e6e6e"}>
                 {title}
             </Title>
+                {input !== 0 && <TextField
+                    id="standar-basic"
+                    value={input}
+                    onChange={handleChange}
+                    variant="standard"
+            />}
+            </NoCircleContainer>
             {showAlert && <ContainerAlert>
                 <Alert severity="error">
                     La pagina solicitada no existe
@@ -29,7 +43,7 @@ const PetalosTemplate = ({ pageContext }) => {
                 circuloBase={false}
                 onClick={(number)=> {
                     const numberFinal = (input ? (input * 10) : 0) + number;
-                    setInput(numberFinal)
+                    setInput(numberFinal);
                     setTimeout(() => {
                         setInput((prevInput) => {
                             const newLink = "circulo-base/" + linkName + "/" + numberFinal;
@@ -51,6 +65,14 @@ const PetalosTemplate = ({ pageContext }) => {
     </Background>;
 }
 
+
+const NoCircleContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+`;
+
 const ContainerAlert = styled.div`
   position: absolute;
   left: 20px; /* Ajusta la posición horizontal según tus necesidades */
@@ -60,9 +82,9 @@ const ContainerAlert = styled.div`
 
 
 const Title = styled(ResponsiveText)`
-    letter-spacing: 15px;
-    text-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin-bottom: -20px;
+  letter-spacing: 15px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-bottom: 15px;
 `;
 
 const Container = styled.div`
@@ -81,6 +103,7 @@ const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  overflow-y: scroll;
 `;
 
 export default PetalosTemplate;

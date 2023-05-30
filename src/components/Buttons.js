@@ -41,7 +41,6 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick}) => {
     );
 };
 
-
 const ButtonsContainerCenter = styled.div`
   display: flex;
   justify-content: center;
