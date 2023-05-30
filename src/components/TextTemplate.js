@@ -1,8 +1,29 @@
 import * as React from "react"
 import ResponsiveText from "./ResponsiveText";
+import {useEffect} from "react";
+import {navigate} from "gatsby";
 
 
 const TextTemplate = ({ pageContext }) => {
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (event.key === 'Enter')
+                navigate("/circulo-base")
+            else if (event.key === 'Backspace')
+                navigate("/")
+            else if (event.key === 'ArrowLeft')
+                navigate(-1)
+            else if (event.key === 'ArrowRight')
+                navigate(+1)
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+
     const { titlePage, desc, titleText} = pageContext
 
     return <>

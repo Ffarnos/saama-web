@@ -23,7 +23,7 @@ const PetalosTemplate = ({ pageContext }) => {
     return <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Container>
             <NoCircleContainer>
-            <Title scale={0.8} color={"#6e6e6e"}>
+            <Title scale={0.8} color={"#fdf8f8"}>
                 {title}
             </Title>
                 {input !== 0 && <TextField
@@ -39,7 +39,7 @@ const PetalosTemplate = ({ pageContext }) => {
                 </Alert>
             </ContainerAlert>}
             <Buttons
-                bigButtonTitle={"COMENZAR TERAPIA"}
+                bigButtonTitle={"FUNTE GUÍA"}
                 circuloBase={false}
                 onClick={(number)=> {
                     const numberFinal = (input ? (input * 10) : 0) + number;

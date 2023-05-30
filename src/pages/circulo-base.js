@@ -67,12 +67,12 @@ const CirculoBase = () => {
 
     return <Background>
         <Container>
-            <Title scale={0.8} color={"#6e6e6e"}>
+            <Title scale={0.8} color={"#fffdfd"}>
                 CIRCULO BASE
             </Title>
             <Buttons
                 petalos={petalos}
-                bigButtonTitle={"COMENZAR TERAPIA"}
+                bigButtonTitle={"FUENTE GUÍA"}
                 numbers={11}
                 circuloBase={true}
                 onClick={(petaloName)=> {
@@ -108,6 +108,7 @@ const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  overflow-y: scroll;
 `;
 
 export default CirculoBase;

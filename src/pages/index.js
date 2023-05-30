@@ -1,10 +1,30 @@
 import * as React from "react"
 import styled from 'styled-components';
-import backgroundImage from '../images/background.webp';
+import backgroundImage from '../images/portada.webp';
 import ResponsiveText from "../components/ResponsiveText";
 import {navigate} from "gatsby";
+import {useEffect} from "react";
 
 const Index = () => {
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Enter')
+        navigate("/circulo-base")
+      else if (event.key === 'Backspace')
+        navigate("/")
+      else if (event.key === 'ArrowLeft')
+        navigate(-1)
+      else if (event.key === 'ArrowRight')
+        navigate(+1)
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   return <Background>
     <Container>
       <CenterContainer>
@@ -18,7 +38,7 @@ const Index = () => {
           GÉNESIS
         </TerapiaText>
         <StartButton onClick={()=>navigate('/circulo-base')}>
-          <ResponsiveText scale={0.6} bold color={"white"}>
+          <ResponsiveText scale={0.6} bold color={"#1f1e1e"}>
             INICIAR CONEXION
           </ResponsiveText>
         </StartButton>
@@ -63,7 +83,7 @@ const Container = styled.div`
 `;
 
 const StartButton = styled.div`
-  border: 2px solid #eaeaea;
+  background-color: #eeeeee;
   border-radius: 5px;
   padding: 10px 20px;
   user-select: none;
