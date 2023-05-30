@@ -2,24 +2,44 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  jsxRuntime: 'automatic',
   siteMetadata: {
-    title: `saama-web`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: 'Saama',
+    siteUrl: 'https://www.yourdomain.tld',
   },
-  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-image", "gatsby-plugin-sitemap",
-    "gatsby-plugin-styled-components", "gatsby-plugin-sharp", "gatsby-transformer-sharp",
+  plugins: [
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        "icon": "src/images/icon.png"
-      }
+        name: 'Saama',
+        start_url: '/',
+        background_color: '#100e17',
+        theme_color: '#100e17',
+        display: 'standalone',
+        icon: 'src/images/icon.png',
+        icon_options: {
+          purpose: 'any maskable',
+        },
+      },
     },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "images",
-        "path": "./src/images/"
+        'name': 'images',
+        'path': './src/images/',
       },
-      __key: "images"
-    }]
+      __key: 'images',
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        precachePages: ['/*'],
+      },
+    },
+  ],
 };

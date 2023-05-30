@@ -67,7 +67,6 @@ const StyledMinimalisticInstallButton = styled.div`
   color: white;
   margin-right: 5px;
   user-select: none;
-  
   border-radius: 8px;
   margin-left: 30px;
   border: double 1px transparent;
