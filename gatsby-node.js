@@ -48,7 +48,6 @@ exports.createPages = async ({ actions }) => {
     });
 
     const createdPagesPath = path.join(__dirname, '../createdPages.json');
-    fs.readFileSync(createdPagesPath).keys();
     fs.writeFileSync(createdPagesPath, JSON.stringify(createdPages));
 }
 
