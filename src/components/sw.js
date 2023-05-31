@@ -1,5 +1,3 @@
-
-// src/sw.js
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open('saama-cache').then((cache) => {
@@ -13,6 +11,8 @@ self.addEventListener('install', (event) => {
                 '/static/images/boton5.webp',
                 '/static/images/boton6.webp',
                 '/static/images/boton7.webp',
+                '/', 
+                '/circulo-base',
             ]);
         })
     );
@@ -30,30 +30,12 @@ self.addEventListener('activate', (event) => {
     event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(
-                cacheNames
-                    .map((cacheName) => {
+                cacheNames.map((cacheName) => {
+                    if (cacheName !== 'saama-cache') {
                         return caches.delete(cacheName);
-                    })
+                    }
+                })
             );
-        })
-    );
-});
-
-// Agrega esta parte para precargar los recursos necesarios inmediatamente después de la instalación del Service Worker
-self.addEventListener('install', (event) => {
-    event.waitUntil(
-        caches.open('saama-cache').then((cache) => {
-            return cache.addAll([
-                '/src/images/icon.png', // Ruta al icono de la PWA
-                '/src/images/portada.webp',
-                '/static/images/boton1.webp',
-                '/static/images/boton2.webp',
-                '/static/images/boton3.webp',
-                '/static/images/boton4.webp',
-                '/static/images/boton5.webp',
-                '/static/images/boton6.webp',
-                '/static/images/boton7.webp',
-            ]);
         })
     );
 });
