@@ -39,7 +39,16 @@ module.exports = {
       resolve: 'gatsby-plugin-offline',
       options: {
         precachePages: ['/*'],
+        workboxConfig: {
+          globPatterns: [
+            'src/images/*', // Ruta al icono de la PWA
+            'src/images/icon.png', // Ruta a las imágenes adicionales
+            'static/images/*',
+          ],
+          importScripts: ['sw.js'],
+        },
       },
+
     },
   ],
 };
