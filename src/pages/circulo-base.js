@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from 'styled-components';
 import Buttons from "../components/Buttons";
 import ResponsiveText from "../components/ResponsiveText";
-import backgroundImage from '../images/portada.webp';
+import backgroundImage from '../../static/images/portada.webp';
 import {navigate} from "gatsby";
 
 const CirculoBase = () => {

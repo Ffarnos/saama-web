@@ -1,10 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import InstallButton from './src/components/InstallButton';
+const { useConfigureInstall } = require('./src/components/UseInstall')
 
-export const onClientEntry = () => {
-  const root = document.createElement('div');
-  root.id = 'install-button-root';
-  document.body.appendChild(root);
-  ReactDOM.render(<InstallButton />, root);
-};
+exports.onClientEntry = () => {
+  useConfigureInstall()
+}

@@ -1,10 +1,10 @@
 import * as React from "react"
 import styled from 'styled-components';
-import backgroundImage from '../images/portada.webp';
+import backgroundImage from '../../static/images/portada.webp';
 import ResponsiveText from "../components/ResponsiveText";
 import {navigate} from "gatsby";
 import {useEffect} from "react";
-import InstallButton from "../components/InstallButton";
+import useInstall from "../components/UseInstall";
 
 
 const Index = () => {
@@ -28,7 +28,10 @@ const Index = () => {
   }, []);
 
   return <Background>
-    <InstallButton/>
+    <ContainerInstall>
+      <MinimalisticInstallButton/>
+    </ContainerInstall>
+    <MinimalisticInstallButton/>
     <Container>
       <CenterContainer>
         <TerapiaText scale={1.5}>
@@ -50,6 +53,35 @@ const Index = () => {
 
   </Background>;
 }
+
+const ContainerInstall = styled.div`
+  display: flex;
+  justify-content: left;
+  align-items: center;
+`;
+
+const MinimalisticInstallButton = () => {
+  const [canInstall, install] = useInstall();
+  return canInstall && <StyledMinimalisticInstallButton onClick={install}>
+    <ButtonText scale={0.3} bold>Instalar</ButtonText>
+  </StyledMinimalisticInstallButton>
+}
+
+const ButtonText = styled(ResponsiveText)`
+    padding: 9px 22px;
+`;
+
+const StyledMinimalisticInstallButton = styled.div`
+  cursor: pointer;
+  color: white;
+  margin-right: 5px;
+  user-select: none;
+  border-radius: 8px;
+  background-color: #50d757;
+  padding: 10px 20px;
+  
+`;
+
 const TerapiaText = styled(ResponsiveText)`
   margin-bottom: 20px;
   letter-spacing: 15px;
