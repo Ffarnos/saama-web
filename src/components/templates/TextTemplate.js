@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import {navigate} from "gatsby";
 import {NavigationButtonsInLine} from "../navigation/NavigationButtons";
 import styled from "styled-components";
+import {Background} from "./PetalosTemplate";
 
 
 const TextTemplate = ({ pageContext }) => {
@@ -56,23 +57,4 @@ const Container = styled.div`
   margin-top: auto;
 `;
 
-const Background = styled.div`
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #888888; /* Color del thumb de la scrollbar */
-    border-radius: 2px;
-  }
-`;
 export default TextTemplate;

@@ -11,10 +11,10 @@ import FinishButton from "../navigation/FinishButton";
 const createdPages = require('../../../../createdPages.json');
 
 const PetalosTemplate = ({ pageContext }) => {
-    const { linkName,title,image} = pageContext
+    const {linkName, title, image} = pageContext
     const [showAlert, setShowAlert] = useState(false);
     const [input, setInput] = useState(0);
-    const imagePath = "/images/"+ image + ".webp";
+    const imagePath = "/images/" + image + ".webp";
     const handleChange = (event) => {
         setInput(event.target.value);
     };
@@ -22,15 +22,15 @@ const PetalosTemplate = ({ pageContext }) => {
     return <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Container>
             <NoCircleContainer>
-            <Title scale={0.8} color={"#fdf8f8"}>
-                {title}
-            </Title>
-             {input !== 0 && <TextField
+                <Title scale={0.8} color={"#fdf8f8"}>
+                    {title}
+                </Title>
+                {input !== 0 && <TextField
                     id="standar-basic"
                     value={input}
                     onChange={handleChange}
                     variant="standard"
-            />}
+                />}
             </NoCircleContainer>
             {showAlert && <ContainerAlert>
                 <Alert severity="error">
@@ -40,7 +40,7 @@ const PetalosTemplate = ({ pageContext }) => {
             <Buttons
                 bigButtonTitle={"FUNTE GUÍA"}
                 circuloBase={false}
-                onClick={(number)=> {
+                onClick={(number) => {
                     const numberFinal = (input ? (input * 10) : 0) + number;
                     setInput(numberFinal);
                     setTimeout(() => {
@@ -48,11 +48,11 @@ const PetalosTemplate = ({ pageContext }) => {
                             const newLink = "circulo-base/" + linkName + "/" + numberFinal;
                             if (!createdPages.includes(newLink)) {
                                 setShowAlert(true);
-                                setInput(()=>0)
+                                setInput(() => 0)
                                 setTimeout(() => {
                                     setShowAlert(false);
                                 }, 2000);
-                            }else if (numberFinal === prevInput)
+                            } else if (numberFinal === prevInput)
                                 navigate("/circulo-base/" + linkName + "/" + numberFinal);
                             return prevInput;
                         });
@@ -63,6 +63,7 @@ const PetalosTemplate = ({ pageContext }) => {
         </Container>
     </Background>;
 }
+
 
 const NoCircleContainer = styled.div`
     display: flex;
@@ -86,12 +87,11 @@ const Title = styled(ResponsiveText)`
 
 const Container = styled.div`
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 `;
 
-const Background = styled.div`
+export const Background = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

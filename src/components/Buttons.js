@@ -72,6 +72,10 @@ const ButtonsContainerCenter = styled.div`
   align-items: center;
   height: 100vh;
   position: relative;
+  
+  @media (max-width: 540px) {
+    margin-top: -70px;
+  }
 `;
 
 const ButtonsContainer = styled.div`

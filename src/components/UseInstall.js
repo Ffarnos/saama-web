@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 
 let deferredPrompt = undefined;
 
-export const useConfigureInstall = () => {
+export const ConfigureInstall = () => {
   if (typeof window !== 'undefined') {
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();

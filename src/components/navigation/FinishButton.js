@@ -15,6 +15,14 @@ const Finish = styled.div`
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
+
+  @media (max-width: 370px) {
+    padding: 5px 40px;
+  }
+  
+  @media (max-width: 540px) {
+    margin-top: -70px;
+  }
 `;
 
 export default FinishButton;
