@@ -18,9 +18,14 @@ const Finish = styled.div`
 
   @media (max-width: 370px) {
     padding: 5px 40px;
+    margin-top: -160px;
   }
   
-  @media (max-width: 540px) {
+  @media (max-width: 460px) and (min-width: 370px) {
+    margin-top: -110px;
+  }
+  
+  @media (max-width: 540px) and (min-width: 460px){
     margin-top: -70px;
   }
 `;
