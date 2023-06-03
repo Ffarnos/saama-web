@@ -104,10 +104,8 @@ const Background = styled.div`
   background-image: url(${backgroundImage});
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 `;
