@@ -40,7 +40,6 @@ module.exports = {
       options: {
         precachePages: ['**/*'],
         workboxConfig: {
-          cleanupOutdatedCaches: true,
           clientsClaim: true,
           skipWaiting: true,
         },

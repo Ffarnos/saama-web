@@ -11,7 +11,7 @@ exports.createPages = async ({ actions }) => {
         const pagePath = `circulo-base/${data.linkName}`
         createPage({
             path: pagePath, // Define la ruta de la página
-            component: require.resolve('./src/components/PetalosTemplate.js'), // Especifica la plantilla a utilizar
+            component: require.resolve('./src/components/templates/PetalosTemplate.js'), // Especifica la plantilla a utilizar
             context: {
                 linkName: data.linkName,
                 title: data.title,
@@ -23,19 +23,21 @@ exports.createPages = async ({ actions }) => {
         if (!data.subPetalos) return
         data.subPetalos.forEach((subPetalo) => {
             const subPagePath = `circulo-base/${subPetalo.linkName}`;
-            let template = './src/components/PetalosTemplate.js'
+            let template = './src/components/templates/PetalosTemplate.js'
             let context = {
                 title: subPetalo.title,
                 linkName: subPetalo.linkName,
+                image: data.image,
             }
 
             if (subPetalo.type === 'text') {
                 const text = texts[subPetalo.title.toUpperCase()][subPetalo.number];
-                template = './src/components/TextTemplate.js'
+                template = './src/components/templates/TextTemplate.js'
                 context = {
                     titlePage: subPetalo.title,
                     titleText: text.title,
                     desc: text.descripcion,
+                    image: data.image,
                 }
             }
             createPage({

@@ -1,24 +1,23 @@
 import * as React from "react"
 import styled from 'styled-components';
-import ResponsiveText from "./ResponsiveText";
-import Buttons from "./Buttons";
+import ResponsiveText from "../apis/ResponsiveText";
+import Buttons from "../Buttons";
 import {useState} from "react";
 import {navigate} from "gatsby";
 import {Alert, TextField} from "@mui/material";
+import FinishButton from "../navigation/FinishButton";
 
 
-const createdPages = require('../../../createdPages.json');
+const createdPages = require('../../../../createdPages.json');
 
 const PetalosTemplate = ({ pageContext }) => {
     const { linkName,title,image} = pageContext
     const [showAlert, setShowAlert] = useState(false);
     const [input, setInput] = useState(0);
     const imagePath = "/images/"+ image + ".webp";
-
     const handleChange = (event) => {
         setInput(event.target.value);
     };
-
 
     return <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Container>
@@ -26,7 +25,7 @@ const PetalosTemplate = ({ pageContext }) => {
             <Title scale={0.8} color={"#fdf8f8"}>
                 {title}
             </Title>
-                {input !== 0 && <TextField
+             {input !== 0 && <TextField
                     id="standar-basic"
                     value={input}
                     onChange={handleChange}
@@ -60,11 +59,10 @@ const PetalosTemplate = ({ pageContext }) => {
                     }, 2000);
                 }}
             />
-
+            <FinishButton/>
         </Container>
     </Background>;
 }
-
 
 const NoCircleContainer = styled.div`
     display: flex;
@@ -75,16 +73,15 @@ const NoCircleContainer = styled.div`
 
 const ContainerAlert = styled.div`
   position: absolute;
-  left: 20px; /* Ajusta la posición horizontal según tus necesidades */
-  top: 20px; /* Ajusta la posición vertical según tus necesidades */
-  z-index: 999; /* Asegura que la alerta esté por encima de los demás componentes */
+  left: 20px;
+  top: 20px;
+  z-index: 999;
 `;
 
 
 const Title = styled(ResponsiveText)`
   letter-spacing: 15px;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
-  margin-bottom: 15px;
 `;
 
 const Container = styled.div`
@@ -104,6 +101,14 @@ const Background = styled.div`
   top: 0;
   left: 0;
   overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888888; /* Color del thumb de la scrollbar */
+    border-radius: 2px;
+  }
 `;
 
 export default PetalosTemplate;

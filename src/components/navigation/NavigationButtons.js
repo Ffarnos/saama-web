@@ -1,6 +1,7 @@
 import * as React from "react"
 import styled from 'styled-components';
 import {navigate} from "gatsby";
+import FinishButton from "./FinishButton";
 
 const NavigationButtons = () => <>
     <Container>
@@ -9,15 +10,38 @@ const NavigationButtons = () => <>
     </Container>
 </>
 
+export const NavigationButtonsInLine = () => <>
+    <ContainerInLine>
+        <BackButtonInLine onClick={()=> navigate(-1)}/>
+        <FinishButton/>
+        <NextButtonInLine onClick={()=> navigate(+1)}/>
+    </ContainerInLine>
+</>
+
+const ContainerInLine = styled.div`
+  display: flex;
+  gap: 50px; /* Agrega un espacio de 8px entre los botones */
+  margin-bottom: 20px;
+`;
 
 const Button = styled.div`
   width: 0;
   height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
   user-select: none;
   cursor: pointer;
+`;
 
+const NextButtonInLine = styled(Button)`
+  border-left: 30px solid white;
+`;
+
+const BackButtonInLine = styled(Button)`
+  border-right: 30px solid white;
+`;
+
+const ButtonCustom = styled(Button)`
   @media (max-width: 370px) {
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;
@@ -39,7 +63,7 @@ const Button = styled.div`
   }
 `;
 
-const BackButton = styled(Button)`
+const BackButton = styled(ButtonCustom)`
   border-right: 30px solid white;
   
   @media (max-width: 465px) {
@@ -55,7 +79,7 @@ const BackButton = styled(Button)`
   }
 `;
 
-const NextButton = styled(Button)`
+const NextButton = styled(ButtonCustom)`
   border-left: 30px solid white;
   
   @media (max-width: 465px) {

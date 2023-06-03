@@ -1,7 +1,7 @@
 import * as React from "react"
 import styled from 'styled-components';
-import ResponsiveText from "./ResponsiveText";
-import NavigationButtons from "./NavigationButtons";
+import ResponsiveText from "./apis/ResponsiveText";
+import NavigationButtons from "./navigation/NavigationButtons";
 import {navigate} from "gatsby";
 import {useEffect} from "react";
 

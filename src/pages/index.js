@@ -1,7 +1,7 @@
 import * as React from "react"
 import styled from 'styled-components';
 import backgroundImage from '../../static/images/portada.webp';
-import ResponsiveText from "../components/ResponsiveText";
+import ResponsiveText from "../components/apis/ResponsiveText";
 import {navigate} from "gatsby";
 import {useEffect} from "react";
 import useInstall from "../components/UseInstall";
@@ -28,11 +28,10 @@ const Index = () => {
   }, []);
 
   return <Background>
-    <ContainerInstall>
-      <MinimalisticInstallButton/>
-    </ContainerInstall>
+   <ContainerInstall>
     <MinimalisticInstallButton/>
-    <Container>
+   </ContainerInstall>
+     <Container>
       <CenterContainer>
         <TerapiaText scale={1.5}>
           TERAPIA
@@ -50,13 +49,12 @@ const Index = () => {
         </StartButton>
       </CenterContainer>
     </Container>
-
   </Background>;
 }
 
 const ContainerInstall = styled.div`
   display: flex;
-  justify-content: left;
+  justify-content: right;
   align-items: center;
 `;
 
@@ -68,7 +66,8 @@ const MinimalisticInstallButton = () => {
 }
 
 const ButtonText = styled(ResponsiveText)`
-    padding: 9px 22px;
+  padding: 9px 40px;
+  color: white;
 `;
 
 const StyledMinimalisticInstallButton = styled.div`
@@ -76,11 +75,24 @@ const StyledMinimalisticInstallButton = styled.div`
   color: white;
   margin-right: 5px;
   user-select: none;
+
   border-radius: 8px;
-  background-color: #50d757;
-  padding: 10px 20px;
-  
+  margin-left: 30px;
+  border: double 1px transparent;
+  background-image: linear-gradient(30deg, #3e1b38, #184153), linear-gradient(30deg, #f93fff, #0abbff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  :hover {
+    background-image: linear-gradient(30deg, #531f4a, #1d5269), linear-gradient(30deg, #f957ff, #25bffa);
+  }
+
+  h2 {
+    margin: 0;
+    padding: 20px;
+  }
 `;
+
 
 const TerapiaText = styled(ResponsiveText)`
   margin-bottom: 20px;

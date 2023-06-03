@@ -1,9 +1,10 @@
 import * as React from "react"
 import styled from 'styled-components';
 import Buttons from "../components/Buttons";
-import ResponsiveText from "../components/ResponsiveText";
+import ResponsiveText from "../components/apis/ResponsiveText";
 import backgroundImage from '../../static/images/portada.webp';
 import {navigate} from "gatsby";
+import FinishButton from "../components/navigation/FinishButton";
 
 const CirculoBase = () => {
     const petalos = [
@@ -79,6 +80,7 @@ const CirculoBase = () => {
                     navigate('/circulo-base/petalo-' + petaloName)
                 }}
             />
+            <FinishButton/>
         </Container>
     </Background>;
 }
@@ -109,6 +111,14 @@ const Background = styled.div`
   top: 0;
   left: 0;
   overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888888; /* Color del thumb de la scrollbar */
+    border-radius: 2px;
+  }
 `;
 
 export default CirculoBase;
