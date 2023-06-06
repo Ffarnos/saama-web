@@ -2,6 +2,7 @@ import * as React from "react"
 import styled from 'styled-components';
 import {navigate} from "gatsby";
 import FinishButton from "./FinishButton";
+import ResponsiveText from "../apis/ResponsiveText";
 
 const NavigationButtons = () => <>
     <Container>
@@ -16,12 +17,30 @@ export const NavigationButtonsInLine = () => <>
         <FinishButton/>
         <NextButtonInLine onClick={()=> navigate(+1)}/>
     </ContainerInLine>
+    <GuiaButton onClick={()=>navigate('/circulo-base')}>
+        <ResponsiveText scale={0.6} bold color={"#413f3f"}>
+            FUENTE GUIA
+        </ResponsiveText>
+    </GuiaButton>
 </>
+
+
+const GuiaButton = styled.div`
+  padding: 10px 20px;
+  background-color: #fff7f7;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 20px;
+  
+  :hover {
+   filter: brightness(1.5);
+  }
+`;
 
 const ContainerInLine = styled.div`
   display: flex;
-  gap: 50px; /* Agrega un espacio de 8px entre los botones */
-  margin-bottom: 20px;
+  gap: 50px;
 `;
 
 const Button = styled.div`
@@ -32,6 +51,7 @@ const Button = styled.div`
   user-select: none;
   cursor: pointer;
 `;
+
 
 const NextButtonInLine = styled(Button)`
   border-left: 30px solid white;

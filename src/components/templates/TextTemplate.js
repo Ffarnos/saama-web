@@ -28,19 +28,22 @@ const TextTemplate = ({ pageContext }) => {
     }, []);
 
 
-    const { titlePage, desc, titleText, image} = pageContext
+    const {desc, titleText, image} = pageContext
     const imagePath = "/images/"+ image + ".webp";
     return <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Content>
-        <ResponsiveText scale={0.9} color={"white"}>{titlePage}</ResponsiveText>
-        <ResponsiveText scale={0.7} color={"white"}>{titleText}</ResponsiveText>
-        <ResponsiveText scale={0.5} color={"white"}>{desc}</ResponsiveText>
+        <ResponsiveText scale={0.8} color={"white"}>{titleText}</ResponsiveText>
+        <Text scale={0.5} color={"white"}>{desc}</Text>
         <Container>
             <NavigationButtonsInLine/>
         </Container>
         </Content>
     </Background>
 }
+
+const Text = styled(ResponsiveText)`
+  padding-top: 30px
+`;
 
 const Content = styled.div`
   display: flex;
@@ -51,10 +54,7 @@ const Content = styled.div`
 `;
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center; /* Cambiamos a center para centrar los botones */
-  align-items: center;
-  margin-top: auto;
+    margin-top: auto;
 `;
 
 export default TextTemplate;

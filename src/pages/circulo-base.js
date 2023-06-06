@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Buttons from "../components/Buttons";
 import ResponsiveText from "../components/apis/ResponsiveText";
 import {navigate} from "gatsby";
-import FinishButton from "../components/navigation/FinishButton";
+import {FinishButtonResponsive} from "../components/navigation/FinishButton";
 import {Background} from "../components/templates/PetalosTemplate";
 
 const CirculoBase = () => {
@@ -80,7 +80,7 @@ const CirculoBase = () => {
                     navigate('/circulo-base/petalo-' + petaloName)
                 }}
             />
-            <FinishButton/>
+            <FinishButtonResponsive />
         </Container>
     </Background>;
 }

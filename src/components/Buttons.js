@@ -73,7 +73,7 @@ const ButtonsContainerCenter = styled.div`
   height: 100vh;
   position: relative;
   
-  @media (max-width: 540px) {
+  @media (min-height: 600px) and (max-width: 539px) {
     margin-top: -70px;
   }
 `;
@@ -232,13 +232,13 @@ const Button = styled.div`
     height: 80px;
   }
 
-  @media (max-width: 620px) and (min-width: 540px) {
+  @media (max-width: 620px) and (min-width: 540px){
     top: calc((-90px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 210px));
     left: calc((-90px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 210px));
     width: 90px;
     height: 90px;
   }
-
+  
   :hover {
     filter: brightness(0.6);
   }

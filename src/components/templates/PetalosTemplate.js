@@ -5,8 +5,7 @@ import Buttons from "../Buttons";
 import {useState} from "react";
 import {navigate} from "gatsby";
 import {Alert, TextField} from "@mui/material";
-import FinishButton from "../navigation/FinishButton";
-
+import {FinishButtonResponsive} from "../navigation/FinishButton";
 
 const createdPages = require('../../../../createdPages.json');
 
@@ -48,10 +47,8 @@ const PetalosTemplate = ({ pageContext }) => {
                             const newLink = "circulo-base/" + linkName + "/" + numberFinal;
                             if (!createdPages.includes(newLink)) {
                                 setShowAlert(true);
-                                setInput(() => 0)
-                                setTimeout(() => {
-                                    setShowAlert(false);
-                                }, 2000);
+                                setTimeout(() => setShowAlert(false),2000);
+                                return 0;
                             } else if (numberFinal === prevInput)
                                 navigate("/circulo-base/" + linkName + "/" + numberFinal);
                             return prevInput;
@@ -59,7 +56,7 @@ const PetalosTemplate = ({ pageContext }) => {
                     }, 2000);
                 }}
             />
-            <FinishButton/>
+            <FinishButtonResponsive/>
         </Container>
     </Background>;
 }
