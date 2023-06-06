@@ -7,22 +7,23 @@ exports.createPages = async ({ actions }) => {
     const createdPages = [];
     function subPetalos (petalos) {
         petalos.forEach((petalo) => {
+            const pagePath = `circulo-base/${petalo.linkName}`
             if (petalo.subPetalos) {
-                const pagePath = `circulo-base/${petalo.linkName}`
+                let context = {linkName: petalo.linkName, title: petalo.title, image: petalo.image}
+                if (petalo.noNumbers) {
+                    context = {
+                        linkName: petalo.linkName, title: petalo.title, image: petalo.image, subPetalos: petalo.subPetalos
+                    }
+                }
                 createPage({
                     path: pagePath, // Define la ruta de la página
                     component: require.resolve('./src/components/templates/PetalosTemplate.js'), // Especifica la plantilla a utilizar
-                    context: {
-                        linkName: petalo.linkName,
-                        title: petalo.title,
-                        image: petalo.image,
-                    },
+                    context: context,
                 });
                 createdPages.push(pagePath);
                 subPetalos(petalo.subPetalos);
             }
             else {
-                const pagePath = `circulo-base/${petalo.linkName}`
                 createPage({
                     path: pagePath, // Define la ruta de la página
                     component: require.resolve('./src/components/templates/TextTemplate.js'), // Especifica la plantilla a utilizar

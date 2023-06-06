@@ -42,12 +42,9 @@ module.exports = {
         workboxConfig: {
           clientsClaim: true,
           skipWaiting: true,
+          globPatterns: ['**/static/images/**/*']
         },
-        precacheFiles: [
-          '/static/images/**/*',
-        ],
       }
-
     },
   ],
 };

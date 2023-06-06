@@ -5,7 +5,7 @@ import NavigationButtons from "./navigation/NavigationButtons";
 import {navigate} from "gatsby";
 import {useEffect} from "react";
 
-const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick}) => {
+const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === 'Enter')
@@ -36,13 +36,13 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick}) => {
             <ButtonsContainer>
                 {circuloBase && petalos.map((petalo) => (
                     <Button
-                        onClick={()=>onClick(petalo.name)}
+                        onClick={()=>onClick(petalo.index + 1)}
                         bordercolor={getColorWithText(petalo.colorBorder)}
                         key={petalo.index}
                         angle={(petalo.index / 11) * 360}
                     >
                         <ResponsiveText scale={0.8} color={'#6e6e6e'}>
-                            {petalo.name}
+                            {noNumber ? petalo.title : petalo.index + 1}
                         </ResponsiveText>
                     </Button>
                 ))}

@@ -10,7 +10,7 @@ import {FinishButtonResponsive} from "../navigation/FinishButton";
 const createdPages = require('../../../../createdPages.json');
 
 const PetalosTemplate = ({ pageContext }) => {
-    const {linkName, title, image} = pageContext
+    const {linkName, title, image, subPetalos} = pageContext
     const [showAlert, setShowAlert] = useState(false);
     const [input, setInput] = useState(0);
     const imagePath = "/images/" + image + ".webp";
@@ -38,8 +38,14 @@ const PetalosTemplate = ({ pageContext }) => {
             </ContainerAlert>}
             <Buttons
                 bigButtonTitle={"FUNTE GUÍA"}
-                circuloBase={false}
+                circuloBase={subPetalos !== undefined}
+                petalos={subPetalos}
+                noNumber={subPetalos !== undefined}
                 onClick={(number) => {
+                    if (subPetalos) {
+                        navigate("/circulo-base/" + linkName + "/" + number)
+                        return;
+                    }
                     const numberFinal = (input ? (input * 10) : 0) + number;
                     setInput(numberFinal);
                     setTimeout(() => {
