@@ -39,7 +39,7 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                         onClick={()=>onClick(petalo.index + 1)}
                         bordercolor={getColorWithText(petalo.colorBorder)}
                         key={petalo.index}
-                        angle={(petalo.index / 11) * 360}
+                        angle={(petalo.index / (noNumber ? petalos.length+2 : 11)) * 360}
                     >
                         <ResponsiveText scale={0.8} color={'#6e6e6e'}>
                             {noNumber ? petalo.title : petalo.index + 1}

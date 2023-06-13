@@ -29,6 +29,7 @@ exports.createPages = async ({ actions }) => {
                     component: require.resolve('./src/components/templates/TextTemplate.js'), // Especifica la plantilla a utilizar
                     context: {
                         titleText: petalo.title,
+                        titlePage: petalo.titlePage,
                         desc: petalo.text,
                         image: petalo.image,
                     },

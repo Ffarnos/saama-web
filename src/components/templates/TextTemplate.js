@@ -28,12 +28,13 @@ const TextTemplate = ({ pageContext }) => {
     }, []);
 
 
-    const {desc, titleText, image} = pageContext
+    const {desc, titleText, image, titlePage} = pageContext
     const imagePath = "/images/"+ image + ".webp";
     return <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Content>
-        <ResponsiveText scale={0.8} color={"white"}>{titleText}</ResponsiveText>
-        <Text scale={0.5} color={"white"}>{desc}</Text>
+            <ResponsiveText scale={0.9} color={"white"}>{titlePage}</ResponsiveText>
+            <ResponsiveText scale={0.7} color={"white"}>{titleText}</ResponsiveText>
+            <Text scale={0.5} color={"white"}>{desc}</Text>
         <Container>
             <NavigationButtonsInLine/>
         </Container>
