@@ -316,282 +316,282 @@ const petalos = [
             {linkName: "petalo-2/4", image: 'boton2', title: "Cruce de Rutas",  petalos: 5, noNumbers: true, subPetalos: [
                     {linkName: "petalo-2/4/1", image: 'boton2', title: "A",  petalos: 18, index: 0, colorBorder: "red", subPetalos: [
                             {linkName: "petalo-2/4/1/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 1",
-                                text: "ABANDONO"
+                                text: "CREENCIA - ABANDONO"
                             },
                             {linkName: "petalo-2/4/1/2", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 2",
-                                text: "CARENCIA"
+                                text: "CREENCIA - CARENCIA"
                             },
                             {linkName: "petalo-2/4/1/3", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 3",
-                                text: "COMETER ERRORES"
+                                text: "CREENCIA - COMETER ERRORES"
                             },
                             {linkName: "petalo-2/4/1/4", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 4",
-                                text: "CONFUSION"
+                                text: "CREENCIA - CONFUSION"
                             },
                             {linkName: "petalo-2/4/1/5", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 5",
-                                text: "CULPA"
+                                text: "CREENCIA - CULPA"
                             },
                             {linkName: "petalo-2/4/1/6", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 6",
-                                text: "CRITICA"
+                                text: "CREENCIA - CRITICA"
                             },
                             {linkName: "petalo-2/4/1/7", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 7",
-                                text: "DESVALORIZACION"
+                                text: "CREENCIA - DESVALORIZACION"
                             },
                             {linkName: "petalo-2/4/1/8", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 8",
-                                text: "DEPENDENCIA"
+                                text: "CREENCIA - DEPENDENCIA"
                             },
                             {linkName: "petalo-2/4/1/9", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 9",
-                                text: "DESILUSION"
+                                text: "CREENCIA - DESILUSION"
                             },
                             {linkName: "petalo-2/4/1/10", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 10",
-                                text: "INFERIORIDAD"
+                                text: "CREENCIA - INFERIORIDAD"
                             },
                             {linkName: "petalo-2/4/1/11", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 11",
-                                text: "INEFICAZ"
+                                text: "CREENCIA - INEFICAZ"
                             },
                             {linkName: "petalo-2/4/1/12", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 12",
-                                text: "NO PUEDO"
+                                text: "CREENCIA - NO PUEDO"
                             },
                             {linkName: "petalo-2/4/1/13", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 13",
-                                text: "PERDER EL CONTROL"
+                                text: "CREENCIA - PERDER EL CONTROL"
                             },
                             {linkName: "petalo-2/4/1/14", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 14",
-                                text: "PERDIDA"
+                                text: "CREENCIA - PERDIDA"
                             },
                             {linkName: "petalo-2/4/1/15", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 15",
-                                text: "QUE DIRAN"
+                                text: "CREENCIA - QUE DIRAN"
                             },
                             {linkName: "petalo-2/4/1/16", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 16",
-                                text: "RECHAZO"
+                                text: "CREENCIA - RECHAZO"
                             },
                             {linkName: "petalo-2/4/1/17", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 17",
-                                text: "SER SOMETIDO"
+                                text: "CREENCIA - SER SOMETIDO"
                             },
                             {linkName: "petalo-2/4/1/18", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 18",
-                                text: "SUFRIR"
+                                text: "CREENCIA - SUFRIR"
                             },
                         ]},
                     {linkName: "petalo-2/4/2", image: 'boton2', title: "B", petalos: 18, index: 1, colorBorder: "blue", subPetalos: [
                             {linkName: "petalo-2/4/2/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 1",
-                                text: "ABANDONO"
+                                text: "EMOCION - ABANDONO"
                             },
                             {linkName: "petalo-2/4/2/2", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 2",
-                                text: "CARENCIA"
+                                text: "EMOCION - CARENCIA"
                             },
                             {linkName: "petalo-2/4/2/3", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 3",
-                                text: "COMETER ERRORES"
+                                text: "EMOCION - COMETER ERRORES"
                             },
                             {linkName: "petalo-2/4/2/4", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 4",
-                                text: "CONFUSION"
+                                text: "EMOCION - CONFUSION"
                             },
                             {linkName: "petalo-2/4/2/5", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 5",
-                                text: "CULPA"
+                                text: "EMOCION - CULPA"
                             },
                             {linkName: "petalo-2/4/2/6", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 6",
-                                text: "CRITICA"
+                                text: "EMOCION - CRITICA"
                             },
                             {linkName: "petalo-2/4/2/7", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 7",
-                                text: "DESVALORIZACION"
+                                text: "EMOCION - DESVALORIZACION"
                             },
                             {linkName: "petalo-2/4/2/8", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 8",
-                                text: "DEPENDENCIA"
+                                text: "EMOCION - DEPENDENCIA"
                             },
                             {linkName: "petalo-2/4/2/9", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 9",
-                                text: "DESILUSION"
+                                text: "EMOCION - DESILUSION"
                             },
                             {linkName: "petalo-2/4/2/10", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 10",
-                                text: "INFERIORIDAD"
+                                text: "EMOCION - INFERIORIDAD"
                             },
                             {linkName: "petalo-2/4/2/11", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 11",
-                                text: "INEFICAZ"
+                                text: "EMOCION - INEFICAZ"
                             },
                             {linkName: "petalo-2/4/2/12", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 12",
-                                text: "NO PUEDO"
+                                text: "EMOCION - NO PUEDO"
                             },
                             {linkName: "petalo-2/4/2/13", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 13",
-                                text: "PERDER EL CONTROL"
+                                text: "EMOCION - PERDER EL CONTROL"
                             },
                             {linkName: "petalo-2/4/2/14", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 14",
-                                text: "PERDIDA"
+                                text: "EMOCION - PERDIDA"
                             },
                             {linkName: "petalo-2/4/2/15", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 15",
-                                text: "QUE DIRAN"
+                                text: "EMOCION - QUE DIRAN"
                             },
                             {linkName: "petalo-2/4/2/16", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 16",
-                                text: "RECHAZO"
+                                text: "EMOCION - RECHAZO"
                             },
                             {linkName: "petalo-2/4/2/17", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 17",
-                                text: "SER SOMETIDO"
+                                text: "EMOCION - SER SOMETIDO"
                             },
                             {linkName: "petalo-2/4/2/18", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 18",
-                                text: "SUFRIR"
+                                text: "EMOCION - SUFRIR"
                             },
                         ]},
                     {linkName: "petalo-2/4/3", image: 'boton2', title: "C", index: 2,  petalos: 18, colorBorder: "blue", subPetalos: [
                             {linkName: "petalo-2/4/3/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 1",
-                                text: "ABANDONO"
+                                text: "MIEDO - ABANDONO"
                             },
                             {linkName: "petalo-2/4/3/2", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 2",
-                                text: "CARENCIA"
+                                text: "MIEDO - CARENCIA"
                             },
                             {linkName: "petalo-2/4/3/3", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 3",
-                                text: "COMETER ERRORES"
+                                text: "MIEDO - COMETER ERRORES"
                             },
                             {linkName: "petalo-2/4/3/4", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 4",
-                                text: "CONFUSION"
+                                text: "MIEDO - CONFUSION"
                             },
                             {linkName: "petalo-2/4/3/5", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 5",
-                                text: "CULPA"
+                                text: "MIEDO - CULPA"
                             },
                             {linkName: "petalo-2/4/3/6", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 6",
-                                text: "CRITICA"
+                                text: "MIEDO - CRITICA"
                             },
                             {linkName: "petalo-2/4/3/7", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 7",
-                                text: "DESVALORIZACION"
+                                text: "MIEDO - DESVALORIZACION"
                             },
                             {linkName: "petalo-2/4/3/8", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 8",
-                                text: "DEPENDENCIA"
+                                text: "MIEDO - DEPENDENCIA"
                             },
                             {linkName: "petalo-2/4/3/9", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 9",
-                                text: "DESILUSION"
+                                text: "MIEDO - DESILUSION"
                             },
                             {linkName: "petalo-2/4/3/10", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 10",
-                                text: "INFERIORIDAD"
+                                text: "MIEDO - INFERIORIDAD"
                             },
                             {linkName: "petalo-2/4/3/11", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 11",
-                                text: "INEFICAZ"
+                                text: "MIEDO - INEFICAZ"
                             },
                             {linkName: "petalo-2/4/3/12", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 12",
-                                text: "NO PUEDO"
+                                text: "MIEDO - NO PUEDO"
                             },
                             {linkName: "petalo-2/4/3/13", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 13",
-                                text: "PERDER EL CONTROL"
+                                text: "MIEDO - PERDER EL CONTROL"
                             },
                             {linkName: "petalo-2/4/3/14", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 14",
-                                text: "PERDIDA"
+                                text: "MIEDO - PERDIDA"
                             },
                             {linkName: "petalo-2/4/3/15", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 15",
-                                text: "QUE DIRAN"
+                                text: "MIEDO - QUE DIRAN"
                             },
                             {linkName: "petalo-2/4/3/16", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 16",
-                                text: "RECHAZO"
+                                text: "MIEDO - RECHAZO"
                             },
                             {linkName: "petalo-2/4/3/17", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 17",
-                                text: "SER SOMETIDO"
+                                text: "MIEDO - SER SOMETIDO"
                             },
                             {linkName: "petalo-2/4/3/18", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 18",
-                                text: "SUFRIR"
+                                text: "MIEDO - SUFRIR"
                             },
                         ]},
                     {linkName: "petalo-2/4/4", image: 'boton2', title: "D", index: 3,  petalos: 18, colorBorder: "yellow", subPetalos: [
                             {linkName: "petalo-2/4/4/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 1",
-                                text: "ABANDONO"
+                                text: "PENSAMIENTO - ABANDONO"
                             },
                             {linkName: "petalo-2/4/4/2", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 2",
-                                text: "CARENCIA"
+                                text: "PENSAMIENTO - CARENCIA"
                             },
                             {linkName: "petalo-2/4/4/3", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 3",
-                                text: "COMETER ERRORES"
+                                text: "PENSAMIENTO - COMETER ERRORES"
                             },
                             {linkName: "petalo-2/4/4/4", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 4",
-                                text: "CONFUSION"
+                                text: "PENSAMIENTO - CONFUSION"
                             },
                             {linkName: "petalo-2/4/4/5", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 5",
-                                text: "CULPA"
+                                text: "PENSAMIENTO - CULPA"
                             },
                             {linkName: "petalo-2/4/4/6", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 6",
-                                text: "CRITICA"
+                                text: "PENSAMIENTO - CRITICA"
                             },
                             {linkName: "petalo-2/4/4/7", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 7",
-                                text: "DESVALORIZACION"
+                                text: "PENSAMIENTO - DESVALORIZACION"
                             },
                             {linkName: "petalo-2/4/4/8", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 8",
-                                text: "DEPENDENCIA"
+                                text: "PENSAMIENTO - DEPENDENCIA"
                             },
                             {linkName: "petalo-2/4/4/9", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 9",
-                                text: "DESILUSION"
+                                text: "PENSAMIENTO - DESILUSION"
                             },
                             {linkName: "petalo-2/4/4/10", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 10",
-                                text: "INFERIORIDAD"
+                                text: "PENSAMIENTO - INFERIORIDAD"
                             },
                             {linkName: "petalo-2/4/4/11", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 11",
-                                text: "INEFICAZ"
+                                text: "PENSAMIENTO - INEFICAZ"
                             },
                             {linkName: "petalo-2/4/4/12", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 12",
-                                text: "NO PUEDO"
+                                text: "PENSAMIENTO - NO PUEDO"
                             },
                             {linkName: "petalo-2/4/4/13", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 13",
-                                text: "PERDER EL CONTROL"
+                                text: "PENSAMIENTO - PERDER EL CONTROL"
                             },
                             {linkName: "petalo-2/4/4/14", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 14",
-                                text: "PERDIDA"
+                                text: "PENSAMIENTO - PERDIDA"
                             },
                             {linkName: "petalo-2/4/4/15", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 15",
-                                text: "QUE DIRAN"
+                                text: "PENSAMIENTO - QUE DIRAN"
                             },
                             {linkName: "petalo-2/4/4/16", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 16",
-                                text: "RECHAZO"
+                                text: "PENSAMIENTO - RECHAZO"
                             },
                             {linkName: "petalo-2/4/4/17", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 17",
-                                text: "SER SOMETIDO"
+                                text: "PENSAMIENTO - SER SOMETIDO"
                             },
                             {linkName: "petalo-2/4/4/18", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 18",
-                                text: "SUFRIR"
+                                text: "PENSAMIENTO - SUFRIR"
                             },
                         ]},
                     {linkName: "petalo-2/4/5", image: 'boton2', title: "E", index: 4,  petalos: 18, colorBorder: "yellow", subPetalos: [
                             {linkName: "petalo-2/4/5/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 1",
-                                text: "ABANDONO"
+                                text: "RECUERDO - ABANDONO"
                             },
                             {linkName: "petalo-2/4/5/2", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 2",
-                                text: "CARENCIA"
+                                text: "RECUERDO - CARENCIA"
                             },
                             {linkName: "petalo-2/4/5/3", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 3",
-                                text: "COMETER ERRORES"
+                                text: "RECUERDO - COMETER ERRORES"
                             },
                             {linkName: "petalo-2/4/5/4", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 4",
-                                text: "CONFUSION"
+                                text: "RECUERDO - CONFUSION"
                             },
                             {linkName: "petalo-2/4/5/5", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 5",
-                                text: "CULPA"
+                                text: "RECUERDO - CULPA"
                             },
                             {linkName: "petalo-2/4/5/6", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 6",
-                                text: "CRITICA"
+                                text: "RECUERDO - CRITICA"
                             },
                             {linkName: "petalo-2/4/5/7", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 7",
-                                text: "DESVALORIZACION"
+                                text: "RECUERDO - DESVALORIZACION"
                             },
                             {linkName: "petalo-2/4/5/8", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 8",
-                                text: "DEPENDENCIA"
+                                text: "RECUERDO - DEPENDENCIA"
                             },
                             {linkName: "petalo-2/4/5/9", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 9",
-                                text: "DESILUSION"
+                                text: "RECUERDO - DESILUSION"
                             },
                             {linkName: "petalo-2/4/5/10", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 10",
-                                text: "INFERIORIDAD"
+                                text: "RECUERDO - INFERIORIDAD"
                             },
                             {linkName: "petalo-2/4/5/11", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 11",
-                                text: "INEFICAZ"
+                                text: "RECUERDO - INEFICAZ"
                             },
                             {linkName: "petalo-2/4/5/12", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 12",
-                                text: "NO PUEDO"
+                                text: "RECUERDO - NO PUEDO"
                             },
                             {linkName: "petalo-2/4/5/13", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 13",
-                                text: "PERDER EL CONTROL"
+                                text: "RECUERDO - PERDER EL CONTROL"
                             },
                             {linkName: "petalo-2/4/5/14", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 14",
-                                text: "PERDIDA"
+                                text: "RECUERDO - PERDIDA"
                             },
                             {linkName: "petalo-2/4/5/15", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 15",
-                                text: "QUE DIRAN"
+                                text: "RECUERDO - QUE DIRAN"
                             },
                             {linkName: "petalo-2/4/5/16", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 16",
-                                text: "RECHAZO"
+                                text: "RECUERDO - RECHAZO"
                             },
                             {linkName: "petalo-2/4/5/17", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 17",
-                                text: "SER SOMETIDO"
+                                text: "RECUERDO - SER SOMETIDO"
                             },
                             {linkName: "petalo-2/4/5/18", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 18",
-                                text: "SUFRIR"
+                                text: "RECUERDO - SUFRIR"
                             },
                         ]},
             ]},
