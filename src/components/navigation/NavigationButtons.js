@@ -6,16 +6,16 @@ import ResponsiveText from "../apis/ResponsiveText";
 
 const NavigationButtons = () => <>
     <Container>
-        <BackButton onClick={()=> navigate(-1)}/>
-        <NextButton onClick={()=> navigate(+1)}/>
+        <BackButton color="white" onClick={()=> navigate(-1)}/>
+        <NextButton color="white" onClick={()=> navigate(+1)}/>
     </Container>
 </>
 
 export const NavigationButtonsInLine = () => <>
     <ContainerInLine>
-        <BackButtonInLine onClick={()=> navigate(-1)}/>
+        <BackButtonInLine color="white" onClick={()=> navigate(-1)}/>
         <FinishButton/>
-        <NextButtonInLine onClick={()=> navigate(+1)}/>
+        <NextButtonInLine color="white" onClick={()=> navigate(+1)}/>
     </ContainerInLine>
     <GuiaButton onClick={()=>navigate('/circulo-base')}>
         <ResponsiveText scale={0.6} bold color={"#413f3f"}>
@@ -53,12 +53,12 @@ const Button = styled.div`
 `;
 
 
-const NextButtonInLine = styled(Button)`
-  border-left: 30px solid white;
+export const NextButtonInLine = styled(Button)`
+  border-left: 30px solid ${props => props.color};
 `;
 
-const BackButtonInLine = styled(Button)`
-  border-right: 30px solid white;
+export const BackButtonInLine = styled(Button)`
+  border-right: 30px solid ${props => props.color};
 `;
 
 const ButtonCustom = styled(Button)`
@@ -83,35 +83,35 @@ const ButtonCustom = styled(Button)`
   }
 `;
 
-const BackButton = styled(ButtonCustom)`
-  border-right: 30px solid white;
+export const BackButton = styled(ButtonCustom)`
+  border-right: 30px solid ${props => props.color};
   
   @media (max-width: 465px) {
-    border-right: 15px solid white;
+    border-right: 15px solid ${props => props.color};
   }
 
   @media (max-width: 540px) and (min-width: 465px) {
-    border-right: 20px solid white;
+    border-right: 20px solid ${props => props.color};
   }
 
   @media (max-width: 620px) and (min-width: 540px) {
-    border-right: 25px solid white;
+    border-right: 25px solid ${props => props.color};
   }
 `;
 
-const NextButton = styled(ButtonCustom)`
-  border-left: 30px solid white;
+export const NextButton = styled(ButtonCustom)`
+  border-left: 30px solid ${props => props.color};
   
   @media (max-width: 465px) {
-    border-left: 15px solid white;
+    border-left: 15px solid ${props => props.color};
   }
 
   @media (max-width: 540px) and (min-width: 465px) {
-    border-left: 20px solid white;
+    border-left: 20px solid ${props => props.color};
   }
 
   @media (max-width: 620px) and (min-width: 540px) {
-    border-left: 25px solid white;
+    border-left: 25px solid ${props => props.color};
   }
 `;
 
