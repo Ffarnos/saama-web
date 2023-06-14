@@ -1,8 +1,8 @@
 
 
 const petalos = [
-    {linkName: "petalo-1", title: "Fuente del Amor", image: 'boton1', subPetalos: [
-            {linkName: "petalo-1/1", title: "Nucleo de Amor", image: 'boton1',number: 1, subPetalos: [
+    {linkName: "petalo-1", title: "Fuente del Amor", image: 'boton1',  petalos: 8, subPetalos: [
+            {linkName: "petalo-1/1", title: "Nucleo de Amor", image: 'boton1',number: 1, petalos: 6,subPetalos: [
                     {linkName: "petalo-1/1/1",image: 'boton1', titlePage: 'Nucleo de Amor', title: "Estoy en Amor",
                         text: "Aquí se debe integrar, esta integración lleva a un estado holístico de amor profundo, aceptación total, armonía interior y exterior. Esto sucede cuando la persona ha perdido la conexión con su estado puro de paz interna."
                     },
@@ -25,7 +25,7 @@ const petalos = [
                         text: "Conectar con los seres de luz representa hacer conexión con energías de la naturaleza elevada y positiva. Estos seres son considerados como guías espirituales, maestros o entidades de sabiduría y amor. Los seres de luz pueden ser identificados como ángeles, seres ascendidos, maestros espirituales. Su propósito principal es brindar apoyo, guía y protección a las personas en su camino espiritual y en la búsqueda de la iluminación."
                     },
                 ]},
-            {linkName: "petalo-1/2", title: "Conecto con arcangeles", image: 'boton1',subPetalos: [
+            {linkName: "petalo-1/2", title: "Conecto con arcangeles", image: 'boton1', petalos: 10,subPetalos: [
                     {linkName: "petalo-1/2/1",image: 'boton1', titlePage: 'Conecto con arcangeles', title: "Miguel",
                         text: "Considerado el líder de los ángeles, asociado con la protección y el coraje."
                     },
@@ -57,7 +57,7 @@ const petalos = [
                         text: "Según la tradición judía, se cree que es el ángel que recoge las oraciones y las lleva al Cielo."
                     },
                 ]},
-            {linkName: "petalo-1/3", image: 'boton1', title: "Conecto seres celestiales", number: 3, subPetalos: [
+            {linkName: "petalo-1/3", image: 'boton1', title: "Conecto seres celestiales", number: 3,  petalos: 7, subPetalos: [
                     {linkName: "petalo-1/3/1", image: 'boton1', title: "Serafines",
                         text: "Los serafines son una clase de ángeles en la jerarquía angelical, su función es la de transmitir la voluntad divina y actuar como mensajeros entre Dios y los seres humanos. Además, se considera que los serafines son seres de pura devoción y amor hacia Dios."
                     },
@@ -87,7 +87,7 @@ const petalos = [
             {linkName: "petalo-1/5", image: 'boton1', title: "Respetar/Aceptar",
                 text: ""
             },
-            {linkName: "petalo-1/6", image: 'boton1', title: "Armonizar el Ser", number: 6, subPetalos: [
+            {linkName: "petalo-1/6", image: 'boton1', title: "Armonizar el Ser",  petalos: 10, number: 6, subPetalos: [
                     {linkName: "petalo-1/6/21", image: 'boton1', titlePage: 'Armonizar el ser', title: "Abundancia", text: ""},
                     {linkName: "petalo-1/6/21", image: 'boton1', titlePage: 'Armonizar el ser', title: "Agua", text: ""},
                     {linkName: "petalo-1/6/23", image: 'boton1', titlePage: 'Armonizar el ser', title: "Aire", text: ""},
@@ -116,21 +116,21 @@ const petalos = [
                     {linkName: "petalo-1/6/10", image: 'boton1', titlePage: 'Armonizar el ser', title: "Trabajo", text: ""},
 
                 ]},
-            {linkName: "petalo-1/7", image: 'boton1', title: "Conectar con la Abundancia", number: 7, subPetalos: [
-                    {linkName: "petalo-1/7/7", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Alegria", text: ""},
-                    {linkName: "petalo-1/7/7", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Amistad", text: ""},
-                    {linkName: "petalo-1/7/7", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Amor", text: ""},
+            {linkName: "petalo-1/7", image: 'boton1', title: "Conectar con la Abundancia",  petalos: 12, number: 7, subPetalos: [
+                    {linkName: "petalo-1/7/1", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Alegria", text: ""},
+                    {linkName: "petalo-1/7/2", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Amistad", text: ""},
+                    {linkName: "petalo-1/7/3", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Amor", text: ""},
                     {linkName: "petalo-1/7/4", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Dar", text: ""},
-                    {linkName: "petalo-1/7/1", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Dinero", text: ""},
-                    {linkName: "petalo-1/7/5", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Felicidad", text: ""},
-                    {linkName: "petalo-1/7/10", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Gratitud", text: ""},
-                    {linkName: "petalo-1/7/6", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Mantener", text: ""},
+                    {linkName: "petalo-1/7/5", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Dinero", text: ""},
+                    {linkName: "petalo-1/7/6", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Felicidad", text: ""},
+                    {linkName: "petalo-1/7/7", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Gratitud", text: ""},
+                    {linkName: "petalo-1/7/8", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Mantener", text: ""},
                     {linkName: "petalo-1/7/9", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Paz", text: ""},
-                    {linkName: "petalo-1/7/8", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Recibir", text: ""},
-                    {linkName: "petalo-1/7/2", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Salud", text: ""},
-                    {linkName: "petalo-1/7/3", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Seguridad", text: ""}
+                    {linkName: "petalo-1/7/10", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Recibir", text: ""},
+                    {linkName: "petalo-1/7/11", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Salud", text: ""},
+                    {linkName: "petalo-1/7/12", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Seguridad", text: ""}
                     ]},
-            {linkName: "petalo-1/8", image: 'boton1', title: "Bloque que me impide avanzar", number: 8, subPetalos: [
+            {linkName: "petalo-1/8", image: 'boton1', title: "Bloque que me impide avanzar",  petalos: 14, number: 8, subPetalos: [
                         {linkName: "petalo-1/8/1", image: 'boton1', titlePage: 'Bloqueo que me impide avanzar', title: "Atasco", text: ""},
                         {linkName: "petalo-1/8/2", image: 'boton1', titlePage: 'Bloqueo que me impide avanzar', title: "Barrera", text: ""},
                         {linkName: "petalo-1/8/3", image: 'boton1', titlePage: 'Bloqueo que me impide avanzar', title: "Bloqueo", text: ""},
@@ -147,9 +147,9 @@ const petalos = [
                         {linkName: "petalo-1/8/14", image: 'boton1', titlePage: 'Bloqueo que me impide avanzar', title: "Situacion", text: ""},
                     ]},
     ]},
-    {linkName: "petalo-2", image: 'boton2', title: "Fuente Emocional", subPetalos: [
-            {linkName: "petalo-2/1", image: 'boton2', title: "Emociones", noNumbers: true,subPetalos: [
-                    {linkName: "petalo-2/1/1", image: 'boton2', title: "A", index: 0, colorBorder: "red", subPetalos: [
+    {linkName: "petalo-2", image: 'boton2', title: "Fuente Emocional",  petalos: 6, subPetalos: [
+            {linkName: "petalo-2/1", image: 'boton2', title: "Emociones",  petalos: 7, noNumbers: true,subPetalos: [
+                    {linkName: "petalo-2/1/1", image: 'boton2', title: "A",  petalos: 7, index: 0, colorBorder: "red", subPetalos: [
                         {linkName: "petalo-2/1/1/1", image: 'boton2', titlePage: 'Emociones', title: "A 1",
                             text: "ABRUMADO, ABURRIMIENTO, AGOBIO, AGOTADO"
                         },
@@ -172,7 +172,7 @@ const petalos = [
                             text: "CULPABILIDAD, DEPRESIÓN, DESAMPARO, DESÁNIMO"
                         },
                     ]},
-                    {linkName: "petalo-2/1/2", image: 'boton2', title: "B", index: 1, colorBorder: "blue",subPetalos: [
+                    {linkName: "petalo-2/1/2", image: 'boton2', title: "B", index: 1,  petalos: 7, colorBorder: "blue",subPetalos: [
                             {linkName: "petalo-2/1/2/1", image: 'boton2', titlePage: 'Emociones', title: "B 1",
                                 text: "DESCONECTADO DE ALGO/ALGUIEN, DESCONFIAR, DESCONSUELO, DESESPERACIÓN/DESESPERADO"
                             },
@@ -195,7 +195,7 @@ const petalos = [
                                 text: "IMPOTENCIA, INDECISIÓN, INDIFERENCIA, INDIGNADO"
                             },
                     ]},
-                    {linkName: "petalo-2/1/3", image: 'boton2', title: "C", index: 2, colorBorder: "green",subPetalos: [
+                    {linkName: "petalo-2/1/3", image: 'boton2', title: "C", index: 2,  petalos: 7, colorBorder: "green",subPetalos: [
                             {linkName: "petalo-2/1/3/1", image: 'boton2', titlePage: 'Emociones', title: "C 1",
                                 text: "INEFICAZ, INFERIORIDAD, INFLEXIBILIDAD, INSATISFECHO"
                             },
@@ -218,7 +218,7 @@ const petalos = [
                                 text: "RECHAZO. RENCOR,REPRIMIDO ,RESENTIMIENTO"
                             },
                         ]},
-                    {linkName: "petalo-2/1/4", image: 'boton2', title: "D", index: 3, colorBorder: "yellow",subPetalos: [
+                    {linkName: "petalo-2/1/4", image: 'boton2', title: "D", index: 3,  petalos: 7, colorBorder: "yellow",subPetalos: [
                             {linkName: "petalo-2/1/4/1", image: 'boton2', titlePage: 'Emociones', title: "D 1",
                                 text: "SENTIMIENTO DE ABANDONO, SENTIMIENTO DE TRAICIÓN, SENTIR FALTA DE APOYO, SENTIR UNA PÉRDIDA EMOCIONAL"
                             },
@@ -242,7 +242,7 @@ const petalos = [
                             },
                         ]}
             ]},
-            {linkName: "petalo-2/2", image: 'boton2', title: "Bloqueos Emocionales A", subPetalos: [
+            {linkName: "petalo-2/2", image: 'boton2', title: "Bloqueos Emocionales A",  petalos: 17, subPetalos: [
                     {linkName: "petalo-2/2/1", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en cuerpo emocional",
                         text: "Vamos a eliminar cualquier emoción que este bloqueando nuestro estado emocional… (buscarlas en la cuadricula de emociones)."
                     },
@@ -295,7 +295,7 @@ const petalos = [
                         text: "Situación vivida que nos generó un alto grado de estrés, generando un colapso emocional. (ir a la cuadricula de emociones)"
                     }
             ]},
-            {linkName: "petalo-2/3", image: 'boton2', title: "Bloqueos Emocionales B", subPetalos: [
+            {linkName: "petalo-2/3", image: 'boton2', title: "Bloqueos Emocionales B",  petalos: 16, subPetalos: [
                     { linkName: "petalo-2/3/1", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Falta de interés por la vida", text: "Incapacidad para experimentar placer, la pérdida de interés o satisfacción en actividades de la vida. Se considera una falta de reactividad a los estímulos habitualmente placenteros." },
                     { linkName: "petalo-2/3/2", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Temor al bienestar", text: "Es el resultado de traumas, tragedias o experiencias negativas que han alterado la forma en que una persona se desenvuelve en la vida, lo que desencadena un inexplicable temor a estar bien." },
                     { linkName: "petalo-2/3/3", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Imagen grabada en la mente", text: "Es el concepto de memoria fotográfica, recordar una situación negativa determinada o una imagen concreta con todo lujo de detalles, lo que aportaría un máximo realismo a esa imagen." },
@@ -313,8 +313,8 @@ const petalos = [
                     { linkName: "petalo-2/3/15", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Para satisfacer a alguien", text: "Comportamiento obsesivo que nos lleva a hacer cosas para mantener conforme a una persona…" },
                     { linkName: "petalo-2/3/16", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Lo hago por costumbre", text: "Es común que las personas adopten comportamientos arraigados por hábitos, ya sean heredados o no, sin cuestionarlos ni considerar cambiarlos. Estos patrones se mantienen en su rutina diaria y pueden perdurar toda su vida. Sin embargo, es posible liberarse de estos hábitos negativos y abrirse a nuevas posibilidades que brinden mayores beneficios y satisfacción." }
             ]},
-            {linkName: "petalo-2/4", image: 'boton2', title: "Cruce de Rutas", noNumbers: true, subPetalos: [
-                    {linkName: "petalo-2/4/1", image: 'boton2', title: "A", index: 0, colorBorder: "red", subPetalos: [
+            {linkName: "petalo-2/4", image: 'boton2', title: "Cruce de Rutas",  petalos: 5, noNumbers: true, subPetalos: [
+                    {linkName: "petalo-2/4/1", image: 'boton2', title: "A",  petalos: 18, index: 0, colorBorder: "red", subPetalos: [
                             {linkName: "petalo-2/4/1/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 1",
                                 text: "ABANDONO"
                             },
@@ -370,7 +370,7 @@ const petalos = [
                                 text: "SUFRIR"
                             },
                         ]},
-                    {linkName: "petalo-2/4/2", image: 'boton2', title: "B", index: 1, colorBorder: "blue", subPetalos: [
+                    {linkName: "petalo-2/4/2", image: 'boton2', title: "B", petalos: 18, index: 1, colorBorder: "blue", subPetalos: [
                             {linkName: "petalo-2/4/2/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 1",
                                 text: "ABANDONO"
                             },
@@ -426,7 +426,7 @@ const petalos = [
                                 text: "SUFRIR"
                             },
                         ]},
-                    {linkName: "petalo-2/4/3", image: 'boton2', title: "C", index: 2, colorBorder: "blue", subPetalos: [
+                    {linkName: "petalo-2/4/3", image: 'boton2', title: "C", index: 2,  petalos: 18, colorBorder: "blue", subPetalos: [
                             {linkName: "petalo-2/4/3/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 1",
                                 text: "ABANDONO"
                             },
@@ -482,7 +482,7 @@ const petalos = [
                                 text: "SUFRIR"
                             },
                         ]},
-                    {linkName: "petalo-2/4/4", image: 'boton2', title: "D", index: 3, colorBorder: "yellow", subPetalos: [
+                    {linkName: "petalo-2/4/4", image: 'boton2', title: "D", index: 3,  petalos: 18, colorBorder: "yellow", subPetalos: [
                             {linkName: "petalo-2/4/4/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 1",
                                 text: "ABANDONO"
                             },
@@ -538,7 +538,7 @@ const petalos = [
                                 text: "SUFRIR"
                             },
                         ]},
-                    {linkName: "petalo-2/4/5", image: 'boton2', title: "E", index: 4, colorBorder: "yellow", subPetalos: [
+                    {linkName: "petalo-2/4/5", image: 'boton2', title: "E", index: 4,  petalos: 18, colorBorder: "yellow", subPetalos: [
                             {linkName: "petalo-2/4/5/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 1",
                                 text: "ABANDONO"
                             },
@@ -595,7 +595,7 @@ const petalos = [
                             },
                         ]},
             ]},
-            {linkName: "petalo-2/5", image: 'boton2', title: "Miedos A", subPetalos: [
+            {linkName: "petalo-2/5", image: 'boton2', title: "Miedos A",  petalos: 17, subPetalos: [
                     { linkName: "petalo-2/5/1", image: 'boton2', titlePage: "Miedos A", title: "abandono", text: "" },
                     { linkName: "petalo-2/5/2", image: 'boton2', titlePage: "Miedos A", title: "abundancia", text: "" },
                     { linkName: "petalo-2/5/3", image: 'boton2', titlePage: "Miedos A", title: "alturas (acrofobia)", text: "" },
@@ -614,7 +614,7 @@ const petalos = [
                     { linkName: "petalo-2/5/16", image: 'boton2', titlePage: "Miedos A", title: "fracaso", text: "" },
                     { linkName: "petalo-2/5/17", image: 'boton2', titlePage: "Miedos A", title: "futuro", text: "" }
             ]},
-            {linkName: "petalo-2/6", image: 'boton2', title: "Miedos B", subPetalos: [
+            {linkName: "petalo-2/6", image: 'boton2', title: "Miedos B",  petalos: 16, subPetalos: [
                     { linkName: "petalo-2/6/1", image: 'boton2', titlePage: "Miedos B", title: "hablar en público (glosofobia)", text: "" },
                     { linkName: "petalo-2/6/2", image: 'boton2', titlePage: "Miedos B", title: "humillación", text: "" },
                     { linkName: "petalo-2/6/3", image: 'boton2', titlePage: "Miedos B", title: "lo extraño", text: "" },
@@ -631,7 +631,7 @@ const petalos = [
                     { linkName: "petalo-2/6/14", image: 'boton2', titlePage: "Miedos B", title: "oscuridad", text: "" },
                     { linkName: "petalo-2/6/15", image: 'boton2', titlePage: "Miedos B", title: "pérdida", text: "" },
                     { linkName: "petalo-2/6/16", image: 'boton2', titlePage: "Miedos B", title: "personas desconocidas (xenofobia)", text: "" }            ]},
-            {linkName: "petalo-2/7", image: 'boton2', title: "Miedos C", subPetalos: [
+            {linkName: "petalo-2/7", image: 'boton2', title: "Miedos C",  petalos: 11, subPetalos: [
                     { linkName: "petalo-2/7/1", image: 'boton2', titlePage: "Miedos C", title: "rechazo", text: "" },
                     { linkName: "petalo-2/7/2", image: 'boton2', titlePage: "Miedos C", title: "ruidos fuertes (fonofobia)", text: "" },
                     { linkName: "petalo-2/7/3", image: 'boton2', titlePage: "Miedos C", title: "salud", text: "" },

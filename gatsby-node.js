@@ -9,10 +9,10 @@ exports.createPages = async ({ actions }) => {
         petalos.forEach((petalo) => {
             const pagePath = `circulo-base/${petalo.linkName}`
             if (petalo.subPetalos) {
-                let context = {linkName: petalo.linkName, title: petalo.title, image: petalo.image}
+                let context = {linkName: petalo.linkName, title: petalo.title, image: petalo.image, petalos: petalo.petalos}
                 if (petalo.noNumbers) {
                     context = {
-                        linkName: petalo.linkName, title: petalo.title, image: petalo.image, subPetalos: petalo.subPetalos
+                        linkName: petalo.linkName, title: petalo.title, image: petalo.image, petalos: petalo.petalos, subPetalos: petalo.subPetalos
                     }
                 }
                 createPage({

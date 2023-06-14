@@ -10,7 +10,7 @@ import {FinishButtonResponsive} from "../navigation/FinishButton";
 const createdPages = require('../../../../createdPages.json');
 
 const PetalosTemplate = ({ pageContext }) => {
-    const {linkName, title, image, subPetalos} = pageContext
+    const {linkName, title, image, subPetalos, petalos} = pageContext
     const [showAlert, setShowAlert] = useState(false);
     const [input, setInput] = useState(0);
     const imagePath = "/images/" + image + ".webp";
@@ -24,6 +24,9 @@ const PetalosTemplate = ({ pageContext }) => {
                 <Title scale={0.8} color={"#fdf8f8"}>
                     {title}
                 </Title>
+                <ResponsiveText scale={0.6} color={"#fdf8f8"}>
+                    Pétalos {petalos}
+                </ResponsiveText>
                 {input !== 0 && <TextField
                     id="standar-basic"
                     value={input}
