@@ -8,14 +8,22 @@ import {useEffect} from "react";
 const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
     useEffect(() => {
         const handleKeyDown = (event) => {
-            if (event.key === 'Enter')
-                navigate("/circulo-base")
-             else if (event.key === 'Backspace')
-                navigate("/")
-            else if (event.key === 'ArrowLeft')
-                navigate(-1)
-            else if (event.key === 'ArrowRight')
-                navigate(+1)
+            switch (event.key) {
+                case 'Enter':
+                    navigate("/circulo-base")
+                    break;
+                case 'Backspace':
+                    navigate("/")
+                    break;
+                case 'ArrowLeft':
+                    navigate(-1)
+                    break;
+                case 'ArrowRight':
+                    navigate(+1)
+                    break;
+            }
+            if (event.key === '1' || event.key === '2' || event.key === '3' || event.key === '4' || event.key === '5' || event.key === '6' || event.key === '7' || event.key === '8' || event.key === '9')
+                onClick(event.key)
         };
 
         document.addEventListener('keydown', handleKeyDown);
