@@ -1,4 +1,3 @@
-import * as React from "react"
 import styled from 'styled-components';
 import ResponsiveText from "../apis/ResponsiveText";
 import Buttons from "../Buttons";
@@ -40,15 +39,11 @@ const PetalosTemplate = ({ pageContext }) => {
                 </Alert>
             </ContainerAlert>}
             <Buttons
-                bigButtonTitle={"FUNTE GUÍA"}
+                bigButtonTitle={"FUENTE GUÍA"}
                 circuloBase={noNumber}
                 petalos={subPetalos}
                 noNumber={noNumber}
                 onClick={(number) => {
-                    if (subPetalos) {
-                        navigate("/circulo-base/" + linkName + "/" + number)
-                        return;
-                    }
                     const numberFinal = (input ? (input * 10) : 0) + number;
                     setInput(numberFinal);
                     setTimeout(() => {
