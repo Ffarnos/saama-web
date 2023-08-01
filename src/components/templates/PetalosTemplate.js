@@ -10,7 +10,7 @@ import {FinishButtonResponsive} from "../navigation/FinishButton";
 const createdPages = require('../../../../createdPages.json');
 
 const PetalosTemplate = ({ pageContext }) => {
-    const {linkName, title, image, subPetalos, petalos} = pageContext
+    const {linkName, title, image, subPetalos, noNumber} = pageContext
     const [showAlert, setShowAlert] = useState(false);
     const [input, setInput] = useState(0);
     const imagePath = "/images/" + image + ".webp";
@@ -25,7 +25,7 @@ const PetalosTemplate = ({ pageContext }) => {
                     {title}
                 </Title>
                 <ResponsiveText scale={0.6} color={"#fdf8f8"}>
-                    Pétalos {petalos}
+                    Pétalos {subPetalos.length}
                 </ResponsiveText>
                 {input !== 0 && <TextField
                     id="standar-basic"
@@ -41,9 +41,9 @@ const PetalosTemplate = ({ pageContext }) => {
             </ContainerAlert>}
             <Buttons
                 bigButtonTitle={"FUNTE GUÍA"}
-                circuloBase={subPetalos !== undefined}
+                circuloBase={noNumber}
                 petalos={subPetalos}
-                noNumber={subPetalos !== undefined}
+                noNumber={noNumber}
                 onClick={(number) => {
                     if (subPetalos) {
                         navigate("/circulo-base/" + linkName + "/" + number)
