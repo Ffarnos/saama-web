@@ -2,9 +2,9 @@
 
 const petalos = [
     {
-        linkName: "petalo-1", title: "Fuente del Amor", image: 'boton1', petalos: 8, subPetalos: [
+        linkName: "petalo-1", title: "Fuente del Amor", image: 'boton1',  subPetalos: [
             {
-                linkName: "petalo-1/1", title: "Nucleo de Amor", image: 'boton1', number: 1, petalos: 6, subPetalos: [
+                linkName: "petalo-1/1", title: "Nucleo de Amor", image: 'boton1', number: 1, subPetalos: [
                     {
                         linkName: "petalo-1/1/1", image: 'boton1', titlePage: 'Nucleo de Amor', title: "Estoy en Amor",
                         text: "Aquí se debe integrar, esta integración lleva a un estado holístico de amor profundo, aceptación total, armonía interior y exterior. Esto sucede cuando la persona ha perdido la conexión con su estado puro de paz interna."
@@ -36,7 +36,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-1/2", title: "Conecto con arcangeles", image: 'boton1', petalos: 10, subPetalos: [
+                linkName: "petalo-1/2", title: "Conecto con arcangeles", image: 'boton1', subPetalos: [
                     {
                         linkName: "petalo-1/2/1", image: 'boton1', titlePage: 'Conecto con arcangeles', title: "Miguel",
                         text: "Considerado el líder de los ángeles, asociado con la protección y el coraje."
@@ -80,7 +80,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-1/3", image: 'boton1', title: "Conecto seres celestiales", number: 3, petalos: 7, subPetalos: [
+                linkName: "petalo-1/3", image: 'boton1', title: "Conecto seres celestiales", number: 3, subPetalos: [
                     {
                         linkName: "petalo-1/3/1", image: 'boton1', title: "Serafines",
                         text: "Los serafines son una clase de ángeles en la jerarquía angelical, su función es la de transmitir la voluntad divina y actuar como mensajeros entre Dios y los seres humanos. Además, se considera que los serafines son seres de pura devoción y amor hacia Dios."
@@ -121,7 +121,7 @@ const petalos = [
                 text: ""
             },
             {
-                linkName: "petalo-1/6", image: 'boton1', title: "Armonizar el Ser", petalos: 26, number: 6, subPetalos: [
+                linkName: "petalo-1/6", image: 'boton1', title: "Armonizar el Ser", number: 6, subPetalos: [
                     { linkName: "petalo-1/6/1", image: 'boton1', titlePage: 'Armonizar el ser', title: "Abundancia", text: "" },
                     { linkName: "petalo-1/6/2", image: 'boton1', titlePage: 'Armonizar el ser', title: "Agua", text: "" },
                     { linkName: "petalo-1/6/3", image: 'boton1', titlePage: 'Armonizar el ser', title: "Aire", text: "" },
@@ -152,7 +152,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-1/7", image: 'boton1', title: "Conectar con la Abundancia", petalos: 12, number: 7, subPetalos: [
+                linkName: "petalo-1/7", image: 'boton1', title: "Conectar con la Abundancia", number: 7, subPetalos: [
                     { linkName: "petalo-1/7/1", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Alegria", text: "" },
                     { linkName: "petalo-1/7/2", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Amistad", text: "" },
                     { linkName: "petalo-1/7/3", image: 'boton1', titlePage: 'Conectar con la Abundancia', title: "Amor", text: "" },
@@ -168,7 +168,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-1/8", image: 'boton1', title: "Bloque que me impide avanzar", petalos: 14, number: 8, subPetalos: [
+                linkName: "petalo-1/8", image: 'boton1', title: "Bloque que me impide avanzar", number: 8, subPetalos: [
                     { linkName: "petalo-1/8/1", image: 'boton1', titlePage: 'Bloqueo que me impide avanzar', title: "Atasco", text: "" },
                     { linkName: "petalo-1/8/2", image: 'boton1', titlePage: 'Bloqueo que me impide avanzar', title: "Barrera", text: "" },
                     { linkName: "petalo-1/8/3", image: 'boton1', titlePage: 'Bloqueo que me impide avanzar', title: "Bloqueo", text: "" },
@@ -188,11 +188,11 @@ const petalos = [
         ]
     },
     {
-        linkName: "petalo-2", image: 'boton2', title: "Fuente Emocional", petalos: 6, subPetalos: [
+        linkName: "petalo-2", image: 'boton2', title: "Fuente Emocional", subPetalos: [
             {
-                linkName: "petalo-2/1", image: 'boton2', title: "Emociones", petalos: 7, noNumbers: true, subPetalos: [
+                linkName: "petalo-2/1", image: 'boton2', title: "Emociones", noNumbers: true, subPetalos: [
                     {
-                        linkName: "petalo-2/1/1", image: 'boton2', title: "A", petalos: 7, index: 0, colorBorder: "red", subPetalos: [
+                        linkName: "petalo-2/1/1", image: 'boton2', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
                                 linkName: "petalo-2/1/1/1", image: 'boton2', titlePage: 'Emociones', title: "A 1",
                                 text: "ABRUMADO, ABURRIMIENTO, AGOBIO, AGOTADO"
@@ -224,7 +224,7 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-2/1/2", image: 'boton2', title: "B", index: 1, petalos: 7, colorBorder: "blue", subPetalos: [
+                        linkName: "petalo-2/1/2", image: 'boton2', title: "B", index: 1, colorBorder: "blue", subPetalos: [
                             {
                                 linkName: "petalo-2/1/2/1", image: 'boton2', titlePage: 'Emociones', title: "B 1",
                                 text: "DESCONECTADO DE ALGO/ALGUIEN, DESCONFIAR, DESCONSUELO, DESESPERACIÓN/DESESPERADO"
@@ -256,7 +256,7 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-2/1/3", image: 'boton2', title: "C", index: 2, petalos: 7, colorBorder: "green", subPetalos: [
+                        linkName: "petalo-2/1/3", image: 'boton2', title: "C", index: 2, colorBorder: "green", subPetalos: [
                             {
                                 linkName: "petalo-2/1/3/1", image: 'boton2', titlePage: 'Emociones', title: "C 1",
                                 text: "INEFICAZ, INFERIORIDAD, INFLEXIBILIDAD, INSATISFECHO"
@@ -288,7 +288,7 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-2/1/4", image: 'boton2', title: "D", index: 3, petalos: 7, colorBorder: "yellow", subPetalos: [
+                        linkName: "petalo-2/1/4", image: 'boton2', title: "D", index: 3, colorBorder: "yellow", subPetalos: [
                             {
                                 linkName: "petalo-2/1/4/1", image: 'boton2', titlePage: 'Emociones', title: "D 1",
                                 text: "SENTIMIENTO DE ABANDONO, SENTIMIENTO DE TRAICIÓN, SENTIR FALTA DE APOYO, SENTIR UNA PÉRDIDA EMOCIONAL"
@@ -322,7 +322,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-2/2", image: 'boton2', title: "Bloqueos Emocionales A", petalos: 17, subPetalos: [
+                linkName: "petalo-2/2", image: 'boton2', title: "Bloqueos Emocionales A", subPetalos: [
                     {
                         linkName: "petalo-2/2/1", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en cuerpo emocional",
                         text: "Vamos a eliminar cualquier emoción que este bloqueando nuestro estado emocional… (buscarlas en la cuadricula de emociones)."
@@ -394,7 +394,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-2/3", image: 'boton2', title: "Bloqueos Emocionales B", petalos: 16, subPetalos: [
+                linkName: "petalo-2/3", image: 'boton2', title: "Bloqueos Emocionales B", subPetalos: [
                     { linkName: "petalo-2/3/1", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Falta de interés por la vida", text: "Incapacidad para experimentar placer, la pérdida de interés o satisfacción en actividades de la vida. Se considera una falta de reactividad a los estímulos habitualmente placenteros." },
                     { linkName: "petalo-2/3/2", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Temor al bienestar", text: "Es el resultado de traumas, tragedias o experiencias negativas que han alterado la forma en que una persona se desenvuelve en la vida, lo que desencadena un inexplicable temor a estar bien." },
                     { linkName: "petalo-2/3/3", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Imagen grabada en la mente", text: "Es el concepto de memoria fotográfica, recordar una situación negativa determinada o una imagen concreta con todo lujo de detalles, lo que aportaría un máximo realismo a esa imagen." },
@@ -414,9 +414,9 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-2/4", image: 'boton2', title: "Cruce de Rutas", petalos: 5, noNumbers: true, subPetalos: [
+                linkName: "petalo-2/4", image: 'boton2', title: "Cruce de Rutas", noNumbers: true, subPetalos: [
                     {
-                        linkName: "petalo-2/4/1", image: 'boton2', title: "A", petalos: 18, index: 0, colorBorder: "red", subPetalos: [
+                        linkName: "petalo-2/4/1", image: 'boton2', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
                                 linkName: "petalo-2/4/1/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "A 1",
                                 text: "CREENCIA - ABANDONO"
@@ -492,7 +492,7 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-2/4/2", image: 'boton2', title: "B", petalos: 18, index: 1, colorBorder: "blue", subPetalos: [
+                        linkName: "petalo-2/4/2", image: 'boton2', title: "B", index: 1, colorBorder: "blue", subPetalos: [
                             {
                                 linkName: "petalo-2/4/2/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "B 1",
                                 text: "EMOCION - ABANDONO"
@@ -568,7 +568,7 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-2/4/3", image: 'boton2', title: "C", index: 2, petalos: 18, colorBorder: "blue", subPetalos: [
+                        linkName: "petalo-2/4/3", image: 'boton2', title: "C", index: 2, colorBorder: "blue", subPetalos: [
                             {
                                 linkName: "petalo-2/4/3/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "C 1",
                                 text: "MIEDO - ABANDONO"
@@ -644,7 +644,7 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-2/4/4", image: 'boton2', title: "D", index: 3, petalos: 18, colorBorder: "yellow", subPetalos: [
+                        linkName: "petalo-2/4/4", image: 'boton2', title: "D", index: 3, colorBorder: "yellow", subPetalos: [
                             {
                                 linkName: "petalo-2/4/4/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "D 1",
                                 text: "PENSAMIENTO - ABANDONO"
@@ -720,7 +720,7 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-2/4/5", image: 'boton2', title: "E", index: 4, petalos: 18, colorBorder: "yellow", subPetalos: [
+                        linkName: "petalo-2/4/5", image: 'boton2', title: "E", index: 4, colorBorder: "yellow", subPetalos: [
                             {
                                 linkName: "petalo-2/4/5/1", image: 'boton2', titlePage: 'Cruce de Rutas', title: "E 1",
                                 text: "RECUERDO - ABANDONO"
@@ -798,7 +798,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-2/5", image: 'boton2', title: "Miedos A", petalos: 17, subPetalos: [
+                linkName: "petalo-2/5", image: 'boton2', title: "Miedos A", subPetalos: [
                     { linkName: "petalo-2/5/1", image: 'boton2', titlePage: "Miedos A", title: "abandono", text: "" },
                     { linkName: "petalo-2/5/2", image: 'boton2', titlePage: "Miedos A", title: "abundancia", text: "" },
                     { linkName: "petalo-2/5/3", image: 'boton2', titlePage: "Miedos A", title: "alturas (acrofobia)", text: "" },
@@ -819,7 +819,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-2/6", image: 'boton2', title: "Miedos B", petalos: 16, subPetalos: [
+                linkName: "petalo-2/6", image: 'boton2', title: "Miedos B", subPetalos: [
                     { linkName: "petalo-2/6/1", image: 'boton2', titlePage: "Miedos B", title: "hablar en público (glosofobia)", text: "" },
                     { linkName: "petalo-2/6/2", image: 'boton2', titlePage: "Miedos B", title: "humillación", text: "" },
                     { linkName: "petalo-2/6/3", image: 'boton2', titlePage: "Miedos B", title: "lo extraño", text: "" },
@@ -838,7 +838,7 @@ const petalos = [
                     { linkName: "petalo-2/6/16", image: 'boton2', titlePage: "Miedos B", title: "personas desconocidas (xenofobia)", text: "" }]
             },
             {
-                linkName: "petalo-2/7", image: 'boton2', title: "Miedos C", petalos: 11, subPetalos: [
+                linkName: "petalo-2/7", image: 'boton2', title: "Miedos C", subPetalos: [
                     { linkName: "petalo-2/7/1", image: 'boton2', titlePage: "Miedos C", title: "rechazo", text: "" },
                     { linkName: "petalo-2/7/2", image: 'boton2', titlePage: "Miedos C", title: "ruidos fuertes (fonofobia)", text: "" },
                     { linkName: "petalo-2/7/3", image: 'boton2', titlePage: "Miedos C", title: "salud", text: "" },
@@ -855,9 +855,9 @@ const petalos = [
         ]
     },
     {
-        linkName: "petalo-3", image: 'boton3', title: "Fuente Mental", petalos: 11, subPetalos: [
+        linkName: "petalo-3", image: 'boton3', title: "Fuente Mental", subPetalos: [
             {
-                linkName: "petalo-3/1", image: 'boton3', title: "Patrones Mentales A", petalos: 7, subPetalos: [
+                linkName: "petalo-3/1", image: 'boton3', title: "Patrones Mentales A", subPetalos: [
                     { linkName: "petalo-3/1/1", image: 'boton3', titlePage: "Patrones Mentales A", title: "ABANDONO", text: "" },
                     { linkName: "petalo-3/1/2", image: 'boton3', titlePage: "Patrones Mentales A", title: "ADICCION", text: "" },
                     { linkName: "petalo-3/1/3", image: 'boton3', titlePage: "Patrones Mentales A", title: "AMARGURA", text: "" },
@@ -887,7 +887,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/2", image: 'boton3', title: "Patrones Mentales B", petalos: 25, subPetalos: [
+                linkName: "petalo-3/2", image: 'boton3', title: "Patrones Mentales B", subPetalos: [
                     { linkName: "petalo-3/2/1", image: 'boton3', titlePage: "Patrones Mentales B", title: "FRUSTRACION", text: "" },
                     { linkName: "petalo-3/2/2", image: 'boton3', titlePage: "Patrones Mentales B", title: "INDESICION", text: "" },
                     { linkName: "petalo-3/2/3", image: 'boton3', titlePage: "Patrones Mentales B", title: "INDIFERENCIA", text: "" },
@@ -916,7 +916,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/3", image: 'boton3', title: "Vida Sexual A", petalos: 22, subPetalos: [
+                linkName: "petalo-3/3", image: 'boton3', title: "Vida Sexual A", subPetalos: [
                     { linkName: "petalo-3/3/1", image: 'boton3', titlePage: "Vida Sexual A", title: "ABUSO", text: "" },
                     { linkName: "petalo-3/3/2", image: 'boton3', titlePage: "Vida Sexual A", title: "ANORGASMIA", text: "" },
                     { linkName: "petalo-3/3/3", image: 'boton3', titlePage: "Vida Sexual A", title: "ASCO/ESCATOLOGÍA", text: "" },
@@ -942,7 +942,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/4", image: 'boton3', title: "Vida Sexual B", petalos: 23, subPetalos: [
+                linkName: "petalo-3/4", image: 'boton3', title: "Vida Sexual B", subPetalos: [
                     { linkName: "petalo-3/4/1", image: 'boton3', titlePage: "Vida Sexual B", title: "HORMONAS", text: "" },
                     { linkName: "petalo-3/4/2", image: 'boton3', titlePage: "Vida Sexual B", title: "IMPOTENCIA", text: "" },
                     { linkName: "petalo-3/4/3", image: 'boton3', titlePage: "Vida Sexual B", title: "INSEGURIDAD CORPORAL", text: "" },
@@ -969,7 +969,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/5", image: 'boton3', title: "Virtudes del Ser A", petalos: 22, subPetalos: [
+                linkName: "petalo-3/5", image: 'boton3', title: "Virtudes del Ser A", subPetalos: [
                     { linkName: "petalo-3/5/1", image: 'boton3', titlePage: "Virtudes del Ser A", title: "ALEGRIA", text: "" },
                     { linkName: "petalo-3/5/2", image: 'boton3', titlePage: "Virtudes del Ser A", title: "AMABILIDAD", text: "" },
                     { linkName: "petalo-3/5/3", image: 'boton3', titlePage: "Virtudes del Ser A", title: "AMOR", text: "" },
@@ -995,7 +995,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/6", image: 'boton3', title: "Virtudes del Ser B", petalos: 22, subPetalos: [
+                linkName: "petalo-3/6", image: 'boton3', title: "Virtudes del Ser B", subPetalos: [
                     { linkName: "petalo-3/6/1", image: 'boton3', titlePage: "Virtudes del Ser B", title: "INOCENCIA", text: "" },
                     { linkName: "petalo-3/6/2", image: 'boton3', titlePage: "Virtudes del Ser B", title: "LEALTAD", text: "" },
                     { linkName: "petalo-3/6/3", image: 'boton3', titlePage: "Virtudes del Ser B", title: "LIBERTAD", text: "" },
@@ -1019,7 +1019,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/7", image: 'boton3', title: "Conducta Mental Positiva", petalos: 19, subPetalos: [
+                linkName: "petalo-3/7", image: 'boton3', title: "Conducta Mental Positiva", subPetalos: [
                     { linkName: "petalo-3/7/1", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "GENEROSIDAD", text: "" },
                     { linkName: "petalo-3/7/2", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "HONESTO", text: "" },
                     { linkName: "petalo-3/7/3", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "HONRADO", text: "" },
@@ -1042,7 +1042,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/8", image: 'boton3', title: "Conducta Mental Negativa A", petalos: 28, subPetalos: [
+                linkName: "petalo-3/8", image: 'boton3', title: "Conducta Mental Negativa A", subPetalos: [
                     { linkName: "petalo-3/8/1", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ABANDONADO", text: "" },
                     { linkName: "petalo-3/8/2", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ABRUMADO", text: "" },
                     { linkName: "petalo-3/8/3", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ABURRIDO", text: "" },
@@ -1074,7 +1074,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/9", image: 'boton3', title: "Conducta Mental Negativa B", petalos: 25, subPetalos: [
+                linkName: "petalo-3/9", image: 'boton3', title: "Conducta Mental Negativa B", subPetalos: [
                     { linkName: "petalo-3/9/1", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "FRACASADO", text: "" },
                     { linkName: "petalo-3/9/1", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "FRUSTRADO", text: "" },
                     { linkName: "petalo-3/9/3", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "HERIDO", text: "" },
@@ -1103,9 +1103,9 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/10", image: 'boton3', title: "¿Que me Bloquea?", noNumbers: true, petalos: 4, subPetalos: [
+                linkName: "petalo-3/10", image: 'boton3', title: "¿Que me Bloquea?", noNumbers: true,  subPetalos: [
                     {
-                        linkName: "petalo-3/10/1", image: 'boton3', title: "A", petalos: 11, index: 0, colorBorder: "red", subPetalos: [
+                        linkName: "petalo-3/10/1", image: 'boton3', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
                                 linkName: "petalo-3/10/1/1", image: 'boton3', titlePage: '¿Que me Bloquea?', title: "A 1",
                                 text: "PASADO"
@@ -1153,7 +1153,7 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-3/10/2", image: 'boton3', title: "B", petalos: 11, index: 1, colorBorder: "yellow", subPetalos: [
+                        linkName: "petalo-3/10/2", image: 'boton3', title: "B", index: 1, colorBorder: "yellow", subPetalos: [
                             {
                                 linkName: "petalo-3/10/2/1", image: 'boton3', titlePage: '¿Que me Bloquea?', title: "B 1",
                                 text: "POBREZA"
@@ -1201,7 +1201,7 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-3/10/3", image: 'boton3', title: "C", petalos: 11, index: 2, colorBorder: "green", subPetalos: [
+                        linkName: "petalo-3/10/3", image: 'boton3', title: "C", index: 2, colorBorder: "green", subPetalos: [
                             {
                                 linkName: "petalo-3/10/3/1", image: 'boton3', titlePage: '¿Que me Bloquea?', title: "C 1",
                                 text: "ENFERMARSE"
@@ -1249,7 +1249,7 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-3/10/4", image: 'boton3', title: "D", petalos: 11, index: 3, colorBorder: "blue", subPetalos: [
+                        linkName: "petalo-3/10/4", image: 'boton3', title: "D", index: 3, colorBorder: "blue", subPetalos: [
                             {
                                 linkName: "petalo-3/10/4/1", image: 'boton3', titlePage: '¿Que me Bloquea?', title: "D 1",
                                 text: "SER MADRE/PADRE"
@@ -1299,9 +1299,9 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/11", image: 'boton3', title: "Creencias Limitantes", noNumbers: true, petalos: 2, subPetalos: [
+                linkName: "petalo-3/11", image: 'boton3', title: "Creencias Limitantes", noNumbers: true,  subPetalos: [
                     {
-                        linkName: "petalo-3/11/1", image: 'boton3', title: "A", petalos: 11, index: 0, colorBorder: "red", subPetalos: [
+                        linkName: "petalo-3/11/1", image: 'boton3', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
                                 linkName: "petalo-3/11/1/1", image: 'boton3', titlePage: 'Creencias Limitantes', title: "A 1",
                                 text: "No quiero crecer, Nunca se lo que quiero de verdad, No sirvo para nada, No valgo nada."
@@ -1368,7 +1368,7 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-3/11/2", image: 'boton3', title: "B", petalos: 10, index: 1, colorBorder: "yellow", subPetalos: [
+                        linkName: "petalo-3/11/2", image: 'boton3', title: "B", index: 1, colorBorder: "yellow", subPetalos: [
                             {
                                 linkName: "petalo-3/11/2/1", image: 'boton3', titlePage: 'Creencias Limitantes', title: "B 1",
                                 text: "Tener pareja es peligroso para mí.  " +
@@ -1448,136 +1448,1393 @@ const petalos = [
 2        ]
     },
     {
-        linkName: "petalo-4", image: 'boton4', title: "Fuente Fisica", petalos: 12, subPetalos: [
+        linkName: "petalo-4", image: 'boton4', title: "Fuente Fisica", subPetalos: [
             {linkName: "petalo-4/1", image: 'boton4', title: "NUTRICION por ALIMENTACION", subPetalos: [
                     {linkName: "petalo-4/1/1", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Compuestos Vitaminicos", subPetalos: [
-
+                            {
+                                linkName: "petalo-4/1/1/1",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina A",
+                                text: "Ayuda en la salud de la visión, el sistema inmunológico y la piel. Se encuentra en alimentos como zanahorias, batatas, espinacas y mangos."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/2",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina B1 (Tiamina)",
+                                text: "Ayuda en el metabolismo de los carbohidratos y en el funcionamiento del sistema nervioso. Se encuentra en alimentos como legumbres, carne de cerdo, nueces y cereales integrales."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/3",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina B2 (Riboflavina):",
+                                text: "Es esencial para el crecimiento y el desarrollo, y ayuda en la producción de energía. Se encuentra en alimentos como productos lácteos, carne, pescado, huevos y vegetales de hojas verdes."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/4",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina B3 (Niacina)",
+                                text: "Contribuye al metabolismo de los alimentos, la salud de la piel y el sistema nervioso. Se encuentra en alimentos como carnes magras, legumbres, nueces y cereales integrales."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/5",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina B5 (Acido pantoténico)",
+                                text: "Es esencial para el metabolismo de los carbohidratos, proteínas y lípidos. Ayuda en la producción de energía, la síntesis de ácidos grasos, la producción de hormonas, la salud de la piel y el funcionamiento del sistema nervioso. Se encuentra en alimentos como carnes, productos lácteos, huevos, legumbres, cereales integrales, nueces y semillas. La deficiencia de vitamina B5 es poco común en personas con una dieta equilibrada."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/6",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina B6 (Piridoxina):",
+                                text: "Ayuda en la formación de glóbulos rojos, el funcionamiento del cerebro y el sistema nervioso. Se encuentra en alimentos como plátanos, aves de corral, pescado, legumbres y cereales integrales."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/7",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina B9 (ácido fólico o folato)",
+                                text: "Es esencial para el crecimiento y desarrollo celular, la síntesis de ADN y ARN, la formación de glóbulos rojos y la función del sistema nervioso. Es especialmente importante durante el embarazo para prevenir defectos del tubo neural en el feto. Se encuentra en alimentos como verduras de hojas verdes, legumbres, cítricos y cereales fortificados."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/8",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina B12 (Cobalamina)",
+                                text: "Es necesaria para la formación de glóbulos rojos y el mantenimiento del sistema nervioso. Se encuentra principalmente en alimentos de origen animal como carne, pescado, lácteos y huevos."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/9",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina C (Ácido ascórbico)",
+                                text: "Importante para la salud de los tejidos, la cicatrización de heridas y el sistema inmunológico. Se encuentra en alimentos como cítricos, fresas, kiwis, pimientos y brócoli."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/10",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina D",
+                                text: "Ayuda en la absorción del calcio y el mantenimiento de huesos y dientes saludables. Se sintetiza en la piel mediante la exposición al sol y también se encuentra en alimentos como pescado graso, yemas de huevo y productos lácteos fortificados."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/11",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina E",
+                                text: "Tiene propiedades antioxidantes y contribuye a la salud de la piel y el sistema inmunológico. Se encuentra en alimentos como aceites vegetales, nueces, semillas y vegetales de hojas verdes."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/12",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina K",
+                                text: "Es esencial para la coagulación sanguínea y el mantenimiento de huesos saludables. Se encuentra en alimentos como vegetales de hojas verdes, brócoli, espárragos y aceite de soja."
+                            },
+                            {
+                                linkName: "petalo-4/1/1/13",
+                                image: 'boton4',
+                                titlePage: 'Compuestos Vitaminicos',
+                                title: "Vitamina H (biotina o vitamina B7)",
+                                text: "Es esencial para el metabolismo de los carbohidratos, proteínas y grasas. Contribuye al funcionamiento del sistema nervioso, promueve la salud de la piel, el cabello y las uñas, y puede ayudar a regular los niveles de azúcar en sangre. Se encuentra en alimentos como yemas de huevo, hígado, nueces, semillas, pescado, lácteos, frutas y verduras."
+                            }
                         ]
                     },
                     {linkName: "petalo-4/1/2", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Minerales y Oligoelementos", subPetalos: [
+                            {
+                                linkName: "petalo-4/1/2/1",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Hierro",
+                                text: "El hierro es un mineral esencial para el cuerpo humano. Es necesario para la producción de hemoglobina, la proteína en los glóbulos rojos que transporta el oxígeno desde los pulmones hacia el resto del cuerpo. También desempeña un papel en la producción de energía y el funcionamiento del sistema inmunológico."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/2",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Calcio",
+                                text: "El calcio es un mineral que se encuentra en grandes cantidades en los huesos y los dientes. Juega un papel fundamental en la formación y mantenimiento de la estructura ósea, pero también es necesario para la contracción muscular, la coagulación sanguínea y la transmisión de señales nerviosas."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/3",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Zinc",
+                                text: "El zinc es un oligoelemento esencial para el organismo. Participa en más de 300 reacciones enzimáticas y desempeña un papel importante en el crecimiento y desarrollo, la función inmunológica, la cicatrización de heridas y la síntesis de proteínas y ADN."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/4",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Magnesio",
+                                text: "El magnesio es un mineral que desempeña un papel esencial en numerosas funciones biológicas. Contribuye al mantenimiento de la salud ósea, la función muscular y nerviosa, la síntesis de proteínas y el metabolismo energético."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/5",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Selenio",
+                                text: "El selenio es un oligoelemento que actúa como antioxidante y es esencial para el funcionamiento normal del sistema inmunológico. También juega un papel en la función tiroidea y la salud reproductiva."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/6",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Potasio",
+                                text: "El potasio es un mineral esencial para el organismo que desempeña diversas funciones importantes. Se encuentra principalmente dentro de las células y es necesario para mantener el equilibrio de líquidos, el funcionamiento adecuado de las células nerviosas y musculares, y la regulación de la presión arterial."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/7",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Sodio",
+                                text: "El sodio es un mineral esencial que desempeña un papel importante en el equilibrio de líquidos, la presión arterial, el funcionamiento muscular y nervioso, la absorción de nutrientes y el equilibrio ácido-base del cuerpo. Sin embargo, el consumo excesivo de sodio puede ser perjudicial para la salud, especialmente en personas con hipertensión arterial o problemas renales."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/8",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Fósforo",
+                                text: "El fósforo es un mineral esencial presente en el cuerpo que desempeña roles importantes en la salud ósea, el metabolismo energético, la función celular, el equilibrio ácido-base y el funcionamiento del sistema nervioso."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/9",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Manganeso",
+                                text: "El manganeso es un mineral esencial que desempeña roles importantes en el cuerpo humano. Actúa como antioxidante, es necesario para el metabolismo de los nutrientes, la formación de huesos y tejidos conectivos, la función del sistema nervioso y la regulación del azúcar en sangre."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/10",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Yodo",
+                                text: "El yodo es un mineral esencial para el funcionamiento adecuado del cuerpo humano. Es necesario para la producción de hormonas tiroideas, el desarrollo y crecimiento adecuados, y la prevención de trastornos tiroideos. Se encuentra en alimentos marinos y se puede obtener a través de la sal yodada y suplementos."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/11",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Cobre",
+                                text: "El cobre es un mineral esencial para el cuerpo humano. Participa en el metabolismo de la energía, la formación de tejidos conectivos, la función inmunológica y actúa como antioxidante. También está involucrado en la formación de pigmentos y la absorción de hierro."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/12",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Selenio",
+                                text: "El selenio es un mineral esencial que desempeña roles importantes en el cuerpo humano. Actúa como antioxidante, es necesario para la función tiroidea, el sistema inmunológico, la salud cardiovascular y se ha asociado con la protección contra el cáncer."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/13",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Cromo",
+                                text: "El cromo es un mineral esencial que desempeña un papel importante en el metabolismo de la glucosa, el control del apetito y el peso corporal, el metabolismo de lípidos, la formación de tejido magro y la función cerebral."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/14",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Flúor",
+                                text: "El flúor es un elemento químico que fortalece los dientes y previene la caries dental. También ayuda en la formación y mineralización de huesos. Se encuentra en el agua, el suelo y algunos alimentos."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/15",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Cobalto",
+                                text: "El cobalto es un elemento químico presente en la vitamina B12 y tiene diversas aplicaciones industriales y tecnológicas. Se utiliza en la producción de superaleaciones, baterías recargables de iones de litio y como pigmento para obtener colores azules. Sin embargo, la exposición excesiva al cobalto puede ser tóxica."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/16",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Níquel",
+                                text: "El níquel es un elemento químico utilizado en diversas aplicaciones industriales, como la producción de acero inoxidable y aleaciones no ferrosas. También se utiliza en baterías recargables y puede causar alergias en algunas personas. Es importante tomar precauciones al trabajar con níquel debido a su toxicidad en altas concentraciones. Se encuentra en minerales y en pequeñas cantidades en algunos alimentos."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/17",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Silicio",
+                                text: "El silicio es un elemento químico ampliamente utilizado en la industria electrónica como semiconductor. También se encuentra en la naturaleza en minerales como el cuarzo y se utiliza en la fabricación de vidrio y cerámicas. Aunque no es considerado un nutriente esencial para los seres humanos, desempeña un papel en la biología de algunos organismos."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/18",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Vanadio",
+                                text: "El vanadio es un metal utilizado en la producción de acero especial y en catalizadores químicos. Se ha identificado como un elemento esencial en algunas formas de vida y puede tener un papel en el metabolismo de los lípidos y la regulación de la glucosa. Aunque se considera de baja toxicidad, se deben seguir precauciones de seguridad al manipularlo. Se encuentra en la naturaleza en minerales y en pequeñas cantidades en algunos alimentos."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/19",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Arsénico",
+                                text: "El arsénico es un elemento químico altamente tóxico que puede causar graves problemas de salud. Se encuentra en el medio ambiente de forma natural y puede ser liberado por actividades humanas. La exposición al arsénico puede ocurrir a través del agua, alimentos y aire contaminados."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/20",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Estaño",
+                                text: "El estaño es un metal plateado y maleable utilizado en diversas aplicaciones industriales, como soldaduras, revestimientos y envases de alimentos. No es tóxico en su forma metálica, pero algunos compuestos pueden serlo."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/21",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Boro",
+                                text: "El boro es un metaloide utilizado en diversas aplicaciones industriales, como la fabricación de vidrios especiales y cerámicas. Es esencial para la salud de las plantas y puede tener beneficios para la salud humana. Se encuentra en la naturaleza y se encuentra en pequeñas cantidades en alimentos. Sin embargo, la exposición excesiva puede ser tóxica."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/22",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Litio",
+                                text: "El litio es un metal alcalino utilizado en la producción de baterías recargables, en la fabricación de vidrios y cerámicas, y como medicamento para trastornos del estado de ánimo. Se encuentra en la naturaleza en minerales y salmueras, y su extracción se realiza principalmente en salares y yacimientos de litio. Es importante tener precaución con su uso, ya que puede ser tóxico en altas concentraciones."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/23",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Sulfuro",
+                                text: "El sulfuro es un compuesto químico formado por átomos de azufre y otro elemento o radical. Tiene diversos usos industriales y aplicaciones en la fabricación de productos químicos y materiales. También tiene importancia biológica en sistemas vivos, pero algunos sulfuros pueden ser tóxicos."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/24",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Germanio",
+                                text: "El germanio es un metaloide utilizado en la fabricación de dispositivos semiconductores y en aplicaciones ópticas. No es considerado esencial para los organismos vivos, pero se ha investigado su posible beneficio para la salud. Se encuentra en pequeñas cantidades en la naturaleza y se extrae como subproducto de la producción de zinc y cobre."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/25",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Titanio",
+                                text: "El titanio es un metal de transición utilizado en diversas industrias debido a su alta resistencia, baja densidad y resistencia a la corrosión. Se emplea en la industria aeroespacial, química, médica y deportiva. Es biocompatible y se utiliza en implantes médicos y odontológicos. Se encuentra en minerales y se extrae mediante procesos de minería. El titanio es seguro, pero se debe tener precaución con las partículas finas de polvo."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/26",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Bismuto",
+                                text: "El bismuto es un metal pesado utilizado en la industria para fabricar aleaciones de bajo punto de fusión y en medicina para el tratamiento de enfermedades gastrointestinales. Tiene propiedades físicas únicas, es de baja toxicidad y se encuentra en la naturaleza en forma de minerales. Sin embargo, se deben tomar precauciones al manipularlo y seguir las recomendaciones de seguridad."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/27",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Oro",
+                                text: "El oro es un metal precioso de color amarillo brillante, conocido por su belleza y durabilidad. Tiene una amplia variedad de aplicaciones, incluyendo la fabricación de joyas, componentes electrónicos y usos en la medicina. Es un metal inerte y no tóxico en su forma elemental. El oro se encuentra en depósitos de minerales y es extraído a través de la minería."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/28",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Plata",
+                                text: "La plata es un metal precioso brillante y maleable con diversas aplicaciones industriales, como en joyería, electrónica y fotografía. Tiene importancia histórica y cultural como moneda y objeto decorativo. Se encuentra en la naturaleza en forma de minerales y se extrae principalmente como subproducto de otros metales. La plata no es tóxica en su forma elemental, pero se deben tomar precauciones."
+                            },
+                            {
+                                linkName: "petalo-4/1/2/29",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Mercurio",
+                                text: "El mercurio es un metal líquido tóxico ampliamente utilizado en diversas aplicaciones industriales. Su exposición puede ser perjudicial para la salud humana y el medio ambiente. Se han implementado restricciones y regulaciones para su uso seguro y eliminación adecuada. Se recomienda evitar la exposición al mercurio y seguir las pautas de manejo seguro."
+                            }
 
                         ]
                     },
                     {linkName: "petalo-4/1/3", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Aminoacidos", subPetalos: [
+                            {
+                                linkName: "petalo-4/1/3/1",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Fenilalanina",
+                                text: "Es necesaria para la síntesis de otros aminoácidos, neurotransmisores y hormonas."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/2",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Valina",
+                                text: "Contribuye al equilibrio nitrogenado y es importante para el crecimiento y reparación de tejidos."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/3",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Leucina",
+                                text: "Estimula la síntesis de proteínas y juega un papel crucial en la regulación del metabolismo y el crecimiento muscular."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/4",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Isoleucina",
+                                text: "Ayuda en la formación de hemoglobina y en la regulación del azúcar en la sangre."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/5",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Lisina",
+                                text: "Es esencial para el crecimiento, la síntesis de colágeno, la formación de anticuerpos y la absorción de calcio."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/6",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Metionina",
+                                text: "Es un precursor de otros compuestos importantes y participa en la síntesis de proteínas y la desintoxicación del organismo."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/7",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Treonina",
+                                text: "Contribuye a la síntesis de proteínas y al metabolismo de grasas."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/8",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Triptófano",
+                                text: "Es necesario para la producción de serotonina, un neurotransmisor relacionado con el estado de ánimo y el sueño."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/9",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Histidina",
+                                text: "Participa en la síntesis de proteínas y en la regulación de la respuesta inmunitaria."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/10",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Arginina",
+                                text: "Participa en la síntesis de proteínas, la cicatrización de heridas y la eliminación de amoníaco del cuerpo. También es importante para la función inmunológica y la producción de óxido nítrico."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/11",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Cisteína",
+                                text: "Es necesaria para la formación del antioxidante glutatión y juega un papel clave en la protección celular contra el daño oxidativo. También contribuye a la salud del cabello, la piel y las uñas."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/12",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Tirosina",
+                                text: "Es un precursor de neurotransmisores importantes como la dopamina, la adrenalina y la noradrenalina. También desempeña un papel en la síntesis de hormonas tiroideas."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/13",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Prolina",
+                                text: "Es esencial para la formación del colágeno, una proteína estructural clave en los tejidos conectivos del cuerpo, como la piel, los huesos y los tendones."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/14",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Glutamina",
+                                text: "Es el aminoácido más abundante en el cuerpo y desempeña un papel fundamental en el metabolismo energético, la función inmunológica y la salud intestinal."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/15",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Serina",
+                                text: "Es necesaria para la síntesis de fosfolípidos, que son componentes esenciales de las membranas celulares. También participa en la producción de neurotransmisores y en la formación de tejido conectivo."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/16",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Ácido aspártico",
+                                text: "Actúa como un neurotransmisor excitatorio en el sistema nervioso y es un componente importante en la síntesis de proteínas y la producción de energía."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/17",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Ácido glutámico",
+                                text: "También es un neurotransmisor excitatorio y desempeña un papel clave en el metabolismo celular y la síntesis de proteínas."
+                            },
+                            {
+                                linkName: "petalo-4/1/3/18",
+                                image: 'boton4',
+                                titlePage: 'Minerales y Oligoelementos',
+                                title: "Alanina",
+                                text: "Participa en el metabolismo de la glucosa y puede ser convertida en glucosa para obtener energía. También es un componente importante en la síntesis de proteínas y ayuda en la eliminación de toxinas del cuerpo."
+                            }
+                        ]
+                    },
+                    {linkName: "petalo-4/1/4", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Desequilibrio PH"},
+                    {linkName: "petalo-4/1/5", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "H2o"},
+                    {linkName: "petalo-4/1/6", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Nutricion de Oxigeno"},
+                    {linkName: "petalo-4/1/7", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Flora Intestinal"},
+                    {linkName: "petalo-4/1/8", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Sistema Inmune"},
+                    {linkName: "petalo-4/1/9", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Mala conducta alimenticia"},
+                    {linkName: "petalo-4/1/10", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Intoxicacion Alimenticia"},
+                    {linkName: "petalo-4/1/11", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Sistema Sensorial"},
+                    {linkName: "petalo-4/1/12", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Meditar en Silencio"},
+                    {linkName: "petalo-4/1/13", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Descanso Reparador"},
+                    {linkName: "petalo-4/1/14", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Entorno Natural"},
+                    {linkName: "petalo-4/1/15", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Falta de Conexion Magentica Terrestre"},
+                    {linkName: "petalo-4/1/16", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Deshidratación"},
+                    {linkName: "petalo-4/1/17", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Actividad física"},
+                    {linkName: "petalo-4/1/18", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Alimentacion Espiritual"},
+                    {linkName: "petalo-4/1/19", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Alimentacion Deportiva"},
+                    {linkName: "petalo-4/1/20", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Alimentacion Emocional"},
+                    {linkName: "petalo-4/1/21", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Alimentacion Equilibrada"},
+                ],
+            },
+            {linkName: "petalo-4/2", image: 'boton4', title: "NEUROTRANSMISORES",  subPetalos: [
+                    { linkName: "petalo-4/2/1", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Acetilcolina",
+                        text: "Juega un papel clave en la transmisión de señales en el sistema nervioso central y periférico. Está involucrada en el control muscular, la memoria y el aprendizaje."
+                    },
+                    { linkName: "petalo-4/2/2", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Dopamina",
+                        text: "Es esencial para el control del movimiento, el placer, la motivación y la recompensa. También está asociada con el estado de ánimo, la atención y la memoria."
+                    },
+                    { linkName: "petalo-4/2/3", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Serotonina",
+                        text: "Regula el estado de ánimo, el sueño, el apetito y el dolor. Se considera un neurotransmisor relacionado con la felicidad y el bienestar."
+                    },
+                    { linkName: "petalo-4/2/4", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Gaba",
+                        text: "Es el principal neurotransmisor inhibidor en el sistema nervioso central. Ayuda a reducir la excitación y la ansiedad, promoviendo la relajación y el sueño."
+                    },
+                    { linkName: "petalo-4/2/5", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Glutamato",
+                        text: "Es el principal neurotransmisor excitador en el cerebro. Juega un papel fundamental en la excitación neuronal, la memoria y el aprendizaje."
+                    },
+                    { linkName: "petalo-4/2/6", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Noradrenalina",
+                        text: "Está involucrada en la respuesta al estrés, la atención, la vigilia y el estado de ánimo."
+                    },
+                    { linkName: "petalo-4/2/7", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Norepinefrina",
+                        text: "Es un neurotransmisor que desempeña un papel en la respuesta al estrés, el estado de ánimo, la atención y la regulación del sueño."
+                    },
+                    { linkName: "petalo-4/2/8", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Epinefrina",
+                        text: "Actúa como neurotransmisor y hormona, desempeñando un papel clave en la respuesta de lucha o huida. Está involucrada en la regulación del ritmo cardíaco, la presión arterial y la liberación de glucosa."
+                    },
+                    { linkName: "petalo-4/2/9", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Histamina",
+                        text: "Actúa como neurotransmisor en el cerebro y está involucrada en la regulación del sueño, la respuesta inflamatoria y la función cognitiva."
+                    },
+                    { linkName: "petalo-4/2/10", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Péptidos opioides",
+                        text: "Son neurotransmisores implicados en la regulación del dolor, el placer y las emociones. Incluyen sustancias como la endorfina y la encefalina."
+                    },
+                    { linkName: "petalo-4/2/11", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Adenosina",
+                        text: "Actúa como neurotransmisor y desempeña un papel en la regulación del sueño y la supresión de la excitación neuronal."
+                    },
+                    { linkName: "petalo-4/2/12", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Glicina",
+                        text: "Es un neurotransmisor inhibidor que desempeña un papel en la regulación de la excitación neuronal en la médula espinal y el cerebro."
+                    },
+                    { linkName: "petalo-4/2/13", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Ácido glutámico",
+                        text: "Además de su función como neurotransmisor excitador, el glutamato está involucrado en procesos de plasticidad cerebral, aprendizaje y memoria."
+                    },
+                    { linkName: "petalo-4/2/14", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Péptido intestinal vasoactivo (VIP)",
+                        text: "Es un neurotransmisor que desempeña un papel en la regulación del flujo sanguíneo, la secreción de hormonas y la función gastrointestinal."
+                    },
+                    { linkName: "petalo-4/2/15", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Neuropéptido Y",
+                        text: "Actúa como neurotransmisor y está involucrado en la regulación del apetito, el estado de ánimo, la ansiedad y el estrés."
+                    },
+                    { linkName: "petalo-4/2/16", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Péptido liberador de corticotropina (CRH)",
+                        text: "Actúa como neurotransmisor y hormona, desempeñando un papel en la respuesta al estrés y la regulación del eje hipotálamo-hipófisis-suprarrenal."
+                    },
+                    { linkName: "petalo-4/2/17", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Somatostatina",
+                        text: "Es un neurotransmisor inhibidor que regula la liberación de otros neurotransmisores y hormonas en el cerebro y el sistema digestivo."
+                    },
+                    { linkName: "petalo-4/2/18", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Oxitocina",
+                        text: "Conocida como la 'hormona del amor', desempeña un papel en la vinculación social, el apego, el parto y la lactancia."
+                    },
+                    { linkName: "petalo-4/2/19", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Vasopresina",
+                        text: "También conocida como hormona antidiurética, está involucrada en la regulación del equilibrio de líquidos en el cuerpo y en la conducta social."
+                    },
+                    { linkName: "petalo-4/2/20", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Prolactina",
+                        text: "Es una hormona que también actúa como neurotransmisor, desempeñando un papel en la lactancia materna y la reproducción."
+                    },
+                    { linkName: "petalo-4/2/21", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Anandamida",
+                        text: "Es un neurotransmisor relacionado con la regulación del estado de ánimo, la memoria y el apetito."
+                    },
+                    { linkName: "petalo-4/2/22", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Endocannabinoides",
+                        text: "Los receptores cannabinoides están involucrados en la regulación del dolor, el estado de ánimo, el apetito y la memoria."
+                    },
+                    { linkName: "petalo-4/2/23", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Ácido aspártico",
+                        text: "Es un neurotransmisor excitador que participa en la transmisión de señales en el cerebro y se cree que está involucrado en la memoria y el aprendizaje."
+                    },
+                    { linkName: "petalo-4/2/24", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Ácido gamma-hidroxibutírico (GHB)",
+                        text: "Es un neurotransmisor inhibidor que tiene efectos sedantes y se utiliza en medicina como tratamiento para algunos trastornos del sueño."
+                    },
+                    { linkName: "petalo-4/2/25", image: 'boton4', titlePage: "NEUROTRANSMISORES", title: "Péptido liberador de gastrina (GRP)",
+                        text: "Es un neurotransmisor que regula la liberación de ácido en el estómago y está implicado en la función gastrointestinal."
+                    }
+                    ],
+            },
+            {linkName: "petalo-4/3", image: 'boton4', title: "SISTEMAS DEL CUERPO HUMANO",  subPetalos: [
+                    {linkName: "petalo-4/3/1", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Circulatorio", subPetalos: [
+                            {linkName: "petalo-4/3/1/1", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Corazon", subPetalos: [
+                                    {linkName: "petalo-4/3/1/1/1", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Aurículas"},
+                                    {linkName: "petalo-4/3/1/1/2", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Ventrículos"},
+                                    {linkName: "petalo-4/3/1/1/3", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Cepto"},
+                                    {linkName: "petalo-4/3/1/1/4", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Válvulas cardias"},
+                                    {linkName: "petalo-4/3/1/1/5", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Miocardio"},
+                                    {linkName: "petalo-4/3/1/1/6", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Pericardio"}
+                                ]
+                            },
+                            {linkName: "petalo-4/3/1/2", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Sangre", subPetalos: [
+                                    {linkName: "petalo-4/3/1/1/1", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Plasma"},
+                                    {linkName: "petalo-4/3/1/1/2", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Glóbulos blancos"},
+                                    {linkName: "petalo-4/3/1/1/3", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Glóbulos rojos"},
+                                    {linkName: "petalo-4/3/1/1/4", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Plaqueta"},
+                                ]
+                            },
+                            {linkName: "petalo-4/3/1/3", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Arterias"},
+                            {linkName: "petalo-4/3/1/4", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Venas"},
+                            {linkName: "petalo-4/3/1/5", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Capilares"},
+                    ]},
+                    {linkName: "petalo-4/3/2", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Digestivo", subPetalos: [
+                            {linkName: "petalo-4/3/2/1", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Dientes", subPetalos: [
+                                    {linkName: "petalo-4/3/2/1/1", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "incisivos der/izq"},
+                                    {linkName: "petalo-4/3/2/1/2", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "caninos der/izq"},
+                                    {linkName: "petalo-4/3/2/1/3", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "premolares der/izq"},
+                                    {linkName: "petalo-4/3/2/1/4", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "molares der/izq"},
+                                ]
+                            },
+                            {linkName: "petalo-4/3/2/2", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Lengua"},
+                            {linkName: "petalo-4/3/2/3", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Papilas gustativas"},
+                            {linkName: "petalo-4/3/2/4", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Esófago"},
+                            {linkName: "petalo-4/3/2/5", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Hígado"},
+                            {linkName: "petalo-4/3/2/6", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Vesícula biliar"},
+                            {linkName: "petalo-4/3/2/7", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Estomago"},
+                            {linkName: "petalo-4/3/2/8", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Páncreas"},
+                            {linkName: "petalo-4/3/2/9", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Intestino grueso"},
+                            {linkName: "petalo-4/3/2/10", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Intestino delgado"},
+                            {linkName: "petalo-4/3/2/11", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Apéndice"},
+                            {linkName: "petalo-4/3/2/12", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Colon"},
+                            {linkName: "petalo-4/3/2/12", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Ano"},
 
                         ]
                     },
-                    {linkName: "petalo-4/1/4", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Desequilibrio PH", subPetalos: [
+                    {linkName: "petalo-4/3/3", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Endocrino", subPetalos: [
+                            { linkName: "petalo-4/3/3/1", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Hipotálamo" },
+                            { linkName: "petalo-4/3/3/2", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Pineal" },
+                            { linkName: "petalo-4/3/3/3", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Pituitaria" },
+                            { linkName: "petalo-4/3/3/4", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Tiroides" },
+                            { linkName: "petalo-4/3/3/5", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Paratiroides" },
+                            { linkName: "petalo-4/3/3/6", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Timo" },
+                            { linkName: "petalo-4/3/3/7", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Hígado" },
+                            { linkName: "petalo-4/3/3/8", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Estómago" },
+                            { linkName: "petalo-4/3/3/9", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Páncreas" },
+                            { linkName: "petalo-4/3/3/10", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Suprarrenal" },
+                            { linkName: "petalo-4/3/3/11", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Riñón" },
+                            { linkName: "petalo-4/3/3/12", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Ovarios" },
+                            { linkName: "petalo-4/3/3/13", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Testículos" },
+                            { linkName: "petalo-4/3/3/14", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Útero" }
+                        ]
+                    },
+                    {linkName: "petalo-4/3/4", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Óseo", subPetalos: [
+                            {linkName: "petalo-4/3/4/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Craneo", subPetalos: [
+                                    {linkName: "petalo-4/3/4/1/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hueso frontal"},
+                                    {linkName: "petalo-4/3/4/1/2", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hueso parietal"},
+                                    {linkName: "petalo-4/3/4/1/3", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hueso occipital"},
+                                    {linkName: "petalo-4/3/4/1/4", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos temporales"},
+                                    {linkName: "petalo-4/3/4/1/5", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hueso esfenoides"},
+                                    {linkName: "petalo-4/3/4/1/6", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hueso etmoides"},
+                                ]
+                            },
+                            {linkName: "petalo-4/3/4/2", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Cara", subPetalos: [
+                                    {linkName: "petalo-4/3/4/2/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Maxilar superior"},
+                                    {linkName: "petalo-4/3/4/2/2", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Maxilar inferior (mandíbula)"},
+                                    {linkName: "petalo-4/3/4/2/3", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos cigomáticos (pomulos)"},
+                                    {linkName: "petalo-4/3/4/2/4", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos nasales"},
+                                    {linkName: "petalo-4/3/4/2/5", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos lacrimales"},
+                                    {linkName: "petalo-4/3/4/2/6", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos palatinos"},
+                                    {linkName: "petalo-4/3/4/2/6", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos carnetes nasales inferiores"},
+                                    {linkName: "petalo-4/3/4/2/6", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Vomer"},
+                                ]
+                            },
+                            {linkName: "petalo-4/3/4/3", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Columna vertebral",subPetalos: [
+                                    {linkName: "petalo-4/3/4/3/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Vertebras cervicales", subPetalos: [
+                                            {linkName: "petalo-4/3/4/3/1/1", image: 'boton4', titlePage: "SISTEMA OSEO",
+                                                title: "C1",
+                                                text: "(Lengua, cabeza, cerebro, oído interno y medio, pituitaria, pineal, sistema nervioso simpático): Relacionada con la depresión."
+                                            },
+                                            {linkName: "petalo-4/3/4/3/1/2", image: 'boton4', titlePage: "SISTEMA OSEO",
+                                                title: "C2",
+                                                text: "(Ojos, senos nasales y paranasales, frente, lengua, nervios óptico y auditivo)."
+                                            },
+                                            {linkName: "petalo-4/3/4/3/1/3", image: 'boton4', titlePage: "SISTEMA OSEO",
+                                                title: "C3",
+                                                text: "(Mejilla, cara, huesos faciales, dientes, oído exterior, laringe y vesícula biliar)"
+                                            },
+                                            {linkName: "petalo-4/3/4/3/1/4", image: 'boton4', titlePage: "SISTEMA OSEO",
+                                                title: "C4",
+                                                text: "(Nariz, boca y trompas de Eustaquio)"
+                                            },
+                                            {linkName: "petalo-4/3/4/3/1/5", image: 'boton4', titlePage: "SISTEMA OSEO",
+                                                title: "C5",
+                                                text: "(Faringe, cuerdas vocales, glándulas salivales, amígdalas)"
+                                            },
+                                            {linkName: "petalo-4/3/4/3/1/6", image: 'boton4', titlePage: "SISTEMA OSEO",
+                                                title: "C6",
+                                                text: "(Amígdalas, músculos del cuello y hombros)"
+                                            },
+                                            {linkName: "petalo-4/3/4/3/1/7", image: 'boton4', titlePage: "SISTEMA OSEO",
+                                                title: "C7",
+                                                text: "(Tiroides, paratiroides, codo y hombros)"
+                                            },
+                                        ]
+                                    },
+                                    {linkName: "petalo-4/3/4/3/2", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Vertebras torácicas:", subPetalos: [
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/1",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T1",
+                                                text: "(Riñón, función ósea, esófago, tráquea, dedos, manos, antebrazo): Conflictos de memoria renal, miedo y existencia profunda. Conflictos respecto al orden no respetado de las cosas. A la derecha: Rabia o enojo por carencias afectivas en relación a los allegados. A la izquierda: Rabia y enojo en relación con el exterior."
+                                            },
+                                            // T2
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/2",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T2",
+                                                text: "(Arterias coronarias, corazón y válvulas cardíacas): Conflictos de territorio. Representan la circulación en la comunicación. Conflictos de supervivencia en relación al hogar. Conflictos con el padre. Es una señal de alarma para las desvalorizaciones. A la derecha: Carencias afectivas en relación al padre. A la izquierda: En relación al padre simbólico."
+                                            },
+                                            // T3
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/3",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T3",
+                                                text: "(Pulmón, pleuras, mamas, vejiga y costillas): Conflicto con la madre real o simbólica. A la derecha: Carencias afectivas en relación a la madre. A la izquierda: Rabia y cólera en relación a la madre."
+                                            },
+                                            // T4
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/4",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T4",
+                                                text: "(Vesícula biliar): Conflictos de rencor. No querer dar nuestro brazo a torcer. A la derecha: Rencor por carencias afectivas. A la izquierda: Cólera."
+                                            },
+                                            // T5
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/5",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T5",
+                                                text: "(Hígado, plexo solar y sangre): Conflicto de falta o carencia (hígado), conflicto de padre (plexo). Problemas digestivos crónicos. “No estoy integrado en el clan”."
+                                            },
+                                            // T6
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/6",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T6",
+                                                text: "(Estómago): Conflictos con la primera infancia. Conflicto de contrariedad reciente en el territorio con desvalorización. Conflictos recientes de estómago. A la derecha: Carencias afectivas. A la izquierda: Cólera."
+                                            },
+                                            // T7
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/7",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T7",
+                                                text: "(Páncreas, endocrino, diabetes y duodeno): Conflictos de infamia y deshonor. A la derecha: Culpabilidad o búsqueda de afecto. A la izquierda: Cólera en relación con el exterior."
+                                            },
+                                            // T8
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/8",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T8",
+                                                text: "(Bazo, sangre y diafragma): Conflictos de comunicación en la familia. Y con los hijos. También problemas de hemorragias."
+                                            },
+                                            // T9
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/9",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T9",
+                                                text: "(Suprarrenales): Conflictos de dirección. “¿Qué camino debo tomar en la vida?”. A la derecha: Desvalorización y culpabilidad. A la izquierda: Cólera."
+                                            },
+                                            // T10
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/10",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T10",
+                                                text: "(Túbulos colectores, riñones y suprarrenales): Se trata de una vértebra muy importante. Conflictos de dirección y de elección. Conflictos de desmoronamiento del territorio. Estar sin territorio."
+                                            },
+                                            // T11
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/11",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T11",
+                                                text: "(Ureter, uretra, vejiga): Conflictos de marcaje de territorio con desvalorización. Conflictos de evacuación (me evacuan). Dificultades para definir lo que es mío."
+                                            },
+                                            // T12
+                                            {
+                                                linkName: "petalo-4/3/4/3/2/12",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "T12",
+                                                text: "(Pubis, intestino delgado, sistema linfático, trompas de Falopio): Conflictos sexuales sucios. Conflictos de cónyuge. A la derecha: Culpabilidad. A la izquierda: Cólera."
+                                            }
+                                        ]
+                                    },
+                                    {linkName: "petalo-4/3/4/3/3", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Vertebras lumbares", subPetalos: [
+                                            // L1
+                                            {
+                                                linkName: "petalo-4/3/4/3/3/1",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "L1",
+                                                text: "(Tubo digestivo, colon): Conflictos de “guarradas”. Noción de intercambio y de circulación. Miedo a que nos traicionen."
+                                            },
+                                            // L2
+                                            {
+                                                linkName: "petalo-4/3/4/3/3/2",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "L2",
+                                                text: "(Apéndice, abdomen, ciego, tubo digestivo): Conflictos de “guarradas”. Conflictos con tener que dejar las cosas. Conflictos de desvalorización por saturación (algo que he tenido que aguantar por mucho tiempo). A la derecha: En relación a la familia. A la izquierda: En relación al trabajo."
+                                            },
+                                            // L3
+                                            {
+                                                linkName: "petalo-4/3/4/3/3/3",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "L3",
+                                                text: "(Órganos sexuales, vejiga, rodilla, útero y la próstata): Conflictos relacionados con la sexualidad. Conflictos de marcado de territorio con desvalorización. Gran desvalorización por haber quedado embarazada fuera de la norma. Conflictos de culpa y odio a sí mismo por violencia sexual."
+                                            },
+                                            // L4
+                                            {
+                                                linkName: "petalo-4/3/4/3/3/4",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "L4",
+                                                text: "(Las normas, las reglas, la próstata, el cuerpo uterino, el nervio ciático y los músculos lumbares, sacros y de la cadera): 'No soy como los demás'. 'No pienso como todo el mundo'. Conflictos por parejas mal combinadas. A la derecha: Conflictos de no respetar las normas en la familia. A la izquierda: No respetar las normas en relación a lo externo, al trabajo."
+                                            },
+                                            // L5
+                                            {
+                                                linkName: "petalo-4/3/4/3/3/5",
+                                                image: 'boton4',
+                                                titlePage: "SISTEMA OSEO",
+                                                title: "L5",
+                                                text: "(Piernas, tobillos y pies. Colon): Conflicto de algo sucio. Conflictos con los colaterales. El 20% de los casos es un conflicto con mi vida: '¿Qué voy a hacer con mi vida?', '¿Qué dirección quiero tomar en mi vida?'. El 80% es una acción equivocada en mi vida (aparece dolor en la pierna izquierda). Conflicto de 'No decir mi fantasía sexual por miedo a ser juzgado anormal'. A la derecha: Culpabilidad con los allegados. A la izquierda: Cólera con los allegados."
+                                            }
+                                        ]
+                                    },
+                                    {linkName: "petalo-4/3/4/3/4", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Caja torácica", subPetalos: [
+                                            {linkName: "petalo-4/3/4/3/4/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Esternon"},
+                                            {linkName: "petalo-4/3/4/3/4/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Costillas"},
+                                        ]
+                                    },
+                                    {linkName: "petalo-4/3/4/3/5", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hombro y Brazo", subPetalos: [
+                                            {linkName: "petalo-4/3/4/3/5/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Clavicula",},
+                                            {linkName: "petalo-4/3/4/3/5/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Escapula",},
+                                            {linkName: "petalo-4/3/4/3/5/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Humero",},
+                                            {linkName: "petalo-4/3/4/3/5/4", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Cubito",},
+                                            {linkName: "petalo-4/3/4/3/5/5", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Radio",},
+                                        ]
+                                    },
+                                    {linkName: "petalo-4/3/4/3/6", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Mano y Muñeca", subPetalos: [
+                                            {linkName: "petalo-4/3/4/3/6/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hueso del carpo",},
+                                            {linkName: "petalo-4/3/4/3/6/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hueso metacarpiano",},
+                                            {linkName: "petalo-4/3/4/3/6/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Falange de los dedos",},
+                                        ]
+                                    },
+                                    {linkName: "petalo-4/3/4/3/7", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Pelvis", subPetalos: [
+                                            {linkName: "petalo-4/3/4/3/7/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hueso Iliaco",},
+                                            {linkName: "petalo-4/3/4/3/7/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hueso sacro",},
+                                            {linkName: "petalo-4/3/4/3/7/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hueso coxis",},
+                                        ]
+                                    },
+                                    {linkName: "petalo-4/3/4/3/8", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Muslo y Pierna", subPetalos: [
+                                            {linkName: "petalo-4/3/4/3/8/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Femur",},
+                                            {linkName: "petalo-4/3/4/3/8/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Rotula",},
+                                            {linkName: "petalo-4/3/4/3/8/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Tibia",},
+                                            {linkName: "petalo-4/3/4/3/8/4", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Perone",},
+                                        ]
+                                    },
+                                    {linkName: "petalo-4/3/4/3/9", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Pie y Tobillo", subPetalos: [
+                                            {linkName: "petalo-4/3/4/3/9/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Huesos del tarso",},
+                                            {linkName: "petalo-4/3/4/3/9/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Huesos del metatarso",},
+                                            {linkName: "petalo-4/3/4/3/9/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Falanges de los dedos del pie",},
+                                        ]
+                                    },
+                                ]
+                            },
+                        ]
+                    },
+                    {linkName: "petalo-4/3/5", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Inmunológico", subPetalos: [
+                            {linkName: "petalo-4/3/5/1", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Adenoides",},
+                            {linkName: "petalo-4/3/5/2", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Amígdalas",},
+                            {linkName: "petalo-4/3/5/3", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Timo",},
+                            {linkName: "petalo-4/3/5/4", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Bazo",},
+                            {linkName: "petalo-4/3/5/5", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Medula espinal",},
+                            {linkName: "petalo-4/3/5/6", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Apendice",},
+                            {linkName: "petalo-4/3/5/7", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Vasos linfáticos",},
+                            {linkName: "petalo-4/3/5/8", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Nódulos linfáticos",},
+                            {linkName: "petalo-4/3/5/9", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Intestinos",},
+                            {linkName: "petalo-4/3/5/10", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Piel",},
+                            {linkName: "petalo-4/3/5/11", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Membrana mucosa",},
 
                         ]
                     },
-                    {linkName: "petalo-4/1/5", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "H2o", subPetalos: [
+                    {linkName: "petalo-4/3/6", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Linfático", subPetalos: [
+                            {linkName: "petalo-4/3/6/1", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Amígdalas",},
+                            {linkName: "petalo-4/3/6/2", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Bazo",},
+                            {linkName: "petalo-4/3/6/3", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Ganglios linfáticos",},
+                            {linkName: "petalo-4/3/6/4", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Ganglios linf. mesentéricos",},
+                            {linkName: "petalo-4/3/6/5", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Ganglios linf. axilares",},
+                            {linkName: "petalo-4/3/6/6", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Ganglios linf. inguinales",},
+                            {linkName: "petalo-4/3/6/7", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Vasos linfáticos",},
+                            {linkName: "petalo-4/3/6/8", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Timo",},
+                            {linkName: "petalo-4/3/6/9", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Capilares linfáticos",},
+                            {linkName: "petalo-4/3/6/10", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Troncos linfáticos",},
+                            {linkName: "petalo-4/3/6/11", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Nódulos linfáticos",},
+                        ]
+                    },
+                    {linkName: "petalo-4/3/7", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Urinario", subPetalos: [
+                            {linkName: "petalo-4/3/7/1", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Riñón derecho",},
+                            {linkName: "petalo-4/3/7/2", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Riñón izquierdo",},
+                            {linkName: "petalo-4/3/7/3", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Uréteres",},
+                            {linkName: "petalo-4/3/7/4", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Uretra",},
+                            {linkName: "petalo-4/3/7/5", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Vejiga",},
+                            {linkName: "petalo-4/3/7/6", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Capsula renal",},
+                            {linkName: "petalo-4/3/7/7", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Capsula renal",},
+                            {linkName: "petalo-4/3/7/8", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Medula renal",},
+                            {linkName: "petalo-4/3/7/9", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Pirámide renal",},
+                            {linkName: "petalo-4/3/7/10", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Pelvis renal",},
+                            {linkName: "petalo-4/3/7/11", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Glomérulos",},
+                            {linkName: "petalo-4/3/7/12", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Túbulos renales",},
 
                         ]
                     },
-                    {linkName: "petalo-4/1/6", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Nutricion de Oxigeno", subPetalos: [
-
+                    {linkName: "petalo-4/3/8", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Nervioso", subPetalos: [
+                            {linkName: "petalo-4/3/8/1", image: 'boton4', titlePage: "SISTEMA NERVIOSO",title: "Cerebro",},
+                            {linkName: "petalo-4/3/8/2", image: 'boton4', titlePage: "SISTEMA NERVIOSO",title: "Medula espinal",},
+                            {linkName: "petalo-4/3/8/3", image: 'boton4', titlePage: "SISTEMA NERVIOSO",title: "Nervios periféricos",},
+                            {linkName: "petalo-4/3/8/4", image: 'boton4', titlePage: "SISTEMA NERVIOSO",title: "Neuronas",},
+                            {linkName: "petalo-4/3/8/5", image: 'boton4', titlePage: "SISTEMA NERVIOSO",title: "Cerebelo",},
+                            {linkName: "petalo-4/3/8/6", image: 'boton4', titlePage: "SISTEMA NERVIOSO",title: "Bulbo raquídeo",},
+                            {linkName: "petalo-4/3/8/7", image: 'boton4', titlePage: "SISTEMA NERVIOSO",title: "Encéfalo",},
+                            {linkName: "petalo-4/3/8/8", image: 'boton4', titlePage: "SISTEMA NERVIOSO",title: "Sistema nervioso vegetativo",},
                         ]
                     },
-                    {linkName: "petalo-4/1/7", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Flora Intestinal", subPetalos: [
-
+                    {linkName: "petalo-4/3/9", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Tegumentario (Piel)", subPetalos: [
+                            {linkName: "petalo-4/3/9/1", image: 'boton4', titlePage: "SISTEMA TEGUMENTARIO (PIEL)",title: "Epidermis",},
+                            {linkName: "petalo-4/3/9/2", image: 'boton4', titlePage: "SISTEMA TEGUMENTARIO (PIEL)",title: "Dermis",},
+                            {linkName: "petalo-4/3/9/3", image: 'boton4', titlePage: "SISTEMA TEGUMENTARIO (PIEL)",title: "Hipodermis",},
+                            {linkName: "petalo-4/3/9/4", image: 'boton4', titlePage: "SISTEMA TEGUMENTARIO (PIEL)",title: "Glándulas sudoríparas",},
+                            {linkName: "petalo-4/3/9/5", image: 'boton4', titlePage: "SISTEMA TEGUMENTARIO (PIEL)",title: "Glándulas sebáceas",},
+                            {linkName: "petalo-4/3/9/6", image: 'boton4', titlePage: "SISTEMA TEGUMENTARIO (PIEL)",title: "Glándulas sensoriales",},
+                            {linkName: "petalo-4/3/9/7", image: 'boton4', titlePage: "SISTEMA TEGUMENTARIO (PIEL)",title: "Uñas manos",},
+                            {linkName: "petalo-4/3/9/8", image: 'boton4', titlePage: "SISTEMA TEGUMENTARIO (PIEL)",title: "Uñas pies",},
+                            {linkName: "petalo-4/3/9/9", image: 'boton4', titlePage: "SISTEMA TEGUMENTARIO (PIEL)",title: "Cabello",},
                         ]
                     },
-                    {linkName: "petalo-4/1/8", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Sistema Inmune", subPetalos: [
-
+                    {linkName: "petalo-4/3/10", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Muscular", subPetalos: [
+                            {linkName: "petalo-4/3/10/1", image: 'boton4', titlePage: "SISTEMA MUSCULAR",title: "Músculos esqueléticos",},
+                            {linkName: "petalo-4/3/10/2", image: 'boton4', titlePage: "SISTEMA MUSCULAR",title: "Músculos cardiacos",},
+                            {linkName: "petalo-4/3/10/3", image: 'boton4', titlePage: "SISTEMA MUSCULAR",title: "Músculos lisos o viscerales",},
+                            {linkName: "petalo-4/3/10/4", image: 'boton4', titlePage: "SISTEMA MUSCULAR",title: "Fibras musculares",},
+                            {linkName: "petalo-4/3/10/5", image: 'boton4', titlePage: "SISTEMA MUSCULAR",title: "Tendones",},
+                            {linkName: "petalo-4/3/10/6", image: 'boton4', titlePage: "SISTEMA MUSCULAR",title: "Fascias",},
+                            {linkName: "petalo-4/3/10/7", image: 'boton4', titlePage: "SISTEMA MUSCULAR",title: "Vasos sanguíneos",},
+                            {linkName: "petalo-4/3/10/8", image: 'boton4', titlePage: "SISTEMA MUSCULAR",title: "Unidades motoras",},
+                            {linkName: "petalo-4/3/10/9", image: 'boton4', titlePage: "SISTEMA MUSCULAR",title: "Ligamentos",},
+                            {linkName: "petalo-4/3/10/10", image: 'boton4', titlePage: "SISTEMA MUSCULAR",title: "Bolsas sinoviales",},
+                            {linkName: "petalo-4/3/10/11", image: 'boton4', titlePage: "SISTEMA MUSCULAR",title: "Vainas tendinosas",},
                         ]
                     },
-                    {linkName: "petalo-4/1/9", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Mala conducta alimenticia", subPetalos: [
-
+                    {linkName: "petalo-4/3/11", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Respiratorio", subPetalos: [
+                            {linkName: "petalo-4/3/11/1", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias superiores", subPetalos: [
+                                    {linkName: "petalo-4/3/11/1/1", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "senos paranasales"},
+                                    {linkName: "petalo-4/3/11/1/2", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "fosas nasales"},
+                                    {linkName: "petalo-4/3/11/1/3", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "nariz"},
+                                    {linkName: "petalo-4/3/11/1/4", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "faringe"},
+                                    {linkName: "petalo-4/3/11/1/5", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "faringe"},
+                                ]
+                            },
+                            {linkName: "petalo-4/3/11/2", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias inferiores", subPetalos: [
+                                    {linkName: "petalo-4/3/11/2/1", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "tráquea"},
+                                    {linkName: "petalo-4/3/11/2/2", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "bronquios"},
+                                    {linkName: "petalo-4/3/11/2/3", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "bronquiolos"},
+                                    {linkName: "petalo-4/3/11/2/4", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "alveolos"},
+                                ]
+                            },
+                            {linkName: "petalo-4/3/11/3", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Pulmones der/izq"},
+                            {linkName: "petalo-4/3/11/4", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Diafragma"},
+                            {linkName: "petalo-4/3/11/5", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Músculos intercostales"},
+                            {linkName: "petalo-4/3/11/6", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Músculos del cuello"},
+                            {linkName: "petalo-4/3/11/7", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Músculos del abdomen"},
+                            {linkName: "petalo-4/3/11/8", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Músculos de la espalda"},
                         ]
                     },
-                    {linkName: "petalo-4/1/10", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Intoxicacion Alimenticia", subPetalos: [
-
+                    {linkName: "petalo-4/3/12", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Reproductor", subPetalos: [
+                            {linkName: "petalo-4/3/12/1", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR", title: "Femenino", subPetalos: [
+                                    {linkName: "petalo-4/3/12/1/1", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR FEMENINO", title: "Ovarios"},
+                                    {linkName: "petalo-4/3/12/1/2", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR FEMENINO", title: "Trompas de Falopio der/izq"},
+                                    {linkName: "petalo-4/3/12/1/3", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR FEMENINO", title: "Útero"},
+                                    {linkName: "petalo-4/3/12/1/4", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR FEMENINO", title: "Cuello uterino"},
+                                    {linkName: "petalo-4/3/12/1/5", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR FEMENINO", title: "Vagina"},
+                                    {linkName: "petalo-4/3/12/1/6", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR FEMENINO", title: "Glándulas de Bartolino"},
+                                    {linkName: "petalo-4/3/12/1/7", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR FEMENINO", title: "Vulva"},
+                                    {linkName: "petalo-4/3/12/1/8", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR FEMENINO", title: "Glándulas mamarias"},
+                                    {linkName: "petalo-4/3/12/1/9", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR FEMENINO", title: "Glándulas para uretrales"},
+                                ]
+                            },
+                            {linkName: "petalo-4/3/12/2", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR", title: "Masculino", subPetalos: [
+                                    {linkName: "petalo-4/3/12/2/1", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR MASCULINO", title: "Testículos"},
+                                    {linkName: "petalo-4/3/12/2/2", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR MASCULINO", title: "Epidídimo"},
+                                    {linkName: "petalo-4/3/12/2/3", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR MASCULINO", title: "Conducto deferente"},
+                                    {linkName: "petalo-4/3/12/2/4", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR MASCULINO", title: "Vesícula semental"},
+                                    {linkName: "petalo-4/3/12/2/5", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR MASCULINO", title: "Próstata"},
+                                    {linkName: "petalo-4/3/12/2/6", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR MASCULINO", title: "Uretra"},
+                                    {linkName: "petalo-4/3/12/2/7", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR MASCULINO", title: "Pene"},
+                                    {linkName: "petalo-4/3/12/2/8", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR MASCULINO", title: "Conducto eyaculador"},
+                                    {linkName: "petalo-4/3/12/2/9", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR MASCULINO", title: "Glándula cowper"},
+                                ]
+                            },
                         ]
                     },
-                    {linkName: "petalo-4/1/11", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Sistema Sensorial", subPetalos: [
-
-                        ]
-                    },
-                    {linkName: "petalo-4/1/12", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Meditar en Silencio", subPetalos: [
-
-                        ]
-                    },
-                    {linkName: "petalo-4/1/13", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Descanso Reparador", subPetalos: [
-
-                        ]
-                    },
-                    {linkName: "petalo-4/1/14", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Entorno Natural", subPetalos: [
-
-                        ]
-                    },
-                    {linkName: "petalo-4/1/15", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Meditar en Silencio", subPetalos: [
-
-                        ]
-                    },
-                    {linkName: "petalo-4/1/16", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Meditar en Silencio", subPetalos: [
-
-                        ]
-                    },
-                    {linkName: "petalo-4/1/17", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Meditar en Silencio", subPetalos: [
-
-                        ]
-                    },
-                    {linkName: "petalo-4/1/18", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Meditar en Silencio", subPetalos: [
-
-                        ]
-                    },
-                    {linkName: "petalo-4/1/19", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Meditar en Silencio", subPetalos: [
-
-                        ]
-                    },
-                    {linkName: "petalo-4/1/20", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Meditar en Silencio", subPetalos: [
-
-                        ]
-                    },
-                    {linkName: "petalo-4/1/21", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Meditar en Silencio", subPetalos: [
-
-                        ]
-                    },
-                    {linkName: "petalo-4/1/13", image: 'boton4', titlePage: "NUTRICION por ALIMENTACION", title: "Meditar en Silencio", subPetalos: [
-
-                        ]
-                    },
-
-
-
-
 
                 ],
             },
-            {linkName: "petalo-4/2", image: 'boton4', title: "NEUROTRANSMISORES", petalos: 4, subPetalos: [
+            {linkName: "petalo-4/4", image: 'boton4', title: "CIRCULACION",  subPetalos: [
+                    {linkName: "petalo-4/4/1", image: 'boton4', titlePage: "CIRCULACION", title: "Cabeza y Cuello", subPetalos: [
+                            {linkName: "petalo-4/4/1/1", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria facial"},
+                            {linkName: "petalo-4/4/1/2", image: 'boton4', titlePage: "CIRCULACION", title: "Carótida primitiva derecha"},
+                            {linkName: "petalo-4/4/1/3", image: 'boton4', titlePage: "CIRCULACION", title: "Carótida primitiva izquierda"},
+                            {linkName: "petalo-4/4/1/4", image: 'boton4', titlePage: "CIRCULACION", title: "Occipital"},
+                            {linkName: "petalo-4/4/1/5", image: 'boton4', titlePage: "CIRCULACION", title: "Carótida interna"},
+                            {linkName: "petalo-4/4/1/6", image: 'boton4', titlePage: "CIRCULACION", title: "Carótida externa"},
+                            {linkName: "petalo-4/4/1/7", image: 'boton4', titlePage: "CIRCULACION", title: "Seno longitudinal inferior"},
+                            {linkName: "petalo-4/4/1/8", image: 'boton4', titlePage: "CIRCULACION", title: "Seno longitudinal superior"},
+                            {linkName: "petalo-4/4/1/9", image: 'boton4', titlePage: "CIRCULACION", title: "Angular"},
+                            {linkName: "petalo-4/4/1/10", image: 'boton4', titlePage: "CIRCULACION", title: "Facial anterior"},
+                            {linkName: "petalo-4/4/1/11", image: 'boton4', titlePage: "CIRCULACION", title: "Seno recto"},
+                            {linkName: "petalo-4/4/1/12", image: 'boton4', titlePage: "CIRCULACION", title: "Seno transverso"},
+                            {linkName: "petalo-4/4/1/13", image: 'boton4', titlePage: "CIRCULACION", title: "Seno transverso"},
+                            {linkName: "petalo-4/4/1/14", image: 'boton4', titlePage: "CIRCULACION", title: "Yugular interna"},
+                            {linkName: "petalo-4/4/1/15", image: 'boton4', titlePage: "CIRCULACION", title: "Plexo cervical"},
+
+                        ]
+                    },
+                    {linkName: "petalo-4/4/2", image: 'boton4', titlePage: "CIRCULACION", title: "Tórax y Espalda", subPetalos: [
+                            {linkName: "petalo-4/4/2/1", image: 'boton4', titlePage: "CIRCULACION", title: "Tronco braquiocefálico derecho"},
+                            {linkName: "petalo-4/4/2/2", image: 'boton4', titlePage: "CIRCULACION", title: "Tronco braquiocefálico izquierdo"},
+                            {linkName: "petalo-4/4/2/3", image: 'boton4', titlePage: "CIRCULACION", title: "Vena subclavia derecha"},
+                            {linkName: "petalo-4/4/2/4", image: 'boton4', titlePage: "CIRCULACION", title: "Vena subclavia izquierda"},
+                            {linkName: "petalo-4/4/2/5", image: 'boton4', titlePage: "CIRCULACION", title: "Vena caba superior"},
+                            {linkName: "petalo-4/4/2/6", image: 'boton4', titlePage: "CIRCULACION", title: "Vena caba superior"},
+                            {linkName: "petalo-4/4/2/7", image: 'boton4', titlePage: "CIRCULACION", title: "Coronaria derecha"},
+                            {linkName: "petalo-4/4/2/8", image: 'boton4', titlePage: "CIRCULACION", title: "Coronaria izquierda"},
+                            {linkName: "petalo-4/4/2/9", image: 'boton4', titlePage: "CIRCULACION", title: "Vena porta hepática"},
+                            {linkName: "petalo-4/4/2/10", image: 'boton4', titlePage: "CIRCULACION", title: "Vena mediana del codo"},
+                            {linkName: "petalo-4/4/2/11", image: 'boton4', titlePage: "CIRCULACION", title: "Mesentérica superior"},
+                            {linkName: "petalo-4/4/2/12", image: 'boton4', titlePage: "CIRCULACION", title:  "Mesentérica inferior"},
+                            {linkName: "petalo-4/4/2/13", image: 'boton4', titlePage: "CIRCULACION", title: "Vena iliaca primitiva"},
+                            {linkName: "petalo-4/4/2/14", image: 'boton4', titlePage: "CIRCULACION", title: "Vena iliaca externa"},
+                            {linkName: "petalo-4/4/2/15", image: 'boton4', titlePage: "CIRCULACION", title: "Vena iliaca interior"},
+                            {linkName: "petalo-4/4/2/16", image: 'boton4', titlePage: "CIRCULACION", title: "Vena cefálica"},
+                            {linkName: "petalo-4/4/2/17", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria torácica inferior"},
+                            {linkName: "petalo-4/4/2/18", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria subclavia"},
+                            {linkName: "petalo-4/4/2/19", image: 'boton4', titlePage: "CIRCULACION", title: "Cayado de la aorta"},
+                            {linkName: "petalo-4/4/2/20", image: 'boton4', titlePage: "CIRCULACION", title: "Aorta"},
+                            {linkName: "petalo-4/4/2/21", image: 'boton4', titlePage: "CIRCULACION", title: "Trance celiaco"},
+                            {linkName: "petalo-4/4/2/22", image: 'boton4', titlePage: "CIRCULACION", title: "Esplénica"},
+                            {linkName: "petalo-4/4/2/23", image: 'boton4', titlePage: "CIRCULACION", title: "Renal"},
+
+                        ]
+                    },
+                    {linkName: "petalo-4/4/3", image: 'boton4', titlePage: "CIRCULACION", title: "Extremidades sup. (Brazos y manos)", subPetalos: [
+                            {linkName: "petalo-4/4/3/1", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria braquial"},
+                            {linkName: "petalo-4/4/3/2", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria radial"},
+                            {linkName: "petalo-4/4/3/3", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria cubital"},
+                            {linkName: "petalo-4/4/3/4", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria palmar"},
+                            {linkName: "petalo-4/4/3/5", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria digital"},
+                            {linkName: "petalo-4/4/3/6", image: 'boton4', titlePage: "CIRCULACION", title: "Venas metacarpianos"},
+                            {linkName: "petalo-4/4/3/7", image: 'boton4', titlePage: "CIRCULACION", title: "Arco palmar"},
+                            {linkName: "petalo-4/4/3/8", image: 'boton4', titlePage: "CIRCULACION", title: "Venas cefálicas"},
+                            {linkName: "petalo-4/4/3/9", image: 'boton4', titlePage: "CIRCULACION", title: "Venas basílica"},
+                            {linkName: "petalo-4/4/3/10", image: 'boton4', titlePage: "CIRCULACION", title: "Vena axilar"},
+                            {linkName: "petalo-4/4/3/11", image: 'boton4', titlePage: "CIRCULACION", title: "Vena digital palmar"},
+                            {linkName: "petalo-4/4/3/12", image: 'boton4', titlePage: "CIRCULACION", title: "Venas mediana del codo"},
+                            {linkName: "petalo-4/4/3/13", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria subclavia"},
+                            {linkName: "petalo-4/4/3/14", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria axilar"},
+                            {linkName: "petalo-4/4/3/15", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria circunflejas"},
+                            {linkName: "petalo-4/4/3/16", image: 'boton4', titlePage: "CIRCULACION", title: "Arterias humeral"},
+                        ]
+                    },
+                    {linkName: "petalo-4/4/4", image: 'boton4', titlePage: "CIRCULACION", title: "Extremidades inf. (Piernas y pies)", subPetalos: [
+                            {linkName: "petalo-4/4/4/1", image: 'boton4', titlePage: "CIRCULACION", title: "Circunfleja interna"},
+                            {linkName: "petalo-4/4/4/2", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria femoral"},
+                            {linkName: "petalo-4/4/4/3", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria poplítea"},
+                            {linkName: "petalo-4/4/4/4", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria peronea"},
+                            {linkName: "petalo-4/4/4/5", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria tibial posterior"},
+                            {linkName: "petalo-4/4/4/6", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria dorsal metatarso"},
+                            {linkName: "petalo-4/4/4/7", image: 'boton4', titlePage: "CIRCULACION", title: "Arterias interóseas dorsales"},
+                            {linkName: "petalo-4/4/4/8", image: 'boton4', titlePage: "CIRCULACION", title: "Arteria dorsal del pie"},
+                            {linkName: "petalo-4/4/4/9", image: 'boton4', titlePage: "CIRCULACION", title: "Vena femoral"},
+                            {linkName: "petalo-4/4/4/10", image: 'boton4', titlePage: "CIRCULACION", title: "Vena safena interna"},
+                            {linkName: "petalo-4/4/4/11", image: 'boton4', titlePage: "CIRCULACION", title: "Vena poplítea"},
+                            {linkName: "petalo-4/4/4/12", image: 'boton4', titlePage: "CIRCULACION", title: "Vena peronea"},
+                            {linkName: "petalo-4/4/4/13", image: 'boton4', titlePage: "CIRCULACION", title: "Vena tibial"},
+                        ]
+                    },
                 ],
             },
-            {linkName: "petalo-4/3", image: 'boton4', title: "SISTEMAS", petalos: 4, subPetalos: [
+            {linkName: "petalo-4/5", image: 'boton4', title: "HORMONAS",  noNumber: true, subPetalos: [
+                    {linkName: "petalo-4/5/1", image: 'boton4', titlePage: "HORMONAS", index: 0, colorBorder: "red", title: "A", subPetalos: [
+                            {linkName: "petalo-4/5/1/1", image: 'boton4', titlePage: "HORMONAS A", title: "Serotonina",
+                                text: "La serotonina regula el apetito, controla la temperatura corporal, induce la división celular y tiene influencia en la actividad motora, la percepción y la función cognitiva. También es conocida como la “hormona de la felicidad” ya que niveles altos provocan sensaciones de bienestar, relajación y satisfacción."
+                            },
+                            {linkName: "petalo-4/5/1/2", image: 'boton4', titlePage: "HORMONAS A", title: "Adrenalina",
+                                text: "La adrenalina, básica para las respuestas de huida o lucha, aumenta el ritmo cardíaco y suprime los procesos no vitales."
+                            },
+                            {linkName: "petalo-4/5/1/3", image: 'boton4', titlePage: "HORMONAS A", title: "Dopamina",
+                                text: "La dopamina aumenta el ritmo cardíaco y eleva la presión arterial, además de inhibir la producción de prolactina y de la hormona liberadora de tirotropina."
+                            },
+                            {linkName: "petalo-4/5/1/4", image: 'boton4', titlePage: "HORMONAS A", title: "Melatonina",
+                                text: "La melatonina es pieza clave para controlar los ritmos circadianos ya que causa somnolencia y ayuda a conciliar el sueño."
+                            },
+                            {linkName: "petalo-4/5/1/5", image: 'boton4', titlePage: "HORMONAS A", title: "Noradrenalina",
+                                text: "La noradrenalina, pese a ser considerada más un neurotransmisor que una hormona, ayuda a la adrenalina a desarrollar su función."
+                            },
+                            {linkName: "petalo-4/5/1/6", image: 'boton4', titlePage: "HORMONAS A", title: "Tiroxina",
+                                text: "La tiroxina es la principal hormona secretada por la glándula tiroides y ayuda a regular el metabolismo y a controlar el crecimiento, además de participar en el control de la síntesis proteica."
+                            },
+                            {linkName: "petalo-4/5/1/7", image: 'boton4', titlePage: "HORMONAS A", title: "Hormona antimulleriana",
+                                text: "La hormona antimulleriana permite calcular de forma precisa la reserva de óvulos de una mujer midiendo la cantidad de ovocitos disponibles."
+                            },
+                            {linkName: "petalo-4/5/1/8", image: 'boton4', titlePage: "HORMONAS A", title: "Hormona del crecimiento",
+                                text: "La hormona del crecimiento, como su nombre indica, regula el crecimiento del individuo y estimula la división celular controlando el proceso de mitosis."
+                            },
+                            {linkName: "petalo-4/5/1/9", image: 'boton4', titlePage: "HORMONAS A", title: "Histamina",
+                                text: "La histamina participa en la respuesta inmune ante una infección o estímulo estresor del medio. Es la encargada de inducir la inflamación de los tejidos y también estimula la producción de ácido gástrico en el estómago."
+                            },
+                            {linkName: "petalo-4/5/1/10", image: 'boton4', titlePage: "HORMONAS A", title: "Insulina",
+                                text: "La insulina estimula la entrada de glucosa y lípidos procedentes de la sangre al interior de las células, además de participar en la glucogenogénesis y glucólisis en hígado y músculo y la síntesis de triglicéridos en los adipocitos."
+                            },
+                            {linkName: "petalo-4/5/1/11", image: 'boton4', titlePage: "HORMONAS A", title: "Oxitocina",
+                                text: "La oxitocina estimula la secreción de leche de las mamas e interviene en el proceso de contracciones de útero, además de controlar los ritmos circadianos."
+                            },
+                            {linkName: "petalo-4/5/1/12", image: 'boton4', titlePage: "HORMONAS A", title: "Testosterona",
+                                text: "La testosterona estimula el crecimiento y el aumento tanto de la masa muscular como de la densidad ósea. Permite la maduración de los órganos sexuales masculinos y modifica el aparato fonador haciendo la voz más grave."
+                            },
+                            {linkName: "petalo-4/5/1/13", image: 'boton4', titlePage: "HORMONAS A", title: "Progesterona",
+                                text: "La progesterona participa en la regulación del ciclo menstrual, además de mantener el embarazo inhibiendo la respuesta del sistema inmune contra el embrión, una de las causas de aborto."
+                            },
+                            {linkName: "petalo-4/5/1/14", image: 'boton4', titlePage: "HORMONAS A", title: "Cortisol",
+                                text: "El cortisol estimula la gluconeogénesis en músculos y tejido adiposo y la lipólisis también en el tejido adiposo. Además tiene efectos inmunosupresores y antiinflamatorios, evitando que la respuesta inmune a un estrés sea exagerada."
+                            },
+                            {linkName: "petalo-4/5/1/15", image: 'boton4', titlePage: "HORMONAS A", title: "Adiponectina",
+                                text: "La adiponectina regula el metabolismo de la glucosa y de los lípidos aumentando la sensibilidad de las células a la insulina."
+                            },
+                            {linkName: "petalo-4/5/1/16", image: 'boton4', titlePage: "HORMONAS A", title: "Vasopresina",
+                                text: "También conocida como hormona antidiurética, la vasopresina provoca una vasoconstricción moderada y controla la cantidad de agua en el riñón regulando la concentración de moléculas de agua en la orina."
+                            },
+                            {linkName: "petalo-4/5/1/17", image: 'boton4', titlePage: "HORMONAS A", title: "Calcitonina",
+                                text: "La calcitonina interviene en la construcción del hueso ya que incrementa el almacenamiento de calcio en estos."
+                            },
+                            {linkName: "petalo-4/5/1/18", image: 'boton4', titlePage: "HORMONAS A", title: "Eritropoyetina",
+                                text: "La eritropoyetina estimula la producción de glóbulos rojos."
+                            },
+                            {linkName: "petalo-4/5/1/19", image: 'boton4', titlePage: "HORMONAS A", title: "Gastrina",
+                                text: "La gastrina estimula la secreción de ácido gástrico permitiendo así una mejor digestión de los alimentos."
+                            },
+                            {linkName: "petalo-4/5/1/20", image: 'boton4', titlePage: "HORMONAS A", title: "Inhibina",
+                                text: "La inhibina suprime la producción de hormona estimuladora del folículo."
+                            },
+                            {linkName: "petalo-4/5/1/21", image: 'boton4', titlePage: "HORMONAS A", title: "Prolactina",
+                                text: "La prolactina estimula la producción de leche, además de estar vinculada al placer después de una relación sexual."
+                            },
+                            {linkName: "petalo-4/5/1/22", image: 'boton4', titlePage: "HORMONAS A", title: "Relaxina",
+                                text: "La función exacta de la relaxina sigue siendo una incógnita, pero se sabe que se produce especialmente en el cuerpo lúteo de las mujeres."
+                            },
+                            {linkName: "petalo-4/5/1/23", image: 'boton4', titlePage: "HORMONAS A", title: "Neuropéptido Y",
+                                text: "El neuropéptido Y tiene la función de regular el aporte energético que recibe el organismo aumentando la sensación de apetito y disminuyendo la actividad termorreguladora."
+                            },
+                            {linkName: "petalo-4/5/1/24", image: 'boton4', titlePage: "HORMONAS A", title: "Renina",
+                                text: "Producida en el riñón, la renina tiene la función de estimular la producción de angiotensina."
+                            },
+                            {linkName: "petalo-4/5/1/25", image: 'boton4', titlePage: "HORMONAS A", title: "Encefalina",
+                                text: "La encefalina regula la sensación y percepción del dolor."
+                            },
+                            {linkName: "petalo-4/5/1/26", image: 'boton4', titlePage: "HORMONAS A", title: "Aldosterona",
+                                text: "La aldosterona participa en la reabsorción del sodio y la secreción de potasio en el riñón, lo que hace aumentar la presión sanguínea."
+                            }
+                        ]
+                    },
+                    {linkName: "petalo-4/5/2", image: 'boton4', titlePage: "HORMONAS", index: 1, colorBorder: "green", title: "B", subPetalos: [
+                            {
+                                linkName: "petalo-4/5/2/1",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Estrona",
+                                text: "La estrona actúa en el desarrollo de los caracteres sexuales y de los órganos reproductores femeninos, además de aumentar el anabolismo de las proteínas."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/2",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Estradiol",
+                                text: "El estradiol promueve la diferenciación de los caracteres sexuales secundarios femeninos e interviene en el crecimiento, además de incrementar la retención de agua y sodio. En hombres previene la muerte de las células germinales."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/3",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Secretina",
+                                text: "La secretina estimula secreción de bicarbonato y detiene la producción de jugos gástricos."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/4",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Trombopoyetina",
+                                text: "La trombopoyetina estimula la producción de plaquetas."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/5",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Tirotropina",
+                                text: "La tirotropina estimula la secreción de tiroxina y triiodotironina."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/6",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Lipotropina",
+                                text: "La lipotropina estimula la producción de melanina, la lipólisis y la síntesis de esteroides."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/7",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Péptido natriurético cerebral",
+                                text: "El péptido natriurético cerebral aminora la cantidad de agua, sodio y lípidos en la sangre, reduciendo así la presión sanguínea."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/8",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Endotelina",
+                                text: "La endotelina permite la contracción del músculo liso del estómago."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/9",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Glucagón",
+                                text: "El glucagón incrementa los niveles de glucosa en sangre promoviendo la glucogenólisis y la gluconeogénesis."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/10",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Leptina",
+                                text: "La leptina disminuye el apetito y aumenta las tasas metabólicas del organismo."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/11",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Hormona luteinizante",
+                                text: "La hormona luteinizante estimula la ovulación y la producción de testosterona."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/12",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Parathormona",
+                                text: "La parathormona activa la vitamina D y estimula la producción de tejido óseo."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/13",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Somatostatina",
+                                text: "La somatostatina tiene diversas funciones: inhibe la liberación de la hormona del crecimiento y de la tirotropina, suprime la liberación de hormonas que incitan a la producción de ácido gástrico, reduce las contracciones del músculo liso intestinal, etc."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/14",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Dihidrotestosterona",
+                                text: "La dihidrotestosterona controla el crecimiento del pelo en el cuerpo y la cara e influye en la secreción de las glándulas sebáceas causando acné."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/15",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Androstenediona",
+                                text: "La androstenediona actúa como sustrato para los estrógenos, permitiendo que desarrollen su función."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/16",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Tetrayodotironina",
+                                text: "La tetrayodotironina afecta a la síntesis de proteínas y aumenta el metabolismo basal y la sensibilidad a las catecolaminas (adrenalina, noradrenalina y dopamina)."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/17",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Triyodotironina",
+                                text: "La triyodotironina tiene la misma función que la tetrayodotironina pero la realiza de forma más potente."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/18",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Prostaglandina",
+                                text: "La prostaglandina regula aspectos relacionados con la presión sanguínea, la respuesta inmune inflamatoria y la actividad del sistema digestivo."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/19",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Corticotropina",
+                                text: "La corticotropina tiene la función de estimular las glándulas suprarrenales para que produzcan, principalmente, cortisol y testosterona."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/20",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Estriol",
+                                text: "El estriol se encarga de asegurar que la placenta y el feto se encuentren en buenas condiciones, incrementándose sus niveles durante el embarazo y disminuyendo en el momento del parto."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/21",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Somatocrinina",
+                                text: "La somatocrinina tiene la función de estimular la producción de la hormona del crecimiento."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/22",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Péptido inhibidor gástrico",
+                                text: "El péptido inhibidor gástrico estimula la secreción de insulina y la síntesis de triglicéridos en el tejido adiposo. Además disminuye el movimiento gástrico."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/23",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Hormona de la paratiroide",
+                                text: "La hormona de la paratiroide aumenta la concentración de calcio en sangre y al mismo tiempo disminuye la del sodio."
+                            },
+                            {
+                                linkName: "petalo-4/5/2/24",
+                                image: 'boton4',
+                                titlePage: "HORMONAS B",
+                                title: "Orexina",
+                                text: "La orexina se encarga de incitar a un mayor apetito y controla el gasto energético metabólico."
+                            }
+                        ]
+                    },
+                    {linkName: "petalo-4/5/3", image: 'boton4', titlePage: "HORMONAS", index: 2, colorBorder: "yellow", title: "C", subPetalos: [
+                            {linkName: "petalo-4/5/3/1", image: 'boton4', titlePage: "HORMONAS C", title: "Angiotensina",
+                                text: "La angiotensina tienen la función de provocar vasoconstricción con el objetivo de aumentar la presión arterial."
+                            },
+                            {linkName: "petalo-4/5/3/2", image: 'boton4', titlePage: "HORMONAS C", title: "Somatomedina",
+                                text: "La somatomedina tiene funciones similares a la insulina."
+                            },
+                            {linkName: "petalo-4/5/3/3", image: 'boton4', titlePage: "HORMONAS C", title: "Gonadotropina",
+                                text: "La gonadotropina coriónica humana se encarga de mantener el cuerpo lúteo durante el embarazo y también inhibe la respuesta del sistema inmune contra el feto en desarrollo."
+                            },
+                            {linkName: "petalo-4/5/3/4", image: 'boton4', titlePage: "HORMONAS C", title: "Grelina",
+                                text: "La grelina tiene dos funciones principales: estimular la sensación de apetito e incitar a la secreción de la hormona del crecimiento."
+                            },
+                            {linkName: "petalo-4/5/3/5", image: 'boton4', titlePage: "HORMONAS C", title: "Corticoliberina",
+                                text: "La corticoliberina tiene la función de liberar corticotropina. También actúa como neurotransmisor ante situaciones de estrés."
+                            },
+                            {linkName: "petalo-4/5/3/6", image: 'boton4', titlePage: "HORMONAS C", title: "Calcitriol",
+                                text: "El calcitriol participa en la absorción de calcio en los intestinos, manteniendo así los niveles adecuados en sangre para que los huesos dispongan de él cuando sea necesario."
+                            },
+                            {linkName: "petalo-4/5/3/7", image: 'boton4', titlePage: "HORMONAS C", title: "Melanocitos",
+                                text: "La hormona estimuladora de los melanocitos es pieza clave del proceso de melanogénesis, pues induce al oscurecimiento de la piel como respuesta a la exposición solar."
+                            },
+                            {linkName: "petalo-4/5/3/8", image: 'boton4', titlePage: "HORMONAS C", title: "Colecistoquinina",
+                                text: "La colecistoquinina induce a la sensación de saciedad estimulando la producción de enzimas digestivas en el páncreas y de bilis en la vesícula biliar."
+                            }
+                        ]
+                    },
                 ],
             },
-            {linkName: "petalo-4/4", image: 'boton4', title: "CIRCULACION", petalos: 4, subPetalos: [
+            {linkName: "petalo-4/6", image: 'boton4', title: "MERIDIANOS DE ACUPUNTURA",  subPetalos: [
+                    {linkName: "petalo-4/6/1", image: "boton4", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Pulmón", text: "Este meridiano se extiende desde la parte superior del cuerpo (donde se cree que tiene su origen en el pulmón) hasta la parte inferior del brazo, pasando por el pecho y el hombro. Es responsable de la función respiratoria, el intercambio de gases y el sistema inmunológico. También está asociado con las emociones de tristeza y aflicción."},
+                    {linkName: "petalo-4/6/2", image: "boton6", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Intestino Grueso", text: "Este meridiano comienza en la punta del dedo índice y se extiende a lo largo del brazo hasta el hombro, donde se conecta con el meridiano del Pulmón. Está relacionado con la función del intestino grueso y se utiliza para tratar trastornos digestivos como el estreñimiento, la diarrea y los problemas de eliminación."},
+                    {linkName: "petalo-4/6/3", image: "boton8", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Estómago", text: "Este meridiano se inicia en la zona de la cabeza y desciende a lo largo de la cara, el cuello y el pecho, continuando a lo largo del abdomen hasta llegar a la parte superior del muslo. Está asociado con la digestión, la absorción de nutrientes y el transporte de alimentos. Se utiliza para tratar trastornos digestivos, como la indigestión, la acidez estomacal, los vómitos y la pérdida de apetito."},
+                    {linkName: "petalo-4/6/4", image: "boton3", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Bazo-Páncreas", text: "Este meridiano se origina en la región del abdomen y se extiende hacia abajo a lo largo del muslo y la pierna. Está relacionado con la función del bazo y el páncreas, incluyendo la digestión, la absorción de nutrientes y el equilibrio de los fluidos corporales. Se utiliza para tratar trastornos digestivos, debilidad muscular, fatiga crónica y problemas del sistema linfático."},
+                    {linkName: "petalo-4/6/5", image: "boton1", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Corazón", text: "Este meridiano comienza en el área del corazón y se extiende a lo largo del brazo, pasando por el pecho y el hombro. Está asociado con la función cardiovascular, la circulación sanguínea y el sistema nervioso. Además, se considera que influye en las emociones y el estado mental, siendo utilizado para tratar trastornos cardíacos, insomnio, ansiedad y trastornos emocionales."},
+                    {linkName: "petalo-4/6/6", image: "boton10", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Intestino Delgado", text: "Este meridiano se origina en el área del oído y se extiende a lo largo del brazo, pasando por el hombro y el cuello. Está relacionado con la digestión y la absorción de nutrientes, así como con la separación de las sustancias útiles de los desechos. Se utiliza para tratar trastornos digestivos, trastornos de las articulaciones, problemas de la piel y desequilibrios de líquidos corporales."},
+                    {linkName: "petalo-4/6/7", image: "boton11", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Vejiga", text: "Este meridiano comienza en la cabeza y desciende por la parte posterior del cuerpo, a lo largo de la columna vertebral, pasando por los glúteos y las piernas, hasta llegar al pie. Está asociado con el sistema urinario y la eliminación de desechos metabólicos. Se utiliza para tratar afecciones como infecciones urinarias, trastornos de la vejiga, dolor de espalda y rigidez muscular."},
+                    {linkName: "petalo-4/6/8", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Riñón", text: "Este meridiano comienza en la parte inferior del pie y se eleva por la pierna, el abdomen y el pecho, pasando por la garganta hasta llegar a la lengua. Está asociado con la función renal, el equilibrio hormonal, la vitalidad y la reproducción. Se utiliza para tratar trastornos renales, problemas sexuales, fatiga crónica y debilidad ósea."},
+                    {linkName: "petalo-4/6/9", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Pericardio", text: "Este meridiano rodea el área del corazón y se extiende por el brazo, pasando por el pecho y el hombro. Está relacionado con la protección del corazón, la función circulatoria y la regulación del flujo de energía en el pecho. Se utiliza para tratar trastornos cardíacos, problemas emocionales, insomnio y trastornos del sueño."},
+                    {linkName: "petalo-4/6/10", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Triple calentador", text: "Este meridiano se divide en tres secciones que corresponden a las tres regiones del cuerpo: superior, medio e inferior. Está asociado con la regulación de la temperatura y los fluidos corporales, así como con las funciones metabólicas y endocrinas. Se utiliza para tratar trastornos relacionados con el sistema hormonal, retención de líquidos y problemas en las articulaciones."},
+                    {linkName: "petalo-4/6/11", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Vesicula Biliar", text: "Este meridiano se origina en la región de la cabeza y se extiende por el cuello y el hombro, pasando por los lados del cuerpo hasta las caderas y las piernas. Está relacionado con la digestión de las grasas, la toma de decisiones y la planificación. Se utiliza para tratar trastornos de la vesícula biliar, dolores de cabeza, problemas de visión y trastornos emocionales."},
+                    {linkName: "petalo-4/6/12", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Higado", text: "Este meridiano comienza en la parte superior del pie y se eleva por la pierna, el abdomen y el pecho, pasando por el cuello hasta llegar a la cabeza. Está asociado con la desintoxicación, la regulación del flujo de energía y el equilibrio emocional. Se utiliza para tratar trastornos hepáticos, tensión muscular, irritabilidad y depresión."},
+                    {linkName: "petalo-4/6/13", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Du Mai", text: "Este meridiano es conocido como el &quot;canal de la vida&quot; y se considera el meridiano más importante de todos. Se extiende desde el área del perineo, subiendo por la columna vertebral hasta la parte posterior del cuello y la cabeza. Se utiliza para equilibrar y fortalecer el sistema nervioso central, aliviar el dolor de espalda y"},
+                    {linkName: "petalo-4/6/14", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Ren Mai", text: "inferior de la boca. Se asocia con la energía y la nutrición del cuerpo, así como con la regulación del sistema reproductivo y hormonal. Se utiliza para tratar trastornos ginecológicos, mejorar la fertilidad, fortalecer el sistema inmunológico y equilibrar las emociones."},
+                    {linkName: "petalo-4/6/15", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Chong Mai", text: "Este meridiano es una combinación de los meridianos del Vaso Gobernador y del Vaso Concepción. Se extiende desde el abdomen, subiendo por el pecho y la garganta hasta llegar a la cabeza. Está asociado con el flujo de energía a lo largo de la línea media del cuerpo y se utiliza para tratar trastornos menstruales, trastornos digestivos, desequilibrios hormonales y problemas emocionales."},
+                    {linkName: "petalo-4/6/16", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Qi Hai Mai", text: "Este meridiano se encuentra en la parte inferior del abdomen, alrededor del ombligo. Se considera un depósito de energía y se utiliza para regular y almacenar la energía vital (Qi) en el cuerpo. Ayuda a fortalecer el sistema inmunológico, mejorar la vitalidad y equilibrar las emociones."},
+                    {linkName: "petalo-4/6/17", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Dai Mai", text: "Este meridiano rodea la cintura, como un cinturón, y se asocia con la estabilidad, el equilibrio y el flujo de energía entre la parte superior e inferior del cuerpo. Se utiliza para tratar trastornos musculoesqueléticos, dolor de espalda, desequilibrios emocionales y problemas digestivos."},
+                    {linkName: "petalo-4/6/18", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Yin Wei Mai", text: "Este meridiano se extiende desde el pecho, a lo largo del brazo interno, hasta la muñeca. Está relacionado con las emociones, especialmente con el estrés y la ansiedad. Se utiliza para equilibrar las emociones, aliviar el estrés, promover el sueño reparador y tratar trastornos emocionales."},
+                    {linkName: "petalo-4/6/19", image: "boton9", titlePage: "MERIDIANOS DE ACUPUNTURA", title: "Yang Wei Mai", text: "Este meridiano se extiende desde el área del cuello, por la parte externa del brazo, hasta llegar a la cadera y la pierna. Está asociado con los músculos y los tendones, y se utiliza para tratar trastornos musculoesqueléticos, rigidez, dolor en los hombros y la cadera, así como desequilibrios emocionales."},
                 ],
             },
-            {linkName: "petalo-4/5", image: 'boton4', title: "HORMONAS", petalos: 4, subPetalos: [
+            {linkName: "petalo-4/7", image: 'boton4', title: "PATOGENOS",  subPetalos: [
+                    {linkName: "petalo-4/7/1", image: 'boton4', titlePage: "PATOGENOS", title: "Bacterias"},
+                    {linkName: "petalo-4/7/2", image: 'boton4', titlePage: "PATOGENOS", title: "Virus"},
+                    {linkName: "petalo-4/7/3", image: 'boton4', titlePage: "PATOGENOS", title: "Hongos"},
+                    {linkName: "petalo-4/7/4", image: 'boton4', titlePage: "PATOGENOS", title: "Parasitos"},
+                    {linkName: "petalo-4/7/5", image: 'boton4', titlePage: "PATOGENOS", title: "Protozoarios"},
+                    {linkName: "petalo-4/7/6", image: 'boton4', titlePage: "PATOGENOS", title: "Metazoarios"},
+                    {linkName: "petalo-4/7/7", image: 'boton4', titlePage: "PATOGENOS", title: "Priones"},
+                    {linkName: "petalo-4/7/8", image: 'boton4', titlePage: "PATOGENOS", title: "Creencias (-)"},
+                    {linkName: "petalo-4/7/9", image: 'boton4', titlePage: "PATOGENOS", title: "Emocionales"},
+                    {linkName: "petalo-4/7/10", image: 'boton4', titlePage: "PATOGENOS", title: "Mentales"},
+                    {linkName: "petalo-4/7/11", image: 'boton4', titlePage: "PATOGENOS", title: "Espirituales"},
+                    {linkName: "petalo-4/7/12", image: 'boton4', titlePage: "PATOGENOS", title: "Fisicos"},
                 ],
             },
-            {linkName: "petalo-4/6", image: 'boton4', title: "MERIDIANOS DE ACUPUNTURA", petalos: 4, subPetalos: [
-                ],
-            },
-            {linkName: "petalo-4/7", image: 'boton4', title: "PATOGENOS", petalos: 4, subPetalos: [
-                ],
-            },
-            {linkName: "petalo-4/8", image: 'boton4', title: "TOXICOS", petalos: 4, subPetalos: [
-                ],
-            },
-            {linkName: "petalo-4/8", image: 'boton4', title: "MUSLO Y PIERNA", petalos: 4, subPetalos: [
-                ],
-            },
-            {linkName: "petalo-4/8", image: 'boton4', title: "PIE Y TOBILLO", petalos: 4, subPetalos: [
+            {linkName: "petalo-4/8", image: 'boton4', title: "TOXICOS",  subPetalos: [
+                    {linkName: "petalo-4/8/1", image: 'boton4', titlePage: "TOXICOS", title: "Contaminantes ambientales"},
+                    {linkName: "petalo-4/8/2", image: 'boton4', titlePage: "TOXICOS", title: "Toxinas en alimentos y agua"},
+                    {linkName: "petalo-4/8/3", image: 'boton4', titlePage: "TOXICOS", title: "Productos químicos domésticos"},
+                    {linkName: "petalo-4/8/4", image: 'boton4', titlePage: "TOXICOS", title: "Medicamentos y drogas"},
+                    {linkName: "petalo-4/8/5", image: 'boton4', titlePage: "TOXICOS", title: "Metales pesados"},
+                    {linkName: "petalo-4/8/6", image: 'boton4', titlePage: "TOXICOS", title: "Toxinas microbianas"},
+                    {linkName: "petalo-4/8/7", image: 'boton4', titlePage: "TOXICOS", title: "Electromagnetismo"},
+                    {linkName: "petalo-4/8/8", image: 'boton4', titlePage: "TOXICOS", title: "Entorno negativo"},
+                    {linkName: "petalo-4/8/9", image: 'boton4', titlePage: "TOXICOS", title: "Relaciones toxicas"},
+                    {linkName: "petalo-4/8/10", image: 'boton4', titlePage: "TOXICOS", title: "Todo lo tóxico que no vemos"},
+
                 ],
             },
             ]
     },
     {
-        linkName: "petalo-5", image: 'boton5', title: "Fuente Espiritual", petalos: 4, subPetalos: [
+        linkName: "petalo-5", image: 'boton5', title: "Fuente Espiritual",  subPetalos: [
             {
-                linkName: "petalo-5/1", image: 'boton5',  title: "Desconexiones", petalos: 8, subPetalos: [
+                linkName: "petalo-5/1", image: 'boton5',  title: "Desconexiones",  subPetalos: [
                     { linkName: "petalo-5/1/1", image: 'boton5', titlePage: "Desconexiones", title: "Conectar yo interior" },
                     { linkName: "petalo-5/1/2", image: 'boton5', titlePage: "Desconexiones", title: "Alma - Alma" },
                     { linkName: "petalo-5/1/3", image: 'boton5', titlePage: "Desconexiones", title: "Desconexión de dos almas" },
@@ -1589,7 +2846,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-5/2", image: 'boton5',title: "Chakras", petalos: 7, subPetalos: [
+                linkName: "petalo-5/2", image: 'boton5',title: "Chakras", subPetalos: [
                     { linkName: "petalo-5/2/1", image: 'boton5', titlePage: "Chakras", title: "Raiz" },
                     { linkName: "petalo-5/2/2", image: 'boton5', titlePage: "Chakras", title: "Sacro" },
                     { linkName: "petalo-5/2/3", image: 'boton5', titlePage: "Chakras", title: "Plexo Solar" },
@@ -1600,7 +2857,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-5/3", image: 'boton5', title: "Fuente Madre Tierra", petalos: 28, subPetalos: [
+                linkName: "petalo-5/3", image: 'boton5', title: "Fuente Madre Tierra", subPetalos: [
                     { linkName: "petalo-5/3/1", image: 'boton5', titlePage: "Fuente Madre Tierra", title: "Aire" },
                     { linkName: "petalo-5/3/2", image: 'boton5', titlePage: "Fuente Madre Tierra", title: "Arco Iris" },
                     { linkName: "petalo-5/3/3", image: 'boton5', titlePage: "Fuente Madre Tierra", title: "Aurora Boreal" },
@@ -1631,7 +2888,7 @@ const petalos = [
                     { linkName: "petalo-5/3/28", image: 'boton5', titlePage: "Fuente Madre Tierra", title: "Viento" },
                 ]
             },
-            {linkName: "petalo-5/4", image: 'boton5', title: "Mundo Reiki", petalos: 25, subPetalos: [
+            {linkName: "petalo-5/4", image: 'boton5', title: "Mundo Reiki", subPetalos: [
                     { linkName: "petalo-5/4/1", image: 'boton5', titlePage: "Mundo Reiki", title: "Cho Ku Rei",
                         text: "Símbolo de potenciación y protección. Está relacionado con la parte vital y física de la vida"
                     },
@@ -1718,8 +2975,8 @@ const petalos = [
                     },
                 ],
             },
-            {linkName: "petalo-5/5", image: 'boton5', title: "Terapia Flores de Bach", petalos: 3, noNumbers: true, subPetalos: [
-                        {linkName: "petalo-5/5/1", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "A", index: 0, petalos: 13, colorBorder: "red", subPetalos: [
+            {linkName: "petalo-5/5", image: 'boton5', title: "Terapia Flores de Bach",  noNumbers: true, subPetalos: [
+                        {linkName: "petalo-5/5/1", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "A", index: 0, colorBorder: "red", subPetalos: [
                                 {linkName: "petalo-5/5/1/1", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "A 1", text: "AGRIMONIA (Agromony)"},
                                 {linkName: "petalo-5/5/1/2", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "A 2", text: "ALAMO TEMBLON (Aspen)"},
                                 {linkName: "petalo-5/5/1/3", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "A 3", text: "HAYA (Beech)"},
@@ -1735,7 +2992,7 @@ const petalos = [
                                 {linkName: "petalo-5/5/1/13", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "A 13", text: "AULAGA (Gorse)"}
                             ],
                         },
-                    {linkName: "petalo-5/5/2", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "B", index: 1, petalos: 13, colorBorder: "green", subPetalos: [
+                    {linkName: "petalo-5/5/2", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "B", index: 1, colorBorder: "green", subPetalos: [
                             {linkName: "petalo-5/5/2/1", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "B 1", text: "BREZO (Heather)"},
                             {linkName: "petalo-5/5/2/2", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "B 2", text: "ACEBO (Holly)"},
                             {linkName: "petalo-5/5/2/3", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "B 3", text: "MADRESELVA (Honeysuckle)"},
@@ -1751,7 +3008,7 @@ const petalos = [
                             {linkName: "petalo-5/5/2/13", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "B 13", text: "HELIANTEMO (Rock Rose)"}
                         ],
                     },
-                    {linkName: "petalo-5/5/3", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "C", index: 2, petalos: 13, colorBorder: "yellow", subPetalos: [
+                    {linkName: "petalo-5/5/3", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "C", index: 2, colorBorder: "yellow", subPetalos: [
                             {linkName: "petalo-5/5/3/1", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "C 1", text: "AGUA DE ROCA (Rock Water)"},
                             {linkName: "petalo-5/5/3/2", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "C 2", text: "ESCLERANTO (Scleranthus)"},
                             {linkName: "petalo-5/5/3/3", image: 'boton5', titlePage: "Terapia Flores de Bach", title: "C 3", text: "ESTRELLA DE BELEN (Star of Bethlehem)"},
@@ -1768,8 +3025,8 @@ const petalos = [
                         ],
 
                     },
-                    {linkName: "petalo-5/6", image: 'boton5', title: "LIMPIEZA ENERGETICA", petalos: 4, subPetalos: [
-                            {linkName: "petalo-5/6/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", petalos: 14, title: "LIMPIEZA DE AURA", subPetalos: [
+                    {linkName: "petalo-5/6", image: 'boton5', title: "LIMPIEZA ENERGETICA",  subPetalos: [
+                            {linkName: "petalo-5/6/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "LIMPIEZA DE AURA", subPetalos: [
                                     {linkName: "petalo-5/6/1/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Entidades", text: ""},
                                     {linkName: "petalo-5/6/1/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Desencarnados", text: ""},
                                     {linkName: "petalo-5/6/1/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Extra-animas", text: ""},
@@ -1786,7 +3043,7 @@ const petalos = [
                                     {linkName: "petalo-5/6/1/14", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Embate energético", text: "Embate energético se refiere a un impacto o ataque repentino y poderoso a nivel energético. Es una expresión que describe una experiencia en la que una persona o entidad experimenta una influencia o interferencia intensa en su campo energético o aura. Este embate puede ser percibido como una fuerza abrumadora que puede afectar negativamente el equilibrio y bienestar energético de la persona, causando desequilibrios, agotamiento o malestar."},
                                 ]
                             },
-                            {linkName: "petalo-5/6/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", petalos: 14, title: "ATADURA ENERGETICA", subPetalos: [
+                            {linkName: "petalo-5/6/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "ATADURA ENERGETICA", subPetalos: [
                                     {linkName: "petalo-5/6/2/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un hombre", text: ""},
                                     {linkName: "petalo-5/6/2/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A una mujer", text: ""},
                                     {linkName: "petalo-5/6/2/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un niño/niña", text: ""},
@@ -1803,7 +3060,7 @@ const petalos = [
                                     {linkName: "petalo-5/6/2/14", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A una entidad no física negativa", text: ""},
                                 ]
                             },
-                            {linkName: "petalo-5/6/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", petalos: 9, title: "KARMAS (Ley causa y efecto)", subPetalos: [
+                            {linkName: "petalo-5/6/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "KARMAS (Ley causa y efecto)", subPetalos: [
                                     {linkName: "petalo-5/6/3/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Individual", text: ""},
                                     {linkName: "petalo-5/6/3/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Familiar", text: ""},
                                     {linkName: "petalo-5/6/3/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Regional", text: ""},
@@ -1815,7 +3072,7 @@ const petalos = [
                                     {linkName: "petalo-5/6/3/9", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "De un ente", text: ""},
                                 ]
                             },
-                            {linkName: "petalo-5/6/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", petalos: 12, title: "Pactos & Juramentos", subPetalos: [
+                            {linkName: "petalo-5/6/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Pactos & Juramentos", subPetalos: [
                                     {linkName: "petalo-5/6/3/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Salud", text: ""},
                                     {linkName: "petalo-5/6/3/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Amor", text: ""},
                                     {linkName: "petalo-5/6/3/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Dinero", text: ""},
@@ -1830,7 +3087,7 @@ const petalos = [
                                     {linkName: "petalo-5/6/3/12", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "No estar solo", text: ""},
                                 ]
                             },
-                            {linkName: "petalo-5/6/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", petalos: 12, title: "Pactos & Juramentos", subPetalos: [
+                            {linkName: "petalo-5/6/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Pactos & Juramentos", subPetalos: [
                                     {linkName: "petalo-5/6/3/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Salud", text: ""},
                                     {linkName: "petalo-5/6/3/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Amor", text: ""},
                                     {linkName: "petalo-5/6/3/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA",title: "Dinero", text: ""},
@@ -1855,8 +3112,8 @@ const petalos = [
 
                         ]
                     },
-                    {linkName: "petalo-5/7", image: 'boton5',title: "VIDAS PASADAS", noNumbers: true, petalos: 4, subPetalos: [
-                            {linkName: "petalo-5/7/1", image: 'boton5', titlePage: "VIDAS PASADAS", index: 0, colorBorder: "red", petalos: 20, title: "A INDIVIDUOS INVOLUCRADOS", subPetalos: [
+                    {linkName: "petalo-5/7", image: 'boton5',title: "VIDAS PASADAS", noNumbers: true,  subPetalos: [
+                            {linkName: "petalo-5/7/1", image: 'boton5', titlePage: "VIDAS PASADAS", index: 0, colorBorder: "red", title: "A INDIVIDUOS INVOLUCRADOS", subPetalos: [
                                     {linkName: "petalo-5/7/1/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "A 1", text: "Padre"},
                                     {linkName: "petalo-5/7/1/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "A 2", text: "Madre"},
                                     {linkName: "petalo-5/7/1/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "A 3", text: "Hijo/a"},
@@ -1880,7 +3137,7 @@ const petalos = [
                                 ],
                             },
 
-                            {linkName: "petalo-5/7/2", image: 'boton5', titlePage: "VIDAS PASADAS", index: 1, colorBorder: "green", petalos: 27, title: "B CAUSA", subPetalos: [
+                            {linkName: "petalo-5/7/2", image: 'boton5', titlePage: "VIDAS PASADAS", index: 1, colorBorder: "green", title: "B CAUSA", subPetalos: [
                                     {linkName: "petalo-5/7/2/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "B 1", text: "Abandono/Traicion"},
                                     {linkName: "petalo-5/7/2/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "B 2", text: "Ruptura/Separación"},
                                     {linkName: "petalo-5/7/2/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "B 3", text: "Mentira"},
@@ -1959,7 +3216,7 @@ const petalos = [
                             }
                             ],
                     },
-                    {linkName: "petalo-5/8", image: 'boton5', title: "DECRETO CUANTICO", petalos: 12, subPetalos: [
+                    {linkName: "petalo-5/8", image: 'boton5', title: "DECRETO CUANTICO", subPetalos: [
                             {linkName: "petalo-5/8/1", image: 'boton5', titlePage: "DECRETO CUANTICO", title: "SOY ENERGIA", text:"Soy tu energía vital, despierto la alegría y el amor propio. Elimino la ansiedad y la apatía, aumentando tu confianza. Libero bloqueos mentales, sexuales y emocionales. Alivio artritis y migrañas por tensión emocional. Superamos traumas y promuevo relaciones saludables. Rechazo el odio y el miedo. Despierta tu poder interior y crea una vida vibrante"},
                             {linkName: "petalo-5/8/2", image: 'boton5', titlePage: "DECRETO CUANTICO", title: "SOY AMOR", text:"Amor Transformador, Elevando la energía para la sanación total. Superando adicciones, abrazando la autenticidad y el placer. Columna vertebral en equilibrio. Armonía en relaciones de poder. Liberando fanatismos y obsesiones. Trascendiendo el orgullo. Fomentando la vida. Voluntad fortalecida."},
                             {linkName: "petalo-5/8/3", image: 'boton5', titlePage: "DECRETO CUANTICO", title: "SOY SERENIDAD", text:"Soy la serenidad en acción. Equilibrio emocional asegurado. Supero tristezas, celos y sentimientos de inferioridad. Triunfo sobre fracasos y dudas. Energía mental renovada. Columna vertebral fortalecida. Insomnio y pesadillas no tienen cabida. ¡Siente la intensidad!"},
@@ -2072,7 +3329,7 @@ const petalos = [
             }
 
         ]
-    }
+    },
 
 ]
 
