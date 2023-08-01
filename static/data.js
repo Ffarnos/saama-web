@@ -2496,7 +2496,7 @@ const petalos = [
                     },
                 ],
             },
-            {linkName: "petalo-4/5", image: 'boton4', title: "HORMONAS",  noNumber: true, subPetalos: [
+            {linkName: "petalo-4/5", image: 'boton4', title: "HORMONAS", noNumbers: true, subPetalos: [
                     {linkName: "petalo-4/5/1", image: 'boton4', titlePage: "HORMONAS", index: 0, colorBorder: "red", title: "A", subPetalos: [
                             {linkName: "petalo-4/5/1/1", image: 'boton4', titlePage: "HORMONAS A", title: "Serotonina",
                                 text: "La serotonina regula el apetito, controla la temperatura corporal, induce la división celular y tiene influencia en la actividad motora, la percepción y la función cognitiva. También es conocida como la “hormona de la felicidad” ya que niveles altos provocan sensaciones de bienestar, relajación y satisfacción."
