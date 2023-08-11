@@ -27,16 +27,5 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        precachePages: ['**/*'],
-        workboxConfig: {
-          clientsClaim: true,
-          skipWaiting: true,
-          globPatterns: ['**/static/images/**/*']
-        },
-      }
-    },
   ],
 };
