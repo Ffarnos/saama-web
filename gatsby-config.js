@@ -38,7 +38,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-offline',
       options: {
+        precachePages: ['./src/pages/'],
         workboxConfig: {
+          clientsClaim: true,
+          skipWaiting: true,
           globPatterns: ['**/static/images/**/*']
         },
       }
