@@ -4,8 +4,8 @@
 module.exports = {
   jsxRuntime: 'automatic',
   siteMetadata: {
-    title: 'Saama',
-    siteUrl: 'https://www.yourdomain.tld',
+    title: 'Terapia Genesis',
+    siteUrl: 'https://www.terapiagenesisapp.com',
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Saama',
+        name: 'Terapia Genesis',
         start_url: '/',
         background_color: '#100e17',
         theme_color: '#100e17',
@@ -27,14 +27,6 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        'name': 'images',
-        'path': './src/images/',
-      },
-      __key: 'images',
-    },
     {
       resolve: 'gatsby-plugin-offline',
       options: {
