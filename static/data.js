@@ -3109,46 +3109,46 @@ const petalos = [
                                     {linkName: "petalo-5/6/2/14", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A una entidad no física negativa", text: ""},
                                 ]
                             },
-                            {linkName: "petalo-5/6/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "KARMAS (Ley causa y efecto)", subPetalos: [
-                                    {linkName: "petalo-5/6/3/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Individual", text: ""},
-                                    {linkName: "petalo-5/6/3/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Familiar", text: ""},
-                                    {linkName: "petalo-5/6/3/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Regional", text: ""},
-                                    {linkName: "petalo-5/6/3/4", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Nacional", text: ""},
-                                    {linkName: "petalo-5/6/3/5", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Mundial", text: ""},
-                                    {linkName: "petalo-5/6/3/6", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Colectivo", text: ""},
-                                    {linkName: "petalo-5/6/3/7", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Duro", text: ""},
-                                    {linkName: "petalo-5/6/3/8", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Vidas pasadas", text: ""},
-                                    {linkName: "petalo-5/6/3/9", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "De un ente", text: ""},
+                            {linkName: "petalo-5/6/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "KARMAS", subPetalos: [
+                                    {linkName: "petalo-5/6/3/1", image: 'boton5', titlePage: "KARMAS", title: "Individual", text: ""},
+                                    {linkName: "petalo-5/6/3/2", image: 'boton5', titlePage: "KARMAS", title: "Familiar", text: ""},
+                                    {linkName: "petalo-5/6/3/3", image: 'boton5', titlePage: "KARMAS", title: "Regional", text: ""},
+                                    {linkName: "petalo-5/6/3/4", image: 'boton5', titlePage: "KARMAS", title: "Nacional", text: ""},
+                                    {linkName: "petalo-5/6/3/5", image: 'boton5', titlePage: "KARMAS", title: "Mundial", text: ""},
+                                    {linkName: "petalo-5/6/3/6", image: 'boton5', titlePage: "KARMAS", title: "Colectivo", text: ""},
+                                    {linkName: "petalo-5/6/3/7", image: 'boton5', titlePage: "KARMAS", title: "Duro", text: ""},
+                                    {linkName: "petalo-5/6/3/8", image: 'boton5', titlePage: "KARMAS", title: "Vidas pasadas", text: ""},
+                                    {linkName: "petalo-5/6/3/9", image: 'boton5', titlePage: "KARMAS", title: "De un ente", text: ""},
                                 ]
                             },
 
-                            {linkName: "petalo-5/6/4", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Pactos & Juramentos", subPetalos: [
-                                    {linkName: "petalo-5/6/3/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Salud", text: ""},
-                                    {linkName: "petalo-5/6/3/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Amor", text: ""},
-                                    {linkName: "petalo-5/6/3/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA",title: "Dinero", text: ""},
-                                    {linkName: "petalo-5/6/3/4", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Poder", text: ""},
-                                    {linkName: "petalo-5/6/3/5", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Sexo", text: ""},
-                                    {linkName: "petalo-5/6/3/6", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Fama", text: ""},
-                                    {linkName: "petalo-5/6/3/7", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Protección", text: ""},
-                                    {linkName: "petalo-5/6/3/8", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Seguridad", text: ""},
-                                    {linkName: "petalo-5/6/3/9", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Placer", text: ""},
-                                    {linkName: "petalo-5/6/3/10", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Comida", text: ""},
-                                    {linkName: "petalo-5/6/3/11", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Amistad", text: ""},
-                                    {linkName: "petalo-5/6/3/12", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "No estar solo", text: ""},
-                                    {linkName: "petalo-5/6/3/13", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Sabiduría", text: ""},
-                                    {linkName: "petalo-5/6/3/14", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Cariño", text: ""},
-                                    {linkName: "petalo-5/6/3/15", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Reconocimiento", text: ""},
-                                    {linkName: "petalo-5/6/3/16", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Belleza", text: ""},
-                                    {linkName: "petalo-5/6/3/17", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Inteligencia", text: ""},
-                                    {linkName: "petalo-5/6/3/18", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Magnetismo personal", text: ""},
-                                    {linkName: "petalo-5/6/3/19", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Juventud", text: ""},
+                            {linkName: "petalo-5/6/4", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "PACTOS & JURAMENTOS", subPetalos: [
+                                    {linkName: "petalo-5/6/3/1", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Salud", text: ""},
+                                    {linkName: "petalo-5/6/3/2", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Amor", text: ""},
+                                    {linkName: "petalo-5/6/3/3", image: 'boton5', titlePage: "PACTOS & JURAMENTOS",title: "Dinero", text: ""},
+                                    {linkName: "petalo-5/6/3/4", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Poder", text: ""},
+                                    {linkName: "petalo-5/6/3/5", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Sexo", text: ""},
+                                    {linkName: "petalo-5/6/3/6", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Fama", text: ""},
+                                    {linkName: "petalo-5/6/3/7", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Protección", text: ""},
+                                    {linkName: "petalo-5/6/3/8", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Seguridad", text: ""},
+                                    {linkName: "petalo-5/6/3/9", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Placer", text: ""},
+                                    {linkName: "petalo-5/6/3/10", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Comida", text: ""},
+                                    {linkName: "petalo-5/6/3/11", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Amistad", text: ""},
+                                    {linkName: "petalo-5/6/3/12", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "No estar solo", text: ""},
+                                    {linkName: "petalo-5/6/3/13", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Sabiduría", text: ""},
+                                    {linkName: "petalo-5/6/3/14", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Cariño", text: ""},
+                                    {linkName: "petalo-5/6/3/15", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Reconocimiento", text: ""},
+                                    {linkName: "petalo-5/6/3/16", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Belleza", text: ""},
+                                    {linkName: "petalo-5/6/3/17", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Inteligencia", text: ""},
+                                    {linkName: "petalo-5/6/3/18", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Magnetismo personal", text: ""},
+                                    {linkName: "petalo-5/6/3/19", image: 'boton5', titlePage: "PACTOS & JURAMENTOS", title: "Juventud", text: ""},
                                 ]
                             },
 
                         ]
                     },
                     {linkName: "petalo-5/7", image: 'boton5',title: "VIDAS PASADAS", noNumbers: true,  subPetalos: [
-                            {linkName: "petalo-5/7/1", image: 'boton5', titlePage: "VIDAS PASADAS", index: 0, colorBorder: "red", title: "A INDIVIDUOS INVOLUCRADOS", subPetalos: [
+                            {linkName: "petalo-5/7/1", image: 'boton5', titlePage: "VIDAS PASADAS", index: 0, colorBorder: "red", title: "A", subPetalos: [
                                     {linkName: "petalo-5/7/1/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "A 1", text: "Padre"},
                                     {linkName: "petalo-5/7/1/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "A 2", text: "Madre"},
                                     {linkName: "petalo-5/7/1/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "A 3", text: "Hijo/a"},
@@ -3172,7 +3172,7 @@ const petalos = [
                                 ],
                             },
 
-                            {linkName: "petalo-5/7/2", image: 'boton5', titlePage: "VIDAS PASADAS", index: 1, colorBorder: "green", title: "B CAUSA", subPetalos: [
+                            {linkName: "petalo-5/7/2", image: 'boton5', titlePage: "VIDAS PASADAS", index: 1, colorBorder: "green", title: "B", subPetalos: [
                                     {linkName: "petalo-5/7/2/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "B 1", text: "Abandono/Traicion"},
                                     {linkName: "petalo-5/7/2/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "B 2", text: "Ruptura/Separación"},
                                     {linkName: "petalo-5/7/2/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "B 3", text: "Mentira"},
@@ -3202,7 +3202,7 @@ const petalos = [
                                     {linkName: "petalo-5/7/2/27", image: 'boton5', titlePage: "VIDAS PASADAS", title: "B 27", text: "Tortura"},
                                 ],
                             },
-                            {linkName: "petalo-5/7/3", image: 'boton5', titlePage: "VIDAS PASADAS", index: 2, colorBorder: "yellow", title: "C BLOQUE DEL AFECTO A", subPetalos: [
+                            {linkName: "petalo-5/7/3", image: 'boton5', titlePage: "VIDAS PASADAS", index: 2, colorBorder: "yellow", title: "C", subPetalos: [
                                     {linkName: "petalo-5/7/3/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "C 1", text: "Amor"},
                                     {linkName: "petalo-5/7/3/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "C 2", text: "Abundancia"},
                                     {linkName: "petalo-5/7/3/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "C 3", text: "Humor/Alegria"},
@@ -3226,7 +3226,7 @@ const petalos = [
                                     {linkName: "petalo-5/7/3/21", image: 'boton5', titlePage: "VIDAS PASADAS", title: "C 21", text: "Empatía"},
                                 ],
                             },
-                            {linkName: "petalo-5/7/4", image: 'boton5', titlePage: "VIDAS PASADAS", index: 3, colorBorder: "yellow", title: "D BLOQUE DEL AFECTO B", subPetalos: [
+                            {linkName: "petalo-5/7/4", image: 'boton5', titlePage: "VIDAS PASADAS", index: 3, colorBorder: "yellow", title: "D", subPetalos: [
                                     {linkName: "petalo-5/7/4/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "D 1", text: "Capacidad de escuchar"},
                                     {linkName: "petalo-5/7/4/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "D 2", text: "Honestidad"},
                                     {linkName: "petalo-5/7/4/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "D 3", text: "Sinceridad"},
@@ -3635,7 +3635,90 @@ const petalos = [
 
         ]
 
-    }
+    },
+    {linkName: "petalo-7", image: 'boton7', title: "Fuente Simbolos", subPetalos: [
+            {linkName: "petalo-7/1", image:'boton7', title:"Flor de loto", imageBody: "flordeloto.svg",
+                text:"La flor de loto es un símbolo espiritual que representa la transformación, la iluminación y la trascendencia de las limitaciones terrenales. Crece en aguas fangosas pero conserva su belleza y pureza al elevarse por encima de la suciedad. Simboliza el despertar espiritual y la búsqueda de la verdad y la sabiduría en diferentes tradiciones orientales. Es un recordatorio de que, al superar los desafíos y apegos de la vida, podemos alcanzar la plenitud y la realización espiritual."
+            },
+            {linkName: "petalo-7/2", image:'boton7', title:"Nudo Perenne", imageBody: "nudoperenne.svg",
+                text: "El símbolo del nudo perenne, también conocido como nudo infinito, es un motivo visual que representa la conexión eterna, la continuidad y la interrelación de todas las cosas. Es un símbolo de unidad, amor y equilibrio. El nudo perenne representa la idea de que todo está intrínsecamente conectado y que nuestras acciones y decisiones tienen un impacto en el mundo que nos rodea. Es un recordatorio de que todo está relacionado y que nuestras acciones tienen un impacto en el mundo. Simboliza unidad, amor y equilibrio."
+            },
+            {linkName: "petalo-7/3", image:'boton7', title:"Awen", imageBody: "awen.png",
+                text: "El Awen representa la inspiración divina, la creatividad y la iluminación espiritual. Es considerado un símbolo de energía y sabiduría sagrada. Cada uno de los tres rayos del Awen puede representar diferentes aspectos, como la mente, el cuerpo y el espíritu. Representa el flujo de energía creativa y la conexión con lo divino. Es un recordatorio de buscar la sabiduría y la inspiración en el mundo que nos rodea."
+            },
+            {linkName: "petalo-7/4", image:'boton7', title:"Mano de Hopi", imageBody: "manodehopi.svg",
+                text: "Símbolo asociado con la tribu nativa americana Hopi, que reside principalmente en el noreste de Arizona, Estados Unidos, Es un símbolo de protección y poder espiritual. Se cree que representa la conexión con los dioses y los espíritus. La mano de Hopi también puede ser interpretada como un símbolo de unidad y colaboración. Los dedos extendidos pueden representar la unión y la cooperación entre las personas y la importancia de trabajar juntos en armonía."
+            },
+            {linkName: "petalo-7/5", image:'boton7', title:"Ojo de Horus", imageBody: "ojodeurus.svg",
+                text: "El Ojo de Horus simboliza la presencia y la guía divina en nuestra vida. Representa la visión interna y la percepción intuitiva, permitiéndonos ver más allá de lo evidente y comprender las verdades ocultas del universo. El Ojo de Horus nos invita a despertar nuestra conciencia espiritual y a desarrollar una conexión más profunda con lo divino. Este símbolo también es reconocido por su capacidad para purificar y elevar las energías. Se cree que el Ojo de Horus tiene el poder de disipar las energías negativas y proteger contra influencias dañinas. Actúa como un escudo espiritual, permitiéndonos mantenernos alineados con nuestra verdadera esencia y protegiéndonos de cualquier interferencia energética. Además, el Ojo de Horus simboliza la sanación y la renovación espiritual. Su energía revitalizante nos ayuda a liberar bloqueos emocionales y a sanar heridas del pasado. Al usar este símbolo o meditar con él, se cree que se activa y equilibra nuestros chakras, permitiendo el flujo libre de energía vital y promoviendo la armonía interna."
+            },
+            {linkName: "petalo-7/6", image:'boton7', title:"Infinito", imageBody: "infinito.svg",
+                text: "El símbolo infinito simboliza el flujo eterno de energía universal, sin principio ni fin. Es un recordatorio de que el tiempo y el espacio son conceptos relativos y que en el plano espiritual trascendemos las limitaciones lineales de la realidad física. Además, este símbolo representa la expansión infinita de la conciencia y el potencial humano. Nos invita a reconocer que somos seres multidimensionales, capaces de trascender nuestras limitaciones y explorar nuevos niveles de sabiduría y comprensión."
+            },
+            {linkName: "petalo-7/7", image:'boton7', title:"Koru", imageBody: "koru.svg",
+                text: "El símbolo Koru es un icono de la cultura maorí, el pueblo indígena de Nueva Zelanda, el símbolo Koru representa un portal hacia lo espiritual, el despertar de la conciencia y la transformación interior. Su energía revitalizante y su conexión con la naturaleza nos invitan a explorar nuestra propia espiritualidad, a expandir nuestra conciencia y a vivir en armonía con el universo. Al interactuar con este símbolo, podemos nutrir y fortalecer nuestro ser en todos los niveles, experimentando una profunda conexión con lo divino y el flujo de la energía universal."
+            },
+            {linkName: "petalo-7/8", image:'boton7', title:"Semilla de la vida", imageBody: "semilladelavida.png",
+                text: "Semilla de la vidaLa Semilla de la Vida es un poderoso símbolo espiritual y energético de sanación que se utiliza en diversas prácticas metafísicas y esotéricas. Se le atribuyen cualidades de conexión profunda con la energía universal y la sabiduría divina. Desde una perspectiva espiritual, la Semilla de la Vida representa el potencial creativo y la semilla primordial de la existencia. Se considera un símbolo de la chispa divina que reside dentro de cada ser y la conexión intrínseca que tenemos con el tejido mismo del universo. En términos de sanación energética, se cree que la Semilla de la Vida posee una vibración armonizadora y equilibrante. Se utiliza como una herramienta para liberar bloqueos energéticos, restaurar el flujo natural de energía en el cuerpo y promover la sanación holística."
+            },
+            {linkName: "petalo-7/9", image:'boton7', title:"Ek Ong Kar", imageBody: "ekongkar.svg",
+                text: "Símbolo espiritual y energético del sikhismo que representa la unidad y conexión con lo divino. Es la vibración primordial del universo y la conciencia divina que fluye a través de toda la creación. Al conectar con este símbolo, se eleva la vibración y se expande la conciencia, trascendiendo la dualidad y experimentando la unidad en todas las dimensiones del ser."
+            },
+            {linkName: "petalo-7/10", image:'boton7', title:"Circulo Zen", imageBody: "circulozen.svg",
+                text: "El círculo es un símbolo sagrado que representa la totalidad y la eternidad. Es un recordatorio de la naturaleza cíclica de la vida y la interconexión de todas las cosas en el universo. En su forma perfecta y continua, el círculo simboliza la perfección divina y la plenitud. Desde una perspectiva energética, el círculo representa un flujo ininterrumpido de energía vital. Es un portal hacia la esencia espiritual más elevada y un recordatorio de la continuidad y la interacción constante de las fuerzas cósmicas. El círculo contiene y amplifica la energía, creando un campo de vibraciones positivas y armoniosas."
+            },
+            {linkName: "petalo-7/11", image:'boton7', title:"Antahkarana", imageBody: "antahkarana.jpg",
+                text: "el Antahkarana se considera un puente hacia la divinidad interior y una herramienta para alcanzar estados superiores de consciencia. Se cree que este símbolo actúa como una llave que desbloquea y potencia la sabiduría interna, la intuición y la conexión con planos superiores de existencia. Al trabajar con el Antahkarana, se busca crear un canal de energía que fluye desde las dimensiones más elevadas hasta los niveles más profundos de la conciencia individual. Este flujo energético puede ayudar en la purificación y liberación de bloqueos emocionales, mentales o espirituales, facilitando así la sanación y la expansión de la esencia espiritual."
+            },
+            {linkName: "petalo-7/12", image:'boton7', title:"Mano de Hamsa", imageBody: "manodehamsa.png",
+                text: "La mano de Hamsa es un poderoso símbolo espiritual y de sanación que se utiliza para proteger y equilibrar las energías en diversos niveles. En un nivel espiritual, la mano de Hamsa se considera un canal de energía divina y se cree que ayuda a disipar las energías negativas, el mal de ojo y los bloqueos espirituales. Actúa como un escudo protector, creando un campo de energía positiva que aleja las influencias nocivas y fomenta la armonía y la paz interior. Se cree que el símbolo canaliza energías curativas y fortalecedoras, ayudando a equilibrar los chakras y revitalizar el flujo de energía vital en el cuerpo. Al usar o meditar con la mano de Hamsa, se busca armonizar y fortalecer el espíritu, el cuerpo y la mente, promoviendo la salud y el bienestar integral."
+            },            
+            {linkName: "petalo-7/13", image:'boton7', title:"Unalome", imageBody: "unalome.svg",
+                text: "El símbolo Unalome es un poderoso emblema sagrado que encapsula la energía transformadora, la sanación profunda y la espiritualidad elevada. Es una representación visual de la evolución espiritual y el viaje hacia la iluminación. La línea curva que se enrosca simboliza la fuerza vital que fluye a lo largo de la existencia humana, llevando consigo las experiencias, lecciones y desafíos que cada individuo encuentra en su camino. A medida que la línea se eleva, encontramos espirales y giros que representan los momentos de transformación y superación de obstáculos. Estos obstáculos se convierten en oportunidades para el crecimiento y la sanación, liberando así la energía bloqueada y permitiendo que el espíritu se eleve hacia niveles superiores de conciencia. En la cima del símbolo Unalome, la línea se endereza y alcanza su plenitud, representando la iluminación espiritual y la conexión profunda con la divinidad. En este estado de despertar, se manifiestan la paz interior, la sabiduría y la armonía con el universo."
+            },
+            {linkName: "petalo-7/14", image:'boton7', title:"Arbol de la vida", imageBody: "arboldelavida.jpg",
+                text: "Es un símbolo sagrado que representa la conexión entre el mundo espiritual y el mundo físico. el árbol de la vida representa la unidad y la interconexión de todas las formas de vida en el universo. Sus raíces se sumergen profundamente en la Tierra, simbolizando nuestra conexión con la madre tierra y nuestras raíces ancestrales. Sus ramas se extienden hacia el cielo, conectándonos con el mundo espiritual y las dimensiones superiores. Se cree que al conectarnos con la energía del árbol de la vida, podemos acceder a su sabiduría ancestral y restaurar nuestro equilibrio energético."
+            },
+            {linkName: "petalo-7/15", image:'boton7', title:"Triple Luna", imageBody: "tripleluna.svg",
+                text: "El símbolo de la triple luna, también conocido como el símbolo de la triple diosa o la triple diosa lunar, representa la conexión con la energía femenina divina y la naturaleza cíclica de la vida. Este símbolo consta de tres lunas crecientes o menguantes, colocadas una encima de la otra en forma de semicírculo. Cada luna en el símbolo de la triple luna representa una fase diferente de la diosa lunar y sus aspectos asociados. Estos aspectos son comúnmente conocidos como la doncella, la madre y la anciana. La doncella representa la juventud, la inocencia y los nuevos comienzos. La madre simboliza la maternidad, la fertilidad y el poder creativo. La anciana representa la sabiduría, la experiencia y la transformación."
+            },
+            {linkName: "petalo-7/16", image:'boton7', title:"Toro Celta", imageBody: "torocelta.svg",
+                text: "El toro Celta, se asocia con la energía masculina y la divinidad, representando al dios celta de la fertilidad y la abundancia. Se le atribuye la capacidad de proteger y nutrir, tanto en el plano físico como en el espiritual. Al conectarse con el toro celta, se busca obtener su fuerza y sabiduría para enfrentar los desafíos de la vida y encontrar equilibrio y armonía en el mundo. Además, el toro celta también puede simbolizar la capacidad de conectarse con los instintos más profundos, la pasión y el poder creativo. Se le considera un guía espiritual que nos ayuda a reconectarnos con nuestras raíces, con la sabiduría ancestral y la esencia primordial de nuestro ser."
+            },
+            {linkName: "petalo-7/17", image:'boton7', title:"Flor de la vida", imageBody: "flordelavida.svg",
+                text: "La Flor de la Vida es un poderoso símbolo espiritual que representa la esencia misma de la existencia y la interconexión de todas las formas de vida en el universo. El patrón geométrico de la Flor de la Vida se considera un lenguaje universal de la geometría sagrada. Cada círculo que compone el símbolo representa una etapa en el proceso de creación, desde la unidad primordial hasta la manifestación completa. Estos círculos se entrelazan de manera armónica, creando una matriz de energía que resuena con la vibración divina y la esencia misma de la vida. Al conectarse con la Flor de la Vida en un nivel energético, se puede experimentar una profunda sensación de unidad y plenitud."
+            },
+            {linkName: "petalo-7/18", image:'boton7', title:"Rueda universal (Sioux)", imageBody: "ruedauniversal.svg",
+                text: "Representa el universo. Los cuatro cuadrantes significan oración, inocencia, espíritu y visión lejana. Las plumas adheridas al escudo representan la sabiduría, la introspección y los poderes curativos del chamán. Las dos medias lunas en el centro del escudo representan la naturaleza dual del hombre."
+            },
+            {linkName: "petalo-7/19", image:'boton7', title:"Trisquel", imageBody: "trisquel.svg",
+                text: "El Trisquel es un símbolo espiritual con alto grado energético de sanación. Representa la interconexión de mente, cuerpo y espíritu, así como la trinidad divina presente en diferentes tradiciones espirituales. Sus tres espirales entrelazadas simbolizan dimensiones como pasado, presente y futuro, cuerpo, mente y espíritu, y tierra, mar y cielo. Al trabajar con el Trisquel, se puede acceder a un estado elevado de conciencia y sanación, permitiendo que la energía fluya y armonice todos los aspectos del ser. El símbolo también está asociado con la renovación espiritual, liberación de patrones negativos y transformación personal."
+            },
+            {linkName: "petalo-7/20", image:'boton7', title:"Triqueta", imageBody: "triqueta.svg",
+                text: "la triqueta simboliza la totalidad y la integridad del ser. Cada una de las espirales entrelazadas representa un aspecto fundamental de la existencia: el pasado, el presente y el futuro; el cuerpo, la mente y el espíritu; la tierra, el cielo y el mar; o cualquier otro conjunto de tres elementos significativos. Además, la triqueta se considera un recordatorio de la interconexión de todas las cosas en el universo. Representa la idea de que todos estamos interrelacionados y que nuestras acciones y energías tienen un impacto en el entorno que nos rodea."
+            },
+            {linkName: "petalo-7/21", image:'boton7', title:"Merkaba", imageBody: "merkaba.svg",
+                text: "el Merkaba se interpreta como la representación de la conexión entre el cuerpo físico, el cuerpo energético y la divinidad. Se cree que al trabajar con este símbolo, se pueden generar campos de energía de alta vibración que ayudan a purificar, equilibrar y sanar todos los niveles del ser. Además, se considera un escudo de protección energética, permitiendo filtrar y transmutar energías negativas, así como facilitar el acceso a la sabiduría espiritual y la expansión de la conciencia."
+            },
+            {linkName: "petalo-7/22", image:'boton7', title:"Oso (Sioux)", imageBody: "oso.svg",
+                text: "El oso representa la justicia y el castigo, así como el coraje, la confianza y la energía de conexión a tierra. El oso también es un símbolo de protección, y las tribus reconocen la forma en que una madre osa defiende a sus cachorros. El símbolo del oso te ruega que defiendas tus creencias y luches por lo que es verdad."
+            },
+            {linkName: "petalo-7/23", image:'boton7', title:"Atrapasueños (Sioux)", imageBody: "atrapasueños.svg",
+                text: "El atrapasueños actúa como un filtro espiritual, atrapando los sueños negativos y las energías no deseadas durante el sueño. La red en el centro del atrapasueños simboliza la telaraña cósmica que conecta a todas las personas y seres vivos. Se cree que esta red captura y filtra las energías negativas, mientras que permite el paso de los sueños positivos y las visiones espirituales. Las plumas colgantes en el atrapasueños representan la conexión con el reino espiritual y se cree que ayudan a guiar los sueños hacia un estado de paz y armonía."
+            },
+            {linkName: "petalo-7/24", image:'boton7', title:"Om", imageBody: "om.svg",
+                text: "El símbolo Om es una representación sagrada y poderosa de la realidad última y la unidad espiritual. En un nivel espiritual y de alto nivel energético, &quot;Om&quot; se considera la vibración primordial del universo, el sonido que subyace en toda la creación. Desde esta perspectiva, &quot;Om&quot; se concibe como la manifestación sonora del Ser Supremo y la fuente de toda existencia. Simboliza la totalidad del cosmos y la interconexión de todas las formas de vida."
+            },
+            {linkName: "petalo-7/25", image:'boton7', title:"Ying Yang", imageBody: "yingyang.svg",
+                text: "El símbolo Ying Yang representa la interconexión y la armonía entre las fuerzas opuestas y complementarias en el universo. Refleja la naturaleza dual de la existencia y simboliza la búsqueda de equilibrio y unidad en todos los aspectos de la vida. Espiritualmente, el yin y el yang representan la interacción entre lo divino femenino y masculino, la esencia primordial que subyace en toda creación. El yin encarna la energía receptiva, intuitiva y emocional, que se conecta con la profundidad del ser interior y la espiritualidad introspectiva. Por otro lado, el yang representa la energía activa, racional y expansiva, que se relaciona con la manifestación externa, la acción y la expresión creativa."
+            },
+            {linkName: "petalo-7/26", image:'boton7', title:"Cubo Metatron", imageBody: "cubo.svg",
+                text: "El símbolo del cubo de Metatrón representa una profunda conexión con lo divino y con la esencia espiritual del universo. Se considera una poderosa herramienta para expandir la conciencia y despertar la espiritualidad interior. Este símbolo sagrado actúa como un recordatorio de la presencia divina en todas las cosas y nos invita a explorar los misterios y las verdades trascendentales del universo. Desde una perspectiva espiritual, el cubo de Metatrón simboliza la armonía, la perfección y la interconexión de todas las cosas. Las 13 esferas que componen el cubo representan los diferentes aspectos del ser humano y la integración de la energía divina en cada uno de ellos."
+            },
+            
+ 
+    ]},
+
 
 ]
 
