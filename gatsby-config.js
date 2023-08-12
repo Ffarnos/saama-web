@@ -36,6 +36,14 @@ module.exports = {
       __key: 'images',
     },
     {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        mergeSecurityHeaders: true,
+        mergeCachingHeaders: true,
+        generateMatchPathRewrites: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-offline',
       options: {
         precachePages: ['./src/pages/'],
