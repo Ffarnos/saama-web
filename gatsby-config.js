@@ -39,14 +39,7 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
     },
     {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        precachePages: ['./src/pages/'],
-        workboxConfig: {
-          clientsClaim: true,
-          skipWaiting: true,
-        },
-      }
+      resolve: 'gatsby-plugin-offline'
     },
   ],
 };

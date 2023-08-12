@@ -5,9 +5,10 @@ import {navigate} from "gatsby";
 import {NavigationButtonsInLine} from "../navigation/NavigationButtons";
 import styled from "styled-components";
 import {Background} from "./PetalosTemplate";
+import ResponsiveImage from "../apis/ResponsiveImage";
 
 
-const TextTemplate = ({ pageContext }) => {
+const FinalPageTemplate = ({ pageContext }) => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === 'Enter')
@@ -28,13 +29,15 @@ const TextTemplate = ({ pageContext }) => {
     }, []);
 
 
-    const {desc, titleText, image, titlePage} = pageContext
+    const {desc, titleText, image, titlePage, imageBody} = pageContext
     const imagePath = "/images/"+ image + ".webp";
+    const imageBodyPath = "/images/simbolos/"+ image;
     return <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Content>
             <ResponsiveText scale={0.9} color={"white"}>{titlePage}</ResponsiveText>
             <ResponsiveText scale={0.7} color={"white"}>{titleText}</ResponsiveText>
-            <Text scale={0.5} color={"white"}>{desc}</Text>
+            {desc && <Text scale={0.5} color={"white"}>{desc}</Text>}
+            {imageBody && <ResponsiveImage src={`url(${imageBodyPath})`}/>}
         <Container>
             <NavigationButtonsInLine/>
         </Container>
@@ -58,4 +61,4 @@ const Container = styled.div`
     margin-top: auto;
 `;
 
-export default TextTemplate;
+export default FinalPageTemplate;
