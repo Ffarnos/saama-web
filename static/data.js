@@ -3072,6 +3072,8 @@ const petalos = [
                         ],
 
                     },
+                ]
+            },
                     {linkName: "petalo-5/6", image: 'boton5', title: "LIMPIEZA ENERGETICA",  subPetalos: [
                             {linkName: "petalo-5/6/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "LIMPIEZA DE AURA", subPetalos: [
                                     {linkName: "petalo-5/6/1/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Entidades", text: ""},
@@ -3090,8 +3092,6 @@ const petalos = [
                                     {linkName: "petalo-5/6/1/14", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Embate energético", text: "Embate energético se refiere a un impacto o ataque repentino y poderoso a nivel energético. Es una expresión que describe una experiencia en la que una persona o entidad experimenta una influencia o interferencia intensa en su campo energético o aura. Este embate puede ser percibido como una fuerza abrumadora que puede afectar negativamente el equilibrio y bienestar energético de la persona, causando desequilibrios, agotamiento o malestar."},
                                 ]
                             },
-                            ]
-                    },
                             {linkName: "petalo-5/6/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "ATADURA ENERGETICA", subPetalos: [
                                     {linkName: "petalo-5/6/2/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un hombre", text: ""},
                                     {linkName: "petalo-5/6/2/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A una mujer", text: ""},
@@ -3121,22 +3121,8 @@ const petalos = [
                                     {linkName: "petalo-5/6/3/9", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "De un ente", text: ""},
                                 ]
                             },
-                            {linkName: "petalo-5/6/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Pactos & Juramentos", subPetalos: [
-                                    {linkName: "petalo-5/6/3/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Salud", text: ""},
-                                    {linkName: "petalo-5/6/3/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Amor", text: ""},
-                                    {linkName: "petalo-5/6/3/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Dinero", text: ""},
-                                    {linkName: "petalo-5/6/3/4", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Poder", text: ""},
-                                    {linkName: "petalo-5/6/3/5", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Sexo", text: ""},
-                                    {linkName: "petalo-5/6/3/6", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Fama", text: ""},
-                                    {linkName: "petalo-5/6/3/7", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Protección", text: ""},
-                                    {linkName: "petalo-5/6/3/8", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Seguridad", text: ""},
-                                    {linkName: "petalo-5/6/3/9", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Placer", text: ""},
-                                    {linkName: "petalo-5/6/3/10", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Comida", text: ""},
-                                    {linkName: "petalo-5/6/3/11", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Amistad", text: ""},
-                                    {linkName: "petalo-5/6/3/12", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "No estar solo", text: ""},
-                                ]
-                            },
-                            {linkName: "petalo-5/6/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Pactos & Juramentos", subPetalos: [
+
+                            {linkName: "petalo-5/6/4", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Pactos & Juramentos", subPetalos: [
                                     {linkName: "petalo-5/6/3/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Salud", text: ""},
                                     {linkName: "petalo-5/6/3/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "Amor", text: ""},
                                     {linkName: "petalo-5/6/3/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA",title: "Dinero", text: ""},
