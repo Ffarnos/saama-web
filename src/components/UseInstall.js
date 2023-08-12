@@ -3,13 +3,28 @@ import {useEffect, useState} from 'react';
 
 let deferredPrompt = undefined;
 
-export const ConfigureInstall = () => {
+export const useConfigureInstall = () => {
   if (typeof window !== 'undefined') {
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
     });
   }
+};
+
+export const isPWAInstalled = () => {
+  if (typeof window === 'undefined') {
+    return false;
+  }
+  if ('matchMedia' in window) {
+    return window.matchMedia('(display-mode: standalone)').matches;
+  }
+
+  // Fallback for older browsers
+  return (
+      window.navigator.standalone || // iOS devices
+      window.matchMedia('(display-mode: standalone)').matches // Other devices supporting PWAs
+  );
 };
 
 const useInstall = () => {
@@ -31,7 +46,7 @@ const useInstall = () => {
     }
   }, []);
   return [
-    deferredPrompt !== undefined,
+    deferredPrompt !== undefined && !isPWAInstalled(),
     () => {
       if (deferredPrompt != null) {
         deferredPrompt.prompt();
