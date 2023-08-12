@@ -37,11 +37,6 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-netlify`,
-      options: {
-        mergeSecurityHeaders: true,
-        mergeCachingHeaders: true,
-        generateMatchPathRewrites: true,
-      },
     },
     {
       resolve: 'gatsby-plugin-offline',
