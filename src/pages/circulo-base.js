@@ -45,7 +45,7 @@ const CirculoBase = () => {
             </Title>
             <Buttons
                 petalos={petalos}
-                bigButtonTitle={"FUENTE GUÍA"}
+                bigButtonTitle={"FUENTE MADRE"}
                 numbers={11}
                 circuloBase={true}
                 onClick={(petaloName)=> {

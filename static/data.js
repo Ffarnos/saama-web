@@ -235,7 +235,7 @@ const petalos = [
                             },
                             {
                                 linkName: "petalo-2/1/2/5", image: 'boton2', titlePage: 'Emociones', title: "B 5",
-                                text: "FALTA DE PERDÓN, FALTA PERSONALIDAD, FORZADO A... FRACASO"
+                                text: "FALTA DE PERDÓN, FALTA PERSONALIDAD, FURIA A... FRACASO"
                             },
                             {
                                 linkName: "petalo-2/1/2/6", image: 'boton2', titlePage: 'Emociones', title: "B 6",
@@ -295,7 +295,7 @@ const petalos = [
                             },
                             {
                                 linkName: "petalo-2/1/4/4", image: 'boton2', titlePage: 'Emociones', title: "D 4",
-                                text: "SENTIRSE HUMILLADO, SENTIRSE OFENDIDO, SHOCK, SOLITARIO"
+                                text: "SENTIRSE HUMILLADO, SENTIRSE OFENDIDO, SHOCK, SOBERBIA"
                             },
                             {
                                 linkName: "petalo-2/1/4/5", image: 'boton2', titlePage: 'Emociones', title: "D 5",
@@ -328,59 +328,55 @@ const petalos = [
                         text: "Vamos a eliminar cualquier emoción que este bloqueando nuestro estado emocional… (buscarlas en la cuadricula de emociones)."
                     },
                     {
-                        linkName: "petalo-2/2/4", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en cuerpo emocional",
+                        linkName: "petalo-2/2/4", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo espiritual",
                         text: "Vamos a eliminar cualquier emoción que este bloqueando nuestro estado emocional… (buscarlas en la cuadricula de emociones)."
                     },
                     {
-                        linkName: "petalo-2/2/5", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo espiritual",
-                        text: "Vamos a eliminar cualquier emoción que este bloqueando nuestro estado emocional… (buscarlas en la cuadricula de emociones)."
-                    },
-                    {
-                        linkName: "petalo-2/2/6", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en los ancestros",
+                        linkName: "petalo-2/2/5", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en los ancestros",
                         text: "Son emociones que sentimos en contacto reciente con nuestro clan familiar, mis padres son depresivos, lo cual reacciono con una respuesta a una emoción determinada en base a lo que me genera esa situación. (ir a cuadricula de emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/7", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones en el ADN",
+                        linkName: "petalo-2/2/6", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones en el ADN",
                         text: "Las emociones en sí mismas son el resultado de una interacción compleja entre factores genéticos, cognitivos, sociales y ambientales. Estas emociones se encuentran por experiencias vividas en nuestro clan familiar, situaciones no resueltas, y con repeticiones en las diferentes generaciones. (ir a cuadrícula de emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/8", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones obstruidas de otras vidas",
+                        linkName: "petalo-2/2/7", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones obstruidas de otras vidas",
                         text: "Las emociones en sí mismas son el resultado de una interacción compleja entre factores genéticos, cognitivos, sociales y ambientales. Estas emociones se encuentran por experiencias vividas en nuestro clan familiar, situaciones no resueltas, y con repeticiones en las diferentes generaciones. (ir a cuadrícula de emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/9", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones dependientes del corazón",
+                        linkName: "petalo-2/2/8", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones dependientes del corazón",
                         text: "Son las emociones se el subconsciente vuelve a depender ante la primera situación de estrés, sin poder lograr deshacerse de ellas. (ir a la cuadrícula de emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/10", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones bloqueadas recientemente",
+                        linkName: "petalo-2/2/9", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones bloqueadas recientemente",
                         text: "Esta es una barrera de emociones la cual la persona no reconoce ni la cree en su existencia, al ser una barrera es muy fuerte su bloqueo. (chequear en la cuadrícula de emociones si hay más de una)."
                     },
                     {
-                        linkName: "petalo-2/2/11", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Barrera oculta de emociones",
-                        text: "Son las emociones que se viven en el día a día, o ante un evento reciente. (ir  a la cuadricula de emociones)"
+                        linkName: "petalo-2/2/10", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Barrera oculta de emociones",
+                        text: "Emoción que se sostiene en lo mas profundo del subconsciente, en casos el consultante no quiere sacar a la luz esa emoción por el simple hecho de negar su existencia, no admitirla y no querer entrar en consciencia…"
                     },
                     {
-                        linkName: "petalo-2/2/12", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones absorbidas por resonancia",
+                        linkName: "petalo-2/2/11", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Emociones absorbidas por resonancia",
                         text: "Son los estados negativos que absorbemos de las personas que están en constante contacto con uno. (ir a la cuadricula de emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/13", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Respuesta a una creencia",
+                        linkName: "petalo-2/2/12", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Respuesta a una creencia",
                         text: "Cuando somos niños incorporamos las creencias y estados emocionales de nuestro entorno familia, país y cultura, en ellas se encuentran las emociones negativas que estas creencias nos generan. (ir a la cuadricula de emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/14", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Respuesta a un recuerdo",
+                        linkName: "petalo-2/2/13", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Respuesta a un recuerdo",
                         text: "Son estados que aparecen de un recuerdo traumático, doloroso, no expresado. (ir a la cuadricula de emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/15", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un pensamiento",
+                        linkName: "petalo-2/2/14", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un pensamiento",
                         text: "Es una causa efecto ante un pensamiento repetitivo negativo. (ir a la cuadricula de emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/16", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un sentimiento",
+                        linkName: "petalo-2/2/15", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un sentimiento",
                         text: "Es una causa efecto ante un sentimiento repetitivo negativo. (ir a la cuadricula de emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/17", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Suceso traumático",
+                        linkName: "petalo-2/2/16", image: 'boton2', titlePage: 'Bloqueos Emocionales A', title: "Suceso traumático",
                         text: "Situación vivida que nos generó un alto grado de estrés, generando un colapso emocional. (ir a la cuadricula de emociones)"
                     }
                 ]
@@ -908,106 +904,107 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/3", image: 'boton3', title: "Vida Sexual A", subPetalos: [
-                    { linkName: "petalo-3/3/1", image: 'boton3', titlePage: "Vida Sexual A", title: "ABUSO", text: "" },
-                    { linkName: "petalo-3/3/2", image: 'boton3', titlePage: "Vida Sexual A", title: "ANORGASMIA", text: "" },
-                    { linkName: "petalo-3/3/3", image: 'boton3', titlePage: "Vida Sexual A", title: "ASCO/ESCATOLOGÍA", text: "" },
-                    { linkName: "petalo-3/3/4", image: 'boton3', titlePage: "Vida Sexual A", title: "ASEXUAL", text: "" },
-                    { linkName: "petalo-3/3/5", image: 'boton3', titlePage: "Vida Sexual A", title: "BARRERA EMOCIONAL EN GENITALES", text: "" },
-                    { linkName: "petalo-3/3/6", image: 'boton3', titlePage: "Vida Sexual A", title: "BLOQUEO ENERGÉTICO GENITAL", text: "" },
-                    { linkName: "petalo-3/3/7", image: 'boton3', titlePage: "Vida Sexual A", title: "BLOQUEOS QUE IMPIDEN DISFRUTAR", text: "" },
-                    { linkName: "petalo-3/3/8", image: 'boton3', titlePage: "Vida Sexual A", title: "BLOQUEO AL DAR/RECIBIR", text: "" },
-                    { linkName: "petalo-3/3/9", image: 'boton3', titlePage: "Vida Sexual A", title: "COMPLEJOS-TRAUMAS", text: "" },
-                    { linkName: "petalo-3/3/10", image: 'boton3', titlePage: "Vida Sexual A", title: "COMPORTAMIENTO INFANTIL", text: "" },
-                    { linkName: "petalo-3/3/11", image: 'boton3', titlePage: "Vida Sexual A", title: "CONFLICTOS DE CREENCIAS SEXUALES", text: "" },
-                    { linkName: "petalo-3/3/12", image: 'boton3', titlePage: "Vida Sexual A", title: "CONFLICTOS MORALISTAS SEXUALES", text: "" },
-                    { linkName: "petalo-3/3/13", image: 'boton3', titlePage: "Vida Sexual A", title: "CONFLICTOS RELIGIOSOS SEXUALES", text: "" },
-                    { linkName: "petalo-3/3/14", image: 'boton3', titlePage: "Vida Sexual A", title: "CONVICCIÓN SOBRE TUS DESEOS", text: "" },
-                    { linkName: "petalo-3/3/15", image: 'boton3', titlePage: "Vida Sexual A", title: "CULPABILIDAD", text: "" },
-                    { linkName: "petalo-3/3/16", image: 'boton3', titlePage: "Vida Sexual A", title: "DESCONOCIMIENTO SOBRE TUS DESEOS", text: "" },
-                    { linkName: "petalo-3/3/17", image: 'boton3', titlePage: "Vida Sexual A", title: "ESCLAVITUD", text: "" },
-                    { linkName: "petalo-3/3/18", image: 'boton3', titlePage: "Vida Sexual A", title: "EXTRAMARITAL", text: "" },
-                    { linkName: "petalo-3/3/19", image: 'boton3', titlePage: "Vida Sexual A", title: "EYACULACIÓN PRECOZ", text: "" },
-                    { linkName: "petalo-3/3/20", image: 'boton3', titlePage: "Vida Sexual A", title: "FETICHE", text: "" },
-                    { linkName: "petalo-3/3/21", image: 'boton3', titlePage: "Vida Sexual A", title: "FRIGIDEZ", text: "" },
-                    { linkName: "petalo-3/3/22", image: 'boton3', titlePage: "Vida Sexual A", title: "HOMOFOBIA", text: "" }
+                linkName: "petalo-3/3", image: 'boton3', title: "COMPORTAMIENTOS COTIDIANOS A", subPetalos: [
+                    { linkName: "petalo-3/3/1", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "ABUSO", text: "" },
+                    { linkName: "petalo-3/3/2", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "ANORGASMIA", text: "" },
+                    { linkName: "petalo-3/3/3", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "ASCO/ESCATOLOGÍA", text: "" },
+                    { linkName: "petalo-3/3/4", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "ASEXUAL", text: "" },
+                    { linkName: "petalo-3/3/5", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "BARRERA EMOCIONAL GENITAL", text: "" },
+                    { linkName: "petalo-3/3/6", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "BLOQUEO ENERGÉTICO GENITAL", text: "" },
+                    { linkName: "petalo-3/3/7", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "BLOQUEOS QUE IMPIDEN DISFRUTAR", text: "" },
+                    { linkName: "petalo-3/3/8", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "BLOQUEO AL DAR/RECIBIR", text: "" },
+                    { linkName: "petalo-3/3/9", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "COMPLEJOS-TRAUMAS", text: "" },
+                    { linkName: "petalo-3/3/10", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "COMPORTAMIENTO INFANTIL", text: "" },
+                    { linkName: "petalo-3/3/11", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "CONFLICTOS DE CREENCIAS SEXUALES", text: "" },
+                    { linkName: "petalo-3/3/12", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "CONFLICTOS MORALISTAS SEXUALES", text: "" },
+                    { linkName: "petalo-3/3/13", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "CONFLICTOS RELIGIOSOS SEXUALES", text: "" },
+                    { linkName: "petalo-3/3/14", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "CONVICCIÓN SOBRE TUS DESEOS", text: "" },
+                    { linkName: "petalo-3/3/15", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "CULPABILIDAD", text: "" },
+                    { linkName: "petalo-3/3/16", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "DESCONOCIMIENTO SOBRE TUS DESEOS", text: "" },
+                    { linkName: "petalo-3/3/17", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "ESCLAVITUD", text: "" },
+                    { linkName: "petalo-3/3/18", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "EXTRAMARITAL", text: "" },
+                    { linkName: "petalo-3/3/19", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "EYACULACIÓN PRECOZ", text: "" },
+                    { linkName: "petalo-3/3/20", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "FETICHE", text: "" },
+                    { linkName: "petalo-3/3/21", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "FRIGIDEZ", text: "" },
+                    { linkName: "petalo-3/3/22", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "HOMOFOBIA", text: "" }
                 ]
             },
             {
-                linkName: "petalo-3/4", image: 'boton3', title: "Vida Sexual B", subPetalos: [
-                    { linkName: "petalo-3/4/1", image: 'boton3', titlePage: "Vida Sexual B", title: "HORMONAS", text: "" },
-                    { linkName: "petalo-3/4/2", image: 'boton3', titlePage: "Vida Sexual B", title: "IMPOTENCIA", text: "" },
-                    { linkName: "petalo-3/4/3", image: 'boton3', titlePage: "Vida Sexual B", title: "INSEGURIDAD CORPORAL", text: "" },
-                    { linkName: "petalo-3/4/4", image: 'boton3', titlePage: "Vida Sexual B", title: "INSEGURIDADES CORPORALES QUE LIMITAN", text: "" },
-                    { linkName: "petalo-3/4/5", image: 'boton3', titlePage: "Vida Sexual B", title: "LEGADO TRANSGENERACIONAL (-)", text: "" },
-                    { linkName: "petalo-3/4/6", image: 'boton3', titlePage: "Vida Sexual B", title: "MASOQUISMO", text: "" },
-                    { linkName: "petalo-3/4/7", image: 'boton3', titlePage: "Vida Sexual B", title: "MIEDO A DESEAR", text: "" },
-                    { linkName: "petalo-3/4/8", image: 'boton3', titlePage: "Vida Sexual B", title: "MIEDO A FANTASEAR", text: "" },
-                    { linkName: "petalo-3/4/9", image: 'boton3', titlePage: "Vida Sexual B", title: "MIEDOS A REPETIR EVENTOS PASADOS", text: "" },
-                    { linkName: "petalo-3/4/10", image: 'boton3', titlePage: "Vida Sexual B", title: "NO PODER EXPRESARTE", text: "" },
-                    { linkName: "petalo-3/4/11", image: 'boton3', titlePage: "Vida Sexual B", title: "NO QUERER COMPARTIR CON LA PAREJA", text: "" },
-                    { linkName: "petalo-3/4/12", image: 'boton3', titlePage: "Vida Sexual B", title: "NO QUERER COMUNICAR TUS DESEOS A LA PAREJA", text: "" },
-                    { linkName: "petalo-3/4/13", image: 'boton3', titlePage: "Vida Sexual B", title: "NO QUERER EXPRESARSE SEXUALMENTE", text: "" },
-                    { linkName: "petalo-3/4/14", image: 'boton3', titlePage: "Vida Sexual B", title: "OBSESIVO", text: "" },
-                    { linkName: "petalo-3/4/15", image: 'boton3', titlePage: "Vida Sexual B", title: "RECHAZO AL DISFRUTE", text: "" },
-                    { linkName: "petalo-3/4/16", image: 'boton3', titlePage: "Vida Sexual B", title: "REPRIMIENDO A LA PAREJA", text: "" },
-                    { linkName: "petalo-3/4/17", image: 'boton3', titlePage: "Vida Sexual B", title: "REPRIMIÉNDOTE A TI MISMO/A", text: "" },
-                    { linkName: "petalo-3/4/18", image: 'boton3', titlePage: "Vida Sexual B", title: "SADISMO", text: "" },
-                    { linkName: "petalo-3/4/19", image: 'boton3', titlePage: "Vida Sexual B", title: "SENTIMIENTO DE CULPABILIDAD POR TUS DESEOS", text: "" },
-                    { linkName: "petalo-3/4/20", image: 'boton3', titlePage: "Vida Sexual B", title: "SEXO REPRIMIDO", text: "" },
-                    { linkName: "petalo-3/4/21", image: 'boton3', titlePage: "Vida Sexual B", title: "VERGÜENZA", text: "" },
-                    { linkName: "petalo-3/4/22", image: 'boton3', titlePage: "Vida Sexual B", title: "VIOLACIÓN", text: "" },
-                    { linkName: "petalo-3/4/23", image: 'boton3', titlePage: "Vida Sexual B", title: "VIOLENCIA", text: "" }
+                linkName: "petalo-3/4", image: 'boton3', title: "COMPORTAMIENTOS COTIDIANOS B", subPetalos: [
+                    { linkName: "petalo-3/4/1", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "HORMONAS", text: "" },
+                    { linkName: "petalo-3/4/2", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "IMPOTENCIA", text: "" },
+                    { linkName: "petalo-3/4/3", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "INSEGURIDAD CORPORAL", text: "" },
+                    { linkName: "petalo-3/4/4", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "INSEGURIDADES CORPORALES QUE LIMITAN", text: "" },
+                    { linkName: "petalo-3/4/5", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "LEGADO TRANSGENERACIONAL (-)", text: "" },
+                    { linkName: "petalo-3/4/6", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "MASOQUISMO", text: "" },
+                    { linkName: "petalo-3/4/7", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "MIEDO A DESEAR", text: "" },
+                    { linkName: "petalo-3/4/8", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "MIEDO A FANTASEAR", text: "" },
+                    { linkName: "petalo-3/4/9", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "MIEDOS A REPETIR EVENTOS PASADOS", text: "" },
+                    { linkName: "petalo-3/4/10", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "NO PODER EXPRESARTE", text: "" },
+                    { linkName: "petalo-3/4/11", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "NO QUERER COMPARTIR CON LA PAREJA", text: "" },
+                    { linkName: "petalo-3/4/12", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "NO QUERER COMUNICAR TUS DESEOS A LA PAREJA", text: "" },
+                    { linkName: "petalo-3/4/13", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "NO QUERER EXPRESARSE SEXUALMENTE", text: "" },
+                    { linkName: "petalo-3/4/14", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "OBSESIVO", text: "" },
+                    { linkName: "petalo-3/4/15", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "RECHAZO AL DISFRUTE", text: "" },
+                    { linkName: "petalo-3/4/16", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "REPRIMIENDO A LA PAREJA", text: "" },
+                    { linkName: "petalo-3/4/17", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "REPRIMIÉNDOTE A TI MISMO/A", text: "" },
+                    { linkName: "petalo-3/4/18", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "SADISMO", text: "" },
+                    { linkName: "petalo-3/4/19", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "SENTIMIENTO DE CULPABILIDAD POR TUS DESEOS", text: "" },
+                    { linkName: "petalo-3/4/20", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "SEXO REPRIMIDO", text: "" },
+                    { linkName: "petalo-3/4/21", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "VERGÜENZA", text: "" },
+                    { linkName: "petalo-3/4/22", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "VIOLACIÓN", text: "" },
+                    { linkName: "petalo-3/4/23", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "VIOLENCIA", text: "" },
+                    { linkName: "petalo-3/4/24", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "VIOLENCIA", text: "MIEDO A SER DESEADP" }
                 ]
             },
             {
-                linkName: "petalo-3/5", image: 'boton3', title: "Virtudes del Ser A", subPetalos: [
-                    { linkName: "petalo-3/5/1", image: 'boton3', titlePage: "Virtudes del Ser A", title: "ALEGRIA", text: "" },
-                    { linkName: "petalo-3/5/2", image: 'boton3', titlePage: "Virtudes del Ser A", title: "AMABILIDAD", text: "" },
-                    { linkName: "petalo-3/5/3", image: 'boton3', titlePage: "Virtudes del Ser A", title: "AMOR", text: "" },
-                    { linkName: "petalo-3/5/4", image: 'boton3', titlePage: "Virtudes del Ser A", title: "ARMONIA", text: "" },
-                    { linkName: "petalo-3/5/5", image: 'boton3', titlePage: "Virtudes del Ser A", title: "BONDAD", text: "" },
-                    { linkName: "petalo-3/5/6", image: 'boton3', titlePage: "Virtudes del Ser A", title: "CLARIDAD", text: "" },
-                    { linkName: "petalo-3/5/7", image: 'boton3', titlePage: "Virtudes del Ser A", title: "COMPASION", text: "" },
-                    { linkName: "petalo-3/5/8", image: 'boton3', titlePage: "Virtudes del Ser A", title: "COMPOSTURA", text: "" },
-                    { linkName: "petalo-3/5/9", image: 'boton3', titlePage: "Virtudes del Ser A", title: "COMPRENSION", text: "" },
-                    { linkName: "petalo-3/5/10", image: 'boton3', titlePage: "Virtudes del Ser A", title: "CONCIENCIA", text: "" },
-                    { linkName: "petalo-3/5/11", image: 'boton3', titlePage: "Virtudes del Ser A", title: "CONEXIÓN CON DIOS", text: "" },
-                    { linkName: "petalo-3/5/12", image: 'boton3', titlePage: "Virtudes del Ser A", title: "CONFIANZA", text: "" },
-                    { linkName: "petalo-3/5/13", image: 'boton3', titlePage: "Virtudes del Ser A", title: "CREATIVIDAD", text: "" },
-                    { linkName: "petalo-3/5/14", image: 'boton3', titlePage: "Virtudes del Ser A", title: "CURIOSIDAD", text: "" },
-                    { linkName: "petalo-3/5/15", image: 'boton3', titlePage: "Virtudes del Ser A", title: "DIRECCION", text: "" },
-                    { linkName: "petalo-3/5/16", image: 'boton3', titlePage: "Virtudes del Ser A", title: "DISCRECION", text: "" },
-                    { linkName: "petalo-3/5/17", image: 'boton3', titlePage: "Virtudes del Ser A", title: "EMPATIA", text: "" },
-                    { linkName: "petalo-3/5/18", image: 'boton3', titlePage: "Virtudes del Ser A", title: "ESPIRITUALIDAD", text: "" },
-                    { linkName: "petalo-3/5/19", image: 'boton3', titlePage: "Virtudes del Ser A", title: "FE", text: "" },
-                    { linkName: "petalo-3/5/20", image: 'boton3', titlePage: "Virtudes del Ser A", title: "GENEROSIDAD", text: "" },
-                    { linkName: "petalo-3/5/21", image: 'boton3', titlePage: "Virtudes del Ser A", title: "GRATITUD", text: "" },
-                    { linkName: "petalo-3/5/22", image: 'boton3', titlePage: "Virtudes del Ser A", title: "HUMILDAD", text: "" }
+                linkName: "petalo-3/5", image: 'boton3', title: "Cualidades del Ser A", subPetalos: [
+                    { linkName: "petalo-3/5/1", image: 'boton3', titlePage: "Cualidades del Ser A", title: "ALEGRIA", text: "" },
+                    { linkName: "petalo-3/5/2", image: 'boton3', titlePage: "Cualidades del Ser A", title: "AMABILIDAD", text: "" },
+                    { linkName: "petalo-3/5/3", image: 'boton3', titlePage: "Cualidades del Ser A", title: "AMOR", text: "" },
+                    { linkName: "petalo-3/5/4", image: 'boton3', titlePage: "Cualidades del Ser A", title: "ARMONIA", text: "" },
+                    { linkName: "petalo-3/5/5", image: 'boton3', titlePage: "Cualidades del Ser A", title: "BONDAD", text: "" },
+                    { linkName: "petalo-3/5/6", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CLARIDAD", text: "" },
+                    { linkName: "petalo-3/5/7", image: 'boton3', titlePage: "Cualidades del Ser A", title: "COMPASION", text: "" },
+                    { linkName: "petalo-3/5/8", image: 'boton3', titlePage: "Cualidades del Ser A", title: "COMPOSTURA", text: "" },
+                    { linkName: "petalo-3/5/9", image: 'boton3', titlePage: "Cualidades del Ser A", title: "COMPRENSION", text: "" },
+                    { linkName: "petalo-3/5/10", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CONCIENCIA", text: "" },
+                    { linkName: "petalo-3/5/11", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CONEXIÓN CON DIOS", text: "" },
+                    { linkName: "petalo-3/5/12", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CONFIANZA", text: "" },
+                    { linkName: "petalo-3/5/13", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CREATIVIDAD", text: "" },
+                    { linkName: "petalo-3/5/14", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CURIOSIDAD", text: "" },
+                    { linkName: "petalo-3/5/15", image: 'boton3', titlePage: "Cualidades del Ser A", title: "DIRECCION", text: "" },
+                    { linkName: "petalo-3/5/16", image: 'boton3', titlePage: "Cualidades del Ser A", title: "DISCRECION", text: "" },
+                    { linkName: "petalo-3/5/17", image: 'boton3', titlePage: "Cualidades del Ser A", title: "EMPATIA", text: "" },
+                    { linkName: "petalo-3/5/18", image: 'boton3', titlePage: "Cualidades del Ser A", title: "ESPIRITUALIDAD", text: "" },
+                    { linkName: "petalo-3/5/19", image: 'boton3', titlePage: "Cualidades del Ser A", title: "FE", text: "" },
+                    { linkName: "petalo-3/5/20", image: 'boton3', titlePage: "Cualidades del Ser A", title: "GENEROSIDAD", text: "" },
+                    { linkName: "petalo-3/5/21", image: 'boton3', titlePage: "Cualidades del Ser A", title: "GRATITUD", text: "" },
+                    { linkName: "petalo-3/5/22", image: 'boton3', titlePage: "Cualidades del Ser A", title: "HUMILDAD", text: "" }
                 ]
             },
             {
-                linkName: "petalo-3/6", image: 'boton3', title: "Virtudes del Ser B", subPetalos: [
-                    { linkName: "petalo-3/6/1", image: 'boton3', titlePage: "Virtudes del Ser B", title: "INOCENCIA", text: "" },
-                    { linkName: "petalo-3/6/2", image: 'boton3', titlePage: "Virtudes del Ser B", title: "LEALTAD", text: "" },
-                    { linkName: "petalo-3/6/3", image: 'boton3', titlePage: "Virtudes del Ser B", title: "LIBERTAD", text: "" },
-                    { linkName: "petalo-3/6/4", image: 'boton3', titlePage: "Virtudes del Ser B", title: "OPTIMISMO", text: "" },
-                    { linkName: "petalo-3/6/5", image: 'boton3', titlePage: "Virtudes del Ser B", title: "PACIENCIA", text: "" },
-                    { linkName: "petalo-3/6/6", image: 'boton3', titlePage: "Virtudes del Ser B", title: "PAZ", text: "" },
-                    { linkName: "petalo-3/6/7", image: 'boton3', titlePage: "Virtudes del Ser B", title: "PERCEPCION", text: "" },
-                    { linkName: "petalo-3/6/8", image: 'boton3', titlePage: "Virtudes del Ser B", title: "PERDON", text: "" },
-                    { linkName: "petalo-3/6/9", image: 'boton3', titlePage: "Virtudes del Ser B", title: "PERSEVERANCIA", text: "" },
-                    { linkName: "petalo-3/6/10", image: 'boton3', titlePage: "Virtudes del Ser B", title: "PROPOSITO", text: "" },
-                    { linkName: "petalo-3/6/11", image: 'boton3', titlePage: "Virtudes del Ser B", title: "RESILIENCIA", text: "" },
-                    { linkName: "petalo-3/6/12", image: 'boton3', titlePage: "Virtudes del Ser B", title: "SABIDURIA", text: "" },
-                    { linkName: "petalo-3/6/13", image: 'boton3', titlePage: "Virtudes del Ser B", title: "SERENIDAD", text: "" },
-                    { linkName: "petalo-3/6/14", image: 'boton3', titlePage: "Virtudes del Ser B", title: "SINCERIDAD", text: "" },
-                    { linkName: "petalo-3/6/15", image: 'boton3', titlePage: "Virtudes del Ser B", title: "SOLIDARIDAD", text: "" },
-                    { linkName: "petalo-3/6/16", image: 'boton3', titlePage: "Virtudes del Ser B", title: "TOLERANCIA", text: "" },
-                    { linkName: "petalo-3/6/17", image: 'boton3', titlePage: "Virtudes del Ser B", title: "TRANSPARENCIA", text: "" },
-                    { linkName: "petalo-3/6/18", image: 'boton3', titlePage: "Virtudes del Ser B", title: "UNIDAD", text: "" },
-                    { linkName: "petalo-3/6/19", image: 'boton3', titlePage: "Virtudes del Ser B", title: "VALENTIA", text: "" },
-                    { linkName: "petalo-3/6/20", image: 'boton3', titlePage: "Virtudes del Ser B", title: "VOLUNTAD", text: "" }
+                linkName: "petalo-3/6", image: 'boton3', title: "Cualidades del Ser B", subPetalos: [
+                    { linkName: "petalo-3/6/1", image: 'boton3', titlePage: "Cualidades del Ser B", title: "INOCENCIA", text: "" },
+                    { linkName: "petalo-3/6/2", image: 'boton3', titlePage: "Cualidades del Ser B", title: "LEALTAD", text: "" },
+                    { linkName: "petalo-3/6/3", image: 'boton3', titlePage: "Cualidades del Ser B", title: "LIBERTAD", text: "" },
+                    { linkName: "petalo-3/6/4", image: 'boton3', titlePage: "Cualidades del Ser B", title: "OPTIMISMO", text: "" },
+                    { linkName: "petalo-3/6/5", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PACIENCIA", text: "" },
+                    { linkName: "petalo-3/6/6", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PAZ", text: "" },
+                    { linkName: "petalo-3/6/7", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PERCEPCION", text: "" },
+                    { linkName: "petalo-3/6/8", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PERDON", text: "" },
+                    { linkName: "petalo-3/6/9", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PERSEVERANCIA", text: "" },
+                    { linkName: "petalo-3/6/10", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PROPOSITO", text: "" },
+                    { linkName: "petalo-3/6/11", image: 'boton3', titlePage: "Cualidades del Ser B", title: "RESILIENCIA", text: "" },
+                    { linkName: "petalo-3/6/12", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SABIDURIA", text: "" },
+                    { linkName: "petalo-3/6/13", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SERENIDAD", text: "" },
+                    { linkName: "petalo-3/6/14", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SINCERIDAD", text: "" },
+                    { linkName: "petalo-3/6/15", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SOLIDARIDAD", text: "" },
+                    { linkName: "petalo-3/6/16", image: 'boton3', titlePage: "Cualidades del Ser B", title: "TOLERANCIA", text: "" },
+                    { linkName: "petalo-3/6/17", image: 'boton3', titlePage: "Cualidades del Ser B", title: "TRANSPARENCIA", text: "" },
+                    { linkName: "petalo-3/6/18", image: 'boton3', titlePage: "Cualidades del Ser B", title: "UNIDAD", text: "" },
+                    { linkName: "petalo-3/6/19", image: 'boton3', titlePage: "Cualidades del Ser B", title: "VALENTIA", text: "" },
+                    { linkName: "petalo-3/6/20", image: 'boton3', titlePage: "Cualidades del Ser B", title: "VOLUNTAD", text: "" }
                 ]
             },
             {
@@ -1068,7 +1065,7 @@ const petalos = [
             {
                 linkName: "petalo-3/9", image: 'boton3', title: "Conducta Mental Negativa B", subPetalos: [
                     { linkName: "petalo-3/9/1", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "FRACASADO", text: "" },
-                    { linkName: "petalo-3/9/1", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "FRUSTRADO", text: "" },
+                    { linkName: "petalo-3/9/2", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "FRUSTRADO", text: "" },
                     { linkName: "petalo-3/9/3", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "HERIDO", text: "" },
                     { linkName: "petalo-3/9/4", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "HUMILLADO", text: "" },
                     { linkName: "petalo-3/9/5", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "IGNORADO", text: "" },
@@ -1156,7 +1153,7 @@ const petalos = [
                             },
                             {
                                 linkName: "petalo-3/10/2/3", image: 'boton3', titlePage: '¿Que me Bloquea?', title: "B 3",
-                                text: "EXTO"
+                                text: "EXITO"
                             },
                             {
                                 linkName: "petalo-3/10/2/4", image: 'boton3', titlePage: '¿Que me Bloquea?', title: "B 4",
@@ -1208,7 +1205,7 @@ const petalos = [
                             },
                             {
                                 linkName: "petalo-3/10/3/4", image: 'boton3', titlePage: '¿Que me Bloquea?', title: "C 4",
-                                text: "MAL ALIMENTACION"
+                                text: "MALA ALIMENTACION"
                             },
                             {
                                 linkName: "petalo-3/10/3/5", image: 'boton3', titlePage: '¿Que me Bloquea?', title: "C 5",
@@ -1430,7 +1427,7 @@ const petalos = [
                                 text: "No valgo como padre/madre.  " +
                                     "No soy capaz de decir mi opinión frente a un grupo de personas.  " +
                                     "No soy capaz de corregir mis errores y pedir disculpas.  " +
-                                    "El dinero es difícil de ganar y fácil de perd"
+                                    "El dinero es difícil de ganar y fácil de perder"
                             },
                         ]
                     },

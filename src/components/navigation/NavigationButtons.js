@@ -19,7 +19,7 @@ export const NavigationButtonsInLine = () => <>
     </ContainerInLine>
     <GuiaButton onClick={()=>navigate('/circulo-base')}>
         <ResponsiveText scale={0.6} bold color={"#413f3f"}>
-            FUENTE GUIA
+            FUENTE MADRE
         </ResponsiveText>
     </GuiaButton>
 </>

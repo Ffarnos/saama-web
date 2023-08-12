@@ -24,7 +24,7 @@ const PetalosTemplate = ({ pageContext }) => {
                     {title}
                 </Title>
                 <ResponsiveText scale={0.6} color={"#fdf8f8"}>
-                    Pétalos {subPetalos.length}
+                    Opciones {subPetalos.length}
                 </ResponsiveText>
                 {input !== 0 && <TextField
                     id="standar-basic"
@@ -39,7 +39,7 @@ const PetalosTemplate = ({ pageContext }) => {
                 </Alert>
             </ContainerAlert>}
             <Buttons
-                bigButtonTitle={"FUENTE GUÍA"}
+                bigButtonTitle={"FUENTE MADRE"}
                 circuloBase={noNumber}
                 petalos={subPetalos}
                 noNumber={noNumber}
