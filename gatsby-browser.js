@@ -1,4 +1,4 @@
-const { ConfigureInstall } = require('./src/components/UseInstall')
+const {ConfigureInstall} = require("./src/components/UseInstall");
 
 exports.onClientEntry = () => {
   ConfigureInstall()
