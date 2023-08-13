@@ -9,7 +9,7 @@ import {FinishButtonResponsive} from "../navigation/FinishButton";
 const createdPages = require('../../../../createdPages.json');
 
 const PetalosTemplate = ({ pageContext }) => {
-    const {linkName, title, image, subPetalos, noNumber} = pageContext
+    const {linkName, title, image, subPetalos, noNumber, titlePage} = pageContext
     const [showAlert, setShowAlert] = useState(false);
     const [input, setInput] = useState(0);
     const imagePath = "/images/" + image + ".webp";
@@ -20,9 +20,13 @@ const PetalosTemplate = ({ pageContext }) => {
     return <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Container>
             <NoCircleContainer>
+                <Title scale={1} color={"#fdf8f8"}>
+                    {titlePage}
+                </Title>
                 <Title scale={0.8} color={"#fdf8f8"}>
                     {title}
                 </Title>
+                <ContainerHorizontal>
                 <ResponsiveText scale={0.6} color={"#fdf8f8"}>
                     Opciones {subPetalos.length}
                 </ResponsiveText>
@@ -32,6 +36,7 @@ const PetalosTemplate = ({ pageContext }) => {
                     onChange={handleChange}
                     variant="standard"
                 />}
+                </ContainerHorizontal>
             </NoCircleContainer>
             {showAlert && <ContainerAlert>
                 <Alert severity="error">
@@ -65,6 +70,11 @@ const PetalosTemplate = ({ pageContext }) => {
     </Background>;
 }
 
+const ContainerHorizontal = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+`;
 
 const NoCircleContainer = styled.div`
     display: flex;
@@ -82,7 +92,6 @@ const ContainerAlert = styled.div`
 
 
 const Title = styled(ResponsiveText)`
-  letter-spacing: 15px;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
 `;
 

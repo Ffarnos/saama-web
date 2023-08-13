@@ -9,7 +9,7 @@ const FinishButton = () => <Finish onClick={()=>navigate('/')} style={{marginBot
     </ResponsiveText>
 </Finish>
 
-export const FinishButtonResponsive = () => <FinishResponsive onClick={()=>navigate('/')}>
+export const FinishButtonResponsive = () => <FinishResponsive onClick={()=>navigate('/intro-text/')}>
         <ResponsiveText scale={0.5} bold color={"#413f3f"}>
             FIN
         </ResponsiveText>

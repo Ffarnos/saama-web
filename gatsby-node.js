@@ -9,7 +9,7 @@ exports.createPages = async ({ actions }) => {
         petalos.forEach((petalo) => {
             const pagePath = `circulo-base/${petalo.linkName}`
             if (petalo.subPetalos) {
-                let context = {linkName: petalo.linkName, title: petalo.title, image: petalo.image, subPetalos: petalo.subPetalos, noNumber: petalo.noNumbers}
+                let context = {linkName: petalo.linkName, title: petalo.title, image: petalo.image, subPetalos: petalo.subPetalos, noNumber: petalo.noNumbers, titlePage: petalo.titlePage,}
                 createPage({
                     path: pagePath, // Define la ruta de la página
                     component: require.resolve('./src/components/templates/PetalosTemplate.js'), // Especifica la plantilla a utilizar

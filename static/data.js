@@ -1968,33 +1968,33 @@ const petalos = [
                     ],
             },
             {linkName: "petalo-4/3", image: 'boton4', title: "SISTEMAS DEL CUERPO HUMANO",  subPetalos: [
-                    {linkName: "petalo-4/3/1", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Circulatorio", subPetalos: [
+                    {linkName: "petalo-4/3/1", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Sistema Circulatorio", subPetalos: [
                             {linkName: "petalo-4/3/1/1", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Corazon", subPetalos: [
-                                    {linkName: "petalo-4/3/1/1/1", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Aurículas"},
-                                    {linkName: "petalo-4/3/1/1/2", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Ventrículos"},
-                                    {linkName: "petalo-4/3/1/1/3", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Cepto"},
-                                    {linkName: "petalo-4/3/1/1/4", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Válvulas cardias"},
-                                    {linkName: "petalo-4/3/1/1/5", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Miocardio"},
-                                    {linkName: "petalo-4/3/1/1/6", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Pericardio"}
+                                    {linkName: "petalo-4/3/1/1/1", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Corazon",text: "Aurículas"},
+                                    {linkName: "petalo-4/3/1/1/2", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Corazon",text: "Ventrículos"},
+                                    {linkName: "petalo-4/3/1/1/3", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Corazon",text: "Cepto"},
+                                    {linkName: "petalo-4/3/1/1/4", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Corazon",text: "Válvulas cardias"},
+                                    {linkName: "petalo-4/3/1/1/5", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Corazon",text: "Miocardio"},
+                                    {linkName: "petalo-4/3/1/1/6", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Corazon",text: "Pericardio"}
                                 ]
                             },
                             {linkName: "petalo-4/3/1/2", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Sangre", subPetalos: [
-                                    {linkName: "petalo-4/3/1/1/1", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Plasma"},
-                                    {linkName: "petalo-4/3/1/1/2", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Glóbulos blancos"},
-                                    {linkName: "petalo-4/3/1/1/3", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Glóbulos rojos"},
-                                    {linkName: "petalo-4/3/1/1/4", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Plaqueta"},
+                                    {linkName: "petalo-4/3/1/2/1", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Sangre", text:"Plasma"},
+                                    {linkName: "petalo-4/3/1/2/2", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Sangre",text: "Glóbulos blancos"},
+                                    {linkName: "petalo-4/3/1/2/3", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Sangre",text: "Glóbulos rojos"},
+                                    {linkName: "petalo-4/3/1/2/4", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Sangre", text: "Plaqueta"},
                                 ]
                             },
                             {linkName: "petalo-4/3/1/3", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Arterias"},
                             {linkName: "petalo-4/3/1/4", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Venas"},
                             {linkName: "petalo-4/3/1/5", image: 'boton4', titlePage: "SISTEMA CIRCULATORIO", title: "Capilares"},
                     ]},
-                    {linkName: "petalo-4/3/2", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Digestivo", subPetalos: [
+                    {linkName: "petalo-4/3/2", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Sistema Digestivo", subPetalos: [
                             {linkName: "petalo-4/3/2/1", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Dientes", subPetalos: [
-                                    {linkName: "petalo-4/3/2/1/1", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "incisivos der/izq"},
-                                    {linkName: "petalo-4/3/2/1/2", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "caninos der/izq"},
-                                    {linkName: "petalo-4/3/2/1/3", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "premolares der/izq"},
-                                    {linkName: "petalo-4/3/2/1/4", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "molares der/izq"},
+                                    {linkName: "petalo-4/3/2/1/1", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Dientes", text: "incisivos der/izq"},
+                                    {linkName: "petalo-4/3/2/1/2", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Dientes", text: "caninos der/izq"},
+                                    {linkName: "petalo-4/3/2/1/3", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Dientes", text: "premolares der/izq"},
+                                    {linkName: "petalo-4/3/2/1/4", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Dientes", text: "molares der/izq"},
                                 ]
                             },
                             {linkName: "petalo-4/3/2/2", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Lengua"},
@@ -2012,7 +2012,7 @@ const petalos = [
 
                         ]
                     },
-                    {linkName: "petalo-4/3/3", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Endocrino", subPetalos: [
+                    {linkName: "petalo-4/3/3", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Sistema Endocrino", subPetalos: [
                             { linkName: "petalo-4/3/3/1", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Hipotálamo" },
                             { linkName: "petalo-4/3/3/2", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Pineal" },
                             { linkName: "petalo-4/3/3/3", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Pituitaria" },
@@ -2029,25 +2029,25 @@ const petalos = [
                             { linkName: "petalo-4/3/3/14", image: 'boton4', titlePage: "SISTEMA ENDOCRINO", title: "Útero" }
                         ]
                     },
-                    {linkName: "petalo-4/3/4", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Óseo", subPetalos: [
+                    {linkName: "petalo-4/3/4", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Sistema Óseo", subPetalos: [
                             {linkName: "petalo-4/3/4/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Craneo", subPetalos: [
-                                    {linkName: "petalo-4/3/4/1/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hueso frontal"},
-                                    {linkName: "petalo-4/3/4/1/2", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hueso parietal"},
-                                    {linkName: "petalo-4/3/4/1/3", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hueso occipital"},
-                                    {linkName: "petalo-4/3/4/1/4", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos temporales"},
-                                    {linkName: "petalo-4/3/4/1/5", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hueso esfenoides"},
-                                    {linkName: "petalo-4/3/4/1/6", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hueso etmoides"},
+                                    {linkName: "petalo-4/3/4/1/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Craneo",text: "Hueso frontal"},
+                                    {linkName: "petalo-4/3/4/1/2", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Craneo",text: "Hueso parietal"},
+                                    {linkName: "petalo-4/3/4/1/3", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Craneo",text: "Hueso occipital"},
+                                    {linkName: "petalo-4/3/4/1/4", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Craneo",text: "Huesos temporales"},
+                                    {linkName: "petalo-4/3/4/1/5", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Craneo",text: "Hueso esfenoides"},
+                                    {linkName: "petalo-4/3/4/1/6", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Craneo",text: "Hueso etmoides"},
                                 ]
                             },
                             {linkName: "petalo-4/3/4/2", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Cara", subPetalos: [
-                                    {linkName: "petalo-4/3/4/2/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Maxilar superior"},
-                                    {linkName: "petalo-4/3/4/2/2", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Maxilar inferior (mandíbula)"},
-                                    {linkName: "petalo-4/3/4/2/3", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos cigomáticos (pomulos)"},
-                                    {linkName: "petalo-4/3/4/2/4", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos nasales"},
-                                    {linkName: "petalo-4/3/4/2/5", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos lacrimales"},
-                                    {linkName: "petalo-4/3/4/2/6", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos palatinos"},
-                                    {linkName: "petalo-4/3/4/2/7", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Huesos carnetes nasales inferiores"},
-                                    {linkName: "petalo-4/3/4/2/8", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Vomer"},
+                                    {linkName: "petalo-4/3/4/2/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Cara", text: "Maxilar superior"},
+                                    {linkName: "petalo-4/3/4/2/2", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Cara", text: "Maxilar inferior (mandíbula)"},
+                                    {linkName: "petalo-4/3/4/2/3", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Cara", text: "Huesos cigomáticos (pomulos)"},
+                                    {linkName: "petalo-4/3/4/2/4", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Cara", text: "Huesos nasales"},
+                                    {linkName: "petalo-4/3/4/2/5", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Cara", text: "Huesos lacrimales"},
+                                    {linkName: "petalo-4/3/4/2/6", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Cara", text: "Huesos palatinos"},
+                                    {linkName: "petalo-4/3/4/2/7", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Cara", text: "Huesos carnetes nasales inferiores"},
+                                    {linkName: "petalo-4/3/4/2/8", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Cara", text: "Vomer"},
                                 ]
                             },
                             {
@@ -2065,49 +2065,49 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/1/1",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "C1",
                                                 text: "(Lengua, cabeza, cerebro, oído interno y medio, pituitaria, pineal, sistema nervioso simpático): Relacionada con la depresión."
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/2",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "C2",
                                                 text: "(Ojos, senos nasales y paranasales, frente, lengua, nervios óptico y auditivo)."
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/3",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "C3",
                                                 text: "(Mejilla, cara, huesos faciales, dientes, oído exterior, laringe y vesícula biliar)"
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/4",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "C4",
                                                 text: "(Nariz, boca y trompas de Eustaquio)"
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/5",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "C5",
                                                 text: "(Faringe, cuerdas vocales, glándulas salivales, amígdalas)"
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/6",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "C6",
                                                 text: "(Amígdalas, músculos del cuello y hombros)"
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/7",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "C7",
                                                 text: "(Tiroides, paratiroides, codo y hombros)"
                                             },
@@ -2122,7 +2122,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/1",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: "SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T1",
                                                 text: "(Riñón, función ósea, esófago, tráquea, dedos, manos, antebrazo): Conflictos de memoria renal, miedo y existencia profunda. Conflictos respecto al orden no respetado de las cosas. A la derecha: Rabia o enojo por carencias afectivas en relación a los allegados. A la izquierda: Rabia y enojo en relación con el exterior."
                                             },
@@ -2130,7 +2130,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/2",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: "SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T2",
                                                 text: "(Arterias coronarias, corazón y válvulas cardíacas): Conflictos de territorio. Representan la circulación en la comunicación. Conflictos de supervivencia en relación al hogar. Conflictos con el padre. Es una señal de alarma para las desvalorizaciones. A la derecha: Carencias afectivas en relación al padre. A la izquierda: En relación al padre simbólico."
                                             },
@@ -2138,7 +2138,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/3",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: "SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T3",
                                                 text: "(Pulmón, pleuras, mamas, vejiga y costillas): Conflicto con la madre real o simbólica. A la derecha: Carencias afectivas en relación a la madre. A la izquierda: Rabia y cólera en relación a la madre."
                                             },
@@ -2146,7 +2146,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/4",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: " SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T4",
                                                 text: "(Vesícula biliar): Conflictos de rencor. No querer dar nuestro brazo a torcer. A la derecha: Rencor por carencias afectivas. A la izquierda: Cólera."
                                             },
@@ -2154,7 +2154,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/5",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: " SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T5",
                                                 text: "(Hígado, plexo solar y sangre): Conflicto de falta o carencia (hígado), conflicto de padre (plexo). Problemas digestivos crónicos. “No estoy integrado en el clan”."
                                             },
@@ -2162,7 +2162,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/6",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: " SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T6",
                                                 text: "(Estómago): Conflictos con la primera infancia. Conflicto de contrariedad reciente en el territorio con desvalorización. Conflictos recientes de estómago. A la derecha: Carencias afectivas. A la izquierda: Cólera."
                                             },
@@ -2170,7 +2170,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/7",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: " SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T7",
                                                 text: "(Páncreas, endocrino, diabetes y duodeno): Conflictos de infamia y deshonor. A la derecha: Culpabilidad o búsqueda de afecto. A la izquierda: Cólera en relación con el exterior."
                                             },
@@ -2178,7 +2178,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/8",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: " SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T8",
                                                 text: "(Bazo, sangre y diafragma): Conflictos de comunicación en la familia. Y con los hijos. También problemas de hemorragias."
                                             },
@@ -2186,7 +2186,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/9",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: " SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T9",
                                                 text: "(Suprarrenales): Conflictos de dirección. “¿Qué camino debo tomar en la vida?”. A la derecha: Desvalorización y culpabilidad. A la izquierda: Cólera."
                                             },
@@ -2194,7 +2194,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/10",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: " SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T10",
                                                 text: "(Túbulos colectores, riñones y suprarrenales): Se trata de una vértebra muy importante. Conflictos de dirección y de elección. Conflictos de desmoronamiento del territorio. Estar sin territorio."
                                             },
@@ -2202,7 +2202,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/11",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: " SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T11",
                                                 text: "(Ureter, uretra, vejiga): Conflictos de marcaje de territorio con desvalorización. Conflictos de evacuación (me evacuan). Dificultades para definir lo que es mío."
                                             },
@@ -2210,7 +2210,7 @@ const petalos = [
                                             {
                                                 linkName: "petalo-4/3/4/3/2/12",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
+                                                titlePage: " SISTEMA OSEO - Vertebras torácicas",
                                                 title: "T12",
                                                 text: "(Pubis, intestino delgado, sistema linfático, trompas de Falopio): Conflictos sexuales sucios. Conflictos de cónyuge. A la derecha: Culpabilidad. A la izquierda: Cólera."
                                             }
@@ -2222,93 +2222,60 @@ const petalos = [
                                         titlePage: "SISTEMA OSEO",
                                         title: "Vertebras lumbares",
                                         subPetalos: [
-                                            // L1
-                                            {
-                                                linkName: "petalo-4/3/4/3/3/1",
-                                                image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
-                                                title: "L1",
-                                                text: "(Tubo digestivo, colon): Conflictos de “guarradas”. Noción de intercambio y de circulación. Miedo a que nos traicionen."
-                                            },
-                                            // L2
-                                            {
-                                                linkName: "petalo-4/3/4/3/3/2",
-                                                image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
-                                                title: "L2",
-                                                text: "(Apéndice, abdomen, ciego, tubo digestivo): Conflictos de “guarradas”. Conflictos con tener que dejar las cosas. Conflictos de desvalorización por saturación (algo que he tenido que aguantar por mucho tiempo). A la derecha: En relación a la familia. A la izquierda: En relación al trabajo."
-                                            },
-                                            // L3
-                                            {
-                                                linkName: "petalo-4/3/4/3/3/3",
-                                                image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
-                                                title: "L3",
-                                                text: "(Órganos sexuales, vejiga, rodilla, útero y la próstata): Conflictos relacionados con la sexualidad. Conflictos de marcado de territorio con desvalorización. Gran desvalorización por haber quedado embarazada fuera de la norma. Conflictos de culpa y odio a sí mismo por violencia sexual."
-                                            },
-                                            // L4
-                                            {
-                                                linkName: "petalo-4/3/4/3/3/4",
-                                                image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
-                                                title: "L4",
-                                                text: "(Las normas, las reglas, la próstata, el cuerpo uterino, el nervio ciático y los músculos lumbares, sacros y de la cadera): 'No soy como los demás'. 'No pienso como todo el mundo'. Conflictos por parejas mal combinadas. A la derecha: Conflictos de no respetar las normas en la familia. A la izquierda: No respetar las normas en relación a lo externo, al trabajo."
-                                            },
-                                            // L5
-                                            {
-                                                linkName: "petalo-4/3/4/3/3/5",
-                                                image: 'boton4',
-                                                titlePage: "SISTEMA OSEO",
-                                                title: "L5",
-                                                text: "(Piernas, tobillos y pies. Colon): Conflicto de algo sucio. Conflictos con los colaterales. El 20% de los casos es un conflicto con mi vida: '¿Qué voy a hacer con mi vida?', '¿Qué dirección quiero tomar en mi vida?'. El 80% es una acción equivocada en mi vida (aparece dolor en la pierna izquierda). Conflicto de 'No decir mi fantasía sexual por miedo a ser juzgado anormal'. A la derecha: Culpabilidad con los allegados. A la izquierda: Cólera con los allegados."
-                                            }
+                                            {linkName: "petalo-4/3/4/3/3/1", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "L1", text: "(Tubo digestivo, colon): Conflictos de “guarradas”. Noción de intercambio y de circulación. Miedo a que nos traicionen."},
+                                            {linkName: "petalo-4/3/4/3/3/2", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "L2", text: "(Apéndice, abdomen, ciego, tubo digestivo): Conflictos de “guarradas”. Conflictos con tener que dejar las cosas. Conflictos de desvalorización por saturación (algo que he tenido que aguantar por mucho tiempo). A la derecha: En relación a la familia. A la izquierda: En relación al trabajo."},
+                                            {linkName: "petalo-4/3/4/3/3/3", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "L3", text: "(Órganos sexuales, vejiga, rodilla, útero y la próstata): Conflictos relacionados con la sexualidad. Conflictos de marcado de territorio con desvalorización. Gran desvalorización por haber quedado embarazada fuera de la norma. Conflictos de culpa y odio a sí mismo por violencia sexual."},
+                                            {linkName: "petalo-4/3/4/3/3/4", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "L4", text: "(Las normas, las reglas, la próstata, el cuerpo uterino, el nervio ciático y los músculos lumbares, sacros y de la cadera): 'No soy como los demás'. 'No pienso como todo el mundo'. Conflictos por parejas mal combinadas. A la derecha: Conflictos de no respetar las normas en la familia. A la izquierda: No respetar las normas en relación a lo externo, al trabajo."},
+                                            {linkName: "petalo-4/3/4/3/3/5", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "L5", text: "(Piernas, tobillos y pies. Colon): Conflicto de algo sucio. Conflictos con los colaterales. El 20% de los casos es un conflicto con mi vida: '¿Qué voy a hacer con mi vida?', '¿Qué dirección quiero tomar en mi vida?'. El 80% es una acción equivocada en mi vida (aparece dolor en la pierna izquierda). Conflicto de 'No decir mi fantasía sexual por miedo a ser juzgado anormal'. A la derecha: Culpabilidad con los allegados. A la izquierda: Cólera con los allegados."}
                                         ]
-                                    }
+                                    },
+                                    {linkName: "petalo-4/3/4/3/4", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Sacro"},
+                                    {linkName: "petalo-4/3/4/3/5", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Coxis"}
                                 ]
                             },
 
                                     {linkName: "petalo-4/3/4/4", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Caja torácica", subPetalos: [
-                                            {linkName: "petalo-4/3/4/4/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Esternon"},
-                                            {linkName: "petalo-4/3/4/4/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Costillas"},
+                                            {linkName: "petalo-4/3/4/4/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Caja torácica",text: "Esternon"},
+                                            {linkName: "petalo-4/3/4/4/1", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Caja torácica",text: "Costillas"},
                                         ]
                                     },
                                     {linkName: "petalo-4/3/4/5", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Hombro y Brazo", subPetalos: [
-                                            {linkName: "petalo-4/3/4/5/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Clavicula",},
-                                            {linkName: "petalo-4/3/4/5/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Escapula",},
-                                            {linkName: "petalo-4/3/4/5/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Humero",},
-                                            {linkName: "petalo-4/3/4/5/4", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Cubito",},
-                                            {linkName: "petalo-4/3/4/5/5", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Radio",},
+                                            {linkName: "petalo-4/3/4/5/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hombro y Brazo",text: "Clavicula",},
+                                            {linkName: "petalo-4/3/4/5/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hombro y Brazo",text: "Escapula",},
+                                            {linkName: "petalo-4/3/4/5/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hombro y Brazo",text: "Humero",},
+                                            {linkName: "petalo-4/3/4/5/4", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hombro y Brazo",text: "Cubito",},
+                                            {linkName: "petalo-4/3/4/5/5", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hombro y Brazo",text: "Radio",},
                                         ]
                                     },
                                     {linkName: "petalo-4/3/4/6", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Mano y Muñeca", subPetalos: [
-                                            {linkName: "petalo-4/3/4/6/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hueso del carpo",},
-                                            {linkName: "petalo-4/3/4/6/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hueso metacarpiano",},
-                                            {linkName: "petalo-4/3/4/6/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Falange de los dedos",},
+                                            {linkName: "petalo-4/3/4/6/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Mano y Muñeca", text: "Hueso del carpo",},
+                                            {linkName: "petalo-4/3/4/6/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Mano y Muñeca", text: "Hueso metacarpiano",},
+                                            {linkName: "petalo-4/3/4/6/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Mano y Muñeca", text: "Falange de los dedos",},
                                         ]
                                     },
                                     {linkName: "petalo-4/3/4/7", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Pelvis", subPetalos: [
-                                            {linkName: "petalo-4/3/4/7/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hueso Iliaco",},
-                                            {linkName: "petalo-4/3/4/7/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hueso sacro",},
-                                            {linkName: "petalo-4/3/4/7/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Hueso coxis",},
+                                            {linkName: "petalo-4/3/4/7/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Pelvis", text: "Hueso Iliaco",},
+                                            {linkName: "petalo-4/3/4/7/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Pelvis", text: "Hueso sacro",},
+                                            {linkName: "petalo-4/3/4/7/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Pelvis", text: "Hueso coxis",},
                                         ]
                                     },
                                     {linkName: "petalo-4/3/4/8", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Muslo y Pierna", subPetalos: [
-                                            {linkName: "petalo-4/3/4/8/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Femur",},
-                                            {linkName: "petalo-4/3/4/8/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Rotula",},
-                                            {linkName: "petalo-4/3/4/8/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Tibia",},
-                                            {linkName: "petalo-4/3/4/8/4", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Perone",},
+                                            {linkName: "petalo-4/3/4/8/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Muslo y Pierna",text: "Femur",},
+                                            {linkName: "petalo-4/3/4/8/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Muslo y Pierna",text: "Rotula",},
+                                            {linkName: "petalo-4/3/4/8/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Muslo y Pierna",text: "Tibia",},
+                                            {linkName: "petalo-4/3/4/8/4", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Muslo y Pierna",text: "Perone",},
                                         ]
                                     },
                                     {linkName: "petalo-4/3/4/9", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Pie y Tobillo", subPetalos: [
-                                            {linkName: "petalo-4/3/4/9/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Huesos del tarso",},
-                                            {linkName: "petalo-4/3/4/9/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Huesos del metatarso",},
-                                            {linkName: "petalo-4/3/4/9/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Falanges de los dedos del pie",},
+                                            {linkName: "petalo-4/3/4/9/1", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Pie y Tobillo",text: "Huesos del tarso",},
+                                            {linkName: "petalo-4/3/4/9/2", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Pie y Tobillo",text: "Huesos del metatarso",},
+                                            {linkName: "petalo-4/3/4/9/3", image: 'boton4', titlePage: "SISTEMA OSEO",title: "Pie y Tobillo",text: "Falanges de los dedos del pie",},
                                         ]
 
                             },
                         ]
                     },
-                    {linkName: "petalo-4/3/5", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Inmunológico", subPetalos: [
+                    {linkName: "petalo-4/3/5", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Sistema Inmunológico", subPetalos: [
                             {linkName: "petalo-4/3/5/1", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Adenoides",},
                             {linkName: "petalo-4/3/5/2", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Amígdalas",},
                             {linkName: "petalo-4/3/5/3", image: 'boton4', titlePage: "SISTEMA INMUNOLÓGICO",title: "Timo",},
@@ -2323,7 +2290,7 @@ const petalos = [
 
                         ]
                     },
-                    {linkName: "petalo-4/3/6", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Linfático", subPetalos: [
+                    {linkName: "petalo-4/3/6", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Sistema Linfático", subPetalos: [
                             {linkName: "petalo-4/3/6/1", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Amígdalas",},
                             {linkName: "petalo-4/3/6/2", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Bazo",},
                             {linkName: "petalo-4/3/6/3", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Ganglios linfáticos",},
@@ -2337,7 +2304,7 @@ const petalos = [
                             {linkName: "petalo-4/3/6/11", image: 'boton4', titlePage: "SISTEMA LINFÁTICO",title: "Nódulos linfáticos",},
                         ]
                     },
-                    {linkName: "petalo-4/3/7", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Urinario", subPetalos: [
+                    {linkName: "petalo-4/3/7", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Sistema Urinario", subPetalos: [
                             {linkName: "petalo-4/3/7/1", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Riñón derecho",},
                             {linkName: "petalo-4/3/7/2", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Riñón izquierdo",},
                             {linkName: "petalo-4/3/7/3", image: 'boton4', titlePage: "SISTEMA URINARIO",title: "Uréteres",},
@@ -2353,7 +2320,7 @@ const petalos = [
 
                         ]
                     },
-                    {linkName: "petalo-4/3/8", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Nervioso", subPetalos: [
+                    {linkName: "petalo-4/3/8", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Sistema Nervioso", subPetalos: [
                             {linkName: "petalo-4/3/8/1", image: 'boton4', titlePage: "SISTEMA NERVIOSO",title: "Cerebro",},
                             {linkName: "petalo-4/3/8/2", image: 'boton4', titlePage: "SISTEMA NERVIOSO",title: "Medula espinal",},
                             {linkName: "petalo-4/3/8/3", image: 'boton4', titlePage: "SISTEMA NERVIOSO",title: "Nervios periféricos",},
@@ -2392,18 +2359,18 @@ const petalos = [
                     },
                     {linkName: "petalo-4/3/11", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Respiratorio", subPetalos: [
                             {linkName: "petalo-4/3/11/1", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias superiores", subPetalos: [
-                                    {linkName: "petalo-4/3/11/1/1", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "senos paranasales"},
-                                    {linkName: "petalo-4/3/11/1/2", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "fosas nasales"},
-                                    {linkName: "petalo-4/3/11/1/3", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "nariz"},
-                                    {linkName: "petalo-4/3/11/1/4", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "faringe"},
-                                    {linkName: "petalo-4/3/11/1/5", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "faringe"},
+                                    {linkName: "petalo-4/3/11/1/1", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias superiores",text: "senos paranasales"},
+                                    {linkName: "petalo-4/3/11/1/2", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias superiores",text: "fosas nasales"},
+                                    {linkName: "petalo-4/3/11/1/3", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias superiores",text: "nariz"},
+                                    {linkName: "petalo-4/3/11/1/4", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias superiores",text: "faringe"},
+                                    {linkName: "petalo-4/3/11/1/5", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias superiores",text: "faringe"},
                                 ]
                             },
                             {linkName: "petalo-4/3/11/2", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias inferiores", subPetalos: [
-                                    {linkName: "petalo-4/3/11/2/1", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "tráquea"},
-                                    {linkName: "petalo-4/3/11/2/2", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "bronquios"},
-                                    {linkName: "petalo-4/3/11/2/3", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "bronquiolos"},
-                                    {linkName: "petalo-4/3/11/2/4", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "alveolos"},
+                                    {linkName: "petalo-4/3/11/2/1", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias inferiores", text: "tráquea"},
+                                    {linkName: "petalo-4/3/11/2/2", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias inferiores", text: "bronquios"},
+                                    {linkName: "petalo-4/3/11/2/3", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias inferiores", text: "bronquiolos"},
+                                    {linkName: "petalo-4/3/11/2/4", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Vías respiratorias inferiores", text: "alveolos"},
                                 ]
                             },
                             {linkName: "petalo-4/3/11/3", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Pulmones der/izq"},
@@ -2414,7 +2381,7 @@ const petalos = [
                             {linkName: "petalo-4/3/11/8", image: 'boton4', titlePage: "SISTEMA RESPIRATORIO", title: "Músculos de la espalda"},
                         ]
                     },
-                    {linkName: "petalo-4/3/12", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Reproductor", subPetalos: [
+                    {linkName: "petalo-4/3/12", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Sistema Reproductor", subPetalos: [
                             {linkName: "petalo-4/3/12/1", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR", title: "Femenino", subPetalos: [
                                     {linkName: "petalo-4/3/12/1/1", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR FEMENINO", title: "Ovarios"},
                                     {linkName: "petalo-4/3/12/1/2", image: 'boton4', titlePage: "SISTEMA REPRODUCTOR FEMENINO", title: "Trompas de Falopio der/izq"},
@@ -3148,27 +3115,27 @@ const petalos = [
                         ]
                     },
                     {linkName: "petalo-5/7", image: 'boton5',title: "VIDAS PASADAS", noNumbers: true,  subPetalos: [
-                            {linkName: "petalo-5/7/1", image: 'boton5', titlePage: "VIDAS PASADAS", index: 0, colorBorder: "red", title: "A", subPetalos: [
-                                    {linkName: "petalo-5/7/1/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 1", text: "Padre"},
-                                    {linkName: "petalo-5/7/1/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 2", text: "Madre"},
-                                    {linkName: "petalo-5/7/1/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 3", text: "Hijo/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/4", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 4", text: "Abuelo/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/5", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 5", text: "Hermano/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/6", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 6", text: "Tío/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/7", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 7", text: "Primo/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/8", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 8", text: "Sobrino/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/9", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 9", text: "Socio/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/10", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 10", text: "Jefe/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/11", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 11", text: "Vecino/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/12", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 12", text: "Empleado/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/13", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 13", text: "Figura religiosa"},
-                                    {linkName: "petalo-5/7/1/14", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 14", text: "Autoridad Militar"},
-                                    {linkName: "petalo-5/7/1/15", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 15", text: "Amigo/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/16", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 16", text: "Maestro/Profesor"},
-                                    {linkName: "petalo-5/7/1/17", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 17", text: "Esposo/INDIVIDUOS INVOLUCRADOS A "},
-                                    {linkName: "petalo-5/7/1/18", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 18", text: "Amante"},
-                                    {linkName: "petalo-5/7/1/19", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 19", text: "Grupo religioso"},
-                                    {linkName: "petalo-5/7/1/20", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 20", text: "Secta"},
+                            {linkName: "petalo-5/7/1", image: 'boton5', titlePage: "INDIVIDUOS INVOLUCRADOS", index: 0, colorBorder: "red", title: "A", subPetalos: [
+                                    {linkName: "petalo-5/7/1/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 1", text: "PADRE"},
+                                    {linkName: "petalo-5/7/1/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 2", text: "MADRE"},
+                                    {linkName: "petalo-5/7/1/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 3", text: "HIJO"},
+                                    {linkName: "petalo-5/7/1/4", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 4", text: "ABUELO"},
+                                    {linkName: "petalo-5/7/1/5", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 5", text: "HERMANO"},
+                                    {linkName: "petalo-5/7/1/6", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 6", text: "TIO"},
+                                    {linkName: "petalo-5/7/1/7", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 7", text: "PRIMO"},
+                                    {linkName: "petalo-5/7/1/8", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 8", text: "SOBRINO"},
+                                    {linkName: "petalo-5/7/1/9", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 9", text: "SOCIO"},
+                                    {linkName: "petalo-5/7/1/10", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 10", text: "JEFE"},
+                                    {linkName: "petalo-5/7/1/11", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 11", text: "VECINO"},
+                                    {linkName: "petalo-5/7/1/12", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 12", text: "EMPLEADO"},
+                                    {linkName: "petalo-5/7/1/13", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 13", text: "FIGURA RELIGIOSA"},
+                                    {linkName: "petalo-5/7/1/14", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 14", text: "AUTORIDAD MILITAR"},
+                                    {linkName: "petalo-5/7/1/15", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 15", text: "AMIGO"},
+                                    {linkName: "petalo-5/7/1/16", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 16", text: "MAESTRO/PROFESOR"},
+                                    {linkName: "petalo-5/7/1/17", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 17", text: "ESPOSO"},
+                                    {linkName: "petalo-5/7/1/18", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 18", text: "AMANTE"},
+                                    {linkName: "petalo-5/7/1/19", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 19", text: "GRUPO RELIGIOSO"},
+                                    {linkName: "petalo-5/7/1/20", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS A 20", text: "SECTA"},
                                 ],
                             },
 
