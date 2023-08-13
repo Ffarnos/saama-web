@@ -3716,8 +3716,9 @@ const petalos = [
             {linkName: "petalo-7/26", image:'boton7', title:"Cubo Metatron", imageBody: "cubo.svg",
                 text: "El símbolo del cubo de Metatrón representa una profunda conexión con lo divino y con la esencia espiritual del universo. Se considera una poderosa herramienta para expandir la conciencia y despertar la espiritualidad interior. Este símbolo sagrado actúa como un recordatorio de la presencia divina en todas las cosas y nos invita a explorar los misterios y las verdades trascendentales del universo. Desde una perspectiva espiritual, el cubo de Metatrón simboliza la armonía, la perfección y la interconexión de todas las cosas. Las 13 esferas que componen el cubo representan los diferentes aspectos del ser humano y la integración de la energía divina en cada uno de ellos."
             },
-            
- 
+            {linkName: "petalo-7/27", image:'boton7', title:"Dharma wheel", imageBody: "dharma.svg",
+                text: "La rueda del dharma, también conocida como dharmachakra, es un importante símbolo del budismo. representa el ciclo del sufrimiento y el renacimiento, así como el camino hacia la iluminación y la liberación del sufrimiento. en términos de sanación, simboliza el camino hacia la paz interior y la superación de las aflicciones mentales."
+            },
     ]},
 
 
