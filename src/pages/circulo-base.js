@@ -41,7 +41,7 @@ const CirculoBase = () => {
     return <Background style={{backgroundImage: `url(/images/portada.webp)`}}>
         <Container>
             <Title scale={0.8} color={"#fffdfd"}>
-                CIRCULO BASE
+                Terapia GENESÍS
             </Title>
             <Buttons
                 petalos={petalos}

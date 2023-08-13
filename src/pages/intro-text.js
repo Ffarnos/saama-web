@@ -1,6 +1,6 @@
 import * as React from "react";
 import ResponsiveText from "../components/apis/ResponsiveText";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {
     BackButton,
     NextButton
@@ -11,6 +11,39 @@ import {navigate} from "gatsby";
 
 const IntroText = () => {
     const [number, setNumber] = useState(1);
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            switch (event.key) {
+                case 'Enter':
+                    navigate("/circulo-base")
+                    break;
+                case 'Backspace':
+                    navigate("/")
+                    break;
+                case 'ArrowLeft':
+                    setNumber((prev) => {
+                        if (prev === 1) return 1;
+                        return prev - 1;
+                    })
+                    break;
+                case 'ArrowRight':
+                    setNumber((prev) => {
+                        if (prev === 5) {
+                            navigate("/circulo-base")
+                            return 5;
+                        }
+                        return prev + 1;
+                    })
+                    break;
+            }
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
     return <>
         {getText(number)}
         <Navigate number={number} setNumber={setNumber} max={5}/>
@@ -48,7 +81,7 @@ const getText = (number) => {
                                 ORACIÓN PARA ABRIR ESPACIO SAGRADO
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '10px'}}>
-                                “amado padre, pon escudo de protección en cada milímetro
+                                “Amado padre, pon escudo de protección en cada milímetro
                                 de este recinto de sanación y amor incondicional y en toda mi
                                 casa. pon guarda y custodia a todos los seres de luz que
                                 siempre me acompañan: ángeles guardianes, angeles guias,
@@ -64,7 +97,7 @@ const getText = (number) => {
                                 ORACIÓN PARA CERRAR ESPACIO SAGRADO
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                "voy a dar infinitas gracias a todo mi comité de yo superior y a
+                                "Voy a dar infinitas gracias a todo mi comité de yo superior y a
                                 mi alma y al alma de ...(aquí recitas los nombres de los
                                 consultantes) por este servicio y esta sanación, cierra sus
                                 archivos Akáshicos y sus puertas astrales y te damos gracias
@@ -76,7 +109,7 @@ const getText = (number) => {
                     '2':
                         <>
                             <ResponsiveText scale={0.7}>
-                                HORACION CHAMANICA PARA ABRIR EL ESPACIO SAGRADO
+                                ORACION CHAMANICA PARA ABRIR EL ESPACIO SAGRADO
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '10px'}}>
                                 A los vientos del sur, gran serpiente, envuélvenos en tus círculos de luz y amor. Enséñanos a
@@ -169,6 +202,23 @@ const getText = (number) => {
                             <ResponsiveText scale={0.6} style={{marginTop: '15px'}}>
                                 9x9 – 9x9 – 9x9
                             </ResponsiveText>
+                            <ResponsiveText scale={0.6} style={{marginTop: '15px'}}>
+                                PRE-CONEXIÓN CON FUENTE MADRE
+                                (AFIRMACION)
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.6} style={{marginTop: '15px'}}>
+                                CONEXIÓN CON UNO MISMO…
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.6} style={{marginTop: '15px'}}>
+                                ESTOY EN CONEXIÓN CON MI SER SUPERIOR
+                                ESTOY EN SINTONIA CON MI SER MAS ELEVADO
+                                ESTOY UNIDO A MI ESENCIA DIVINA
+                                ME ENCUENTRO IMPARCIAL AL RESULTADO DE LA TERAPIA
+                                ESTOY EN TOTAL PLENITUD PARA DAR ENERGIA
+                                ESTOY EN TOTAL PLENITUD PARA RECIBIR ENERGIA
+                                ESTOY EN TOTAL PLENITUD PARA SENTIR LA ENERGIA
+                                ESTOY EN TOTAL PLENITUD PARA OBTENER INFORMACION
+                            </ResponsiveText>
                         </>,
                     '5':
                         <>
@@ -229,6 +279,24 @@ const getText = (number) => {
                                 que tratas. Perdoname, lo siento, te amo, gracias
                             </ResponsiveText>
                         </>,
+                    6:
+                        <>
+                            <ResponsiveText scale={0.6}>
+                                ORACION DE HO’OPONOPONO PARA INICIO DE SESION
+                                DIVINA PRESENCIA, SANA AQUÍ Y AHORA DESDE LA RAIZ Y PARA SIEMPRE, EL PROBLEMA O SITUACIÓN QUE TRAJO AQUÍ (nombre del consultante)… HAZ QUE DESBLOQUE LAS ENERGIAS NEGATIVAS QUE LE IMPIDEN AVANZAR, APORTANDO ENERGIA SANADORA, LIBERÁNDOME Y LIBERÁNDOLO DE TODA RESPONSABILIDAD PARA LOGRAR SU EVOLUCIÓN
+                                LO SIENTO, PERDONAME, TE AMO, GRACIAS
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
+                                CONEXIÓN CON EL PACIENTE
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
+                                ¿ESTÁ EL PACIENTE DISPUESTO Y ABIERTO A RECIBIR LA TERAPIA?
+                                ¿ESTÁ EL PACIENTE ABIERTO Y RECEPTIVO HACIA EL TERAPEUTA?
+                                ¿QUIERE EL SER DE (nombre del consultante)… SANAR, PROGRESAR Y TRANSFORMARSE?
+                                ¿ACEPTA UNA SANACIÓN INMEDIATA, COMPLETA, PERMITIENDO ENCONTRAR UNA MEJOR VERSION PARA SU BIENESTAR Y CRECIMIENTO PERSONAL?
+                                ¿CUAL DE ESTOS PUNTOS PRIORIZA EL SER DE (nombre del consultante) PARA SANAR?
+                            </ResponsiveText>
+                        </>
                 }[number]
             }
         </TextContainer>
