@@ -1,4 +1,3 @@
-import * as React from "react"
 import styled from 'styled-components';
 import ResponsiveText from "./apis/ResponsiveText";
 import NavigationButtons from "./navigation/NavigationButtons";
@@ -10,21 +9,23 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
         const handleKeyDown = (event) => {
             switch (event.key) {
                 case 'Enter':
-                    navigate("/circulo-base")
+                    navigate("/circulo-base");
                     break;
                 case 'Backspace':
-                    navigate("/")
+                    navigate("/");
                     break;
                 case 'ArrowLeft':
-                    navigate(-1)
+                    navigate(-1);
                     break;
                 case 'ArrowRight':
-                    navigate(+1)
+                    navigate(+1);
+                    break;
+                default:
+                    if (/^[0-9]$/.test(event.key)) {
+                        onClick(parseInt(event.key));
+                    }
                     break;
             }
-            if (event.key === '1' || event.key === '2' || event.key === '3' || event.key === '4' || event.key === '5' || event.key === '6' || event.key === '7' || event.key === '8' || event.key === '9')
-                onClick(parseInt(event.key))
-
         };
 
         document.addEventListener('keydown', handleKeyDown);
@@ -32,7 +33,7 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, []);
+    }, [onClick]);
 
 
         return (

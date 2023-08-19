@@ -3,7 +3,7 @@ import ResponsiveText from "../apis/ResponsiveText";
 import Buttons from "../Buttons";
 import {useState} from "react";
 import {navigate} from "gatsby";
-import {Alert, TextField} from "@mui/material";
+import {Alert, TextField, FormControl, ThemeProvider, createTheme} from "@mui/material";
 import {FinishButtonResponsive} from "../navigation/FinishButton";
 
 const createdPages = require('../../../../createdPages.json');
@@ -16,6 +16,29 @@ const PetalosTemplate = ({ pageContext }) => {
     const handleChange = (event) => {
         setInput(event.target.value);
     };
+
+    const theme = createTheme({
+        components: {
+            MuiTextField: {
+                styleOverrides: {
+                    root: {
+                        display: 'flex',
+                        justifyContent: 'center',
+                        '& .MuiInputBase-input': {
+                            textAlign: 'center', // Centra el texto dentro del TextField
+                        },
+                        '& .MuiInputBase-root': {
+                            color: 'white', // Cambia el color del texto del TextField
+                            textAlign: 'center'
+                        },
+                        '& .MuiInput-underline:before': {
+                            borderBottomColor: 'white', // Cambiar el color del borde antes de hacer foco
+                        },
+                    },
+                },
+            },
+        },
+    });
 
     return <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Container>
@@ -30,12 +53,16 @@ const PetalosTemplate = ({ pageContext }) => {
                 <ResponsiveText scale={0.6} color={"#fdf8f8"}>
                     Opciones {subPetalos.length}
                 </ResponsiveText>
-                {input !== 0 && <TextField
+                {input !== 0 && <ThemeProvider theme={theme}>
+
+                <TextField
                     id="standar-basic"
+                    inputProps={{inputMode: 'numeric', pattern: '[0-9]*'}}
                     value={input}
                     onChange={handleChange}
                     variant="standard"
-                />}
+                />
+                </ThemeProvider>}
                 </ContainerHorizontal>
             </NoCircleContainer>
             {showAlert && <ContainerAlert>
@@ -49,7 +76,9 @@ const PetalosTemplate = ({ pageContext }) => {
                 petalos={subPetalos}
                 noNumber={noNumber}
                 onClick={(number) => {
-                    const numberFinal = (input ? (input * 10) : 0) + number;
+                    console.log(input);
+                    const numberFinal = (input ? ((input * 10) + number) : number);
+                    console.log("numberFinal: " + numberFinal + " - number: " + number);
                     setInput(numberFinal);
                     setTimeout(() => {
                         setInput((prevInput) => {
@@ -72,8 +101,7 @@ const PetalosTemplate = ({ pageContext }) => {
 
 const ContainerHorizontal = styled.div`
   display: flex;
-  align-items: center;
-  flex-direction: row;
+  gap: 20px;
 `;
 
 const NoCircleContainer = styled.div`
@@ -116,7 +144,7 @@ export const Background = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #888888; /* Color del thumb de la scrollbar */
+    background-color: #888888;
     border-radius: 2px;
   }
 `;
