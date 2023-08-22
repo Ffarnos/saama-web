@@ -3,8 +3,9 @@ import ResponsiveText from "../apis/ResponsiveText";
 import Buttons from "../Buttons";
 import {useState} from "react";
 import {navigate} from "gatsby";
-import {Alert, TextField, FormControl, ThemeProvider, createTheme} from "@mui/material";
+import {Alert, TextField, ThemeProvider, createTheme} from "@mui/material";
 import {FinishButtonResponsive} from "../navigation/FinishButton";
+import {Background} from "../../pages/circulo-base";
 
 const createdPages = require('../../../../createdPages.json');
 
@@ -25,14 +26,14 @@ const PetalosTemplate = ({ pageContext }) => {
                         display: 'flex',
                         justifyContent: 'center',
                         '& .MuiInputBase-input': {
-                            textAlign: 'center', // Centra el texto dentro del TextField
+                            textAlign: 'center',
                         },
                         '& .MuiInputBase-root': {
-                            color: 'white', // Cambia el color del texto del TextField
+                            color: 'white',
                             textAlign: 'center'
                         },
                         '& .MuiInput-underline:before': {
-                            borderBottomColor: 'white', // Cambiar el color del borde antes de hacer foco
+                            borderBottomColor: 'white',
                         },
                     },
                 },
@@ -129,24 +130,5 @@ const Container = styled.div`
     flex-direction: column;
 `;
 
-export const Background = styled.div`
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #888888;
-    border-radius: 2px;
-  }
-`;
 
 export default PetalosTemplate;

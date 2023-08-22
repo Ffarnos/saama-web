@@ -3,8 +3,8 @@ import {useEffect} from "react";
 import {navigate} from "gatsby";
 import {NavigationButtonsInLine} from "../navigation/NavigationButtons";
 import styled from "styled-components";
-import {Background} from "./PetalosTemplate";
 import ResponsiveImage from "../apis/ResponsiveImage";
+import {Background} from "../../pages/circulo-base";
 
 
 const FinalPageTemplate = ({ pageContext }) => {

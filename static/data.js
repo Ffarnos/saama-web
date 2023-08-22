@@ -106,7 +106,7 @@ const petalos = [
 
             {
                 linkName: "petalo-1/4", image: 'boton1', title: "Limpiar nucleo del ser",
-                text: ""
+                text: "Aqui se tiene que ir a buscar las emociones que se localizan en el nucleo del corazon del consultante"
             },
             {
                 linkName: "petalo-1/5", image: 'boton1', title: "Respetar/Aceptar",
@@ -160,7 +160,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-1/8", image: 'boton1', title: "Bloque que me impide avanzar", number: 8, subPetalos: [
+                linkName: "petalo-1/8", image: 'boton1', title: "Bloqueo que me impide avanzar", number: 8, subPetalos: [
                     { linkName: "petalo-1/8/1", image: 'boton1', titlePage: 'Bloqueo que me impide avanzar', title: "Atasco", text: "" },
                     { linkName: "petalo-1/8/2", image: 'boton1', titlePage: 'Bloqueo que me impide avanzar', title: "Barrera", text: "" },
                     { linkName: "petalo-1/8/3", image: 'boton1', titlePage: 'Bloqueo que me impide avanzar', title: "Bloqueo", text: "" },
