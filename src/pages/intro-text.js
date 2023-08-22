@@ -202,23 +202,6 @@ const getText = (number) => {
                             <ResponsiveText scale={0.6} style={{marginTop: '15px'}}>
                                 9x9 – 9x9 – 9x9
                             </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '15px'}}>
-                                PRE-CONEXIÓN CON FUENTE MADRE
-                                (AFIRMACION)
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '15px'}}>
-                                CONEXIÓN CON UNO MISMO…
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '15px'}}>
-                                ESTOY EN CONEXIÓN CON MI SER SUPERIOR
-                                ESTOY EN SINTONIA CON MI SER MAS ELEVADO
-                                ESTOY UNIDO A MI ESENCIA DIVINA
-                                ME ENCUENTRO IMPARCIAL AL RESULTADO DE LA TERAPIA
-                                ESTOY EN TOTAL PLENITUD PARA DAR ENERGIA
-                                ESTOY EN TOTAL PLENITUD PARA RECIBIR ENERGIA
-                                ESTOY EN TOTAL PLENITUD PARA SENTIR LA ENERGIA
-                                ESTOY EN TOTAL PLENITUD PARA OBTENER INFORMACION
-                            </ResponsiveText>
                         </>,
                     '5':
                         <>
@@ -251,7 +234,7 @@ const getText = (number) => {
                                 Estoy en total plenitud para obtener información
                             </ResponsiveText>
                         </>,
-                    6: <>
+                    '6': <>
                         <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
                             ORACION DE HO’OPONOPONO PARA INICIO DE SESION
                         </ResponsiveText>
@@ -261,7 +244,7 @@ const getText = (number) => {
                         </ResponsiveText>
 
                     </>,
-                    7:
+                    '7':
                         <>
                             <ResponsiveText scale={0.6}>
                                 CONEXIÓN CON EL PACIENTE
