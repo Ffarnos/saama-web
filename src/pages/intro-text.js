@@ -223,78 +223,63 @@ const getText = (number) => {
                     '5':
                         <>
                             <ResponsiveText bold scale={0.6}>
-                                PRE CONEXIÓN FUENTE MADRE
+                                PRE-CONEXIÓN CON FUENTE MADRE (AFIRMACION)
+                                CONEXIÓN CON UNO MISMO…
                             </ResponsiveText>
                             <ResponsiveText scale={0.5} style={{marginTop: '20px'}}>
-                                ESTOY EN CONEXIÓN CON MI YO SUPERIOR.
+                                Estoy en conexión con mi ser superior
                             </ResponsiveText>
                             <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ESTOY PLENAMENTE DISPUESTO/A A RECIBIR INFORMACIÓN.
+                                Estoy en sintonía con mi ser más elevado
                             </ResponsiveText>
                             <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ESTOY RECEPTIVO/A AL MÁXIMO PARA RECIBIR INFORMACIÓN.
+                                Estoy unido a mi esencia divina
                             </ResponsiveText>
                             <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ESTOY EN PLENO POTENCIAL PARA COMPARTIR ENERGÍA.
+                                Me encuentro imparcial al resultado de la terapia
                             </ResponsiveText>
                             <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ME PERMITO SENTIR PLENAMENTE LA ENERGÍA.
+                                Estoy en total plenitud para dar energía
                             </ResponsiveText>
                             <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ESTOY ALINEADO/A CON MI POTENCIAL FEMENINO MÁXIMO.
+                                Estoy en total plenitud para recibir energía
                             </ResponsiveText>
                             <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ESTOY SIEMPRE PROTEGIDO/A POR MIS GUÍAS.
+                                Estoy en total plenitud para sentir la energía
                             </ResponsiveText>
                             <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                SOY CAPAZ DE IR MÁS ALLÁ DEL ESPACIO Y DEL TIEMPO.
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                TENGO LA CAPACIDAD DE IMAGINACIÓN INAGOTABLE.
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                TENGO LA CAPACIDAD DE TRASCENDER LOS LÍMITES.
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ¿ESTÁ EL PACIENTE DISPUESTO Y ABIERTO A RECIBIR LA TERAPIA?
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ¿ESTÁ EL PACIENTE ABIERTO Y RECEPTIVO HACIA EL TERAPEUTA?
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ¿EL PACIENTE TIENE EXPECTATIVAS DE SANACIÓN TEMPORALES?
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ¿EL PACIENTE BUSCA SANAR, CRECER Y EVOLUCIONAR?                            </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                Oracion de Ho’oponopono
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                para inicarsesión con cada consultante
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '30px'}}>
-                                Pedi a mi divina presencial que limpie la parte de
-                                responsabilidad que hay en mi, que hacer que… (nombre de
-                                mi paciente), este hoy aquí en mi consulta con… el problema
-                                que tratas. Perdoname, lo siento, te amo, gracias
+                                Estoy en total plenitud para obtener información
                             </ResponsiveText>
                         </>,
-                    6:
+                    6: <>
+                        <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
+                            ORACION DE HO’OPONOPONO PARA INICIO DE SESION
+                        </ResponsiveText>
+                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                            Divina presencia, sana aquí y ahora desde la raíz y para siempre, el problema o situación que trajo aquí (nombre del consultante) … haz que desbloque las energías negativas que le impiden avanzar, aportando energía sanadora, liberándome y liberándolo de toda responsabilidad para lograr su evolución
+                            lo siento, perdóname, te amo, gracias
+                        </ResponsiveText>
+
+                    </>,
+                    7:
                         <>
                             <ResponsiveText scale={0.6}>
-                                ORACION DE HO’OPONOPONO PARA INICIO DE SESION
-                                DIVINA PRESENCIA, SANA AQUÍ Y AHORA DESDE LA RAIZ Y PARA SIEMPRE, EL PROBLEMA O SITUACIÓN QUE TRAJO AQUÍ (nombre del consultante)… HAZ QUE DESBLOQUE LAS ENERGIAS NEGATIVAS QUE LE IMPIDEN AVANZAR, APORTANDO ENERGIA SANADORA, LIBERÁNDOME Y LIBERÁNDOLO DE TODA RESPONSABILIDAD PARA LOGRAR SU EVOLUCIÓN
-                                LO SIENTO, PERDONAME, TE AMO, GRACIAS
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
                                 CONEXIÓN CON EL PACIENTE
                             </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                ¿ESTÁ EL PACIENTE DISPUESTO Y ABIERTO A RECIBIR LA TERAPIA?
-                                ¿ESTÁ EL PACIENTE ABIERTO Y RECEPTIVO HACIA EL TERAPEUTA?
-                                ¿QUIERE EL SER DE (nombre del consultante)… SANAR, PROGRESAR Y TRANSFORMARSE?
-                                ¿ACEPTA UNA SANACIÓN INMEDIATA, COMPLETA, PERMITIENDO ENCONTRAR UNA MEJOR VERSION PARA SU BIENESTAR Y CRECIMIENTO PERSONAL?
-                                ¿CUAL DE ESTOS PUNTOS PRIORIZA EL SER DE (nombre del consultante) PARA SANAR?
+                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                                ¿Está el paciente dispuesto y abierto a recibir la terapia?
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                                ¿Está el paciente abierto y receptivo hacia el terapeuta?
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                                ¿Quiere el ser de (nombre del consultante)… sanar, progresar y transformarse?
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                                ¿Acepta una sanación inmediata, completa, permitiendo encontrar una mejor versión para su bienestar y crecimiento personal?
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                                ¿Cuál de estos puntos prioriza el ser de (nombre del consultante) para sanar?
                             </ResponsiveText>
                         </>
                 }[number]

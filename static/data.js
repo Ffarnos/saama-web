@@ -3611,7 +3611,7 @@ const petalos = [
             {linkName: "petalo-7/2", image:'boton7', title:"Nudo Perenne", imageBody: "nudoperenne.svg",
                 text: "El símbolo del nudo perenne, también conocido como nudo infinito, es un motivo visual que representa la conexión eterna, la continuidad y la interrelación de todas las cosas. Es un símbolo de unidad, amor y equilibrio. El nudo perenne representa la idea de que todo está intrínsecamente conectado y que nuestras acciones y decisiones tienen un impacto en el mundo que nos rodea. Es un recordatorio de que todo está relacionado y que nuestras acciones tienen un impacto en el mundo. Simboliza unidad, amor y equilibrio."
             },
-            {linkName: "petalo-7/3", image:'boton7', title:"Awen", imageBody: "awen.png",
+            {linkName: "petalo-7/3", image:'boton7', title:"Awen", imageBody: "awen.jpg",
                 text: "El Awen representa la inspiración divina, la creatividad y la iluminación espiritual. Es considerado un símbolo de energía y sabiduría sagrada. Cada uno de los tres rayos del Awen puede representar diferentes aspectos, como la mente, el cuerpo y el espíritu. Representa el flujo de energía creativa y la conexión con lo divino. Es un recordatorio de buscar la sabiduría y la inspiración en el mundo que nos rodea."
             },
             {linkName: "petalo-7/4", image:'boton7', title:"Mano de Hopi", imageBody: "manodehopi.svg",
@@ -3653,7 +3653,7 @@ const petalos = [
             {linkName: "petalo-7/16", image:'boton7', title:"Toro Celta", imageBody: "torocelta.svg",
                 text: "El toro Celta, se asocia con la energía masculina y la divinidad, representando al dios celta de la fertilidad y la abundancia. Se le atribuye la capacidad de proteger y nutrir, tanto en el plano físico como en el espiritual. Al conectarse con el toro celta, se busca obtener su fuerza y sabiduría para enfrentar los desafíos de la vida y encontrar equilibrio y armonía en el mundo. Además, el toro celta también puede simbolizar la capacidad de conectarse con los instintos más profundos, la pasión y el poder creativo. Se le considera un guía espiritual que nos ayuda a reconectarnos con nuestras raíces, con la sabiduría ancestral y la esencia primordial de nuestro ser."
             },
-            {linkName: "petalo-7/17", image:'boton7', title:"Flor de la vida", imageBody: "flordelavida.svg",
+            {linkName: "petalo-7/17", image:'boton7', title:"Flor de la vida", imageBody: "flordelavida.jpg",
                 text: "La Flor de la Vida es un poderoso símbolo espiritual que representa la esencia misma de la existencia y la interconexión de todas las formas de vida en el universo. El patrón geométrico de la Flor de la Vida se considera un lenguaje universal de la geometría sagrada. Cada círculo que compone el símbolo representa una etapa en el proceso de creación, desde la unidad primordial hasta la manifestación completa. Estos círculos se entrelazan de manera armónica, creando una matriz de energía que resuena con la vibración divina y la esencia misma de la vida. Al conectarse con la Flor de la Vida en un nivel energético, se puede experimentar una profunda sensación de unidad y plenitud."
             },
             {linkName: "petalo-7/18", image:'boton7', title:"Rueda universal (Sioux)", imageBody: "ruedauniversal.svg",
@@ -3674,13 +3674,13 @@ const petalos = [
             {linkName: "petalo-7/23", image:'boton7', title:"Atrapasueños (Sioux)", imageBody: "atrapasueños.svg",
                 text: "El atrapasueños actúa como un filtro espiritual, atrapando los sueños negativos y las energías no deseadas durante el sueño. La red en el centro del atrapasueños simboliza la telaraña cósmica que conecta a todas las personas y seres vivos. Se cree que esta red captura y filtra las energías negativas, mientras que permite el paso de los sueños positivos y las visiones espirituales. Las plumas colgantes en el atrapasueños representan la conexión con el reino espiritual y se cree que ayudan a guiar los sueños hacia un estado de paz y armonía."
             },
-            {linkName: "petalo-7/24", image:'boton7', title:"Om", imageBody: "om.svg",
+            {linkName: "petalo-7/24", image:'boton7', title:"Om", imageBody: "om.jpg",
                 text: "El símbolo Om es una representación sagrada y poderosa de la realidad última y la unidad espiritual. En un nivel espiritual y de alto nivel energético, &quot;Om&quot; se considera la vibración primordial del universo, el sonido que subyace en toda la creación. Desde esta perspectiva, &quot;Om&quot; se concibe como la manifestación sonora del Ser Supremo y la fuente de toda existencia. Simboliza la totalidad del cosmos y la interconexión de todas las formas de vida."
             },
             {linkName: "petalo-7/25", image:'boton7', title:"Ying Yang", imageBody: "yingyang.svg",
                 text: "El símbolo Ying Yang representa la interconexión y la armonía entre las fuerzas opuestas y complementarias en el universo. Refleja la naturaleza dual de la existencia y simboliza la búsqueda de equilibrio y unidad en todos los aspectos de la vida. Espiritualmente, el yin y el yang representan la interacción entre lo divino femenino y masculino, la esencia primordial que subyace en toda creación. El yin encarna la energía receptiva, intuitiva y emocional, que se conecta con la profundidad del ser interior y la espiritualidad introspectiva. Por otro lado, el yang representa la energía activa, racional y expansiva, que se relaciona con la manifestación externa, la acción y la expresión creativa."
             },
-            {linkName: "petalo-7/26", image:'boton7', title:"Cubo Metatron", imageBody: "cubo.svg",
+            {linkName: "petalo-7/26", image:'boton7', title:"Cubo Metatron", imageBody: "cubo.jpg",
                 text: "El símbolo del cubo de Metatrón representa una profunda conexión con lo divino y con la esencia espiritual del universo. Se considera una poderosa herramienta para expandir la conciencia y despertar la espiritualidad interior. Este símbolo sagrado actúa como un recordatorio de la presencia divina en todas las cosas y nos invita a explorar los misterios y las verdades trascendentales del universo. Desde una perspectiva espiritual, el cubo de Metatrón simboliza la armonía, la perfección y la interconexión de todas las cosas. Las 13 esferas que componen el cubo representan los diferentes aspectos del ser humano y la integración de la energía divina en cada uno de ellos."
             },
             {linkName: "petalo-7/27", image:'boton7', title:"Dharma wheel", imageBody: "dharma.svg",
