@@ -209,42 +209,86 @@ const Button = styled.div`
   position: absolute;
   user-select: none;
   box-shadow: 0 15px 15px 0 rgba(56, 56, 56, 0.75), 0 0 0 7px ${props => props.bordercolor};
-  top: calc((-85px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 230px));
-  left: calc((-85px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 230px));
+
+  ${props => {
+    const px = 230;
+    const top = (-85 / 2) + calculatePositionCos(props.angle, px);
+    const sin = (-85 / 2) + calculatePositionSin(props.angle, px);
+    return `
+      top: ${top}px;
+      left: ${sin}px;
+    `;
+  }}
+
   width: 85px;
   height: 85px;
 
   @media (max-width: 370px) {
-    top: calc((-40px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 120px));
-    left: calc((-40px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 120px));
+    ${props => {
+      const px = 120;
+      const top = (-85 / 2) + calculatePositionCos(props.angle, px);
+      const sin = (-85 / 2) + calculatePositionSin(props.angle, px);
+      return `
+      top: ${top}px;
+      left: ${sin}px;
+    `;
+    }}
     width: 40px;
     height: 40px;
   }
 
   @media (max-width: 410px) and (min-width: 370px) {
-    top: calc((-60px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 140px));
-    left: calc((-60px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 140px));
+    ${props => {
+      const px = 140;
+      const top = (-85 / 2) + calculatePositionCos(props.angle, px);
+      const sin = (-85 / 2) + calculatePositionSin(props.angle, px);
+      return `
+      top: ${top}px;
+      left: ${sin}px;
+    `;
+    }}
     width: 60px;
     height: 60px;
   }
 
   @media (max-width: 465px) and (min-width: 410px) {
-    top: calc((-60px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 160px));
-    left: calc((-60px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 160px));
+    ${props => {
+      const px = 160;
+      const top = (-85 / 2) + calculatePositionCos(props.angle, px);
+      const sin = (-85 / 2) + calculatePositionSin(props.angle, px);
+      return `
+      top: ${top}px;
+      left: ${sin}px;
+    `;
+    }}
     width: 60px;
     height: 60px;
   }
 
   @media (max-width: 540px) and (min-width: 465px) {
-    top: calc((-80px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 180px));
-    left: calc((-80px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 180px));
+    ${props => {
+      const px = 180;
+      const top = (-85 / 2) + calculatePositionCos(props.angle, px);
+      const sin = (-85 / 2) + calculatePositionSin(props.angle, px);
+      return `
+      top: ${top}px;
+      left: ${sin}px;
+    `;
+    }}
     width: 80px;
     height: 80px;
   }
 
   @media (max-width: 620px) and (min-width: 540px){
-    top: calc((-90px / 2) + (cos((${props => props.angle} * ${pi}) / 180) * 210px));
-    left: calc((-90px / 2) + (sin((${props => props.angle} * ${pi}) / 180) * 210px));
+    ${props => {
+      const px = 210;
+      const top = (-85 / 2) + calculatePositionCos(props.angle, px);
+      const sin = (-85 / 2) + calculatePositionSin(props.angle, px);
+      return `
+      top: ${top}px;
+      left: ${sin}px;
+    `;
+    }}
     width: 90px;
     height: 90px;
   }
@@ -255,5 +299,12 @@ const Button = styled.div`
 
 `;
 
+function calculatePositionCos(angle, px) {
+    return Math.cos((angle * pi) / 180) * px;
+}
+
+function calculatePositionSin(angle, px) {
+    return Math.sin((angle * pi) / 180) * px;
+}
 
 export default Buttons;
