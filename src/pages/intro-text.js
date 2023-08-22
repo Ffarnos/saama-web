@@ -1,4 +1,3 @@
-import * as React from "react";
 import ResponsiveText from "../components/apis/ResponsiveText";
 import {useEffect, useState} from "react";
 import {
@@ -28,9 +27,9 @@ const IntroText = () => {
                     break;
                 case 'ArrowRight':
                     setNumber((prev) => {
-                        if (prev === 5) {
+                        if (prev === 6) {
                             navigate("/circulo-base")
-                            return 5;
+                            return 6;
                         }
                         return prev + 1;
                     })
@@ -234,37 +233,34 @@ const getText = (number) => {
                                 Estoy en total plenitud para obtener información
                             </ResponsiveText>
                         </>,
-                    '6': <>
-                        <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
+                    '6':
+                        <>
+                        <ResponsiveText scale={0.6} bold style={{marginTop: '20px'}}>
                             ORACION DE HO’OPONOPONO PARA INICIO DE SESION
                         </ResponsiveText>
                         <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
                             Divina presencia, sana aquí y ahora desde la raíz y para siempre, el problema o situación que trajo aquí (nombre del consultante) … haz que desbloque las energías negativas que le impiden avanzar, aportando energía sanadora, liberándome y liberándolo de toda responsabilidad para lograr su evolución
                             lo siento, perdóname, te amo, gracias
                         </ResponsiveText>
-
-                    </>,
-                    '7':
-                        <>
-                            <ResponsiveText scale={0.6}>
-                                CONEXIÓN CON EL PACIENTE
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ¿Está el paciente dispuesto y abierto a recibir la terapia?
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ¿Está el paciente abierto y receptivo hacia el terapeuta?
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ¿Quiere el ser de (nombre del consultante)… sanar, progresar y transformarse?
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ¿Acepta una sanación inmediata, completa, permitiendo encontrar una mejor versión para su bienestar y crecimiento personal?
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                                ¿Cuál de estos puntos prioriza el ser de (nombre del consultante) para sanar?
-                            </ResponsiveText>
-                        </>
+                        <ResponsiveText scale={0.6} bold style={{marginTop: '30px'}}>
+                            CONEXIÓN CON EL PACIENTE
+                        </ResponsiveText>
+                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                            ¿Está el paciente dispuesto y abierto a recibir la terapia?
+                        </ResponsiveText>
+                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                            ¿Está el paciente abierto y receptivo hacia el terapeuta?
+                        </ResponsiveText>
+                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                            ¿Quiere el ser de (nombre del consultante)… sanar, progresar y transformarse?
+                        </ResponsiveText>
+                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                            ¿Acepta una sanación inmediata, completa, permitiendo encontrar una mejor versión para su bienestar y crecimiento personal?
+                        </ResponsiveText>
+                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                            ¿Cuál de estos puntos prioriza el ser de (nombre del consultante) para sanar?
+                        </ResponsiveText>
+                    </>
                 }[number]
             }
         </TextContainer>
