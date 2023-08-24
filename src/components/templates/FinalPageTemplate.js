@@ -28,14 +28,26 @@ const FinalPageTemplate = ({ pageContext }) => {
     }, []);
 
 
-    const {desc, titleText, image, titlePage, imageBody} = pageContext
+    const {desc, titleText, image, titlePage, imageBody, separation} = pageContext
     const imagePath = "/images/"+ image + ".webp";
     const imageBodyPath = "/images/simbolos/"+ imageBody;
+    let textSeparate;
+    let textComponents;
+    if (separation) {
+        textSeparate = desc.split(". ");
+        textComponents = textSeparate.map((sentence) => (
+            <ResponsiveText scale={0.5} color={"white"}>
+                {sentence}
+            </ResponsiveText>
+        ));
+    }
     return <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Content>
             <ResponsiveText scale={0.9} color={"white"}>{titlePage}</ResponsiveText>
             <ResponsiveText scale={0.7} color={"white"}>{titleText}</ResponsiveText>
-            <Text scale={0.5} color={"white"}>{desc}</Text>
+            {separation ? textComponents
+            : <Text scale={0.5} color={"white"}>{desc}</Text>}
+
             {imageBody && <BodyImage src={imageBodyPath} scale={4}/>}
         <Container>
             <NavigationButtonsInLine/>

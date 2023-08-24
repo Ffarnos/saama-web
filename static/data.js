@@ -186,128 +186,128 @@ const petalos = [
                     {
                         linkName: "petalo-2/1/1", image: 'boton2', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
-                                linkName: "petalo-2/1/1/1", image: 'boton2', titlePage: 'Emociones', title: "A 1",
-                                text: "ABRUMADO, ABURRIMIENTO, AGOBIO, AGOTADO"
+                                linkName: "petalo-2/1/1/1", image: 'boton2', separation: true, titlePage: 'Emociones', title: "A 1",
+                                text: "ABRUMADO. ABURRIMIENTO. AGOBIO. AGOTADO"
                             },
                             {
-                                linkName: "petalo-2/1/1/2", image: 'boton2', titlePage: 'Emociones', title: "A 2",
-                                text: "ADICCIÓN AL PESIMISMO, ADICCIÓN AL SEXO, ADICCIÓN FELICIDAD, ADICCIÓN HUMILLACIÓN"
+                                linkName: "petalo-2/1/1/2", image: 'boton2', separation: true, titlePage: 'Emociones', title: "A 2",
+                                text: "ADICCIÓN AL PESIMISMO. ADICCIÓN AL SEXO. ADICCIÓN FELICIDAD. ADICCIÓN HUMILLACIÓN"
                             },
                             {
-                                linkName: "petalo-2/1/1/3", image: 'boton2', titlePage: 'Emociones', title: "A 3",
-                                text: "AMARGURA, AMOR NO RECIBIDO, ANGUSTIA, ANSIEDAD"
+                                linkName: "petalo-2/1/1/3", image: 'boton2', separation: true, titlePage: 'Emociones', title: "A 3",
+                                text: "AMARGURA. AMOR NO RECIBIDO. ANGUSTIA. ANSIEDAD"
                             },
                             {
-                                linkName: "petalo-2/1/1/4", image: 'boton2', titlePage: 'Emociones', title: "A 4",
-                                text: "APATÍA, ARREPENTIMIENTO, ASCO, AUTO DESPRECIO"
+                                linkName: "petalo-2/1/1/4", image: 'boton2', separation: true, titlePage: 'Emociones', title: "A 4",
+                                text: "APATÍA. ARREPENTIMIENTO. ASCO, AUTO DESPRECIO"
                             },
                             {
-                                linkName: "petalo-2/1/1/5", image: 'boton2', titlePage: 'Emociones', title: "A 5",
-                                text: "AUTOLESIÓN, BAJA AUTOESTIMA, CELOS, COLERA"
+                                linkName: "petalo-2/1/1/5", image: 'boton2', separation: true, titlePage: 'Emociones', title: "A 5",
+                                text: "AUTOLESIÓN. BAJA AUTOESTIMA. CELOS. COLERA"
                             },
                             {
-                                linkName: "petalo-2/1/1/6", image: 'boton2', titlePage: 'Emociones', title: "A 6",
-                                text: "COMPITIENDO CON.. CONFLICTO, CONFUSIÓN, CRITICAR O CRITICADO"
+                                linkName: "petalo-2/1/1/6", image: 'boton2', separation: true, titlePage: 'Emociones', title: "A 6",
+                                text: "COMPITIENDO CON.. CONFLICTO. CONFUSIÓN. CRITICAR O CRITICADO"
                             },
                             {
-                                linkName: "petalo-2/1/1/7", image: 'boton2', titlePage: 'Emociones', title: "A 7",
-                                text: "CULPABILIDAD, DEPRESIÓN, DESAMPARO, DESÁNIMO"
+                                linkName: "petalo-2/1/1/7", image: 'boton2', separation: true, titlePage: 'Emociones', title: "A 7",
+                                text: "CULPABILIDAD. DEPRESIÓN. DESAMPARO. DESÁNIMO"
                             },
                         ]
                     },
                     {
                         linkName: "petalo-2/1/2", image: 'boton2', title: "B", index: 1, colorBorder: "blue", subPetalos: [
                             {
-                                linkName: "petalo-2/1/2/1", image: 'boton2', titlePage: 'Emociones', title: "B 1",
-                                text: "DESCONECTADO DE ALGO/ALGUIEN, DESCONFIAR, DESCONSUELO, DESESPERACIÓN/DESESPERADO"
+                                linkName: "petalo-2/1/2/1", image: 'boton2', separation: true, titlePage: 'Emociones', title: "B 1",
+                                text: "DESCONECTADO DE ALGO/ALGUIEN. DESCONFIAR. DESCONSUELO. DESESPERACIÓN/DESESPERADO"
                             },
                             {
-                                linkName: "petalo-2/1/2/2", image: 'boton2', titlePage: 'Emociones', title: "B 2",
-                                text: "DESESPERANZA, DESILUSIÓN, DESPRECIO, DESPROTECCIÓN"
+                                linkName: "petalo-2/1/2/2", image: 'boton2', separation: true, titlePage: 'Emociones', title: "B 2",
+                                text: "DESESPERANZA. DESILUSIÓN. DESPRECIO. DESPROTECCIÓN"
                             },
                             {
-                                linkName: "petalo-2/1/2/3", image: 'boton2', titlePage: 'Emociones', title: "B 3",
-                                text: "DESTRUCTIVO, DESVALORIZACIÓN, DUDA, ENFADO"
+                                linkName: "petalo-2/1/2/3", image: 'boton2', separation: true, titlePage: 'Emociones', title: "B 3",
+                                text: "DESTRUCTIVO. DESVALORIZACIÓN. DUDA. ENFADO"
                             },
                             {
-                                linkName: "petalo-2/1/2/4", image: 'boton2', titlePage: 'Emociones', title: "B 4",
-                                text: "EXCESO DE RESPONSABILIDAD, EXCESO FUERTE DE ALEGRÍA, FALTA DE CONTROL, FALTA DE IMAGINACIÓN"
+                                linkName: "petalo-2/1/2/4", image: 'boton2', separation: true, titlePage: 'Emociones', title: "B 4",
+                                text: "EXCESO DE RESPONSABILIDAD. EXCESO FUERTE DE ALEGRÍA. FALTA DE CONTROL. FALTA DE IMAGINACIÓN"
                             },
                             {
-                                linkName: "petalo-2/1/2/5", image: 'boton2', titlePage: 'Emociones', title: "B 5",
-                                text: "FALTA DE PERDÓN, FALTA PERSONALIDAD, FURIA... FRACASO"
+                                linkName: "petalo-2/1/2/5", image: 'boton2', separation: true, titlePage: 'Emociones', title: "B 5",
+                                text: "FALTA DE PERDÓN. FALTA PERSONALIDAD. FURIA... FRACASO"
                             },
                             {
-                                linkName: "petalo-2/1/2/6", image: 'boton2', titlePage: 'Emociones', title: "B 6",
-                                text: "HABER HUMILLADO A ALGUIEN, HAMBRE DE ALGO,HORROR, IMPACIENCIA"
+                                linkName: "petalo-2/1/2/6", image: 'boton2', separation: true, titlePage: 'Emociones', title: "B 6",
+                                text: "HABER HUMILLADO A ALGUIEN. HAMBRE DE ALGO. HORROR. IMPACIENCIA"
                             },
                             {
-                                linkName: "petalo-2/1/2/7", image: 'boton2', titlePage: 'Emociones', title: "B 7",
-                                text: "IMPOTENCIA, INDECISIÓN, INDIFERENCIA, INDIGNADO"
+                                linkName: "petalo-2/1/2/7", image: 'boton2', separation: true, titlePage: 'Emociones', title: "B 7",
+                                text: "IMPOTENCIA. INDECISIÓN. INDIFERENCIA. INDIGNADO"
                             },
                         ]
                     },
                     {
                         linkName: "petalo-2/1/3", image: 'boton2', title: "C", index: 2, colorBorder: "green", subPetalos: [
                             {
-                                linkName: "petalo-2/1/3/1", image: 'boton2', titlePage: 'Emociones', title: "C 1",
-                                text: "INEFICAZ, INFERIORIDAD, INFLEXIBILIDAD, INSATISFECHO"
+                                linkName: "petalo-2/1/3/1", image: 'boton2', separation: true, titlePage: 'Emociones', title: "C 1",
+                                text: "INEFICAZ. INFERIORIDAD. INFLEXIBILIDAD. INSATISFECHO"
                             },
                             {
-                                linkName: "petalo-2/1/3/2", image: 'boton2', titlePage: 'Emociones', title: "C 2",
-                                text: "INSEGURIDAD, INTOLERANTE, IRA, LLANTO"
+                                linkName: "petalo-2/1/3/2", image: 'boton2', separation: true, titlePage: 'Emociones', title: "C 2",
+                                text: "INSEGURIDAD. INTOLERANTE. IRA. LLANTO"
                             },
                             {
-                                linkName: "petalo-2/1/3/3", image: 'boton2', titlePage: 'Emociones', title: "C 3",
-                                text: "LUJURIA, MELANCOLÍA, MIEDO ,NEGATIVIDAD"
+                                linkName: "petalo-2/1/3/3", image: 'boton2', separation: true, titlePage: 'Emociones', title: "C 3",
+                                text: "LUJURIA. MELANCOLÍA. MIEDO .NEGATIVIDAD"
                             },
                             {
-                                linkName: "petalo-2/1/3/4", image: 'boton2', titlePage: 'Emociones', title: "C 4",
-                                text: "NERVIOSISMO, OBSESIONADO, OBSTINACIÓN, ODIO"
+                                linkName: "petalo-2/1/3/4", image: 'boton2', separation: true, titlePage: 'Emociones', title: "C 4",
+                                text: "NERVIOSISMO. OBSESIONADO. OBSTINACIÓN. ODIO"
                             },
                             {
-                                linkName: "petalo-2/1/3/5", image: 'boton2', titlePage: 'Emociones', title: "C 5",
-                                text: "ORGULLO, PÁNICO, PENA, PERDIDO"
+                                linkName: "petalo-2/1/3/5", image: 'boton2', separation: true, titlePage: 'Emociones', title: "C 5",
+                                text: "ORGULLO. PÁNICO. PENA. PERDIDO"
                             },
                             {
-                                linkName: "petalo-2/1/3/6", image: 'boton2', titlePage: 'Emociones', title: "C 6",
-                                text: "PESAR, PESIMISTA, PREOCUPACIÓN, RABIA"
+                                linkName: "petalo-2/1/3/6", image: 'boton2', separation: true, titlePage: 'Emociones', title: "C 6",
+                                text: "PESAR. PESIMISTA. PREOCUPACIÓN. RABIA"
                             },
                             {
-                                linkName: "petalo-2/1/3/7", image: 'boton2', titlePage: 'Emociones', title: "C 7",
-                                text: "RECHAZO. RENCOR,REPRIMIDO ,RESENTIMIENTO"
+                                linkName: "petalo-2/1/3/7", image: 'boton2', separation: true, titlePage: 'Emociones', title: "C 7",
+                                text: "RECHAZO. RENCOR.REPRIMIDO .RESENTIMIENTO"
                             },
                         ]
                     },
                     {
                         linkName: "petalo-2/1/4", image: 'boton2', title: "D", index: 3, colorBorder: "yellow", subPetalos: [
                             {
-                                linkName: "petalo-2/1/4/1", image: 'boton2', titlePage: 'Emociones', title: "D 1",
-                                text: "SENTIMIENTO DE ABANDONO, SENTIMIENTO DE TRAICIÓN, SENTIR FALTA DE APOYO, SENTIR UNA PÉRDIDA EMOCIONAL"
+                                linkName: "petalo-2/1/4/1", image: 'boton2', separation: true, titlePage: 'Emociones', title: "D 1",
+                                text: "SENTIMIENTO DE ABANDONO. SENTIMIENTO DE TRAICIÓN. SENTIR FALTA DE APOYO. SENTIR UNA PÉRDIDA EMOCIONAL"
                             },
                             {
-                                linkName: "petalo-2/1/4/2", image: 'boton2', titlePage: 'Emociones', title: "D 2",
-                                text: "SENTIR UNA PÉRDIDA ESPIRITUAL, SENTIR UNA PERDIDA MATERIAL, SENTIR UNA PÉRDIDA MENTAL, SENTIRSE ACOMPLEJADO"
+                                linkName: "petalo-2/1/4/2", image: 'boton2', separation: true, titlePage: 'Emociones', title: "D 2",
+                                text: "SENTIR UNA PÉRDIDA ESPIRITUAL. SENTIR UNA PERDIDA MATERIAL. SENTIR UNA PÉRDIDA MENTAL. SENTIRSE ACOMPLEJADO"
                             },
                             {
-                                linkName: "petalo-2/1/4/3", image: 'boton2', titlePage: 'Emociones', title: "D 3",
-                                text: "SENTIRSE ARROGANTE, SENTIRSE DERROTADO, SENTIRSE EN DESVENTAJA,SENTIRSE ENGAÑADO"
+                                linkName: "petalo-2/1/4/3", image: 'boton2', separation: true, titlePage: 'Emociones', title: "D 3",
+                                text: "SENTIRSE ARROGANTE. SENTIRSE DERROTADO. SENTIRSE EN DESVENTAJA. SENTIRSE ENGAÑADO"
                             },
                             {
-                                linkName: "petalo-2/1/4/4", image: 'boton2', titlePage: 'Emociones', title: "D 4",
-                                text: "SENTIRSE HUMILLADO, SENTIRSE OFENDIDO, SHOCK, SOBERBIA"
+                                linkName: "petalo-2/1/4/4", image: 'boton2', separation: true, titlePage: 'Emociones', title: "D 4",
+                                text: "SENTIRSE HUMILLADO. SENTIRSE OFENDIDO. SHOCK. SOBERBIA"
                             },
                             {
-                                linkName: "petalo-2/1/4/5", image: 'boton2', titlePage: 'Emociones', title: "D 5",
-                                text: "SUFRIMIENTO, SUMISIÓN, SUSTO, TEMOR"
+                                linkName: "petalo-2/1/4/5", image: 'boton2', separation: true, titlePage: 'Emociones', title: "D 5",
+                                text: "SUFRIMIENTO. SUMISIÓN. SUSTO. TEMOR"
                             },
                             {
-                                linkName: "petalo-2/1/4/6", image: 'boton2', titlePage: 'Emociones', title: "D 6",
-                                text: "TERROR, TIMIDEZ, VENGANZA, VERGÜENZA"
+                                linkName: "petalo-2/1/4/6", image: 'boton2', separation: true, titlePage: 'Emociones', title: "D 6",
+                                text: "TERROR. TIMIDEZ. VENGANZA. VERGÜENZA"
                             },
                             {
-                                linkName: "petalo-2/1/4/7", image: 'boton2', titlePage: 'Emociones', title: "D 7",
-                                text: "VICTIMISMO, VULNERABLE"
+                                linkName: "petalo-2/1/4/7", image: 'boton2', separation: true, titlePage: 'Emociones', title: "D 7",
+                                text: "VICTIMISMO. VULNERABLE"
                             },
                         ]
                     }
@@ -1292,66 +1292,67 @@ const petalos = [
                     {
                         linkName: "petalo-3/11/1", image: 'boton3', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
-                                linkName: "petalo-3/11/1/1", image: 'boton3', titlePage: 'Creencias Limitantes', title: "A 1",
-                                text: "No quiero crecer, Nunca se lo que quiero de verdad, No sirvo para nada, No valgo nada."
+                                linkName: "petalo-3/11/1/1", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 1",
+                                text: "No quiero crecer. Nunca se lo que quiero de verdad. No sirvo para nada. No valgo nada.",
                             },
                             {
-                                linkName: "petalo-3/11/1/2", image: 'boton3', titlePage: 'Creencias Limitantes', title: "A 2",
+                                linkName: "petalo-3/11/1/2", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 2",
                                 text: "A la gente no le gusta estar conmigo. Si consigo lo que quiero perderá algo. Quien no sufre, no ama. Desear a alguien diferente a mi pareja es algo malo."
+                            
                             },
                             {
-                                linkName: "petalo-3/11/1/3", image: 'boton3', titlePage: 'Creencias Limitantes', title: "A 3",
-                                text: "No se puede tener mucho dinero y ser buena persona.  " +
+                                linkName: "petalo-3/11/1/3", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 3",
+                                text: "No se puede tener mucho dinero y ser buena persona. " +
                                     "Si sufro en la vida obtendré recompensa. " +
                                     "Las cosas hay que conseguir sin ayuda. " +
                                     "Nadie da algo sin esperar algo a cambio."
                             },
                             {
-                                linkName: "petalo-3/11/1/4", image: 'boton3', titlePage: 'Creencias Limitantes', title: "A 4",
+                                linkName: "petalo-3/11/1/4", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 4",
                                 text: "Hay algo más fuerte que yo que me impide avanzar. " +
                                     "La felicidad completa no existe siempre hay algo malo. " +
                                     "No soy lo suficientemente bueno. " +
                                     "No pertenezco a este clan."
                             },
                             {
-                                linkName: "petalo-3/11/1/5", image: 'boton3', titlePage: 'Creencias Limitantes', title: "A 5",
+                                linkName: "petalo-3/11/1/5", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 5",
                                 text: "No pertenezco a este lugar. " +
                                     "Ser un buen hijo o nieto, es aguantar a mis padres o a mis abuelos contra mis deseos " +
                                     "Para ser buen padre/madre, tengo que sufrir por mis hijos."
                             },
                             {
-                                linkName: "petalo-3/11/1/6", image: 'boton3', titlePage: 'Creencias Limitantes', title: "A 6",
+                                linkName: "petalo-3/11/1/6", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 6",
                                 text: "Los hombres son peligrosos. " +
                                     "Las mujeres son peligrosas. " +
                                     "Mi pareja me va a dejar tarde o temprano. " +
                                     "No merezco ser amado."
                             },
                             {
-                                linkName: "petalo-3/11/1/7", image: 'boton3', titlePage: 'Creencias Limitantes', title: "A 7",
+                                linkName: "petalo-3/11/1/7", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 7",
                                 text: "Siempre tengo mala suerte. " +
                                     "Me cuesta mucho esfuerzo aprender. " +
                                     "Mas vale malo conocido que arriesgarse a conocer alguien diferente. " +
                                     "La vida es dura y difícil."
                             },
                             {
-                                linkName: "petalo-3/11/1/8", image: 'boton3', titlePage: 'Creencias Limitantes', title: "A 8",
+                                linkName: "petalo-3/11/1/8", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 8",
                                 text: "Soy egoísta si pienso en mí. " +
                                     "Me da miedo fracasar. " +
                                     "Me da miedo el éxito. " +
                                     "No tengo fuerza de voluntad"
                             },
                             {
-                                linkName: "petalo-3/11/1/9", image: 'boton3', titlePage: 'Creencias Limitantes', title: "A 9",
+                                linkName: "petalo-3/11/1/9", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 9",
                                 text: "Si expreso mis emociones los demás verán que soy vulnerable. " +
                                     "Ya estoy viejo para aprender cosas nuevas. " +
                                     "Tomar decisiones es un proceso angustioso para mí. " +
                                     "No soy digno del amor de los demás."
                             },
                             {
-                                linkName: "petalo-3/11/1/10", image: 'boton3', titlePage: 'Creencias Limitantes', title: "A 10",
+                                linkName: "petalo-3/11/1/10", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 10",
                                 text: "No puedo bajar la guardia. " +
                                     "No está bien cometer errores. " +
-                                    "No puedo expresar lo que siento.  " +
+                                    "No puedo expresar lo que siento. " +
                                     "No puedo confiar en nadie"
                             },
                         ]
@@ -1359,74 +1360,74 @@ const petalos = [
                     {
                         linkName: "petalo-3/11/2", image: 'boton3', title: "B", index: 1, colorBorder: "yellow", subPetalos: [
                             {
-                                linkName: "petalo-3/11/2/1", image: 'boton3', titlePage: 'Creencias Limitantes', title: "B 1",
-                                text: "Tener pareja es peligroso para mí.  " +
-                                    "Tener hijos es peligroso para mí.  " +
-                                    "Las cosas que me pasan no son culpa mía.  " +
+                                linkName: "petalo-3/11/2/1", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 1",
+                                text: "Tener pareja es peligroso para mí. " +
+                                    "Tener hijos es peligroso para mí. " +
+                                    "Las cosas que me pasan no son culpa mía. " +
                                     "Tengo que agradar a mi pareja como sea."
                             },
                             {
-                                linkName: "petalo-3/11/2/2", image: 'boton3', titlePage: 'Creencias Limitantes', title: "B 2",
-                                text: "Sin un diagnóstico de lo que tengo no podrán curarme.  " +
-                                    "Mi problema de salud o situación es más importante que la de los demás.  " +
-                                    "No merezco dar/recibir amor.  " +
+                                linkName: "petalo-3/11/2/2", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 2",
+                                text: "Sin un diagnóstico de lo que tengo no podrán curarme. " +
+                                    "Mi problema de salud o situación es más importante que la de los demás. " +
+                                    "No merezco dar/recibir amor. " +
                                     "Es inútil querer cambiar las cosas siempre van a ser así."
                             },
                             {
-                                linkName: "petalo-3/11/2/3", image: 'boton3', titlePage: 'Creencias Limitantes', title: "B 3",
-                                text: "Debo sufrir y sacrificarme por los demás.  " +
-                                    "No soy capaz de digerir las cosas malas que me pasan.  " +
-                                    "La gente solo quiere estar conmigo por algún interés malo.  " +
-                                    " Si digo no, la gente no me va querer.  "
+                                linkName: "petalo-3/11/2/3", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 3",
+                                text: "Debo sufrir y sacrificarme por los demás. " +
+                                    "No soy capaz de digerir las cosas malas que me pasan. " +
+                                    "La gente solo quiere estar conmigo por algún interés malo. " +
+                                    " Si digo no, la gente no me va querer. "
                             },
                             {
-                                linkName: "petalo-3/11/2/4", image: 'boton3', titlePage: 'Creencias Limitantes', title: "B 4",
-                                text: "La solución a mis problemas es responsabilidad de otros.  " +
-                                    "Lo que yo quiero no importa.  " +
-                                    "Yo soy así no quiero cambiar.  " +
+                                linkName: "petalo-3/11/2/4", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 4",
+                                text: "La solución a mis problemas es responsabilidad de otros. " +
+                                    "Lo que yo quiero no importa. " +
+                                    "Yo soy así no quiero cambiar. " +
                                     "La mejor defensa es un ataque."
                             },
                             {
-                                linkName: "petalo-3/11/2/5", image: 'boton3', titlePage: 'Creencias Limitantes', title: "B 5",
-                                text: "Es inútil esforzarme no lo voy a conseguir.  " +
-                                    "Tengo que conformarme con lo que tengo.  " +
-                                    "Yo no puedo ser.  " +
+                                linkName: "petalo-3/11/2/5", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 5",
+                                text: "Es inútil esforzarme no lo voy a conseguir. " +
+                                    "Tengo que conformarme con lo que tengo. " +
+                                    "Yo no puedo ser. " +
                                     "Yo no puedo tener"
                             },
                             {
-                                linkName: "petalo-3/11/2/6", image: 'boton3', titlePage: 'Creencias Limitantes', title: "B 6",
-                                text: "No tengo tiempo para nada.  " +
-                                    "Mi felicidad depende de los demás.  " +
-                                    "Es peligro relacionarse con desconocido.  " +
+                                linkName: "petalo-3/11/2/6", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 6",
+                                text: "No tengo tiempo para nada. " +
+                                    "Mi felicidad depende de los demás. " +
+                                    "Es peligro relacionarse con desconocido. " +
                                     "No soy capaz de apartarme de personas que me perjudican."
                             },
                             {
-                                linkName: "petalo-3/11/2/7", image: 'boton3', titlePage: 'Creencias Limitantes', title: "B 7",
-                                text: "La gente me usa y luego me abandona.  " +
-                                    "Cuanto más difícil es algo mayor es la recompensa.  " +
-                                    "Hago cosas por todo el mundo y nadie me lo agradece como yo merezco.  " +
+                                linkName: "petalo-3/11/2/7", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 7",
+                                text: "La gente me usa y luego me abandona. " +
+                                    "Cuanto más difícil es algo mayor es la recompensa. " +
+                                    "Hago cosas por todo el mundo y nadie me lo agradece como yo merezco. " +
                                     "Solo debo portarme bien, con quien se porta bien conmigo."
                             },
                             {
-                                linkName: "petalo-3/11/2/8", image: 'boton3', titlePage: 'Creencias Limitantes', title: "B 8",
-                                text: "Dependo del que dirán y necesito aprobación.  " +
-                                    "La gente no cambia.  " +
-                                    "Hay que analizar todo muy bien antes de dar el primer paso.  " +
+                                linkName: "petalo-3/11/2/8", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 8",
+                                text: "Dependo del que dirán y necesito aprobación. " +
+                                    "La gente no cambia. " +
+                                    "Hay que analizar todo muy bien antes de dar el primer paso. " +
                                     "No hago nada bien."
                             },
                             {
-                                linkName: "petalo-3/11/2/9", image: 'boton3', titlePage: 'Creencias Limitantes', title: "B 9",
-                                text: "No quiero destacar para no ser criticado.  " +
-                                    "No merezco vivir en la vida con armonía/plenitud.  " +
-                                    "No se puede ser espiritual y no meditar.  " +
-                                    "Tener confianza en uno mismo te lleva a la arrogancia.  " +
+                                linkName: "petalo-3/11/2/9", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 9",
+                                text: "No quiero destacar para no ser criticado. " +
+                                    "No merezco vivir en la vida con armonía/plenitud. " +
+                                    "No se puede ser espiritual y no meditar. " +
+                                    "Tener confianza en uno mismo te lleva a la arrogancia. " +
                                     "No puedo lograr las metas que me eh fijado."
                             },
                             {
-                                linkName: "petalo-3/11/2/10", image: 'boton3', titlePage: 'Creencias Limitantes', title: "B 10",
-                                text: "No valgo como padre/madre.  " +
-                                    "No soy capaz de decir mi opinión frente a un grupo de personas.  " +
-                                    "No soy capaz de corregir mis errores y pedir disculpas.  " +
+                                linkName: "petalo-3/11/2/10", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 10",
+                                text: "No valgo como padre/madre. " +
+                                    "No soy capaz de decir mi opinión frente a un grupo de personas. " +
+                                    "No soy capaz de corregir mis errores y pedir disculpas. " +
                                     "El dinero es difícil de ganar y fácil de perder"
                             },
                         ]
@@ -3139,7 +3140,7 @@ const petalos = [
                                 ],
                             },
 
-                            {linkName: "petalo-5/7/2", image: 'boton5', titlePage: "VIDAS PASADAS", index: 1, colorBorder: "green", title: "B", subPetalos: [
+                            {linkName: "petalo-5/7/2", image: 'boton5', titlePage: "¿QUE SUCEDIO?", index: 1, colorBorder: "green", title: "B", subPetalos: [
                                     {linkName: "petalo-5/7/2/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO? B 1", text: "Abandono/Traicion"},
                                     {linkName: "petalo-5/7/2/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO? B 2", text: "Ruptura/Separación"},
                                     {linkName: "petalo-5/7/2/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO? B 3", text: "Mentira"},
@@ -3169,7 +3170,7 @@ const petalos = [
                                     {linkName: "petalo-5/7/2/27", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO? B 27", text: "Tortura"},
                                 ],
                             },
-                            {linkName: "petalo-5/7/3", image: 'boton5', titlePage: "VIDAS PASADAS", index: 2, colorBorder: "yellow", title: "C", subPetalos: [
+                            {linkName: "petalo-5/7/3", image: 'boton5', titlePage: "BLOQUEO EN LA ACTUALIDAD A", index: 2, colorBorder: "yellow", title: "C", subPetalos: [
                                     {linkName: "petalo-5/7/3/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "BLOQUEO EN LA ACTUALIDAD C 1", text: "Amor"},
                                     {linkName: "petalo-5/7/3/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "BLOQUEO EN LA ACTUALIDAD C 2", text: "Abundancia"},
                                     {linkName: "petalo-5/7/3/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "BLOQUEO EN LA ACTUALIDAD C 3", text: "Humor/Alegria"},
@@ -3193,7 +3194,7 @@ const petalos = [
                                     {linkName: "petalo-5/7/3/21", image: 'boton5', titlePage: "VIDAS PASADAS", title: "BLOQUEO EN LA ACTUALIDAD C 21", text: "Empatía"},
                                 ],
                             },
-                            {linkName: "petalo-5/7/4", image: 'boton5', titlePage: "VIDAS PASADAS", index: 3, colorBorder: "yellow", title: "D", subPetalos: [
+                            {linkName: "petalo-5/7/4", image: 'boton5', titlePage: "BLOQUEO EN LA ACTUALIDAD B", index: 3, colorBorder: "yellow", title: "D", subPetalos: [
                                     {linkName: "petalo-5/7/4/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "BLOQUEO EN LA ACTUALIDAD D 1", text: "Capacidad de escuchar"},
                                     {linkName: "petalo-5/7/4/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "BLOQUEO EN LA ACTUALIDAD D 2", text: "Honestidad"},
                                     {linkName: "petalo-5/7/4/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "BLOQUEO EN LA ACTUALIDAD D 3", text: "Sinceridad"},
