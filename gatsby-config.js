@@ -35,7 +35,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-netlify`,
     },
-    `gatsby-plugin-offline`
+    {
+     resolve: `gatsby-plugin-offline`,
+     options: {
+         precachePages: [`/circulo-base/`, `/circulo-base/*`],
+     }
+    }
 
   ],
 };
