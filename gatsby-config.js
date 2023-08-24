@@ -35,7 +35,7 @@ module.exports = {
     {
      resolve: `gatsby-plugin-offline`,
      options: {
-         precachePages: [`/circulo-base/`, `/circulo-base/*`, `/intro-text`],
+         precachePages: [`/circulo-base/`, `/circulo-base/*`, `/intro-text/`],
         workboxConfig: {
           globPatterns: ['**/src/images/*', '**/static/*']
         }
