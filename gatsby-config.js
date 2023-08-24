@@ -39,7 +39,13 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
     },
     {
-      resolve: 'gatsby-plugin-offline'
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/*`],
+        workboxConfig: {
+          globPatterns: ['**/images/*','**/static/*']
+        }
+      },
     },
   ],
 };
