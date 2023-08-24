@@ -28,6 +28,7 @@ exports.createPages = async ({ actions }) => {
                         desc: petalo.text,
                         image: petalo.image,
                         imageBody: petalo.imageBody,
+                        separation: petalo.separation,
                     },
                 });
                 createdPages.push(pagePath);

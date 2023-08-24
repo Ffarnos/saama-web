@@ -46,72 +46,76 @@ const ContainerInLine = styled.div`
 const Button = styled.div`
   width: 0;
   height: 0;
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent;
+  user-select: none;
+  cursor: pointer;
+`;
+
+const ButtonInLine = styled.div`
+  width: 0;
+  height: 0;
   border-top: 25px solid transparent;
   border-bottom: 25px solid transparent;
   user-select: none;
   cursor: pointer;
 `;
 
-
-export const NextButtonInLine = styled(Button)`
-  border-left: 30px solid ${props => props.color};
+export const NextButtonInLine = styled(ButtonInLine)`
+  border-left: 35px solid ${props => props.color};
 `;
 
-export const BackButtonInLine = styled(Button)`
-  border-right: 30px solid ${props => props.color};
+export const BackButtonInLine = styled(ButtonInLine)`
+  border-right: 35px solid ${props => props.color};
 `;
 
 const ButtonCustom = styled(Button)`
+
   @media (max-width: 370px) {
-    border-top: 9px solid transparent;
-    border-bottom: 9px solid transparent;
+    border-top: 23px solid transparent;
+    border-bottom: 23px solid transparent;
   }
-
+  
   @media (max-width: 410px) and (min-width: 370px) {
-    border-top: 11px solid transparent;
-    border-bottom: 11px solid transparent;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
   }
-
-  @media (max-width: 465px) and (min-width: 410px) {
-    border-top: 14px solid transparent;
-    border-bottom: 14px solid transparent;
-  }
-
-  @media (max-width: 540px) and (min-width: 465px) {
-    border-top: 17px solid transparent;
-    border-bottom: 17px solid transparent;
+  
+  @media (max-width: 620px) and (min-width: 410px) {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
   }
 `;
 
 export const BackButton = styled(ButtonCustom)`
-  border-right: 30px solid ${props => props.color};
+  border-right: 50px solid ${props => props.color};
   
-  @media (max-width: 465px) {
-    border-right: 15px solid ${props => props.color};
+  @media (max-width: 370px) {
+    border-right: 33px solid ${props => props.color};
   }
 
-  @media (max-width: 540px) and (min-width: 465px) {
-    border-right: 20px solid ${props => props.color};
+  @media (max-width: 410px) and (min-width: 370px) {
+    border-right: 35px solid ${props => props.color};
   }
 
-  @media (max-width: 620px) and (min-width: 540px) {
-    border-right: 25px solid ${props => props.color};
+  @media (max-width: 620px) and (min-width: 410px) {
+    border-right: 40px solid ${props => props.color};
   }
 `;
 
 export const NextButton = styled(ButtonCustom)`
-  border-left: 30px solid ${props => props.color};
+  border-left: 50px solid ${props => props.color};
+
+  @media (max-width: 370px) {
+    border-left: 33px solid ${props => props.color};
+  }
   
-  @media (max-width: 465px) {
-    border-left: 15px solid ${props => props.color};
+  @media (max-width: 410px) and (min-width: 370px) {
+    border-left: 35px solid ${props => props.color};
   }
 
-  @media (max-width: 540px) and (min-width: 465px) {
-    border-left: 20px solid ${props => props.color};
-  }
-
-  @media (max-width: 620px) and (min-width: 540px) {
-    border-left: 25px solid ${props => props.color};
+  @media (max-width: 620px) and (min-width: 410px) {
+    border-left: 40px solid ${props => props.color};
   }
 `;
 

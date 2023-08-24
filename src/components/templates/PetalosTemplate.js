@@ -45,10 +45,10 @@ const PetalosTemplate = ({ pageContext }) => {
         <Container>
             <NoCircleContainer>
                 <Title scale={1} color={"#fdf8f8"}>
-                    {titlePage}
+                    {titlePage ? titlePage.toUpperCase() : ""}
                 </Title>
                 <Title scale={0.8} color={"#fdf8f8"}>
-                    {title}
+                    {title ? title.toUpperCase() : ""}
                 </Title>
                 <ContainerHorizontal>
                 <ResponsiveText scale={0.6} color={"#fdf8f8"}>
@@ -92,7 +92,7 @@ const PetalosTemplate = ({ pageContext }) => {
                                 navigate("/circulo-base/" + linkName + "/" + numberFinal);
                             return prevInput;
                         });
-                    }, 2000);
+                    }, 700);
                 }}
             />
             <FinishButtonResponsive/>

@@ -171,27 +171,27 @@ const ButtonBig = styled.div`
   }
 
   @media (max-width: 370px) {
+    width: 90px;
+    height: 90px;
+  }
+  @media (max-width: 410px) and (min-width: 370px) {
     width: 120px;
     height: 120px;
   }
-  @media (max-width: 410px) and (min-width: 370px) {
+  
+  @media (max-width: 465px) and (min-width: 410px) {
     width: 140px;
     height: 140px;
   }
-  
-  @media (max-width: 465px) and (min-width: 410px) {
+
+  @media (max-width: 540px) and (min-width: 465px) {
     width: 160px;
     height: 160px;
   }
 
-  @media (max-width: 540px) and (min-width: 465px) {
+  @media (max-width: 620px) and (min-width: 540px) {
     width: 180px;
     height: 180px;
-  }
-
-  @media (max-width: 620px) and (min-width: 540px) {
-    width: 200px;
-    height: 200px;
   }
   
   
@@ -226,8 +226,8 @@ const Button = styled.div`
   @media (max-width: 370px) {
     ${props => {
       const px = 120;
-      const top = (-85 / 2) + calculatePositionCos(props.angle, px);
-      const sin = (-85 / 2) + calculatePositionSin(props.angle, px);
+      const top = (-40 / 2) + calculatePositionCos(props.angle, px);
+      const sin = (-40 / 2) + calculatePositionSin(props.angle, px);
       return `
       top: ${top}px;
       left: ${sin}px;
@@ -240,8 +240,8 @@ const Button = styled.div`
   @media (max-width: 410px) and (min-width: 370px) {
     ${props => {
       const px = 140;
-      const top = (-85 / 2) + calculatePositionCos(props.angle, px);
-      const sin = (-85 / 2) + calculatePositionSin(props.angle, px);
+      const top = (-60 / 2) + calculatePositionCos(props.angle, px);
+      const sin = (-60 / 2) + calculatePositionSin(props.angle, px);
       return `
       top: ${top}px;
       left: ${sin}px;
@@ -254,8 +254,8 @@ const Button = styled.div`
   @media (max-width: 465px) and (min-width: 410px) {
     ${props => {
       const px = 160;
-      const top = (-85 / 2) + calculatePositionCos(props.angle, px);
-      const sin = (-85 / 2) + calculatePositionSin(props.angle, px);
+      const top = (-60 / 2) + calculatePositionCos(props.angle, px);
+      const sin = (-60 / 2) + calculatePositionSin(props.angle, px);
       return `
       top: ${top}px;
       left: ${sin}px;
@@ -268,8 +268,8 @@ const Button = styled.div`
   @media (max-width: 540px) and (min-width: 465px) {
     ${props => {
       const px = 180;
-      const top = (-85 / 2) + calculatePositionCos(props.angle, px);
-      const sin = (-85 / 2) + calculatePositionSin(props.angle, px);
+      const top = (-80 / 2) + calculatePositionCos(props.angle, px);
+      const sin = (-80 / 2) + calculatePositionSin(props.angle, px);
       return `
       top: ${top}px;
       left: ${sin}px;
@@ -282,8 +282,8 @@ const Button = styled.div`
   @media (max-width: 620px) and (min-width: 540px){
     ${props => {
       const px = 210;
-      const top = (-85 / 2) + calculatePositionCos(props.angle, px);
-      const sin = (-85 / 2) + calculatePositionSin(props.angle, px);
+      const top = (-90 / 2) + calculatePositionCos(props.angle, px);
+      const sin = (-90 / 2) + calculatePositionSin(props.angle, px);
       return `
       top: ${top}px;
       left: ${sin}px;
