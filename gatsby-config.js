@@ -36,6 +36,7 @@ module.exports = {
         theme_color: '#100e17',
         display: 'standalone',
         icon: 'src/images/icon.png',
+        cache_busting_mode: 'none'
       },
     },
     'gatsby-plugin-sharp',
