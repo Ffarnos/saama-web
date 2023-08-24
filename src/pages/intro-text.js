@@ -21,7 +21,10 @@ const IntroText = () => {
                     break;
                 case 'ArrowLeft':
                     setNumber((prev) => {
-                        if (prev === 1) return 1;
+                        if (prev === 1) {
+                            navigate("/")
+                            return 1;
+                        }
                         return prev - 1;
                     })
                     break;
