@@ -33,14 +33,12 @@ module.exports = {
       __key: 'images',
     },
     {
-      resolve: `gatsby-plugin-netlify`,
-    },
-    {
      resolve: `gatsby-plugin-offline`,
      options: {
          precachePages: [`/circulo-base/`, `/circulo-base/*`],
      }
-    }
+    },
+    `gatsby-plugin-netlify`
 
   ],
 };
