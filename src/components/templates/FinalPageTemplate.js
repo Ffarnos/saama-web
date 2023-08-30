@@ -35,8 +35,8 @@ const FinalPageTemplate = ({ pageContext }) => {
     let textComponents;
     if (separation) {
         textSeparate = desc.split(". ");
-        textComponents = textSeparate.map((sentence) => (
-            <ResponsiveText scale={0.5} color={"white"}>
+        textComponents = textSeparate.map((sentence, index) => (
+            <ResponsiveText key={index} scale={0.5} color={"white"}>
                 {sentence}
             </ResponsiveText>
         ));
@@ -66,12 +66,16 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   height: 100%;
 `;
 
 const Container = styled.div`
-    margin-top: auto;
+  margin-top: auto;
+
+  @media (max-width: 768px) { /* Ajusta el valor para dispositivos móviles */
+    padding-bottom: 100px; /* Ajusta este valor según tus necesidades */
+  }
 `;
+
 
 export default FinalPageTemplate;

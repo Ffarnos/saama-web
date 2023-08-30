@@ -92,7 +92,7 @@ const PetalosTemplate = ({ pageContext }) => {
                                 navigate("/circulo-base/" + linkName + "/" + numberFinal);
                             return prevInput;
                         });
-                    }, 700);
+                    }, 500);
                 }}
             />
             <FinishButtonResponsive/>

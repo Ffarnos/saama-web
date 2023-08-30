@@ -80,6 +80,7 @@ export const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  
   overflow-y: scroll;
   &::-webkit-scrollbar {
     width: 8px;
