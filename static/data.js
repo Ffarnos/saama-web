@@ -1009,7 +1009,7 @@ const petalos = [
             },
             {
                 linkName: "petalo-3/7", image: 'boton3', title: "Conducta Mental Positiva", subPetalos: [
-                    { linkName: "petalo-3/7/1", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "GENEROSIDAD", text: "" },
+                    { linkName: "petalo-3/7/1", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "GENEROSO", text: "" },
                     { linkName: "petalo-3/7/2", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "HONESTO", text: "" },
                     { linkName: "petalo-3/7/3", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "HONRADO", text: "" },
                     { linkName: "petalo-3/7/4", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "HUMILDE", text: "" },
@@ -3274,7 +3274,7 @@ const petalos = [
                                     {linkName: "petalo-5/9/2/10", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 10", text: "Se autentico"},
                                     {linkName: "petalo-5/9/2/11", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 11", text: "Tienes que decidir"},
                                     {linkName: "petalo-5/9/2/12", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 12", text: "Manten la mente abierta"},
-                                    {linkName: "petalo-5/9/2/13", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 13", text: "No ganar dinero"},
+                                    {linkName: "petalo-5/9/2/13", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 13", text: "Acepta los desafíos"},
                                     {linkName: "petalo-5/9/2/14", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 14", text: "Incorpora conocimiento"},
                                     {linkName: "petalo-5/9/2/15", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 15", text: "Se positivo"},
                                     {linkName: "petalo-5/9/2/16", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 16", text: "Busca el equilibrio"},

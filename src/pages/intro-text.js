@@ -13,30 +13,18 @@ const IntroText = () => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             switch (event.key) {
-                case 'Enter':
-                    navigate("/circulo-base")
-                    break;
                 case 'Backspace':
                     navigate("/")
                     break;
                 case 'ArrowLeft':
-                    setNumber((prev) => {
-                        if (prev === 1) {
-                            navigate("/")
-                            return 1;
-                        }
-                        return prev - 1;
-                    })
+                    BackFunction({number, setNumber});
                     break;
                 case 'ArrowRight':
-                    setNumber((prev) => {
-                        if (prev === 6) {
-                            navigate("/circulo-base")
-                            return 6;
-                        }
-                        return prev + 1;
-                    })
+                    NextFunction({number, setNumber});
                     break;
+                default:
+                    if (event.key === 'Enter')
+                        navigate("/circulo-base")
             }
         };
 
@@ -45,19 +33,53 @@ const IntroText = () => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, []);
+    }, [number]);
     return <>
         {getText(number)}
-        <Navigate number={number} setNumber={setNumber} max={5}/>
+        <Navigate number={number} setNumber={setNumber}/>
     </>
 }
 
-const Navigate = ({number, setNumber, max}) => <Container>
-    <BackButton color="black" onClick={()=> setNumber((prev) => prev - 1)}/>
-    <NextButton color="black" onClick={()=>
-        number + 1 === max ? navigate('/circulo-base') : setNumber((prev) => prev + 1)
+const Navigate = ({number, setNumber}) => <Container>
+    <BackButton color="black"
+                onClick={()=> BackFunction({number,setNumber})}
+    />
+    <NextButton color="black"
+                onClick={()=> NextFunction({number, setNumber})
     }/>
 </Container>
+
+const NextFunction = ({number, setNumber}) => {
+    switch (number) {
+        case 1:
+            return setNumber((prev) => prev + 1);
+        case 2:
+            return setNumber((prev) => prev + 1);
+        case 3:
+            return setNumber((prev) => prev + 1);
+        case 4:
+            return setNumber((prev) => prev + 1);
+        case 5:
+            return setNumber((prev) => prev + 1);
+        default:
+            return navigate('/circulo-base');
+    }
+}
+
+const BackFunction = ({number, setNumber}) => {
+    switch (number) {
+        case 2:
+            return setNumber((prev) => prev - 1);
+        case 3:
+            return setNumber((prev) => prev - 1);
+        case 4:
+            return setNumber((prev) => prev - 1);
+        case 5:
+            return setNumber((prev) => prev - 1);
+        default:
+            return navigate('/');
+    }
+}
 
 const Container = styled.div`
     display: flex;
