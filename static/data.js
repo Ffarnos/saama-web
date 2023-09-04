@@ -10,7 +10,7 @@ const petalos = [
                         text: "Aquí se debe integrar, esta integración lleva a un estado holístico de amor profundo, aceptación total, armonía interior y exterior. Esto sucede cuando la persona ha perdido la conexión con su estado puro de paz interna."
                     },
                     {
-                        linkName: "petalo-1/1/2", image: 'boton1', titlePage: 'Nucleo de Amor', title: "Conecto con Amorr",
+                        linkName: "petalo-1/1/2", image: 'boton1', titlePage: 'Nucleo de Amor', title: "Conecto con Amor",
                         text: "Este punto nos lleva a conectar con la esencia pura y vibración más fuerte, 'el amor incondicional'."
                     },
                     {
@@ -1317,7 +1317,7 @@ const petalos = [
                             {
                                 linkName: "petalo-3/11/1/5", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 5",
                                 text: "No pertenezco a este lugar. " +
-                                    "Ser un buen hijo o nieto, es aguantar a mis padres o a mis abuelos contra mis deseos " +
+                                    "Ser un buen hijo o nieto, es aguantar a mis padres o a mis abuelos contra mis deseos. " +
                                     "Para ser buen padre/madre, tengo que sufrir por mis hijos."
                             },
                             {
@@ -1534,207 +1534,207 @@ const petalos = [
                             }
                         ]
                     },
-                    {linkName: "petalo-4/1/2", image: 'boton4', titlePage: "NUTRICIÓN", title: "AMINOÁCIDOS", subPetalos: [
+                    {linkName: "petalo-4/1/2", image: 'boton4', titlePage: "NUTRICIÓN", title: "MINERALES & OLIGOELEMENTOS", subPetalos: [
                             {
                                 linkName: "petalo-4/1/2/1",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Hierro",
                                 text: "El hierro es un mineral esencial para el cuerpo humano. Es necesario para la producción de hemoglobina, la proteína en los glóbulos rojos que transporta el oxígeno desde los pulmones hacia el resto del cuerpo. También desempeña un papel en la producción de energía y el funcionamiento del sistema inmunológico."
                             },
                             {
                                 linkName: "petalo-4/1/2/2",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Calcio",
                                 text: "El calcio es un mineral que se encuentra en grandes cantidades en los huesos y los dientes. Juega un papel fundamental en la formación y mantenimiento de la estructura ósea, pero también es necesario para la contracción muscular, la coagulación sanguínea y la transmisión de señales nerviosas."
                             },
                             {
                                 linkName: "petalo-4/1/2/3",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Zinc",
                                 text: "El zinc es un oligoelemento esencial para el organismo. Participa en más de 300 reacciones enzimáticas y desempeña un papel importante en el crecimiento y desarrollo, la función inmunológica, la cicatrización de heridas y la síntesis de proteínas y ADN."
                             },
                             {
                                 linkName: "petalo-4/1/2/4",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Magnesio",
                                 text: "El magnesio es un mineral que desempeña un papel esencial en numerosas funciones biológicas. Contribuye al mantenimiento de la salud ósea, la función muscular y nerviosa, la síntesis de proteínas y el metabolismo energético."
                             },
                             {
                                 linkName: "petalo-4/1/2/5",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Selenio",
                                 text: "El selenio es un oligoelemento que actúa como antioxidante y es esencial para el funcionamiento normal del sistema inmunológico. También juega un papel en la función tiroidea y la salud reproductiva."
                             },
                             {
                                 linkName: "petalo-4/1/2/6",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Potasio",
                                 text: "El potasio es un mineral esencial para el organismo que desempeña diversas funciones importantes. Se encuentra principalmente dentro de las células y es necesario para mantener el equilibrio de líquidos, el funcionamiento adecuado de las células nerviosas y musculares, y la regulación de la presión arterial."
                             },
                             {
                                 linkName: "petalo-4/1/2/7",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Sodio",
                                 text: "El sodio es un mineral esencial que desempeña un papel importante en el equilibrio de líquidos, la presión arterial, el funcionamiento muscular y nervioso, la absorción de nutrientes y el equilibrio ácido-base del cuerpo. Sin embargo, el consumo excesivo de sodio puede ser perjudicial para la salud, especialmente en personas con hipertensión arterial o problemas renales."
                             },
                             {
                                 linkName: "petalo-4/1/2/8",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Fósforo",
                                 text: "El fósforo es un mineral esencial presente en el cuerpo que desempeña roles importantes en la salud ósea, el metabolismo energético, la función celular, el equilibrio ácido-base y el funcionamiento del sistema nervioso."
                             },
                             {
                                 linkName: "petalo-4/1/2/9",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Manganeso",
                                 text: "El manganeso es un mineral esencial que desempeña roles importantes en el cuerpo humano. Actúa como antioxidante, es necesario para el metabolismo de los nutrientes, la formación de huesos y tejidos conectivos, la función del sistema nervioso y la regulación del azúcar en sangre."
                             },
                             {
                                 linkName: "petalo-4/1/2/10",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Yodo",
                                 text: "El yodo es un mineral esencial para el funcionamiento adecuado del cuerpo humano. Es necesario para la producción de hormonas tiroideas, el desarrollo y crecimiento adecuados, y la prevención de trastornos tiroideos. Se encuentra en alimentos marinos y se puede obtener a través de la sal yodada y suplementos."
                             },
                             {
                                 linkName: "petalo-4/1/2/11",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Cobre",
                                 text: "El cobre es un mineral esencial para el cuerpo humano. Participa en el metabolismo de la energía, la formación de tejidos conectivos, la función inmunológica y actúa como antioxidante. También está involucrado en la formación de pigmentos y la absorción de hierro."
                             },
                             {
                                 linkName: "petalo-4/1/2/12",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Selenio",
                                 text: "El selenio es un mineral esencial que desempeña roles importantes en el cuerpo humano. Actúa como antioxidante, es necesario para la función tiroidea, el sistema inmunológico, la salud cardiovascular y se ha asociado con la protección contra el cáncer."
                             },
                             {
                                 linkName: "petalo-4/1/2/13",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Cromo",
                                 text: "El cromo es un mineral esencial que desempeña un papel importante en el metabolismo de la glucosa, el control del apetito y el peso corporal, el metabolismo de lípidos, la formación de tejido magro y la función cerebral."
                             },
                             {
                                 linkName: "petalo-4/1/2/14",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Flúor",
                                 text: "El flúor es un elemento químico que fortalece los dientes y previene la caries dental. También ayuda en la formación y mineralización de huesos. Se encuentra en el agua, el suelo y algunos alimentos."
                             },
                             {
                                 linkName: "petalo-4/1/2/15",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Cobalto",
                                 text: "El cobalto es un elemento químico presente en la vitamina B12 y tiene diversas aplicaciones industriales y tecnológicas. Se utiliza en la producción de superaleaciones, baterías recargables de iones de litio y como pigmento para obtener colores azules. Sin embargo, la exposición excesiva al cobalto puede ser tóxica."
                             },
                             {
                                 linkName: "petalo-4/1/2/16",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Níquel",
                                 text: "El níquel es un elemento químico utilizado en diversas aplicaciones industriales, como la producción de acero inoxidable y aleaciones no ferrosas. También se utiliza en baterías recargables y puede causar alergias en algunas personas. Es importante tomar precauciones al trabajar con níquel debido a su toxicidad en altas concentraciones. Se encuentra en minerales y en pequeñas cantidades en algunos alimentos."
                             },
                             {
                                 linkName: "petalo-4/1/2/17",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Silicio",
                                 text: "El silicio es un elemento químico ampliamente utilizado en la industria electrónica como semiconductor. También se encuentra en la naturaleza en minerales como el cuarzo y se utiliza en la fabricación de vidrio y cerámicas. Aunque no es considerado un nutriente esencial para los seres humanos, desempeña un papel en la biología de algunos organismos."
                             },
                             {
                                 linkName: "petalo-4/1/2/18",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Vanadio",
                                 text: "El vanadio es un metal utilizado en la producción de acero especial y en catalizadores químicos. Se ha identificado como un elemento esencial en algunas formas de vida y puede tener un papel en el metabolismo de los lípidos y la regulación de la glucosa. Aunque se considera de baja toxicidad, se deben seguir precauciones de seguridad al manipularlo. Se encuentra en la naturaleza en minerales y en pequeñas cantidades en algunos alimentos."
                             },
                             {
                                 linkName: "petalo-4/1/2/19",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Arsénico",
                                 text: "El arsénico es un elemento químico altamente tóxico que puede causar graves problemas de salud. Se encuentra en el medio ambiente de forma natural y puede ser liberado por actividades humanas. La exposición al arsénico puede ocurrir a través del agua, alimentos y aire contaminados."
                             },
                             {
                                 linkName: "petalo-4/1/2/20",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Estaño",
                                 text: "El estaño es un metal plateado y maleable utilizado en diversas aplicaciones industriales, como soldaduras, revestimientos y envases de alimentos. No es tóxico en su forma metálica, pero algunos compuestos pueden serlo."
                             },
                             {
                                 linkName: "petalo-4/1/2/21",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Boro",
                                 text: "El boro es un metaloide utilizado en diversas aplicaciones industriales, como la fabricación de vidrios especiales y cerámicas. Es esencial para la salud de las plantas y puede tener beneficios para la salud humana. Se encuentra en la naturaleza y se encuentra en pequeñas cantidades en alimentos. Sin embargo, la exposición excesiva puede ser tóxica."
                             },
                             {
                                 linkName: "petalo-4/1/2/22",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Litio",
                                 text: "El litio es un metal alcalino utilizado en la producción de baterías recargables, en la fabricación de vidrios y cerámicas, y como medicamento para trastornos del estado de ánimo. Se encuentra en la naturaleza en minerales y salmueras, y su extracción se realiza principalmente en salares y yacimientos de litio. Es importante tener precaución con su uso, ya que puede ser tóxico en altas concentraciones."
                             },
                             {
                                 linkName: "petalo-4/1/2/23",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Sulfuro",
                                 text: "El sulfuro es un compuesto químico formado por átomos de azufre y otro elemento o radical. Tiene diversos usos industriales y aplicaciones en la fabricación de productos químicos y materiales. También tiene importancia biológica en sistemas vivos, pero algunos sulfuros pueden ser tóxicos."
                             },
                             {
                                 linkName: "petalo-4/1/2/24",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Germanio",
                                 text: "El germanio es un metaloide utilizado en la fabricación de dispositivos semiconductores y en aplicaciones ópticas. No es considerado esencial para los organismos vivos, pero se ha investigado su posible beneficio para la salud. Se encuentra en pequeñas cantidades en la naturaleza y se extrae como subproducto de la producción de zinc y cobre."
                             },
                             {
                                 linkName: "petalo-4/1/2/25",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Titanio",
                                 text: "El titanio es un metal de transición utilizado en diversas industrias debido a su alta resistencia, baja densidad y resistencia a la corrosión. Se emplea en la industria aeroespacial, química, médica y deportiva. Es biocompatible y se utiliza en implantes médicos y odontológicos. Se encuentra en minerales y se extrae mediante procesos de minería. El titanio es seguro, pero se debe tener precaución con las partículas finas de polvo."
                             },
                             {
                                 linkName: "petalo-4/1/2/26",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Bismuto",
                                 text: "El bismuto es un metal pesado utilizado en la industria para fabricar aleaciones de bajo punto de fusión y en medicina para el tratamiento de enfermedades gastrointestinales. Tiene propiedades físicas únicas, es de baja toxicidad y se encuentra en la naturaleza en forma de minerales. Sin embargo, se deben tomar precauciones al manipularlo y seguir las recomendaciones de seguridad."
                             },
                             {
                                 linkName: "petalo-4/1/2/27",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Oro",
                                 text: "El oro es un metal precioso de color amarillo brillante, conocido por su belleza y durabilidad. Tiene una amplia variedad de aplicaciones, incluyendo la fabricación de joyas, componentes electrónicos y usos en la medicina. Es un metal inerte y no tóxico en su forma elemental. El oro se encuentra en depósitos de minerales y es extraído a través de la minería."
                             },
                             {
                                 linkName: "petalo-4/1/2/28",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Plata",
                                 text: "La plata es un metal precioso brillante y maleable con diversas aplicaciones industriales, como en joyería, electrónica y fotografía. Tiene importancia histórica y cultural como moneda y objeto decorativo. Se encuentra en la naturaleza en forma de minerales y se extrae principalmente como subproducto de otros metales. La plata no es tóxica en su forma elemental, pero se deben tomar precauciones."
                             },
                             {
                                 linkName: "petalo-4/1/2/29",
                                 image: 'boton4',
-                                titlePage: 'AMINOÁCIDOS',
+                                titlePage: 'MINERALES & OLIGOELEMENTOS',
                                 title: "Mercurio",
                                 text: "El mercurio es un metal líquido tóxico ampliamente utilizado en diversas aplicaciones industriales. Su exposición puede ser perjudicial para la salud humana y el medio ambiente. Se han implementado restricciones y regulaciones para su uso seguro y eliminación adecuada. Se recomienda evitar la exposición al mercurio y seguir las pautas de manejo seguro."
                             }

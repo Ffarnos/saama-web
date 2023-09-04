@@ -18,6 +18,8 @@ const FinalPageTemplate = ({ pageContext }) => {
                 navigate(-1)
             else if (event.key === 'ArrowRight')
                 navigate(+1)
+            else if (event.key === 'Spacebar')
+                navigate("/intro-text")
         };
 
         document.addEventListener('keydown', handleKeyDown);
@@ -37,7 +39,7 @@ const FinalPageTemplate = ({ pageContext }) => {
         textSeparate = desc.split(". ");
         textComponents = textSeparate.map((sentence, index) => (
             <ResponsiveText key={index} scale={0.5} color={"white"}>
-                {sentence}
+                {sentence.replace(".", "")}
             </ResponsiveText>
         ));
     }

@@ -17,7 +17,9 @@ const Index = () => {
       else if (event.key === 'ArrowLeft')
         navigate(-1)
       else if (event.key === 'ArrowRight')
-        navigate(+1)
+        navigate("/intro-text")
+      else if (event.key === 'Spacebar')
+        navigate("/intro-text")
     };
 
     document.addEventListener('keydown', handleKeyDown);
