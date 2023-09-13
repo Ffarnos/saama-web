@@ -39,6 +39,10 @@ module.exports = {
         cache_busting_mode: 'none'
       },
     },
+    {
+      resolve: 'gatsby-plugin-create-client-paths',
+      options: { prefixes: ['/circulo-base/*'] },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

@@ -20,6 +20,9 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                 case 'ArrowRight':
                     navigate(+1);
                     break;
+                case 'Spacebar':
+                    navigate("/intro-text");
+                    break;
                 default:
                     if (/^[0-9]$/.test(event.key)) {
                         onClick(parseInt(event.key));
