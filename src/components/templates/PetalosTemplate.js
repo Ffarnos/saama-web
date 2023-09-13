@@ -6,6 +6,7 @@ import {navigate} from "gatsby";
 import {Alert, TextField, ThemeProvider, createTheme} from "@mui/material";
 import {FinishButtonResponsive} from "../navigation/FinishButton";
 import {Background} from "../../pages/circulo-base";
+import LoginCheck from "../login/LoginCheck";
 
 const createdPages = require('../../../../createdPages.json');
 
@@ -41,7 +42,8 @@ const PetalosTemplate = ({ pageContext }) => {
         },
     });
 
-    return <Background style={{backgroundImage: `url(${imagePath})`}}>
+    return <LoginCheck>
+    <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Container>
             <NoCircleContainer>
                 <Title scale={1} color={"#fdf8f8"}>
@@ -77,9 +79,7 @@ const PetalosTemplate = ({ pageContext }) => {
                 petalos={subPetalos}
                 noNumber={noNumber}
                 onClick={(number) => {
-                    console.log(input);
                     const numberFinal = (input ? ((input * 10) + number) : number);
-                    console.log("numberFinal: " + numberFinal + " - number: " + number);
                     setInput(numberFinal);
                     setTimeout(() => {
                         setInput((prevInput) => {
@@ -97,7 +97,8 @@ const PetalosTemplate = ({ pageContext }) => {
             />
             <FinishButtonResponsive/>
         </Container>
-    </Background>;
+    </Background>
+    </LoginCheck>;
 }
 
 const ContainerHorizontal = styled.div`
