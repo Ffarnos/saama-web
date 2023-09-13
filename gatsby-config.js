@@ -2,20 +2,6 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-const options = {
-  importWorkboxFrom: `local`,
-  globPatterns: ['**/src/images/*', '**/static/*'],
-  cacheId: `gatsby-plugin-offline`,
-  precachePages: [`/`, `/circulo-base`, `/circulo-base/*`, '/intro-text/'],
-  runtimeCaching: [
-    {
-      urlPattern: /(\.js$|\.css$|static\/)/,
-      handler: `CacheFirst`,
-    },
-  ],
-  skipWaiting: true,
-  clientsClaim: true,
-}
 
 module.exports = {
   jsxRuntime: 'automatic',
@@ -49,10 +35,7 @@ module.exports = {
       },
       __key: 'images',
     },
-    {
-     resolve: `gatsby-plugin-offline`,
-     options: options,
-    },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`
 
   ],
