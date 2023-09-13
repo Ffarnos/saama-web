@@ -1,119 +1,92 @@
-import {
-    getAuth,
-    GoogleAuthProvider,
-    FacebookAuthProvider,
-    signInWithPopup,
-} from 'firebase/auth';
-import { app } from '../../../gatsby-browser';
-import styled from 'styled-components';
-import ResponsiveText from '../apis/ResponsiveText';
-import ResponsiveImage from '../apis/ResponsiveImage';
-import Logo from '../../images/icon.png';
-import {Horizontal} from "../apis/flexbox-containers";
-import google from '../../images/google-logo.svg';
-import facebook from '../../images/facebook-logo.svg';
-const LoginFirebase = () => {
-    const auth = getAuth(app);
-    const handleGoogleLogin = async () => {
-        const provider = new GoogleAuthProvider();
+import {useState} from 'react';
+import {getAuth, signInWithEmailAndPassword} from 'firebase/auth';
+import {app} from "../../../gatsby-browser";
+import styled from "styled-components";
+import {FormControl, IconButton, InputAdornment, InputLabel, TextField, Input} from "@mui/material";
+import ResponsiveText from "../apis/ResponsiveText";
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import ResponsiveImage from "../apis/ResponsiveImage";
+import Logo from "../../images/icon.png";
 
-        try {
-            await signInWithPopup(auth, provider);
-        } catch (error) {
-        }
+const LoginFirebase = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
+    const [showPassword, setShowPassword] = useState(false);
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
     };
 
-    const handleFacebookLogin = async () => {
-        const provider = new FacebookAuthProvider();
+    const handleLogin = async (e) => {
+        e.preventDefault();
 
         try {
-            await signInWithPopup(auth, provider);
+            await signInWithEmailAndPassword(getAuth(app), email, password);
+
         } catch (error) {
+            if (error.code === 'auth/invalid-email' || error.code === 'auth/wrong-password')
+                setError('Datos de inicio incorrectos.');
+            else
+                setError('Ocurrió un error al iniciar sesión');
+
         }
     };
 
     document.body.style.overflow = 'hidden';
 
-    return (
-        <Container>
+    return (<Container>
             <CardWrapper>
                 <div>
-                    <ResponsiveText color={'#4b4a4a'} scale={0.9}>
-                        Terapia GENESÍS
-                    </ResponsiveText>
+                    <ResponsiveText color={"#4b4a4a"} scale={0.9}>Terapia GENESÍS</ResponsiveText>
                     <ContainerCenter>
-                        <ResponsiveImage src={Logo} scale={2.4} />
+                        <ResponsiveImage src={Logo} scale={2.4}/>
                     </ContainerCenter>
                     <OthersContainer>
-                        <GoogleFacebookButtonsContainer>
-                            <SignInWithGoogle onClick={handleGoogleLogin}/>
-                            <SignInWithFacebook onClick={handleFacebookLogin}/>
-                        </GoogleFacebookButtonsContainer>
+                    <TextFieldContainer>
+                        <TextField id="mail" label="Mail" variant="standard" margin="normal"
+                                   onChange={(e) => setEmail(e.target.value)}/>
+                        <FormControl variant="standard">
+                            <InputLabel htmlFor="standard-adornment-password">Contraseña</InputLabel>
+                            <Input
+                                id="standard-adornment-password"
+                                type={showPassword ? 'text' : 'password'}
+                                onChange={(e) => setPassword(e.target.value)}
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                            aria-label="toggle password visibility"
+                                            onClick={handleClickShowPassword}
+                                            onMouseDown={handleMouseDownPassword}
+                                        >
+                                            {showPassword ? <VisibilityOff/> : <Visibility/>}
+                                        </IconButton>
+                                    </InputAdornment>
+                                }
+                            />
+                        </FormControl>
+                    </TextFieldContainer>
+                    <IniciarSesionButton color={"white"} bold scale={0.35} onClick={handleLogin}>Iniciar
+                        Sesion</IniciarSesionButton>
                     </OthersContainer>
+                    {error && <ErrorText color={"red"} scale={0.3}>{error}</ErrorText>}
                 </div>
             </CardWrapper>
         </Container>
     );
 };
 
-const SignInWithGoogle = ({onClick}) => <StyledSignInWithGoogle
-    center
-    centerH
-    gap={20}
-    onClick={onClick}>
-    <ResponsiveImage src={google} scale={0.6}/>
-    <SignInText scale={0.38} color={'#2f2f2f'} bold>
-        Continuar con Google
-    </SignInText>
-</StyledSignInWithGoogle>;
-
-const StyledSignInWithGoogle = styled(Horizontal)`
-  -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
-  background: white;
-  border-radius: 25px;
-  padding: 10px 15px;
-  margin: 10px auto 10px;
-  border: 1px solid #cccccc;
-  width: 82%;
-`;
-
-const SignInWithFacebook = ({onClick}) => <StyledSignInFacebook
-    center
-    centerH
-    gap={20}
-    onClick={onClick}>
-    <ResponsiveImage src={facebook} scale={0.8}/>
-    <SignInText scale={0.36} color={'#ffffff'} bold>
-        Continuar con Facebook
-    </SignInText>
-</StyledSignInFacebook>;
-
-const StyledSignInFacebook = styled(Horizontal)`
-  -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
-  background: #405996;
-  border-radius: 25px;
-  padding: 8px 15px;
-  width: 84%;
-`;
-
-const SignInText = styled(ResponsiveText)`
-  font-family: sans-serif;
-`;
-
-
-const GoogleFacebookButtonsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-`;
-
-
 const OthersContainer = styled.div`
   width: 100%; 
   margin: 0 auto;
+`;
+
+const TextFieldContainer = styled.div`
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 100%;
 `;
 
 const ContainerCenter = styled.div`
@@ -126,6 +99,21 @@ const ErrorText = styled(ResponsiveText)`
     margin-top: 20px;
 `;
 
+const IniciarSesionButton = styled(ResponsiveText)`
+  margin-top: 20px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  :hover {
+    filter: brightness(0.3);
+  }
+`;
 
 const Container = styled.div`
   display: flex;
