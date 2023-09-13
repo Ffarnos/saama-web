@@ -6,6 +6,7 @@ import {
 } from "../components/navigation/NavigationButtons";
 import styled from "styled-components";
 import {navigate} from "gatsby";
+import LoginCheck from "../components/login/LoginCheck";
 
 
 const IntroText = () => {
@@ -34,10 +35,10 @@ const IntroText = () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
     }, [number]);
-    return <>
+    return <LoginCheck>
         {getText(number)}
         <Navigate number={number} setNumber={setNumber}/>
-    </>
+    </LoginCheck>
 }
 
 const Navigate = ({number, setNumber}) => <Container>

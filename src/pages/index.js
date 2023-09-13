@@ -1,25 +1,22 @@
-import * as React from "react"
 import styled from 'styled-components';
 import backgroundImage from '../../static/images/portada.webp';
 import ResponsiveText from "../components/apis/ResponsiveText";
 import {navigate} from "gatsby";
 import {useEffect} from "react";
 import useInstall from "../components/UseInstall";
-
-
+import AuthChecker from '../components/login/LoginCheck';
 const Index = () => {
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === 'Enter')
-        navigate("/circulo-base")
-      else if (event.key === 'Backspace')
-        navigate("/")
-      else if (event.key === 'ArrowLeft')
-        navigate(-1)
-      else if (event.key === 'ArrowRight')
-        navigate("/intro-text")
-      else if (event.key === 'Spacebar')
-        navigate("/intro-text")
+      if (event.key === 'Enter') {
+        navigate('/circulo-base');
+      } else if (event.key === 'Backspace') {
+        navigate('/');
+      } else if (event.key === 'ArrowLeft') {
+        navigate(-1);
+      } else if (event.key === 'ArrowRight' || event.key === 'Spacebar') {
+        navigate('/intro-text');
+      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -29,30 +26,28 @@ const Index = () => {
     };
   }, []);
 
-  return <Background>
-   <ContainerInstall>
-    <MinimalisticInstallButton/>
-   </ContainerInstall>
-     <Container>
-      <CenterContainer>
-        <TerapiaText scale={1.5}>
-          TERAPIA
-        </TerapiaText>
-        <TerapiaText scale={0.9}>
-          CUÁNTICA
-        </TerapiaText>
-        <TerapiaText scale={1.8}>
-          GÉNESIS
-        </TerapiaText>
-        <StartButton onClick={()=>navigate('/intro-text')}>
-          <ResponsiveText scale={0.6} bold color={"#1f1e1e"}>
-            INICIAR CONEXION
-          </ResponsiveText>
-        </StartButton>
-      </CenterContainer>
-    </Container>
-  </Background>;
-}
+  return (
+      <AuthChecker>
+        <Background>
+          <ContainerInstall>
+            <MinimalisticInstallButton/>
+          </ContainerInstall>
+          <Container>
+            <CenterContainer>
+              <TerapiaText scale={1.5}>TERAPIA</TerapiaText>
+              <TerapiaText scale={0.9}>CUÁNTICA</TerapiaText>
+              <TerapiaText scale={1.8}>GÉNESIS</TerapiaText>
+              <StartButton onClick={() => navigate('/intro-text')}>
+                <ResponsiveText scale={0.6} bold color={'#1f1e1e'}>
+                  INICIAR CONEXION
+                </ResponsiveText>
+              </StartButton>
+            </CenterContainer>
+          </Container>
+        </Background>
+      </AuthChecker>
+  );
+};
 
 const ContainerInstall = styled.div`
   display: flex;

@@ -1,9 +1,9 @@
-import * as React from "react"
 import styled from 'styled-components';
 import Buttons from "../components/Buttons";
 import ResponsiveText from "../components/apis/ResponsiveText";
 import {navigate} from "gatsby";
 import {FinishButtonResponsive} from "../components/navigation/FinishButton";
+import LoginCheck from "../components/login/LoginCheck";
 
 const CirculoBase = () => {
     const petalos = [
@@ -37,23 +37,25 @@ const CirculoBase = () => {
         },
     ];
 
-    return <Background style={{backgroundImage: `url(/images/portada.webp)`}}>
-        <Container>
-            <Title scale={0.8} color={"#fffdfd"}>
-                Terapia GENESÍS
-            </Title>
-            <Buttons
-                petalos={petalos}
-                bigButtonTitle={"FUENTE MADRE"}
-                numbers={11}
-                circuloBase={true}
-                onClick={(petaloName)=> {
-                    navigate('/circulo-base/petalo-' + petaloName)
-                }}
-            />
-            <FinishButtonResponsive />
-        </Container>
-    </Background>;
+    return <LoginCheck>
+        <Background style={{backgroundImage: `url(/images/portada.webp)`}}>
+            <Container>
+                <Title scale={0.8} color={"#fffdfd"}>
+                    Terapia GENESÍS
+                </Title>
+                <Buttons
+                    petalos={petalos}
+                    bigButtonTitle={"FUENTE MADRE"}
+                    numbers={11}
+                    circuloBase={true}
+                    onClick={(petaloName) => {
+                        navigate('/circulo-base/petalo-' + petaloName)
+                    }}
+                />
+                <FinishButtonResponsive/>
+            </Container>
+        </Background>
+    </LoginCheck>;
 }
 
 

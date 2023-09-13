@@ -5,6 +5,7 @@ import {NavigationButtonsInLine} from "../navigation/NavigationButtons";
 import styled from "styled-components";
 import ResponsiveImage from "../apis/ResponsiveImage";
 import {Background} from "../../pages/circulo-base";
+import LoginCheck from "../login/LoginCheck";
 
 
 const FinalPageTemplate = ({ pageContext }) => {
@@ -31,8 +32,8 @@ const FinalPageTemplate = ({ pageContext }) => {
 
 
     const {desc, titleText, image, titlePage, imageBody, separation} = pageContext
-    const imagePath = "/images/"+ image + ".webp";
-    const imageBodyPath = "/images/simbolos/"+ imageBody;
+    const imagePath = "/images/" + image + ".webp";
+    const imageBodyPath = "/images/simbolos/" + imageBody;
     let textSeparate;
     let textComponents;
     if (separation) {
@@ -43,19 +44,21 @@ const FinalPageTemplate = ({ pageContext }) => {
             </ResponsiveText>
         ));
     }
-    return <Background style={{backgroundImage: `url(${imagePath})`}}>
-        <Content>
-            <ResponsiveText scale={0.9} color={"white"}>{titlePage}</ResponsiveText>
-            <ResponsiveText scale={0.7} color={"white"}>{titleText}</ResponsiveText>
-            {separation ? textComponents
-            : <Text scale={0.5} color={"white"}>{desc}</Text>}
+    return <LoginCheck>
+        <Background style={{backgroundImage: `url(${imagePath})`}}>
+            <Content>
+                <ResponsiveText scale={0.9} color={"white"}>{titlePage}</ResponsiveText>
+                <ResponsiveText scale={0.7} color={"white"}>{titleText}</ResponsiveText>
+                {separation ? textComponents
+                    : <Text scale={0.5} color={"white"}>{desc}</Text>}
 
-            {imageBody && <BodyImage src={imageBodyPath} scale={4}/>}
-        <Container>
-            <NavigationButtonsInLine/>
-        </Container>
-        </Content>
-    </Background>
+                {imageBody && <BodyImage src={imageBodyPath} scale={4}/>}
+                <Container>
+                    <NavigationButtonsInLine/>
+                </Container>
+            </Content>
+        </Background>
+    </LoginCheck>
 }
 const BodyImage = styled(ResponsiveImage)`
   margin-top: 10px;
