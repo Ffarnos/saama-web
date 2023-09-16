@@ -85,8 +85,7 @@ const BackFunction = ({number, setNumber}) => {
 const Container = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 80px;
+    justify-content: space-evenly;
     margin-top: 30px;
 `;
 
