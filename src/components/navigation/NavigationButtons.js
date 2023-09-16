@@ -1,4 +1,3 @@
-import * as React from "react"
 import styled from 'styled-components';
 import {navigate} from "gatsby";
 import FinishButton from "./FinishButton";

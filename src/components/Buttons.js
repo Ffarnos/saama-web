@@ -20,7 +20,7 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                 case 'ArrowRight':
                     navigate(+1);
                     break;
-                case 'Spacebar':
+                case ' ':
                     navigate("/intro-text");
                     break;
                 default:

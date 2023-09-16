@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ResponsiveImage = styled(({...props}) => <img alt="responsive-image" {...props}/>)`
+const ResponsiveImage = styled(({...props}) => <img alt="responsive" {...props}/>)`
   width: ${props => props.scale * 50}px;
   height: ${props => props.scale * 50 * props.hw}px;
   

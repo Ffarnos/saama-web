@@ -4,7 +4,7 @@ import {navigate} from "gatsby";
 import {NavigationButtonsInLine} from "../navigation/NavigationButtons";
 import styled from "styled-components";
 import ResponsiveImage from "../apis/ResponsiveImage";
-import {Background} from "../../pages/circulo-base";
+import {Background} from "../Commons";
 import LoginCheck from "../login/LoginCheck";
 
 

@@ -116,7 +116,7 @@ const getText = (number) => {
                                 mi guía. amén.“
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                “Abrir terapia" de robert detzler“
+                                “Abrir terapia" de Robert Detzler“
                             </ResponsiveText>
                             <ResponsiveText scale={0.7} style={{marginTop: '20px'}}>
                                 ORACIÓN PARA CERRAR ESPACIO SAGRADO
@@ -182,7 +182,7 @@ const getText = (number) => {
                                 13X1 – 13X1 – 13X1
                             </ResponsiveText>
                             <ResponsiveText scale={0.5} style={{marginTop: '15px'}}>
-                                Pido al responsable de los registros akáshicosque, en nombre de
+                                Pido al responsable de los registros akáshicos que, en nombre de
                                 nuestro Señor Jesucristo, elimine o transmute todos los registros
                                 vinculados al suceso en el que estamos trabajando... y dado que ha
                                 sido cumplido, doy infinitas gracias.
@@ -265,7 +265,7 @@ const getText = (number) => {
                             ORACION DE HO’OPONOPONO PARA INICIO DE SESION
                         </ResponsiveText>
                         <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                            Divina presencia, sana aquí y ahora desde la raíz y para siempre, el problema o situación que trajo aquí (nombre del consultante) … haz que desbloque las energías negativas que le impiden avanzar, aportando energía sanadora, liberándome y liberándolo de toda responsabilidad para lograr su evolución
+                            Divina presencia, sana aquí y ahora desde la raíz y para siempre, el problema o situación que trajo aquí (nombre del consultante) … haz que desbloque las energías negativas que le impiden avanzar, aportando energía sanadora, liberándome y liberandolo/a de toda responsabilidad para lograr su evolución
                             lo siento, perdóname, te amo, gracias
                         </ResponsiveText>
                         <ResponsiveText scale={0.6} bold style={{marginTop: '30px'}}>

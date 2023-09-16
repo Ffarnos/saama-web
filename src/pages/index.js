@@ -14,7 +14,7 @@ const Index = () => {
         navigate('/');
       } else if (event.key === 'ArrowLeft') {
         navigate(-1);
-      } else if (event.key === 'ArrowRight' || event.key === 'Spacebar') {
+      } else if (event.key === 'ArrowRight' || event.key === ' ') {
         navigate('/intro-text');
       }
     };

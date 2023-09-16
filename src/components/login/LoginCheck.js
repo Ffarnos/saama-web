@@ -2,9 +2,6 @@ import { useEffect, useState } from 'react';
 import {
     getAuth,
 } from 'firebase/auth';
-import {
-    getDatabase,
-} from 'firebase/database';
 import {app} from "../../../gatsby-browser";
 import LoginFirebase from "./LoginFirebase";
 
