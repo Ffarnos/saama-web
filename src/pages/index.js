@@ -27,7 +27,7 @@ const Index = () => {
   }, []);
 
   return (
-      <AuthChecker>
+      <>
         <Background>
           <ContainerInstall>
             <MinimalisticInstallButton/>
@@ -45,7 +45,7 @@ const Index = () => {
             </CenterContainer>
           </Container>
         </Background>
-      </AuthChecker>
+      </>
   );
 };
 

@@ -44,7 +44,7 @@ const FinalPageTemplate = ({ pageContext }) => {
             </ResponsiveText>
         ));
     }
-    return <LoginCheck>
+    return <>
         <Background style={{backgroundImage: `url(${imagePath})`}}>
             <Content>
                 <ResponsiveText scale={0.9} color={"white"}>{titlePage}</ResponsiveText>
@@ -58,7 +58,7 @@ const FinalPageTemplate = ({ pageContext }) => {
                 </Container>
             </Content>
         </Background>
-    </LoginCheck>
+    </>
 }
 const BodyImage = styled(ResponsiveImage)`
   margin-top: 10px;

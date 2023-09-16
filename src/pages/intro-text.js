@@ -8,7 +8,6 @@ import styled from "styled-components";
 import {navigate} from "gatsby";
 import LoginCheck from "../components/login/LoginCheck";
 
-
 const IntroText = () => {
     const [number, setNumber] = useState(1);
     useEffect(() => {
@@ -35,10 +34,7 @@ const IntroText = () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
     }, [number]);
-    return <LoginCheck>
-        {getText(number)}
-        <Navigate number={number} setNumber={setNumber}/>
-    </LoginCheck>
+    return TextComponent(number, setNumber)
 }
 
 const Navigate = ({number, setNumber}) => <Container>
@@ -90,11 +86,10 @@ const Container = styled.div`
 `;
 
 const TextContainer = styled.div`
-    max-width: 1000px;
-    margin-right: auto;
-    margin-left: auto;
+  max-width: 95%;
 `;
-const getText = (number) => {
+
+const TextComponent = (number, setNumber) => {
     return (
         <TextContainer>
             {
@@ -288,6 +283,7 @@ const getText = (number) => {
                     </>
                 }[number]
             }
+            <Navigate number={number} setNumber={setNumber}/>
         </TextContainer>
     );
 }

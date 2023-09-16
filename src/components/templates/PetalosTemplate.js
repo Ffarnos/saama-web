@@ -42,7 +42,7 @@ const PetalosTemplate = ({ pageContext }) => {
         },
     });
 
-    return <LoginCheck>
+    return <>
     <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Container>
             <NoCircleContainer>
@@ -98,7 +98,7 @@ const PetalosTemplate = ({ pageContext }) => {
             <FinishButtonResponsive/>
         </Container>
     </Background>
-    </LoginCheck>;
+    </>;
 }
 
 const ContainerHorizontal = styled.div`
