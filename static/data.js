@@ -931,7 +931,7 @@ const petalos = [
             },
             {
                 linkName: "petalo-3/4", image: 'boton3', title: "COMPORTAMIENTOS COTIDIANOS B", subPetalos: [
-                    { linkName: "petalo-3/4/1", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "HORMONAS", text: "" },
+                    { linkName: "petalo-3/4/1", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "HORMONAL", text: "" },
                     { linkName: "petalo-3/4/2", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "IMPOTENCIA", text: "" },
                     { linkName: "petalo-3/4/3", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "INSEGURIDAD CORPORAL", text: "" },
                     { linkName: "petalo-3/4/4", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "INSEGURIDADES CORPORALES QUE LIMITAN", text: "" },
@@ -3524,6 +3524,7 @@ const petalos = [
                             {linkName: "petalo-6/4/3/5", image: 'boton6', titlePage: "Dinero y Abundancia", title:"Palmera botella", text:"Te invita a borrar y limpiar las memorias y/o pensamientos carentes que tienes con respecto al dinero."},
                             {linkName: "petalo-6/4/3/6", image: 'boton6', titlePage: "Dinero y Abundancia", title:"Cofre de Dinero", text:"Para activar la abundancia y la prosperidad."},
                             {linkName: "petalo-6/4/3/7", image: 'boton6', titlePage: "Dinero y Abundancia", title:"Flores de Primavera", text:"Recomendada para momentos de dudas e inseguridad sobre el dinero cuando los ingresos no alcanzan o no existen oportunidades laborales suficientes."},
+                            {linkName: "petalo-6/4/3/8", image: 'boton6', titlePage: "Dinero y Abundancia", title:"Crecer y multiplicar", text:"Permite que llegue la prosperidad Divina y esta se multiplique."},
                         ]},
                     {linkName: "petalo-6/4/4", image: 'boton6', title: "Amor", subPetalos: [
                             {linkName: "petalo-6/4/4/1", image: 'boton6', titlePage: "Amor", title:"Tiro del Tapón", text:"Elimina apegos y las dependencias emocionales."},
@@ -3537,6 +3538,9 @@ const petalos = [
                             {linkName: "petalo-6/4/5/2", image: 'boton6', titlePage: "Salud", title:"Verde esmeralda", text:"Vinculada a resolver malestares físicos."},
                             {linkName: "petalo-6/4/5/3", image: 'boton6', titlePage: "Salud", title:"Azul índigo", text:"Es ideal para aplicar cuando sufres dolencias físicas y pensamientos obsesivos que no te dejan avanzar."},
                             {linkName: "petalo-6/4/5/4", image: 'boton6', titlePage: "Salud", title:"Anestesia para el alma", text:"Hace referencia a calmar el dolor tanto físico como emocional para seguir adelante con la vida, dejando atrás cualquier tipo de dolencia que hayas experimentado."},
+                            {linkName: "petalo-6/4/5/5", image: 'boton6', titlePage: "Salud", title:"Promueve la salud física", text:"Promueve la salud física."},
+                            {linkName: "petalo-6/4/5/6", image: 'boton6', titlePage: "Salud", title:"Manzanilla de vida", text:"Ideal para dolores estomacales y dolores del alma."},
+                            {linkName: "petalo-6/4/5/7", image: 'boton6', titlePage: "Salud", title:"Pequeña, pequeña pastilla que cae", text:"Trabaja con los pensamientos de cáncer."},
                         ]},
                     {linkName: "petalo-6/4/6", image: 'boton6', title: "TRANSMUTAR Y ELEVAR LA ENERGÍA", subPetalos: [
                             {linkName: "petalo-6/4/6/1", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title:"Suelto y confío", text:"Cuando te sientes agobiado por recuerdos tristes o dolorosos, o que te remitan a algún problema o conflicto que aún te duele o simplemente ante una situación que te genera incertidumbre."},
@@ -3550,6 +3554,15 @@ const petalos = [
                             {linkName: "petalo-6/4/6/9", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title:"Aro de oro", text:"Invitas a la Divinidad a que te llene de bendiciones y abundancia."},
                             {linkName: "petalo-6/4/6/10", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title:"Anillo de la divinidad", text:"Para protegerte de toda negatividad y estar en armonía con tu SER. Además, puedes repetir esta frase gatillo cuando sientas una carga negativa en cualquier momento."},
                             {linkName: "petalo-6/4/6/11", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title:"Fresas y arándanos", text:"Para limpiar tu mente subconsciente de pensamientos limitantes relacionados con el sobrepeso. Para limpiar y sanar."},
+                            {linkName: "petalo-6/4/6/12", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title: "Infinito", text:"Para conectar con el YO SUPERIOR."},
+                            {linkName: "petalo-6/4/6/13", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title: "24/7", text:"Nos brinda protección. Representa la presencia de Dios/ Universo en nuestra vida 24 horas del día, los 7 días de la semana. "},
+                            {linkName: "petalo-6/4/6/14", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title: "14 Luz", text:"Para que llegue el equilibrio antes de tomar decisiones."},
+                            {linkName: "petalo-6/4/6/15", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title: "Armada de protección", text:"Actúa como protección de todo lo negativo"},
+                            {linkName: "petalo-6/4/6/16", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title: "Manto de luz", text:"Nos envuelve como protección ante las energía negativas"},
+                            {linkName: "petalo-6/4/6/17", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title: "Bastón dulce", text:"Ideal para aumentar el animo y alegría por la vida. Endulza la energía del hogar"},
+                            {linkName: "petalo-6/4/6/18", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title: "Lluvia de luz", text:"Ideal para recibir ayuda de nuestros maestros espirituales. Recibiremos sabiduría, guía e iluminación"},
+                            {linkName: "petalo-6/4/6/19", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title: "Aires de fe", text:"Para aumentar nuestra fe."},
+                            {linkName: "petalo-6/4/6/20", image: 'boton6', titlePage: "TRANSMUTAR Y ELEVAR LA ENERGÍA", title: "Girasol", text:"Significa la espiritualidad y la energía vital de la vida que va al encuentro de la luz, de la energía solar."},
                         ]},
 
                 ]},
