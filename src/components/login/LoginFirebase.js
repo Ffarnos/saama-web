@@ -1,5 +1,6 @@
-import {useState} from 'react';
-import {getAuth, signInWithEmailAndPassword} from 'firebase/auth';
+import {useEffect, useState} from 'react';
+import {getAuth, signInWithEmailAndPassword, fetchSignInMethodsForEmail, createUserWithEmailAndPassword, sendPasswordResetEmail} from 'firebase/auth';
+import { getDatabase, ref, push, set} from 'firebase/database';
 import {app} from "../../../gatsby-browser";
 import styled from "styled-components";
 import {FormControl, IconButton, InputAdornment, InputLabel, TextField, Input} from "@mui/material";
@@ -9,22 +10,79 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import ResponsiveImage from "../apis/ResponsiveImage";
 import Logo from "../../images/icon.png";
 
-const LoginFirebase = () => {
+const LoginFirebase = ({noPermissionInfo}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
-    const [showPassword, setShowPassword] = useState(false);
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
-    const handleMouseDownPassword = (event) => {
-        event.preventDefault();
-    };
+    const [name, setName] = useState('');
+    const [surname, setSurname] = useState('');
+    const [username, setUsername] = useState('');
 
+    const [error, setError] = useState(null);
+    const [register, setRegister] = useState('');
+    const [sendPasswordMail , setSendPasswordMail] = useState(false);
+
+    useEffect(() => {
+        const lastPasswordResetTimestamp = localStorage.getItem(
+            'lastPasswordResetTimestamp'
+        );
+        if (lastPasswordResetTimestamp) {
+            const currentTime = new Date().getTime();
+            const timeSinceLastReset = currentTime - lastPasswordResetTimestamp;
+            if (timeSinceLastReset < 2 * 60 * 1000) {
+                console.log("lLEGO")
+                setSendPasswordMail(true);
+            }
+        }
+    }, []);
+
+    const handeChangePass = async (e) => {
+        e.preventDefault();
+        try {
+            const auth = getAuth();
+            await sendPasswordResetEmail(auth, email);
+            setSendPasswordMail(true);
+            const currentTime = new Date().getTime();
+            localStorage.setItem(
+                'lastPasswordResetTimestamp',
+                currentTime.toString()
+            );
+        } catch (error) {
+            console.error('Error al verificar el correo electrónico:', error);
+        }
+    }
     const handleLogin = async (e) => {
         e.preventDefault();
 
         try {
-            await signInWithEmailAndPassword(getAuth(app), email, password);
+            const auth = getAuth();
 
+
+            if (register === '') {
+                const isRegister = await checkEmailIsRegistered(email);
+
+                if (isRegister)
+                    setRegister('signin');
+                else
+                    setRegister('signup');
+            }
+            else if (register === 'signin') {
+                await signInWithEmailAndPassword(auth, email, password);
+            } else if (register === 'signup') {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+                const usersRef = ref(getDatabase(app), 'users/' + user.uid);
+
+                const newUser = {
+                    email,
+                    name,
+                    surname,
+                    username,
+                    role: 'user',
+                };
+
+                await set(usersRef, newUser);
+                window.location.reload();
+            }
         } catch (error) {
             if (error.code === 'auth/invalid-email' || error.code === 'auth/wrong-password')
                 setError('Datos de inicio incorrectos.');
@@ -36,45 +94,116 @@ const LoginFirebase = () => {
 
     document.body.style.overflow = 'hidden';
 
-    return (<Container>
+    return (<form name="contact" method="POST" data-netlify="true">
+        <Container>
             <CardWrapper>
                 <div>
                     <ResponsiveText color={"#4b4a4a"} scale={0.9}>Terapia GENESÍS</ResponsiveText>
                     <ContainerCenter>
-                        <ResponsiveImage src={Logo} scale={2.4}/>
+                        <ResponsiveImage src={Logo} scale={1.8}/>
                     </ContainerCenter>
-                    <OthersContainer>
-                    <TextFieldContainer>
-                        <TextField id="mail" label="Mail" variant="standard" margin="normal"
-                                   onChange={(e) => setEmail(e.target.value)}/>
-                        <FormControl variant="standard">
-                            <InputLabel htmlFor="standard-adornment-password">Contraseña</InputLabel>
-                            <Input
-                                id="standard-adornment-password"
-                                type={showPassword ? 'text' : 'password'}
-                                onChange={(e) => setPassword(e.target.value)}
-                                endAdornment={
-                                    <InputAdornment position="end">
-                                        <IconButton
-                                            aria-label="toggle password visibility"
-                                            onClick={handleClickShowPassword}
-                                            onMouseDown={handleMouseDownPassword}
-                                        >
-                                            {showPassword ? <VisibilityOff/> : <Visibility/>}
-                                        </IconButton>
-                                    </InputAdornment>
-                                }
-                            />
-                        </FormControl>
-                    </TextFieldContainer>
-                    <IniciarSesionButton color={"white"} bold scale={0.35} onClick={handleLogin}>Iniciar
-                        Sesion</IniciarSesionButton>
-                    </OthersContainer>
+
+                    {!noPermissionInfo ? <OthersContainer>
+                            <TextFieldContainer>
+                                <TextField id="mail" label="Mail" variant="standard" margin="normal"
+                                           onChange={(e) => setEmail(e.target.value)}/>
+
+                                {register === 'signin' && <PasswordField setPassword={setPassword}/>}
+
+                                {register === 'signin' && (
+                                    sendPasswordMail ? (
+                                        <ResponsiveText style={{marginTop: "10px"}} scale={0.3} color={"#3a3939"}>Se ha enviado un email para restablecer la contraseña</ResponsiveText>
+                                    ) : (
+                                        <PasswordResetContainer onClick={handeChangePass}>
+                                            <PasswordReset scale={0.3}>Restablecer Contraseña</PasswordReset>
+                                        </PasswordResetContainer>
+                                    )
+                                )}
+
+
+                                {register === 'signup' && <SignUp setName={setName} setSurname={setSurname} setPassword={setPassword} setUsername={setUsername}/>}
+
+                            </TextFieldContainer>
+                            <div data-netlify-recaptcha="true"/>
+                            <IniciarSesionButton color={"white"} bold scale={0.35} onClick={handleLogin}>
+                                Continuar
+                            </IniciarSesionButton>
+                        </OthersContainer> :
+                        <ResponsiveText style={{marginTop: "60px"}} color={"#4b4a4a"} scale={0.7}>Necesitas comprar la subscripcion para acceder</ResponsiveText>}
                     {error && <ErrorText color={"red"} scale={0.3}>{error}</ErrorText>}
                 </div>
             </CardWrapper>
         </Container>
-    );
+    </form>);
+
+};
+
+const PasswordResetContainer = styled.div`
+  margin-top: 10px;
+`;
+
+const PasswordReset = styled(ResponsiveText)`
+  text-decoration: underline; /* Subrayado del texto */
+  color: #007bff; /* Color del texto */
+  cursor: pointer;
+  transition: color 0.3s; /* Transición suave del color */
+
+  &:hover {
+    color: #0056b3; /* Cambia el color del texto en hover */
+  }
+`;
+
+const PasswordField = ({setPassword}) => {
+    const [showPassword, setShowPassword] = useState(false);
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+    };
+
+    return <>
+        <FormControl variant="standard">
+            <InputLabel htmlFor="standard-adornment-password">Contraseña</InputLabel>
+            <Input
+                id="standard-adornment-password"
+                type={showPassword ? 'text' : 'password'}
+                onChange={(e) => setPassword(e.target.value)}
+                endAdornment={
+                    <InputAdornment position="end">
+                        <IconButton
+                            aria-label="toggle password visibility"
+                            onClick={handleClickShowPassword}
+                            onMouseDown={handleMouseDownPassword}
+                        >
+                            {showPassword ? <VisibilityOff/> : <Visibility/>}
+                        </IconButton>
+                    </InputAdornment>
+                }
+            />
+        </FormControl>
+    </>;
+};
+
+const SignUp = ({setName, setSurname, setUsername, setPassword}) => <>
+    <TextField id="name" label="Nombre" variant="standard" onChange={(e) => setName(e.target.value)}/>
+    <TextField id="surname" label="Apellido" variant="standard" onChange={(e) => setSurname(e.target.value)}/>
+    <TextField id="username" label="Usuario" variant="standard" onChange={(e) => setUsername(e.target.value)}/>
+    <PasswordField setPassword={setPassword}/>
+</>;
+
+
+
+
+const checkEmailIsRegistered = async (email) => {
+    try {
+        const auth = getAuth();
+
+        const signInMethods = await fetchSignInMethodsForEmail(auth, email);
+
+        return !!(signInMethods && signInMethods.length > 0);
+    } catch (error) {
+        console.error('Error al verificar el correo electrónico:', error);
+        return false;
+    }
 };
 
 const OthersContainer = styled.div`
@@ -90,7 +219,6 @@ const TextFieldContainer = styled.div`
 `;
 
 const ContainerCenter = styled.div`
-  margin-top: 30px;
   display: flex;
   justify-content: center;
 `;

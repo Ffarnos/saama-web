@@ -38,7 +38,7 @@ const CirculoBase = () => {
         },
     ];
 
-    return <>
+    return <LoginCheck>
         <Background style={{backgroundImage: `url(/images/portada.webp)`}}>
             <Container>
                 <Title scale={0.8} color={"#fffdfd"}>
@@ -56,7 +56,7 @@ const CirculoBase = () => {
                 <FinishButtonResponsive/>
             </Container>
         </Background>
-    </>;
+    </LoginCheck>;
 }
 
 

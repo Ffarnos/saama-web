@@ -20,6 +20,7 @@ const firebaseConfig = {
   messagingSenderId: "177528645527",
   appId: "1:177528645527:web:6127415a2b13d2b99706d2",
   measurementId: "G-JZCM5YZV7H",
+  databaseURL: "https://saama-4bc7b-default-rtdb.firebaseio.com",
 };
 
 export const app = initializeApp(firebaseConfig);

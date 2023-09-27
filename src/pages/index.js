@@ -5,6 +5,7 @@ import {navigate} from "gatsby";
 import {useEffect} from "react";
 import useInstall from "../components/UseInstall";
 import AuthChecker from '../components/login/LoginCheck';
+import LoginCheck from "../components/login/LoginCheck";
 const Index = () => {
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -27,7 +28,7 @@ const Index = () => {
   }, []);
 
   return (
-      <>
+      <LoginCheck>
         <Background>
           <ContainerInstall>
             <MinimalisticInstallButton/>
@@ -45,7 +46,7 @@ const Index = () => {
             </CenterContainer>
           </Container>
         </Background>
-      </>
+      </LoginCheck>
   );
 };
 

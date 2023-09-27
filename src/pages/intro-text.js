@@ -34,7 +34,7 @@ const IntroText = () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
     }, [number]);
-    return TextComponent(number, setNumber)
+    return <LoginCheck>TextComponent(number, setNumber)</LoginCheck>
 }
 
 const Navigate = ({number, setNumber}) => <Container>
