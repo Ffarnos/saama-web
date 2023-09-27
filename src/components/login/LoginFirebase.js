@@ -1,9 +1,14 @@
 import {useEffect, useState} from 'react';
-import {getAuth, signInWithEmailAndPassword, fetchSignInMethodsForEmail, createUserWithEmailAndPassword, sendPasswordResetEmail} from 'firebase/auth';
-import { getDatabase, ref, push, set} from 'firebase/database';
+import {
+    createUserWithEmailAndPassword,
+    getAuth,
+    sendPasswordResetEmail,
+    signInWithEmailAndPassword
+} from 'firebase/auth';
+import {getDatabase, ref, set, get} from 'firebase/database';
 import {app} from "../../../gatsby-browser";
 import styled from "styled-components";
-import {FormControl, IconButton, InputAdornment, InputLabel, TextField, Input} from "@mui/material";
+import {FormControl, IconButton, Input, InputAdornment, InputLabel, TextField} from "@mui/material";
 import ResponsiveText from "../apis/ResponsiveText";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
@@ -58,7 +63,6 @@ const LoginFirebase = ({noPermissionInfo}) => {
 
             if (register === '') {
                 const isRegister = await checkEmailIsRegistered(email);
-
                 if (isRegister)
                     setRegister('signin');
                 else
@@ -194,11 +198,15 @@ const SignUp = ({setName, setSurname, setUsername, setPassword}) => <>
 
 const checkEmailIsRegistered = async (email) => {
     try {
-        const auth = getAuth();
+        const dbRef = ref(getDatabase(app), 'users');
+        const snapshot = await get(dbRef);
 
-        const signInMethods = await fetchSignInMethodsForEmail(auth, email);
+        if (snapshot.exists()) {
+            const users = snapshot.val();
+            return Object.values(users).some((user) => user.email === email);
+        }
 
-        return !!(signInMethods && signInMethods.length > 0);
+        return false;
     } catch (error) {
         console.error('Error al verificar el correo electrónico:', error);
         return false;
