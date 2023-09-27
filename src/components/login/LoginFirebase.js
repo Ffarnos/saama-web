@@ -29,7 +29,6 @@ const LoginFirebase = ({noPermissionInfo}) => {
             const currentTime = new Date().getTime();
             const timeSinceLastReset = currentTime - lastPasswordResetTimestamp;
             if (timeSinceLastReset < 2 * 60 * 1000) {
-                console.log("lLEGO")
                 setSendPasswordMail(true);
             }
         }

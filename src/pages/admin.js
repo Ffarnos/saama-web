@@ -75,8 +75,6 @@ const AdminPanel = () => {
         }).then(r => fetchUsers())
     }
 
-    document.body.style.overflow = 'hidden';
-
     const includeSearch = string => string
         .toLowerCase()
         .includes(filter.toLowerCase());
