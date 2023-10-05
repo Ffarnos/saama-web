@@ -48,7 +48,7 @@ const Navigate = ({number, setNumber}) => <Container>
     }/>
 </Container>
 
-const NextFunction = ({number, setNumber}) => {
+    const NextFunction = ({number, setNumber}) => {
     switch (number) {
         case 1:
             return setNumber((prev) => prev + 1);
@@ -108,7 +108,7 @@ const TextComponent = (number, setNumber) => {
                                 siempre me acompañan: ángeles guardianes, angeles guias,
                                 arcangeles, serafines, querubines, maestros ascendidos,
                                 ondas positivas y al amado concilio del espíritu santo que rige,
-                                a la madre maría que me acompaña y al amado jesús que es
+                                a la madre maría que me acompaña y al amado Jesús que es
                                 mi guía. amén.“
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
@@ -193,13 +193,10 @@ const TextComponent = (number, setNumber) => {
                                 13X1 – 13X1 – 13X1
                             </ResponsiveText>
                             <ResponsiveText scale={0.5} style={{marginTop: '15px'}}>
-                                Voy a solicitar al amado concilio del Espíritu Santo que, en nombre de
-                                nuestro Señor Jesucristo, guíe a este ser desencarnado que afecta a mi
-                                cliente. Pido que cierres el portal dimensional por donde ingresó, si
-                                esta es tu voluntad, que lo conduzca hacia su destino adecuado.
-                                También que reciba la iluminación que tanto requiere y se purifiquen
-                                todas las energías negativas que ha dejado en su aura. Te agradezco,
-                                Padre, por este valioso servicio. Amen
+                                Me dirijo al amado Concilio del Espíritu Santo en nombre de nuestro Señor
+                                Jesucristo, guíe a este desencarnado que afecta a (nombre de la consultante),
+                                cierre el portal dimensional, iluminando su camino y liberando su aura de energías
+                                negativas, te agradecemos, Padre, por este valioso servicio. Amén."
                             </ResponsiveText>
                             <ResponsiveText scale={0.5} style={{marginTop: '15px'}}>
                                 13X1 – 13X1 – 13X1
