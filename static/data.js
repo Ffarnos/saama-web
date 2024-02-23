@@ -303,11 +303,11 @@ const petalos = [
                             },
                             {
                                 linkName: "petalo-2/1/4/6", image: 'boton2', separation: true, titlePage: 'Emociones', title: "D 6",
-                                text: "TERROR. TIMIDEZ. VENGANZA. VERGÜENZA"
+                                text: "TERROR. TIMIDEZ. VACIO. VIOLENCIA"
                             },
                             {
                                 linkName: "petalo-2/1/4/7", image: 'boton2', separation: true, titlePage: 'Emociones', title: "D 7",
-                                text: "VICTIMISMO. VULNERABLE"
+                                text: "VENGANZA. VERGÜENZA. VICTIMISMO. VULNERABLE"
                             },
                         ]
                     }
@@ -1319,14 +1319,17 @@ const petalos = [
                                 linkName: "petalo-3/11/1/5", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 5",
                                 text: "No pertenezco a este lugar. " +
                                     "Ser un buen hijo o nieto, es aguantar a mis padres o a mis abuelos contra mis deseos. " +
-                                    "Para ser buen padre/madre, tengo que sufrir por mis hijos."
+                                    "Para ser buen padre/madre, tengo que sufrir por mis hijos." +
+                                    "No merezco ser amado."
+
                             },
                             {
                                 linkName: "petalo-3/11/1/6", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 6",
                                 text: "Los hombres son peligrosos. " +
                                     "Las mujeres son peligrosas. " +
                                     "Mi pareja me va a dejar tarde o temprano. " +
-                                    "No merezco ser amado."
+                                    "Tengo que conformarme con lo que tengo. "
+
                             },
                             {
                                 linkName: "petalo-3/11/1/7", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 7",
@@ -1391,9 +1394,9 @@ const petalos = [
                             {
                                 linkName: "petalo-3/11/2/5", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 5",
                                 text: "Es inútil esforzarme no lo voy a conseguir. " +
-                                    "Tengo que conformarme con lo que tengo. " +
                                     "Yo no puedo ser. " +
-                                    "Yo no puedo tener"
+                                    "Yo no puedo tener" +
+                                    "Tener confianza en uno mismo te lleva a la arrogancia. "
                             },
                             {
                                 linkName: "petalo-3/11/2/6", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 6",
@@ -1421,7 +1424,6 @@ const petalos = [
                                 text: "No quiero destacar para no ser criticado. " +
                                     "No merezco vivir en la vida con armonía/plenitud. " +
                                     "No se puede ser espiritual y no meditar. " +
-                                    "Tener confianza en uno mismo te lleva a la arrogancia. " +
                                     "No puedo lograr las metas que me eh fijado."
                             },
                             {

@@ -102,29 +102,17 @@ const TextComponent = (number, setNumber) => {
                                 ORACIÓN PARA ABRIR ESPACIO SAGRADO
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '10px'}}>
-                                “Amado padre, pon escudo de protección en cada milímetro
-                                de este recinto de sanación y amor incondicional y en toda mi
-                                casa. pon guarda y custodia a todos los seres de luz que
-                                siempre me acompañan: ángeles guardianes, angeles guias,
-                                arcangeles, serafines, querubines, maestros ascendidos,
-                                ondas positivas y al amado concilio del espíritu santo que rige,
-                                a la madre maría que me acompaña y al amado Jesús que es
-                                mi guía. amén.“
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                “Abrir terapia" de Robert Detzler“
+                                Querido padre celestial, te pido que extiendas tu escudo de protección en cada rincón de este espacio dedicado a la sanación y al amor incondicional.
+                                Coloca tu guarda y custodia a todos los seres de luz que me acompañan: ángeles guardianes, guías angelicales, arcángeles, serafines, querubines, maestros ascendidos, energías positivas, y  protección al amado concilio del Espíritu Santo que dirige, la presencia de la madre María que me acompaña y la sabiduría de Jesús que es mi guía, Amen.
                             </ResponsiveText>
                             <ResponsiveText scale={0.7} style={{marginTop: '20px'}}>
                                 ORACIÓN PARA CERRAR ESPACIO SAGRADO
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                "Voy a dar infinitas gracias a todo mi comité de yo superior y a
-                                mi alma y al alma de ...(aquí recitas los nombres de los
-                                consultantes) por este servicio y esta sanación, cierra sus
-                                archivos Akáshicos y sus puertas astrales y te damos gracias
-                                padre porque siempre estás conmigo, gracias madre por todo
-                                lo que nos das y gracias al concilio del espíritu santo por tan
-                                alto servicio. amén."
+                                Doy gracias de manera infinita a mi Comité de Yo Superior, a mi ser espiritual y los seres que estuvieron en este día de sanación, por este sagrado servicio de evolución y transformación.
+                                En este momento, cierro amorosamente los archivos Akáshicos y las puertas astrales, confiando en la guía divina.
+                                Te agradezco Padre por tu presencia constante en mi vida, Madre, por la abundancia que nos ofreces, y al Espíritu Santo por tu elevado servicio.
+                                Que la luz del amor y sabiduría continue guiándonos en este viaje espiritual, Amen.
                             </ResponsiveText>
                         </>,
                     '2':
@@ -211,11 +199,8 @@ const TextComponent = (number, setNumber) => {
                                 9x9 – 9x9 – 9x9
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '15px'}}>
-                                Padre celestial, te pido que extiendas tu divina protección sobre mí, mi
-                                entorno y me cubras con una coraza espiritual que fortalezca nuestra fe,
-                                integridad y espíritu. y nos brindes un escudo especial, un muro
-                                protector que nos resguarde de cualquier daño físico, emocional o
-                                espiritual. Gracias por tu amor y cuidado constante. Amén.
+                                Padre celestial, te pido que extiendas tu divina protección sobre (nombre de la persona), y todo su entorno, que lo protejas con una coraza y escudo espiritual que fortalezca su fe, integridad y espíritu, creando un muro protector que lo resguarde de cualquier daño físico, emocional, mental o espiritual.
+                                Gracias Padre, por tu amor y cuidado constante. Amén.
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '15px'}}>
                                 9x9 – 9x9 – 9x9
