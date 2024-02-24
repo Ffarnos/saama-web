@@ -1319,7 +1319,7 @@ const petalos = [
                                 linkName: "petalo-3/11/1/5", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "A 5",
                                 text: "No pertenezco a este lugar. " +
                                     "Ser un buen hijo o nieto, es aguantar a mis padres o a mis abuelos contra mis deseos. " +
-                                    "Para ser buen padre/madre, tengo que sufrir por mis hijos." +
+                                    "Para ser buen padre/madre, tengo que sufrir por mis hijos. " +
                                     "No merezco ser amado."
 
                             },
@@ -1395,8 +1395,8 @@ const petalos = [
                                 linkName: "petalo-3/11/2/5", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 5",
                                 text: "Es inútil esforzarme no lo voy a conseguir. " +
                                     "Yo no puedo ser. " +
-                                    "Yo no puedo tener" +
-                                    "Tener confianza en uno mismo te lleva a la arrogancia. "
+                                    "Yo no puedo tener. " +
+                                    "No puedo lograr las metas que me eh fijado. "
                             },
                             {
                                 linkName: "petalo-3/11/2/6", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 6",
@@ -1424,7 +1424,7 @@ const petalos = [
                                 text: "No quiero destacar para no ser criticado. " +
                                     "No merezco vivir en la vida con armonía/plenitud. " +
                                     "No se puede ser espiritual y no meditar. " +
-                                    "No puedo lograr las metas que me eh fijado."
+                                    "Tener confianza en uno mismo te lleva a la arrogancia."
                             },
                             {
                                 linkName: "petalo-3/11/2/10", image: 'boton3', separation: true, titlePage: 'Creencias Limitantes', title: "B 10",
