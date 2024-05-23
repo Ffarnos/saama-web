@@ -6,7 +6,6 @@ import {
     signInWithEmailAndPassword
 } from 'firebase/auth';
 import {getDatabase, ref, set, get} from 'firebase/database';
-import {app} from "../../../gatsby-browser";
 import styled from "styled-components";
 import {FormControl, IconButton, Input, InputAdornment, InputLabel, TextField} from "@mui/material";
 import ResponsiveText from "../apis/ResponsiveText";
@@ -14,6 +13,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import ResponsiveImage from "../apis/ResponsiveImage";
 import Logo from "../../images/icon.png";
+import {useFirebase} from "../FirebaseContext";
 
 const LoginFirebase = ({noPermissionInfo}) => {
     const [email, setEmail] = useState('');
@@ -25,6 +25,7 @@ const LoginFirebase = ({noPermissionInfo}) => {
     const [error, setError] = useState(null);
     const [register, setRegister] = useState('');
     const [sendPasswordMail , setSendPasswordMail] = useState(false);
+    const firebaseApp = useFirebase();
 
     useEffect(() => {
         const lastPasswordResetTimestamp = localStorage.getItem(
@@ -42,7 +43,7 @@ const LoginFirebase = ({noPermissionInfo}) => {
     const handeChangePass = async (e) => {
         e.preventDefault();
         try {
-            const auth = getAuth();
+            const auth = getAuth(firebaseApp);
             await sendPasswordResetEmail(auth, email);
             setSendPasswordMail(true);
             const currentTime = new Date().getTime();
@@ -58,11 +59,11 @@ const LoginFirebase = ({noPermissionInfo}) => {
         e.preventDefault();
 
         try {
-            const auth = getAuth();
+            const auth = getAuth(firebaseApp);
 
 
             if (register === '') {
-                const isRegister = await checkEmailIsRegistered(email);
+                const isRegister = await checkEmailIsRegistered(email,firebaseApp);
                 if (isRegister)
                     setRegister('signin');
                 else
@@ -73,7 +74,7 @@ const LoginFirebase = ({noPermissionInfo}) => {
             } else if (register === 'signup') {
                 const userCredential = await createUserWithEmailAndPassword(auth, email, password);
                 const user = userCredential.user;
-                const usersRef = ref(getDatabase(app), 'users/' + user.uid);
+                const usersRef = ref(getDatabase(firebaseApp), 'users/' + user.uid);
 
                 const newUser = {
                     email,
@@ -196,9 +197,10 @@ const SignUp = ({setName, setSurname, setUsername, setPassword}) => <>
 
 
 
-const checkEmailIsRegistered = async (email) => {
+const checkEmailIsRegistered = async (email, firebaseApp) => {
+
     try {
-        const dbRef = ref(getDatabase(app), 'users');
+        const dbRef = ref(getDatabase(firebaseApp), 'users');
         const snapshot = await get(dbRef);
 
         if (snapshot.exists()) {

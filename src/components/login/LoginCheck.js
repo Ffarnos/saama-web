@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import {
     getAuth,
 } from 'firebase/auth';
-import {app} from "../../../gatsby-browser";
 import LoginFirebase from "./LoginFirebase";
 import {getDatabase, ref, get} from "firebase/database";
+import {useFirebase} from "../FirebaseContext";
 
 
 const LoginCheck = ({ children }) => {
@@ -12,11 +12,13 @@ const LoginCheck = ({ children }) => {
     const [hasPermission, setHasPermission] = useState(false);
     const [authenticatedUser, setAuthenticatedUser] = useState(null);
 
+    const firebaseApp = useFirebase();
+
     useEffect(() => {
-        const authUnsubscribe = getAuth(app).onAuthStateChanged((user) => {
+        const authUnsubscribe = getAuth(firebaseApp).onAuthStateChanged((user) => {
             if (user) {
                 setAuthenticatedUser(user);
-                const usersRef = ref(getDatabase(app), 'users/' + user.uid);
+                const usersRef = ref(getDatabase(firebaseApp), 'users/' + user.uid);
                 get(usersRef)
                     .then((snapshot) => {
                         setHasPermission(snapshot.exists() && (snapshot.val().role !== 'user'))
@@ -35,7 +37,7 @@ const LoginCheck = ({ children }) => {
         return () => {
             authUnsubscribe();
         };
-    }, [loading]);
+    }, [loading, firebaseApp]);
 
 
     let noPermissionInfo = false;
