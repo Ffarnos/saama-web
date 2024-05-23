@@ -1,12 +1,12 @@
-const sendWhatsapp = require("twilio");
+import twilio from 'twilio';
 
-exports.handler = async function (event, context) {
+export async function handler(event, context) {
     const accountSid = process.env.TWILIO_ACCOUNT_SID;
     const authToken = process.env.TWILIO_AUTH_TOKEN;
-    const client = sendWhatsapp(accountSid, authToken);
+    const client = twilio(accountSid, authToken);
 
     const body = JSON.parse(event.body);
-    const pdfUrl = body.pdfUrl; // Cambia esto para obtener el PDF del cuerpo
+    const pdfUrl = body.pdfUrl;
 
     const messageOptions = {
         from: 'whatsapp:+14155238886',
