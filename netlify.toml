@@ -3,5 +3,7 @@
     NPM_VERSION = "9.5.1"
     NVM_VERSION = "1.1.9"
     NPM_FLAGS = "--force"
+    TWILIO_ACCOUNT_SID = "${TWILIO_ACCOUNT_SID}"
+    TWILIO_AUTH_TOKEN = "${TWILIO_ACCOUNT_TOKEN}"
 [build]
 functions = ".functions"
