@@ -430,7 +430,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-2/4", image: 'boton2', title: "Cruce de Rutas", text: "Dos rutas que se unifican (dos conceptos) que al unirse generan una interpretación, que se refiere a una situación de la vida cotidiana, interpretar este punto desde una mirada más amplia es de suma importancia. (Anulado)", noNumbers: true, subPetalos: [
+                linkName: "petalo-2/4", image: 'boton2', title: "Cruce de Rutas", noNumbers: true, subPetalos: [
                     {
                         linkName: "petalo-2/4/1", image: 'boton2', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
