@@ -3,3 +3,5 @@
     NPM_VERSION = "9.5.1"
     NVM_VERSION = "1.1.9"
     NPM_FLAGS = "--force"
+[build]
+functions = ".functions"
