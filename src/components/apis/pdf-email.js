@@ -167,8 +167,7 @@ const createAndSendPDF = async () => {
     link.download = 'documento.pdf';
     link.click();
 
-    console.log("AQUI")
-    fetch('/s/sendWhatsapp?pdfUrl=' + pdfUrl)
+    fetch('/.netlify/functions/sendWhatsapp?pdfUrl=?pdfUrl=' + pdfUrl)
         .then(response => {
             if (response.ok) {
                 console.log('PDF enviado por WhatsApp');
