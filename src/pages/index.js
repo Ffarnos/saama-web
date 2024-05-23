@@ -1,54 +1,151 @@
 import styled from 'styled-components';
+import { Helmet } from "react-helmet";
 import backgroundImage from '../../static/images/portada.webp';
 import ResponsiveText from "../components/apis/ResponsiveText";
 import {navigate} from "gatsby";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import useInstall from "../components/UseInstall";
-import AuthChecker from '../components/login/LoginCheck';
 import LoginCheck from "../components/login/LoginCheck";
+import {Alert, TextField} from "@mui/material";
 const Index = () => {
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === 'Enter') {
-        navigate('/circulo-base');
-      } else if (event.key === 'Backspace') {
-        navigate('/');
-      } else if (event.key === 'ArrowLeft') {
-        navigate(-1);
-      } else if (event.key === 'ArrowRight' || event.key === ' ') {
-        navigate('/intro-text');
-      }
+    const [paciente, setPaciente] = useState(null);
+    const [problems, setProblems] = useState([]);
+    const [showAlert, setShowAlert] = useState(false);
+
+    const handleStartButtonClick = () => {
+        if (!paciente || !problems.some(problem => problem)) {
+            setShowAlert(true)
+            setTimeout(() => {
+                setShowAlert(false)
+            },4000)
+        } else {
+            toIntroText(paciente, problems);
+        }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (event.key === 'Enter') {
+                navigate('/circulo-base');
+            } else if (event.key === 'Backspace') {
+                navigate('/');
+            } else if (event.key === 'ArrowLeft') {
+                navigate(-1);
+            } else if (event.key === 'ArrowRight' || event.key === ' ') {
+                handleStartButtonClick();
+            }
+        };
 
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
+        document.addEventListener('keydown', handleKeyDown);
 
-  return (
-      <LoginCheck>
-        <Background>
-          <ContainerInstall>
-            <MinimalisticInstallButton/>
-          </ContainerInstall>
-          <Container>
-            <CenterContainer>
-              <TerapiaText scale={1.5}>TERAPIA</TerapiaText>
-              <TerapiaText scale={0.9}>CUÁNTICA</TerapiaText>
-              <TerapiaText scale={1.8}>GÉNESIS</TerapiaText>
-              <StartButton onClick={() => navigate('/intro-text')}>
-                <ResponsiveText scale={0.6} bold color={'#1f1e1e'}>
-                  INICIAR CONEXION
-                </ResponsiveText>
-              </StartButton>
-            </CenterContainer>
-          </Container>
-        </Background>
-      </LoginCheck>
-  );
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [paciente, problems]);
+
+    return (
+        <LoginCheck>
+            <Helmet>
+                <title>Terapia Genesís APP</title>
+                <meta name="description" content="Tu descripción personalizada para SEO."/>
+            </Helmet>
+            <Background>
+                <ContainerInstall>
+                    <MinimalisticInstallButton/>
+                </ContainerInstall>
+                <Container>
+                    {showAlert && <ContainerAlert>
+                        <Alert severity="error">
+                            Debes completar todos los campos
+                        </Alert>
+                    </ContainerAlert>}
+                    <CenterContainer>
+                        <TerapiaText scale={1.5}>TERAPIA</TerapiaText>
+                        <TerapiaText scale={0.9}>CUÁNTICA</TerapiaText>
+                        <TerapiaText scale={1.8}>GÉNESIS</TerapiaText>
+                        <StartButton onClick={() =>
+                            handleStartButtonClick()
+                        }>
+                            <ResponsiveText scale={0.6} bold color={'#1f1e1e'}>
+                                INICIAR CONEXION
+                            </ResponsiveText>
+                        </StartButton>
+                            <TextField id="paciente" label="Paciente" variant="filled" margin="normal"
+                                       onChange={(e) => {
+                                           setPaciente(e.target.value);
+                                       }}
+                                       sx={{
+                                           backgroundColor: 'white',
+                                           '&:hover': {
+                                               backgroundColor: 'white',
+                                           },
+                                           '&.Mui-focused': {
+                                               backgroundColor: 'white',
+                                           },
+                                           '& .MuiFilledInput-root': {
+                                               backgroundColor: 'white'
+                                           }
+                                       }}
+                            />
+
+                            <TextField id="problema1" label="Problematica 1" variant="filled" margin="normal"
+                                       onChange={(e) => {
+                                           const prob = [...problems];
+                                           prob[0] = e.target.value;
+                                           setProblems(prob);
+                                       }}
+                                       sx={{
+                                           backgroundColor: 'white',
+                                           '&:hover': {
+                                               backgroundColor: 'white', // Mantener el fondo blanco al hacer hover
+                                           },
+                                           '&.Mui-focused': {
+                                               backgroundColor: 'white', // Mantener el fondo blanco cuando está enfocado
+                                           },
+                                           '& .MuiFilledInput-root': {
+                                               backgroundColor: 'white' // Mantener el fondo blanco para el input
+                                           }
+                                       }}
+                            />
+
+                            <TextField id="problema2" label="Problematica 2" variant="filled" margin="normal"
+                                       onChange={(e) => {
+                                           const prob = [...problems];
+                                           prob[1] = e.target.value;
+                                           setProblems(prob);
+                                       }}
+                                       sx={{
+                                           backgroundColor: 'white',
+                                           '&:hover': {
+                                               backgroundColor: 'white', // Mantener el fondo blanco al hacer hover
+                                           },
+                                           '&.Mui-focused': {
+                                               backgroundColor: 'white', // Mantener el fondo blanco cuando está enfocado
+                                           },
+                                           '& .MuiFilledInput-root': {
+                                               backgroundColor: 'white' // Mantener el fondo blanco para el input
+                                           }
+                                       }}
+                            />
+                    </CenterContainer>
+                </Container>
+            </Background>
+        </LoginCheck>
+    );
 };
+
+const toIntroText = (paciente, problems) => {
+  localStorage.setItem('paciente', paciente)
+  localStorage.setItem('problems', problems)
+  navigate('/intro-text');
+};
+
+const ContainerAlert = styled.div`
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 999;
+`;
 
 const ContainerInstall = styled.div`
   display: flex;
@@ -134,5 +231,7 @@ const StartButton = styled.div`
     filter: brightness(1.8);
   }
 `;
+
+
 
 export default Index;
