@@ -5,11 +5,13 @@ exports.handler = async function (event, context) {
     const authToken = process.env.TWILIO_AUTH_TOKEN;
     const client = sendWhatsapp(accountSid, authToken);
 
-    const messageOptions = {
+    const body = JSON.parse(event.body);
+    const pdfUrl = body.pdfUrl; // Cambia esto para obtener el PDF del cuerpo
 
+    const messageOptions = {
         from: 'whatsapp:+14155238886',
         body: 'Aquí está tu documento PDF',
-        mediaUrl: event.queryStringParameters.pdfUrl,
+        mediaUrl: pdfUrl,
         to: 'whatsapp:+5492262536209',
     };
 

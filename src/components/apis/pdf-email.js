@@ -167,15 +167,31 @@ const createAndSendPDF = async () => {
     link.download = 'documento.pdf';
     link.click();
 
-    fetch('/.netlify/functions/sendWhatsapp?pdfUrl=?pdfUrl=' + pdfUrl)
-        .then(response => {
-            if (response.ok) {
-                console.log('PDF enviado por WhatsApp');
-            } else {
-                console.error('Error al enviar el PDF por WhatsApp');
-            }
+    const reader = new FileReader();
+    reader.readAsArrayBuffer(pdfBlob);
+    reader.onloadend = async () => {
+        const pdfArrayBuffer = reader.result;
+
+        // Convertir ArrayBuffer en base64
+        const pdfBase64 = btoa(String.fromCharCode(...new Uint8Array(pdfArrayBuffer)));
+
+        // Enviar el PDF en el cuerpo de la solicitud POST
+        fetch('/.netlify/functions/sendWhatsapp', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ pdfUrl: 'data:application/pdf;base64,' + pdfBase64 }),
         })
-        .catch(error => console.error('Error:', error));
+            .then(response => {
+                if (response.ok) {
+                    console.log('PDF enviado por WhatsApp');
+                } else {
+                    console.error('Error al enviar el PDF por WhatsApp');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    };
 
 };
 
