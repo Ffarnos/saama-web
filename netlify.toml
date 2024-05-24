@@ -6,4 +6,7 @@
     TWILIO_ACCOUNT_SID = "${TWILIO_ACCOUNT_SID}"
     TWILIO_AUTH_TOKEN = "${TWILIO_ACCOUNT_TOKEN}"
 [build]
-functions = "functions"
+functions = "netlify/functions"
+[functions]
+source = ".netlify/functions"  # Carpeta fuente de las funciones
+node_bundler = "esbuild"  # O webpack, dependiendo de tus preferencias
