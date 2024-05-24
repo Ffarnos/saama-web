@@ -178,6 +178,7 @@ const createAndSendPDF = async () => {
             if (response.ok) {
                 console.log('PDF enviado por WhatsApp');
             } else {
+                console.log(response)
                 console.error('Error al enviar el PDF por WhatsApp');
             }
         })
