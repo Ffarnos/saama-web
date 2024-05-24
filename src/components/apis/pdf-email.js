@@ -170,10 +170,9 @@ const createAndSendPDF = async () => {
         body: JSON.stringify({ pdf: pdfBase64 }),
     })
         .then(response => {
-            response.body.getReader().read().then(({ value, done }) => {
-                console.log(value);
-            });
-        })
+            response.json().then(errorData => {
+                console.error('Error:', errorData.error, errorData.message);
+            });        })
         .catch(error => console.error('Error:', error));
 
 };
