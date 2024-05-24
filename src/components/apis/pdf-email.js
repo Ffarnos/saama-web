@@ -74,7 +74,7 @@ const createAndSendPDF = async () => {
                 x: 22,
                 y: y,
                 size: 22,
-                color: rgb(1,0,0),
+                color: rgb(1, 0, 0),
             });
             y = y - 35;
         }
@@ -91,7 +91,7 @@ const createAndSendPDF = async () => {
                 y = y - 20;
             }
 
-            if (petalo.text){
+            if (petalo.text) {
                 const text = petalo.text;
                 const wrappedText = wrapText(text, maxWidth, font, 12);
                 for (const line of wrappedText.split('\n')) {
@@ -106,8 +106,7 @@ const createAndSendPDF = async () => {
                 }
                 y = y - 30;
             }
-        }
-        else {
+        } else {
             //PETALO FINAL
             if (petalo.text) {
                 if (petalo.separation) {
@@ -145,45 +144,34 @@ const createAndSendPDF = async () => {
                         y = y - 120;
                     }
                 }
-            }
-            else {
+            } else {
                 if (petalo.title)
                     currentPage.drawText(petalo.text, {
-                    x: 22,
-                    y: y,
-                    size: 12,
-                    color: rgb(0, 0, 0),
-                });
+                        x: 22,
+                        y: y,
+                        size: 12,
+                        color: rgb(0, 0, 0),
+                    });
             }
             y = y - 20;
         }
     }
 
     const pdfBytes = await pdfDoc.save();
-    const pdfBlob = new Blob([pdfBytes], { type: 'application/pdf' });
-    const pdfUrl = URL.createObjectURL(pdfBlob);
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'documento.pdf';
-    link.click();
+    const pdfBase64 = Buffer.from(pdfBytes).toString('base64');
 
+    console.log("HOLAAAAA " + pdfBase64);
     fetch('/.netlify/functions/sendWhatsapp', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ pdfUrl: pdfUrl }),
+        body: JSON.stringify({ pdf: pdfBase64 }),
     })
         .then(response => {
-            if (response.ok) {
-                console.log('PDF enviado por WhatsApp');
-            } else {
-                console.log(response)
-                console.error('Error al enviar el PDF por WhatsApp');
-            }
+            console.log(response)
         })
         .catch(error => console.error('Error:', error));
-
 
 };
 
