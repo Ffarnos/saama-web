@@ -39,8 +39,10 @@ exports.handler = async (event, context) => {
 
         const fileUrl = `https://${process.env.SW3_BUCKET_NAME}.s3.amazonaws.com/${fileName}`;
 
+
         const templateParams = {
             pdf_url: fileUrl,
+            body: 'Hola, te envío el PDF que solicitaste ' + fileUrl,
             to_email: 'ffarnos12@gmail.com'
             // Add other required fields here
         };
