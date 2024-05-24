@@ -11,6 +11,7 @@ exports.handler = async (event, context) => {
             };
         }
 
+        //
         // Obtiene el cuerpo de la solicitud
         const body = JSON.parse(event.body);
         const pdfBase64 = body.pdf;
