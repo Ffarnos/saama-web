@@ -6,4 +6,4 @@
     TWILIO_ACCOUNT_SID = "${TWILIO_ACCOUNT_SID}"
     TWILIO_AUTH_TOKEN = "${TWILIO_ACCOUNT_TOKEN}"
 [build]
-functions = "netlify/functions"
+functions = ".netlify/functions"
