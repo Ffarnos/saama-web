@@ -5,8 +5,6 @@ exports.handler = async (event, context) => {
     const authToken = process.env.TWILIO_ACCOUNT_TOKEN;
     const client = twilio(accountSid, authToken);
 
-    const pdfUrl = body.pdfUrl;
-
     const messageOptions = {
         from: 'whatsapp:+14155238886',
         body: 'Aquí está tu documento PDF',
