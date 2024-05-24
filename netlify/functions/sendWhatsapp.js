@@ -19,9 +19,9 @@ exports.handler = async (event, context) => {
         // Genera un nombre único para el archivo
         const now = new Date();
         const fileName = `document-${now.getTime()}-${Math.floor(Math.random() * 1000)}.pdf`;
-        const filePath = path.join('/tmp', fileName);
+        const filePath = path.join('public', fileName); // Guarda en el directorio 'public'
 
-        // Guarda el archivo en el sistema de archivos temporal de Netlify
+        // Guarda el archivo en el sistema de archivos de tu proyecto
         writeFileSync(filePath, pdfBuffer);
 
         // Obtiene la URL del archivo
