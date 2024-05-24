@@ -160,6 +160,8 @@ const createAndSendPDF = async () => {
     const pdfBytes = await pdfDoc.save();
     const pdfBase64 = btoa(String.fromCharCode(...new Uint8Array(pdfBytes)));
 
+
+
     fetch('/.netlify/functions/sendWhatsapp', {
         method: 'POST',
         headers: {
@@ -168,7 +170,9 @@ const createAndSendPDF = async () => {
         body: JSON.stringify({ pdf: pdfBase64 }),
     })
         .then(response => {
-            console.log(response.body)
+            response.body.getReader().read().then(({ value, done }) => {
+                console.log(value);
+            });
         })
         .catch(error => console.error('Error:', error));
 
