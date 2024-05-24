@@ -40,21 +40,11 @@ exports.handler = async (event, context) => {
         const fileUrl = `https://${process.env.SW3_BUCKET_NAME}.s3.amazonaws.com/${fileName}`;
 
 
-        const templateParams = {
-            pdf_url: fileUrl,
+        await emailjs.send("service_u9dlni4", "template_q0rb42f", {
+            to_email: "ffarnos12@gmail.com",
             body: 'Hola, te envío el PDF que solicitaste ' + fileUrl,
-            to_email: 'ffarnos12@gmail.com'
-            // Add other required fields here
-        };
+        });
 
-        emailjs.send('service_u9dlni4', 'template_q0rb42f', templateParams,"GDJnvGlc9y4o6oeeR").then(
-            (response) => {
-                console.log('SUCCESS!', response.status, response.text);
-            },
-            (error) => {
-                console.log('FAILED...', error);
-            },
-        );
         return {
             statusCode: 200,
             body: JSON.stringify({ message: 'PDF uploaded successfully', url: fileUrl }),
