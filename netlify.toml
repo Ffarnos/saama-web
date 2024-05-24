@@ -6,8 +6,4 @@
     TWILIO_ACCOUNT_SID = "${TWILIO_ACCOUNT_SID}"
     TWILIO_AUTH_TOKEN = "${TWILIO_ACCOUNT_TOKEN}"
 [build]
-    functions = ".functions"
-[[redirects]]
-    from = "/api/*"
-    to = "/.netlify/functions/:splat"
-    status = 200
+functions = "functions"
