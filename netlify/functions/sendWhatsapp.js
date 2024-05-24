@@ -11,7 +11,6 @@ exports.handler = async (event, context) => {
             };
         }
 
-        //
         // Obtiene el cuerpo de la solicitud
         const body = JSON.parse(event.body);
         const pdfBase64 = body.pdf;
@@ -27,12 +26,15 @@ exports.handler = async (event, context) => {
 
         // Crea el directorio 'public' si no existe
         const publicDir = path.join(__dirname, 'public');
+        console.log('Public directory:', publicDir);
         if (!existsSync(publicDir)) {
             mkdirSync(publicDir);
+            console.log('Public directory created');
         }
 
         // Mueve el archivo a la carpeta de publicaciones
         const publicFilePath = path.join(publicDir, fileName);
+        console.log('Public file path:', publicFilePath);
         writeFileSync(publicFilePath, pdfBuffer);
 
         // Obtiene la URL del archivo
@@ -43,7 +45,6 @@ exports.handler = async (event, context) => {
             body: JSON.stringify({ message: 'PDF uploaded successfully', url: fileUrl }),
         };
     } catch (error) {
-        console.error('Error uploading PDF:', error);
         return {
             statusCode: 500,
             body: JSON.stringify({ error: 'Error uploading PDF', message: error.message }),
