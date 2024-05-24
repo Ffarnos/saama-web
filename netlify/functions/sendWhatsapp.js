@@ -1,6 +1,5 @@
 const { Buffer } = require('buffer');
-const { writeFileSync, mkdirSync, existsSync } = require('fs');
-const path = require('path');
+const AWS = require('aws-sdk');
 
 exports.handler = async (event, context) => {
     try {
@@ -16,16 +15,25 @@ exports.handler = async (event, context) => {
         const pdfBase64 = body.pdf;
         const pdfBuffer = Buffer.from(pdfBase64, 'base64');
 
-        // Genera un nombre único para el archivo
+        // Configura el SDK de AWS con tus credenciales de SW3
+        const s3 = new AWS.S3({
+            accessKeyId: process.env.SW3_ACCESS_KEY_ID,
+            secretAccessKey: process.env.SW3_ACCESS_SECRET_KEY
+        });
+
+
+        // Guarda el archivo en SW3
         const now = new Date();
         const fileName = `document-${now.getTime()}-${Math.floor(Math.random() * 1000)}.pdf`;
-        const filePath = path.join('public', fileName); // Guarda en el directorio 'public'
+        const params = {
+            Bucket: process.env.SW3_BUCKET_NAME,
+            Key: fileName,
+            Body: pdfBuffer,
+            ContentType: 'application/pdf',
+        };
+        await s3.upload(params).promise();
 
-        // Guarda el archivo en el sistema de archivos de tu proyecto
-        writeFileSync(filePath, pdfBuffer);
-
-        // Obtiene la URL del archivo
-        const fileUrl = `${process.env.URL || 'http://localhost:8888'}/${fileName}`;
+        const fileUrl = `https://${process.env.SW3_BUCKET_NAME}.s3.amazonaws.com/${fileName}`;
 
         return {
             statusCode: 200,
