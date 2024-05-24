@@ -1,5 +1,5 @@
 const { Buffer } = require('buffer');
-const { writeFileSync } = require('fs');
+const { writeFileSync, mkdirSync, existsSync } = require('fs');
 const path = require('path');
 
 exports.handler = async (event, context) => {
@@ -24,8 +24,14 @@ exports.handler = async (event, context) => {
         // Guarda el archivo en el sistema de archivos temporal de Netlify
         writeFileSync(filePath, pdfBuffer);
 
+        // Crea el directorio 'public' si no existe
+        const publicDir = path.join(__dirname, 'public');
+        if (!existsSync(publicDir)) {
+            mkdirSync(publicDir);
+        }
+
         // Mueve el archivo a la carpeta de publicaciones
-        const publicFilePath = path.join(process.env.PUBLISH_DIR || 'public', fileName);
+        const publicFilePath = path.join(publicDir, fileName);
         writeFileSync(publicFilePath, pdfBuffer);
 
         // Obtiene la URL del archivo
