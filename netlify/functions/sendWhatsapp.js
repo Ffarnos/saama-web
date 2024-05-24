@@ -13,14 +13,12 @@ exports.handler = async (event, context) => {
 
         // Obtiene el cuerpo de la solicitud
         const body = JSON.parse(event.body);
-        console.log(body)
         const pdfBase64 = body.pdf;
-        console.log(pdfBase64)
         const pdfBuffer = Buffer.from(pdfBase64, 'base64');
-        console.log("3")
 
         // Genera un nombre único para el archivo
-        const fileName = `document-${Date.now()}.pdf`;
+        const now = new Date();
+        const fileName = `document-${now.getTime()}-${Math.floor(Math.random() * 1000)}.pdf`;
         const filePath = path.join('/tmp', fileName);
 
         // Guarda el archivo en el sistema de archivos temporal de Netlify
