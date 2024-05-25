@@ -4,18 +4,10 @@ const emailjs = require('emailjs-com');
 
 exports.handler = async (event, context) => {
     try {
-        if (event.httpMethod !== 'POST') {
-            return {
-                statusCode: 405,
-                body: 'Method Not Allowed',
-            };
-        }
-
         // Obtiene el cuerpo de la solicitud
         const body = JSON.parse(event.body);
         const pdfBase64 = body.pdf;
         const pdfBuffer = Buffer.from(pdfBase64, 'base64');
-
 
         AWS.config.update({
             accessKeyId: process.env.SW3_ACCESS_KEY,
@@ -52,7 +44,7 @@ exports.handler = async (event, context) => {
     } catch (error) {
         return {
             statusCode: 500,
-            body: JSON.stringify({ error: 'Error uploading PDF', message: error.message }),
+            body: JSON.stringify({ error: 'Error uploading PDF ' + error}),
         };
     }
 };

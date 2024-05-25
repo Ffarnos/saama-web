@@ -169,7 +169,7 @@ const createAndSendPDF = async () => {
     })
         .then(response => {
             response.json().then(errorData => {
-                console.error('Error:', errorData.error, errorData.message.error);
+                console.error('Error:', errorData.message, errorData.error);
             });        })
         .catch(error => console.error('Error:', error));
 
