@@ -1,6 +1,5 @@
 const { Buffer } = require('buffer');
 const AWS = require('aws-sdk');
-const emailjs = require('emailjs-com');
 
 exports.handler = async (event, context) => {
     try {
@@ -19,7 +18,6 @@ exports.handler = async (event, context) => {
 
         const now = new Date();
         const fileName = `document-${now.getTime()}-${Math.floor(Math.random() * 1000)}.pdf`;
-
 
         const params = {
             Bucket: process.env.SW3_BUCKET_NAME,

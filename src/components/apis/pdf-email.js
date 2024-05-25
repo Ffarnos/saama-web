@@ -1,6 +1,7 @@
 import 'firebase/auth';
 import {petalos} from "../../../static/data";
 import {PDFDocument, rgb} from 'pdf-lib';
+const emailjs = require('emailjs-com')
 
 const createAndSendPDF = async () => {
     const existingPdfBytes = await loadPDF();
