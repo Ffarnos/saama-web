@@ -106,7 +106,12 @@ const createAndSendPDF = async () => {
                     y = y - 10;
                 } else {
                     const text = petalo.title.toUpperCase() + ": " + petalo.text;
-                    const wrappedText = wrapText(text, maxWidth, font, 12);
+                    const cleanText = (text) => {
+                        return text.replace(/[^\x20-\x7E\n]/g, ''); // Remueve cualquier carácter no imprimible excepto las nuevas líneas
+                    }
+                    const cleanWrappedText = cleanText(text);
+
+                    const wrappedText = wrapText(cleanWrappedText, maxWidth, font, 12);
                     for (const line of wrappedText.split('\n')) {
                         currentPage.drawText(line, {
                             x: 22,
