@@ -35,7 +35,8 @@ exports.handler = async (event, context) => {
         await emailjs.send("service_u9dlni4", "template_q0rb42f", {
             to_email: "ffarnos12@gmail.com",
             body: 'Hola, te envío el PDF que solicitaste ' + fileUrl,
-        });
+            to_name: "Fernando",
+        }, );
 
         return {
             statusCode: 200,
