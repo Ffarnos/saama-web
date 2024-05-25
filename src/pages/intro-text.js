@@ -45,10 +45,10 @@ const Navigate = ({number, setNumber}) => <Container>
     />
     <NextButton color="black"
                 onClick={()=> NextFunction({number, setNumber})
-                }/>
+    }/>
 </Container>
 
-const NextFunction = ({number, setNumber}) => {
+    const NextFunction = ({number, setNumber}) => {
     switch (number) {
         case 1:
             return setNumber((prev) => prev + 1);
@@ -81,10 +81,10 @@ const BackFunction = ({number, setNumber}) => {
 }
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
 `;
 
 const TextContainer = styled.div`
@@ -109,6 +109,12 @@ const TextComponent = (number, setNumber) => {
                                 energías positivas, la protección del amado concilio del Espíritu Santo que dirige, la
                                 presencia de la madre María que me acompaña y la sabiduría de Jesús que es mi guía,
                                 Amén.
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.7} style={{marginTop: '20px'}}>
+                                ORACIÓN CHAMÁNICA PARA CERRAR EL ESPACIO SAGRADO
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.6} style={{marginTop: '10px'}}>
+                                "Para concluir nuestra terapia al final del día, elevamos nuestro agradecimiento a la Serpiente, el Jaguar, el Colibrí, el Águila, el Cóndor, la Madre Tierra, el Padre Sol y la Abuela Luna, reconociendo su guía espiritual en nuestro viaje interior."
                             </ResponsiveText>
                         </>,
                     '2':
@@ -135,12 +141,6 @@ const TextComponent = (number, setNumber) => {
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '10px'}}>
                                 Ahó.
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.7} style={{marginTop: '20px'}}>
-                                ORACIÓN CHAMÁNICA PARA CERRAR EL ESPACIO SAGRADO
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '10px'}}>
-                                "Para concluir nuestra terapia al final del día, elevamos nuestro agradecimiento a la Serpiente, el Jaguar, el Colibrí, el Águila, el Cóndor, la Madre Tierra, el Padre Sol y la Abuela Luna, reconociendo su guía espiritual en nuestro viaje interior."
                             </ResponsiveText>
                         </>,
                     '3':

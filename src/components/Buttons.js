@@ -3,31 +3,48 @@ import ResponsiveText from "./apis/ResponsiveText";
 import NavigationButtons from "./navigation/NavigationButtons";
 import {navigate} from "gatsby";
 import {useEffect} from "react";
+import createAndSendPDF from "./apis/pdf-email";
 
 const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
     useEffect(() => {
         const handleKeyDown = (event) => {
-            switch (event.key) {
-                case 'Enter':
-                    navigate("/circulo-base");
-                    break;
-                case 'Backspace':
-                    navigate("/");
-                    break;
-                case 'ArrowLeft':
-                    navigate(-1);
-                    break;
-                case 'ArrowRight':
-                    navigate(+1);
-                    break;
-                case ' ':
-                    navigate("/intro-text");
-                    break;
-                default:
-                    if (/^[0-9]$/.test(event.key)) {
-                        onClick(parseInt(event.key));
-                    }
-                    break;
+            if (event.altKey) {
+                let history = localStorage.getItem("history");
+
+                if (!history) history = [];
+                else history = JSON.parse(history);
+                if (event.key === 'r') {
+                    history.push("ramificar");
+                } else if (event.key === 'b') {
+                    history.remove(history.length-1);
+                    navigate(-1)
+                }
+
+                localStorage.setItem("history", JSON.stringify(history));
+            }
+            else {
+                switch (event.key) {
+                    case 'Enter':
+                        navigate("/circulo-base");
+                        break;
+                    case 'Backspace':
+                        navigate("/");
+                        break;
+                    case 'ArrowLeft':
+                        navigate(-1);
+                        break;
+                    case 'ArrowRight':
+                        navigate(+1);
+                        break;
+                    case 'Spacebar':
+                        navigate("/intro-text");
+                        break;
+                    default:
+                        if (/^[0-9]$/.test(event.key)) {
+                            onClick(parseInt(event.key));
+                        }
+                        break;
+                }
             }
         };
 

@@ -7,6 +7,7 @@ import {Alert, TextField, ThemeProvider, createTheme} from "@mui/material";
 import {FinishButtonResponsive} from "../navigation/FinishButton";
 import LoginCheck from "../login/LoginCheck";
 import {Background} from "../Commons";
+import historySave from "../navigation/History";
 
 const createdPages = require('../../../../createdPages.json');
 
@@ -88,8 +89,11 @@ const PetalosTemplate = ({ pageContext }) => {
                                 setShowAlert(true);
                                 setTimeout(() => setShowAlert(false),2000);
                                 return 0;
-                            } else if (numberFinal === prevInput)
-                                navigate("/circulo-base/" + linkName + "/" + numberFinal);
+                            } else if (numberFinal === prevInput) {
+                                const newLink = "/circulo-base/" + linkName + "/" + numberFinal;
+                                historySave(newLink);
+                                navigate(newLink);
+                            }
                             return prevInput;
                         });
                     }, 500);

@@ -2,21 +2,22 @@ import styled from "styled-components";
 import ResponsiveText from "../components/apis/ResponsiveText";
 import {getDatabase, ref, get, update} from "firebase/database";
 
-import {app} from "../../gatsby-browser";
 import {useEffect, useState} from "react";
 import {TextField} from "@mui/material";
 import {getAuth} from "firebase/auth";
 import {navigate} from "gatsby";
+import {useFirebase} from "../components/FirebaseContext";
 
 const AdminPanel = () => {
     const [users, setUsers] = useState([]);
     const [filter, setFilter] = useState('')
     const [hasPermission, setHasPermission] = useState(false);
+    const firebaseApp = useFirebase();
 
     useEffect(() => {
-        const authUnsubscribe = getAuth(app).onAuthStateChanged((user) => {
+        const authUnsubscribe = getAuth(firebaseApp).onAuthStateChanged((user) => {
             if (user) {
-                const usersRef = ref(getDatabase(app), 'users/' + user.uid);
+                const usersRef = ref(getDatabase(firebaseApp), 'users/' + user.uid);
                 get(usersRef)
                     .then((snapshot) => {
                         if (snapshot.exists() && (snapshot.val().role === 'admin'))
@@ -37,7 +38,7 @@ const AdminPanel = () => {
         };
     });
     const fetchUsers = async () => {
-        const usersRef = ref(getDatabase(app), 'users');
+        const usersRef = ref(getDatabase(firebaseApp), 'users');
 
         get(usersRef)
             .then((snapshot) => {
@@ -68,7 +69,7 @@ const AdminPanel = () => {
 
     // Función para cambiar el estado de habilitación en Firebase
     const toggleEnable = (user) => {
-        const usersRef = ref(getDatabase(app), 'users');
+        const usersRef = ref(getDatabase(firebaseApp), 'users');
         const updatedUser = { ...user, role: user.role === 'active' ? 'user' : 'active' };
         update(usersRef, {
             [user.key]: updatedUser,
