@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
             to_email: "ffarnos12@gmail.com",
             body: 'Hola, te envío el PDF que solicitaste ' + fileUrl,
             to_name: "Fernando",
-        }, );
+        }, "KCxXD6bqTWKfWdACxh55y");
 
         return {
             statusCode: 200,
