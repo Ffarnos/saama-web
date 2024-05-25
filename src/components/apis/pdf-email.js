@@ -113,7 +113,7 @@ const createAndSendPDF = async () => {
 
                     const wrappedText = wrapText(cleanWrappedText, maxWidth, font, 12);
                     for (const line of wrappedText.split('\n')) {
-                        currentPage.drawText(line.trim(), {
+                        currentPage.drawText(line, {
                             x: 22,
                             y: y,
                             size: 12,

@@ -2897,268 +2897,49 @@ const petalos = [
                         image: 'boton5',
                         titlePage: "Chakras",
                         title: "Raiz",
-                        text: `Este chakra se encuentra en la base de la columna vertebral, en el área del perineo, y
-        se asocia con la base de la espina dorsal y el cóccix. El chakra raíz representa la
-        conexión con la tierra, la seguridad, la supervivencia, la estabilidad y la
-        fundamentación. Se considera que este chakra influye en aspectos físicos, emocionales
-        y psicológicos de nuestra vida. Aquí hay algunas características y aspectos asociados
-        con el chakra raíz:
-        Color: Se asocia con el color rojo, que simboliza energía, vitalidad y arraigo.
-        Elemento: Su elemento es la tierra, lo que representa la estabilidad y la conexión con
-        la naturaleza.
-        Función: El chakra raíz está relacionado con la supervivencia, la seguridad y las
-        necesidades básicas. También influye en nuestra conexión con el mundo material y
-        físico.
-        Equilibrio: Cuando el chakra raíz está en equilibrio, uno se siente seguro, enraizado y
-        conectado con la realidad. La sensación de seguridad es fuerte y la persona puede
-        enfrentar desafíos con confianza.
-        Desequilibrio: Un chakra raíz desequilibrado puede manifestarse como inseguridad,
-        ansiedad, miedo, problemas financieros, inestabilidad emocional y dificultad para lidiar
-        con cambios.
-        Físico: Este chakra está conectado con el sistema musculoesquelético, las glándulas
-        suprarrenales, los pies y las piernas. Problemas físicos en estas áreas pueden indicar un
-        desequilibrio en el chakra raíz.
-        Prácticas para Equilibrar: La práctica de la meditación, el yoga, la visualización, el uso
-        de piedras y cristales relacionados con el chakra raíz y la conexión con la naturaleza
-        pueden ayudar a equilibrar este chakra.
-        Mantras y Sonidos: El mantra "LAM" se asocia con el chakra raíz y se puede recitar
-        durante la meditación para enfocar la energía en este centro.
-        Nutrición y Ejercicio: Comer alimentos nutritivos y mantenerse físicamente activo
-        puede ayudar a mantener el equilibrio en el chakra raíz.
-        Afirmaciones Positivas: Usar afirmaciones que refuercen la seguridad y la estabilidad
-        puede ser beneficioso para fortalecer el chakra raíz.
-        
-        (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)`
+                        text: "Este chakra se encuentra en la base de la columna vertebral, en el área del perineo, y se asocia con la base de la espina dorsal y el cóccix. El chakra raíz representa la conexión con la tierra, la seguridad, la supervivencia, la estabilidad y la fundamentación. Se considera que este chakra influye en aspectos físicos, emocionales y psicológicos de nuestra vida. Aquí hay algunas características y aspectos asociados con el chakra raíz: Color: Se asocia con el color rojo, que simboliza energía, vitalidad y arraigo. Elemento: Su elemento es la tierra, lo que representa la estabilidad y la conexión con la naturaleza. Función: El chakra raíz está relacionado con la supervivencia, la seguridad y las necesidades básicas. También influye en nuestra conexión con el mundo material y físico. Equilibrio: Cuando el chakra raíz está en equilibrio, uno se siente seguro, enraizado y conectado con la realidad. La sensación de seguridad es fuerte y la persona puede enfrentar desafíos con confianza. Desequilibrio: Un chakra raíz desequilibrado puede manifestarse como inseguridad, ansiedad, miedo, problemas financieros, inestabilidad emocional y dificultad para lidiar con cambios. Físico: Este chakra está conectado con el sistema musculoesquelético, las glándulas suprarrenales, los pies y las piernas. Problemas físicos en estas áreas pueden indicar un desequilibrio en el chakra raíz. Prácticas para Equilibrar: La práctica de la meditación, el yoga, la visualización, el uso de piedras y cristales relacionados con el chakra raíz y la conexión con la naturaleza pueden ayudar a equilibrar este chakra. Mantras y Sonidos: El mantra \"LAM\" se asocia con el chakra raíz y se puede recitar durante la meditación para enfocar la energía en este centro. Nutrición y Ejercicio: Comer alimentos nutritivos y mantenerse físicamente activo puede ayudar a mantener el equilibrio en el chakra raíz. Afirmaciones Positivas: Usar afirmaciones que refuercen la seguridad y la estabilidad puede ser beneficioso para fortalecer el chakra raíz. (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)"
                     },
                     {
                         linkName: "petalo-5/2/2",
                         image: 'boton5',
                         titlePage: "Chakras",
                         title: "Sacro",
-                        text: `Este chakra se encuentra en la región del bajo abdomen, justo debajo del ombligo y
-        por encima del chakra raíz.
-        El chakra sacro está asociado con la creatividad, la sensualidad, las emociones, las
-        relaciones y la conexión con el placer y la vitalidad. Aquí hay algunas características y
-        aspectos asociados con el chakra sacro:
-        Color: Se asocia comúnmente con el color naranja, que simboliza la creatividad y la
-        energía.
-        Elemento: Su elemento es el agua, que representa el flujo de emociones y la
-        adaptabilidad.
-        Función: El chakra sacro se relaciona con la sexualidad, la creatividad, las emociones y
-        las relaciones. Es el centro de la energía emocional y sensual.
-        Equilibrio: Un chakra sacro en equilibrio puede manifestarse como una expresión
-        saludable de emociones, una conexión con la creatividad y una relación armoniosa con
-        la sexualidad.
-        Desequilibrio: Un desequilibrio en el chakra sacro puede causar problemas
-        emocionales, dificultades en las relaciones, falta de creatividad, bloqueos sexuales y
-        sensación de estancamiento.
-        Físico: Este chakra está relacionado con los órganos sexuales, la pelvis, los riñones y la
-        vejiga. Problemas físicos en estas áreas pueden indicar un desequilibrio en el chakra
-        sacro.
-        Prácticas para Equilibrar: Practicar yoga que se centre en la zona pélvica, la
-        meditación, la danza y la expresión artística pueden ayudar a equilibrar este chakra.
-        Mantras y Sonidos: El mantra "VAM" se asocia con el chakra sacro y puede ser
-        recitado para enfocar la energía en esta área.
-        Aromaterapia y Aceites Esenciales: Algunos aceites esenciales, como la rosa, la ylang
-        ylang y el sándalo, se utilizan para estimular y equilibrar el chakra sacro.
-        Exploración Emocional: Tomar el tiempo para explorar y comprender tus emociones
-        puede ayudar a equilibrar este chakra y liberar bloqueos emocionales.
-        Armonización de Relaciones: Mejorar la comunicación y la empatía en las relaciones
-        puede contribuir al equilibrio del chakra sacro.
-        
-        (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)`
+                        text: "Este chakra se encuentra en la región del bajo abdomen, justo debajo del ombligo y por encima del chakra raíz. El chakra sacro está asociado con la creatividad, la sensualidad, las emociones, las relaciones y la conexión con el placer y la vitalidad. Aquí hay algunas características y aspectos asociados con el chakra sacro: Color: Se asocia comúnmente con el color naranja, que simboliza la creatividad y la energía. Elemento: Su elemento es el agua, que representa el flujo de emociones y la adaptabilidad. Función: El chakra sacro se relaciona con la sexualidad, la creatividad, las emociones y las relaciones. Es el centro de la energía emocional y sensual. Equilibrio: Un chakra sacro en equilibrio puede manifestarse como una expresión saludable de emociones, una conexión con la creatividad y una relación armoniosa con la sexualidad. Desequilibrio: Un desequilibrio en el chakra sacro puede causar problemas emocionales, dificultades en las relaciones, falta de creatividad, bloqueos sexuales y sensación de estancamiento. Físico: Este chakra está relacionado con los órganos sexuales, la pelvis, los riñones y la vejiga. Problemas físicos en estas áreas pueden indicar un desequilibrio en el chakra sacro. Prácticas para Equilibrar: Practicar yoga que se centre en la zona pélvica, la meditación, la danza y la expresión artística pueden ayudar a equilibrar este chakra. Mantras y Sonidos: El mantra \"VAM\" se asocia con el chakra sacro y puede ser recitado para enfocar la energía en esta área. Aromaterapia y Aceites Esenciales: Algunos aceites esenciales, como la rosa, la ylang ylang y el sándalo, se utilizan para estimular y equilibrar el chakra sacro. Exploración Emocional: Tomar el tiempo para explorar y comprender tus emociones puede ayudar a equilibrar este chakra y liberar bloqueos emocionales. Armonización de Relaciones: Mejorar la comunicación y la empatía en las relaciones puede contribuir al equilibrio del chakra sacro. (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)"
                     },
                     {
                         linkName: "petalo-5/2/3",
                         image: 'boton5',
                         titlePage: "Chakras",
                         title: "Plexo Solar",
-                        text: `Este chakra se encuentra en la región del abdomen, cerca del estómago, y está
-        asociado con la autoestima, la voluntad personal, el poder y la energía.
-        El chakra del plexo solar influye en cómo percibimos y utilizamos nuestra energía
-        personal, así como en cómo nos relacionamos con el poder y la autoridad. Aquí hay
-        algunas características y aspectos asociados con el chakra del plexo solar:
-        Color: Se asocia comúnmente con el color amarillo, que representa la confianza y la
-        energía.
-        Elemento: Su elemento es el fuego, que simboliza la transformación y la energía
-        activa.
-        Función: El chakra del plexo solar está relacionado con la autoestima, la confianza en
-        uno mismo, la voluntad personal y el poder personal.
-        Equilibrio: Un chakra del plexo solar en equilibrio se manifiesta como una confianza
-        saludable en uno mismo, un sentido de propósito y una voluntad fuerte para lograr
-        metas.
-        Desequilibrio: Un desequilibrio en este chakra puede causar problemas de autoestima,
-        falta de confianza en uno mismo, dificultades para tomar decisiones y una sensación
-        de impotencia.
-        Físico: Este chakra está relacionado con el sistema digestivo, el metabolismo y los
-        órganos abdominales. Problemas físicos en estas áreas pueden indicar un desequilibrio
-        en el chakra del plexo solar.
-        Prácticas para Equilibrar: La práctica de yoga que involucre torsiones y poses de
-        fortalecimiento del núcleo, la meditación enfocada en la voluntad y la confianza, y la
-        toma de decisiones conscientes pueden ayudar a equilibrar este chakra.
-        Mantras y Sonidos: El mantra "RAM" se asocia con el chakra del plexo solar y se puede
-        recitar para enfocar la energía en esta área.
-        Cristales y Gemas: Algunas gemas como el citrino y el topacio amarillo se utilizan para
-        estimular y equilibrar el chakra del plexo solar.
-        Desarrollo Personal: Participar en actividades que fomenten el crecimiento personal y
-        la superación de desafíos puede contribuir al equilibrio de este chakra.
-        Establecer Límites: Establecer límites saludables y comunicar tus necesidades con
-        confianza puede ayudar a equilibrar el chakra del plexo solar.
-        
-        (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)`
+                        text: "Este chakra se encuentra en la región del abdomen, cerca del estómago, y está asociado con la autoestima, la voluntad personal, el poder y la energía. El chakra del plexo solar influye en cómo percibimos y utilizamos nuestra energía personal, así como en cómo nos relacionamos con el poder y la autoridad. Aquí hay algunas características y aspectos asociados con el chakra del plexo solar: Color: Se asocia comúnmente con el color amarillo, que representa la confianza y la energía. Elemento: Su elemento es el fuego, que simboliza la transformación y la energía activa. Función: El chakra del plexo solar está relacionado con la autoestima, la confianza en uno mismo, la voluntad personal y el poder personal. Equilibrio: Un chakra del plexo solar en equilibrio se manifiesta como una confianza saludable en uno mismo, un sentido de propósito y una voluntad fuerte para lograr metas. Desequilibrio: Un desequilibrio en este chakra puede causar problemas de autoestima, falta de confianza en uno mismo, dificultades para tomar decisiones y una sensación de impotencia. Físico: Este chakra está relacionado con el sistema digestivo, el metabolismo y los órganos abdominales. Problemas físicos en estas áreas pueden indicar un desequilibrio en el chakra del plexo solar. Prácticas para Equilibrar: La práctica de yoga que involucre torsiones y poses de fortalecimiento del núcleo, la meditación enfocada en la voluntad y la confianza, y la toma de decisiones conscientes pueden ayudar a equilibrar este chakra. Mantras y Sonidos: El mantra \"RAM\" se asocia con el chakra del plexo solar y se puede recitar para enfocar la energía en esta área. Cristales y Gemas: Algunas gemas como el citrino y el topacio amarillo se utilizan para estimular y equilibrar el chakra del plexo solar. Desarrollo Personal: Participar en actividades que fomenten el crecimiento personal y la superación de desafíos puede contribuir al equilibrio de este chakra. Establecer Límites: Establecer límites saludables y comunicar tus necesidades con confianza puede ayudar a equilibrar el chakra del plexo solar. (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)"
                     },
                     {
                         linkName: "petalo-5/2/4",
                         image: 'boton5',
                         titlePage: "Chakras",
                         title: "Corazon",
-                        text: `Este chakra se encuentra en la región del pecho, en el centro del pecho, y está
-        asociado con el amor, la compasión, la empatía y la conexión con uno mismo y con los
-        demás.
-        El chakra del corazón influye en nuestra capacidad de amar y recibir amor, así como en
-        cómo nos relacionamos con los demás y con el mundo en general. Aquí hay algunas
-        características y aspectos asociados con el chakra del corazón:
-        Color: Se asocia comúnmente con el color verde, que simboliza el amor y la sanación.
-        Algunas interpretaciones también lo asocian con el color rosa.
-        Elemento: Su elemento es el aire, que representa la ligereza, la conexión y la
-        expansión.
-        Función: El chakra del corazón está relacionado con el amor incondicional, la
-        compasión, la empatía y la capacidad de perdonar.
-        Equilibrio: Un chakra del corazón en equilibrio se manifiesta como la capacidad de
-        amar y ser amado, sentir compasión por uno mismo y por los demás, y mantener
-        relaciones saludables.
-        Desequilibrio: Un desequilibrio en este chakra puede causar dificultades en las
-        relaciones, falta de empatía, sentimientos de soledad y bloqueos emocionales.
-        Físico: Este chakra está relacionado con el sistema circulatorio, el corazón y los
-        pulmones. Problemas físicos en estas áreas pueden indicar un desequilibrio en el
-        chakra del corazón.
-        Prácticas para Equilibrar: Practicar el amor propio, la meditación enfocada en el
-        corazón, el perdón y la gratitud, y las actividades que promuevan la conexión con los
-        demás pueden ayudar a equilibrar este chakra.
-        Mantras y Sonidos: El mantra "YAM" se asocia con el chakra del corazón y se puede
-        recitar para enfocar la energía en esta área.
-        Aromaterapia y Aceites Esenciales: Algunos aceites esenciales, como la rosa, la
-        lavanda y el jazmín, se utilizan para estimular y equilibrar el chakra del corazón.
-        Actos de Bondad: Realizar actos de bondad y mostrar compasión hacia los demás
-        puede contribuir al equilibrio del chakra del corazón.
-        Relajación y Respiración: Practicar técnicas de respiración profunda y relajación
-        pueden ayudar a liberar tensiones y equilibrar este chakra.
-        
-        (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)`
+                        text: "Este chakra se encuentra en la región del pecho, en el centro del pecho, y está asociado con el amor, la compasión, la empatía y la conexión con uno mismo y con los demás. El chakra del corazón influye en nuestra capacidad de amar y recibir amor, así como en cómo nos relacionamos con los demás y con el mundo en general. Aquí hay algunas características y aspectos asociados con el chakra del corazón: Color: Se asocia comúnmente con el color verde, que simboliza el amor y la sanación. Algunas interpretaciones también lo asocian con el color rosa. Elemento: Su elemento es el aire, que representa la ligereza, la conexión y la expansión. Función: El chakra del corazón está relacionado con el amor incondicional, la compasión, la empatía y la capacidad de perdonar. Equilibrio: Un chakra del corazón en equilibrio se manifiesta como la capacidad de amar y ser amado, sentir compasión por uno mismo y por los demás, y mantener relaciones saludables. Desequilibrio: Un desequilibrio en este chakra puede causar dificultades en las relaciones, falta de empatía, sentimientos de soledad y bloqueos emocionales. Físico: Este chakra está relacionado con el sistema circulatorio, el corazón y los pulmones. Problemas físicos en estas áreas pueden indicar un desequilibrio en el chakra del corazón. Prácticas para Equilibrar: Practicar el amor propio, la meditación enfocada en el corazón, el perdón y la gratitud, y las actividades que promuevan la conexión con los demás pueden ayudar a equilibrar este chakra. Mantras y Sonidos: El mantra \"YAM\" se asocia con el chakra del corazón y se puede recitar para enfocar la energía en esta área. Aromaterapia y Aceites Esenciales: Algunos aceites esenciales, como la rosa, la lavanda y el jazmín, se utilizan para estimular y equilibrar el chakra del corazón. Actos de Bondad: Realizar actos de bondad y mostrar compasión hacia los demás puede contribuir al equilibrio del chakra del corazón. Relajación y Respiración: Practicar técnicas de respiración profunda y relajación pueden ayudar a liberar tensiones y equilibrar este chakra. (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)"
                     },
                     {
                         linkName: "petalo-5/2/5",
                         image: 'boton5',
                         titlePage: "Chakras",
                         title: "Garganta",
-                        text: `Este chakra se encuentra en la región de la garganta y está asociado con la
-        comunicación, la expresión y la verdad.
-        El chakra de la garganta influye en nuestra capacidad para comunicarnos
-        efectivamente, expresar nuestros pensamientos y sentimientos, y ser auténticos en
-        nuestra verdad. Aquí hay algunas características y aspectos asociados con el chakra de
-        la garganta:
-        Color: Se asocia comúnmente con el color azul claro, que simboliza la claridad y la
-        expresión.
-        Elemento: Su elemento es el éter, que representa el espacio y la conexión con la
-        expresión.
-        Función: El chakra de la garganta está relacionado con la comunicación, la expresión
-        de la verdad, la creatividad verbal y la escucha activa.
-        Equilibrio: Un chakra de la garganta en equilibrio se manifiesta como la capacidad de
-        comunicarse claramente, expresar pensamientos y sentimientos de manera auténtica,
-        y escuchar a los demás con empatía.
-        Desequilibrio: Un desequilibrio en este chakra puede causar problemas de
-        comunicación, miedo a hablar en público, dificultad para expresar la verdad y
-        problemas de garganta.
-        Físico: Este chakra está relacionado con la garganta, la glándula tiroides, las cuerdas
-        vocales y el sistema respiratorio. Problemas físicos en estas áreas pueden indicar un
-        desequilibrio en el chakra de la garganta.
-        Prácticas para Equilibrar: La práctica de la meditación, el canto, la escritura creativa y
-        la comunicación consciente pueden ayudar a equilibrar este chakra.
-        Mantras y Sonidos: El mantra "HAM" se asocia con el chakra de la garganta y se puede
-        recitar para enfocar la energía en esta área.
-        Cristales y Gemas: Algunas gemas como la aguamarina y la turquesa se utilizan para
-        estimular y equilibrar el chakra de la garganta.
-        Autoexpresión: Participar en actividades que fomenten la autoexpresión creativa y la
-        comunicación abierta puede contribuir al equilibrio del chakra de la garganta.
-        Respiración Consciente: Practicar técnicas de respiración consciente y vocalización
-        pueden ayudar a liberar bloqueos y equilibrar este chakra.
-        
-        (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)`
+                        text: "Este chakra se encuentra en la región de la garganta y está asociado con la comunicación, la expresión y la verdad. El chakra de la garganta influye en nuestra capacidad para comunicarnos efectivamente, expresar nuestros pensamientos y sentimientos, y ser auténticos en nuestra verdad. Aquí hay algunas características y aspectos asociados con el chakra de la garganta: Color: Se asocia comúnmente con el color azul claro, que simboliza la claridad y la expresión. Elemento: Su elemento es el éter, que representa el espacio y la conexión con la expresión. Función: El chakra de la garganta está relacionado con la comunicación, la expresión de la verdad, la creatividad verbal y la escucha activa. Equilibrio: Un chakra de la garganta en equilibrio se manifiesta como la capacidad de comunicarse claramente, expresar pensamientos y sentimientos de manera auténtica, y escuchar a los demás con empatía. Desequilibrio: Un desequilibrio en este chakra puede causar problemas de comunicación, miedo a hablar en público, dificultad para expresar la verdad y problemas de garganta. Físico: Este chakra está relacionado con la garganta, la glándula tiroides, las cuerdas vocales y el sistema respiratorio. Problemas físicos en estas áreas pueden indicar un desequilibrio en el chakra de la garganta. Prácticas para Equilibrar: La práctica de la meditación, el canto, la escritura creativa y la comunicación consciente pueden ayudar a equilibrar este chakra. Mantras y Sonidos: El mantra \"HAM\" se asocia con el chakra de la garganta y se puede recitar para enfocar la energía en esta área. Cristales y Gemas: Algunas gemas como la aguamarina y la turquesa se utilizan para estimular y equilibrar el chakra de la garganta. Autoexpresión: Participar en actividades que fomenten la autoexpresión creativa y la comunicación abierta puede contribuir al equilibrio del chakra de la garganta. Respiración Consciente: Practicar técnicas de respiración consciente y vocalización pueden ayudar a liberar bloqueos y equilibrar este chakra. (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)"
                     },
                     {
                         linkName: "petalo-5/2/6",
                         image: 'boton5',
                         titlePage: "Chakras",
                         title: "Tercer Ojo",
-                        text: `Este chakra se encuentra en la frente, justo encima del entrecejo, y está asociado con
-        la intuición, la percepción, la sabiduría y la visión interior.
-        El chakra del tercer ojo influye en nuestra capacidad para ver más allá de lo obvio, para
-        percibir la verdad y para desarrollar la intuición y la sabiduría interior. Aquí hay
-        algunas características y aspectos asociados con el chakra del tercer ojo:
-        Color: Se asocia comúnmente con el color índigo, que simboliza la intuición y la
-        percepción.
-        Elemento: Su elemento es la luz, que representa la claridad y la visión.
-        Función: El chakra del tercer ojo está relacionado con la intuición, la percepción, la
-        visión interior y la sabiduría.
-        Equilibrio: Un chakra del tercer ojo en equilibrio se manifiesta como una fuerte
-        intuición, una percepción clara de la realidad, la capacidad de ver más allá de las
-        apariencias y una conexión con la sabiduría interior.
-        Desequilibrio: Un desequilibrio en este chakra puede causar confusión, falta de
-        claridad, dificultad para tomar decisiones y desconexión con la intuición.
-        Físico: Este chakra está relacionado con la glándula pineal, los ojos, la cabeza y el
-        sistema nervioso. Problemas físicos en estas áreas pueden indicar un desequilibrio en
-        el chakra del tercer ojo.
-        Prácticas para Equilibrar: La práctica de la meditación, la visualización, la atención
-        plena y la conexión con la naturaleza pueden ayudar a equilibrar este chakra.
-        Mantras y Sonidos: El mantra "OM" se asocia con el chakra del tercer ojo y se puede
-        recitar para enfocar la energía en esta área.
-        Cristales y Gemas: Algunas gemas como la amatista y el lapislázuli se utilizan para
-        estimular y equilibrar el chakra del tercer ojo.
-        Introspección y Reflexión: Participar en prácticas de introspección, reflexión y
-        autoanálisis puede contribuir al equilibrio del chakra del tercer ojo.
-        Desarrollo de la Intuición: Practicar técnicas para desarrollar la intuición y la
-        percepción, como la meditación y la atención plena, puede ayudar a equilibrar este
-        chakra.
-        
-        (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)`
+                        text: "Este chakra se encuentra en la frente, justo encima del entrecejo, y está asociado con la intuición, la percepción, la sabiduría y la visión interior. El chakra del tercer ojo influye en nuestra capacidad para ver más allá de lo obvio, para percibir la verdad y para desarrollar la intuición y la sabiduría interior. Aquí hay algunas características y aspectos asociados con el chakra del tercer ojo: Color: Se asocia comúnmente con el color índigo, que simboliza la intuición y la percepción. Elemento: Su elemento es la luz, que representa la claridad y la visión. Función: El chakra del tercer ojo está relacionado con la intuición, la percepción, la visión interior y la sabiduría. Equilibrio: Un chakra del tercer ojo en equilibrio se manifiesta como una fuerte intuición, una percepción clara de la realidad, la capacidad de ver más allá de las apariencias y una conexión con la sabiduría interior. Desequilibrio: Un desequilibrio en este chakra puede causar confusión, falta de claridad, dificultad para tomar decisiones y desconexión con la intuición. Físico: Este chakra está relacionado con la glándula pineal, los ojos, la cabeza y el sistema nervioso. Problemas físicos en estas áreas pueden indicar un desequilibrio en el chakra del tercer ojo. Prácticas para Equilibrar: La práctica de la meditación, la visualización, la atención plena y la conexión con la naturaleza pueden ayudar a equilibrar este chakra. Mantras y Sonidos: El mantra \"OM\" se asocia con el chakra del tercer ojo y se puede recitar para enfocar la energía en esta área. Cristales y Gemas: Algunas gemas como la amatista y el lapislázuli se utilizan para estimular y equilibrar el chakra del tercer ojo. Introspección y Reflexión: Participar en prácticas de introspección, reflexión y autoanálisis puede contribuir al equilibrio del chakra del tercer ojo. Desarrollo de la Intuición: Practicar técnicas para desarrollar la intuición y la percepción, como la meditación y la atención plena, puede ayudar a equilibrar este chakra. (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)"
                     },
                     {
                         linkName: "petalo-5/2/7",
                         image: 'boton5',
                         titlePage: "Chakras",
                         title: "Corona",
-                        text: `Este chakra se encuentra en la parte superior de la cabeza, y está asociado con la
-        espiritualidad, la conexión con lo divino, la iluminación y la conciencia superior.
-        El chakra de la corona influye en nuestra capacidad para conectarnos con lo divino, para
-        experimentar la unidad con el universo y para alcanzar la iluminación espiritual. Aquí
-        hay algunas características y aspectos asociados con el chakra de la corona:
-        Color: Se asocia comúnmente con el color violeta o blanco, que simbolizan la pureza, la
-        espiritualidad y la iluminación.
-        Elemento: Su elemento es el pensamiento o la conciencia cósmica, que representa la
-        conexión con el universo y la conciencia superior.
-        Función: El chakra de la corona está relacionado con la espiritualidad, la conexión con
-        lo divino, la iluminación y la conciencia superior.
-        Equilibrio: Un chakra de la corona en equilibrio se manifiesta como una profunda
-        conexión espiritual, un sentido de unidad con el universo, y una comprensión clara de
-        la verdad y la sabiduría.
-        Desequilibrio: Un desequilibrio en este chakra puede causar desconexión espiritual,
-        falta de propósito, confusión y problemas para encontrar significado en la vida.
-        Físico: Este chakra está relacionado con el cerebro, el sistema nervioso y la glándula
-        pituitaria. Problemas físicos en estas áreas pueden indicar un desequilibrio en el
-        chakra de la corona.
-        Prácticas para Equilibrar: La práctica de la meditación, la oración, la contemplación y
-        la conexión con la naturaleza pueden ayudar a equilibrar este chakra.
-        Mantras y Sonidos: El mantra "AUM" se asocia con el chakra de la corona y se puede
-        recitar para enfocar la energía en esta área.
-        Cristales y Gemas: Algunas gemas como el cuarzo claro y la amatista se utilizan para
-        estimular y equilibrar el chakra de la corona.
-        Espiritualidad y Conexión: Participar en prácticas espirituales que fomenten la
-        conexión con lo divino y la conciencia superior puede contribuir al equilibrio del chakra
-        de la corona.
-        Aceptación y Rendición: Practicar la aceptación y la rendición a la voluntad divina
-        puede ayudar a liberar bloqueos y equilibrar este chakra.
-        
-        (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)`
+                        text: "Este chakra se encuentra en la parte superior de la cabeza, y está asociado con la espiritualidad, la conexión con lo divino, la iluminación y la conciencia superior. El chakra de la corona influye en nuestra capacidad para conectarnos con lo divino, para experimentar la unidad con el universo y para alcanzar la iluminación espiritual. Aquí hay algunas características y aspectos asociados con el chakra de la corona: Color: Se asocia comúnmente con el color violeta o blanco, que simbolizan la pureza, la espiritualidad y la iluminación. Elemento: Su elemento es el pensamiento o la conciencia cósmica, que representa la conexión con el universo y la conciencia superior. Función: El chakra de la corona está relacionado con la espiritualidad, la conexión con lo divino, la iluminación y la conciencia superior. Equilibrio: Un chakra de la corona en equilibrio se manifiesta como una profunda conexión espiritual, un sentido de unidad con el universo, y una comprensión clara de la verdad y la sabiduría. Desequilibrio: Un desequilibrio en este chakra puede causar desconexión espiritual, falta de propósito, confusión y problemas para encontrar significado en la vida. Físico: Este chakra está relacionado con el cerebro, el sistema nervioso y la glándula pituitaria. Problemas físicos en estas áreas pueden indicar un desequilibrio en el chakra de la corona. Prácticas para Equilibrar: La práctica de la meditación, la oración, la contemplación y la conexión con la naturaleza pueden ayudar a equilibrar este chakra. Mantras y Sonidos: El mantra \"AUM\" se asocia con el chakra de la corona y se puede recitar para enfocar la energía en esta área. Cristales y Gemas: Algunas gemas como el cuarzo claro y la amatista se utilizan para estimular y equilibrar el chakra de la corona. Espiritualidad y Conexión: Participar en prácticas espirituales que fomenten la conexión con lo divino y la conciencia superior puede contribuir al equilibrio del chakra de la corona. Aceptación y Rendición: Practicar la aceptación y la rendición a la voluntad divina puede ayudar a liberar bloqueos y equilibrar este chakra. (ESTE CHAKRA FUE ABIERTO/ALINEADO Y CARGADO)"
                     }
                 ]
             },
