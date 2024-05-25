@@ -158,13 +158,13 @@ const createAndSendPDF = async () => {
         .then(response => {
             response.json().then(response => {
                 const templateParams = {
-                    'username': 'James',
-                    'message': "Buenassss " + response.url,
-                    'to_email': "ffarnos12@gmail.com"
+                    'to_name': localStorage.getItem("paciente"),
+                    'message': response.url,
+                    'to_email': localStorage.getItem("email")
                 }
                 emailjs.send('service_u9dlni4', 'template_q0rb42f', templateParams, "GDJnvGlc9y4o6oeeR").then(
                     (response) => {
-                        console.log('SUCCESS!', response.status, response.text);
+                        console.log('Enviado Correctamente!', response.status, response.text);
                     },
                     (error) => {
                         console.log('FAILED...', error);

@@ -14,18 +14,24 @@ const FinalPageTemplate = ({ pageContext }) => {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.altKey) {
-                let history = localStorage.getItem("history");
+                if (event.key === 'Control') {
+                    createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
+                }
+                else {
+                    let history = localStorage.getItem("history");
 
-                if (!history) history = [];
-                else history = JSON.parse(history);
-                if (event.key === 'r') {
-                    history.push("ramificar");
-                } else if (event.key === 'b') {
-                    history.remove(history.length-1);
-                    navigate(-1)
+                    if (!history) history = [];
+                    else history = JSON.parse(history);
+                    if (event.key === 'r') {
+                        history.push("ramificar");
+                    } else if (event.key === 'b') {
+                        history.remove(history.length-1);
+                        navigate(-1)
+                    }
+
+                    localStorage.setItem("history", JSON.stringify(history));
                 }
 
-                localStorage.setItem("history", JSON.stringify(history));
             }
             else if (event.key === 'Enter')
                 navigate("/circulo-base")
@@ -35,9 +41,7 @@ const FinalPageTemplate = ({ pageContext }) => {
                 navigate(-1)
             else if (event.key === 'ArrowRight')
                 navigate(+1)
-            else if (event.key === 'Control') {
-                createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
-            }else if (event.key === 'Spacebar')
+            else if (event.key === 'Spacebar')
                 navigate("/intro-text")
         };
 

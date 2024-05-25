@@ -102,17 +102,19 @@ const TextComponent = (number, setNumber) => {
                                 ORACIÓN PARA ABRIR ESPACIO SAGRADO
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '10px'}}>
-                                Querido padre celestial, te pido que extiendas tu escudo de protección en cada rincón de este espacio dedicado a la sanación y al amor incondicional.
-                                Coloca tu guarda y custodia a todos los seres de luz que me acompañan: ángeles guardianes, guías angelicales, arcángeles, serafines, querubines, maestros ascendidos, energías positivas, y  protección al amado concilio del Espíritu Santo que dirige, la presencia de la madre María que me acompaña y la sabiduría de Jesús que es mi guía, Amen.
+                                Querido padre celestial, te pido que extiendas tu escudo de protección en cada rincón
+                                de este espacio dedicado a la sanación y al amor incondicional.
+                                Coloca tu guarda y custodia a todos los seres de luz que me acompañan: ángeles
+                                guardianes, guías angelicales, arcángeles, serafines, querubines, maestros ascendidos,
+                                energías positivas, la protección del amado concilio del Espíritu Santo que dirige, la
+                                presencia de la madre María que me acompaña y la sabiduría de Jesús que es mi guía,
+                                Amén.
                             </ResponsiveText>
                             <ResponsiveText scale={0.7} style={{marginTop: '20px'}}>
-                                ORACIÓN PARA CERRAR ESPACIO SAGRADO
+                                ORACIÓN CHAMÁNICA PARA CERRAR EL ESPACIO SAGRADO
                             </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                Doy gracias de manera infinita a mi Comité de Yo Superior, a mi ser espiritual y los seres que estuvieron en este día de sanación, por este sagrado servicio de evolución y transformación.
-                                En este momento, cierro amorosamente los archivos Akáshicos y las puertas astrales, confiando en la guía divina.
-                                Te agradezco Padre por tu presencia constante en mi vida, Madre, por la abundancia que nos ofreces, y al Espíritu Santo por tu elevado servicio.
-                                Que la luz del amor y sabiduría continue guiándonos en este viaje espiritual, Amen.
+                            <ResponsiveText scale={0.6} style={{marginTop: '10px'}}>
+                                "Para concluir nuestra terapia al final del día, elevamos nuestro agradecimiento a la Serpiente, el Jaguar, el Colibrí, el Águila, el Cóndor, la Madre Tierra, el Padre Sol y la Abuela Luna, reconociendo su guía espiritual en nuestro viaje interior."
                             </ResponsiveText>
                         </>,
                     '2':
@@ -121,36 +123,23 @@ const TextComponent = (number, setNumber) => {
                                 ORACION CHAMANICA PARA ABRIR EL ESPACIO SAGRADO
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '10px'}}>
-                                A los vientos del sur, gran serpiente, envuélvenos en tus círculos de luz y amor. Enséñanos a
-                                liberarnos del pasado, Como tú te renuevas de tu piel, guíanos por el sendero de la belleza.
+                                A los vientos del sur, gran serpiente, envuélvenos en tu círculo de luz y amor. Enséñanos a liberarnos del pasado, Como tú renuevas tu piel, guíanos por el sendero de la belleza.                            </ResponsiveText>
+                            <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
+                                A los vientos del Oeste, Gran Jaguar, ven a proteger este espacio medicinal, rodéanos con tu fuerza. Ven y enséñanos el camino de la paz, para vivir en armonía.
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                A los vientos del Oeste, Gran Jaguar, ven a proteger este espacio medicinal, rodéanos con tu
-                                fuerza. Ven y enséñanos el camino de la paz, para vivir en armonía.
+                                A los vientos del Norte, Gran colibrí, abuelas y abuelos, antepasados, acérquense para calentar sus manos en nuestro fuego. Susúrrenos con el viento para comunicarse con nosotros. Los honramos a ustedes, que vinieron antes que nosotros, y a aquellos que vendrán después, de los hijos de nuestros hijos. “
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                A los vientos del Norte, Gran colibrí, abuelas y abuelos, antepasados, acérquense para calentar
-                                sus manos en nuestro fuego. Susúrrenos con el viento para comunicarse con nosotros. Los
-                                honramos a ustedes, que vinieron antes que nosotros, y a aquellos que vendrán después, de los
-                                hijos de nuestros hijos."
+                                A los vientos del Este, Gran Águila, Cóndor, vengan a nosotros desde el lugar donde el sol amanece, protégenos bajo tus alas, muéstranos las montañas que solo nos atrevemos a soñar. Enséñanos a volar, ala con ala, con el gran espíritu.
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                A los vientos del Este, Gran Águila, Cóndor, vengan a nosotros desde el lugar donde el sol
-                                amanece, protégenos bajo tus alas, muéstranos las montañas que solo nos atrevemos a soñar.
-                                Enséñennos a volar, ala con ala, con el gran espíritu.
+                                Madre Tierra, Pachamama, nos hemos congregado para la sanación de todos tus hijos: el pueblo de las piedras, el reino de las plantas, aquellos de cuatro patas, los de dos patas, los que se deslizan por el suelo, los que tienen aletas, los que tienen pelaje y los que tienen alas. Todos nuestros parientes.
                             </ResponsiveText>
                             <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                Madre Tierra, Pachamama, nos hemos congregado para la sanación de todos tus hijos: el pueblo
-                                de las piedras, el reino de las plantas, aquellos de cuatro patas, los de dos patas, los que se
-                                deslizan por el suelo, los que tienen aletas, los que tienen pelaje y los que tienen alas. Todos
-                                nuestros parientes.
+                                Padre Sol, Abuela Luna, a las constelaciones de las Estrellas, Gran Espíritu, tú que eres conocido por mil nombres y que eres innombrable. Gracias por abrir este espacio de amor incondicional, haciéndonos uno con el Universo. Y permitirnos entonar el canto de la Vida.
                             </ResponsiveText>
-                            <ResponsiveText scale={0.6} style={{marginTop: '20px'}}>
-                                Padre Sol, Abuela Luna, a las constelaciones de las Estrellas, Gran Espíritu, tú que eres conocido
-                                por mil nombres y que eres innombrable. Gracias por abrir este espacio de amor incondicional,
-                                haciéndonos uno con el Universo. Y permitirnos entonar el canto de la Vida.
-                            </ResponsiveText>
-                            <ResponsiveText scale={0.7} style={{marginTop: '10px'}}>
+                            <ResponsiveText scale={0.6} style={{marginTop: '10px'}}>
                                 Ahó.
                             </ResponsiveText>
                         </>,
@@ -239,32 +228,32 @@ const TextComponent = (number, setNumber) => {
                         </>,
                     '6':
                         <>
-                        <ResponsiveText scale={0.6} bold style={{marginTop: '20px'}}>
-                            ORACION DE HO’OPONOPONO PARA INICIO DE SESION
-                        </ResponsiveText>
-                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                            Divina presencia, sana aquí y ahora desde la raíz y para siempre, el problema o situación que trajo aquí (nombre del consultante) … haz que desbloque las energías negativas que le impiden avanzar, aportando energía sanadora, liberándome y liberandolo/a de toda responsabilidad para lograr su evolución
-                            lo siento, perdóname, te amo, gracias
-                        </ResponsiveText>
-                        <ResponsiveText scale={0.6} bold style={{marginTop: '30px'}}>
-                            CONEXIÓN CON EL PACIENTE
-                        </ResponsiveText>
-                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                            ¿Está el paciente dispuesto y abierto a recibir la terapia?
-                        </ResponsiveText>
-                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                            ¿Está el paciente abierto y receptivo hacia el terapeuta?
-                        </ResponsiveText>
-                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                            ¿Quiere el ser de (nombre del consultante)… sanar, progresar y transformarse?
-                        </ResponsiveText>
-                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                            ¿Acepta una sanación inmediata, completa, permitiendo encontrar una mejor versión para su bienestar y crecimiento personal?
-                        </ResponsiveText>
-                        <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
-                            ¿Cuál de estos puntos prioriza el ser de (nombre del consultante) para sanar?
-                        </ResponsiveText>
-                    </>
+                            <ResponsiveText scale={0.6} bold style={{marginTop: '20px'}}>
+                                ORACION DE HO’OPONOPONO PARA INICIO DE SESION
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                                Divina presencia, sana aquí y ahora desde la raíz y para siempre, el problema o situación que trajo aquí (nombre del consultante) … haz que desbloque las energías negativas que le impiden avanzar, aportando energía sanadora, liberándome y liberandolo/a de toda responsabilidad para lograr su evolución
+                                lo siento, perdóname, te amo, gracias
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.6} bold style={{marginTop: '30px'}}>
+                                CONEXIÓN CON EL PACIENTE
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                                ¿Está el paciente dispuesto y abierto a recibir la terapia?
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                                ¿Está el paciente abierto y receptivo hacia el terapeuta?
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                                ¿Quiere el ser de (nombre del consultante)… sanar, progresar y transformarse?
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                                ¿Acepta una sanación inmediata, completa, permitiendo encontrar una mejor versión para su bienestar y crecimiento personal?
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
+                                ¿Cuál de estos puntos prioriza el ser de (nombre del consultante) para sanar?
+                            </ResponsiveText>
+                        </>
                 }[number]
             }
             <Navigate number={number} setNumber={setNumber}/>

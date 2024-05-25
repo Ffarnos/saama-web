@@ -24,6 +24,7 @@ const Index = () => {
     };
 
     useEffect(() => {
+
         const handleKeyDown = (event) => {
             if (event.key === 'Enter') {
                 navigate('/circulo-base');

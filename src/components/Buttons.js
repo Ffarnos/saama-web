@@ -29,7 +29,6 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                         break;
                     case 'Backspace':
                         navigate("/");
-
                         break;
                     case 'ArrowLeft':
                         navigate(-1);
@@ -37,10 +36,7 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                     case 'ArrowRight':
                         navigate(+1);
                         break;
-                    case 'Control':
-                        createAndSendPDF();
-                        break;
-                    case ' ':
+                    case 'Spacebar':
                         navigate("/intro-text");
                         break;
                     default:

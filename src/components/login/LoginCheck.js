@@ -18,10 +18,12 @@ const LoginCheck = ({ children }) => {
         const authUnsubscribe = getAuth(firebaseApp).onAuthStateChanged((user) => {
             if (user) {
                 setAuthenticatedUser(user);
+                localStorage.setItem('email', user.email);
                 const usersRef = ref(getDatabase(firebaseApp), 'users/' + user.uid);
                 get(usersRef)
                     .then((snapshot) => {
                         setHasPermission(snapshot.exists() && (snapshot.val().role !== 'user'))
+
                         setLoading(false);
                     })
                     .catch((error) => {
