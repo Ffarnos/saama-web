@@ -150,8 +150,19 @@ const createAndSendPDF = async () => {
         }
     }
 
+    const arrayBufferToBase64 = (buffer) => {
+        const chunkSize = 0x8000; // 32768 bytes, un tamaño razonable para dividir en trozos
+        const bytes = new Uint8Array(buffer);
+        let binary = '';
+        for (let i = 0; i < bytes.length; i += chunkSize) {
+            const chunk = bytes.subarray(i, i + chunkSize);
+            binary += String.fromCharCode.apply(null, chunk);
+        }
+        return btoa(binary);
+    }
+
     const pdfBytes = await pdfDoc.save();
-    const pdfBase64 = btoa(String.fromCharCode(...new Uint8Array(pdfBytes)));
+    const pdfBase64 = arrayBufferToBase64(pdfBytes);
 
 
     fetch('/.netlify/functions/sendWhatsapp', {
