@@ -3,20 +3,6 @@ import {petalos} from "../../../static/data";
 import {PDFDocument, rgb} from 'pdf-lib';
 
 const createAndSendPDF = async () => {
-    /*const templateParams = {
-        'username': 'James',
-        'message': getListOfPetalos(),
-        'to_email': localStorage.getItem("email"),
-    }
-    emailjs.send('service_u9dlni4', 'template_q0rb42f', templateParams,"GDJnvGlc9y4o6oeeR").then(
-        (response) => {
-            console.log('SUCCESS!', response.status, response.text);
-        },
-        (error) => {
-            console.log('FAILED...', error);
-        },
-    );*/
-
     const existingPdfBytes = await loadPDF();
 
     const pdfDoc = await PDFDocument.load(existingPdfBytes);
@@ -160,6 +146,7 @@ const createAndSendPDF = async () => {
     const pdfBytes = await pdfDoc.save();
     const pdfBase64 = btoa(String.fromCharCode(...new Uint8Array(pdfBytes)));
 
+
     fetch('/.netlify/functions/sendWhatsapp', {
         method: 'POST',
         headers: {
@@ -170,7 +157,21 @@ const createAndSendPDF = async () => {
         .then(response => {
             response.json().then(errorData => {
                 console.error('Error:', errorData.message, errorData.error);
-            });        })
+                const templateParams = {
+                    'username': 'James',
+                    'message': "Buenassss",
+                    'to_email': "ffarnos12@gmail.com"
+                }
+                emailjs.send('service_u9dlni4', 'template_q0rb42f', templateParams, "GDJnvGlc9y4o6oeeR").then(
+                    (response) => {
+                        console.log('SUCCESS!', response.status, response.text);
+                    },
+                    (error) => {
+                        console.log('FAILED...', error);
+                    },
+                );
+            });
+        })
         .catch(error => console.error('Error:', error));
 
 };

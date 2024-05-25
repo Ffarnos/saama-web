@@ -31,14 +31,6 @@ exports.handler = async (event, context) => {
 
         const fileUrl = `https://${process.env.SW3_BUCKET_NAME}.s3.amazonaws.com/${fileName}`;
 
-        await emailjs.init("KCxXD6bqTWKfWdACxh55y")
-
-        await emailjs.send("service_u9dlni4", "template_q0rb42f", {
-            to_email: "ffarnos12@gmail.com",
-            body: 'Hola, te envío el PDF que solicitaste ' + fileUrl,
-            to_name: "Fernando",
-        });
-
         return {
             statusCode: 200,
             body: JSON.stringify({ message: 'PDF uploaded successfully', url: fileUrl }),
