@@ -5,6 +5,7 @@ import {navigate} from "gatsby";
 import {FinishButtonResponsive} from "../components/navigation/FinishButton";
 import LoginCheck from "../components/login/LoginCheck";
 import {Background} from "../components/Commons";
+import historySave from "../components/navigation/History";
 
 const CirculoBase = () => {
     const petalos = [
@@ -51,6 +52,7 @@ const CirculoBase = () => {
                     circuloBase={true}
                     onClick={(petaloName) => {
                         navigate('/circulo-base/petalo-' + petaloName)
+                        historySave("/petalo-"+petaloName)
                     }}
                 />
                 <FinishButtonResponsive/>
