@@ -2,6 +2,8 @@ import 'firebase/auth';
 import {petalos} from "../../../static/data";
 import {PDFDocument, rgb} from 'pdf-lib';
 const emailjs = require('emailjs-com')
+const svg2img = require('svg2img');
+const { Format } = require('svg2img');
 
 const createAndSendPDF = async () => {
     const existingPdfBytes = await loadPDF();
@@ -119,17 +121,10 @@ const createAndSendPDF = async () => {
                     y = y - 20;
 
                     if (petalo.imageBody) {
-                        const imageBody = await fetch(`/images/simbolos/${petalo.imageBody}`);
-                        const imageBodyArrayBuffer = await imageBody.arrayBuffer();
-                        const imageBodyImage = await pdfDoc.embedPng(imageBodyArrayBuffer);
-                        currentPage.drawImage(imageBodyImage, {
-                            x: 22,
-                            y: y,
-                            width: 100,
-                            height: 100,
-                        });
-                        y = y - 120;
+                        await embedImage(petalo, pdfDoc, currentPage, y);
+                        y -= 120;
                     }
+
                 }
             } else {
                 if (petalo.title)
@@ -176,7 +171,53 @@ const createAndSendPDF = async () => {
 
 };
 
+async function embedImage(petalo, pdfDoc, currentPage, y) {
+    if (petalo.imageBody) {
+        try {
+            const response = await fetch(`/images/simbolos/${petalo.imageBody}`);
+            if (!response.ok) {
+                console.log("No se encontro la imagen")
+            }
 
+            const contentType = response.headers.get('content-type');
+            if (!contentType) {
+                console.log("No tiene nada la imagen")
+            }
+
+            const imageBodyArrayBuffer = await response.arrayBuffer();
+            let imageBodyImage;
+
+            if (contentType.includes('image/png')) {
+                imageBodyImage = await pdfDoc.embedPng(imageBodyArrayBuffer);
+            } else if (contentType.includes('image/jpeg') || contentType.includes('image/jpg')) {
+                imageBodyImage = await pdfDoc.embedJpg(imageBodyArrayBuffer);
+            } else if (contentType.includes('image/svg+xml')) {
+                const svgString = new TextDecoder().decode(imageBodyArrayBuffer);
+                await new Promise((resolve, reject) => {
+                    svg2img(svgString, Format.PNG, async (error, buffer) => {
+                        if (error) {
+                            reject(new Error('Error converting SVG to PNG'));
+                        } else {
+                            imageBodyImage = await pdfDoc.embedPng(buffer);
+                            resolve();
+                        }
+                    });
+                });
+            } else {
+                console.log("Formato de imagen no soportado")
+            }
+
+            currentPage.drawImage(imageBodyImage, {
+                x: 22,
+                y: y,
+                width: 100,
+                height: 100,
+            });
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
+}
 const wrapText = (text, width, font, fontSize) => {
     const words = text.split(' ');
     let line = '';
