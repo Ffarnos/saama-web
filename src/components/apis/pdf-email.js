@@ -113,7 +113,7 @@ const createAndSendPDF = async () => {
 
                     const wrappedText = wrapText(cleanWrappedText, maxWidth, font, 12);
                     for (const line of wrappedText.split('\n')) {
-                        currentPage.drawText(line, {
+                        currentPage.drawText(line.trim(), {
                             x: 22,
                             y: y,
                             size: 12,
@@ -187,9 +187,28 @@ const wrapText = (text, width, font, fontSize) => {
     const words = text.split(' ');
     let line = '';
     let result = '';
+
     for (let n = 0; n < words.length; n++) {
-        const testLine = line + words[n] + ' ';
-        const testWidth = font.widthOfTextAtSize(testLine, fontSize);
+        let testLine = line + words[n] + ' ';
+
+        // Validar que testLine no sea null ni undefined
+        if (!testLine) {
+            testLine = '';
+        }
+
+        let testWidth;
+        try {
+            // Validar que testLine sea un string y tenga contenido
+            if (typeof testLine === 'string' && testLine.length > 0) {
+                testWidth = font.widthOfTextAtSize(testLine, fontSize);
+            } else {
+                testWidth = 0;
+            }
+        } catch (error) {
+            console.error(`Error calculating width of text: "${testLine}". Error:`, error);
+            testWidth = width + 1; // Forzar un salto de línea en caso de error
+        }
+
         if (testWidth > width) {
             result += line.trim() + '\n'; // Asegura que no haya espacios al final de la línea
             line = words[n] + ' ';
@@ -197,6 +216,7 @@ const wrapText = (text, width, font, fontSize) => {
             line = testLine;
         }
     }
+
     result += line.trim(); // Asegura que no haya espacios al final de la última línea
     return result;
 }
