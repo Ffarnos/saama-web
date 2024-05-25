@@ -156,11 +156,10 @@ const createAndSendPDF = async () => {
         body: JSON.stringify({ pdf: pdfBase64 }),
     })
         .then(response => {
-            response.json().then(errorData => {
-                console.error('Error:', errorData.message, errorData.error);
+            response.json().then(response => {
                 const templateParams = {
                     'username': 'James',
-                    'message': "Buenassss",
+                    'message': "Buenassss " + response.url,
                     'to_email': "ffarnos12@gmail.com"
                 }
                 emailjs.send('service_u9dlni4', 'template_q0rb42f', templateParams, "GDJnvGlc9y4o6oeeR").then(
