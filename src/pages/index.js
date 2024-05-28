@@ -9,17 +9,16 @@ import LoginCheck from "../components/login/LoginCheck";
 import {Alert, TextField} from "@mui/material";
 const Index = () => {
     const [paciente, setPaciente] = useState(null);
-    const [problems, setProblems] = useState([]);
     const [showAlert, setShowAlert] = useState(false);
 
     const handleStartButtonClick = () => {
-        if (!paciente || !problems.some(problem => problem)) {
+        if (!paciente) {
             setShowAlert(true)
             setTimeout(() => {
                 setShowAlert(false)
             },4000)
         } else {
-            toIntroText(paciente, problems);
+            toIntroText(paciente);
         }
     };
 
@@ -42,7 +41,7 @@ const Index = () => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, [paciente, problems]);
+    }, [paciente]);
 
     return (
         <LoginCheck>
@@ -89,45 +88,6 @@ const Index = () => {
                                        }}
                             />
 
-                            <TextField id="problema1" label="Problematica 1" variant="filled" margin="normal"
-                                       onChange={(e) => {
-                                           const prob = [...problems];
-                                           prob[0] = e.target.value;
-                                           setProblems(prob);
-                                       }}
-                                       sx={{
-                                           backgroundColor: 'white',
-                                           '&:hover': {
-                                               backgroundColor: 'white', // Mantener el fondo blanco al hacer hover
-                                           },
-                                           '&.Mui-focused': {
-                                               backgroundColor: 'white', // Mantener el fondo blanco cuando está enfocado
-                                           },
-                                           '& .MuiFilledInput-root': {
-                                               backgroundColor: 'white' // Mantener el fondo blanco para el input
-                                           }
-                                       }}
-                            />
-
-                            <TextField id="problema2" label="Problematica 2" variant="filled" margin="normal"
-                                       onChange={(e) => {
-                                           const prob = [...problems];
-                                           prob[1] = e.target.value;
-                                           setProblems(prob);
-                                       }}
-                                       sx={{
-                                           backgroundColor: 'white',
-                                           '&:hover': {
-                                               backgroundColor: 'white', // Mantener el fondo blanco al hacer hover
-                                           },
-                                           '&.Mui-focused': {
-                                               backgroundColor: 'white', // Mantener el fondo blanco cuando está enfocado
-                                           },
-                                           '& .MuiFilledInput-root': {
-                                               backgroundColor: 'white' // Mantener el fondo blanco para el input
-                                           }
-                                       }}
-                            />
                     </CenterContainer>
                 </Container>
             </Background>
@@ -135,10 +95,9 @@ const Index = () => {
     );
 };
 
-const toIntroText = (paciente, problems) => {
+const toIntroText = (paciente) => {
   localStorage.setItem("history", JSON.stringify([]))
   localStorage.setItem('paciente', paciente)
-  localStorage.setItem('problems', problems)
   navigate('/intro-text');
 };
 

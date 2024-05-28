@@ -7,9 +7,13 @@ import {
 import styled from "styled-components";
 import {navigate} from "gatsby";
 import LoginCheck from "../components/login/LoginCheck";
+import {Alert, TextField} from "@mui/material";
 
 const IntroText = () => {
     const [number, setNumber] = useState(1);
+    const [problems, setProblems] = useState([]);
+    const [showAlert, setShowAlert] = useState(false);
+
     useEffect(() => {
         const handleKeyDown = (event) => {
             switch (event.key) {
@@ -20,7 +24,7 @@ const IntroText = () => {
                     BackFunction({number, setNumber});
                     break;
                 case 'ArrowRight':
-                    NextFunction({number, setNumber});
+                    NextFunction({number, setNumber, problems, setShowAlert});
                     break;
                 default:
                     if (event.key === 'Enter')
@@ -35,20 +39,80 @@ const IntroText = () => {
         };
     }, [number]);
     return <LoginCheck>
+        {showAlert && <ContainerAlert>
+            <Alert severity="error">
+                Debes completar todos los campos
+            </Alert>
+        </ContainerAlert>}
         {TextComponent(number, setNumber)}
+        {number === 6 && <Problems problems={problems} setProblems={setProblems}/>}
+
+        <Navigate number={number} setNumber={setNumber} problems={problems} setShowAlert={setShowAlert}/>
+
     </LoginCheck>
 }
 
-const Navigate = ({number, setNumber}) => <Container>
+const ContainerProblems = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+`;
+
+const Problems = ({problems, setProblems}) =>
+    <ContainerProblems>
+    <TextField id="problema1" label="Problematica 1" variant="filled" margin="normal"
+               onChange={(e) => {
+                   const prob = [...problems];
+                   prob[0] = e.target.value;
+                   setProblems(prob);
+               }}
+               sx={{
+                   backgroundColor: 'white',
+                   '&:hover': {
+                       backgroundColor: 'white', // Mantener el fondo blanco al hacer hover
+                   },
+                   '&.Mui-focused': {
+                       backgroundColor: 'white', // Mantener el fondo blanco cuando está enfocado
+                   },
+                   '& .MuiFilledInput-root': {
+                       backgroundColor: 'white' // Mantener el fondo blanco para el input
+                   }
+               }}
+    />
+
+    <TextField id="problema2" label="Problematica 2" variant="filled" margin="normal"
+               onChange={(e) => {
+                   const prob = [...problems];
+                   prob[1] = e.target.value;
+                   setProblems(prob);
+               }}
+               sx={{
+                   backgroundColor: 'white',
+                   '&:hover': {
+                       backgroundColor: 'white', // Mantener el fondo blanco al hacer hover
+                   },
+                   '&.Mui-focused': {
+                       backgroundColor: 'white', // Mantener el fondo blanco cuando está enfocado
+                   },
+                   '& .MuiFilledInput-root': {
+                       backgroundColor: 'white' // Mantener el fondo blanco para el input
+                   }
+               }}
+    />
+</ContainerProblems>
+const Navigate = ({number, setNumber, problems, setShowAlert}) => <Container>
     <BackButton color="black"
                 onClick={()=> BackFunction({number,setNumber})}
     />
+
     <NextButton color="black"
-                onClick={()=> NextFunction({number, setNumber})
+                onClick={()=> {
+                    NextFunction({number, setNumber, problems, setShowAlert})
+                }
     }/>
 </Container>
 
-    const NextFunction = ({number, setNumber}) => {
+const NextFunction = ({number, setNumber, problems, setShowAlert}) => {
     switch (number) {
         case 1:
             return setNumber((prev) => prev + 1);
@@ -61,7 +125,15 @@ const Navigate = ({number, setNumber}) => <Container>
         case 5:
             return setNumber((prev) => prev + 1);
         default:
-            return navigate('/circulo-base');
+            if (!problems.some(problem => problem)) {
+                setShowAlert(true)
+                setTimeout(() => {
+                    setShowAlert(false)
+                },4000)
+                } else {
+                    navigate('/circulo-base');
+                }
+
     }
 }
 
@@ -91,7 +163,8 @@ const TextContainer = styled.div`
   max-width: 95%;
 `;
 
-const TextComponent = (number, setNumber) => {
+
+const TextComponent = (number) => {
     return (
         <TextContainer>
             {
@@ -253,12 +326,20 @@ const TextComponent = (number, setNumber) => {
                             <ResponsiveText scale={0.5} style={{marginTop: '10px'}}>
                                 ¿Cuál de estos puntos prioriza el ser de (nombre del consultante) para sanar?
                             </ResponsiveText>
+
                         </>
                 }[number]
             }
-            <Navigate number={number} setNumber={setNumber}/>
         </TextContainer>
     );
 }
+
+
+const ContainerAlert = styled.div`
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 999;
+`;
 
 export default IntroText;
