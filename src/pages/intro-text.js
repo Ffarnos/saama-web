@@ -13,9 +13,11 @@ const IntroText = () => {
     const [number, setNumber] = useState(1);
     const [problems, setProblems] = useState([]);
     const [showAlert, setShowAlert] = useState(false);
+    const [isTextFieldFocused, setIsTextFieldFocused] = useState(false);
 
     useEffect(() => {
         const handleKeyDown = (event) => {
+            if (isTextFieldFocused) return;
             switch (event.key) {
                 case 'Backspace':
                     navigate("/")
@@ -45,7 +47,7 @@ const IntroText = () => {
             </Alert>
         </ContainerAlert>}
         {TextComponent(number, setNumber)}
-        {number === 6 && <Problems problems={problems} setProblems={setProblems}/>}
+        {number === 6 && <Problems problems={problems} setProblems={setProblems} setTextFieldFocused={setIsTextFieldFocused}/>}
 
         <Navigate number={number} setNumber={setNumber} problems={problems} setShowAlert={setShowAlert}/>
 
@@ -66,6 +68,8 @@ const Problems = ({problems, setProblems}) =>
                    prob[0] = e.target.value;
                    setProblems(prob);
                }}
+               onFocus={() => setIsTextFieldFocused(true)}
+               onBlur={() => setIsTextFieldFocused(false)}
                sx={{
                    backgroundColor: 'white',
                    '&:hover': {
@@ -86,6 +90,8 @@ const Problems = ({problems, setProblems}) =>
                    prob[1] = e.target.value;
                    setProblems(prob);
                }}
+               onFocus={() => setIsTextFieldFocused(true)}
+               onBlur={() => setIsTextFieldFocused(false)}
                sx={{
                    backgroundColor: 'white',
                    '&:hover': {

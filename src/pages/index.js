@@ -10,6 +10,7 @@ import {Alert, TextField} from "@mui/material";
 const Index = () => {
     const [paciente, setPaciente] = useState(null);
     const [showAlert, setShowAlert] = useState(false);
+    const [isTextFieldFocused, setIsTextFieldFocused] = useState(false);
 
     const handleStartButtonClick = () => {
         if (!paciente) {
@@ -25,6 +26,7 @@ const Index = () => {
     useEffect(() => {
 
         const handleKeyDown = (event) => {
+            if (isTextFieldFocused) return;
             if (event.key === 'Enter') {
                 navigate('/circulo-base');
             } else if (event.key === 'Backspace') {
@@ -74,6 +76,8 @@ const Index = () => {
                                        onChange={(e) => {
                                            setPaciente(e.target.value);
                                        }}
+                                       onFocus={() => setIsTextFieldFocused(true)}
+                                       onBlur={() => setIsTextFieldFocused(false)}
                                        sx={{
                                            backgroundColor: 'white',
                                            '&:hover': {

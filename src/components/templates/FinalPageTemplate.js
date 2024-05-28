@@ -1,5 +1,5 @@
 import ResponsiveText from "../apis/ResponsiveText";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {navigate} from "gatsby";
 import {NavigationButtonsInLine} from "../navigation/NavigationButtons";
 import styled from "styled-components";
@@ -11,8 +11,14 @@ import {TextField} from "@mui/material";
 
 
 const FinalPageTemplate = ({ pageContext }) => {
+
+    const [isTextFieldFocused, setIsTextFieldFocused] = useState(false);
+
+
     useEffect(() => {
         const handleKeyDown = (event) => {
+            if (isTextFieldFocused) return
+
             if (event.altKey) {
                 if (event.key === 'Control') {
                     createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
@@ -93,6 +99,8 @@ const FinalPageTemplate = ({ pageContext }) => {
 
                                    localStorage.setItem("history", JSON.stringify(emotions));
                                }}
+                               onFocus={() => setIsTextFieldFocused(true)}
+                               onBlur={() => setIsTextFieldFocused(false)}
                                sx={{
                                    backgroundColor: 'white',
                                    '&:hover': {
