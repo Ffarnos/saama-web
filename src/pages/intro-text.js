@@ -189,6 +189,14 @@ const TextComponent = (number) => {
                                 presencia de la madre María que me acompaña y la sabiduría de Jesús que es mi guía,
                                 Amén.
                             </ResponsiveText>
+                            <ResponsiveText scale={0.7} style={{marginTop: '20px'}}>
+                                ORACIÓN PARA ABRIR ESPACIO SAGRADO
+                            </ResponsiveText>
+                            <ResponsiveText scale={0.6} style={{marginTop: '10px'}}>
+                                Doy gracias de manera infinita a mi Comité de Yo Superior, a mi ser espiritual y los seres que estuvieron en este día de sanación, por este sagrado servicio de evolución y transformación. En este momento, cierro amorosamente los archivos Akáshicos y las puertas astrales, confiando en la guía divina.
+                                Te agradezco Padre por tu presencia constante en mi vida, Madre, por la abundancia que nos ofreces, y al Espíritu Santo por tu elevado servicio. Que la luz del amor y sabiduría continúe guiándonos en este viaje espiritual, Amen
+                            </ResponsiveText>
+
                         </>,
                     '2':
                         <>
