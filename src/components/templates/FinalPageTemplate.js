@@ -53,7 +53,7 @@ const FinalPageTemplate = ({ pageContext }) => {
     }, []);
 
 
-    const {desc, titleText, image, titlePage, imageBody, separation} = pageContext
+    const {desc, titleText, image, titlePage, imageBody, separation, fieldText} = pageContext
     const imagePath = "/images/" + image + ".webp";
     const imageBodyPath = "/images/simbolos/" + imageBody;
     let textSeparate;
@@ -76,7 +76,7 @@ const FinalPageTemplate = ({ pageContext }) => {
                 {separation ? textComponents
                     : <Text scale={0.5} color={"white"}>{desc}</Text>}
 
-                {separation && <div>
+                {fieldText && <div>
                     <TextField id="emocion" label="Emocion" variant="filled" margin="normal"
                                onChange={(e) => {
                                    let emotions = localStorage.getItem("history");

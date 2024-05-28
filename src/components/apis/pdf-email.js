@@ -96,7 +96,7 @@ const createAndSendPDF = async () => {
         } else {
             //PETALO FINAL
             if (petalo.text) {
-                if (petalo.separation) {
+                if (petalo.fieldText) {
                     currentPage.drawText("- " + petalo.text, {
                         x: 22,
                         y: y,
@@ -257,15 +257,16 @@ const getListOfPetalos = () => {
         historyArray.forEach((link) => {
             let p;
             if (link === "ramificar") p = {title: "RAMIFICAR"};
-            else if (link.includes("petalo-2/1")) {
-                // EMOCION
-                const splitted = link.split(", ");
-                p = getPetaloWithLink(petalos, splitted[0]);
-                if (splitted.length > 1)
-                    p.text = splitted[1];
+            else {
+                p = getPetaloWithLink(petalos, link);
 
+                if (!p) {
+                    const splitted = link.split(", ");
+                    p = getPetaloWithLink(petalos, splitted[0]);
+                    if (splitted.length > 1)
+                        p.text = splitted[1];
+                }
             }
-            else p = getPetaloWithLink(petalos, link);
 
             if (p) petalosArray.push(p);
         });
