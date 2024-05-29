@@ -39,6 +39,7 @@ const createAndSendPDF = async () => {
     let currentPage = page;
 
     for (const petalo of getListOfPetalos()) {
+        console.log(petalo)
         if (y <= 10) {
             currentPage = pdfDoc.addPage([595, 842]);
             y = 780;
@@ -118,6 +119,10 @@ const createAndSendPDF = async () => {
                     const lines = wrappedText.split("\n");
 
                     for (const line of lines) {
+                        if (y <= 10) {
+                            currentPage = pdfDoc.addPage([595, 842]);
+                            y = 780;
+                        }
                         currentPage.drawText(line, {
                             x: 22,
                             y: y,
@@ -129,9 +134,8 @@ const createAndSendPDF = async () => {
                     y = y - 20;
 
                     if (petalo.imageBody) {
-                        y = y - (lines * 8)
-                        console.log("6")
-
+                        y = y - (lines.length * 10)
+                        console.log(y)
                         const imageBody = await fetch(`/images/simbolos/${petalo.imageBody}`);
                         const imageBodyArrayBuffer = await imageBody.arrayBuffer();
                         const imageBodyImage = await pdfDoc.embedPng(imageBodyArrayBuffer);
@@ -153,6 +157,7 @@ const createAndSendPDF = async () => {
                         size: 12,
                         color: rgb(0, 0, 0),
                     });
+                y = y - 20;
             }
             y = y - 20;
         }
@@ -274,10 +279,14 @@ const getListOfPetalos = () => {
     if (history) {
         let historyArray = JSON.parse(history);
         historyArray = ordenarPetalo(historyArray.map(item => item.replace("/circulo-base/", "")));
+        console.log(historyArray)
         historyArray.forEach((link) => {
             let p;
             if (link === "ramificar") p = {title: "RAMIFICAR"};
             else {
+                if (link === "/petalo-1")
+                    console.log("ESTA ACAAA")
+
                 p = getPetaloWithLink(petalos, link);
 
                 if (!p) {
@@ -298,13 +307,13 @@ const getListOfPetalos = () => {
 const ordenarPetalo = (historyArray) => {
 
     const petalos = {
-        1: ["/petalo-1"],
-        2: ["/petalo-2"],
-        3: ["/petalo-3"],
-        4: ["/petalo-4"],
-        5: ["/petalo-5"],
-        6: ["/petalo-6"],
-        7: ["/petalo-7"]
+        1: ["petalo-1"],
+        2: ["petalo-2"],
+        3: ["petalo-3"],
+        4: ["petalo-4"],
+        5: ["petalo-5"],
+        6: ["petalo-6"],
+        7: ["petalo-7"]
     }
 
 
@@ -313,7 +322,7 @@ const ordenarPetalo = (historyArray) => {
     let ramificando = false;
 
     historyArray.forEach(link => {
-        if (!ramificando && ((link === "/petalo-1") || (link === "/petalo-2") || (link === "/petalo-3") || (link === "/petalo-4") || (link === "/petalo-5") || (link === "/petalo-6") || link === ("/petalo-7")))
+        if ((link === "petalo-1") || (link === "petalo-2") || (link === "petalo-3") || (link === "petalo-4") || (link === "petalo-5") || (link === "petalo-6") || link === ("petalo-7"))
             return;
 
         if (link === "ramificar") {
