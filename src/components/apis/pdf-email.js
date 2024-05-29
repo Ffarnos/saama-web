@@ -46,6 +46,7 @@ const createAndSendPDF = async () => {
 
         //RAMIFICAR
         if (petalo.title === "RAMIFICAR") {
+            console.log("0")
             currentPage.drawLine({
                 start: {x: 22, y: y},
                 end: {x: 570, y: y},
@@ -57,6 +58,7 @@ const createAndSendPDF = async () => {
         }
         //FUENTES
         else if (petalo.title.toLowerCase().includes("fuente")) {
+            console.log("1")
             currentPage.drawText(petalo.title, {
                 x: 22,
                 y: y,
@@ -69,6 +71,7 @@ const createAndSendPDF = async () => {
         else if (petalo.subPetalos) {
 
             if (petalo.title.length > 2) {
+                console.log("2")
                 currentPage.drawText(petalo.title, {
                     x: 22,
                     y: y,
@@ -81,6 +84,8 @@ const createAndSendPDF = async () => {
             if (petalo.text) {
                 const text = petalo.text;
                 const wrappedText = wrapText(text, maxWidth, font, 12);
+                console.log("3")
+
                 for (const line of wrappedText.split('\n')) {
                     currentPage.drawText(line, {
                         x: 22,
@@ -97,6 +102,7 @@ const createAndSendPDF = async () => {
             //PETALO FINAL
             if (petalo.text) {
                 if (petalo.fieldText) {
+                    console.log("4")
                     currentPage.drawText("- " + petalo.text, {
                         x: 22,
                         y: y,
@@ -108,7 +114,10 @@ const createAndSendPDF = async () => {
                     const text = petalo.title.toUpperCase() + ": " + petalo.text;
 
                     const wrappedText = wrapText(text, maxWidth, font, 12);
-                    for (const line of wrappedText.split('\n')) {
+
+                    const lines = wrappedText.split("\n");
+
+                    for (const line of lines) {
                         currentPage.drawText(line, {
                             x: 22,
                             y: y,
@@ -120,6 +129,8 @@ const createAndSendPDF = async () => {
                     y = y - 20;
 
                     if (petalo.imageBody) {
+                        y = y - (lines * 8)
+                        console.log("6")
 
                         const imageBody = await fetch(`/images/simbolos/${petalo.imageBody}`);
                         const imageBodyArrayBuffer = await imageBody.arrayBuffer();
@@ -130,12 +141,13 @@ const createAndSendPDF = async () => {
                             width: 100,
                             height: 100,
                         });
-                        y = y - 120;
+                        y = y - 100;
                     }
                 }
             } else {
+                console.log("7")
                 if (petalo.title)
-                    currentPage.drawText(petalo.text, {
+                    currentPage.drawText(petalo.title, {
                         x: 22,
                         y: y,
                         size: 12,
@@ -261,7 +273,7 @@ const getListOfPetalos = () => {
     const history = localStorage.getItem("history");
     if (history) {
         let historyArray = JSON.parse(history);
-        historyArray = historyArray.map(item => item.replace("/circulo-base/", ""));
+        historyArray = ordenarPetalo(historyArray.map(item => item.replace("/circulo-base/", "")));
         historyArray.forEach((link) => {
             let p;
             if (link === "ramificar") p = {title: "RAMIFICAR"};
@@ -282,4 +294,57 @@ const getListOfPetalos = () => {
     return petalosArray;
 }
 
+
+const ordenarPetalo = (historyArray) => {
+
+    const petalos = {
+        1: ["/petalo-1"],
+        2: ["/petalo-2"],
+        3: ["/petalo-3"],
+        4: ["/petalo-4"],
+        5: ["/petalo-5"],
+        6: ["/petalo-6"],
+        7: ["/petalo-7"]
+    }
+
+
+    let lastPetalo = 0;
+
+    let ramificando = false;
+
+    historyArray.forEach(link => {
+        if (!ramificando && ((link === "/petalo-1") || (link === "/petalo-2") || (link === "/petalo-3") || (link === "/petalo-4") || (link === "/petalo-5") || (link === "/petalo-6") || link === ("/petalo-7")))
+            return;
+
+        if (link === "ramificar") {
+            petalos[lastPetalo].push("ramificar")
+            ramificando = !ramificando
+            return;
+        }
+
+        const match = link.match(/petalo-(\d+)/);
+
+        const number = match ? parseInt(match[1], 10) : null;
+
+        if (ramificando)
+            petalos[lastPetalo].push(link)
+        else {
+            petalos[number].push(link)
+            lastPetalo = number;
+        }
+    })
+
+    const historyArrayOrden = []
+
+    for (let i = 1; i < 7; i++) {
+        if (petalos[i].length === 1)
+            continue
+
+        petalos[i].forEach(link => {
+            historyArrayOrden.push(link)
+        })
+    }
+
+    return historyArrayOrden;
+}
 export default createAndSendPDF;
