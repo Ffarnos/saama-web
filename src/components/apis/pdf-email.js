@@ -158,6 +158,14 @@ const createAndSendPDF = async () => {
     }
 
     const pdfBytes = await pdfDoc.save();
+    const pdfBlob = new Blob([pdfBytes], { type: 'application/pdf' });
+    const pdfUrl = URL.createObjectURL(pdfBlob);
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'documento.pdf';
+    link.click();
+
+    /*
     const pdfBase64 = arrayBufferToBase64(pdfBytes);
 
 
@@ -186,7 +194,7 @@ const createAndSendPDF = async () => {
             });
         })
         .catch(error => console.error('Error:', error));
-
+*/
 };
 
 
