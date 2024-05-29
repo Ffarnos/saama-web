@@ -102,6 +102,7 @@ const Index = () => {
 const toIntroText = (paciente) => {
   localStorage.setItem("history", JSON.stringify([]))
   localStorage.setItem('paciente', paciente)
+  localStorage.removeItem("problems")
   navigate('/intro-text');
 };
 

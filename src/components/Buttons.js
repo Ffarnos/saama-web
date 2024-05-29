@@ -8,7 +8,9 @@ import createAndSendPDF from "./apis/pdf-email";
 const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
     useEffect(() => {
         const handleKeyDown = (event) => {
-            if (event.altKey) {
+            if (event.keyCode === 32)
+                navigate("/intro-text");
+            else if (event.altKey) {
                 if (event.key === 'Control') {
                     createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
                 }
@@ -40,9 +42,6 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                         break;
                     case 'ArrowRight':
                         navigate(+1);
-                        break;
-                    case 'Spacebar':
-                        navigate("/intro-text");
                         break;
                     default:
                         if (/^[0-9]$/.test(event.key)) {

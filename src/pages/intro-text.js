@@ -39,15 +39,16 @@ const IntroText = () => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, [number]);
+    }, [number, problems, isTextFieldFocused]);
+
     return <LoginCheck>
-        {showAlert && <ContainerAlert>
+        {(showAlert && !localStorage.getItem("problems")) && <ContainerAlert>
             <Alert severity="error">
                 Debes completar todos los campos
             </Alert>
         </ContainerAlert>}
         {TextComponent(number, setNumber)}
-        {number === 6 && <Problems problems={problems} setProblems={setProblems} setTextFieldFocused={setIsTextFieldFocused}/>}
+        {(number === 6 && !localStorage.getItem("problems")) && <Problems problems={problems} setProblems={setProblems} setIsTextFieldFocused={setIsTextFieldFocused}/>}
 
         <Navigate number={number} setNumber={setNumber} problems={problems} setShowAlert={setShowAlert}/>
 
@@ -60,7 +61,7 @@ const ContainerProblems = styled.div`
   gap: 20px;
 `;
 
-const Problems = ({problems, setProblems}) =>
+const Problems = ({problems, setProblems, setIsTextFieldFocused}) =>
     <ContainerProblems>
     <TextField id="problema1" label="Problematica 1" variant="filled" margin="normal"
                onChange={(e) => {
@@ -131,14 +132,16 @@ const NextFunction = ({number, setNumber, problems, setShowAlert}) => {
         case 5:
             return setNumber((prev) => prev + 1);
         default:
-            if (!problems.some(problem => problem)) {
+            if (!localStorage.getItem("problems") && !problems.some(problem => problem)) {
                 setShowAlert(true)
                 setTimeout(() => {
                     setShowAlert(false)
                 },4000)
-                } else {
-                    navigate('/circulo-base');
-                }
+            } else {
+                if (problems.some(problem => problem))
+                    localStorage.setItem('problems', problems)
+                navigate('/circulo-base')
+            }
 
     }
 }

@@ -19,7 +19,9 @@ const FinalPageTemplate = ({ pageContext }) => {
         const handleKeyDown = (event) => {
             if (isTextFieldFocused) return
 
-            if (event.altKey) {
+            if (event.keyCode === 32)
+                navigate("/intro-text");
+            else if (event.altKey) {
                 if (event.key === 'Control') {
                     createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
                 }
@@ -47,7 +49,7 @@ const FinalPageTemplate = ({ pageContext }) => {
                 navigate(-1)
             else if (event.key === 'ArrowRight')
                 navigate(+1)
-            else if (event.key === 'Spacebar')
+            else if (event.key === 'Space')
                 navigate("/intro-text")
         };
 
@@ -83,7 +85,7 @@ const FinalPageTemplate = ({ pageContext }) => {
                     : <Text scale={0.5} color={"white"}>{desc}</Text>}
 
                 {fieldText && <div>
-                    <TextField id="emocion" label="Emocion" variant="filled" margin="normal"
+                    <TextField id="emocion" label="" variant="filled" margin="normal"
                                onChange={(e) => {
                                    let emotions = localStorage.getItem("history");
 
