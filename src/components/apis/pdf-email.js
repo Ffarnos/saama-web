@@ -134,7 +134,7 @@ const createAndSendPDF = async () => {
                     y = y - 20;
 
                     if (petalo.imageBody) {
-                        y = y - (lines.length * 10)
+                        y = y - (lines.length * 14)
                         console.log(y)
                         const imageBody = await fetch(`/images/simbolos/${petalo.imageBody}`);
                         const imageBodyArrayBuffer = await imageBody.arrayBuffer();
@@ -284,9 +284,6 @@ const getListOfPetalos = () => {
             let p;
             if (link === "ramificar") p = {title: "RAMIFICAR"};
             else {
-                if (link === "/petalo-1")
-                    console.log("ESTA ACAAA")
-
                 p = getPetaloWithLink(petalos, link);
 
                 if (!p) {
@@ -322,7 +319,7 @@ const ordenarPetalo = (historyArray) => {
     let ramificando = false;
 
     historyArray.forEach(link => {
-        if ((link === "petalo-1") || (link === "petalo-2") || (link === "petalo-3") || (link === "petalo-4") || (link === "petalo-5") || (link === "petalo-6") || link === ("petalo-7"))
+        if ((link === "/petalo-1") || (link === "/petalo-2") || (link === "/petalo-3") || (link === "/petalo-4") || (link === "/petalo-5") || (link === "/petalo-6") || link === ("/petalo-7"))
             return;
 
         if (link === "ramificar") {
@@ -335,6 +332,7 @@ const ordenarPetalo = (historyArray) => {
 
         const number = match ? parseInt(match[1], 10) : null;
 
+
         if (ramificando)
             petalos[lastPetalo].push(link)
         else {
@@ -345,7 +343,7 @@ const ordenarPetalo = (historyArray) => {
 
     const historyArrayOrden = []
 
-    for (let i = 1; i < 7; i++) {
+    for (let i = 1; i < 8; i++) {
         if (petalos[i].length === 1)
             continue
 
