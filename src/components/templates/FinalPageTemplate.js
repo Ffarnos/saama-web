@@ -58,7 +58,8 @@ const FinalPageTemplate = ({ pageContext }) => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, []);
+    }, [isTextFieldFocused]);
+
 
 
     const {desc, titleText, image, titlePage, imageBody, separation, fieldText} = pageContext
@@ -85,7 +86,7 @@ const FinalPageTemplate = ({ pageContext }) => {
                     : <Text scale={0.5} color={"white"}>{desc}</Text>}
 
                 {fieldText && <div>
-                    <TextField id="emocion" label="" variant="filled" margin="normal"
+                    <TextField id="emocion" variant="filled" margin="normal"
                                onChange={(e) => {
                                    let emotions = localStorage.getItem("history");
 
