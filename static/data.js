@@ -133,11 +133,11 @@ const petalos = [
 
 
             {
-                linkName: "petalo-1/4", image: 'boton1', title: "Limpiar nucleo del ser", fieldText: true,
+                linkName: "petalo-1/4", image: 'boton1', title: "Limpiar nucleo del ser", fieldText: true, useText: true,
                 text: "Limpiamos la información genética negativa que perjudica a las células, las cuales bloqueaban el libre flujo de energía. Para lograr esto se borraron las siguientes emociones:"
             },
             {
-                linkName: "petalo-1/5", image: 'boton1', title: "Respetar/Aceptar", fieldText: true,
+                linkName: "petalo-1/5", image: 'boton1', title: "Respetar/Aceptar", fieldText: true, useText: true,
                 text: "Estos conceptos, nos dan aviso de que habrá que revisar algunos aspectos o situaciones de nuestra vida, que aún no queremos respetar o aceptar como bien dice la corrección. Al incorporar alguno de estos dos, lograremos no luchar con nuestros justificativos y culpabilidades hacia nosotros o hacia los demás, para sostener un escenario (situación), permitiendo que al hacerlas parte de nuestra vida ya no afecten la armonía y paz interior que merecemos."
             },
             {

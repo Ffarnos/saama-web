@@ -103,8 +103,8 @@ const createAndSendPDF = async () => {
             //PETALO FINAL
             if (petalo.text) {
                 if (petalo.fieldText) {
-                    console.log("4")
-                    currentPage.drawText("- " + petalo.text, {
+                    console.log("4");
+                    currentPage.drawText((petalo.useText ? petalo.title + ": " : "- ") + petalo.text, {
                         x: 22,
                         y: y,
                         size: 12,
@@ -291,6 +291,7 @@ const getListOfPetalos = () => {
                     p = getPetaloWithLink(petalos, splitted[0]);
                     if (splitted.length > 1)
                         p.text = splitted[1];
+
                 }
             }
 
