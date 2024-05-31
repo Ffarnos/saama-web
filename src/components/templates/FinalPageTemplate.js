@@ -62,16 +62,19 @@ const FinalPageTemplate = ({ pageContext }) => {
 
 
 
-    const {desc, titleText, image, titlePage, imageBody, separation, fieldText} = pageContext
+    const {desc, titleText, image, titlePage, imageBody, separation, fieldText, linkName} = pageContext
     const imagePath = "/images/" + image + ".webp";
     const imageBodyPath = "/images/simbolos/" + imageBody;
+
+    const color = getColorWithFuente(linkName);
+    console.log(color)
     let textSeparate;
     let textComponents;
     if (separation) {
         textSeparate = desc.split(". ");
         textComponents = textSeparate.map((sentence, index) => {
             return <div>
-                <ResponsiveText key={index} scale={0.5} color={"white"}>
+                <ResponsiveText key={index} scale={0.5} color={color}>
                     {sentence.replace(".", "")}
                 </ResponsiveText>
             </div>
@@ -80,10 +83,10 @@ const FinalPageTemplate = ({ pageContext }) => {
     return <LoginCheck>
         <Background style={{backgroundImage: `url(${imagePath})`}}>
             <Content>
-                <ResponsiveText scale={0.9} color={"white"}>{titlePage}</ResponsiveText>
-                <ResponsiveText scale={0.7} color={"white"}>{titleText}</ResponsiveText>
+                <ResponsiveText scale={0.9} color={color}>{titlePage}</ResponsiveText>
+                <ResponsiveText scale={0.7} color={color}>{titleText}</ResponsiveText>
                 {separation ? textComponents
-                    : <Text scale={0.5} color={"white"}>{desc}</Text>}
+                    : <Text scale={0.5} color={color}>{desc}</Text>}
 
                 {fieldText && <div>
                     <TextField id="emocion" variant="filled" margin="normal"
@@ -125,6 +128,21 @@ const FinalPageTemplate = ({ pageContext }) => {
             </Content>
         </Background>
     </LoginCheck>
+}
+
+const getColorWithFuente = (link) => {
+    const match = link.match(/petalo-(\d+)/);
+
+    const number = parseInt(match[1]);
+
+    switch (number) {
+        case 5:
+            return "#595959"
+        default:
+            return "white"
+
+    }
+
 }
 const BodyImage = styled(ResponsiveImage)`
   margin-top: 10px;

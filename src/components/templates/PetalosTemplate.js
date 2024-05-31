@@ -20,6 +20,8 @@ const PetalosTemplate = ({ pageContext }) => {
         setInput(event.target.value);
     };
 
+    const color = getColorWithFuente(linkName)
+
     const theme = createTheme({
         components: {
             MuiTextField: {
@@ -47,14 +49,14 @@ const PetalosTemplate = ({ pageContext }) => {
     <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Container>
             <NoCircleContainer>
-                <Title scale={1} color={"#fdf8f8"}>
+                <Title scale={1} color={color}>
                     {titlePage ? titlePage.toUpperCase() : ""}
                 </Title>
-                <Title scale={0.8} color={"#fdf8f8"}>
+                <Title scale={0.8} color={color}>
                     {title ? title.toUpperCase() : ""}
                 </Title>
                 <ContainerHorizontal>
-                <ResponsiveText scale={0.6} color={"#fdf8f8"}>
+                <ResponsiveText scale={0.6} color={color}>
                     Opciones {subPetalos.length}
                 </ResponsiveText>
                 {input !== 0 && <ThemeProvider theme={theme}>
@@ -104,6 +106,18 @@ const PetalosTemplate = ({ pageContext }) => {
     </Background>
     </LoginCheck>;
 }
+
+const getColorWithFuente = (link) => {
+    const match = link.match(/petalo-(\d+)/);
+    const number = parseInt(match[1]);
+    switch (number) {
+        case 5:
+            return "#595959"
+        default:
+            return "#fdf8f8"
+    }
+}
+
 
 const ContainerHorizontal = styled.div`
   display: flex;
