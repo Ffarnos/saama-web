@@ -40,7 +40,7 @@ const createAndSendPDF = async () => {
 
     for (const petalo of getListOfPetalos()) {
         console.log(petalo)
-        if (y <= 10) {
+        if (y <= 30) {
             currentPage = pdfDoc.addPage([595, 842]);
             y = 780;
         }
@@ -112,17 +112,11 @@ const createAndSendPDF = async () => {
                     });
                     y = y - 10;
                 } else {
-                    const text = petalo.title.toUpperCase() + ": " + petalo.text;
-
+                    const text = (petalo.title.length > 4 ? petalo.title.toUpperCase() + ": " : "") + petalo.text;
                     const wrappedText = wrapText(text, maxWidth, font, 12);
-
                     const lines = wrappedText.split("\n");
 
                     for (const line of lines) {
-                        if (y <= 10) {
-                            currentPage = pdfDoc.addPage([595, 842]);
-                            y = 780;
-                        }
                         currentPage.drawText(line, {
                             x: 22,
                             y: y,
@@ -130,12 +124,16 @@ const createAndSendPDF = async () => {
                             color: rgb(0, 0, 0),
                         })
                         y = y - 15;
+                        if (y <= 30) {
+                            currentPage = pdfDoc.addPage([595, 842]);
+                            y = 780;
+                        }
                     }
                     y = y - 20;
 
                     if (petalo.imageBody) {
+
                         y = y - (lines.length * 14)
-                        console.log(y)
                         const imageBody = await fetch(`/images/simbolos/${petalo.imageBody}`);
                         const imageBodyArrayBuffer = await imageBody.arrayBuffer();
                         const imageBodyImage = await pdfDoc.embedPng(imageBodyArrayBuffer);
@@ -348,11 +346,85 @@ const ordenarPetalo = (historyArray) => {
         if (petalos[i].length === 1)
             continue
 
-        petalos[i].forEach(link => {
+        OrdenarFuente(petalos[i]).forEach(link => {
             historyArrayOrden.push(link)
         })
     }
 
     return historyArrayOrden;
 }
+
+const OrdenarFuente = (links) => {
+
+    const linksWithOutRami = []
+    const ramificaciones = []
+
+    let antLink;
+    let ramificando = false;
+    let ramificandoPetalos = [];
+
+    links.forEach(link => {
+          if (link === "ramificar") {
+              ramificandoPetalos.push(link)
+              if (ramificando) {
+                  const uniqueArrayRami = Array.from(new Set(ramificandoPetalos));
+                  uniqueArrayRami.sort(sortArray);
+
+                  ramificaciones.push({
+                      antLink: antLink,
+                      ramificandoPetalos: uniqueArrayRami
+                  })
+
+                  ramificandoPetalos = [];
+              }
+              ramificando = !ramificando
+          } else if (!ramificando) {
+              antLink = link;
+              linksWithOutRami.push(link)
+          } else if (ramificando) {
+              ramificandoPetalos.push(link)
+          }
+    })
+
+    linksWithOutRami.sort(sortArray);
+
+    return putRamificaciones(ramificaciones, Array.from(new Set(linksWithOutRami)))
+}
+
+const sortArray = (a, b) => {
+    const parsePath = (str) => {
+        return str.split('/').map(part => {
+            if (part.startsWith('petalo-')) {
+                return part.split('-')[1];
+            }
+            return part;
+        }).map(Number);
+    };
+
+    const pathA = parsePath(a);
+    const pathB = parsePath(b);
+
+    for (let i = 0; i < Math.max(pathA.length, pathB.length); i++) {
+        const partA = pathA[i] !== undefined ? pathA[i] : -Infinity;
+        const partB = pathB[i] !== undefined ? pathB[i] : -Infinity;
+
+        if (partA !== partB) {
+            return partA - partB;
+        }
+    }
+    return 0;
+};
+
+const putRamificaciones = (ramificaciones, arrayWithOutRami) => {
+    let newArray = [];
+    arrayWithOutRami.forEach(link => {
+        newArray.push(link)
+        ramificaciones.forEach(rami => {
+            if (rami.antLink === link)
+                rami.ramificandoPetalos.forEach(ramiP => newArray.push(ramiP))
+        })
+    })
+    return newArray;
+}
+
 export default createAndSendPDF;
