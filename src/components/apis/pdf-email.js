@@ -46,8 +46,7 @@ const createAndSendPDF = async () => {
         }
 
         //RAMIFICAR
-        if (petalo.title === "RAMIFICAR") {
-            console.log("0")
+        if (petalo.title === "RAMIFICAROPEN" || petalo.title === "RAMIFICARCLOSE") {
             currentPage.drawLine({
                 start: {x: 22, y: y},
                 end: {x: 570, y: y},
@@ -55,7 +54,22 @@ const createAndSendPDF = async () => {
                 color: rgb(0, 0, 0),
             });
 
-            y = y - 100
+            y = y-20;
+
+            if (y < 30) {
+                currentPage = pdfDoc.addPage([595, 842]);
+                y = 780;
+            }
+
+            let texto = petalo.title === "RAMIFICAROPEN" ? "Aqui se profundizo para sanar entre estas lineas el punto seleccionado" : "Hasta aqui se generaron los cambios necesarios del punto profundizado"
+
+            currentPage.drawText(texto, {
+                x: 22,
+                y: y,
+                size: 12,
+                color: rgb(1, 0, 0),
+            });
+            y = y - 40
         }
         //FUENTES
         else if (petalo.title.toLowerCase().includes("fuente")) {
@@ -132,8 +146,13 @@ const createAndSendPDF = async () => {
                     y = y - 20;
 
                     if (petalo.imageBody) {
-
                         y = y - (lines.length * 14)
+
+                        if (y <= 30) {
+                            currentPage = pdfDoc.addPage([595, 842]);
+                            y = 780;
+                        }
+
                         const imageBody = await fetch(`/images/simbolos/${petalo.imageBody}`);
                         const imageBodyArrayBuffer = await imageBody.arrayBuffer();
                         const imageBodyImage = await pdfDoc.embedPng(imageBodyArrayBuffer);
@@ -278,15 +297,25 @@ const getListOfPetalos = () => {
         let historyArray = JSON.parse(history);
         historyArray = ordenarPetalo(historyArray.map(item => item.replace("/circulo-base/", "")));
         console.log(historyArray)
-        historyArray.forEach((link) => {
+        historyArray.forEach((link, index) => {
             let p;
-            if (link === "ramificar") p = {title: "RAMIFICAR"};
+            if (link === "ramificar") {
+                let ramificar = 0;
+                for (let x = 0; x <= index; x++)
+                    if (historyArray[x] === "ramificar")
+                        ramificar++;
+
+                p = {title: ramificar % 2 ? "RAMIFICAROPEN" : "RAMIFICARCLOSE"};
+            }
             else {
                 p = getPetaloWithLink(petalos, link);
 
                 if (!p) {
                     const splitted = link.split(", ");
                     p = getPetaloWithLink(petalos, splitted[0]);
+                    if (!p)
+                        return;
+
                     if (splitted.length > 1)
                         p.text = splitted[1];
 
