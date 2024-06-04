@@ -165,7 +165,7 @@ const createAndSendPDF = async () => {
 
                     }
                     else {
-                        currentPage.drawText((petalo.useText ? petalo.title + ": " : "- ") + petalo.fieldText, {
+                        currentPage.drawText((petalo.useText ? petalo.title + ": " : "- ") + petalo.textField, {
                             x: 22,
                             y: y,
                             size: 12,
