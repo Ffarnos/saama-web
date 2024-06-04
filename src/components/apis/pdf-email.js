@@ -147,19 +147,21 @@ const createAndSendPDF = async () => {
                             currentPage = pdfDoc.addPage([595, 842]);
                             y = 780;
                         }
-                        const splitted = petalo.textField.split(", ");
 
-                        for (const text of splitted) {
-                            currentPage.drawText("- " + text, {
-                                x: 22,
-                                y: y,
-                                size: 12,
-                                color: rgb(0, 0, 0),
-                            });
-                            y = y - 15;
-                            if (y <= 30) {
-                                currentPage = pdfDoc.addPage([595, 842]);
-                                y = 780;
+                        if (petalo.textField !== undefined) {
+                            const splitted = petalo.textField.split(", ");
+                            for (const text of splitted) {
+                                currentPage.drawText("- " + text, {
+                                    x: 22,
+                                    y: y,
+                                    size: 12,
+                                    color: rgb(0, 0, 0),
+                                });
+                                y = y - 15;
+                                if (y <= 30) {
+                                    currentPage = pdfDoc.addPage([595, 842]);
+                                    y = 780;
+                                }
                             }
                         }
 
