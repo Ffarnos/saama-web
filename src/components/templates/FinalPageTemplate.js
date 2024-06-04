@@ -7,12 +7,14 @@ import ResponsiveImage from "../apis/ResponsiveImage";
 import {Background} from "../Commons";
 import LoginCheck from "../login/LoginCheck";
 import createAndSendPDF from "../apis/pdf-email";
-import {TextField} from "@mui/material";
+import {Alert, TextField} from "@mui/material";
 
 
 const FinalPageTemplate = ({ pageContext }) => {
 
     const [isTextFieldFocused, setIsTextFieldFocused] = useState(false);
+    const [showAlertRamificar, setShowAlertRamificar] = useState(false);
+    const [showAlertBorrar, setShowAlertBorrar] = useState(false);
 
 
     useEffect(() => {
@@ -31,10 +33,17 @@ const FinalPageTemplate = ({ pageContext }) => {
                     if (!history) history = [];
                     else history = JSON.parse(history);
                     if (event.key === 'r') {
+                        setShowAlertRamificar(true);
                         history.push("ramificar");
+                        setTimeout(() => {
+                            setShowAlertRamificar(false);
+                        }, 4000);
                     } else if (event.key === 'b') {
-                        history.remove(history.length-1);
-                        navigate(-1)
+                        setShowAlertBorrar(true);
+                        history.pop()
+                        setTimeout(() => {
+                            setShowAlertBorrar(false);
+                        }, 4000);
                     }
 
                     localStorage.setItem("history", JSON.stringify(history));
@@ -58,7 +67,7 @@ const FinalPageTemplate = ({ pageContext }) => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, [isTextFieldFocused]);
+    }, [isTextFieldFocused, showAlertBorrar, showAlertRamificar, setShowAlertRamificar, setShowAlertBorrar]);
 
 
 
@@ -83,6 +92,17 @@ const FinalPageTemplate = ({ pageContext }) => {
     return <LoginCheck>
         <Background style={{backgroundImage: `url(${imagePath})`}}>
             <Content>
+                {showAlertRamificar && <ContainerAlert>
+                    <Alert severity="success">
+                        Ramificacion
+                    </Alert>
+                </ContainerAlert>}
+
+                {showAlertBorrar && <ContainerAlert>
+                    <Alert severity="success">
+                        Punto borrado de la sesion
+                    </Alert>
+                </ContainerAlert>}
                 <ResponsiveText scale={0.9} color={color}>{titlePage}</ResponsiveText>
                 <ResponsiveText scale={0.7} color={color}>{titleText}</ResponsiveText>
                 {separation ? textComponents
@@ -144,6 +164,15 @@ const getColorWithFuente = (link) => {
     }
 
 }
+
+const ContainerAlert = styled.div`
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 999;
+`;
+
+
 const BodyImage = styled(ResponsiveImage)`
   margin-top: 10px;
 `;

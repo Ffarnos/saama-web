@@ -2,10 +2,15 @@ import styled from 'styled-components';
 import ResponsiveText from "./apis/ResponsiveText";
 import NavigationButtons from "./navigation/NavigationButtons";
 import {navigate} from "gatsby";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import createAndSendPDF from "./apis/pdf-email";
+import {Alert} from "@mui/material";
 
 const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
+
+    const [showAlertRamificar, setShowAlertRamificar] = useState(false);
+    const [showAlertBorrar, setShowAlertBorrar] = useState(false);
+
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.keyCode === 32)
@@ -20,10 +25,17 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                     if (!history) history = [];
                     else history = JSON.parse(history);
                     if (event.key === 'r') {
+                        setShowAlertRamificar(true);
                         history.push("ramificar");
+                        setTimeout(() => {
+                            setShowAlertRamificar(false);
+                        }, 4000);
                     } else if (event.key === 'b') {
-                        history.remove(history.length-1);
-                        navigate(-1)
+                        setShowAlertBorrar(true);
+                        history.pop()
+                        setTimeout(() => {
+                            setShowAlertBorrar(false);
+                        }, 4000);
                     }
 
                     localStorage.setItem("history", JSON.stringify(history));
@@ -57,11 +69,22 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, [onClick]);
+    }, [onClick, showAlertBorrar, showAlertRamificar, setShowAlertRamificar, setShowAlertBorrar]);
 
 
         return (
         <ButtonsContainerCenter>
+            {showAlertRamificar && <ContainerAlert>
+                <Alert severity="success">
+                    Ramificacion
+                </Alert>
+            </ContainerAlert>}
+
+            {showAlertBorrar && <ContainerAlert>
+                <Alert severity="success">
+                    Punto borrado de la sesion
+                </Alert>
+            </ContainerAlert>}
             <ButtonBig onClick={()=>navigate("/circulo-base")}>
                 <ResponsiveText scale={0.55} color={"#6e6e6e"}>
                     {bigButtonTitle}
@@ -99,6 +122,15 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
 
     );
 };
+
+
+const ContainerAlert = styled.div`
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 999;
+`;
+
 
 const ButtonsContainerCenter = styled.div`
   display: flex;
