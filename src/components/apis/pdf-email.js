@@ -176,7 +176,9 @@ const createAndSendPDF = async () => {
                     }
                     y = y - 10;
                 } else {
-                    const text = (petalo.title.length > 4 ? petalo.title.toUpperCase() + ": " : "") + petalo.text;
+                    let titleWithoutSpaces = petalo.title.replace(/\s+/g, "");
+                    console.log(petalo.title +  " " + titleWithoutSpaces.length)
+                    const text = (titleWithoutSpaces.length >= 4 ? petalo.title.toUpperCase() + ": " : "") + petalo.text;
                     const wrappedText = wrapText(text, maxWidth, font, 12);
                     const lines = wrappedText.split("\n");
 
