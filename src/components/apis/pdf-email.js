@@ -3,6 +3,7 @@ import {petalos} from "../../../static/data";
 import {PDFDocument, rgb} from 'pdf-lib';
 const emailjs = require('emailjs-com')
 
+
 const createAndSendPDF = async () => {
     const existingPdfBytes = await loadPDF();
 
@@ -248,7 +249,7 @@ const createAndSendPDF = async () => {
     const pdfUrl = URL.createObjectURL(pdfBlob);
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = 'documento.pdf';
+    link.download = localStorage.getItem("Paciente") + '.pdf';
     link.click();
 
     /*
