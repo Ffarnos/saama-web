@@ -32,13 +32,13 @@ const FinalPageTemplate = ({ pageContext }) => {
 
                     if (!history) history = [];
                     else history = JSON.parse(history);
-                    if (event.key === 'r') {
+                    if (event.key === 'r' || event.key === 'R') {
                         setShowAlertRamificar(true);
                         history.push("ramificar");
                         setTimeout(() => {
                             setShowAlertRamificar(false);
                         }, 4000);
-                    } else if (event.key === 'b') {
+                    } else if (event.key === 'b' || event.key === 'B') {
                         setShowAlertBorrar(true);
                         history.pop()
                         setTimeout(() => {
@@ -76,7 +76,6 @@ const FinalPageTemplate = ({ pageContext }) => {
     const imageBodyPath = "/images/simbolos/" + imageBody;
 
     const color = getColorWithFuente(linkName);
-    console.log(color)
     let textSeparate;
     let textComponents;
     if (separation) {

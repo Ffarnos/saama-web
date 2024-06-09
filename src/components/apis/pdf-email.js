@@ -14,6 +14,7 @@ const createAndSendPDF = async () => {
     const problems = localStorage.getItem("problems").split(",")
 
     const font = await pdfDoc.embedFont('Helvetica');
+
     const maxWidth = page.getSize().width - 30;
 
     page.drawText(localStorage.getItem("paciente"), {
@@ -123,10 +124,9 @@ const createAndSendPDF = async () => {
             if (petalo.text) {
                 if (petalo.fieldText) {
                     console.log("4");
-
                     if (petalo.useDesc) {
-                        const wrappedText = petalo.title + ": " + wrapText(petalo.text, maxWidth, font, 12);
-
+                        const text = petalo.title + ": " + petalo.text;
+                        const wrappedText = wrapText(text, maxWidth, font, 12);
                         for (const line of wrappedText.split('\n')) {
                             currentPage.drawText(line, {
                                 x: 22,
@@ -150,22 +150,14 @@ const createAndSendPDF = async () => {
                         }
 
                         if (petalo.textField !== undefined) {
-                            const splitted = petalo.textField.split(", ");
-                            for (const text of splitted) {
-                                currentPage.drawText("- " + text, {
-                                    x: 22,
-                                    y: y,
-                                    size: 12,
-                                    color: rgb(0, 0, 0),
-                                });
-                                y = y - 15;
-                                if (y <= 30) {
-                                    currentPage = pdfDoc.addPage([595, 842]);
-                                    y = 780;
-                                }
-                            }
+                            currentPage.drawText("- " + petalo.textField, {
+                                x: 22,
+                                y: y,
+                                size: 12,
+                                color: rgb(0, 0, 0),
+                            });
+                            y = y - 15;
                         }
-
                     }
                     else {
                         currentPage.drawText((petalo.useText ? petalo.title + ": " : "- ") + petalo.textField, {
@@ -249,7 +241,7 @@ const createAndSendPDF = async () => {
     const pdfUrl = URL.createObjectURL(pdfBlob);
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = localStorage.getItem("Paciente") + '.pdf';
+    link.download = localStorage.getItem("paciente") + '.pdf';
     link.click();
 
     /*
@@ -392,12 +384,10 @@ const getListOfPetalos = () => {
                         return;
 
                     if (splitted.length > 1) {
-                        if (!p.textField) {
-                            p.textField = splitted[1];
-                        } else {
-                            p.textField += `, ${splitted[1]}`;
-                            return;
-                        }
+                        const newPetalo = { ...p };
+                        newPetalo.textField = splitted[1];
+                        petalosArray.push(newPetalo);
+                        return;
                     }
 
                 }
@@ -421,7 +411,6 @@ const ordenarPetalo = (historyArray) => {
         6: ["petalo-6"],
         7: ["petalo-7"]
     }
-
 
     let lastPetalo = 0;
 
@@ -456,10 +445,18 @@ const ordenarPetalo = (historyArray) => {
         if (petalos[i].length === 1)
             continue
 
-        console.log("ORDENADO: " + OrdenarFuente(petalos[i]))
-        OrdenarFuente(petalos[i]).forEach(link => {
-            historyArrayOrden.push(link)
-        })
+        if (i === 5) {
+            const uniqueArray = Array.from(new Set(petalos[i]));
+            uniqueArray.forEach(link => {
+                historyArrayOrden.push(link)
+            })
+        }
+        else {
+            console.log("ORDENADO: " + OrdenarFuente(petalos[i]))
+            OrdenarFuente(petalos[i]).forEach(link => {
+                historyArrayOrden.push(link)
+            })
+        }
     }
 
     return historyArrayOrden;
@@ -469,10 +466,12 @@ const OrdenarFuente = (links) => {
 
     const linksWithOutRami = []
     const ramificaciones = []
+    const vidasPasadas = []
 
     let antLink;
     let ramificando = false;
     let ramificandoPetalos = [];
+
 
     links.forEach(link => {
           if (link === "ramificar") {
