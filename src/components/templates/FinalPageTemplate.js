@@ -110,19 +110,19 @@ const FinalPageTemplate = ({ pageContext }) => {
                 {fieldText && <div>
                     <TextField id="emocion" variant="filled" margin="normal"
                                onChange={(e) => {
-                                   let emotions = localStorage.getItem("history");
+                                   let history = localStorage.getItem("history");
 
-                                   if (!emotions)
-                                       emotions = [];
+                                   if (!history)
+                                       history = [];
                                    else
-                                       emotions = JSON.parse(emotions);
+                                       history = JSON.parse(history);
 
-                                   const lastEmotion = emotions[emotions.length - 1];
-                                   const lastEmotionLink = lastEmotion.split(", ")[0];
+                                   const lastLink = history[history.length - 1];
+                                   const lastEmotionLink = lastLink.split(":")[0];
 
-                                   emotions[emotions.length - 1] = lastEmotionLink + ", " + e.target.value;
+                                   history[history.length - 1] = lastEmotionLink + ":" + e.target.value;
 
-                                   localStorage.setItem("history", JSON.stringify(emotions));
+                                   localStorage.setItem("history", JSON.stringify(history));
                                }}
                                onFocus={() => setIsTextFieldFocused(true)}
                                onBlur={() => setIsTextFieldFocused(false)}

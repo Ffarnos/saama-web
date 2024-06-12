@@ -17,28 +17,49 @@ const createAndSendPDF = async () => {
 
     const maxWidth = page.getSize().width - 30;
 
-    page.drawText(localStorage.getItem("paciente"), {
-        x: 120,
+    let now = new Date();
+
+    let options = {
+        timeZone: 'America/Argentina/Buenos_Aires',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    };
+
+    let formattedDate = new Intl.DateTimeFormat('es-AR', options).format(now);
+
+    page.drawText(formattedDate, {
+        x: 140,
         y: 635,
         size: 15,
         color: rgb(0, 0, 0),
         font: font,
     });
 
-    let yProblems = 580;
+    page.drawText(localStorage.getItem("paciente"), {
+        x: 115,
+        y: 603,
+        size: 15,
+        color: rgb(0, 0, 0),
+        font: font,
+    });
+
+    let yProblems = 550;
 
     for (const problem of problems) {
-        page.drawText(problem, {
+        page.drawText("- " + problem, {
             x: 22,
             y: yProblems,
-            size: 12,
+            size: 14,
             color: rgb(0, 0, 0),
         });
         yProblems = yProblems - 25;
     }
 
-    let y = 480;
-    let currentPage = page;
+    let y = 780;
+    let currentPage = pdfDoc.addPage([595, 842]);
+
+    const petalosCopy = JSON.parse(JSON.stringify(petalos));
 
     for (const petalo of getListOfPetalos()) {
         console.log(petalo)
@@ -75,6 +96,12 @@ const createAndSendPDF = async () => {
         }
         //FUENTES
         else if (petalo.title.toLowerCase().includes("fuente")) {
+
+            if (y !== 780) {
+                currentPage = pdfDoc.addPage([595, 842]);
+                y = 780;
+            }
+
             console.log("1")
             currentPage.drawText(petalo.title, {
                 x: 22,
@@ -89,6 +116,9 @@ const createAndSendPDF = async () => {
 
             if (petalo.title.length > 2) {
                 console.log("2")
+                if (petalo.title === 'Emociones')
+                    petalo.title = 'EMOCIONES (se anularon las siguientes emociones)'
+
                 currentPage.drawText(petalo.title, {
                     x: 22,
                     y: y,
@@ -150,11 +180,19 @@ const createAndSendPDF = async () => {
                         }
 
                         if (petalo.textField !== undefined) {
-                            currentPage.drawText("- " + petalo.textField, {
-                                x: 22,
-                                y: y,
-                                size: 12,
-                                color: rgb(0, 0, 0),
+                            const splittedTextField = petalo.textField.split(":");
+                            splittedTextField.forEach((text) => {
+                                currentPage.drawText("- " + text, {
+                                    x: 22,
+                                    y: y,
+                                    size: 12,
+                                    color: rgb(0, 0, 0),
+                                });
+                                if (y <= 30) {
+                                    currentPage = pdfDoc.addPage([595, 842]);
+                                    y = 780;
+                                }
+                                y = y - 15;
                             });
                             y = y - 15;
                         }
@@ -243,6 +281,8 @@ const createAndSendPDF = async () => {
     link.href = pdfUrl;
     link.download = localStorage.getItem("paciente") + '.pdf';
     link.click();
+
+    petalos = petalosCopy;
 
     /*
     const pdfBase64 = arrayBufferToBase64(pdfBytes);
@@ -378,17 +418,28 @@ const getListOfPetalos = () => {
                 p = getPetaloWithLink(petalos, link);
 
                 if (!p) {
-                    const splitted = link.split(", ");
+                    const splitted = link.split(":");
                     p = getPetaloWithLink(petalos, splitted[0]);
                     if (!p)
                         return;
 
                     if (splitted.length > 1) {
-                        const newPetalo = { ...p };
-                        newPetalo.textField = splitted[1];
-                        petalosArray.push(newPetalo);
-                        return;
+                        if (p.separate) {
+                            const newPetalo = { ...p };
+                            newPetalo.textField = splitted[1];
+                            petalosArray.push(newPetalo);
+                            return;
+                        }
+                        else if (p.textField === undefined) {
+                            p.textField = splitted[1];
+                            console.log("ES SIN " + p.textField);
+                        } else {
+                            p.textField += `:${splitted[1]}`;
+                            console.log("ES CON " + p.textField);
+                            return;
+                        }
                     }
+
 
                 }
             }
@@ -446,8 +497,9 @@ const ordenarPetalo = (historyArray) => {
             continue
 
         if (i === 5) {
-            const uniqueArray = Array.from(new Set(petalos[i]));
-            uniqueArray.forEach(link => {
+            console.log("ORDENADO VIDAS: " + OrdenarFuenteByVidas(petalos[i]))
+
+            OrdenarFuenteByVidas(petalos[i]).forEach(link => {
                 historyArrayOrden.push(link)
             })
         }
@@ -462,11 +514,44 @@ const ordenarPetalo = (historyArray) => {
     return historyArrayOrden;
 }
 
+const OrdenarFuenteByVidas = (links) => {
+
+    const linksWithOutVidas = []
+    const vidasPasadas = []
+
+    let startLink;
+    let vidasp = false;
+    let vidasPasadasPetalos = [];
+
+    links.forEach(link => {
+        if (link.includes("petalo-5/7/1,")) {
+            vidasp = true;
+            startLink = link;
+            linksWithOutVidas.push(link)
+            return;
+        } else if (!link.includes("petalo-5/7") && vidasp) {
+            vidasp = false;
+            vidasPasadas.push({
+                startLink: startLink,
+                vidasPasadasPetalos: vidasPasadasPetalos
+            })
+            vidasPasadasPetalos = []
+        }
+
+        if (!vidasp)
+            linksWithOutVidas.push(link)
+        else
+            vidasPasadasPetalos.push(link)
+    })
+
+    const fuenteOrdenada = OrdenarFuente(linksWithOutVidas);
+    return putVidasPasadas(vidasPasadas, fuenteOrdenada);
+}
+
 const OrdenarFuente = (links) => {
 
     const linksWithOutRami = []
     const ramificaciones = []
-    const vidasPasadas = []
 
     let antLink;
     let ramificando = false;
@@ -532,6 +617,18 @@ const putRamificaciones = (ramificaciones, arrayWithOutRami) => {
         ramificaciones.forEach(rami => {
             if (rami.antLink === link)
                 rami.ramificandoPetalos.forEach(ramiP => newArray.push(ramiP))
+        })
+    })
+    return newArray;
+}
+
+const putVidasPasadas = (vidasPasadas, arrayWithOutVidas) => {
+    let newArray = [];
+    arrayWithOutVidas.forEach(link => {
+        newArray.push(link)
+        vidasPasadas.forEach(vida => {
+            if (vida.startLink === link)
+                vida.vidasPasadasPetalos.forEach(vidaP => newArray.push(vidaP))
         })
     })
     return newArray;
