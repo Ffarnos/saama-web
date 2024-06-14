@@ -344,67 +344,67 @@ const petalos = [
             {
                 linkName: "petalo-2/2", image: 'boton2', title: "Bloqueos Emocionales A", subPetalos: [
                     {
-                        linkName: "petalo-2/2/1", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en cuerpo emocional",
+                        linkName: "petalo-2/2/1", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en cuerpo emocional",
                         text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano emocional…"
                     },
                     {
-                        linkName: "petalo-2/2/2", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo mental",
+                        linkName: "petalo-2/2/2", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo mental",
                         text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano mental…"
                     },
                     {
-                        linkName: "petalo-2/2/3", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo físico",
+                        linkName: "petalo-2/2/3", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo físico",
                         text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano físico, ejemplos pueden ser músculos, huesos, órganos, glándulas, etc."
                     },
                     {
-                        linkName: "petalo-2/2/4", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo espiritual",
+                        linkName: "petalo-2/2/4", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo espiritual",
                         text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano espiritual…"
                     },
                     {
-                        linkName: "petalo-2/2/5", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en los ancestros",
+                        linkName: "petalo-2/2/5", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en los ancestros",
                         text: "Se eliminaron las siguientes emociones que sentimos en contacto reciente con nuestro clan familiar."
                     },
                     {
-                        linkName: "petalo-2/2/6", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones en el ADN",
+                        linkName: "petalo-2/2/6", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones en el ADN",
                         text: "Se eliminaron las siguientes emociones las cuales son el resultado de una interacción compleja entre factores genéticos, cognitivos, sociales y ambientales. Estas emociones se encuentran por experiencias vividas en nuestro clan familiar, situaciones no resueltas, y con repeticiones en las diferentes generaciones."
                     },
                     {
-                        linkName: "petalo-2/2/7", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones obstruidas de otras vidas",
+                        linkName: "petalo-2/2/7", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones obstruidas de otras vidas",
                         text: "Se eliminaron las siguientes emociones bloqueadas en otras vidas que se despiertan en este presente por situaciones no resueltas de vidas pasadas."
                     },
                     {
-                        linkName: "petalo-2/2/8", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones dependientes del corazón",
+                        linkName: "petalo-2/2/8", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones dependientes del corazón",
                         text: "Se eliminaron las siguientes emociones que el subconsciente vuelve a depender ante la primera situación de estrés, sin poder lograr deshacerse de ellas."
                     },
                     {
-                        linkName: "petalo-2/2/9", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones bloqueadas recientemente",
+                        linkName: "petalo-2/2/9", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones bloqueadas recientemente",
                         text: "Se eliminaron las siguientes emociones vividas ante un evento reciente."
                     },
                     {
-                        linkName: "petalo-2/2/10", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Barrera oculta de emociones",
+                        linkName: "petalo-2/2/10", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Barrera oculta de emociones",
                         text: "Esta es una barrera de emociones la cual la persona no reconoce ni la cree en su existencia, al ser una barrera es muy fuerte su bloqueo. (Se anularon las siguientes emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/11", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones absorbidas por resonancia",
+                        linkName: "petalo-2/2/11", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones absorbidas por resonancia",
                         text: "Aquí se borraron los estados negativos o emociones que absorbemos de las personas que están en constante contacto con nosotros."
                     },
                     {
-                        linkName: "petalo-2/2/12", image: 'boton2',fieldText: true,  titlePage: 'Bloqueos Emocionales A', title: "Respuesta a una creencia",
+                        linkName: "petalo-2/2/12", image: 'boton2',fieldText: true, useText: true,  titlePage: 'Bloqueos Emocionales A', title: "Respuesta a una creencia",
                         text: "Cuando somos niños incorporamos las creencias y estados emocionales de nuestro entorno familia, país y cultura, en ellas se encuentran las emociones negativas que estas creencias nos generan. (Anulamos las siguientes emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/13", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta a un recuerdo",
+                        linkName: "petalo-2/2/13", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta a un recuerdo",
                         text: "Anulamos los estados que aparecen de un recuerdo traumático doloroso no expresado. (Se anulo la respuesta a ese recuerdo)"
                     },
                     {
-                        linkName: "petalo-2/2/14", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un pensamiento",
+                        linkName: "petalo-2/2/14", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un pensamiento",
                         text: "Es la causa/efecto ante un pensamiento repetitivo negativo. (Se anulo la siguiente respuesta emocional)"
                     },
                     {
-                        linkName: "petalo-2/2/15", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un sentimiento",
+                        linkName: "petalo-2/2/15", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un sentimiento",
                         text: "Es la causa/efecto ante un sentimiento repetitivo negativo. (Se anulo la siguiente respuesta emocional)"
                     },
                     {
-                        linkName: "petalo-2/2/16", image: 'boton2', fieldText: true, titlePage: 'Bloqueos Emocionales A', title: "Suceso traumático",
+                        linkName: "petalo-2/2/16", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Suceso traumático",
                         text: "Situación vivida que nos generó un alto grado de estrés, generando un colapso emocional. (Se anulo la información en relación al suceso traumático)"
                     }
                 ]
@@ -2030,10 +2030,10 @@ const petalos = [
                         ]},
                     {linkName: "petalo-4/3/2", image: 'boton4', titlePage: "SISTEMAS DEL CUERPO HUMANO", title: "Sistema Digestivo", subPetalos: [
                             {linkName: "petalo-4/3/2/1", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Dientes (Corregido)", subPetalos: [
-                                    {linkName: "petalo-4/3/2/1/1", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", fieldText: true, title: "Dientes", text: "incisivos der/izq (Corregido)"},
-                                    {linkName: "petalo-4/3/2/1/2", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", fieldText: true, title: "Dientes", text: "caninos der/izq (Corregido)"},
-                                    {linkName: "petalo-4/3/2/1/3", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", fieldText: true, title: "Dientes", text: "premolares der/izq (Corregido)"},
-                                    {linkName: "petalo-4/3/2/1/4", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", fieldText: true, title: "Dientes", text: "molares der/izq (Corregido)"},
+                                    {linkName: "petalo-4/3/2/1/1", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", fieldText: true, useDesc:true, title: "Dientes", text: "incisivos der/izq (Corregido)"},
+                                    {linkName: "petalo-4/3/2/1/2", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", fieldText: true, useDesc:true,title: "Dientes", text: "caninos der/izq (Corregido)"},
+                                    {linkName: "petalo-4/3/2/1/3", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", fieldText: true, useDesc:true,title: "Dientes", text: "premolares der/izq (Corregido)"},
+                                    {linkName: "petalo-4/3/2/1/4", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", fieldText: true, useDesc:true,title: "Dientes", text: "molares der/izq (Corregido)"},
                                 ]
                             },
                             {linkName: "petalo-4/3/2/2", image: 'boton4', titlePage: "SISTEMA DIGESTIVO", title: "Lengua (Corregido)"},
@@ -3569,7 +3569,7 @@ const petalos = [
                             {linkName: "petalo-6/3/3/16", image: 'boton6', titlePage: "TOTEM DE ANIMALES", title: "Lobo", text:"El lobo es uno de los animales espirituales más fascinantes y atractivos. Asimismo, es uno de los más potentes y especiales, ya que se suele identificar bastante al lobo con el chamanismo o con los nativos norteamericanos. No obstante, el color del lobo también puede revelar cosas de nosotros que no pensábamos. Cuando aparece el tótem lobo, es porque estamos en un punto de nuestras vidas que necesitamos un guía espiritual. Quienes tienen al lobo como animal espiritual, suelen ser personas con inquietudes espirituales, incluso pueden ser profesores o simplemente personas que enseñen constantemente a otras acerca de la vida, la moral y la fe. Es por ello que se considera que el lobo es el maestro de los maestros. el tótem lobo elige ser el guía espiritual de aquellos que entienden en profundidad la vida y su forma de ser. De este modo, el lobo representa la fe y la comprensión profunda. Es más, quien tenga al tótem lobo, probablemente se sentirá identificado con el hecho de que el lobo evita la violencia a toda costa. Los lobos simbolizan la resistencia y el aguante físico, Nos aporta inteligencia, astucia y sabiduría interior, confianza y seguridad en uno mismo. Otorga deseos de libertad en personas reprimidas, o ayuda a equilibrar dicha libertad, Nos protege en los malos momentos, ayuda y refuerza la comunicación, la lealtad, generosidad, amistad y compasión"},
                         ]},
                 ]},
-            {linkName: "petalo-6/4", image: 'boton6', title: "Ho’oponopono", subPetalos: [
+            {linkName: "petalo-6/4", image: 'boton6', title: "Ho’oponopono", text: "Ho'oponopono es una práctica espiritual y de sanación de origen hawaiano que se centra en la reconciliación y el perdón. Esta práctica se utilizaba  para resolver conflictos y restaurar el equilibrio y la armonía..El objetivo del Ho'oponopono es limpiar las memorias y las creencias limitantes que afectan nuestra vida y nuestras relaciones, permitiendo así la paz interior y la sanación a nivel personal y colectivo. La práctica se basa en la premisa de que todo lo que experimentamos es una proyección de nuestro mundo interior y, por lo tanto, al sanar nuestro interior, también podemos sanar nuestro entorno.", subPetalos: [
                     {linkName: "petalo-6/4/1", image: 'boton6', title: "Decretos de poder", subPetalos: [
                             {linkName: "petalo-6/4/1/1", image: 'boton6', titlePage: "Decretos de poder", title:"Lo siento, perdóname, gracias, te amo", text:"Son las frases gatillos más conocidas de esta técnica. Sirven para mejorar conflictos con otro. Apuntan a borrar la memoria que nos llevó a esta situación (Incorporado)"},
                             {linkName: "petalo-6/4/1/2", image: 'boton6', titlePage: "Decretos de poder", title:"Divinidad", text:"limpia en mí todo lo que está contribuyendo a que aparezca este problema”. Es una frase recomendada en casos de enfermedades, dificultades económicas, laborales, peleas, entre otras situaciones (Incorporado)"},
@@ -3663,7 +3663,7 @@ const petalos = [
                     {linkName: "petalo-6/6/6", image: 'boton6', titlePage: "Colores", title:"Azul", text:"Es un color frío y fluido en constante movimiento. Muy fácil de asimilar, pero su exceso puede crear inseguridades e inestabilidad. Propiedad: Tiene gran capacidad para relajar el sistema nervioso. Actúa sobre la ira y la irritabilidad. También combate el estrés. Estímulo: Aumenta la comunicación, el sistema inmune y disminuye las tensiones de cuerpo y mente. Muy adecuado para mitigar los dolores musculares. Efecto: Sobre la mala circulación (varices), tiene efecto analgésico, antiinflamatorio y antibacteriano (efecto anti-acné) (Incorporado)"},
                     {linkName: "petalo-6/6/7", image: 'boton6', titlePage: "Colores", title:"Violeta", text:"el color violeta representa la conexión con nuestro yo superior y con la energía divina. Se dice que cuando nos vestimos con el color violeta, estamos abriendo un canal de comunicación con el universo, permitiendo que nuestros pensamientos y deseos sean escuchados y respondidos. Además, el color violeta también está asociado con la intuición y la sabiduría divina. El color violeta también es conocido por su capacidad para calmar el sistema nervioso y reducir los niveles de estrés. Por esta razón, a menudo se recomienda su uso durante la meditación o para la decoración de espacios de relajación y descanso (Incorporado)"},
                 ]},
-            {linkName: "petalo-6/7", image: 'boton6', title: "Oraculo Nordico", noNumbers: true, subPetalos: [
+            {linkName: "petalo-6/7", image: 'boton6', title: "Oraculo Nordico", text: "Las runas nórdicas, como oráculo implica obtener orientación y respuestas sobre el futuro o sobre cuestiones personales. Cada runa tiene múltiples capas de significado que pueden ofrecer una guía profunda y reflexiva al interpretarlas con cuidado y atención.", noNumbers: true, subPetalos: [
                     {linkName: "petalo-6/7/1", image: 'boton6', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {linkName: "petalo-6/7/1/1", image:'boton6', titlePage: "Oraculo Nordico", title:"Fehu DERECHA", text: "Claves: Dinero, objetos valiosos, generosidad, positivismo Tal y como te hemos comentado, Fehu representa la realización personal que se materializa con una recompensa, un amor realizado o una ambición satisfecha y conseguida. Además, invita y recomienda vigilar y atender la fortuna ya que corremos el riesgo de descuidarla y acabar perdiendo el control sobre ella debido a actos de imprudencia y relajación. Por último, recomienda encarecidamente compartir esta riqueza para ayudar a los seres cercanos que te necesitan ahora más que nunca. (Incorporado)"},
                             {linkName: "petalo-6/7/1/2", image:'boton6', titlePage: "Oraculo Nordico", title:"Fehu INVERTIDA", text: "Claves: Dificultad económica, ansiedad, bloqueo mental, falta de atención En primer lugar, la runa Fehu invertida previene de un posible fracaso en tu vida que puede variar desde una frustración trivial hasta un problema grave. Por ello, deberías revisar si no te esfuerzas lo suficiente en tus acciones y si no proteges bien lo que en el pasado te has ganado con tu esfuerzo y sudor. Sin embargo, la llegada de estas situaciones incómodas y dudosas te puede ayudar a mejorar y perfeccionar aquellas facetas que no considerabas importantes pero que, en verdad, lo son y mucho. (Incorporado)"},

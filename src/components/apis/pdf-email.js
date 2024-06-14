@@ -44,7 +44,7 @@ const createAndSendPDF = async () => {
         font: font,
     });
 
-    let yProblems = 550;
+    let yProblems = 558;
 
     for (const problem of problems) {
         page.drawText("- " + problem, {
@@ -53,7 +53,7 @@ const createAndSendPDF = async () => {
             size: 14,
             color: rgb(0, 0, 0),
         });
-        yProblems = yProblems - 25;
+        yProblems = yProblems - 18;
     }
 
     let y = 780;
@@ -95,7 +95,7 @@ const createAndSendPDF = async () => {
             y = y - 40
         }
         //FUENTES
-        else if (petalo.title.toLowerCase().includes("fuente")) {
+        else if (petalo.title.toLowerCase().includes("fuente") && (petalo.linkName === 'petalo-1' || petalo.linkName === 'petalo-2' || petalo.linkName === 'petalo-3' || petalo.linkName === 'petalo-4' || petalo.linkName === 'petalo-5' || petalo.linkName === 'petalo-6' || petalo.linkName === 'petalo-7')) {
 
             if (y !== 780) {
                 currentPage = pdfDoc.addPage([595, 842]);
