@@ -13,13 +13,10 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
 
     useEffect(() => {
         const handleKeyDown = (event) => {
-            if (event.keyCode === 32)
-                navigate("/intro-text");
-            else if (event.altKey) {
-                if (event.key === 'Control') {
+             if (event.altKey) {
+                if (event.key === 'Control')
                     createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
-                }
-                else {
+                else if (event.key === 'r' || event.key === 'R') {
                     let history = localStorage.getItem("history");
 
                     if (!history) history = [];
@@ -39,16 +36,15 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                     }
 
                     localStorage.setItem("history", JSON.stringify(history));
-                }
+                } else if (event.key === 'Enter')
+                    navigate("/circulo-base");
+                else if (event.key === 'Backspace')
+                    navigate("/")
+                else if (event.key === 'o' || event.key === 'O')
+                    navigate("/intro-text");
             }
             else {
                 switch (event.key) {
-                    case 'Enter':
-                        navigate("/circulo-base");
-                        break;
-                    case 'Backspace':
-                        navigate("/");
-                        break;
                     case 'ArrowLeft':
                         navigate(-1);
                         break;
@@ -56,9 +52,8 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                         navigate(+1);
                         break;
                     default:
-                        if (/^[0-9]$/.test(event.key)) {
+                        if (/^[0-9]$/.test(event.key))
                             onClick(parseInt(event.key));
-                        }
                         break;
                 }
             }

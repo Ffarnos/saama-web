@@ -21,45 +21,41 @@ const FinalPageTemplate = ({ pageContext }) => {
         const handleKeyDown = (event) => {
             if (isTextFieldFocused) return
 
-            if (event.keyCode === 32)
-                navigate("/intro-text");
-            else if (event.altKey) {
-                if (event.key === 'Control') {
-                    createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
-                }
-                else {
-                    let history = localStorage.getItem("history");
 
-                    if (!history) history = [];
-                    else history = JSON.parse(history);
-                    if (event.key === 'r' || event.key === 'R') {
-                        setShowAlertRamificar(true);
-                        history.push("ramificar");
-                        setTimeout(() => {
-                            setShowAlertRamificar(false);
-                        }, 4000);
-                    } else if (event.key === 'b' || event.key === 'B') {
-                        setShowAlertBorrar(true);
-                        history.pop()
-                        setTimeout(() => {
-                            setShowAlertBorrar(false);
-                        }, 4000);
-                    }
+             if (event.altKey) {
+                 if (event.key === 'Control')
+                     createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
+                 else if (event.key === 'r' || event.key === 'R') {
+                     let history = localStorage.getItem("history");
 
-                    localStorage.setItem("history", JSON.stringify(history));
-                }
+                     if (!history) history = [];
+                     else history = JSON.parse(history);
+                     if (event.key === 'r' || event.key === 'R') {
+                         setShowAlertRamificar(true);
+                         history.push("ramificar");
+                         setTimeout(() => {
+                             setShowAlertRamificar(false);
+                         }, 4000);
+                     } else if (event.key === 'b' || event.key === 'B') {
+                         setShowAlertBorrar(true);
+                         history.pop()
+                         setTimeout(() => {
+                             setShowAlertBorrar(false);
+                         }, 4000);
+                     }
 
-            }
-            else if (event.key === 'Enter')
-                navigate("/circulo-base")
-            else if (event.ctrlKey && event.key === 'Backspace')
-                navigate("/")
+                     localStorage.setItem("history", JSON.stringify(history));
+                 } else if (event.key === 'Enter')
+                     navigate("/circulo-base")
+                 else if (event.key === 'Backspace')
+                     navigate("/")
+                 else if (event.key === 'o' || event.key === 'O')
+                     navigate("/intro-text");
+             }
             else if (event.key === 'ArrowLeft')
                 navigate(-1)
             else if (event.key === 'ArrowRight')
                 navigate(+1)
-            else if (event.key === 'Space')
-                navigate("/intro-text")
         };
 
         document.addEventListener('keydown', handleKeyDown);

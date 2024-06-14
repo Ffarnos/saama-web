@@ -6,8 +6,13 @@ import {FinishButtonResponsive} from "../components/navigation/FinishButton";
 import LoginCheck from "../components/login/LoginCheck";
 import {Background} from "../components/Commons";
 import historySave from "../components/navigation/History";
+import {Alert} from "@mui/material";
+import {useState} from "react";
+const createdPages = require('../../../createdPages.json');
 
 const CirculoBase = () => {
+    const [showAlert, setShowAlert] = useState(false);
+
     const petalos = [
         {
             index: 0,
@@ -45,14 +50,26 @@ const CirculoBase = () => {
                 <Title scale={0.8} color={"#fffdfd"}>
                     Terapia GENESÍS
                 </Title>
+                {showAlert && <ContainerAlert>
+                    <Alert severity="error">
+                        La pagina solicitada no existe
+                    </Alert>
+                </ContainerAlert>}
                 <Buttons
                     petalos={petalos}
                     bigButtonTitle={"FUENTE MADRE"}
                     numbers={11}
                     circuloBase={true}
                     onClick={(petaloName) => {
-                        navigate('/circulo-base/petalo-' + petaloName)
-                        historySave("/petalo-"+petaloName)
+                        const newLink = 'circulo-base/petalo-' + petaloName;
+                        if (!createdPages.includes(newLink)) {
+                            setShowAlert(true);
+                            setTimeout(() => setShowAlert(false), 2000);
+                            return 0;
+                        } else {
+                            navigate('/circulo-base/petalo-' + petaloName)
+                            historySave("/petalo-" + petaloName)
+                        }
                     }}
                 />
                 <FinishButtonResponsive/>
@@ -62,6 +79,12 @@ const CirculoBase = () => {
 }
 
 
+const ContainerAlert = styled.div`
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 999;
+`;
 
 const Title = styled(ResponsiveText)`
     letter-spacing: 15px;
