@@ -344,63 +344,63 @@ const petalos = [
             {
                 linkName: "petalo-2/2", image: 'boton2', title: "Bloqueos Emocionales A", subPetalos: [
                     {
-                        linkName: "petalo-2/2/1", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en cuerpo emocional",
+                        linkName: "petalo-2/2/1", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en cuerpo emocional",
                         text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano emocional…"
                     },
                     {
-                        linkName: "petalo-2/2/2", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo mental",
+                        linkName: "petalo-2/2/2", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo mental",
                         text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano mental…"
                     },
                     {
-                        linkName: "petalo-2/2/3", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo físico",
+                        linkName: "petalo-2/2/3", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo físico",
                         text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano físico, ejemplos pueden ser músculos, huesos, órganos, glándulas, etc."
                     },
                     {
-                        linkName: "petalo-2/2/4", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo espiritual",
+                        linkName: "petalo-2/2/4", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo espiritual",
                         text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano espiritual…"
                     },
                     {
-                        linkName: "petalo-2/2/5", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en los ancestros",
+                        linkName: "petalo-2/2/5", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en los ancestros",
                         text: "Se eliminaron las siguientes emociones que sentimos en contacto reciente con nuestro clan familiar."
                     },
                     {
-                        linkName: "petalo-2/2/6", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones en el ADN",
+                        linkName: "petalo-2/2/6", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones en el ADN",
                         text: "Se eliminaron las siguientes emociones las cuales son el resultado de una interacción compleja entre factores genéticos, cognitivos, sociales y ambientales. Estas emociones se encuentran por experiencias vividas en nuestro clan familiar, situaciones no resueltas, y con repeticiones en las diferentes generaciones."
                     },
                     {
-                        linkName: "petalo-2/2/7", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones obstruidas de otras vidas",
+                        linkName: "petalo-2/2/7", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones obstruidas de otras vidas",
                         text: "Se eliminaron las siguientes emociones bloqueadas en otras vidas que se despiertan en este presente por situaciones no resueltas de vidas pasadas."
                     },
                     {
-                        linkName: "petalo-2/2/8", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones dependientes del corazón",
+                        linkName: "petalo-2/2/8", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones dependientes del corazón",
                         text: "Se eliminaron las siguientes emociones que el subconsciente vuelve a depender ante la primera situación de estrés, sin poder lograr deshacerse de ellas."
                     },
                     {
-                        linkName: "petalo-2/2/9", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones bloqueadas recientemente",
+                        linkName: "petalo-2/2/9", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones bloqueadas recientemente",
                         text: "Se eliminaron las siguientes emociones vividas ante un evento reciente."
                     },
                     {
-                        linkName: "petalo-2/2/10", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Barrera oculta de emociones",
+                        linkName: "petalo-2/2/10", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Barrera oculta de emociones",
                         text: "Esta es una barrera de emociones la cual la persona no reconoce ni la cree en su existencia, al ser una barrera es muy fuerte su bloqueo. (Se anularon las siguientes emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/11", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones absorbidas por resonancia",
+                        linkName: "petalo-2/2/11", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones absorbidas por resonancia",
                         text: "Aquí se borraron los estados negativos o emociones que absorbemos de las personas que están en constante contacto con nosotros."
                     },
                     {
-                        linkName: "petalo-2/2/12", image: 'boton2',fieldText: true, useText: true,  titlePage: 'Bloqueos Emocionales A', title: "Respuesta a una creencia",
+                        linkName: "petalo-2/2/12", image: 'boton2',fieldText: true, useText: true,  useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta a una creencia",
                         text: "Cuando somos niños incorporamos las creencias y estados emocionales de nuestro entorno familia, país y cultura, en ellas se encuentran las emociones negativas que estas creencias nos generan. (Anulamos las siguientes emociones)"
                     },
                     {
-                        linkName: "petalo-2/2/13", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta a un recuerdo",
+                        linkName: "petalo-2/2/13", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta a un recuerdo",
                         text: "Anulamos los estados que aparecen de un recuerdo traumático doloroso no expresado. (Se anulo la respuesta a ese recuerdo)"
                     },
                     {
-                        linkName: "petalo-2/2/14", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un pensamiento",
+                        linkName: "petalo-2/2/14", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un pensamiento",
                         text: "Es la causa/efecto ante un pensamiento repetitivo negativo. (Se anulo la siguiente respuesta emocional)"
                     },
                     {
-                        linkName: "petalo-2/2/15", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un sentimiento",
+                        linkName: "petalo-2/2/15", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un sentimiento",
                         text: "Es la causa/efecto ante un sentimiento repetitivo negativo. (Se anulo la siguiente respuesta emocional)"
                     },
                     {
