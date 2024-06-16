@@ -16,16 +16,14 @@ const FinalPageTemplate = ({ pageContext }) => {
     const [showAlertRamificar, setShowAlertRamificar] = useState(false);
     const [showAlertBorrar, setShowAlertBorrar] = useState(false);
 
-
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (isTextFieldFocused) return
 
-
              if (event.altKey) {
                  if (event.key === 'Control')
                      createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
-                 else if (event.key === 'r' || event.key === 'R') {
+                 else if (event.key === 'r' || event.key === 'R' || event.key === 'b' || event.key === 'B') {
                      let history = localStorage.getItem("history");
 
                      if (!history) history = [];
@@ -45,14 +43,14 @@ const FinalPageTemplate = ({ pageContext }) => {
                      }
 
                      localStorage.setItem("history", JSON.stringify(history));
-                 } else if (event.key === 'Enter')
-                     navigate("/circulo-base")
-                 else if (event.key === 'Backspace')
+                 } else if (event.key === 'Backspace')
                      navigate("/")
                  else if (event.key === 'o' || event.key === 'O')
                      navigate("/intro-text");
              }
-            else if (event.key === 'ArrowLeft')
+             else if (event.key === 'Enter')
+                 navigate("/circulo-base")
+             else if (event.key === 'ArrowLeft')
                 navigate(-1)
             else if (event.key === 'ArrowRight')
                 navigate(+1)

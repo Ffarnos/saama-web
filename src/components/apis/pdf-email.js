@@ -402,6 +402,7 @@ const getListOfPetalos = () => {
     const history = localStorage.getItem("history");
     if (history) {
         let historyArray = JSON.parse(history);
+        console.log(historyArray)
         historyArray = ordenarPetalo(historyArray.map(item => item.replace("/circulo-base/", "")));
         console.log(historyArray)
         historyArray.forEach((link, index) => {
@@ -453,6 +454,9 @@ const getListOfPetalos = () => {
 
 const ordenarPetalo = (historyArray) => {
 
+    console.log(historyArray)
+
+
     const petalos = {
         1: ["petalo-1"],
         2: ["petalo-2"],
@@ -481,7 +485,6 @@ const ordenarPetalo = (historyArray) => {
 
         const number = match ? parseInt(match[1], 10) : null;
 
-
         if (ramificando)
             petalos[lastPetalo].push(link)
         else {
@@ -490,6 +493,7 @@ const ordenarPetalo = (historyArray) => {
         }
     })
 
+    console.log(petalos)
     const historyArrayOrden = []
 
     for (let i = 1; i < 8; i++) {
