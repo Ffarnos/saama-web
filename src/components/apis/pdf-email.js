@@ -153,7 +153,7 @@ const createAndSendPDF = async () => {
             //PETALO FINAL
             if (petalo.text) {
                 if (petalo.fieldText) {
-                    const splittedTextField = petalo.textField.split(":");
+                    const splittedTextField = petalo.textField ? petalo.textField.split(":") : [];
                     console.log("4");
                     if (petalo.useDesc) {
                         const text = petalo.title + ": " + petalo.text;
