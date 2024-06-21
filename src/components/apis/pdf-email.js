@@ -29,26 +29,26 @@ const createAndSendPDF = async () => {
     let formattedDate = new Intl.DateTimeFormat('es-AR', options).format(now);
 
     page.drawText(formattedDate, {
-        x: 140,
-        y: 635,
+        x: 150,
+        y: 622,
         size: 15,
         color: rgb(0, 0, 0),
         font: font,
     });
 
     page.drawText(localStorage.getItem("paciente"), {
-        x: 115,
-        y: 603,
+        x: 122,
+        y: 589,
         size: 15,
         color: rgb(0, 0, 0),
         font: font,
     });
 
-    let yProblems = 558;
+    let yProblems = 542;
 
     for (const problem of problems) {
         page.drawText("- " + problem, {
-            x: 22,
+            x: 30,
             y: yProblems,
             size: 14,
             color: rgb(0, 0, 0),
@@ -153,6 +153,7 @@ const createAndSendPDF = async () => {
             //PETALO FINAL
             if (petalo.text) {
                 if (petalo.fieldText) {
+                    const splittedTextField = petalo.textField.split(":");
                     console.log("4");
                     if (petalo.useDesc) {
                         const text = petalo.title + ": " + petalo.text;
@@ -173,32 +174,35 @@ const createAndSendPDF = async () => {
                         }
 
                         y = y - 10;
+                    }
 
+                    if (splittedTextField.length > 1) {
                         if (y <= 30) {
                             currentPage = pdfDoc.addPage([595, 842]);
                             y = 780;
                         }
 
-                        if (petalo.textField !== undefined) {
-                            const splittedTextField = petalo.textField.split(":");
-                            splittedTextField.forEach((text) => {
-                                currentPage.drawText("- " + text, {
-                                    x: 22,
-                                    y: y,
-                                    size: 12,
-                                    color: rgb(0, 0, 0),
-                                });
-                                if (y <= 30) {
-                                    currentPage = pdfDoc.addPage([595, 842]);
-                                    y = 780;
-                                }
-                                y = y - 15;
+                        const splittedTextField = petalo.textField.split(":");
+                        let first = true;
+                        splittedTextField.forEach((text) => {
+                            if (!first)
+                                y = y - 30
+                            else first = false;
+
+                            currentPage.drawText("- " + text, {
+                                x: 22,
+                                y: y,
+                                size: 12,
+                                color: rgb(0, 0, 0),
                             });
-                            y = y - 15;
-                        }
-                    }
-                    else {
-                        currentPage.drawText((petalo.useText ? petalo.title + ": " : "- ") + petalo.textField, {
+
+                            if (y <= 30) {
+                                currentPage = pdfDoc.addPage([595, 842]);
+                                y = 780;
+                            }
+                        });
+                    } else {
+                        currentPage.drawText((petalo.useText && !petalo.useDesc ? petalo.title + ": " : "- ") + petalo.textField, {
                             x: 22,
                             y: y,
                             size: 12,
@@ -418,9 +422,10 @@ const getListOfPetalos = () => {
             else {
                 p = getPetaloWithLink(petalos, link);
 
-                if (!p) {
+                if (!p || p.fieldText) {
                     const splitted = link.split(":");
-                    p = getPetaloWithLink(petalos, splitted[0]);
+
+                    p = getPetaloWithLink(petalos, splitted ? splitted[0] : link);
                     if (!p)
                         return;
 
@@ -439,7 +444,8 @@ const getListOfPetalos = () => {
                             console.log("ES CON " + p.textField);
                             return;
                         }
-                    }
+                    } else if (petalosArray.find(p => p.linkName === link))
+                        return;
 
 
                 }
@@ -453,10 +459,7 @@ const getListOfPetalos = () => {
 
 
 const ordenarPetalo = (historyArray) => {
-
     console.log(historyArray)
-
-
     const petalos = {
         1: ["petalo-1"],
         2: ["petalo-2"],
@@ -528,12 +531,22 @@ const OrdenarFuenteByVidas = (links) => {
     let vidasPasadasPetalos = [];
 
     links.forEach(link => {
-        if (link.includes("petalo-5/7/1,")) {
+        if (link.includes("petalo-5/7/1:")) {
+            if (vidasp) {
+                console.log("VIDA PASADA FINALIZADA", vidasPasadasPetalos);
+                vidasPasadas.push({
+                    startLink: startLink,
+                    vidasPasadasPetalos: vidasPasadasPetalos
+                })
+                vidasPasadasPetalos = []
+            }
+
             vidasp = true;
             startLink = link;
             linksWithOutVidas.push(link)
             return;
         } else if (!link.includes("petalo-5/7") && vidasp) {
+            console.log("VIDA PASADA FINALIZADA", vidasPasadasPetalos);
             vidasp = false;
             vidasPasadas.push({
                 startLink: startLink,
@@ -542,10 +555,13 @@ const OrdenarFuenteByVidas = (links) => {
             vidasPasadasPetalos = []
         }
 
-        if (!vidasp)
+        if (!vidasp) {
             linksWithOutVidas.push(link)
-        else
-            vidasPasadasPetalos.push(link)
+        }
+        else {
+            if (link !== "petalo-5/7")
+                vidasPasadasPetalos.push(link)
+        }
     })
 
     const fuenteOrdenada = OrdenarFuente(linksWithOutVidas);
