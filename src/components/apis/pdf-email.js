@@ -511,6 +511,7 @@ const ordenarPetalo = (historyArray) => {
             })
         }
         else {
+            console.log("SIN ORDENAR " + petalos[i])
             console.log("ORDENADO: " + OrdenarFuente(petalos[i]))
             OrdenarFuente(petalos[i]).forEach(link => {
                 historyArrayOrden.push(link)
@@ -530,7 +531,9 @@ const OrdenarFuenteByVidas = (links) => {
     let vidasp = false;
     let vidasPasadasPetalos = [];
 
+    let x = 0;
     links.forEach(link => {
+        x++;
         if (link.includes("petalo-5/7/1:")) {
             if (vidasp) {
                 console.log("VIDA PASADA FINALIZADA", vidasPasadasPetalos);
@@ -545,7 +548,7 @@ const OrdenarFuenteByVidas = (links) => {
             startLink = link;
             linksWithOutVidas.push(link)
             return;
-        } else if (!link.includes("petalo-5/7") && vidasp) {
+        } else if ((!link.includes("petalo-5/7") && vidasp) || (x === links.length)) {
             console.log("VIDA PASADA FINALIZADA", vidasPasadasPetalos);
             vidasp = false;
             vidasPasadas.push({
@@ -608,25 +611,35 @@ const OrdenarFuente = (links) => {
 
 const sortArray = (a, b) => {
     const parsePath = (str) => {
-        return str.split('/').map(part => {
+        const parts = str.split(':');
+        const numericPath = parts[0].split('/').map(part => {
             if (part.startsWith('petalo-')) {
                 return part.split('-')[1];
             }
             return part;
         }).map(Number);
+        const label = parts[1] ? parts[1] : "";
+        return { numericPath, label };
     };
 
     const pathA = parsePath(a);
     const pathB = parsePath(b);
 
-    for (let i = 0; i < Math.max(pathA.length, pathB.length); i++) {
-        const partA = pathA[i] !== undefined ? pathA[i] : -Infinity;
-        const partB = pathB[i] !== undefined ? pathB[i] : -Infinity;
+    // First compare the numeric paths
+    for (let i = 0; i < Math.max(pathA.numericPath.length, pathB.numericPath.length); i++) {
+        const partA = pathA.numericPath[i] !== undefined ? pathA.numericPath[i] : -Infinity;
+        const partB = pathB.numericPath[i] !== undefined ? pathB.numericPath[i] : -Infinity;
 
         if (partA !== partB) {
             return partA - partB;
         }
     }
+
+    // If numeric paths are the same, compare the labels if they exist
+    if (pathA.label !== pathB.label) {
+        return pathA.label.localeCompare(pathB.label);
+    }
+
     return 0;
 };
 
@@ -646,9 +659,13 @@ const putVidasPasadas = (vidasPasadas, arrayWithOutVidas) => {
     let newArray = [];
     arrayWithOutVidas.forEach(link => {
         newArray.push(link)
+        console.log("EN EL LINK " + link + " HAY " + vidasPasadas.length)
         vidasPasadas.forEach(vida => {
-            if (vida.startLink === link)
+            console.log("EN EL LINK " + link + " COMPARANDO CON " + vida.startLink)
+            if (vida.startLink === link) {
+                console.log("ENCONTRO LA VIDA ORDENANDO")
                 vida.vidasPasadasPetalos.forEach(vidaP => newArray.push(vidaP))
+            }
         })
     })
     return newArray;

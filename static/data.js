@@ -2105,49 +2105,49 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/1/1",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
-                                                title: "C1",
+                                                title: "Cervicales 1",
                                                 text: "(Lengua, cabeza, cerebro, oído interno y medio, pituitaria, pineal, sistema nervioso simpático): Relacionada con la depresión. (Corregido)"
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/2",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
-                                                title: "C2",
+                                                title: "Cervicales 2",
                                                 text: "(Ojos, senos nasales y paranasales, frente, lengua, nervios óptico y auditivo). (Corregido)"
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/3",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
-                                                title: "C3",
+                                                title: "Cervicales 3",
                                                 text: "(Mejilla, cara, huesos faciales, dientes, oído exterior, laringe y vesícula biliar) (Corregido)"
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/4",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES ",
-                                                title: "C4",
+                                                title: "Cervicales 4",
                                                 text: "(Nariz, boca y trompas de Eustaquio) (Corregido)"
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/5",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
-                                                title: "C5",
+                                                title: "Cervicales 5",
                                                 text: "(Faringe, cuerdas vocales, glándulas salivales, amígdalas) (Corregido)"
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/6",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
-                                                title: "C6",
+                                                title: "Cervicales 6",
                                                 text: "(Amígdalas, músculos del cuello y hombros) (Corregido)"
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/7",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
-                                                title: "C7",
+                                                title: "Cervicales 7",
                                                 text: "(Tiroides, paratiroides, codo y hombros) (Corregido)"
                                             },
                                         ]
@@ -2162,7 +2162,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/1",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T1",
+                                                title: "Toracica 1",
                                                 text: "(Riñón, función ósea, esófago, tráquea, dedos, manos, antebrazo): Conflictos de memoria renal, miedo y existencia profunda. Conflictos respecto al orden no respetado de las cosas. A la derecha: Rabia o enojo por carencias afectivas en relación a los allegados. A la izquierda: Rabia y enojo en relación con el exterior. (Corregido)"
                                             },
                                             // T2
@@ -2170,7 +2170,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/2",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T2",
+                                                title: "Toracica 2",
                                                 text: "(Arterias coronarias, corazón y válvulas cardíacas): Conflictos de territorio. Representan la circulación en la comunicación. Conflictos de supervivencia en relación al hogar. Conflictos con el padre. Es una señal de alarma para las desvalorizaciones. A la derecha: Carencias afectivas en relación al padre. A la izquierda: En relación al padre simbólico. (Corregido)"
                                             },
                                             // T3
@@ -2178,7 +2178,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/3",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T3",
+                                                title: "Toracica 3",
                                                 text: "(Pulmón, pleuras, mamas, vejiga y costillas): Conflicto con la madre real o simbólica. A la derecha: Carencias afectivas en relación a la madre. A la izquierda: Rabia y cólera en relación a la madre (Corregido)"
                                             },
                                             // T4
@@ -2186,7 +2186,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/4",
                                                 image: 'boton4',
                                                 titlePage: " SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T4",
+                                                title: "Toracica 4",
                                                 text: "(Vesícula biliar): Conflictos de rencor. No querer dar nuestro brazo a torcer. A la derecha: Rencor por carencias afectivas. A la izquierda: Cólera (Corregido)"
                                             },
                                             // T5
@@ -2194,7 +2194,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/5",
                                                 image: 'boton4',
                                                 titlePage: " SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T5",
+                                                title: "Toracica 5",
                                                 text: "(Hígado, plexo solar y sangre): Conflicto de falta o carencia (hígado), conflicto de padre (plexo). Problemas digestivos crónicos. “No estoy integrado en el clan” (Corregido)"
                                             },
                                             // T6
@@ -2202,7 +2202,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/6",
                                                 image: 'boton4',
                                                 titlePage: " SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T6",
+                                                title: "Toracica 6",
                                                 text: "(Estómago): Conflictos con la primera infancia. Conflicto de contrariedad reciente en el territorio con desvalorización. Conflictos recientes de estómago. A la derecha: Carencias afectivas. A la izquierda: Cólera (Corregido)"
                                             },
                                             // T7
@@ -2210,7 +2210,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/7",
                                                 image: 'boton4',
                                                 titlePage: " SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T7",
+                                                title: "Toracica 7",
                                                 text: "(Páncreas, endocrino, diabetes y duodeno): Conflictos de infamia y deshonor. A la derecha: Culpabilidad o búsqueda de afecto. A la izquierda: Cólera en relación con el exterior (Corregido)"
                                             },
                                             // T8
@@ -2218,7 +2218,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/8",
                                                 image: 'boton4',
                                                 titlePage: " SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T8",
+                                                title: "Toracica 8",
                                                 text: "(Bazo, sangre y diafragma): Conflictos de comunicación en la familia. Y con los hijos. También problemas de hemorragias (Corregido)"
                                             },
                                             // T9
@@ -2226,7 +2226,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/9",
                                                 image: 'boton4',
                                                 titlePage: " SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T9",
+                                                title: "Toracica 9",
                                                 text: "(Suprarrenales): Conflictos de dirección. “¿Qué camino debo tomar en la vida?”. A la derecha: Desvalorización y culpabilidad. A la izquierda: Cólera (Corregido)"
                                             },
                                             // T10
@@ -2234,7 +2234,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/10",
                                                 image: 'boton4',
                                                 titlePage: " SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T10",
+                                                title: "Toracica 10",
                                                 text: "(Túbulos colectores, riñones y suprarrenales): Se trata de una vértebra muy importante. Conflictos de dirección y de elección. Conflictos de desmoronamiento del territorio. Estar sin territorio (Corregido)"
                                             },
                                             // T11
@@ -2242,7 +2242,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/11",
                                                 image: 'boton4',
                                                 titlePage: " SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T11",
+                                                title: "Toracica 11",
                                                 text: "(Ureter, uretra, vejiga): Conflictos de marcaje de territorio con desvalorización. Conflictos de evacuación (me evacuan). Dificultades para definir lo que es mío (Corregido)"
                                             },
                                             // T12
@@ -2250,7 +2250,7 @@ const petalos = [
                                                 linkName: "petalo-4/3/4/3/2/12",
                                                 image: 'boton4',
                                                 titlePage: " SISTEMA OSEO - Vertebras torácicas",
-                                                title: "T12",
+                                                title: "Toracica 12",
                                                 text: "(Pubis, intestino delgado, sistema linfático, trompas de Falopio): Conflictos sexuales sucios. Conflictos de cónyuge. A la derecha: Culpabilidad. A la izquierda: Cólera (Corregido)"
                                             }
                                         ]
@@ -2261,11 +2261,11 @@ const petalos = [
                                         titlePage: "SISTEMA OSEO",
                                         title: "Vertebras lumbares (Corregido)",
                                         subPetalos: [
-                                            {linkName: "petalo-4/3/4/3/3/1", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "L1", text: "(Tubo digestivo, colon): Conflictos de “guarradas”. Noción de intercambio y de circulación. Miedo a que nos traicionen (Corregido)"},
-                                            {linkName: "petalo-4/3/4/3/3/2", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "L2", text: "(Apéndice, abdomen, ciego, tubo digestivo): Conflictos de “guarradas”. Conflictos con tener que dejar las cosas. Conflictos de desvalorización por saturación (algo que he tenido que aguantar por mucho tiempo). A la derecha: En relación a la familia. A la izquierda: En relación al trabajo (Corregido)"},
-                                            {linkName: "petalo-4/3/4/3/3/3", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "L3", text: "(Órganos sexuales, vejiga, rodilla, útero y la próstata): Conflictos relacionados con la sexualidad. Conflictos de marcado de territorio con desvalorización. Gran desvalorización por haber quedado embarazada fuera de la norma. Conflictos de culpa y odio a sí mismo por violencia sexual (Corregido)"},
-                                            {linkName: "petalo-4/3/4/3/3/4", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "L4", text: "(Las normas, las reglas, la próstata, el cuerpo uterino, el nervio ciático y los músculos lumbares, sacros y de la cadera): 'No soy como los demás'. 'No pienso como todo el mundo'. Conflictos por parejas mal combinadas. A la derecha: Conflictos de no respetar las normas en la familia. A la izquierda: No respetar las normas en relación a lo externo, al trabajo (Corregido)"},
-                                            {linkName: "petalo-4/3/4/3/3/5", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "L5", text: "(Piernas, tobillos y pies. Colon): Conflicto de algo sucio. Conflictos con los colaterales. El 20% de los casos es un conflicto con mi vida: '¿Qué voy a hacer con mi vida?', '¿Qué dirección quiero tomar en mi vida?'. El 80% es una acción equivocada en mi vida (aparece dolor en la pierna izquierda). Conflicto de 'No decir mi fantasía sexual por miedo a ser juzgado anormal'. A la derecha: Culpabilidad con los allegados. A la izquierda: Cólera con los allegados (Corregido)"}
+                                            {linkName: "petalo-4/3/4/3/3/1", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "Lumbares 1", text: "(Tubo digestivo, colon): Conflictos de “guarradas”. Noción de intercambio y de circulación. Miedo a que nos traicionen (Corregido)"},
+                                            {linkName: "petalo-4/3/4/3/3/2", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "Lumbares 2", text: "(Apéndice, abdomen, ciego, tubo digestivo): Conflictos de “guarradas”. Conflictos con tener que dejar las cosas. Conflictos de desvalorización por saturación (algo que he tenido que aguantar por mucho tiempo). A la derecha: En relación a la familia. A la izquierda: En relación al trabajo (Corregido)"},
+                                            {linkName: "petalo-4/3/4/3/3/3", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "Lumbares 3", text: "(Órganos sexuales, vejiga, rodilla, útero y la próstata): Conflictos relacionados con la sexualidad. Conflictos de marcado de territorio con desvalorización. Gran desvalorización por haber quedado embarazada fuera de la norma. Conflictos de culpa y odio a sí mismo por violencia sexual (Corregido)"},
+                                            {linkName: "petalo-4/3/4/3/3/4", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "Lumbares 4", text: "(Las normas, las reglas, la próstata, el cuerpo uterino, el nervio ciático y los músculos lumbares, sacros y de la cadera): 'No soy como los demás'. 'No pienso como todo el mundo'. Conflictos por parejas mal combinadas. A la derecha: Conflictos de no respetar las normas en la familia. A la izquierda: No respetar las normas en relación a lo externo, al trabajo (Corregido)"},
+                                            {linkName: "petalo-4/3/4/3/3/5", image: 'boton4', titlePage: "SISTEMA OSEO - Vertebras lumbares", title: "Lumbares 5", text: "(Piernas, tobillos y pies. Colon): Conflicto de algo sucio. Conflictos con los colaterales. El 20% de los casos es un conflicto con mi vida: '¿Qué voy a hacer con mi vida?', '¿Qué dirección quiero tomar en mi vida?'. El 80% es una acción equivocada en mi vida (aparece dolor en la pierna izquierda). Conflicto de 'No decir mi fantasía sexual por miedo a ser juzgado anormal'. A la derecha: Culpabilidad con los allegados. A la izquierda: Cólera con los allegados (Corregido)"}
                                         ]
                                     },
                                     {linkName: "petalo-4/3/4/3/4", image: 'boton4', titlePage: "SISTEMA OSEO", title: "Sacro (Corregido)"},
@@ -3142,11 +3142,11 @@ const petalos = [
                             {linkName: "petalo-5/6/2/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un niño/niña", text: ""},
                             {linkName: "petalo-5/6/2/4", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un evento", text: ""},
                             {linkName: "petalo-5/6/2/5", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un sitio", text: ""},
-                            {linkName: "petalo-5/6/2/6", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", fieldText: true, title: "A un recuerdo", text: ""},
-                            {linkName: "petalo-5/6/2/7", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", fieldText: true, title: "A un pensamiento", text: ""},
-                            {linkName: "petalo-5/6/2/8", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", fieldText: true, title: "A una emoción", text: ""},
-                            {linkName: "petalo-5/6/2/9", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", fieldText: true, title: "A un sentimiento", text: ""},
-                            {linkName: "petalo-5/6/2/10", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", fieldText: true, title: "A una idea", text: ""},
+                            {linkName: "petalo-5/6/2/6", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true, title: "A un recuerdo", text: ""},
+                            {linkName: "petalo-5/6/2/7", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true, title: "A un pensamiento", text: ""},
+                            {linkName: "petalo-5/6/2/8", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true, title: "A una emoción", text: ""},
+                            {linkName: "petalo-5/6/2/9", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true, title: "A un sentimiento", text: ""},
+                            {linkName: "petalo-5/6/2/10", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true, title: "A una idea", text: ""},
                             {linkName: "petalo-5/6/2/11", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un objeto", text: ""},
                             {linkName: "petalo-5/6/2/12", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un animal", text: ""},
                             {linkName: "petalo-5/6/2/13", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A una entidad no física positiva", text: ""},
