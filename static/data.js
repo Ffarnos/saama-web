@@ -2106,50 +2106,50 @@ const petalos = [
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "Cervicales 1",
-                                                text: "(Lengua, cabeza, cerebro, oído interno y medio, pituitaria, pineal, sistema nervioso simpático): Relacionada con la depresión. (Corregido)"
+                                                text: "(Lengua, cabeza, cerebro, oído interno y medio, pituitaria, pineal, sistema nervioso simpático): Relacionada con la depresión. Comunicación espiritual o sutil a nivel de sentidos (de alma a alma). Conflicto en aquellos que perciben cosas, pero no se atreven a hablar. A la derecha: Conflicto de no sentirse escuchado (comunicación) por la familia. Izquierda: Igual pero con el trabajo y lo externo."
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/2",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "Cervicales 2",
-                                                text: "(Ojos, senos nasales y paranasales, frente, lengua, nervios óptico y auditivo). (Corregido)"
+                                                text: "(Ojos, senos nasales y paranasales, frente, lengua, nervios óptico y auditivo): Comunicación espiritual o sutil a nivel de sentidos (de alma a alma). Conflicto en aquellos que perciben cosas, pero no se atreven a hablar. Conflicto den la sexualidad espiritual (relacionada también con la cintura pélvica). Conflicto con la integración de las informaciones. Conflicto con las partidas o expulsiones de casa. A la derecha: en relación a los allegados. A la izquierda: en relación con el exterior."
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/3",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "Cervicales 3",
-                                                text: "(Mejilla, cara, huesos faciales, dientes, oído exterior, laringe y vesícula biliar) (Corregido)"
+                                                text: "(Mejilla, cara, huesos faciales, dientes, oído exterior, laringe y vesícula biliar): Conflicto de desvalorización estética y de contacto. Conflicto de comunicación verbal (laringe). Conflictos de oposición, injusticia y rencor crónico con mancha y separación. A la derecha: en relación a los allegados. A la izquierda: en relación con el exterior."
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/4",
                                                 image: 'boton4',
-                                                titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES ",
+                                                titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "Cervicales 4",
-                                                text: "(Nariz, boca y trompas de Eustaquio) (Corregido)"
+                                                text: "(Nariz, boca y trompas de Eustaquio): Conflicto con la búsqueda del justo compromiso. Conflictos de comunicación verbal en lo concreto, y el concepto concreto de la vida y las cosas. Conflicto de comunicación en el trabajo. Conflictos de oposición e injusticia crónica. A la derecha: No poder expresarse con los allegados. A la izquierda: No poder expresarse en relación con el exterior."
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/5",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "Cervicales 5",
-                                                text: "(Faringe, cuerdas vocales, glándulas salivales, amígdalas) (Corregido)"
+                                                text: "(Faringe, cuerdas vocales, glándulas salivales, amígdalas): Conflicto de injusticia y conflictos de desplazamientos. Conflictos en la comunicación para encontrar una solución desde la neutralidad. “No logro valer mi inteligencia para las comunicaciones”. A la derecha: Conflictos de expresión en relación a los allegados. A la izquierda: Conflictos de expresión en relación con el exterior."
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/6",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "Cervicales 6",
-                                                text: "(Amígdalas, músculos del cuello y hombros) (Corregido)"
+                                                text: "(Amígdalas, músculos del cuello y hombros): Conflicto de injusticia y desvalorización. Conflicto de tener que bajar la cabeza (memorias de la infancia)."
                                             },
                                             {
                                                 linkName: "petalo-4/3/4/3/1/7",
                                                 image: 'boton4',
                                                 titlePage: "SISTEMA OSEO - VERTEBRAS CERVICALES",
                                                 title: "Cervicales 7",
-                                                text: "(Tiroides, paratiroides, codo y hombros) (Corregido)"
-                                            },
+                                                text: "(Tiroides, paratiroides, codo y hombros): Conflicto de grandiosa injusticia o de sumisión que se arrastra inconscientemente. Conflicto de bajar la cabeza por injusticias actuales."
+                                            }
                                         ]
                                     },
                                     {
@@ -3137,20 +3137,20 @@ const petalos = [
                         ]
                     },
                     {linkName: "petalo-5/6/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "ATADURA ENERGETICA", text:"Las ataduras energéticas pueden ser reales o simbólicas dependiendo de las experiencias de vida y circunstancias que estes y hayas vivido, las ataduras generan en nosotros un desgaste energético ya que tu energía no fluye libremente. La atadura detectada en tu sesión…", subPetalos: [
-                            {linkName: "petalo-5/6/2/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un hombre", text: ""},
-                            {linkName: "petalo-5/6/2/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A una mujer", text: ""},
-                            {linkName: "petalo-5/6/2/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un niño/niña", text: ""},
-                            {linkName: "petalo-5/6/2/4", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un evento", text: ""},
-                            {linkName: "petalo-5/6/2/5", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un sitio", text: ""},
+                            {linkName: "petalo-5/6/2/1", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true, title: "A un hombre", text: ""},
+                            {linkName: "petalo-5/6/2/2", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true,title: "A una mujer", text: ""},
+                            {linkName: "petalo-5/6/2/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true,title: "A un niño/niña", text: ""},
+                            {linkName: "petalo-5/6/2/4", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true,title: "A un evento", text: ""},
+                            {linkName: "petalo-5/6/2/5", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true,title: "A un sitio", text: ""},
                             {linkName: "petalo-5/6/2/6", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true, title: "A un recuerdo", text: ""},
                             {linkName: "petalo-5/6/2/7", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true, title: "A un pensamiento", text: ""},
                             {linkName: "petalo-5/6/2/8", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true, title: "A una emoción", text: ""},
                             {linkName: "petalo-5/6/2/9", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true, title: "A un sentimiento", text: ""},
                             {linkName: "petalo-5/6/2/10", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true, title: "A una idea", text: ""},
-                            {linkName: "petalo-5/6/2/11", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un objeto", text: ""},
-                            {linkName: "petalo-5/6/2/12", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A un animal", text: ""},
-                            {linkName: "petalo-5/6/2/13", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A una entidad no física positiva", text: ""},
-                            {linkName: "petalo-5/6/2/14", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "A una entidad no física negativa", text: ""},
+                            {linkName: "petalo-5/6/2/11", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true,title: "A un objeto", text: ""},
+                            {linkName: "petalo-5/6/2/12", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true,title: "A un animal", text: ""},
+                            {linkName: "petalo-5/6/2/13", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true,title: "A una entidad no física positiva", text: ""},
+                            {linkName: "petalo-5/6/2/14", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", useText: true, fieldText: true,title: "A una entidad no física negativa", text: ""},
                         ]
                     },
                     {linkName: "petalo-5/6/3", image: 'boton5', titlePage: "LIMPIEZA ENERGETICA", title: "KARMAS", text:"El concepto de karma es el resultado de la ley cósmica de causa y efecto, donde las acciones, pensamientos y emociones de una persona generan consecuencias que afectan su presente y futuro. Las acciones positivas generan resultados positivos, mientras que las negativas generan resultados negativos, influenciando tanto la vida actual como futuras. (Se anulo el siguiente karma)", subPetalos: [
