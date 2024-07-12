@@ -568,7 +568,7 @@ const OrdenarFuenteByVidas = (links) => {
     })
 
     const fuenteOrdenada = OrdenarFuente(linksWithOutVidas);
-    return putVidasPasadas(vidasPasadas, fuenteOrdenada);
+    return vidasPasadas.length > 1 ? putVidasPasadas(vidasPasadas, fuenteOrdenada) : fuenteOrdenada;
 }
 
 const OrdenarFuente = (links) => {
