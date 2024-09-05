@@ -137,7 +137,7 @@ const petalos = [
                 text: "Limpiamos la información genética negativa que perjudica a las células, las cuales bloqueaban el libre flujo de energía. Para lograr esto se borraron las siguientes emociones:"
             },
             {
-                linkName: "petalo-1/5", image: 'boton1', title: "Respetar/Aceptar", fieldText: true, useText: true, useDesc: true,
+                linkName: "petalo-1/5", image: 'boton1', title: "Respetar/Aceptar", useText: true, useDesc: true,
                 text: "Estos conceptos, nos dan aviso de que habrá que revisar algunos aspectos o situaciones de nuestra vida, que aún no queremos respetar o aceptar como bien dice la corrección. Al incorporar alguno de estos dos, lograremos no luchar con nuestros justificativos y culpabilidades hacia nosotros o hacia los demás, para sostener un escenario (situación), permitiendo que al hacerlas parte de nuestra vida ya no afecten la armonía y paz interior que merecemos."
             },
             {
@@ -814,511 +814,1380 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-2/5", image: 'boton2', title: "Miedos A", text: "El miedo puede ser desencadenado por situaciones reales o imaginarias y puede variar en intensidad según el individuo y sus experiencias previas, también puede volverse paralizante o limitante si se experimenta de manera excesiva o irracional. (Se anularon los siguientes miedos)", subPetalos: [
-                    { linkName: "petalo-2/5/1", image: 'boton2', titlePage: "Miedos A", title: "abandono", text: "" },
-                    { linkName: "petalo-2/5/2", image: 'boton2', titlePage: "Miedos A", title: "abundancia", text: "" },
-                    { linkName: "petalo-2/5/3", image: 'boton2', titlePage: "Miedos A", title: "alturas (acrofobia)", text: "" },
-                    { linkName: "petalo-2/5/4", image: 'boton2', titlePage: "Miedos A", title: "amor", text: "" },
-                    { linkName: "petalo-2/5/5", image: 'boton2', titlePage: "Miedos A", title: "animales (zoofobia)", text: "" },
-                    { linkName: "petalo-2/5/6", image: 'boton2', titlePage: "Miedos A", title: "cambio", text: "" },
-                    { linkName: "petalo-2/5/7", image: 'boton2', titlePage: "Miedos A", title: "castigo", text: "" },
-                    { linkName: "petalo-2/5/8", image: 'boton2', titlePage: "Miedos A", title: "culpa", text: "" },
-                    { linkName: "petalo-2/5/9", image: 'boton2', titlePage: "Miedos A", title: "dependencia", text: "" },
-                    { linkName: "petalo-2/5/10", image: 'boton2', titlePage: "Miedos A", title: "deseo", text: "" },
-                    { linkName: "petalo-2/5/11", image: 'boton2', titlePage: "Miedos A", title: "dolor", text: "" },
-                    { linkName: "petalo-2/5/12", image: 'boton2', titlePage: "Miedos A", title: "enfermedades (nosofobia)", text: "" },
-                    { linkName: "petalo-2/5/13", image: 'boton2', titlePage: "Miedos A", title: "éxito", text: "" },
-                    { linkName: "petalo-2/5/14", image: 'boton2', titlePage: "Miedos A", title: "fantasmas (espectrofobia)", text: "" },
-                    { linkName: "petalo-2/5/15", image: 'boton2', titlePage: "Miedos A", title: "felicidad", text: "" },
-                    { linkName: "petalo-2/5/16", image: 'boton2', titlePage: "Miedos A", title: "fracaso", text: "" },
-                    { linkName: "petalo-2/5/17", image: 'boton2', titlePage: "Miedos A", title: "futuro", text: "" }
-                ]
-            },
-            {
-                linkName: "petalo-2/6", image: 'boton2', title: "Miedos B", text:"El miedo puede ser desencadenado por situaciones reales o imaginarias y puede variar en intensidad según el individuo y sus experiencias previas, también puede volverse paralizante o limitante si se experimenta de manera excesiva o irracional. (Se anularon los siguientes miedos)", subPetalos: [
-                    { linkName: "petalo-2/6/1", image: 'boton2', titlePage: "Miedos B", title: "hablar en público (glosofobia)", text: "" },
-                    { linkName: "petalo-2/6/2", image: 'boton2', titlePage: "Miedos B", title: "humillación", text: "" },
-                    { linkName: "petalo-2/6/3", image: 'boton2', titlePage: "Miedos B", title: "lo extraño", text: "" },
-                    { linkName: "petalo-2/6/4", image: 'boton2', titlePage: "Miedos B", title: "lugares abiertos (agorafobia)", text: "" },
-                    { linkName: "petalo-2/6/5", image: 'boton2', titlePage: "Miedos B", title: "lugares cerrados (claustrofobia)", text: "" },
-                    { linkName: "petalo-2/6/6", image: 'boton2', titlePage: "Miedos B", title: "miedo a dios", text: "" },
-                    { linkName: "petalo-2/6/7", image: 'boton2', titlePage: "Miedos B", title: "muerte", text: "" },
-                    { linkName: "petalo-2/6/8", image: 'boton2', titlePage: "Miedos B", title: "multitudes (demofobia)", text: "" },
-                    { linkName: "petalo-2/6/9", image: 'boton2', titlePage: "Miedos B", title: "no merecer", text: "" },
-                    { linkName: "petalo-2/6/10", image: 'boton2', titlePage: "Miedos B", title: "no recursos", text: "" },
-                    { linkName: "petalo-2/6/11", image: 'boton2', titlePage: "Miedos B", title: "no salir adelante", text: "" },
-                    { linkName: "petalo-2/6/12", image: 'boton2', titlePage: "Miedos B", title: "no ser aceptado (rechazo social)", text: "" },
-                    { linkName: "petalo-2/6/13", image: 'boton2', titlePage: "Miedos B", title: "no ser capaz", text: "" },
-                    { linkName: "petalo-2/6/14", image: 'boton2', titlePage: "Miedos B", title: "oscuridad", text: "" },
-                    { linkName: "petalo-2/6/15", image: 'boton2', titlePage: "Miedos B", title: "pérdida", text: "" },
-                    { linkName: "petalo-2/6/16", image: 'boton2', titlePage: "Miedos B", title: "personas desconocidas (xenofobia)", text: "" }]
-            },
-            {
-                linkName: "petalo-2/7", image: 'boton2', title: "Miedos C", text: "El miedo puede ser desencadenado por situaciones reales o imaginarias y puede variar en intensidad según el individuo y sus experiencias previas, también puede volverse paralizante o limitante si se experimenta de manera excesiva o irracional. (Se anularon los siguientes miedos)", subPetalos: [
-                    { linkName: "petalo-2/7/1", image: 'boton2', titlePage: "Miedos C", title: "rechazo", text: "" },
-                    { linkName: "petalo-2/7/2", image: 'boton2', titlePage: "Miedos C", title: "ruidos fuertes (fonofobia)", text: "" },
-                    { linkName: "petalo-2/7/3", image: 'boton2', titlePage: "Miedos C", title: "salud", text: "" },
-                    { linkName: "petalo-2/7/4", image: 'boton2', titlePage: "Miedos C", title: "sangre (hemofobia)", text: "" },
-                    { linkName: "petalo-2/7/5", image: 'boton2', titlePage: "Miedos C", title: "sexualidad", text: "" },
-                    { linkName: "petalo-2/7/6", image: 'boton2', titlePage: "Miedos C", title: "soledad", text: "" },
-                    { linkName: "petalo-2/7/7", image: 'boton2', titlePage: "Miedos C", title: "sufrir", text: "" },
-                    { linkName: "petalo-2/7/8", image: 'boton2', titlePage: "Miedos C", title: "tecnología (tecno-fobia)", text: "" },
-                    { linkName: "petalo-2/7/9", image: 'boton2', titlePage: "Miedos C", title: "truenos (astrapofobia)", text: "" },
-                    { linkName: "petalo-2/7/10", image: 'boton2', titlePage: "Miedos C", title: "vejez", text: "" },
-                    { linkName: "petalo-2/7/11", image: 'boton2', titlePage: "Miedos C", title: "vergüenza", text: "" }
-                ]
+              linkName: "petalo-2/5", image: 'boton2', title: "Miedos", noNumbers: true, text: "El miedo puede ser desencadenado por situaciones reales o imaginarias y puede variar en intensidad según el individuo y sus experiencias previas, también puede volverse paralizante o limitante si se experimenta de manera excesiva o irracional. (Se anularon los siguientes miedos)", subPetalos: [
+                    {linkName: "petalo-2/5/1", image: 'boton2', title: "A", index: 0, colorBorder: "yellow", text: "El miedo puede ser desencadenado por situaciones reales o imaginarias y puede variar en intensidad según el individuo y sus experiencias previas, también puede volverse paralizante o limitante si se experimenta de manera excesiva o irracional. (Se anularon los siguientes miedos)", subPetalos: [
+                            { linkName: "petalo-2/5/1/1", image: 'boton2', titlePage: "Miedos A", title: "abandono", text: "" },
+                            { linkName: "petalo-2/5/1/2", image: 'boton2', titlePage: "Miedos A", title: "abundancia", text: "" },
+                            { linkName: "petalo-2/5/1/3", image: 'boton2', titlePage: "Miedos A", title: "alturas (acrofobia)", text: "" },
+                            { linkName: "petalo-2/5/1/4", image: 'boton2', titlePage: "Miedos A", title: "amor", text: "" },
+                            { linkName: "petalo-2/5/1/5", image: 'boton2', titlePage: "Miedos A", title: "animales (zoofobia)", text: "" },
+                            { linkName: "petalo-2/5/1/6", image: 'boton2', titlePage: "Miedos A", title: "cambio", text: "" },
+                            { linkName: "petalo-2/5/1/7", image: 'boton2', titlePage: "Miedos A", title: "castigo", text: "" },
+                            { linkName: "petalo-2/5/1/8", image: 'boton2', titlePage: "Miedos A", title: "culpa", text: "" },
+                            { linkName: "petalo-2/5/1/9", image: 'boton2', titlePage: "Miedos A", title: "dependencia", text: "" },
+                            { linkName: "petalo-2/5/1/10", image: 'boton2', titlePage: "Miedos A", title: "deseo", text: "" },
+                            { linkName: "petalo-2/5/1/11", image: 'boton2', titlePage: "Miedos A", title: "dolor", text: "" },
+                            { linkName: "petalo-2/5/1/12", image: 'boton2', titlePage: "Miedos A", title: "enfermedades (nosofobia)", text: "" },
+                            { linkName: "petalo-2/5/1/13", image: 'boton2', titlePage: "Miedos A", title: "éxito", text: "" },
+                            { linkName: "petalo-2/5/1/14", image: 'boton2', titlePage: "Miedos A", title: "fantasmas (espectrofobia)", text: "" },
+                            { linkName: "petalo-2/5/1/15", image: 'boton2', titlePage: "Miedos A", title: "felicidad", text: "" },
+                            { linkName: "petalo-2/5/1/16", image: 'boton2', titlePage: "Miedos A", title: "fracaso", text: "" },
+                            { linkName: "petalo-2/5/1/17", image: 'boton2', titlePage: "Miedos A", title: "futuro", text: "" }
+                        ]
+                    },
+                    {linkName: "petalo-2/5/2", image: 'boton2', title: "B", index: 1, colorBorder: "red", text: "El miedo puede ser desencadenado por situaciones reales o imaginarias y puede variar en intensidad según el individuo y sus experiencias previas, también puede volverse paralizante o limitante si se experimenta de manera excesiva o irracional. (Se anularon los siguientes miedos)", subPetalos: [
+                            { linkName: "petalo-2/5/2/1", image: 'boton2', titlePage: "Miedos B", title: "hablar en público (glosofobia)", text: "" },
+                            { linkName: "petalo-2/5/2/2", image: 'boton2', titlePage: "Miedos B", title: "humillación", text: "" },
+                            { linkName: "petalo-2/5/2/3", image: 'boton2', titlePage: "Miedos B", title: "lo extraño", text: "" },
+                            { linkName: "petalo-2/5/2/4", image: 'boton2', titlePage: "Miedos B", title: "lugares abiertos (agorafobia)", text: "" },
+                            { linkName: "petalo-2/5/2/5", image: 'boton2', titlePage: "Miedos B", title: "lugares cerrados (claustrofobia)", text: "" },
+                            { linkName: "petalo-2/5/2/6", image: 'boton2', titlePage: "Miedos B", title: "miedo a dios", text: "" },
+                            { linkName: "petalo-2/5/2/7", image: 'boton2', titlePage: "Miedos B", title: "muerte", text: "" },
+                            { linkName: "petalo-2/5/2/8", image: 'boton2', titlePage: "Miedos B", title: "multitudes (demofobia)", text: "" },
+                            { linkName: "petalo-2/5/2/9", image: 'boton2', titlePage: "Miedos B", title: "no merecer", text: "" },
+                            { linkName: "petalo-2/5/2/10", image: 'boton2', titlePage: "Miedos B", title: "no recursos", text: "" },
+                            { linkName: "petalo-2/5/2/11", image: 'boton2', titlePage: "Miedos B", title: "no salir adelante", text: "" },
+                            { linkName: "petalo-2/5/2/12", image: 'boton2', titlePage: "Miedos B", title: "no ser aceptado (rechazo social)", text: "" },
+                            { linkName: "petalo-2/5/2/13", image: 'boton2', titlePage: "Miedos B", title: "no ser capaz", text: "" },
+                            { linkName: "petalo-2/5/2/14", image: 'boton2', titlePage: "Miedos B", title: "oscuridad", text: "" },
+                            { linkName: "petalo-2/5/2/15", image: 'boton2', titlePage: "Miedos B", title: "pérdida", text: "" },
+                            { linkName: "petalo-2/5/2/16", image: 'boton2', titlePage: "Miedos B", title: "personas desconocidas (xenofobia)", text: "" }
+                        ]
+                    },
+                    {linkName: "petalo-2/5/3", image: 'boton2', title: "C", index: 2, colorBorder: "blue", text: "El miedo puede ser desencadenado por situaciones reales o imaginarias y puede variar en intensidad según el individuo y sus experiencias previas, también puede volverse paralizante o limitante si se experimenta de manera excesiva o irracional. (Se anularon los siguientes miedos)", subPetalos: [
+                            { linkName: "petalo-2/5/3/1", image: 'boton2', titlePage: "Miedos C", title: "rechazo", text: "" },
+                            { linkName: "petalo-2/5/3/2", image: 'boton2', titlePage: "Miedos C", title: "ruidos fuertes (fonofobia)", text: "" },
+                            { linkName: "petalo-2/5/3/3", image: 'boton2', titlePage: "Miedos C", title: "salud", text: "" },
+                            { linkName: "petalo-2/5/3/4", image: 'boton2', titlePage: "Miedos C", title: "sangre (hemofobia)", text: "" },
+                            { linkName: "petalo-2/5/3/5", image: 'boton2', titlePage: "Miedos C", title: "sexualidad", text: "" },
+                            { linkName: "petalo-2/5/3/6", image: 'boton2', titlePage: "Miedos C", title: "soledad", text: "" },
+                            { linkName: "petalo-2/5/3/7", image: 'boton2', titlePage: "Miedos C", title: "sufrir", text: "" },
+                            { linkName: "petalo-2/5/3/8", image: 'boton2', titlePage: "Miedos C", title: "tecnología (tecno-fobia)", text: "" },
+                            { linkName: "petalo-2/5/3/9", image: 'boton2', titlePage: "Miedos C", title: "truenos (astrapofobia)", text: "" },
+                            { linkName: "petalo-2/5/3/10", image: 'boton2', titlePage: "Miedos C", title: "vejez", text: "" },
+                            { linkName: "petalo-2/5/3/11", image: 'boton2', titlePage: "Miedos C", title: "vergüenza", text: "" }
+                        ]
+                    },
+                  ],
             },
         ]
     },
     {
         linkName: "petalo-3", image: 'boton3', title: "Fuente Mental", subPetalos: [
             {
-                linkName: "petalo-3/1", image: 'boton3', title: "Patrones Mentales A", text: "Los patrones mentales son estructuras de comportamientos muy marcados que se accionan en diferentes áreas de nuestra vida que generalmente nos bloquean y que impiden poner en práctica ciertas tareas del ámbito diario y su libre funcionamiento. Son comportamientos aprendidos o hábitos de nuestros ancestros. Suele suceder que existan varias capas del mismo patrón, por haber vivido repetidas veces las mismas situaciones. (Se anularon los siguientes patrones mentales)", subPetalos: [
-                    { linkName: "petalo-3/1/1", image: 'boton3', titlePage: "Patrones Mentales A", title: "ABANDONO", text: "" },
-                    { linkName: "petalo-3/1/2", image: 'boton3', titlePage: "Patrones Mentales A", title: "ADICCION", text: "" },
-                    { linkName: "petalo-3/1/3", image: 'boton3', titlePage: "Patrones Mentales A", title: "AMARGURA", text: "" },
-                    { linkName: "petalo-3/1/4", image: 'boton3', titlePage: "Patrones Mentales A", title: "ANSIEDAD", text: "" },
-                    { linkName: "petalo-3/1/5", image: 'boton3', titlePage: "Patrones Mentales A", title: "APATIA", text: "" },
-                    { linkName: "petalo-3/1/6", image: 'boton3', titlePage: "Patrones Mentales A", title: "AUTO CASTIGO", text: "" },
-                    { linkName: "petalo-3/1/7", image: 'boton3', titlePage: "Patrones Mentales A", title: "AUTO CRITICA", text: "" },
-                    { linkName: "petalo-3/1/8", image: 'boton3', titlePage: "Patrones Mentales A", title: "AUTORITARISMO", text: "" },
-                    { linkName: "petalo-3/1/9", image: 'boton3', titlePage: "Patrones Mentales A", title: "BAJA AUTOESTIMA", text: "" },
-                    { linkName: "petalo-3/1/10", image: 'boton3', titlePage: "Patrones Mentales A", title: "CARENCIAS", text: "" },
-                    { linkName: "petalo-3/1/11", image: 'boton3', titlePage: "Patrones Mentales A", title: "CELOS", text: "" },
-                    { linkName: "petalo-3/1/12", image: 'boton3', titlePage: "Patrones Mentales A", title: "COBARDIA", text: "" },
-                    { linkName: "petalo-3/1/13", image: 'boton3', titlePage: "Patrones Mentales A", title: "CODICIA", text: "" },
-                    { linkName: "petalo-3/1/14", image: 'boton3', titlePage: "Patrones Mentales A", title: "CONFORMISMO", text: "" },
-                    { linkName: "petalo-3/1/15", image: 'boton3', titlePage: "Patrones Mentales A", title: "CRITICA", text: "" },
-                    { linkName: "petalo-3/1/16", image: 'boton3', titlePage: "Patrones Mentales A", title: "CULPA", text: "" },
-                    { linkName: "petalo-3/1/17", image: 'boton3', titlePage: "Patrones Mentales A", title: "DEPRESION", text: "" },
-                    { linkName: "petalo-3/1/18", image: 'boton3', titlePage: "Patrones Mentales A", title: "DESAMPARO", text: "" },
-                    { linkName: "petalo-3/1/19", image: 'boton3', titlePage: "Patrones Mentales A", title: "DESCONFIANZA", text: "" },
-                    { linkName: "petalo-3/1/20", image: 'boton3', titlePage: "Patrones Mentales A", title: "DESPRECIO", text: "" },
-                    { linkName: "petalo-3/1/21", image: 'boton3', titlePage: "Patrones Mentales A", title: "DOLOR", text: "" },
-                    { linkName: "petalo-3/1/22", image: 'boton3', titlePage: "Patrones Mentales A", title: "DRAMA", text: "" },
-                    { linkName: "petalo-3/1/23", image: 'boton3', titlePage: "Patrones Mentales A", title: "DUDA", text: "" },
-                    { linkName: "petalo-3/1/24", image: 'boton3', titlePage: "Patrones Mentales A", title: "EGOISMO", text: "" },
-                    { linkName: "petalo-3/1/25", image: 'boton3', titlePage: "Patrones Mentales A", title: "ENVIDIA", text: "" },
-                    { linkName: "petalo-3/1/26", image: 'boton3', titlePage: "Patrones Mentales A", title: "FRACASO", text: "" }
-                ]
-            },
-            {
-                linkName: "petalo-3/2", image: 'boton3', title: "Patrones Mentales B", text: "Los patrones mentales son estructuras de comportamientos muy marcados que se accionan en diferentes áreas de nuestra vida que generalmente nos bloquean y que impiden poner en práctica ciertas tareas del ámbito diario y su libre funcionamiento. Son comportamientos aprendidos o hábitos de nuestros ancestros. Suele suceder que existan varias capas del mismo patrón, por haber vivido repetidas veces las mismas situaciones. (Se anularon los siguientes patrones mentales)", subPetalos: [
-                    { linkName: "petalo-3/2/1", image: 'boton3', titlePage: "Patrones Mentales B", title: "FRUSTRACION", text: "" },
-                    { linkName: "petalo-3/2/2", image: 'boton3', titlePage: "Patrones Mentales B", title: "INDESICION", text: "" },
-                    { linkName: "petalo-3/2/3", image: 'boton3', titlePage: "Patrones Mentales B", title: "INDIFERENCIA", text: "" },
-                    { linkName: "petalo-3/2/4", image: 'boton3', titlePage: "Patrones Mentales B", title: "INFERIORIDAD", text: "" },
-                    { linkName: "petalo-3/2/5", image: 'boton3', titlePage: "Patrones Mentales B", title: "INFIDELIDAD", text: "" },
-                    { linkName: "petalo-3/2/6", image: 'boton3', titlePage: "Patrones Mentales B", title: "INSATISFACCION", text: "" },
-                    { linkName: "petalo-3/2/7", image: 'boton3', titlePage: "Patrones Mentales B", title: "MANIPULACION", text: "" },
-                    { linkName: "petalo-3/2/8", image: 'boton3', titlePage: "Patrones Mentales B", title: "MIEDO", text: "" },
-                    { linkName: "petalo-3/2/9", image: 'boton3', titlePage: "Patrones Mentales B", title: "NEGATIVIDAD", text: "" },
-                    { linkName: "petalo-3/2/10", image: 'boton3', titlePage: "Patrones Mentales B", title: "NERVIOSISMO", text: "" },
-                    { linkName: "petalo-3/2/11", image: 'boton3', titlePage: "Patrones Mentales B", title: "NO MEREZCO", text: "" },
-                    { linkName: "petalo-3/2/12", image: 'boton3', titlePage: "Patrones Mentales B", title: "NO PUEDO", text: "" },
-                    { linkName: "petalo-3/2/13", image: 'boton3', titlePage: "Patrones Mentales B", title: "ODIO", text: "" },
-                    { linkName: "petalo-3/2/14", image: 'boton3', titlePage: "Patrones Mentales B", title: "PANICO", text: "" },
-                    { linkName: "petalo-3/2/15", image: 'boton3', titlePage: "Patrones Mentales B", title: "PENA", text: "" },
-                    { linkName: "petalo-3/2/16", image: 'boton3', titlePage: "Patrones Mentales B", title: "PESIMISMO", text: "" },
-                    { linkName: "petalo-3/2/17", image: 'boton3', titlePage: "Patrones Mentales B", title: "POSPONER", text: "" },
-                    { linkName: "petalo-3/2/18", image: 'boton3', titlePage: "Patrones Mentales B", title: "PREOCUPACION", text: "" },
-                    { linkName: "petalo-3/2/19", image: 'boton3', titlePage: "Patrones Mentales B", title: "QUEJA", text: "" },
-                    { linkName: "petalo-3/2/20", image: 'boton3', titlePage: "Patrones Mentales B", title: "RABIA", text: "" },
-                    { linkName: "petalo-3/2/21", image: 'boton3', titlePage: "Patrones Mentales B", title: "RENCOR", text: "" },
-                    { linkName: "petalo-3/2/22", image: 'boton3', titlePage: "Patrones Mentales B", title: "SUFRIMIENTO", text: "" },
-                    { linkName: "petalo-3/2/23", image: 'boton3', titlePage: "Patrones Mentales B", title: "SUMISION", text: "" },
-                    { linkName: "petalo-3/2/24", image: 'boton3', titlePage: "Patrones Mentales B", title: "TEMOR", text: "" },
-                    { linkName: "petalo-3/2/25", image: 'boton3', titlePage: "Patrones Mentales B", title: "TIMIDEZ", text: "" }
-                ]
-            },
-            {
-                linkName: "petalo-3/3", image: 'boton3', title: "COMPORTAMIENTOS COTIDIANOS A", text:"En este punto se encuentran varias opciones las cuales vivimos cotidianamente en lo personal, social y en el plano sexual, tratar de liberarnos de estos comportamientos hace que tengamos una vida más plena y armoniosa. (Se anularon los siguientes comportamientos)", subPetalos: [
-                    { linkName: "petalo-3/3/1", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "ABUSO", text: "El abuso puede manifestarse de diversas formas en la vida cotidiana, incluyendo el abuso físico, emocional, psicológico, sexual, financiero o de cualquier otra índole. Puede ocurrir en relaciones interpersonales, entornos laborales, instituciones educativas, contextos familiares, comunidades e incluso a nivel societal. Este ejemplo puede ser interpretado como un acto de abuso, ya sea hacia uno mismo o hacia los demás... (Anulado)" },
-                    { linkName: "petalo-3/3/2", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "ANORGASMIA", text: "La anorgasmia es la incapacidad persistente para alcanzar el orgasmo, más común en mujeres. Las causas pueden ser físicas (trastornos hormonales, medicamentos, condiciones médicas) o psicológicas (estrés, ansiedad, menopausia, conflictos de pareja). Por otro lado, esta corrección a nivel simbólico nos puede estar diciendo que no podemos obtener placer en algún área de nuestra vida. (Anulado)" },
-                    { linkName: "petalo-3/3/3", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "ASCO SEXUAL", text: "Es un estado de repugnancia o aversión que experimenta una persona hacia algo que percibe como sucio, desagradable o inmundo. Desde un punto de vista simbólico o metafórico, el asco puede representar una reacción emocional ante situaciones, acciones o características que son moralmente o éticamente reprensibles, inaceptables o degradantes para la persona que lo experimenta. Puede implicar una sensación de desprecio o desdén hacia algo considerado deplorable o indigno. (Anulado)" },
-                    { linkName: "petalo-3/3/4", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "ASEXUAL", text: "Indica que no experimenta atracción hacia el placer sexual en ninguna de sus formas. Esta orientación puede estar relacionada con diversos factores como bloqueos en los Chakras, experiencias negativas pasadas, miedos, traumas o desequilibrios hormonales. También podría sugerir que la pareja actual no despierta excitación o deseo. (Anulado)" },
-                    { linkName: "petalo-3/3/5", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", fieldText: true, title: "BARRERA EMOCIONAL GENITAL", text: "Obstáculo emocional que afecta la capacidad para experimentar una conexión emocional o íntima en el ámbito sexual. Esta barrera puede manifestarse como dificultades para relacionarse sexualmente con otras personas, sentir miedo, ansiedad o bloqueo emocional durante encuentros íntimos, o tener dificultades para experimentar placer sexual debido a traumas, conflictos internos o creencias limitantes. (Aquí anulamos las siguientes emociones)" },
-                    { linkName: "petalo-3/3/6", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "BLOQUEO ENERGÉTICO GENITAL", text: "Interrupción o limitación del flujo de energía vital en la región genital del cuerpo humano. Al abordar un bloqueo energético genital trabajamos para desbloquear e equilibrar la energía estancada en la zona genital. (Anulado)" },
-                    { linkName: "petalo-3/3/7", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "BLOQUEOS QUE IMPIDEN DISFRUTAR", text: "Obstáculos que interfieren con la capacidad para experimentar plenamente el placer, la alegría o la satisfacción en diversos aspectos de la vida. Abordar estos bloqueos puede implicar explorar y trabajar a través de las emociones, resolver traumas pasados, desafiar y cambiar creencias limitantes, practicar la autoaceptación y el autocuidado, y aprender nuevas habilidades de afrontamiento para manejar los desafíos emocionales que surgen. El objetivo es liberar estos bloqueos para permitir una mayor apertura, satisfacción y disfrute en la vida y las relaciones. (Anulado)" },
-                    { linkName: "petalo-3/3/8", image: 'boton3', fieldText: true, titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "BLOQUEO AL DAR/RECIBIR", text: "Son obstáculos que interfieren con la capacidad para dar de manera desinteresada y recibir de manera receptiva en diversas interacciones y relaciones humanas. Este bloqueo puede tener un impacto significativo en las relaciones interpersonales, ya que pueden crear desequilibrios en la dinámica de dar y recibir, causar resentimiento, frustración o malentendidos, y dificultar la construcción de conexiones profundas y satisfactorias. El objetivo es cultivar una relación más equilibrada y gratificante con la capacidad de dar y recibir en todas las áreas de la vida. (Anulado)" },
-                    { linkName: "petalo-3/3/9", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "COMPLEJOS", text: "Se refiere a un patrón persistente de pensamientos, sentimientos o creencias negativas y distorsionadas sobre uno mismo, que afectan la percepción y el comportamiento de una persona de manera significativa. Estos complejos pueden tener su origen en experiencias pasadas, traumas, interacciones sociales, influencias culturales o creencias internalizadas que dan forma a la autoimagen y la autoestima de la persona. Los complejos pueden manifestarse en diferentes áreas de la vida, como la apariencia física, las habilidades sociales, la inteligencia, la valía personal, entre otros. (Anulado)" },
-                    { linkName: "petalo-3/3/10", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "TRAUMAS", text: "Un trauma psicológico es una respuesta abrumadora a un evento que amenaza la vida o la integridad emocional de una persona. Estos eventos pueden ser únicos, como un accidente grave o un desastre natural, o pueden ser experiencias repetidas de abuso o negligencia. Los traumas pueden dejar una marca duradera en la mente y el cuerpo de una persona, afectando su capacidad para funcionar en la vida diaria y relacionarse con los demás. (Anulado)" },
-                    { linkName: "petalo-3/3/11", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "COMPORTAMIENTO INFANTIL", text: "El infantilismo se refiere a un estado en el que una persona muestra características o comportamientos típicos de un niño, incluso en la edad adulta. Esto puede manifestarse en diversas formas, como dificultad para asumir responsabilidades adultas, dependencia excesiva de los demás, falta de autonomía, expresión emocional inmadura, entre otros. (Anulado)" },
-                    { linkName: "petalo-3/3/12", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "CONFLICTOS DE CREENCIAS SEXUALES", text: "Los conflictos moralistas sexuales surgen cuando las normas y expectativas morales de una persona chocan con sus deseos y comportamientos sexuales. Estas tensiones pueden llevar a sentimientos de culpa, vergüenza o conflicto interno, y pueden influir en la manera en que una persona vive y expresa su sexualidad. (Anulado)" },
-                    { linkName: "petalo-3/3/13", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "CONFLICTOS RELIGIOSOS SEXUALES", text: "Los conflictos religiosos sexuales se pueden definir como tensiones emocionales, cognitivas y sociales que surgen cuando las creencias religiosas y las normas relacionadas con la sexualidad entran en conflicto con los deseos, necesidades y valores individuales en este ámbito. (Anulado)" },
-                    { linkName: "petalo-3/3/14", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "CONVICCIÓN SOBRE TUS DESEOS", text: "La convicción sobre tus deseos puede influir en varios aspectos de la vida de una persona, incluida su motivación, su persistencia ante los desafíos y su capacidad para superar obstáculos. Cuando alguien tiene una fuerte convicción sobre sus deseos, es más probable que se comprometa con las acciones necesarias para alcanzarlos, incluso en situaciones difíciles. (Incorporado)" },
-                    { linkName: "petalo-3/3/15", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "CULPABILIDAD", text: "La culpabilidad se refiere a un sentimiento de responsabilidad o remordimiento que experimenta una persona cuando cree que ha cometido un error, infringido una norma moral o causado daño a alguien. Este sentimiento puede surgir tanto por acciones reales como por percepciones subjetivas de lo que se considera incorrecto. (Anulado)" },
-                    { linkName: "petalo-3/3/16", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "DESCONOCIMIENTO SOBRE TUS ANHELOS", text: "Sería la falta de comprensión acerca de tus aspiraciones, deseos o metas personales. Es la incapacidad de identificar o comprender lo que verdaderamente deseas en la vida o lo que te motiva profundamente. (Anulado)" },
-                    { linkName: "petalo-3/3/17", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "ESCLAVITUD", text: "Es un estado en el que una persona pierde su autonomía, libertad y capacidad de elección debido a la dominación de otro individuo o grupo, esto puede experimentarse de manera real o simbólica. (Anulado)" },
-                    { linkName: "petalo-3/3/18", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "EYACULACIÓN PRECOZ (Anulado)", text: "" },
-                    { linkName: "petalo-3/3/19", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "FETICHE (Anulado)", text: "" },
-                    { linkName: "petalo-3/3/20", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "FRIGIDEZ (Anulado)", text: "" },
-                    { linkName: "petalo-3/3/21", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS A", title: "HOMOFOBIA (Anulado)", text: "" }
-                ]
-            },
-            {
-                linkName: "petalo-3/4", image: 'boton3', title: "COMPORTAMIENTOS COTIDIANOS B", text:"En este punto se encuentran varias opciones las cuales vivimos cotidianamente, en lo personal, social y en el plano sexual, tratar de liberarnos de estos comportamientos hace que tengamos una vida más plena y armoniosa. (Se anularon los siguientes comportamientos)", subPetalos: [
-                    { linkName: "petalo-3/4/1", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "HORMONAL", text: "Los 'comportamientos hormonales' son acciones o conductas que son influenciadas, en parte, por la actividad hormonal en el cuerpo. Las hormonas son mensajeros químicos que se producen en varias glándulas del cuerpo y regulan una amplia gama de funciones biológicas y comportamientos. Los comportamientos hormonales pueden abarcar una variedad de aspectos, como el estado de ánimo, la reproducción, el apetito, el sueño, la respuesta al estrés y la agresión, entre otros. Estos comportamientos pueden ser el resultado de cambios en los niveles hormonales, interacciones hormonales complejas o la respuesta del organismo a las señales hormonales. (Se corrigieron las siguientes hormonas)" },
-                    { linkName: "petalo-3/4/2", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "IMPOTENCIA", text: "El 'comportamiento por impotencia' se refiere a las acciones o conductas que una persona exhibe como resultado de sentirse impotente o incapaz de lograr un objetivo o enfrentar una situación. Puede surgir en respuesta a desafíos difíciles, percepciones de falta de control sobre la situación o creencias sobre la incapacidad personal para hacer frente a determinadas circunstancias. (Anulado)" },
-                    { linkName: "petalo-3/4/3", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "INSEGURIDAD CORPORAL", text: "El 'comportamiento de inseguridad corporal' describe las acciones o actitudes que una persona adopta como resultado de sentirse insegura acerca de su cuerpo o apariencia física. Estos comportamientos pueden manifestarse de diversas maneras, como evitar situaciones sociales o actividades que involucren mostrar el cuerpo, compararse constantemente con los demás, buscar constantemente validación externa, desarrollar hábitos poco saludables relacionados con la alimentación o el ejercicio, o experimentar ansiedad o depresión relacionada con la imagen corporal. Las personas que experimentan inseguridad corporal pueden tener una percepción distorsionada de su propio cuerpo y pueden tener dificultades para aceptarse a sí mismas tal como son. (Anulado)" },
-                    { linkName: "petalo-3/4/4", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "INSEGURIDADES CORPORALES QUE LIMITAN", text: "Los comportamientos de inseguridad corporal que limitan pueden incluir: Evitar situaciones sociales o actividades que requieran mostrar su cuerpo, como ir a la playa o la piscina, participar en deportes o incluso simplemente salir con amigos. Obsesión por la apariencia, atención excesiva a detalles como el peso, el tamaño, la forma o la piel. Comparación constante, lo que puede alimentar sentimientos de inferioridad y aumentar la inseguridad. Vestirse de manera excesivamente conservadora. No participar en actividades físicas por miedo a ser juzgado por otros o sentirse incómodo con su cuerpo. Desarrollo de trastornos alimentarios, comportamientos alimentarios poco saludables, como dietas extremas, ayuno o purga, que pueden resultar en trastornos alimentarios como la anorexia o la bulimia. Evitar relaciones íntimas. Estos comportamientos pueden limitar significativamente la vida de una persona y afectar su bienestar emocional y mental. (Anulado)" },
-                    { linkName: "petalo-3/4/5", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "LEGADO TRANSGENERACIONAL (-)", noNumbers: true, text: "Se refiere a patrones de pensamiento, comportamiento o dinámicas familiares disfuncionales que son transmitidos de una generación a otra y que tienen un impacto negativo en el bienestar y desarrollo. Este legado puede incluir traumas no resueltos, abuso físico o emocional, adicciones, trastornos mentales no tratados, patrones de comunicación o cualquier otra forma de disfunción familiar que persista a lo largo del tiempo dentro de nuestro árbol genealógico. (Aquí se sanaron, repararon y revivieron todos los comportamientos heredados del linaje materno o paterno)", subPetalos: [
-                            {linkName: "petalo-3/4/5/1", image: 'boton3', titlePage: "LEGADO TRANSGENERACIONAL", title: "A", index: 0, subPetalos: [
-                                    {linkName: "petalo-3/4/5/1/1", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "LEGADO TRANSGENERACIONAL A", text: "SANANDO" },
-                                ]},
-                            {linkName: "petalo-3/4/5/2", image: 'boton3', titlePage: "LEGADO TRANSGENERACIONAL", title: "B", index: 1, subPetalos: [
-                                    {linkName: "petalo-3/4/5/2/1", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "LEGADO TRANSGENERACIONAL B", text: "REPARANDO" },
-                                ]},
-                            {linkName: "petalo-3/4/5/3", image: 'boton3', titlePage: "LEGADO TRANSGENERACIONAL", title: "C", index: 2, subPetalos: [
-                                    {linkName: "petalo-3/4/5/3/1", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "LEGADO TRANSGENERACIONAL C", text: "REVIVIENDO" },
-                                ]},
-                        ]},
-                    { linkName: "petalo-3/4/6", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "MASOQUISMO", text: "El masoquismo es una tendencia o práctica en la que una persona encuentra placer o gratificación al experimentar dolor, humillación o sufrimiento físico o emocional. En situaciones de la vida cotidiana donde se busca inconscientemente situaciones que le causen dolor o sufrimiento. El masoquismo también puede ser parte de una dinámica de poder en una relación donde una persona busca ser dominada o sometida por otra. En algunos casos, el masoquismo puede llegar a ser peligroso si conduce a comportamientos autodestructivos o si la persona no es capaz de establecer límites saludables para proteger su bienestar físico y emocional. (Anulado)" },
-                    { linkName: "petalo-3/4/7", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "MIEDO A DESEAR", text: "Conocido como hedonofobia, es una condición psicológica donde se experimenta ansiedad o temor al placer, la felicidad o el disfrute de la vida. Esta fobia puede manifestarse de diferentes maneras, como el miedo a buscar el éxito, el miedo al placer físico o emocional, o el miedo a satisfacer necesidades personales. Cuando se sufre de hedonofobia a menudo pueden sentirse culpables o avergonzadas por querer cosas que les proporcionen placer, lo que puede llevar a una vida restringida y limitada en experiencias satisfactorias. (Anulado)" },
-                    { linkName: "petalo-3/4/8", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "MIEDO A FRACASAR", text: "Es una respuesta emocional intensa y paralizante que se experimenta cuando enfrentan situaciones en las que perciben que existe la posibilidad de no alcanzar sus metas o expectativas. Esta respuesta puede surgir en diversas áreas de la vida, como el trabajo, los estudios, las relaciones personales o los proyectos personales. Si experimentas este miedo a menudo se evita tomar riesgos o desafíos nuevos por temor a no cumplir con las expectativas, lo que puede limitar tu crecimiento personal y profesional. El miedo al fracasar puede manifestarse a través de síntomas como ansiedad, falta de confianza en uno mismo, procrastinación o autosabotaje. (Anulado)" },
-                    { linkName: "petalo-3/4/9", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "MIEDOS A REPETIR SITUACIONES PASADOS", text: "Es una respuesta emocional en la que sientes ansiedad o temor ante la posibilidad de que situaciones similares a experiencias pasadas negativas vuelvan a ocurrir en el presente o futuro. Esta respuesta puede surgir debido a traumas pasados, malas experiencias o errores anteriores, y puede llevar a la evitar situaciones que se perciben como similares, limitando así las oportunidades de crecimiento y desarrollo personal. (Anulado)" },
-                    { linkName: "petalo-3/4/10", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "NO PODER EXPRESARTE", text: "Es la incapacidad o dificultad para comunicar pensamientos, sentimientos o ideas de manera efectiva. Esta dificultad puede surgir debido a diversas razones, como la falta de confianza en uno mismo, la ansiedad social, la falta de habilidades comunicativas o el miedo al juicio de los demás. Se puede experimentar frustración, incomodidad o aislamiento al no poder comunicarse de manera clara y precisa. (Anulado)" },
-                    { linkName: "petalo-3/4/11", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "NO QUERER COMPARTIR", text: "Falta de disposición o deseo de compartir información, recursos, tiempo o experiencias con otras personas. Esta actitud puede surgir por diversas razones, como el deseo de privacidad, la desconfianza, el egoísmo, el miedo al juicio de los demás o la sensación de que compartir podría resultar en pérdida personal. La falta de voluntad para compartir puede afectar las relaciones interpersonales, la colaboración y el desarrollo de vínculos significativos. (Anulado)" },
-                    { linkName: "petalo-3/4/12", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "NO QUERER COMUNICAR TUS DESEOS", text: "Falta de disposición para expresar abierta y claramente tus necesidades, aspiraciones o expectativas a otras personas. Esta actitud puede surgir por diversos motivos, como el temor al rechazo, la incomodidad al ser vulnerable, la falta de confianza en uno mismo o la creencia de que los demás no entenderán o no aceptarán tus deseos. La falta de comunicación de los propios deseos puede dificultar la satisfacción personal, generar malentendidos en las relaciones interpersonales y obstaculizar el logro de metas y objetivos personales. (Anulado)" },
-                    { linkName: "petalo-3/4/13", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "NO QUERER EXPRESARSE SEXUALMENTE", text: "Falta de disposición o deseo de comunicar tus necesidades, deseos, preferencias o límites en el ámbito sexual. Esta actitud puede surgir por diversas razones, como la vergüenza, la incomodidad, experiencias traumáticas pasadas, la falta de confianza en uno mismo o la percepción de que la expresión sexual puede generar conflictos o juicios por parte de los demás. La falta de comunicación sexual puede afectar la satisfacción y la intimidad en las relaciones románticas, así como dificultar la exploración y el entendimiento mutuo de las necesidades y deseos de la pareja. (Anulado)" },
-                    { linkName: "petalo-3/4/14", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "COMPORTAMIENTO OBSESIVO", text: "Son acciones repetitivas, pensamientos persistentes o preocupaciones intensas que dominan la vida de una persona y afectan su funcionamiento diario. Estas obsesiones pueden manifestarse en diversas áreas, como la limpieza, el orden, la seguridad, la religión, el trabajo, las relaciones interpersonales, entre otros. Quienes experimentan comportamientos obsesivos suelen sentir una necesidad irracional de controlar ciertos aspectos de sus vidas, lo que puede generar ansiedad, estrés y dificultades para concentrarse en otras actividades. (Anulado)" },
-                    { linkName: "petalo-3/4/15", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "RECHAZO AL DISFRUTE", text: "Resistencia a experimentar placer, felicidad o gratificación. Puede manifestarse como una falta de interés en actividades placenteras, evitación de situaciones que podrían generar alegría o una sensación de culpa o ansiedad asociada con el disfrute. Este rechazo puede estar relacionado con experiencias pasadas negativas, creencias limitantes sobre el merecimiento del placer o la felicidad, problemas de autoestima o trastornos emocionales como la depresión. El rechazo al disfrute puede limitar el bienestar emocional y la calidad de vida de la persona, ya que dificulta la capacidad de experimentar y apreciar las cosas positivas de la vida. (Anulado)" },
-                    { linkName: "petalo-3/4/16", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "REPRIMIENDO A LA PAREJA", text: "Ejercer control o limitar la libertad y expresión de la otra persona dentro de una relación. Esto puede manifestarse de diversas formas, como imponer reglas estrictas, limitar las interacciones sociales, controlar las decisiones personales o manipular emocionalmente. La represión en la pareja puede ser resultado de problemas de poder, inseguridades personales o patrones de comportamiento poco saludables. Puede tener consecuencias negativas en la relación, como la pérdida de confianza, la falta de intimidad y el deterioro de la salud emocional de ambos miembros de la pareja. (Anulado)" },
-                    { linkName: "petalo-3/4/17", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "REPRIMIÉNDOTE A TI MISMO/A", text: "Estas palabras implican la acción de ejercer autocontrol o contención sobre tus propias emociones, impulsos o acciones. Los ejemplos pueden ser: contener el llanto o la expresión de enojo en público, No expresar una opinión personal en una discusión, postergar el descanso o la relajación por sentirse obligado a trabajar constantemente. Etc. (Anulado)" },
-                    { linkName: "petalo-3/4/18", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "SADISMO", text: "Es la manifestación de impulsos o deseos inconscientes relacionados con el deseo de control, poder o dominación sobre los demás, acompañados de una falta de empatía o consideración por el bienestar de los demás. (Anulado)" },
-                    { linkName: "petalo-3/4/19", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "SENTIMIENTO DE CULPA POR TUS ANHELOS", text: "El sentimiento de culpa por tus anhelos se refiere a la sensación de malestar o remordimiento que experimentas cuando tus deseos o aspiraciones personales entran en conflicto con tus valores, creencias o las expectativas de los demás. Es la sensación de haber hecho algo malo o inapropiado al buscar satisfacer tus propias necesidades o deseos, especialmente si esto implica ignorar o afectar negativamente a otras personas en el proceso. Este tipo de culpa puede surgir cuando sientes que estás priorizando tus propios deseos sobre los de los demás, o cuando percibes que estás actuando de manera egoísta o irresponsable en la búsqueda de tus objetivos personales. (Anulado)" },
-                    { linkName: "petalo-3/4/20", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "SEXO REPRIMIDO", text: "Se refiere a la supresión de los deseos sexuales y la inhibición de la expresión sexual debido a influencias sociales, culturales o personales. Esto puede manifestarse como sentimientos de vergüenza, culpa o conflicto interno con los propios impulsos sexuales. (Anulado)" },
-                    { linkName: "petalo-3/4/21", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "VERGÜENZA SEXUAL", text: "Estos sentimientos pueden derivarse de mensajes negativos recibidos durante la crianza, experiencias traumáticas o la internalización de normas sociales restrictivas sobre la sexualidad, las conductas habituales pueden manifestarse evitando temas sexuales, dificultad para expresar deseos sexuales o experimentar placer sexual, que puede interferir en la intimidad y la satisfacción en las relaciones íntimas y sociales. (Anulado)" },
-                    { linkName: "petalo-3/4/22", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "ME SIENTO ABUSADO/A", text: "Significa que la persona experimenta una sensación de haber sido objeto de comportamientos abusivos por parte de otra persona o grupo, lo que puede incluir abuso emocional, físico, sexual o verbal. (Anulado)" },
-                    { linkName: "petalo-3/4/23", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "VIVO EN VIOLENCIA", text: "La violencia puede manifestarse en diversas formas y afectar múltiples aspectos de la vida de una persona, incluyendo su bienestar físico, emocional, mental y social, así como su entorno familiar y comunitario. Aquí la persona experimenta de manera continua o recurrente situaciones de abuso, maltrato, intimidación o agresión en su vida diaria. (Anulado)" },
-                    { linkName: "petalo-3/4/24", image: 'boton3', titlePage: "COMPORTAMIENTOS COTIDIANOS B", title: "MIEDO A SER", text: "Este miedo puede manifestarse en diversas situaciones sociales, emocionales o profesionales, donde la persona se siente insegura o vulnerable al mostrar su verdadero ser o compartir sus pensamientos, sentimientos, deseos o identidad. Este miedo puede surgir de experiencias pasadas de crítica, rechazo o invalidación, así como de normas sociales o expectativas culturales restrictivas que condicionan la aceptación de ciertos comportamientos. (Anulado)"}
-                ]
-            },
-            {
-                linkName: "petalo-3/5", image: 'boton3', title: "Cualidades del Ser A", text:"Las cualidades del ser se refieren a las características, atributos o rasgos que definen tu esencia. Estas cualidades pueden variar según el contexto en el que se apliquen, pero generalmente se refieren a aspectos de tu personalidad, habilidades, valores y virtudes. Estas cualidades son fundamentales para entender y describir la complejidad de cómo nos relacionamos con el mundo que nos rodea. (Se incorporaron las siguientes cualidades)", subPetalos: [
-                    { linkName: "petalo-3/5/1", image: 'boton3', titlePage: "Cualidades del Ser A", title: "ALEGRIA", text: "" },
-                    { linkName: "petalo-3/5/2", image: 'boton3', titlePage: "Cualidades del Ser A", title: "AMABILIDAD", text: "" },
-                    { linkName: "petalo-3/5/3", image: 'boton3', titlePage: "Cualidades del Ser A", title: "AMOR", text: "" },
-                    { linkName: "petalo-3/5/4", image: 'boton3', titlePage: "Cualidades del Ser A", title: "ARMONIA", text: "" },
-                    { linkName: "petalo-3/5/5", image: 'boton3', titlePage: "Cualidades del Ser A", title: "BONDAD", text: "" },
-                    { linkName: "petalo-3/5/6", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CLARIDAD", text: "" },
-                    { linkName: "petalo-3/5/7", image: 'boton3', titlePage: "Cualidades del Ser A", title: "COMPASION", text: "" },
-                    { linkName: "petalo-3/5/8", image: 'boton3', titlePage: "Cualidades del Ser A", title: "COMPOSTURA", text: "" },
-                    { linkName: "petalo-3/5/9", image: 'boton3', titlePage: "Cualidades del Ser A", title: "COMPRENSION", text: "" },
-                    { linkName: "petalo-3/5/10", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CONSCIENCIA", text: "" },
-                    { linkName: "petalo-3/5/11", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CONEXIÓN CON DIOS", text: "" },
-                    { linkName: "petalo-3/5/12", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CONFIANZA", text: "" },
-                    { linkName: "petalo-3/5/13", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CREATIVIDAD", text: "" },
-                    { linkName: "petalo-3/5/14", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CURIOSIDAD", text: "" },
-                    { linkName: "petalo-3/5/15", image: 'boton3', titlePage: "Cualidades del Ser A", title: "DIRECCION", text: "" },
-                    { linkName: "petalo-3/5/16", image: 'boton3', titlePage: "Cualidades del Ser A", title: "DISCRECION", text: "" },
-                    { linkName: "petalo-3/5/17", image: 'boton3', titlePage: "Cualidades del Ser A", title: "EMPATIA", text: "" },
-                    { linkName: "petalo-3/5/18", image: 'boton3', titlePage: "Cualidades del Ser A", title: "ESPIRITUALIDAD", text: "" },
-                    { linkName: "petalo-3/5/19", image: 'boton3', titlePage: "Cualidades del Ser A", title: "FE", text: "" },
-                    { linkName: "petalo-3/5/20", image: 'boton3', titlePage: "Cualidades del Ser A", title: "GENEROSIDAD", text: "" },
-                    { linkName: "petalo-3/5/21", image: 'boton3', titlePage: "Cualidades del Ser A", title: "GRATITUD", text: "" },
-                    { linkName: "petalo-3/5/22", image: 'boton3', titlePage: "Cualidades del Ser A", title: "HUMILDAD", text: "" }
-                ]
-            },
-            {
-                linkName: "petalo-3/6", image: 'boton3', title: "Cualidades del Ser B", text:"Las cualidades del ser se refieren a las características, atributos o rasgos que definen tu esencia. Estas cualidades pueden variar según el contexto en el que se apliquen, pero generalmente se refieren a aspectos de tu personalidad, habilidades, valores y virtudes. Estas cualidades son fundamentales para entender y describir la complejidad de cómo nos relacionamos con el mundo que nos rodea. (Se incorporaron las siguientes cualidades)", subPetalos: [
-                    { linkName: "petalo-3/6/1", image: 'boton3', titlePage: "Cualidades del Ser B", title: "INOCENCIA", text: "" },
-                    { linkName: "petalo-3/6/2", image: 'boton3', titlePage: "Cualidades del Ser B", title: "LEALTAD", text: "" },
-                    { linkName: "petalo-3/6/3", image: 'boton3', titlePage: "Cualidades del Ser B", title: "LIBERTAD", text: "" },
-                    { linkName: "petalo-3/6/4", image: 'boton3', titlePage: "Cualidades del Ser B", title: "OPTIMISMO", text: "" },
-                    { linkName: "petalo-3/6/5", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PACIENCIA", text: "" },
-                    { linkName: "petalo-3/6/6", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PAZ", text: "" },
-                    { linkName: "petalo-3/6/7", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PERCEPCION", text: "" },
-                    { linkName: "petalo-3/6/8", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PERDON", text: "" },
-                    { linkName: "petalo-3/6/9", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PERSEVERANCIA", text: "" },
-                    { linkName: "petalo-3/6/10", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PROPOSITO", text: "" },
-                    { linkName: "petalo-3/6/11", image: 'boton3', titlePage: "Cualidades del Ser B", title: "RESILIENCIA", text: "" },
-                    { linkName: "petalo-3/6/12", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SABIDURIA", text: "" },
-                    { linkName: "petalo-3/6/13", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SERENIDAD", text: "" },
-                    { linkName: "petalo-3/6/14", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SINCERIDAD", text: "" },
-                    { linkName: "petalo-3/6/15", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SOLIDARIDAD", text: "" },
-                    { linkName: "petalo-3/6/16", image: 'boton3', titlePage: "Cualidades del Ser B", title: "TOLERANCIA", text: "" },
-                    { linkName: "petalo-3/6/17", image: 'boton3', titlePage: "Cualidades del Ser B", title: "TRANSPARENCIA", text: "" },
-                    { linkName: "petalo-3/6/18", image: 'boton3', titlePage: "Cualidades del Ser B", title: "UNIDAD", text: "" },
-                    { linkName: "petalo-3/6/19", image: 'boton3', titlePage: "Cualidades del Ser B", title: "VALENTIA", text: "" },
-                    { linkName: "petalo-3/6/20", image: 'boton3', titlePage: "Cualidades del Ser B", title: "VOLUNTAD", text: "" },
-                    { linkName: "petalo-3/6/21", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SIMPLICIDAD", text: "" }
-                ]
-            },
-            {
-                linkName: "petalo-3/7", image: 'boton3', title: "Conducta Mental Positiva", text: "Sabemos que la actitud que cada uno toma frente a los problemas determina la importancia de los mismos, al incorporar conductas mentales positivas en nuestro subconsciente, logramos aumentar nuestra capacidad de resiliencia y energía. Estas conductas son importantes hacerlas conscientes y ponerlas en práctica en la vida cotidiana. (Se incorporaron las siguientes conductas positivas)", subPetalos: [
-                    { linkName: "petalo-3/7/1", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "GENEROSO", text: "" },
-                    { linkName: "petalo-3/7/2", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "HONESTO", text: "" },
-                    { linkName: "petalo-3/7/3", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "HONRADO", text: "" },
-                    { linkName: "petalo-3/7/4", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "HUMILDE", text: "" },
-                    { linkName: "petalo-3/7/5", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "INSPIRADO", text: "" },
-                    { linkName: "petalo-3/7/6", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "INTEGRO", text: "" },
-                    { linkName: "petalo-3/7/7", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "INTUITIVO", text: "" },
-                    { linkName: "petalo-3/7/8", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "LEAL", text: "" },
-                    { linkName: "petalo-3/7/9", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "MOTIVADO", text: "" },
-                    { linkName: "petalo-3/7/10", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "OPTIMISTA", text: "" },
-                    { linkName: "petalo-3/7/11", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "RECEPTIVO", text: "" },
-                    { linkName: "petalo-3/7/12", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "RELAJADO", text: "" },
-                    { linkName: "petalo-3/7/13", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SATISFECHO", text: "" },
-                    { linkName: "petalo-3/7/14", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SEGURO", text: "" },
-                    { linkName: "petalo-3/7/15", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SERENO", text: "" },
-                    { linkName: "petalo-3/7/16", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SIMPATICO", text: "" },
-                    { linkName: "petalo-3/7/17", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SINCERO", text: "" },
-                    { linkName: "petalo-3/7/18", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SOLIDARIO", text: "" },
-                    { linkName: "petalo-3/7/19", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "VALIENTE", text: "" }
-                ]
-            },
-            {
-                linkName: "petalo-3/8", image: 'boton3', title: "Conducta Mental Negativa A", text: "Todas las actitudes negativas que pueden presentarse en alguna área en particular de la vida nos pueden limitar profundamente, si logramos hacerlas conscientes y detectarlas en situaciones cotidianas, lograremos un gran avance interior y de mejora en nuestras relaciones interpersonales. (Se anularon las siguientes conductas negativas)", subPetalos: [
-                    { linkName: "petalo-3/8/1", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ABANDONADO", text: "" },
-                    { linkName: "petalo-3/8/2", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ABRUMADO", text: "" },
-                    { linkName: "petalo-3/8/3", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ABURRIDO", text: "" },
-                    { linkName: "petalo-3/8/4", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "AGOTADO", text: "" },
-                    { linkName: "petalo-3/8/5", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "AGRESIVO", text: "" },
-                    { linkName: "petalo-3/8/6", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "AMARGADO", text: "" },
-                    { linkName: "petalo-3/8/7", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "AMENAZADO", text: "" },
-                    { linkName: "petalo-3/8/8", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ANSIOSO", text: "" },
-                    { linkName: "petalo-3/8/9", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "APATICO", text: "" },
-                    { linkName: "petalo-3/8/10", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "APENADO", text: "" },
-                    { linkName: "petalo-3/8/11", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "AVERGONZADO", text: "" },
-                    { linkName: "petalo-3/8/12", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "CELOSO", text: "" },
-                    { linkName: "petalo-3/8/13", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "CONFUNDIDO", text: "" },
-                    { linkName: "petalo-3/8/14", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "CRITICADO", text: "" },
-                    { linkName: "petalo-3/8/15", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "CULPABLE", text: "" },
-                    { linkName: "petalo-3/8/16", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DECEPCIONADO", text: "" },
-                    { linkName: "petalo-3/8/17", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DEPRIMIDO", text: "" },
-                    { linkName: "petalo-3/8/18", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DESANIMADO", text: "" },
-                    { linkName: "petalo-3/8/19", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DESESPERADO", text: "" },
-                    { linkName: "petalo-3/8/20", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DESILUSIONADO", text: "" },
-                    { linkName: "petalo-3/8/21", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DESPRECIADO", text: "" },
-                    { linkName: "petalo-3/8/22", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DISCRIMINADO", text: "" },
-                    { linkName: "petalo-3/8/23", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DISGUSTADO", text: "" },
-                    { linkName: "petalo-3/8/24", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DISTANTE", text: "" },
-                    { linkName: "petalo-3/8/25", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ENOJADO", text: "" },
-                    { linkName: "petalo-3/8/26", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ESTANCADO", text: "" },
-                    { linkName: "petalo-3/8/27", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "EVASIVO", text: "" },
-                    { linkName: "petalo-3/8/28", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "FORZADO", text: "" }
-                ]
-            },
-            {
-                linkName: "petalo-3/9", image: 'boton3', title: "Conducta Mental Negativa B", text: "Todas las actitudes negativas que pueden presentarse en alguna área en particular de la vida nos pueden limitar profundamente, si logramos hacerlas conscientes y detectarlas en situaciones cotidianas, lograremos un gran avance interior y de mejora en nuestras relaciones interpersonales. (Se anularon las siguientes conductas negativas)",  subPetalos: [
-                    { linkName: "petalo-3/9/1", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "FRACASADO", text: "" },
-                    { linkName: "petalo-3/9/2", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "FRUSTRADO", text: "" },
-                    { linkName: "petalo-3/9/3", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "HERIDO", text: "" },
-                    { linkName: "petalo-3/9/4", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "HUMILLADO", text: "" },
-                    { linkName: "petalo-3/9/5", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "IGNORADO", text: "" },
-                    { linkName: "petalo-3/9/6", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "IMPOTENTE", text: "" },
-                    { linkName: "petalo-3/9/7", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INCOMODO", text: "" },
-                    { linkName: "petalo-3/9/8", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INDECISO", text: "" },
-                    { linkName: "petalo-3/9/9", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INDIFERENTE", text: "" },
-                    { linkName: "petalo-3/9/10", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INDIGNO", text: "" },
-                    { linkName: "petalo-3/9/11", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INSATISFECHO", text: "" },
-                    { linkName: "petalo-3/9/12", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INSEGURO", text: "" },
-                    { linkName: "petalo-3/9/13", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INSIGNIFICANTE", text: "" },
-                    { linkName: "petalo-3/9/14", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INTOLERANTE", text: "" },
-                    { linkName: "petalo-3/9/15", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "IRRITADO", text: "" },
-                    { linkName: "petalo-3/9/16", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "PERTURBADO", text: "" },
-                    { linkName: "petalo-3/9/17", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "RECHAZADO", text: "" },
-                    { linkName: "petalo-3/9/18", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "RESENTIDO", text: "" },
-                    { linkName: "petalo-3/9/19", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "RESIGNADO", text: "" },
-                    { linkName: "petalo-3/9/20", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "RIGIDO", text: "" },
-                    { linkName: "petalo-3/9/21", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "SOLITARIO", text: "" },
-                    { linkName: "petalo-3/9/22", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "SUMISO", text: "" },
-                    { linkName: "petalo-3/9/23", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "TRISTE", text: "" },
-                    { linkName: "petalo-3/9/24", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "VACIO", text: "" },
-                    { linkName: "petalo-3/9/25", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "VULNERABLE", text: "" }
-                ]
-            },
-            {
-                linkName: "petalo-3/10", image: 'boton3', title: "¿Que me bloquea?", text: "Existen situaciones en las cuales nos debilitamos o estresamos y también nos podemos bloquear, creando un desgaste interno muy profundo, esta corrección nos ayuda inteligentemente a sanar el punto detectado de una manera armoniosa y liberadora. (Se anularon los siguientes bloqueos)", noNumbers: true,  subPetalos: [
+                linkName: "petalo-3/1",
+                image: 'boton3',
+                title: "Patrones Mentales",
+                noNumbers: true,
+                text: "Los patrones mentales son estructuras de comportamientos muy marcados que se accionan en diferentes áreas de nuestra vida que generalmente nos bloquean y que impiden poner en práctica ciertas tareas del ámbito diario y su libre funcionamiento. Son comportamientos aprendidos o hábitos de nuestros ancestros. Suele suceder que existan varias capas del mismo patrón, por haber vivido repetidas veces las mismas situaciones. (Se anularon los siguientes patrones mentales)",
+                subPetalos: [
                     {
-                        linkName: "petalo-3/10/1", image: 'boton3', title: "A", index: 0, colorBorder: "red", subPetalos: [
+                        linkName: "petalo-3/1/1",
+                        image: 'boton3',
+                        title: "A",
+                        index: 0,
+                        colorBorder: "blue",
+                        subPetalos: [
                             {
-                                linkName: "petalo-3/10/1/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 1",
+                                linkName: "petalo-3/1/1/1",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "ABANDONO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/2",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "ADICCION",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/3",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "AMARGURA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/4",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "ANSIEDAD",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/5",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "APATIA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/6",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "AUTO CASTIGO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/7",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "AUTO CRITICA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/8",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "AUTORITARISMO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/9",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "BAJA AUTOESTIMA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/10",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CARENCIAS",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/11",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CELOS",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/12",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "COBARDIA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/13",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CODICIA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/14",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CONFORMISMO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/15",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CRITICA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/16",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CULPA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/17",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DEPRESION",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/18",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DESAMPARO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/19",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DESCONFIANZA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/20",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DESPRECIO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/21",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DOLOR",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/22",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DRAMA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/23",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DUDA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/24",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "EGOISMO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/25",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "ENVIDIA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/26",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "FRACASO",
+                                text: ""
+                            }, {
+                                linkName: "petalo-3/1/1/1",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "ABANDONO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/2",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "ADICCION",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/3",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "AMARGURA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/4",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "ANSIEDAD",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/5",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "APATIA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/6",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "AUTO CASTIGO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/7",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "AUTO CRITICA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/8",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "AUTORITARISMO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/9",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "BAJA AUTOESTIMA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/10",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CARENCIAS",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/11",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CELOS",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/12",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "COBARDIA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/13",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CODICIA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/14",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CONFORMISMO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/15",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CRITICA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/16",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "CULPA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/17",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DEPRESION",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/18",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DESAMPARO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/19",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DESCONFIANZA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/20",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DESPRECIO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/21",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DOLOR",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/22",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DRAMA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/23",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "DUDA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/24",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "EGOISMO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/25",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "ENVIDIA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/1/26",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales A",
+                                title: "FRACASO",
+                                text: ""
+                            }
+                        ],
+                    },
+                    {
+                        linkName: "petalo-3/1/2",
+                        image: 'boton3',
+                        title: "B",
+                        index: 1,
+                        colorBorder: "red",
+                        text: "Los patrones mentales son estructuras de comportamientos muy marcados que se accionan en diferentes áreas de nuestra vida que generalmente nos bloquean y que impiden poner en práctica ciertas tareas del ámbito diario y su libre funcionamiento. Son comportamientos aprendidos o hábitos de nuestros ancestros. Suele suceder que existan varias capas del mismo patrón, por haber vivido repetidas veces las mismas situaciones. (Se anularon los siguientes patrones mentales)",
+                        subPetalos: [
+                            {
+                                linkName: "petalo-3/1/2/1",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "FRUSTRACION",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/2",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "INDESICION",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/3",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "INDIFERENCIA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/4",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "INFERIORIDAD",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/5",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "INFIDELIDAD",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/6",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "INSATISFACCION",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/7",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "MANIPULACION",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/8",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "MIEDO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/9",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "NEGATIVIDAD",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/10",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "NERVIOSISMO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/11",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "NO MEREZCO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/12",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "NO PUEDO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/13",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "ODIO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/14",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "PANICO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/15",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "PENA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/16",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "PESIMISMO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/17",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "POSPONER",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/18",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "PREOCUPACION",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/19",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "QUEJA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/20",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "RABIA",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/21",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "RENCOR",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/22",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "SUFRIMIENTO",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/23",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "SUMISION",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/24",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "TEMOR",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/1/2/25",
+                                image: 'boton3',
+                                titlePage: "Patrones Mentales B",
+                                title: "TIMIDEZ",
+                                text: ""
+                            }
+                        ]
+                    },
+                ]
+            },
+            {
+                linkName: "petalo-3/2",
+                image: 'boton3',
+                title: "COMPORTAMIENTOS COTIDIANOS",
+                noNumbers: true,
+                text: "En este punto se encuentran varias opciones las cuales vivimos cotidianamente en lo personal, social y en el plano sexual, tratar de liberarnos de estos comportamientos hace que tengamos una vida más plena y armoniosa. (Se anularon los siguientes comportamientos)",
+                subPetalos: [
+                    {
+                        linkName: "petalo-3/2/1",
+                        image: 'boton3',
+                        title: "A",
+                        index: 0,
+                        colorBorder: "red",
+                        subPetalos: [
+                            {
+                                linkName: "petalo-3/2/1/1",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "ABUSO",
+                                text: "El abuso puede manifestarse de diversas formas en la vida cotidiana, incluyendo el abuso físico, emocional, psicológico, sexual, financiero o de cualquier otra índole. Puede ocurrir en relaciones interpersonales, entornos laborales, instituciones educativas, contextos familiares, comunidades e incluso a nivel societal. Este ejemplo puede ser interpretado como un acto de abuso, ya sea hacia uno mismo o hacia los demás... (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/2",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "ANORGASMIA",
+                                text: "La anorgasmia es la incapacidad persistente para alcanzar el orgasmo, más común en mujeres. Las causas pueden ser físicas (trastornos hormonales, medicamentos, condiciones médicas) o psicológicas (estrés, ansiedad, menopausia, conflictos de pareja). Por otro lado, esta corrección a nivel simbólico nos puede estar diciendo que no podemos obtener placer en algún área de nuestra vida. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/3",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "ASCO SEXUAL",
+                                text: "Es un estado de repugnancia o aversión que experimenta una persona hacia algo que percibe como sucio, desagradable o inmundo. Desde un punto de vista simbólico o metafórico, el asco puede representar una reacción emocional ante situaciones, acciones o características que son moralmente o éticamente reprensibles, inaceptables o degradantes para la persona que lo experimenta. Puede implicar una sensación de desprecio o desdén hacia algo considerado deplorable o indigno. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/4",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "ASEXUAL",
+                                text: "Indica que no experimenta atracción hacia el placer sexual en ninguna de sus formas. Esta orientación puede estar relacionada con diversos factores como bloqueos en los Chakras, experiencias negativas pasadas, miedos, traumas o desequilibrios hormonales. También podría sugerir que la pareja actual no despierta excitación o deseo. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/5",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                fieldText: true,
+                                title: "BARRERA EMOCIONAL GENITAL",
+                                text: "Obstáculo emocional que afecta la capacidad para experimentar una conexión emocional o íntima en el ámbito sexual. Esta barrera puede manifestarse como dificultades para relacionarse sexualmente con otras personas, sentir miedo, ansiedad o bloqueo emocional durante encuentros íntimos, o tener dificultades para experimentar placer sexual debido a traumas, conflictos internos o creencias limitantes. (Aquí anulamos las siguientes emociones)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/6",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "BLOQUEO ENERGÉTICO GENITAL",
+                                text: "Interrupción o limitación del flujo de energía vital en la región genital del cuerpo humano. Al abordar un bloqueo energético genital trabajamos para desbloquear e equilibrar la energía estancada en la zona genital. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/7",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "BLOQUEOS QUE IMPIDEN DISFRUTAR",
+                                text: "Obstáculos que interfieren con la capacidad para experimentar plenamente el placer, la alegría o la satisfacción en diversos aspectos de la vida. Abordar estos bloqueos puede implicar explorar y trabajar a través de las emociones, resolver traumas pasados, desafiar y cambiar creencias limitantes, practicar la autoaceptación y el autocuidado, y aprender nuevas habilidades de afrontamiento para manejar los desafíos emocionales que surgen. El objetivo es liberar estos bloqueos para permitir una mayor apertura, satisfacción y disfrute en la vida y las relaciones. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/8",
+                                image: 'boton3',
+                                fieldText: true,
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "BLOQUEO AL DAR/RECIBIR",
+                                text: "Son obstáculos que interfieren con la capacidad para dar de manera desinteresada y recibir de manera receptiva en diversas interacciones y relaciones humanas. Este bloqueo puede tener un impacto significativo en las relaciones interpersonales, ya que pueden crear desequilibrios en la dinámica de dar y recibir, causar resentimiento, frustración o malentendidos, y dificultar la construcción de conexiones profundas y satisfactorias. El objetivo es cultivar una relación más equilibrada y gratificante con la capacidad de dar y recibir en todas las áreas de la vida. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/9",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "COMPLEJOS",
+                                text: "Se refiere a un patrón persistente de pensamientos, sentimientos o creencias negativas y distorsionadas sobre uno mismo, que afectan la percepción y el comportamiento de una persona de manera significativa. Estos complejos pueden tener su origen en experiencias pasadas, traumas, interacciones sociales, influencias culturales o creencias internalizadas que dan forma a la autoimagen y la autoestima de la persona. Los complejos pueden manifestarse en diferentes áreas de la vida, como la apariencia física, las habilidades sociales, la inteligencia, la valía personal, entre otros. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/10",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "TRAUMAS",
+                                text: "Un trauma psicológico es una respuesta abrumadora a un evento que amenaza la vida o la integridad emocional de una persona. Estos eventos pueden ser únicos, como un accidente grave o un desastre natural, o pueden ser experiencias repetidas de abuso o negligencia. Los traumas pueden dejar una marca duradera en la mente y el cuerpo de una persona, afectando su capacidad para funcionar en la vida diaria y relacionarse con los demás. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/11",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "COMPORTAMIENTO INFANTIL",
+                                text: "El infantilismo se refiere a un estado en el que una persona muestra características o comportamientos típicos de un niño, incluso en la edad adulta. Esto puede manifestarse en diversas formas, como dificultad para asumir responsabilidades adultas, dependencia excesiva de los demás, falta de autonomía, expresión emocional inmadura, entre otros. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/12",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "CONFLICTOS DE CREENCIAS SEXUALES",
+                                text: "Los conflictos moralistas sexuales surgen cuando las normas y expectativas morales de una persona chocan con sus deseos y comportamientos sexuales. Estas tensiones pueden llevar a sentimientos de culpa, vergüenza o conflicto interno, y pueden influir en la manera en que una persona vive y expresa su sexualidad. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/13",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "CONFLICTOS RELIGIOSOS SEXUALES",
+                                text: "Los conflictos religiosos sexuales se pueden definir como tensiones emocionales, cognitivas y sociales que surgen cuando las creencias religiosas y las normas relacionadas con la sexualidad entran en conflicto con los deseos, necesidades y valores individuales en este ámbito. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/14",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "CONVICCIÓN SOBRE TUS DESEOS",
+                                text: "La convicción sobre tus deseos puede influir en varios aspectos de la vida de una persona, incluida su motivación, su persistencia ante los desafíos y su capacidad para superar obstáculos. Cuando alguien tiene una fuerte convicción sobre sus deseos, es más probable que se comprometa con las acciones necesarias para alcanzarlos, incluso en situaciones difíciles. (Incorporado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/15",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "CULPABILIDAD",
+                                text: "La culpabilidad se refiere a un sentimiento de responsabilidad o remordimiento que experimenta una persona cuando cree que ha cometido un error, infringido una norma moral o causado daño a alguien. Este sentimiento puede surgir tanto por acciones reales como por percepciones subjetivas de lo que se considera incorrecto. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/16",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "DESCONOCIMIENTO SOBRE TUS ANHELOS",
+                                text: "Sería la falta de comprensión acerca de tus aspiraciones, deseos o metas personales. Es la incapacidad de identificar o comprender lo que verdaderamente deseas en la vida o lo que te motiva profundamente. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/17",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "ESCLAVITUD",
+                                text: "Es un estado en el que una persona pierde su autonomía, libertad y capacidad de elección debido a la dominación de otro individuo o grupo, esto puede experimentarse de manera real o simbólica. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/1/18",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "EYACULACIÓN PRECOZ (Anulado)",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/2/1/19",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "FETICHE (Anulado)",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/2/1/20",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "FRIGIDEZ (Anulado)",
+                                text: ""
+                            },
+                            {
+                                linkName: "petalo-3/2/1/21",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS A",
+                                title: "HOMOFOBIA (Anulado)",
+                                text: ""
+                            }
+                        ],
+                    },
+                    {
+                        linkName: "petalo-3/2/2",
+                        image: 'boton3',
+                        title: "B",
+                        index: 1,
+                        colorBorder: "blue",
+                        subPetalos: [
+                            {
+                                linkName: "petalo-3/2/2/1",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "HORMONAL",
+                                text: "Los 'comportamientos hormonales' son acciones o conductas que son influenciadas, en parte, por la actividad hormonal en el cuerpo. Las hormonas son mensajeros químicos que se producen en varias glándulas del cuerpo y regulan una amplia gama de funciones biológicas y comportamientos. Los comportamientos hormonales pueden abarcar una variedad de aspectos, como el estado de ánimo, la reproducción, el apetito, el sueño, la respuesta al estrés y la agresión, entre otros. Estos comportamientos pueden ser el resultado de cambios en los niveles hormonales, interacciones hormonales complejas o la respuesta del organismo a las señales hormonales. (Se corrigieron las siguientes hormonas)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/2",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "IMPOTENCIA",
+                                text: "El 'comportamiento por impotencia' se refiere a las acciones o conductas que una persona exhibe como resultado de sentirse impotente o incapaz de lograr un objetivo o enfrentar una situación. Puede surgir en respuesta a desafíos difíciles, percepciones de falta de control sobre la situación o creencias sobre la incapacidad personal para hacer frente a determinadas circunstancias. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/3",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "INSEGURIDAD CORPORAL",
+                                text: "El 'comportamiento de inseguridad corporal' describe las acciones o actitudes que una persona adopta como resultado de sentirse insegura acerca de su cuerpo o apariencia física. Estos comportamientos pueden manifestarse de diversas maneras, como evitar situaciones sociales o actividades que involucren mostrar el cuerpo, compararse constantemente con los demás, buscar constantemente validación externa, desarrollar hábitos poco saludables relacionados con la alimentación o el ejercicio, o experimentar ansiedad o depresión relacionada con la imagen corporal. Las personas que experimentan inseguridad corporal pueden tener una percepción distorsionada de su propio cuerpo y pueden tener dificultades para aceptarse a sí mismas tal como son. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/4",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "INSEGURIDADES CORPORALES QUE LIMITAN",
+                                text: "Los comportamientos de inseguridad corporal que limitan pueden incluir: Evitar situaciones sociales o actividades que requieran mostrar su cuerpo, como ir a la playa o la piscina, participar en deportes o incluso simplemente salir con amigos. Obsesión por la apariencia, atención excesiva a detalles como el peso, el tamaño, la forma o la piel. Comparación constante, lo que puede alimentar sentimientos de inferioridad y aumentar la inseguridad. Vestirse de manera excesivamente conservadora. No participar en actividades físicas por miedo a ser juzgado por otros o sentirse incómodo con su cuerpo. Desarrollo de trastornos alimentarios, comportamientos alimentarios poco saludables, como dietas extremas, ayuno o purga, que pueden resultar en trastornos alimentarios como la anorexia o la bulimia. Evitar relaciones íntimas. Estos comportamientos pueden limitar significativamente la vida de una persona y afectar su bienestar emocional y mental. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/5",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "LEGADO TRANSGENERACIONAL (-)",
+                                noNumbers: true,
+                                text: "Se refiere a patrones de pensamiento, comportamiento o dinámicas familiares disfuncionales que son transmitidos de una generación a otra y que tienen un impacto negativo en el bienestar y desarrollo. Este legado puede incluir traumas no resueltos, abuso físico o emocional, adicciones, trastornos mentales no tratados, patrones de comunicación o cualquier otra forma de disfunción familiar que persista a lo largo del tiempo dentro de nuestro árbol genealógico. (Aquí se sanaron, repararon y revivieron todos los comportamientos heredados del linaje materno o paterno)",
+                                subPetalos: [
+                                    {
+                                        linkName: "petalo-3/2/2/5/1",
+                                        image: 'boton3',
+                                        titlePage: "LEGADO TRANSGENERACIONAL",
+                                        title: "A",
+                                        index: 0,
+                                        subPetalos: [
+                                            {
+                                                linkName: "petalo-3/2/2/5/1/1",
+                                                image: 'boton3',
+                                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                                title: "LEGADO TRANSGENERACIONAL A",
+                                                text: "SANANDO"
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        linkName: "petalo-3/2/2/5/2",
+                                        image: 'boton3',
+                                        titlePage: "LEGADO TRANSGENERACIONAL",
+                                        title: "B",
+                                        index: 1,
+                                        subPetalos: [
+                                            {
+                                                linkName: "petalo-3/2/2/5/2/1",
+                                                image: 'boton3',
+                                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                                title: "LEGADO TRANSGENERACIONAL B",
+                                                text: "REPARANDO"
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        linkName: "petalo-3/2/2/5/3",
+                                        image: 'boton3',
+                                        titlePage: "LEGADO TRANSGENERACIONAL",
+                                        title: "C",
+                                        index: 2,
+                                        subPetalos: [
+                                            {
+                                                linkName: "petalo-3/2/2/5/3/1",
+                                                image: 'boton3',
+                                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                                title: "LEGADO TRANSGENERACIONAL C",
+                                                text: "REVIVIENDO"
+                                            },
+                                        ]
+                                    },
+                                ]
+                            },
+                            {
+                                linkName: "petalo-3/2/2/6",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "MASOQUISMO",
+                                text: "El masoquismo es una tendencia o práctica en la que una persona encuentra placer o gratificación al experimentar dolor, humillación o sufrimiento físico o emocional. En situaciones de la vida cotidiana donde se busca inconscientemente situaciones que le causen dolor o sufrimiento. El masoquismo también puede ser parte de una dinámica de poder en una relación donde una persona busca ser dominada o sometida por otra. En algunos casos, el masoquismo puede llegar a ser peligroso si conduce a comportamientos autodestructivos o si la persona no es capaz de establecer límites saludables para proteger su bienestar físico y emocional. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/7",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "MIEDO A DESEAR",
+                                text: "Conocido como hedonofobia, es una condición psicológica donde se experimenta ansiedad o temor al placer, la felicidad o el disfrute de la vida. Esta fobia puede manifestarse de diferentes maneras, como el miedo a buscar el éxito, el miedo al placer físico o emocional, o el miedo a satisfacer necesidades personales. Cuando se sufre de hedonofobia a menudo pueden sentirse culpables o avergonzadas por querer cosas que les proporcionen placer, lo que puede llevar a una vida restringida y limitada en experiencias satisfactorias. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/8",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "MIEDO A FRACASAR",
+                                text: "Es una respuesta emocional intensa y paralizante que se experimenta cuando enfrentan situaciones en las que perciben que existe la posibilidad de no alcanzar sus metas o expectativas. Esta respuesta puede surgir en diversas áreas de la vida, como el trabajo, los estudios, las relaciones personales o los proyectos personales. Si experimentas este miedo a menudo se evita tomar riesgos o desafíos nuevos por temor a no cumplir con las expectativas, lo que puede limitar tu crecimiento personal y profesional. El miedo al fracasar puede manifestarse a través de síntomas como ansiedad, falta de confianza en uno mismo, procrastinación o autosabotaje. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/9",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "MIEDOS A REPETIR SITUACIONES PASADOS",
+                                text: "Es una respuesta emocional en la que sientes ansiedad o temor ante la posibilidad de que situaciones similares a experiencias pasadas negativas vuelvan a ocurrir en el presente o futuro. Esta respuesta puede surgir debido a traumas pasados, malas experiencias o errores anteriores, y puede llevar a la evitar situaciones que se perciben como similares, limitando así las oportunidades de crecimiento y desarrollo personal. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/10",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "NO PODER EXPRESARTE",
+                                text: "Es la incapacidad o dificultad para comunicar pensamientos, sentimientos o ideas de manera efectiva. Esta dificultad puede surgir debido a diversas razones, como la falta de confianza en uno mismo, la ansiedad social, la falta de habilidades comunicativas o el miedo al juicio de los demás. Se puede experimentar frustración, incomodidad o aislamiento al no poder comunicarse de manera clara y precisa. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/11",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "NO QUERER COMPARTIR",
+                                text: "Falta de disposición o deseo de compartir información, recursos, tiempo o experiencias con otras personas. Esta actitud puede surgir por diversas razones, como el deseo de privacidad, la desconfianza, el egoísmo, el miedo al juicio de los demás o la sensación de que compartir podría resultar en pérdida personal. La falta de voluntad para compartir puede afectar las relaciones interpersonales, la colaboración y el desarrollo de vínculos significativos. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/12",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "NO QUERER COMUNICAR TUS DESEOS",
+                                text: "Falta de disposición para expresar abierta y claramente tus necesidades, aspiraciones o expectativas a otras personas. Esta actitud puede surgir por diversos motivos, como el temor al rechazo, la incomodidad al ser vulnerable, la falta de confianza en uno mismo o la creencia de que los demás no entenderán o no aceptarán tus deseos. La falta de comunicación de los propios deseos puede dificultar la satisfacción personal, generar malentendidos en las relaciones interpersonales y obstaculizar el logro de metas y objetivos personales. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/13",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "NO QUERER EXPRESARSE SEXUALMENTE",
+                                text: "Falta de disposición o deseo de comunicar tus necesidades, deseos, preferencias o límites en el ámbito sexual. Esta actitud puede surgir por diversas razones, como la vergüenza, la incomodidad, experiencias traumáticas pasadas, la falta de confianza en uno mismo o la percepción de que la expresión sexual puede generar conflictos o juicios por parte de los demás. La falta de comunicación sexual puede afectar la satisfacción y la intimidad en las relaciones románticas, así como dificultar la exploración y el entendimiento mutuo de las necesidades y deseos de la pareja. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/14",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "COMPORTAMIENTO OBSESIVO",
+                                text: "Son acciones repetitivas, pensamientos persistentes o preocupaciones intensas que dominan la vida de una persona y afectan su funcionamiento diario. Estas obsesiones pueden manifestarse en diversas áreas, como la limpieza, el orden, la seguridad, la religión, el trabajo, las relaciones interpersonales, entre otros. Quienes experimentan comportamientos obsesivos suelen sentir una necesidad irracional de controlar ciertos aspectos de sus vidas, lo que puede generar ansiedad, estrés y dificultades para concentrarse en otras actividades. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/15",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "RECHAZO AL DISFRUTE",
+                                text: "Resistencia a experimentar placer, felicidad o gratificación. Puede manifestarse como una falta de interés en actividades placenteras, evitación de situaciones que podrían generar alegría o una sensación de culpa o ansiedad asociada con el disfrute. Este rechazo puede estar relacionado con experiencias pasadas negativas, creencias limitantes sobre el merecimiento del placer o la felicidad, problemas de autoestima o trastornos emocionales como la depresión. El rechazo al disfrute puede limitar el bienestar emocional y la calidad de vida de la persona, ya que dificulta la capacidad de experimentar y apreciar las cosas positivas de la vida. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/16",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "REPRIMIENDO A LA PAREJA",
+                                text: "Ejercer control o limitar la libertad y expresión de la otra persona dentro de una relación. Esto puede manifestarse de diversas formas, como imponer reglas estrictas, limitar las interacciones sociales, controlar las decisiones personales o manipular emocionalmente. La represión en la pareja puede ser resultado de problemas de poder, inseguridades personales o patrones de comportamiento poco saludables. Puede tener consecuencias negativas en la relación, como la pérdida de confianza, la falta de intimidad y el deterioro de la salud emocional de ambos miembros de la pareja. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/17",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "REPRIMIÉNDOTE A TI MISMO/A",
+                                text: "Estas palabras implican la acción de ejercer autocontrol o contención sobre tus propias emociones, impulsos o acciones. Los ejemplos pueden ser: contener el llanto o la expresión de enojo en público, No expresar una opinión personal en una discusión, postergar el descanso o la relajación por sentirse obligado a trabajar constantemente. Etc. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/18",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "SADISMO",
+                                text: "Es la manifestación de impulsos o deseos inconscientes relacionados con el deseo de control, poder o dominación sobre los demás, acompañados de una falta de empatía o consideración por el bienestar de los demás. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/19",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "SENTIMIENTO DE CULPA POR TUS ANHELOS",
+                                text: "El sentimiento de culpa por tus anhelos se refiere a la sensación de malestar o remordimiento que experimentas cuando tus deseos o aspiraciones personales entran en conflicto con tus valores, creencias o las expectativas de los demás. Es la sensación de haber hecho algo malo o inapropiado al buscar satisfacer tus propias necesidades o deseos, especialmente si esto implica ignorar o afectar negativamente a otras personas en el proceso. Este tipo de culpa puede surgir cuando sientes que estás priorizando tus propios deseos sobre los de los demás, o cuando percibes que estás actuando de manera egoísta o irresponsable en la búsqueda de tus objetivos personales. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/20",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "SEXO REPRIMIDO",
+                                text: "Se refiere a la supresión de los deseos sexuales y la inhibición de la expresión sexual debido a influencias sociales, culturales o personales. Esto puede manifestarse como sentimientos de vergüenza, culpa o conflicto interno con los propios impulsos sexuales. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/21",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "VERGÜENZA SEXUAL",
+                                text: "Estos sentimientos pueden derivarse de mensajes negativos recibidos durante la crianza, experiencias traumáticas o la internalización de normas sociales restrictivas sobre la sexualidad, las conductas habituales pueden manifestarse evitando temas sexuales, dificultad para expresar deseos sexuales o experimentar placer sexual, que puede interferir en la intimidad y la satisfacción en las relaciones íntimas y sociales. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/22",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "ME SIENTO ABUSADO/A",
+                                text: "Significa que la persona experimenta una sensación de haber sido objeto de comportamientos abusivos por parte de otra persona o grupo, lo que puede incluir abuso emocional, físico, sexual o verbal. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/23",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "VIVO EN VIOLENCIA",
+                                text: "La violencia puede manifestarse en diversas formas y afectar múltiples aspectos de la vida de una persona, incluyendo su bienestar físico, emocional, mental y social, así como su entorno familiar y comunitario. Aquí la persona experimenta de manera continua o recurrente situaciones de abuso, maltrato, intimidación o agresión en su vida diaria. (Anulado)"
+                            },
+                            {
+                                linkName: "petalo-3/2/2/24",
+                                image: 'boton3',
+                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
+                                title: "MIEDO A SER",
+                                text: "Este miedo puede manifestarse en diversas situaciones sociales, emocionales o profesionales, donde la persona se siente insegura o vulnerable al mostrar su verdadero ser o compartir sus pensamientos, sentimientos, deseos o identidad. Este miedo puede surgir de experiencias pasadas de crítica, rechazo o invalidación, así como de normas sociales o expectativas culturales restrictivas que condicionan la aceptación de ciertos comportamientos. (Anulado)"
+                            }
+
+                        ]
+                    }
+                ]
+            },
+            {
+                linkName: "petalo-3/3",
+                image: 'boton3',
+                title: "CUALIDADES DEL SER",
+                noNumbers: true,
+                text: "Las cualidades del ser se refieren a las características, atributos o rasgos que definen tu esencia. Estas cualidades pueden variar según el contexto en el que se apliquen, pero generalmente se refieren a aspectos de tu personalidad, habilidades, valores y virtudes. Estas cualidades son fundamentales para entender y describir la complejidad de cómo nos relacionamos con el mundo que nos rodea. (Se incorporaron las siguientes cualidades)",
+                subPetalos: [
+                    {linkName: "petalo-3/3/1", image: 'boton3', title: "A", index: 0, colorBorder: 'red', subPetalos: [
+                            { linkName: "petalo-3/3/1/1", image: 'boton3', titlePage: "Cualidades del Ser A", title: "ALEGRIA", text: "" },
+                            { linkName: "petalo-3/3/1/2", image: 'boton3', titlePage: "Cualidades del Ser A", title: "AMABILIDAD", text: "" },
+                            { linkName: "petalo-3/3/1/3", image: 'boton3', titlePage: "Cualidades del Ser A", title: "AMOR", text: "" },
+                            { linkName: "petalo-3/3/1/4", image: 'boton3', titlePage: "Cualidades del Ser A", title: "ARMONIA", text: "" },
+                            { linkName: "petalo-3/3/1/5", image: 'boton3', titlePage: "Cualidades del Ser A", title: "BONDAD", text: "" },
+                            { linkName: "petalo-3/3/1/6", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CLARIDAD", text: "" },
+                            { linkName: "petalo-3/3/1/7", image: 'boton3', titlePage: "Cualidades del Ser A", title: "COMPASION", text: "" },
+                            { linkName: "petalo-3/3/1/8", image: 'boton3', titlePage: "Cualidades del Ser A", title: "COMPOSTURA", text: "" },
+                            { linkName: "petalo-3/3/1/9", image: 'boton3', titlePage: "Cualidades del Ser A", title: "COMPRENSION", text: "" },
+                            { linkName: "petalo-3/3/1/10", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CONSCIENCIA", text: "" },
+                            { linkName: "petalo-3/3/1/11", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CONEXIÓN CON DIOS", text: "" },
+                            { linkName: "petalo-3/3/1/12", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CONFIANZA", text: "" },
+                            { linkName: "petalo-3/3/1/13", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CREATIVIDAD", text: "" },
+                            { linkName: "petalo-3/3/1/14", image: 'boton3', titlePage: "Cualidades del Ser A", title: "CURIOSIDAD", text: "" },
+                            { linkName: "petalo-3/3/1/15", image: 'boton3', titlePage: "Cualidades del Ser A", title: "DIRECCION", text: "" },
+                            { linkName: "petalo-3/3/1/16", image: 'boton3', titlePage: "Cualidades del Ser A", title: "DISCRECION", text: "" },
+                            { linkName: "petalo-3/3/1/17", image: 'boton3', titlePage: "Cualidades del Ser A", title: "EMPATIA", text: "" },
+                            { linkName: "petalo-3/3/1/18", image: 'boton3', titlePage: "Cualidades del Ser A", title: "ESPIRITUALIDAD", text: "" },
+                            { linkName: "petalo-3/3/1/19", image: 'boton3', titlePage: "Cualidades del Ser A", title: "FE", text: "" },
+                            { linkName: "petalo-3/3/1/20", image: 'boton3', titlePage: "Cualidades del Ser A", title: "GENEROSIDAD", text: "" },
+                            { linkName: "petalo-3/3/1/21", image: 'boton3', titlePage: "Cualidades del Ser A", title: "GRATITUD", text: "" },
+                            { linkName: "petalo-3/3/1/22", image: 'boton3', titlePage: "Cualidades del Ser A", title: "HUMILDAD", text: "" }
+                        ]
+                    },
+                    {linkName: "petalo-3/3/2", image: 'boton3', title: "B", index: 1, colorBorder: 'blue', subPetalos: [
+                            { linkName: "petalo-3/3/26/1", image: 'boton3', titlePage: "Cualidades del Ser B", title: "INOCENCIA", text: "" },
+                            { linkName: "petalo-3/3/26/2", image: 'boton3', titlePage: "Cualidades del Ser B", title: "LEALTAD", text: "" },
+                            { linkName: "petalo-3/3/26/3", image: 'boton3', titlePage: "Cualidades del Ser B", title: "LIBERTAD", text: "" },
+                            { linkName: "petalo-3/3/26/4", image: 'boton3', titlePage: "Cualidades del Ser B", title: "OPTIMISMO", text: "" },
+                            { linkName: "petalo-3/3/26/5", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PACIENCIA", text: "" },
+                            { linkName: "petalo-3/3/26/6", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PAZ", text: "" },
+                            { linkName: "petalo-3/3/26/7", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PERCEPCION", text: "" },
+                            { linkName: "petalo-3/3/26/8", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PERDON", text: "" },
+                            { linkName: "petalo-3/3/26/9", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PERSEVERANCIA", text: "" },
+                            { linkName: "petalo-3/3/26/10", image: 'boton3', titlePage: "Cualidades del Ser B", title: "PROPOSITO", text: "" },
+                            { linkName: "petalo-3/3/26/11", image: 'boton3', titlePage: "Cualidades del Ser B", title: "RESILIENCIA", text: "" },
+                            { linkName: "petalo-3/3/26/12", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SABIDURIA", text: "" },
+                            { linkName: "petalo-3/3/26/13", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SERENIDAD", text: "" },
+                            { linkName: "petalo-3/3/26/14", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SINCERIDAD", text: "" },
+                            { linkName: "petalo-3/3/26/15", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SOLIDARIDAD", text: "" },
+                            { linkName: "petalo-3/3/26/16", image: 'boton3', titlePage: "Cualidades del Ser B", title: "TOLERANCIA", text: "" },
+                            { linkName: "petalo-3/3/26/17", image: 'boton3', titlePage: "Cualidades del Ser B", title: "TRANSPARENCIA", text: "" },
+                            { linkName: "petalo-3/3/26/18", image: 'boton3', titlePage: "Cualidades del Ser B", title: "UNIDAD", text: "" },
+                            { linkName: "petalo-3/3/26/19", image: 'boton3', titlePage: "Cualidades del Ser B", title: "VALENTIA", text: "" },
+                            { linkName: "petalo-3/3/26/20", image: 'boton3', titlePage: "Cualidades del Ser B", title: "VOLUNTAD", text: "" },
+                            { linkName: "petalo-3/3/26/21", image: 'boton3', titlePage: "Cualidades del Ser B", title: "SIMPLICIDAD", text: "" }
+                        ]
+                    },
+                ]
+            },
+            {
+                linkName: "petalo-3/4", image: 'boton3', title: "Conducta Mental Positiva", text: "Sabemos que la actitud que cada uno toma frente a los problemas determina la importancia de los mismos, al incorporar conductas mentales positivas en nuestro subconsciente, logramos aumentar nuestra capacidad de resiliencia y energía. Estas conductas son importantes hacerlas conscientes y ponerlas en práctica en la vida cotidiana. (Se incorporaron las siguientes conductas positivas)", subPetalos: [
+                    { linkName: "petalo-3/4/1", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "GENEROSO", text: "" },
+                    { linkName: "petalo-3/4/2", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "HONESTO", text: "" },
+                    { linkName: "petalo-3/4/3", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "HONRADO", text: "" },
+                    { linkName: "petalo-3/4/4", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "HUMILDE", text: "" },
+                    { linkName: "petalo-3/4/5", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "INSPIRADO", text: "" },
+                    { linkName: "petalo-3/4/6", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "INTEGRO", text: "" },
+                    { linkName: "petalo-3/4/7", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "INTUITIVO", text: "" },
+                    { linkName: "petalo-3/4/8", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "LEAL", text: "" },
+                    { linkName: "petalo-3/4/9", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "MOTIVADO", text: "" },
+                    { linkName: "petalo-3/4/10", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "OPTIMISTA", text: "" },
+                    { linkName: "petalo-3/4/11", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "RECEPTIVO", text: "" },
+                    { linkName: "petalo-3/4/12", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "RELAJADO", text: "" },
+                    { linkName: "petalo-3/4/13", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SATISFECHO", text: "" },
+                    { linkName: "petalo-3/4/14", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SEGURO", text: "" },
+                    { linkName: "petalo-3/4/15", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SERENO", text: "" },
+                    { linkName: "petalo-3/4/16", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SIMPATICO", text: "" },
+                    { linkName: "petalo-3/4/17", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SINCERO", text: "" },
+                    { linkName: "petalo-3/4/18", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "SOLIDARIO", text: "" },
+                    { linkName: "petalo-3/4/19", image: 'boton3', titlePage: "Conducta Mental Positiva", title: "VALIENTE", text: "" }
+                ]
+            },
+            {
+                linkName: "petalo-3/5",
+                image: 'boton3',
+                title: "Conducta Mental Negativa",
+                noNumbers: true,
+                text: "Todas las actitudes negativas que pueden presentarse en alguna área en particular de la vida nos pueden limitar profundamente, si logramos hacerlas conscientes y detectarlas en situaciones cotidianas, lograremos un gran avance interior y de mejora en nuestras relaciones interpersonales. (Se anularon las siguientes conductas negativas)",
+                subPetalos: [
+                    {
+                        linkName: "petalo-3/5/1",
+                        image: 'boton3',
+                        title: "A",
+                        index: 0,
+                        colorBorder: "yellow",
+                        subPetalos: [
+                            { linkName: "petalo-3/5/1/1", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ABANDONADO", text: "" },
+                            { linkName: "petalo-3/5/1/2", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ABRUMADO", text: "" },
+                            { linkName: "petalo-3/5/1/3", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ABURRIDO", text: "" },
+                            { linkName: "petalo-3/5/1/4", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "AGOTADO", text: "" },
+                            { linkName: "petalo-3/5/1/5", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "AGRESIVO", text: "" },
+                            { linkName: "petalo-3/5/1/6", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "AMARGADO", text: "" },
+                            { linkName: "petalo-3/5/1/7", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "AMENAZADO", text: "" },
+                            { linkName: "petalo-3/5/1/8", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ANSIOSO", text: "" },
+                            { linkName: "petalo-3/5/1/9", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "APATICO", text: "" },
+                            { linkName: "petalo-3/5/1/10", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "APENADO", text: "" },
+                            { linkName: "petalo-3/5/1/11", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "AVERGONZADO", text: "" },
+                            { linkName: "petalo-3/5/1/12", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "CELOSO", text: "" },
+                            { linkName: "petalo-3/5/1/13", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "CONFUNDIDO", text: "" },
+                            { linkName: "petalo-3/5/1/14", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "CRITICADO", text: "" },
+                            { linkName: "petalo-3/5/1/15", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "CULPABLE", text: "" },
+                            { linkName: "petalo-3/5/1/16", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DECEPCIONADO", text: "" },
+                            { linkName: "petalo-3/5/1/17", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DEPRIMIDO", text: "" },
+                            { linkName: "petalo-3/5/1/18", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DESANIMADO", text: "" },
+                            { linkName: "petalo-3/5/1/19", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DESESPERADO", text: "" },
+                            { linkName: "petalo-3/5/1/20", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DESILUSIONADO", text: "" },
+                            { linkName: "petalo-3/5/1/21", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DESPRECIADO", text: "" },
+                            { linkName: "petalo-3/5/1/22", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DISCRIMINADO", text: "" },
+                            { linkName: "petalo-3/5/1/23", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DISGUSTADO", text: "" },
+                            { linkName: "petalo-3/5/1/24", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "DISTANTE", text: "" },
+                            { linkName: "petalo-3/5/1/25", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ENOJADO", text: "" },
+                            { linkName: "petalo-3/5/1/26", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "ESTANCADO", text: "" },
+                            { linkName: "petalo-3/5/1/27", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "EVASIVO", text: "" },
+                            { linkName: "petalo-3/5/1/28", image: 'boton3', titlePage: "Conducta Mental Negativa A", title: "FORZADO", text: "" }
+                        ]
+                    },
+                    {
+                        linkName: "petalo-3/5/2",
+                        image: 'boton3',
+                        title: "B",
+                        index: 1,
+                        colorBorder: "red",
+                        text: "",
+                        subPetalos: [
+                            { linkName: "petalo-3/5/2/1", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "FRACASADO", text: "" },
+                            { linkName: "petalo-3/5/2/2", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "FRUSTRADO", text: "" },
+                            { linkName: "petalo-3/5/2/3", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "HERIDO", text: "" },
+                            { linkName: "petalo-3/5/2/4", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "HUMILLADO", text: "" },
+                            { linkName: "petalo-3/5/2/5", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "IGNORADO", text: "" },
+                            { linkName: "petalo-3/5/2/6", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "IMPOTENTE", text: "" },
+                            { linkName: "petalo-3/5/2/7", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INCOMODO", text: "" },
+                            { linkName: "petalo-3/5/2/8", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INDECISO", text: "" },
+                            { linkName: "petalo-3/5/2/9", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INDIFERENTE", text: "" },
+                            { linkName: "petalo-3/5/2/10", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INDIGNO", text: "" },
+                            { linkName: "petalo-3/5/2/11", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INSATISFECHO", text: "" },
+                            { linkName: "petalo-3/5/2/12", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INSEGURO", text: "" },
+                            { linkName: "petalo-3/5/2/13", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INSIGNIFICANTE", text: "" },
+                            { linkName: "petalo-3/5/2/14", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "INTOLERANTE", text: "" },
+                            { linkName: "petalo-3/5/2/15", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "IRRITADO", text: "" },
+                            { linkName: "petalo-3/5/2/16", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "PERTURBADO", text: "" },
+                            { linkName: "petalo-3/5/2/17", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "RECHAZADO", text: "" },
+                            { linkName: "petalo-3/5/2/18", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "RESENTIDO", text: "" },
+                            { linkName: "petalo-3/5/2/19", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "RESIGNADO", text: "" },
+                            { linkName: "petalo-3/5/2/20", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "RIGIDO", text: "" },
+                            { linkName: "petalo-3/5/2/21", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "SOLITARIO", text: "" },
+                            { linkName: "petalo-3/5/2/22", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "SUMISO", text: "" },
+                            { linkName: "petalo-3/5/2/23", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "TRISTE", text: "" },
+                            { linkName: "petalo-3/5/2/24", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "VACIO", text: "" },
+                            { linkName: "petalo-3/5/2/25", image: 'boton3', titlePage: "Conducta Mental Negativa B", title: "VULNERABLE", text: "" }
+                        ]
+                    },
+                ]
+            },
+            {
+                linkName: "petalo-3/6", image: 'boton3', title: "¿Que me bloquea?", text: "Existen situaciones en las cuales nos debilitamos o estresamos y también nos podemos bloquear, creando un desgaste interno muy profundo, esta corrección nos ayuda inteligentemente a sanar el punto detectado de una manera armoniosa y liberadora. (Se anularon los siguientes bloqueos)", noNumbers: true,  subPetalos: [
+                    {
+                        linkName: "petalo-3/6/1", image: 'boton3', title: "A", index: 0, colorBorder: "red", subPetalos: [
+                            {
+                                linkName: "petalo-3/6/1/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 1",
                                 text: "PASADO"
                             },
                             {
-                                linkName: "petalo-3/10/1/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 2",
+                                linkName: "petalo-3/6/1/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 2",
                                 text: "PRESENTE"
                             },
                             {
-                                linkName: "petalo-3/10/1/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 3",
+                                linkName: "petalo-3/6/1/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 3",
                                 text: "FUTURO"
                             },
                             {
-                                linkName: "petalo-3/10/1/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 4",
+                                linkName: "petalo-3/6/1/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 4",
                                 text: "SENTIRSE RECHAZADO"
                             },
                             {
-                                linkName: "petalo-3/10/1/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 5",
+                                linkName: "petalo-3/6/1/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 5",
                                 text: "SENTIRSE ABANDONADO"
                             },
                             {
-                                linkName: "petalo-3/10/1/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 6",
+                                linkName: "petalo-3/6/1/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 6",
                                 text: "HOGAR"
                             },
                             {
-                                linkName: "petalo-3/10/1/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 7",
+                                linkName: "petalo-3/6/1/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 7",
                                 text: "HABITACION DE LA CASA"
                             },
                             {
-                                linkName: "petalo-3/10/1/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 8",
+                                linkName: "petalo-3/6/1/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 8",
                                 text: "TRABAJO"
                             },
                             {
-                                linkName: "petalo-3/10/1/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 9",
+                                linkName: "petalo-3/6/1/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 9",
                                 text: "LUGAR DE TRABAJO"
                             },
                             {
-                                linkName: "petalo-3/10/1/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 10",
+                                linkName: "petalo-3/6/1/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 10",
                                 text: "JEFE"
                             },
                             {
-                                linkName: "petalo-3/10/1/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 11",
+                                linkName: "petalo-3/6/1/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 11",
                                 text: "COMPAÑEROS LABORALES"
                             },
                         ]
                     },
                     {
-                        linkName: "petalo-3/10/2", image: 'boton3', title: "B", index: 1, colorBorder: "yellow", subPetalos: [
+                        linkName: "petalo-3/6/2", image: 'boton3', title: "B", index: 1, colorBorder: "yellow", subPetalos: [
                             {
-                                linkName: "petalo-3/10/2/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 1",
+                                linkName: "petalo-3/6/2/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 1",
                                 text: "POBREZA"
                             },
                             {
-                                linkName: "petalo-3/10/2/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 2",
+                                linkName: "petalo-3/6/2/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 2",
                                 text: "ABUNDANCIA"
                             },
                             {
-                                linkName: "petalo-3/10/2/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 3",
+                                linkName: "petalo-3/6/2/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 3",
                                 text: "EXITO"
                             },
                             {
-                                linkName: "petalo-3/10/2/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 4",
+                                linkName: "petalo-3/6/2/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 4",
                                 text: "FRACASO"
                             },
                             {
-                                linkName: "petalo-3/10/2/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 5",
+                                linkName: "petalo-3/6/2/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 5",
                                 text: "RESPONSABILIDAD"
                             },
                             {
-                                linkName: "petalo-3/10/2/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 6",
+                                linkName: "petalo-3/6/2/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 6",
                                 text: "COMPROMISO"
                             },
                             {
-                                linkName: "petalo-3/10/2/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 7",
+                                linkName: "petalo-3/6/2/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 7",
                                 text: "GANAR DINERO"
                             },
                             {
-                                linkName: "petalo-3/10/2/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 8",
+                                linkName: "petalo-3/6/2/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 8",
                                 text: "NO GANAR DINERO"
                             },
                             {
-                                linkName: "petalo-3/10/2/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 9",
+                                linkName: "petalo-3/6/2/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 9",
                                 text: "PERDER DINERO"
                             },
                             {
-                                linkName: "petalo-3/10/2/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 10",
+                                linkName: "petalo-3/6/2/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 10",
                                 text: "ROBAR DINERO"
                             },
                             {
-                                linkName: "petalo-3/10/2/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 11",
+                                linkName: "petalo-3/6/2/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 11",
                                 text: "SER INCULTO"
                             },
                         ]
                     },
                     {
-                        linkName: "petalo-3/10/3", image: 'boton3', title: "C", index: 2, colorBorder: "green", subPetalos: [
+                        linkName: "petalo-3/6/3", image: 'boton3', title: "C", index: 2, colorBorder: "green", subPetalos: [
                             {
-                                linkName: "petalo-3/10/3/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 1",
+                                linkName: "petalo-3/6/3/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 1",
                                 text: "ENFERMARSE"
                             },
                             {
-                                linkName: "petalo-3/10/3/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 2",
+                                linkName: "petalo-3/6/3/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 2",
                                 text: "AUSENCIA DE EJERCICIO"
                             },
                             {
-                                linkName: "petalo-3/10/3/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 3",
+                                linkName: "petalo-3/6/3/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 3",
                                 text: "MAL DESCANSO"
                             },
                             {
-                                linkName: "petalo-3/10/3/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 4",
+                                linkName: "petalo-3/6/3/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 4",
                                 text: "MALA ALIMENTACION"
                             },
                             {
-                                linkName: "petalo-3/10/3/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 5",
+                                linkName: "petalo-3/6/3/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 5",
                                 text: "PRIVACIDAD"
                             },
                             {
-                                linkName: "petalo-3/10/3/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 6",
+                                linkName: "petalo-3/6/3/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 6",
                                 text: "SEXO"
                             },
                             {
-                                linkName: "petalo-3/10/3/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 7",
+                                linkName: "petalo-3/6/3/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 7",
                                 text: "ENVEJECER"
                             },
                             {
-                                linkName: "petalo-3/10/3/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 8",
+                                linkName: "petalo-3/6/3/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 8",
                                 text: "ABUSOS"
                             },
                             {
-                                linkName: "petalo-3/10/3/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 9",
+                                linkName: "petalo-3/6/3/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 9",
                                 text: "LO DESCONOCIDO"
                             },
                             {
-                                linkName: "petalo-3/10/3/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 10",
+                                linkName: "petalo-3/6/3/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 10",
                                 text: "NUEVAS TECNOLOGIA"
                             },
                             {
-                                linkName: "petalo-3/10/3/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 11",
+                                linkName: "petalo-3/6/3/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 11",
                                 text: "CIRCULO DE CONOCIDOS"
                             },
                         ]
                     },
                     {
-                        linkName: "petalo-3/10/4", image: 'boton3', title: "D", index: 3, colorBorder: "blue", subPetalos: [
+                        linkName: "petalo-3/6/4", image: 'boton3', title: "D", index: 3, colorBorder: "blue", subPetalos: [
                             {
-                                linkName: "petalo-3/10/4/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 1",
+                                linkName: "petalo-3/6/4/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 1",
                                 text: "SER MADRE/PADRE"
                             },
                             {
-                                linkName: "petalo-3/10/4/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 2",
+                                linkName: "petalo-3/6/4/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 2",
                                 text: "NO SER MADRE/PADRE"
                             },
                             {
-                                linkName: "petalo-3/10/4/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 3",
+                                linkName: "petalo-3/6/4/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 3",
                                 text: "SER HIJO"
                             },
                             {
-                                linkName: "petalo-3/10/4/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 4",
+                                linkName: "petalo-3/6/4/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 4",
                                 text: "LA FAMILIA"
                             },
                             {
-                                linkName: "petalo-3/10/4/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 5",
+                                linkName: "petalo-3/6/4/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 5",
                                 text: "LOS ABUELOS"
                             },
                             {
-                                linkName: "petalo-3/10/4/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 6",
+                                linkName: "petalo-3/6/4/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 6",
                                 text: "MADRE"
                             },
                             {
-                                linkName: "petalo-3/10/4/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 7",
+                                linkName: "petalo-3/6/4/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 7",
                                 text: "PADRE"
                             },
                             {
-                                linkName: "petalo-3/10/4/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 8",
+                                linkName: "petalo-3/6/4/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 8",
                                 text: "HERMANOS"
                             },
                             {
-                                linkName: "petalo-3/10/4/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 9",
+                                linkName: "petalo-3/6/4/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 9",
                                 text: "HIJOS"
                             },
                             {
-                                linkName: "petalo-3/10/4/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 10",
+                                linkName: "petalo-3/6/4/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 10",
                                 text: "PAREJA"
                             },
                             {
-                                linkName: "petalo-3/10/4/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 11",
+                                linkName: "petalo-3/6/4/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 11",
                                 text: "AMIGOS INTIMOS"
                             },
                         ]
@@ -1326,34 +2195,34 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/11", image: 'boton3', title: "Creencias Limitantes", text: "Las creencias son interpretaciones heredadas de generación en generación que hemos ido incorporando en nuestra mente, de forma inconsciente y que, sin darnos cuenta, dirigen nuestros actos y nos impulsan a actuar de una u otra forma, sin que, en el fondo sepamos por qué. Estas creencias pueden ser familiares, sociales y culturales, es importante hacerlas conscientes, ya que están limitando tu crecimiento y tu evolución. (Se anularon las siguientes creencias limitantes)", noNumbers: true,  subPetalos: [
+                linkName: "petalo-3/7", image: 'boton3', title: "Creencias Limitantes", text: "Las creencias son interpretaciones heredadas de generación en generación que hemos ido incorporando en nuestra mente, de forma inconsciente y que, sin darnos cuenta, dirigen nuestros actos y nos impulsan a actuar de una u otra forma, sin que, en el fondo sepamos por qué. Estas creencias pueden ser familiares, sociales y culturales, es importante hacerlas conscientes, ya que están limitando tu crecimiento y tu evolución. (Se anularon las siguientes creencias limitantes)", noNumbers: true,  subPetalos: [
                     {
-                        linkName: "petalo-3/11/1", image: 'boton3', title: "A", index: 0, colorBorder: "red", subPetalos: [
+                        linkName: "petalo-3/7/1", image: 'boton3', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
-                                linkName: "petalo-3/11/1/1", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 1",
+                                linkName: "petalo-3/7/1/1", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 1",
                                 text: "No quiero crecer. Nunca se lo que quiero de verdad. No sirvo para nada. No valgo nada.",
                             },
                             {
-                                linkName: "petalo-3/11/1/2", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 2",
+                                linkName: "petalo-3/7/1/2", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 2",
                                 text: "A la gente no le gusta estar conmigo. Si consigo lo que quiero perderá algo. Quien no sufre, no ama. Desear a alguien diferente a mi pareja es algo malo."
 
                             },
                             {
-                                linkName: "petalo-3/11/1/3", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 3",
+                                linkName: "petalo-3/7/1/3", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 3",
                                 text: "No se puede tener mucho dinero y ser buena persona. " +
                                     "Si sufro en la vida obtendré recompensa. " +
                                     "Las cosas hay que conseguir sin ayuda. " +
                                     "Nadie da algo sin esperar algo a cambio."
                             },
                             {
-                                linkName: "petalo-3/11/1/4", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 4",
+                                linkName: "petalo-3/7/1/4", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 4",
                                 text: "Hay algo más fuerte que yo que me impide avanzar. " +
                                     "La felicidad completa no existe siempre hay algo malo. " +
                                     "No soy lo suficientemente bueno. " +
                                     "No pertenezco a este clan."
                             },
                             {
-                                linkName: "petalo-3/11/1/5", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 5",
+                                linkName: "petalo-3/7/1/5", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 5",
                                 text: "No pertenezco a este lugar. " +
                                     "Ser un buen hijo o nieto, es aguantar a mis padres o a mis abuelos contra mis deseos. " +
                                     "Para ser buen padre/madre, tengo que sufrir por mis hijos. " +
@@ -1361,7 +2230,7 @@ const petalos = [
 
                             },
                             {
-                                linkName: "petalo-3/11/1/6", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 6",
+                                linkName: "petalo-3/7/1/6", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 6",
                                 text: "Los hombres son peligrosos. " +
                                     "Las mujeres son peligrosas. " +
                                     "Mi pareja me va a dejar tarde o temprano. " +
@@ -1369,28 +2238,28 @@ const petalos = [
 
                             },
                             {
-                                linkName: "petalo-3/11/1/7", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 7",
+                                linkName: "petalo-3/7/1/7", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 7",
                                 text: "Siempre tengo mala suerte. " +
                                     "Me cuesta mucho esfuerzo aprender. " +
                                     "Mas vale malo conocido que arriesgarse a conocer alguien diferente. " +
                                     "La vida es dura y difícil."
                             },
                             {
-                                linkName: "petalo-3/11/1/8", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 8",
+                                linkName: "petalo-3/7/1/8", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 8",
                                 text: "Soy egoísta si pienso en mí. " +
                                     "Me da miedo fracasar. " +
                                     "Me da miedo el éxito. " +
                                     "No tengo fuerza de voluntad"
                             },
                             {
-                                linkName: "petalo-3/11/1/9", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 9",
+                                linkName: "petalo-3/7/1/9", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 9",
                                 text: "Si expreso mis emociones los demás verán que soy vulnerable. " +
                                     "Ya estoy viejo para aprender cosas nuevas. " +
                                     "Tomar decisiones es un proceso angustioso para mí. " +
                                     "No soy digno del amor de los demás."
                             },
                             {
-                                linkName: "petalo-3/11/1/10", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 10",
+                                linkName: "petalo-3/7/1/10", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 10",
                                 text: "No puedo bajar la guardia. " +
                                     "No está bien cometer errores. " +
                                     "No puedo expresar lo que siento. " +
@@ -1399,72 +2268,72 @@ const petalos = [
                         ]
                     },
                     {
-                        linkName: "petalo-3/11/2", image: 'boton3', title: "B", index: 1, colorBorder: "yellow", subPetalos: [
+                        linkName: "petalo-3/7/2", image: 'boton3', title: "B", index: 1, colorBorder: "yellow", subPetalos: [
                             {
-                                linkName: "petalo-3/11/2/1", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 1",
+                                linkName: "petalo-3/7/2/1", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 1",
                                 text: "Tener pareja es peligroso para mí. " +
                                     "Tener hijos es peligroso para mí. " +
                                     "Las cosas que me pasan no son culpa mía. " +
                                     "Tengo que agradar a mi pareja como sea."
                             },
                             {
-                                linkName: "petalo-3/11/2/2", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 2",
+                                linkName: "petalo-3/7/2/2", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 2",
                                 text: "Sin un diagnóstico de lo que tengo no podrán curarme. " +
                                     "Mi problema de salud o situación es más importante que la de los demás. " +
                                     "No merezco dar/recibir amor. " +
                                     "Es inútil querer cambiar las cosas siempre van a ser así."
                             },
                             {
-                                linkName: "petalo-3/11/2/3", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 3",
+                                linkName: "petalo-3/7/2/3", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 3",
                                 text: "Debo sufrir y sacrificarme por los demás. " +
                                     "No soy capaz de digerir las cosas malas que me pasan. " +
                                     "La gente solo quiere estar conmigo por algún interés malo. " +
                                     " Si digo no, la gente no me va querer. "
                             },
                             {
-                                linkName: "petalo-3/11/2/4", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 4",
+                                linkName: "petalo-3/7/2/4", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 4",
                                 text: "La solución a mis problemas es responsabilidad de otros. " +
                                     "Lo que yo quiero no importa. " +
                                     "Yo soy así no quiero cambiar. " +
                                     "La mejor defensa es un ataque."
                             },
                             {
-                                linkName: "petalo-3/11/2/5", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 5",
+                                linkName: "petalo-3/7/2/5", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 5",
                                 text: "Es inútil esforzarme no lo voy a conseguir. " +
                                     "Yo no puedo ser. " +
                                     "Yo no puedo tener. " +
                                     "No puedo lograr las metas que me eh fijado. "
                             },
                             {
-                                linkName: "petalo-3/11/2/6", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 6",
+                                linkName: "petalo-3/7/2/6", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 6",
                                 text: "No tengo tiempo para nada. " +
                                     "Mi felicidad depende de los demás. " +
                                     "Es peligro relacionarse con desconocido. " +
                                     "No soy capaz de apartarme de personas que me perjudican."
                             },
                             {
-                                linkName: "petalo-3/11/2/7", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 7",
+                                linkName: "petalo-3/7/2/7", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 7",
                                 text: "La gente me usa y luego me abandona. " +
                                     "Cuanto más difícil es algo mayor es la recompensa. " +
                                     "Hago cosas por todo el mundo y nadie me lo agradece como yo merezco. " +
                                     "Solo debo portarme bien, con quien se porta bien conmigo."
                             },
                             {
-                                linkName: "petalo-3/11/2/8", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 8",
+                                linkName: "petalo-3/7/2/8", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 8",
                                 text: "Dependo del que dirán y necesito aprobación. " +
                                     "La gente no cambia. " +
                                     "Hay que analizar todo muy bien antes de dar el primer paso. " +
                                     "No hago nada bien."
                             },
                             {
-                                linkName: "petalo-3/11/2/9", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 9",
+                                linkName: "petalo-3/7/2/9", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 9",
                                 text: "No quiero destacar para no ser criticado. " +
                                     "No merezco vivir en la vida con armonía/plenitud. " +
                                     "No se puede ser espiritual y no meditar. " +
                                     "Tener confianza en uno mismo te lleva a la arrogancia."
                             },
                             {
-                                linkName: "petalo-3/11/2/10", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 10",
+                                linkName: "petalo-3/7/2/10", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 10",
                                 text: "No valgo como padre/madre. " +
                                     "No soy capaz de decir mi opinión frente a un grupo de personas. " +
                                     "No soy capaz de corregir mis errores y pedir disculpas. " +
@@ -2625,7 +3494,7 @@ const petalos = [
                             }
                         ]
                     },
-                    {linkName: "petalo-4/5/2", image: 'boton4', titlePage: "HORMONAS", index: 1, colorBorder: "green", title: "B", text: "Las Hormonas son sustancias que actúan como mensajeros químicos que regulan diversas funciones y procesos en el cuerpo, como el crecimiento, el metabolismo, la reproducción, el estado de ánimo y muchas otras.", subPetalos: [
+                    {linkName: "petalo-4/5/2", image: 'boton4', titlePage: "HORMONAS", index: 1, colorBorder: "green", title: "B", subPetalos: [
                             {
                                 linkName: "petalo-4/5/2/1",
                                 image: 'boton4',
