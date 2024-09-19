@@ -23,7 +23,7 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                     else history = JSON.parse(history);
                     if (event.key === 'r' || event.key === 'R') {
                         setShowAlertRamificar(true);
-                        history.push("ramificar");
+                        history.splice(history.length - 2, 0, "ramificar");
                         setTimeout(() => {
                             setShowAlertRamificar(false);
                         }, 4000);

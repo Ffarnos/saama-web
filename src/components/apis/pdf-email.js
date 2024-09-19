@@ -1,22 +1,14 @@
 import 'firebase/auth';
 import {petalos} from "../../../static/data";
 import {PDFDocument, rgb} from 'pdf-lib';
-const emailjs = require('emailjs-com')
-
 
 const createAndSendPDF = async () => {
     const existingPdfBytes = await loadPDF();
-
     const pdfDoc = await PDFDocument.load(existingPdfBytes);
-
     const page = pdfDoc.getPage(0);
-
     const problems = localStorage.getItem("problems").split(",")
-
     const font = await pdfDoc.embedFont('Helvetica');
-
     const maxWidth = page.getSize().width - 30;
-
     let now = new Date();
 
     let options = {
@@ -58,13 +50,12 @@ const createAndSendPDF = async () => {
 
     let y = 780;
     let currentPage = pdfDoc.addPage([595, 842]);
-
     const petalosCopy = JSON.parse(JSON.stringify(petalos));
-
-    const {petalosArray, ramifiArray} = getListOfPetalos();
+    const {petalosArray, ramificaciones} = getListOfPetalos();
 
     console.log(petalosArray);
-    console.log(ramifiArray);
+    console.log(ramificaciones);
+
     for (const petalo of petalosArray) {
         console.log(petalo)
         if (y <= 30) {
@@ -121,30 +112,127 @@ const createAndSendPDF = async () => {
 
     y = y-30
 
-    for (const petalo of ramifiArray) {
+    for (let i = 0; i < ramificaciones.length; i++) {
+        if (ramificaciones[i].length >= 3) {
+            const firstElement = ramificaciones[i][0];
+            ramificaciones[i].splice(0, 1);
+            ramificaciones[i].splice(1, 0, firstElement);
+        }
+    }
+
+    for (const ramificacion of ramificaciones) {
+        for (const petalo of ramificacion) {
+
+            if (y <= 30) {
+                currentPage = pdfDoc.addPage([595, 842]);
+                y = 780;
+            }
+
+            if (petalo.title === "RAMIFICAROPEN" || petalo.title === "RAMIFICARCLOSE") {
+
+                if (petalo.title === "RAMIFICAROPEN") {
+                    const startX = 50;
+                    const startY = y+15;
+                    const endX = 50;
+                    const endY = y-20;
+
+                    currentPage.drawLine({
+                        start: { x: startX, y: startY },
+                        end: { x: endX, y: endY },
+                        thickness: 2,
+                        color: rgb(0, 0, 0),
+                    });
+
+                    const arrowHeadLength = 10;
+                    const arrowHeadWidth = 8;
+
+                    currentPage.drawLine({
+                        start: { x: endX, y: endY },
+                        end: { x: endX - arrowHeadWidth, y: endY + arrowHeadLength },
+                        thickness: 2,
+                        color: rgb(0, 0, 0),
+                    });
+
+                    currentPage.drawLine({
+                        start: { x: endX, y: endY },
+                        end: { x: endX + arrowHeadWidth, y: endY + arrowHeadLength },
+                        thickness: 2,
+                        color: rgb(0, 0, 0),
+                    });
+
+                    y = y - 50;
+
+                    if (y <= 30) {
+                        currentPage = pdfDoc.addPage([595, 842]);
+                        y = 780;
+                    }
+                }
+
+                let texto = petalo.title === "RAMIFICAROPEN" ? "Aqui se profundizo el siguiente punto" : "Hasta aquí se profundizo el punto seleccionado"
+                currentPage.drawText(texto, {
+                    x: 22,
+                    y: y,
+                    size: 14,
+                    color: rgb(1, 0, 0),
+                });
+                y = y - 40
+
+            }
+            else {
+                const result = await textPetalo(petalo, currentPage, y, pdfDoc, maxWidth, font);
+                y = result.y;
+                currentPage = result.currentPage
+            }
+        }
+    }
+
+    currentPage = pdfDoc.addPage([595, 842]);
+    y = 780;
+    
+    currentPage.drawText("CAMBIO CURATIVO", {
+        x: 22,
+        y: y,
+        size: 16,
+        color: rgb(0, 0, 0),
+        font: font,
+    });
+    
+    y = y - 30;
+
+    const textoFinal = "DESPUÉS DE REALIZAR LA TERAPIA CUÁNTICA GENESIS, EN ALGUNAS OCASIONES SE PUEDE INICIAR UN PROCESO DE SANACIÓN CONOCIDA COMO ¨¡CAMBIO CURATIVO!¨, DONDE TANTO EL CUERPO COMO LA MENTE Y EL ESPÍRITU SE LIBERAN! AL DESBLOQUEARSE LAS EMOCIONES ATRAPADAS, TAMBIÉN SE LIBERAN TOXINAS Y DESECHOS DEL CUERPO. ESTO HACE QUE ALGUNAS VECES EL DOLOR Y LOS SÍNTOMAS DE AGUDICEN, PERO ESTE PROCESO ES PASAJERO Y NECESARIO PARA LA SANACIÓN DEFINITIVALAS REACCIONES FÍSICAS QUE SE EXPERIMENTAN DURANTE UNA CRISIS CURATIVA PUEDEN INCLUIR ERUPCIONES EN LA PIEL, NÁUSEAS, VÓMITOS, DOLOR DE CABEZA, SOMNOLENCIA, INSOMNIO, FATIGA, ESTREÑIMIENTO, RESFRIADO, ATAQUE DE RISA, LLANTO, SUBIDA DE TEMPERATURA CORPORAL, ETC. UNA CRISIS DE CURACIÓN NORMALMENTE DURA ALREDEDOR DE UNO O TRES DÍAS, PERO SI LA ENERGÍA O VITALIDAD DE LA PERSONA ES BAJA, PUEDE DURAR UN POCO MÁS... EN ESTE MOMENTO EL CUERPO NECESITA MUCHA AGUA Y EN LO POSIBLE DESCANSO LA MAYORÍADE LAS VECES, LA CRISIS CURATIVA ES POCO PERCEPTIBLE Y LA PERSONA CONTINÚA SU VIDA NORMAL. SIEMPRE DESPUÉS DE LA CRISIS CURATIVA VIENE EL PROCESO DE SANACIÓN."
+
+    const wrappedTextoFinal = wrapText(textoFinal, maxWidth, font, 12);
+    wrappedTextoFinal.split('\n').forEach(line => {
+        currentPage.drawText(line, {
+            x: 22,
+            y: y,
+            size: 12,
+            color: rgb(0, 0, 0),
+        });
+        y -= 15;
         if (y <= 30) {
             currentPage = pdfDoc.addPage([595, 842]);
             y = 780;
         }
+    });
 
-        if (petalo.title === "RAMIFICAROPEN" || petalo.title === "RAMIFICARCLOSE") {
-            let texto = petalo.title === "RAMIFICAROPEN" ? "Aqui se profundizo el siguiente punto" : "Hasta aquí se profundizo el punto seleccionado"
+    const textoAdicional = "Recorda que somos cocreadores de nuestra realidad y que al hacer consciente toda esta información te re conectas con tu cambio. También ten en cuenta que todo lo trabajado ya no te pertenece";
 
-            currentPage.drawText(texto, {
-                x: 22,
-                y: y,
-                size: 14,
-                color: rgb(1, 0, 0),
-            });
-            y = y - 40
-
+    const wrappedTextoAdicional = wrapText(textoAdicional, maxWidth, font, 12);
+    wrappedTextoAdicional.split('\n').forEach(line => {
+        currentPage.drawText(line, {
+            x: 22,
+            y: y,
+            size: 12,
+            color: rgb(0.8, 0.6, 1), 
+        });
+        y -= 15;
+        if (y <= 30) {
+            currentPage = pdfDoc.addPage([595, 842]);
+            y = 780;
         }
-        else {
-            const result = await textPetalo(petalo, currentPage, y, pdfDoc, maxWidth, font);
-            y = result.y;
-            currentPage = result.currentPage
-        }
-    }
+    });
+
     /*const arrayBufferToBase64 = (buffer) => {
         const chunkSize = 0x8000; // 32768 bytes, un tamaño razonable para dividir en trozos
         const bytes = new Uint8Array(buffer);
@@ -440,8 +528,9 @@ const getPetaloWithLink = (petalos, linkName) => {
 const getListOfPetalos = () => {
 
     const petalosArray = [];
-    const ramifiArray = [];
+    let ramifiArray = [];
 
+    const ramificaciones = []
     const history = localStorage.getItem("history");
     if (history) {
         let historyArray = JSON.parse(history);
@@ -453,9 +542,14 @@ const getListOfPetalos = () => {
             let p;
             if (link === "ramificar") {
                 ramificando = !ramificando;
-
                 p = {title: ramificando ? "RAMIFICAROPEN" : "RAMIFICARCLOSE"};
                 ramifiArray.push(p);
+
+                if (!ramificando) {
+                    ramificaciones.push(ramifiArray.slice());
+                    ramifiArray = []
+                }
+
                 return;
             }
             else {
@@ -501,7 +595,7 @@ const getListOfPetalos = () => {
             }
         });
     }
-    return { petalosArray, ramifiArray};
+    return { petalosArray, ramificaciones};
 }
 
 
