@@ -29,11 +29,22 @@ const FinalPageTemplate = ({ pageContext }) => {
                      if (!history) history = [];
                      else history = JSON.parse(history);
                      if (event.key === 'r' || event.key === 'R') {
-                         setShowAlertRamificar(true);
-                         history.splice(history.length - 2, 0, "ramificar");
-                         setTimeout(() => {
-                             setShowAlertRamificar(false);
-                         }, 4000);
+                        setShowAlertRamificar(true);
+                        
+                        // Contar cuántos "ramificar" hay en el historial
+                        const ramificarCount = history.filter(item => item === "ramificar").length;
+                        
+                        if (ramificarCount % 2 === 0) {
+                            // Si el número de "ramificar" es par, estamos abriendo una nueva ramificación
+                            history.splice(history.length - 2, 0, "ramificar");
+                        } else {
+                            // Si es impar, estamos cerrando una ramificación existente
+                            history.push("ramificar");
+                        }
+                        
+                        setTimeout(() => {
+                            setShowAlertRamificar(false);
+                        }, 4000);
                      } else if (event.key === 'b' || event.key === 'B') {
                          setShowAlertBorrar(true);
                          history.pop()

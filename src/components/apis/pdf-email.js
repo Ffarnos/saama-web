@@ -112,12 +112,12 @@ const createAndSendPDF = async () => {
 
     y = y-30
 
-    for (let i = 0; i < ramificaciones.length; i++) {
+    for (let i = 0; i < ramificaciones.length; i++) {        
         if (ramificaciones[i].length >= 3) {
-            const firstElement = ramificaciones[i][0];
-            ramificaciones[i].splice(0, 1);
-            ramificaciones[i].splice(1, 0, firstElement);
+            const firstElement = ramificaciones[i].shift(); // Elimina y guarda el primer elemento
+            ramificaciones[i].splice(2, 0, firstElement); // Inserta el primer elemento en la posición 2
         }
+        
     }
 
     for (const ramificacion of ramificaciones) {
@@ -526,76 +526,73 @@ const getPetaloWithLink = (petalos, linkName) => {
     return petalo;
 };
 const getListOfPetalos = () => {
-
     const petalosArray = [];
-    let ramifiArray = [];
-
-    const ramificaciones = []
+    const ramificaciones = [];
     const history = localStorage.getItem("history");
+
+    console.log("COMENZANDO VER HISTORIAL");
+
     if (history) {
         let historyArray = JSON.parse(history);
-        console.log(historyArray)
         historyArray = ordenarPetalo(historyArray.map(item => item.replace("/circulo-base/", "")));
-        console.log(historyArray)
         let ramificando = false;
-        historyArray.forEach((link, index) => {
-            let p;
+        let ramifiArray = [];
+        
+        // Recorre el historial de petalos
+        historyArray.forEach((link) => {
+            console.log("LINK ", link);
             if (link === "ramificar") {
-                ramificando = !ramificando;
-                p = {title: ramificando ? "RAMIFICAROPEN" : "RAMIFICARCLOSE"};
-                ramifiArray.push(p);
-
-                if (!ramificando) {
-                    ramificaciones.push(ramifiArray.slice());
-                    ramifiArray = []
+                if (ramificando) {
+                    // Cerrar ramificación actual
+                    ramifiArray.push({title: "RAMIFICARCLOSE"});
+                    ramificaciones.push([...ramifiArray]); // Añadimos una copia del array
+                    ramifiArray = []; // Reiniciamos el array para la próxima ramificación
+                    ramificando = false;
+                } else {
+                    ramifiArray = [{title: "RAMIFICAROPEN"}]; // Nuevo array para cada ramificación
+                    ramificando = true;
                 }
-
-                return;
-            }
-            else {
-                p = getPetaloWithLink(petalos, link);
-
+            } else {
+                let p = getPetaloWithLink(petalos, link);
+                
                 if (!p || p.fieldText) {
                     const splitted = link.split(":");
-
-                    p = getPetaloWithLink(petalos, splitted ? splitted[0] : link);
-                    if (!p)
-                        return;
-
+                    p = getPetaloWithLink(petalos, splitted[0] || link);
+                    
+                    if (!p) return;
+                    
                     if (splitted.length > 1) {
                         if (p.separate) {
-                            const newPetalo = { ...p };
-                            newPetalo.textField = splitted[1];
-                            if (ramificando)
-                                ramifiArray.push(newPetalo)
-                            else
-                                petalosArray.push(newPetalo);
-                            return;
-                        }
-                        else if (p.textField === undefined) {
-                            p.textField = splitted[1];
-                            console.log("ES SIN " + p.textField);
+                            p = { ...p, textField: splitted[1] };
                         } else {
-                            p.textField += `:${splitted[1]}`;
-                            console.log("ES CON " + p.textField);
-                            return;
+                            p.textField = p.textField ? `${p.textField}:${splitted[1]}` : splitted[1];
                         }
-                    } else if (petalosArray.find(p => p.linkName === link) || (ramificando && ramifiArray.find(p => p.linkName === link)))
-                        return;
-
-
+                    }
+                }
+                
+                if (p) {
+                    if (ramificando) {
+                        if (!ramifiArray.find(item => item.linkName === p.linkName)) 
+                            ramifiArray.push(p);
+                    } else {
+                        if (!petalosArray.find(item => item.linkName === p.linkName)) 
+                            petalosArray.push(p);
+                    }
                 }
             }
-
-            if (p) {
-                if (ramificando)
-                    ramifiArray.push(p)
-                else
-                    petalosArray.push(p);
-            }
         });
+        
+        // Si falto cerrar la ramificacion
+        if (ramificando && ramifiArray.length > 0) {
+            ramifiArray.push({title: "RAMIFICARCLOSE"});
+            ramificaciones.push([...ramifiArray]);
+        }
     }
-    return { petalosArray, ramificaciones};
+
+    console.log("HISTORIAL", petalosArray);
+    console.log("RAMIFICACIONES", JSON.stringify(ramificaciones));
+    console.log("RAMIFICACIONES", ramificaciones);
+    return { petalosArray, ramificaciones };
 }
 
 
@@ -713,42 +710,40 @@ const OrdenarFuenteByVidas = (links) => {
 }
 
 const OrdenarFuente = (links) => {
-
-    const linksWithOutRami = []
-    const ramificaciones = []
-
+    const linksWithOutRami = [];
+    const ramificaciones = [];
     let antLink;
     let ramificando = false;
     let ramificandoPetalos = [];
 
-
     links.forEach(link => {
-          if (link === "ramificar") {
-              ramificandoPetalos.push(link)
-              if (ramificando) {
-                  const uniqueArrayRami = Array.from(new Set(ramificandoPetalos));
-                  uniqueArrayRami.sort(sortArray);
-                  uniqueArrayRami.push("ramificar")
-
-                  ramificaciones.push({
-                      antLink: antLink,
-                      ramificandoPetalos: uniqueArrayRami
-                  })
-
-                  ramificandoPetalos = [];
-              }
-              ramificando = !ramificando
-          } else if (!ramificando) {
-              antLink = link;
-              linksWithOutRami.push(link)
-          } else if (ramificando) {
-              ramificandoPetalos.push(link)
-          }
-    })
+        if (link === "ramificar") {
+            if (ramificando) {
+                // Fin de la ramificación
+                const primerosDos = ramificandoPetalos.slice(0, 2);
+                const resto = ramificandoPetalos.slice(2);
+                const restoOrdenado = Array.from(new Set(resto)).sort(sortArray);
+                
+                ramificaciones.push({
+                    antLink: antLink,
+                    ramificandoPetalos: ["ramificar", ...primerosDos, ...restoOrdenado, "ramificar"]
+                });
+                ramificandoPetalos = [];
+            } else {
+                // Inicio de la ramificación
+                antLink = linksWithOutRami[linksWithOutRami.length - 1];
+            }
+            ramificando = !ramificando;
+        } else if (!ramificando) {
+            linksWithOutRami.push(link);
+        } else {
+            ramificandoPetalos.push(link);
+        }
+    });
 
     linksWithOutRami.sort(sortArray);
 
-    return putRamificaciones(ramificaciones, Array.from(new Set(linksWithOutRami)))
+    return putRamificaciones(ramificaciones, Array.from(new Set(linksWithOutRami)));
 }
 
 const sortArray = (a, b) => {
@@ -788,12 +783,13 @@ const sortArray = (a, b) => {
 const putRamificaciones = (ramificaciones, arrayWithOutRami) => {
     let newArray = [];
     arrayWithOutRami.forEach(link => {
-        newArray.push(link)
+        newArray.push(link);
         ramificaciones.forEach(rami => {
-            if (rami.antLink === link)
-                rami.ramificandoPetalos.forEach(ramiP => newArray.push(ramiP))
-        })
-    })
+            if (rami.antLink === link) {
+                newArray.push(...rami.ramificandoPetalos);
+            }
+        });
+    });
     return newArray;
 }
 

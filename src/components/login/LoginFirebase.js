@@ -85,7 +85,6 @@ const LoginFirebase = ({noPermissionInfo}) => {
                 };
 
                 await set(usersRef, newUser);
-                window.location.reload();
             }
         } catch (error) {
             if (error.code === 'auth/invalid-email' || error.code === 'auth/wrong-password')
