@@ -27,12 +27,11 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                         // Contar cuántos "ramificar" hay en el historial
                         const ramificarCount = history.filter(item => item === "ramificar").length;
                         
-                        if (ramificarCount % 2 === 0) {
-                            // Si el número de "ramificar" es par, estamos abriendo una nueva ramificación
+                        if (ramificarCount % 2 === 0 && history[history.length - 2] !== "ramificar") {
                             history.splice(history.length - 2, 0, "ramificar");
                         } else {
-                            // Si es impar, estamos cerrando una ramificación existente
-                            history.push("ramificar");
+                            if (history.length === 0 || history[history.length - 1] !== "ramificar") 
+                                history.push("ramificar");
                         }
                         
                         setTimeout(() => {
