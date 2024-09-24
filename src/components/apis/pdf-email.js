@@ -289,7 +289,6 @@ const createAndSendPDF = async () => {
 
 const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
     if (petalo.subPetalos) {
-
         if (petalo.title.length > 2) {
             console.log("2")
             if (petalo.title === 'Emociones')
@@ -325,7 +324,17 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
             }
             y = y - 30;
         }
-    } else {
+    } else if (petalo.title === "CORRECCIONOPEN" || petalo.title === "CORRECCIONCLOSE") {
+        const text = petalo.title === "CORRECCIONOPEN" ? "INICIO" : "FIN";
+        currentPage.drawText(text, {
+            x: 22,
+            y: y,
+            size: 14,
+            color: rgb(0.5, 0, 0.5), // Color violeta
+        });
+        y -= 20;
+    }
+    else {
         //PETALO FINAL
         if (petalo.text) {
             if (petalo.fieldText) {
@@ -539,6 +548,7 @@ const getListOfPetalos = () => {
         let ramifiArray = [];
         
         // Recorre el historial de petalos
+        let correciones = 0;
         historyArray.forEach((link) => {
             console.log("LINK ", link);
             if (link === "ramificar") {
@@ -552,6 +562,16 @@ const getListOfPetalos = () => {
                     ramifiArray = [{title: "RAMIFICAROPEN"}]; // Nuevo array para cada ramificación
                     ramificando = true;
                 }
+            } else if (link === "correccion") {
+            
+            // Verificar si la corrección abre o cierra
+                if (correciones%2 === 0) {
+                    petalosArray.push({ title: "CORRECCIONOPEN" });
+                } else {
+                    petalosArray.push({ title: "CORRECCIONCLOSE" });
+                }
+
+                correciones++;
             } else {
                 let p = getPetaloWithLink(petalos, link);
                 
@@ -608,9 +628,11 @@ const ordenarPetalo = (historyArray) => {
         7: ["petalo-7"]
     }
 
-    let lastPetalo = 0;
-
+    let lastPetalo = 1;
+    
     let ramificando = false;
+
+    let correccion = false;
 
     historyArray.forEach(link => {
         if ((link === "/petalo-1") || (link === "/petalo-2") || (link === "/petalo-3") || (link === "/petalo-4") || (link === "/petalo-5") || (link === "/petalo-6") || link === ("/petalo-7"))
@@ -622,11 +644,17 @@ const ordenarPetalo = (historyArray) => {
             return;
         }
 
+        if (link === "correccion") {
+            petalos[lastPetalo].push("correccion")
+            correccion = !correccion;
+            return;
+        }
+
         const match = link.match(/petalo-(\d+)/);
 
         const number = match ? parseInt(match[1], 10) : null;
 
-        if (ramificando)
+        if (ramificando || correccion)
             petalos[lastPetalo].push(link)
         else {
             petalos[number].push(link)
@@ -712,9 +740,12 @@ const OrdenarFuenteByVidas = (links) => {
 const OrdenarFuente = (links) => {
     const linksWithOutRami = [];
     const ramificaciones = [];
+    const correcciones = [];
     let antLink;
     let ramificando = false;
     let ramificandoPetalos = [];
+    let correccion = false;
+    let correccionPetalos = [];
 
     links.forEach(link => {
         if (link === "ramificar") {
@@ -734,16 +765,30 @@ const OrdenarFuente = (links) => {
                 antLink = linksWithOutRami[linksWithOutRami.length - 1];
             }
             ramificando = !ramificando;
-        } else if (!ramificando) {
-            linksWithOutRami.push(link);
-        } else {
+        } else if (link === "correccion") {
+            if (correccion) {
+                correcciones.push({
+                    antLink: antLink,
+                    correccionPetalos: correccionPetalos
+                })
+                correccionPetalos = []
+            }
+            else 
+                antLink = linksWithOutRami[linksWithOutRami.length - 1];
+            
+            correccion = !correccion;
+        } else if (ramificando) {
             ramificandoPetalos.push(link);
-        }
+        } else if (correccion) {
+            correccionPetalos.push(link);
+        } else linksWithOutRami.push(link);
     });
 
     linksWithOutRami.sort(sortArray);
 
-    return putRamificaciones(ramificaciones, Array.from(new Set(linksWithOutRami)));
+    const uniqueLinks = Array.from(new Set(linksWithOutRami));
+    const linksWithRamificaciones = putRamificaciones(ramificaciones, uniqueLinks);
+    return putCorrecciones(correcciones, linksWithRamificaciones);
 }
 
 const sortArray = (a, b) => {
@@ -787,6 +832,19 @@ const putRamificaciones = (ramificaciones, arrayWithOutRami) => {
         ramificaciones.forEach(rami => {
             if (rami.antLink === link) {
                 newArray.push(...rami.ramificandoPetalos);
+            }
+        });
+    });
+    return newArray;
+}
+
+const putCorrecciones = (correcciones, arrayWithOutCorrecciones) => {
+    let newArray = [];
+    arrayWithOutCorrecciones.forEach(link => {
+        newArray.push(link);
+        correcciones.forEach(correccion => {
+            if (correccion.antLink === link) {
+                newArray.push("correccion", ...correccion.correccionPetalos, "correccion");
             }
         });
     });

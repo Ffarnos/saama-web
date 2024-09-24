@@ -16,6 +16,10 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
              if (event.altKey) {
                 if (event.key === 'Control')
                     createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
+                else if (event.key === 'c' || event.key === 'C') {
+                    let history = localStorage.getItem("history");
+                    history.push("correccion")
+                }
                 else if (event.key === 'r' || event.key === 'R' || event.key === 'b' || event.key === 'B') {
                     let history = localStorage.getItem("history");
 
