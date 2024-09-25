@@ -592,10 +592,10 @@ const getListOfPetalos = () => {
                 
                 if (p) {
                     if (ramificando) {
-                        if (!ramifiArray.find(item => item.linkName === p.linkName)) 
+                        if (!ramifiArray.find(item => item.linkName === p.linkName && !item.fieldText )) 
                             ramifiArray.push(p);
                     } else {
-                        if (!petalosArray.find(item => item.linkName === p.linkName)) 
+                        if (!petalosArray.find(item => item.linkName === p.linkName && !item.fieldText )) 
                             petalosArray.push(p);
                     }
                 }
