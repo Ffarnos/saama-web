@@ -477,7 +477,8 @@ const getColorOfFont = (link) => {
 }
 
 const wrapText = (text, width, font, fontSize) => {
-    const words = text.split(' ');
+    const cleanText = text.replace(/[\u200B-\u200D\uFEFF]/g, '');
+    const words = cleanText.split(' ');
     let line = '';
     let result = '';
 
@@ -592,10 +593,10 @@ const getListOfPetalos = () => {
                 
                 if (p) {
                     if (ramificando) {
-                        if (!ramifiArray.find(item => item.linkName === p.linkName && !item.fieldText )) 
+                        if (!ramifiArray.find(item => item.linkName === p.linkName) || p.linkName.includes("petalo-5/7")) 
                             ramifiArray.push(p);
                     } else {
-                        if (!petalosArray.find(item => item.linkName === p.linkName && !item.fieldText )) 
+                        if (!petalosArray.find(item => item.linkName === p.linkName) || p.linkName.includes("petalo-5/7")) 
                             petalosArray.push(p);
                     }
                 }
@@ -751,13 +752,22 @@ const OrdenarFuente = (links) => {
         if (link === "ramificar") {
             if (ramificando) {
                 // Fin de la ramificación
-                const primerosDos = ramificandoPetalos.slice(0, 2);
-                const resto = ramificandoPetalos.slice(2);
+                
+                const toCheck = ramificandoPetalos[1];
+                const petaloToCheck = getPetaloWithLink(petalos, toCheck);
+                const primeros = petaloToCheck && petaloToCheck.title && petaloToCheck.title.length === 1 
+                    ? ramificandoPetalos.slice(0, 3) 
+                    : ramificandoPetalos.slice(0, 2);
+                const resto = petaloToCheck && petaloToCheck.title && petaloToCheck.title.length === 1 
+                    ? ramificandoPetalos.slice(3) 
+                    : ramificandoPetalos.slice(2);
+
+            
                 const restoOrdenado = Array.from(new Set(resto)).sort(sortArray);
                 
                 ramificaciones.push({
                     antLink: antLink,
-                    ramificandoPetalos: ["ramificar", ...primerosDos, ...restoOrdenado, "ramificar"]
+                    ramificandoPetalos: ["ramificar", ...primeros, ...restoOrdenado, "ramificar"]
                 });
                 ramificandoPetalos = [];
             } else {
