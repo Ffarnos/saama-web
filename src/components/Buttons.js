@@ -10,29 +10,46 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
 
     const [showAlertRamificar, setShowAlertRamificar] = useState(false);
     const [showAlertBorrar, setShowAlertBorrar] = useState(false);
+    const [showAlertCorreccion, setShowAlertCorreccion] = useState(false);
 
     useEffect(() => {
         const handleKeyDown = (event) => {
              if (event.altKey) {
+                let history = localStorage.getItem("history");
+
+                if (!history) history = [];
+                else history = JSON.parse(history);
                 if (event.key === 'Control')
                     createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
-                else if (event.key === 'c' || event.key === 'C') {
-                    let history = localStorage.getItem("history");
+                else if (event.key === 'c' || event.key === 'C') {    
+                    setShowAlertCorreccion(true);
+                    setTimeout(() => {
+                        setShowAlertCorreccion(false);
+                    }, 4000);
                     history.push("correccion")
+                    localStorage.setItem("history", JSON.stringify(history))
                 }
                 else if (event.key === 'r' || event.key === 'R' || event.key === 'b' || event.key === 'B') {
-                    let history = localStorage.getItem("history");
-
-                    if (!history) history = [];
-                    else history = JSON.parse(history);
                     if (event.key === 'r' || event.key === 'R') {
                         setShowAlertRamificar(true);
                         
                         // Contar cuántos "ramificar" hay en el historial
                         const ramificarCount = history.filter(item => item === "ramificar").length;
                         
-                        if (ramificarCount % 2 === 0 && history[history.length - 2] !== "ramificar") {
-                            history.splice(history.length - 2, 0, "ramificar");
+                        if (ramificarCount % 2 === 0 && history[history.length - 2].title !== "ramificar") {
+
+                            const linkPetaloDosAtras = history[history.length - 2].replace('/circulo-base/', '').replace(/^\//, '');;
+                            
+                            // Verificar si el pétalo dos atrás existe y tiene un título de una sola letra
+                            const petaloDosAtras = findPetalo(petalos, linkPetaloDosAtras.split(':')[0] || linkPetaloDosAtras);
+
+                            if (petaloDosAtras && petaloDosAtras?.title.length === 1) {
+                                // Si es así, insertar "ramificar" tres posiciones atrás
+                                history.splice(history.length - 3, 0, "ramificar");
+                            } else {
+                                // Si no, mantener el comportamiento original
+                                history.splice(history.length - 2, 0, "ramificar");
+                            }
                         } else {
                             if (history.length === 0 || history[history.length - 1] !== "ramificar") 
                                 history.push("ramificar");
@@ -79,7 +96,7 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, [onClick, showAlertBorrar, showAlertRamificar, setShowAlertRamificar, setShowAlertBorrar]);
+    }, [onClick, showAlertBorrar, showAlertRamificar, setShowAlertRamificar, setShowAlertBorrar, petalos]);
 
 
         return (
@@ -95,6 +112,13 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                     Punto borrado de la sesion
                 </Alert>
             </ContainerAlert>}
+
+            {showAlertCorreccion && <ContainerAlert>
+                <Alert severity="success">
+                    Correccion
+                </Alert>
+            </ContainerAlert>}
+
             <ButtonBig onClick={()=>navigate("/circulo-base")}>
                 <ResponsiveText scale={0.55} color={"#6e6e6e"}>
                     {bigButtonTitle}
@@ -133,6 +157,18 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
     );
 };
 
+const findPetalo = (petalos, linkName) => {
+    for (let petalo of petalos) {
+        if (petalo.linkName === linkName) {
+            return petalo;
+        }
+        if (petalo.subPetalos) {
+            const encontrado = findPetalo(petalo.subPetalos, linkName);
+            if (encontrado) return encontrado;
+        }
+    }
+    return null;
+};
 
 const ContainerAlert = styled.div`
   position: absolute;
