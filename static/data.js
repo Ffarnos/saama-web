@@ -2775,7 +2775,7 @@ const petalos = [
                         ]
                     },
                     {linkName: "petalo-4/1/4", image: 'boton4', titlePage: "NUTRICIÓN", title: "Desequilibrio PH", text: "El desequilibrio en el pH del cuerpo humano se refiere a cambios significativos en la acidez o alcalinidad de los fluidos corporales, como la sangre. Esto puede ser causado por dificultades en el cuerpo para regular adecuadamente los niveles de ácido y base, lo que lleva a condiciones como la acidosis (pH bajo) o la alcalosis (pH alto). Estos desequilibrios pueden indicar problemas de salud y afectar el funcionamiento normal del cuerpo. (Corregido)"},
-                    {linkName: "petalo-4/1/5", image: 'boton4', titlePage: "NUTRICIÓN", title: "H2o", text: "(Incorporado)"},
+                    {linkName: "petalo-4/1/5", image: 'boton4', titlePage: "NUTRICIÓN", title: "H2o", text: "H2o (Incorporado)"},
                     {linkName: "petalo-4/1/6", image: 'boton4', titlePage: "NUTRICIÓN", title: "Nutricion de Oxigeno", text: "Es fundamental integrar técnicas de respiración para mejorar el flujo de oxigenación en tu cuerpo. (Incorporado)"},
                     {linkName: "petalo-4/1/7", image: 'boton4', titlePage: "NUTRICIÓN", title: "Flora Intestinal", text: "(Corregido)"},
                     {linkName: "petalo-4/1/8", image: 'boton4', titlePage: "NUTRICIÓN", title: "Sistema Inmune", text: "(Corregido)"},
