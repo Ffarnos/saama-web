@@ -385,7 +385,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                         }
                     });
                 } else {
-                    currentPage.drawText((petalo.useText && !petalo.useDesc ? petalo.title + ": " : "- ") + petalo.textField, {
+                    currentPage.drawText((petalo.useText && !petalo.useDesc ? (petalo.linkName !== "petalo-5/7/1" ? petalo.title : petalo.titlePage) + ": " : "- ") + petalo.textField, {
                         x: 22,
                         y: y,
                         size: 12,

@@ -1069,187 +1069,6 @@ const petalos = [
                                 titlePage: "Patrones Mentales A",
                                 title: "FRACASO",
                                 text: ""
-                            }, {
-                                linkName: "petalo-3/1/1/1",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "ABANDONO",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/2",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "ADICCION",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/3",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "AMARGURA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/4",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "ANSIEDAD",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/5",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "APATIA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/6",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "AUTO CASTIGO",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/7",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "AUTO CRITICA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/8",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "AUTORITARISMO",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/9",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "BAJA AUTOESTIMA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/10",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "CARENCIAS",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/11",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "CELOS",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/12",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "COBARDIA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/13",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "CODICIA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/14",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "CONFORMISMO",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/15",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "CRITICA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/16",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "CULPA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/17",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "DEPRESION",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/18",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "DESAMPARO",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/19",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "DESCONFIANZA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/20",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "DESPRECIO",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/21",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "DOLOR",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/22",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "DRAMA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/23",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "DUDA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/24",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "EGOISMO",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/25",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "ENVIDIA",
-                                text: ""
-                            },
-                            {
-                                linkName: "petalo-3/1/1/26",
-                                image: 'boton3',
-                                titlePage: "Patrones Mentales A",
-                                title: "FRACASO",
-                                text: ""
                             }
                         ],
                     },
@@ -1510,6 +1329,8 @@ const petalos = [
                                 linkName: "petalo-3/2/1/8",
                                 image: 'boton3',
                                 fieldText: true,
+                                useDesc: true,
+                                useText: true,
                                 titlePage: "COMPORTAMIENTOS COTIDIANOS A",
                                 title: "BLOQUEO AL DAR/RECIBIR",
                                 text: "Son obstáculos que interfieren con la capacidad para dar de manera desinteresada y recibir de manera receptiva en diversas interacciones y relaciones humanas. Este bloqueo puede tener un impacto significativo en las relaciones interpersonales, ya que pueden crear desequilibrios en la dinámica de dar y recibir, causar resentimiento, frustración o malentendidos, y dificultar la construcción de conexiones profundas y satisfactorias. El objetivo es cultivar una relación más equilibrada y gratificante con la capacidad de dar y recibir en todas las áreas de la vida. (Anulado)"
@@ -3887,7 +3708,7 @@ const petalos = [
                     { linkName: "petalo-5/4/14", image: 'boton5', titlePage: "Mundo Reiki", title: "Raku",
                         text: "Este símbolo se relaciona con la energía del agua y se utiliza para purificar, liberar bloqueos emocionales y promover la fluidez de la energía. (Incorporado)"
                     },
-                    { linkName: "petalo-5/4/15", image: 'boton5', titlePage: "Mundo Reiki", title: "Hor",
+                    { linkName: "petalo-5/4/15", image: 'boton5', titlePage: "Mundo Reiki", title: "'Hor'",
                         text: "Es de origen egipcio y era utilizado como protección. Calma los dolores de articulaciones y extremidades. También se dice de él que alarga la vida. Puede usarse para conectar directamente con el sol y recibir la energía cósmica que él nos manda. (Incorporado)"
                     },
                     { linkName: "petalo-5/4/16", image: 'boton5', titlePage: "Mundo Reiki", title: "Ganesh",
@@ -3910,7 +3731,7 @@ const petalos = [
                         text: "Este símbolo se utiliza durante el proceso de alineación para unificar los chakras durante un tratamiento o meditación. Aplicado con la energía de Karuna Reiki, alinea todos los chakras y las energías del cuerpo simultáneamente, esto prepara al receptor para recibir la intensidad de la energía. (Incorporado)"
                     },
                     {
-                        linkName: "petalo-5/4/21", image: 'boton5', titlePage: "Mundo Reiki", title: "Om",
+                        linkName: "petalo-5/4/21", image: 'boton5', titlePage: "Mundo Reiki", title: "'Om'",
                         text: "Este símbolo representa el sonido primordial del universo y se utiliza para conectar con la energía cósmica y la consciencia divina. Se considera un símbolo de unidad y equilibrio. (Incorporado)"
                     },
                     {
@@ -4068,7 +3889,7 @@ const petalos = [
                 ]
             },
             {linkName: "petalo-5/7", image: 'boton5',title: "VIDAS PASADAS", text: "El concepto de vidas pasadas nos explica que después de la muerte, el alma o espíritu de una persona puede renacer en un nuevo cuerpo humano, y que las experiencias, lecciones y aprendizajes acumulados en vidas anteriores influyen en la vida actual, la reencarnación se considera un proceso continuo de evolución espiritual, donde el individuo tiene la oportunidad de aprender y crecer, lo importante de esta corrección es liberar la energía que se bloqueó de esa vida pasada, y devolverle su flujo energético natural para impedir los mismos patrones que la generaron. (Corregido)", noNumbers: true,  subPetalos: [
-                {linkName: "petalo-5/7/1", image: 'boton5', titlePage: "RECREACION DE VIDAS PASADAS", title: "RECREACION DE VIDAS PASADAS", text:"AÑO | AC-DC | SEXO | EDAD", useText: true, separate: true, index: 0, colorBorder: "red", fieldText: true},
+                {linkName: "petalo-5/7/1", image: 'boton5', titlePage: "RECREACION DE VIDAS PASADAS", title: "A", text:"AÑO | AC-DC | SEXO | EDAD", useText: true, separate: true, index: 0, colorBorder: "red", fieldText: true},
                 {linkName: "petalo-5/7/2", image: 'boton5', titlePage: "INDIVIDUOS INVOLUCRADOS", index: 1, colorBorder: "red", title: "B", subPetalos: [
                             {linkName: "petalo-5/7/2/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS", text: "PADRE"},
                             {linkName: "petalo-5/7/2/2", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS", text: "MADRE"},
@@ -4414,7 +4235,7 @@ const petalos = [
                             {linkName: "petalo-6/3/2/3", image: 'boton6', titlePage: "TOTEM DE ANIMALES", title: "Rana", text:"la rana se asocia a la suerte. Un amuleto de fortuna. Como animal de poder, la rana nos dice que debemos transformarnos continuamente, que los cambios siempre llegan y hay que aprender a adaptarse a ellos. La rana como guía espiritual nos ayuda a ver las cosas desde otras perspectivas y que así resulte más fácil asimilar los cambios. Nos anima a aceptar las diferencias en los demás, nos ayuda a ser más tolerantes, más abiertos y comprensivos. A lo largo de su vida, la rana totem sufre una importante transformación al pasar de renacuajo a adulto, lo que nos transmite que es posible renacer de cualquier crisis más fuerte y más grande. Todo un mensaje de superación. Si el tótem animal de la rana viene a ti es porque te aporta serenidad y apertura para aceptar los cambios que están pasando. Sus amuletos nos ayudan a ver la parte positiva de todos ellos y nos ayuda en la renovación interior que suponen (Incorporado)"},
                             {linkName: "petalo-6/3/2/4", image: 'boton6', titlePage: "TOTEM DE ANIMALES", title: "Búho", text:"El significado espiritual del Tótem Búho o lechuza es sinónimo de sigilo, de inteligencia, de visión aguda y de movilidad rápida y sigilosa. Es un animal nocturno y por tanto lunar, mensajero de secretos y presagios que simboliza la unión del inframundo, el mundo terrenal y el mundo celestial. Otra cualidad clave del búho con un gran significado espiritual es su intuición, motivo por el que es un animal de poder frecuente en psíquicos y clarividentes, en definitiva, personas con una vida espiritual muy desarrollada, no en vano se trata de un animal de poder complejo y poderoso. Sus amuletos nos conectan con nuestras intuiciones y nos ayudan a ver más allá de lo visible (Incorporado)"},
                             {linkName: "petalo-6/3/2/5", image: 'boton6', titlePage: "TOTEM DE ANIMALES", title: "Cuervo", text:"El significado espiritual del Tótem Cuervo está relacionado con la sabiduría, la inteligencia o la conexión interior con nuestra consciencia más profunda para buscar respuestas, entre otros. Se trata de un animal de poder capaz de dar mensajes de clarividencia mediante sueños, afinando la intuición del que lo lleva como tótem, para lo que los amuletos resultan de gran ayuda. El simbolismo del tótem cuervo con la inteligencia, la sabiduría y el conocimiento, el poder del pensamiento y la búsqueda activa de información, que representa la mente y la intuición (Incorporado)"},
-                            {linkName: "petalo-6/3/2/6", image: 'boton6', titlePage: "TOTEM DE ANIMALES", title: "Oso", text:"El significado espiritual del oso como animal de poder reafirma la autoestima, da un mayor sentido de auto-control y el coraje necesario para hacer lo correcto. Los amuletos nos ayudarán a reforzar los valores familiares, el equilibrio, la introspección, la potencia sexual y la fuerza. Cuando el Tótem Oso se presenta en nuestras vidas, puede ser un momento de gran poder y revelación. Este majestuoso ser, con su imponente presencia y su aire de quietud indomable, nos habla de una profunda sabiduría que se arraiga en la fuerza, la introspección, la sanación, la maternidad y la independencia. Sin duda, un significado espiritual muy amplio y relevante. El Tótem Oso representa la fuerza y el coraje, y no solo en términos físicos, nos recuerda que la verdadera fuerza viene de nuestro interior. Cuando la vida nos lanza desafíos, el Tótem Oso nos insta a enfrentarlos con valentía, a sacar el poder de nuestro espíritu para superar cualquier obstáculo. Nos recuerda la importancia de tomarnos el tiempo para reflexionar, para mirar hacia adentro y buscar las respuestas que necesitamos en nuestro propio ser. El Tótem Oso también es un símbolo de sanación y bienestar. Cuando este tótem aparece en nuestras vidas, puede ser una señal de que es el momento de prestar atención a nuestra salud, tanto física como emocional, y buscar la sanación que necesitamos. Este tótem nos recuerda que tenemos la capacidad de valernos por nosotros mismos, que tenemos la fuerza y la habilidad para superar cualquier desafío que se nos presente. Tómate un momento para reflexionar sobre lo que este poderoso animal tiene para enseñarte. Cada encuentro con un tótem animal es una oportunidad para el crecimiento y la transformación, así que abraza la sabiduría del Oso y deja que te guíe en tu camino (Incorporado)"},
+                            {linkName: "petalo-6/3/2/6", image: 'boton6', titlePage: "TOTEM DE ANIMALES", title: "'Oso'", text:"El significado espiritual del oso como animal de poder reafirma la autoestima, da un mayor sentido de auto-control y el coraje necesario para hacer lo correcto. Los amuletos nos ayudarán a reforzar los valores familiares, el equilibrio, la introspección, la potencia sexual y la fuerza. Cuando el Tótem Oso se presenta en nuestras vidas, puede ser un momento de gran poder y revelación. Este majestuoso ser, con su imponente presencia y su aire de quietud indomable, nos habla de una profunda sabiduría que se arraiga en la fuerza, la introspección, la sanación, la maternidad y la independencia. Sin duda, un significado espiritual muy amplio y relevante. El Tótem Oso representa la fuerza y el coraje, y no solo en términos físicos, nos recuerda que la verdadera fuerza viene de nuestro interior. Cuando la vida nos lanza desafíos, el Tótem Oso nos insta a enfrentarlos con valentía, a sacar el poder de nuestro espíritu para superar cualquier obstáculo. Nos recuerda la importancia de tomarnos el tiempo para reflexionar, para mirar hacia adentro y buscar las respuestas que necesitamos en nuestro propio ser. El Tótem Oso también es un símbolo de sanación y bienestar. Cuando este tótem aparece en nuestras vidas, puede ser una señal de que es el momento de prestar atención a nuestra salud, tanto física como emocional, y buscar la sanación que necesitamos. Este tótem nos recuerda que tenemos la capacidad de valernos por nosotros mismos, que tenemos la fuerza y la habilidad para superar cualquier desafío que se nos presente. Tómate un momento para reflexionar sobre lo que este poderoso animal tiene para enseñarte. Cada encuentro con un tótem animal es una oportunidad para el crecimiento y la transformación, así que abraza la sabiduría del Oso y deja que te guíe en tu camino (Incorporado)"},
                             {linkName: "petalo-6/3/2/7", image: 'boton6', titlePage: "TOTEM DE ANIMALES", title: "Puma", text:"El puma es un símbolo de liderazgo que a la vez recuerda que hay que dejar de lado el ego y que es mejor liderar con el ejemplo en vez de forzar a otros. La gente con el tótem del puma es probablemente un líder natural, que sabe cómo establecer sus límites y que son muy claros con la gente. Son también decisivos, impactantes y siempre capaces de ponerse al frente. El puma es territorial, dominante y realmente astuto. La gente con este animal de poder suele estar en posiciones de confianza y suelen ser capaces de equilibrar el poder, la intención y la fuerza, y a menudo pueden mantener la paz y la calma en situaciones de alta tensión o nerviosismo. Nos pide equilibrar nuestros instintos salvajes con la sabiduría y la paciencia, tomando el tiempo que sea necesario para observar antes de actuar. El puma como animal de poder nos anima a cuidar la serenidad y la equidad. Entre las cualidades del Puma como animal de poder comentadas, destacamos el equilibrio, la astucia, la libertad, la conexión con el lado femenino y el liderazgo (Incorporado)"},
                             {linkName: "petalo-6/3/2/8", image: 'boton6', titlePage: "TOTEM DE ANIMALES", title: "Castor", text:"El Castor Tótem advierte del desequilibrio y nos anima a establecer las prioridades adecuadas, nos ayuda a ordenar el día. Trabajar para cumplir los sueños de toda la vida es admirable, pero no a costa de descuidar a nuestros amigos y familiares, ese es un gran mensaje del castor. Los amuletos del Tótem Castor nos darán constancia para conseguir cualquier cosa y orden en nuestros días para que seamos felices y equilibremos trabajo con familia. El castor nos dice que debemos creer en nuestros sueños como si fueran reales. Su significado espiritual nos anima a empezar proyectos y no dispersarnos. El disfrute, la diversión y los juegos, los amigos o la familia forman parte de su simbolismo: nos recuerda que hay tomarnos tiempo para nosotros mismos y nuestra familia. Si el Tótem Castor aparece en nuestra vida es el momento de completar todo aquello que se ha descuidado y luchar por lo que queremos (Incorporado)"},
                             {linkName: "petalo-6/3/2/9", image: 'boton6', titlePage: "TOTEM DE ANIMALES", title: "Colibrí", text:"El Tótem colibrí lleva de aquí para allá los pensamientos de los hombres y su significado espiritual representa la energía vital, la pasión y el renacimiento. Si alguien te desea un bien, el colibrí es el animal de poder que tomará ese deseo y lo llevará hacia ti. Se dice que, si un colibrí sobrevuela tu cabeza, tomará nuestros deseos y los llevará a los demás. Piensa bien y desea cosas positivas para todos. Si el colibrí tótem se ha cruzado en tu camino, algo extraordinario puede estar por suceder. Soñar con colibríes sólo trae cosas bonitas y los amuletos de esta ave tan especial son el anticipo de cosas buenas (Incorporado)"},
