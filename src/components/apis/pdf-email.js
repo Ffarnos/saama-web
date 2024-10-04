@@ -51,10 +51,10 @@ const createAndSendPDF = async () => {
     let y = 780;
     let currentPage = pdfDoc.addPage([595, 842]);
     const petalosCopy = JSON.parse(JSON.stringify(petalos));
-    const {petalosArray, ramificaciones} = getListOfPetalos();
+    const {petalosArray, ramifiArray} = getListOfPetalos();
 
     console.log(petalosArray);
-    console.log(ramificaciones);
+    console.log(ramifiArray);
 
     for (const petalo of petalosArray) {
         console.log(petalo)
@@ -112,77 +112,75 @@ const createAndSendPDF = async () => {
 
     y = y-30
 
-    for (let i = 0; i < ramificaciones.length; i++) {        
-        if (ramificaciones[i].length >= 3) {
-            const firstElement = ramificaciones[i].shift(); // Elimina y guarda el primer elemento
-            ramificaciones[i].splice(2, 0, firstElement); // Inserta el primer elemento en la posición 2
+    for (let i = 0; i < ramifiArray.length; i++) {        
+        if (ramifiArray[i].length >= 3) {
+            const firstElement = ramifiArray[i].shift(); // Elimina y guarda el primer elemento
+            ramifiArray[i].splice(2, 0, firstElement); // Inserta el primer elemento en la posición 2
         }
         
     }
+    
 
-    for (const ramificacion of ramificaciones) {
-        for (const petalo of ramificacion) {
+    for (const petalo of ramifiArray) {
+        if (y <= 30) {
+            currentPage = pdfDoc.addPage([595, 842]);
+            y = 780;
+        }
 
-            if (y <= 30) {
-                currentPage = pdfDoc.addPage([595, 842]);
-                y = 780;
-            }
+        if (petalo.title === "RAMIFICAROPEN" || petalo.title === "RAMIFICARCLOSE") {
 
-            if (petalo.title === "RAMIFICAROPEN" || petalo.title === "RAMIFICARCLOSE") {
+            if (petalo.title === "RAMIFICAROPEN") {
+                const startX = 50;
+                const startY = y+15;
+                const endX = 50;
+                const endY = y-20;
 
-                if (petalo.title === "RAMIFICAROPEN") {
-                    const startX = 50;
-                    const startY = y+15;
-                    const endX = 50;
-                    const endY = y-20;
-
-                    currentPage.drawLine({
-                        start: { x: startX, y: startY },
-                        end: { x: endX, y: endY },
-                        thickness: 2,
-                        color: rgb(0, 0, 0),
-                    });
-
-                    const arrowHeadLength = 10;
-                    const arrowHeadWidth = 8;
-
-                    currentPage.drawLine({
-                        start: { x: endX, y: endY },
-                        end: { x: endX - arrowHeadWidth, y: endY + arrowHeadLength },
-                        thickness: 2,
-                        color: rgb(0, 0, 0),
-                    });
-
-                    currentPage.drawLine({
-                        start: { x: endX, y: endY },
-                        end: { x: endX + arrowHeadWidth, y: endY + arrowHeadLength },
-                        thickness: 2,
-                        color: rgb(0, 0, 0),
-                    });
-
-                    y = y - 50;
-
-                    if (y <= 30) {
-                        currentPage = pdfDoc.addPage([595, 842]);
-                        y = 780;
-                    }
-                }
-
-                let texto = petalo.title === "RAMIFICAROPEN" ? "Aqui se profundizo el siguiente punto" : "Hasta aquí se profundizo el punto seleccionado"
-                currentPage.drawText(texto, {
-                    x: 22,
-                    y: y,
-                    size: 14,
-                    color: rgb(1, 0, 0),
+                currentPage.drawLine({
+                    start: { x: startX, y: startY },
+                    end: { x: endX, y: endY },
+                    thickness: 2,
+                    color: rgb(0, 0, 0),
                 });
-                y = y - 40
 
+                const arrowHeadLength = 10;
+                const arrowHeadWidth = 8;
+
+                currentPage.drawLine({
+                    start: { x: endX, y: endY },
+                    end: { x: endX - arrowHeadWidth, y: endY + arrowHeadLength },
+                    thickness: 2,
+                    color: rgb(0, 0, 0),
+                });
+
+                currentPage.drawLine({
+                    start: { x: endX, y: endY },
+                    end: { x: endX + arrowHeadWidth, y: endY + arrowHeadLength },
+                    thickness: 2,
+                    color: rgb(0, 0, 0),
+                });
+
+                y = y - 50;
+
+                if (y <= 30) {
+                    currentPage = pdfDoc.addPage([595, 842]);
+                    y = 780;
+                }
             }
-            else {
-                const result = await textPetalo(petalo, currentPage, y, pdfDoc, maxWidth, font);
-                y = result.y;
-                currentPage = result.currentPage
-            }
+
+            let texto = petalo.title === "RAMIFICAROPEN" ? "Aqui se profundizo el siguiente punto" : "Hasta aquí se profundizo el punto seleccionado"
+            currentPage.drawText(texto, {
+                x: 22,
+                y: y,
+                size: 14,
+                color: rgb(1, 0, 0),
+            });
+            y = y - 40
+
+        }
+        else {
+            const result = await textPetalo(petalo, currentPage, y, pdfDoc, maxWidth, font);
+            y = result.y;
+            currentPage = result.currentPage
         }
     }
 
@@ -535,89 +533,110 @@ const getPetaloWithLink = (petalos, linkName) => {
     });
     return petalo;
 };
+
 const getListOfPetalos = () => {
     const petalosArray = [];
-    const ramificaciones = [];
+    const ramifiArray = [];
     const history = localStorage.getItem("history");
 
     console.log("COMENZANDO VER HISTORIAL");
 
     if (history) {
-        let historyArray = JSON.parse(history);
-        historyArray = ordenarPetalo(historyArray.map(item => item.replace("/circulo-base/", "")));
-        let ramificando = false;
-        let ramifiArray = [];
-        
-        // Recorre el historial de petalos
-        let correciones = 0;
-        historyArray.forEach((link) => {
-            console.log("LINK ", link);
-            if (link === "ramificar") {
-                if (ramificando) {
-                    // Cerrar ramificación actual
-                    ramifiArray.push({title: "RAMIFICARCLOSE"});
-                    ramificaciones.push([...ramifiArray]); // Añadimos una copia del array
-                    ramifiArray = []; // Reiniciamos el array para la próxima ramificación
-                    ramificando = false;
-                } else {
-                    ramifiArray = [{title: "RAMIFICAROPEN"}]; // Nuevo array para cada ramificación
-                    ramificando = true;
-                }
-            } else if (link === "correccion") {
-            
-            // Verificar si la corrección abre o cierra
-                if (correciones%2 === 0) {
-                    petalosArray.push({ title: "CORRECCIONOPEN" });
-                } else {
-                    petalosArray.push({ title: "CORRECCIONCLOSE" });
-                }
+        const {historyArrayOrden, ramiLinks} = ordenarPetalo(JSON.parse(history).map(item => item.replace("/circulo-base/", "")));
 
-                correciones++;
-            } else {
-                let p = getPetaloWithLink(petalos, link);
-                
-                if (!p || p.fieldText) {
-                    const splitted = link.split(":");
-                    p = getPetaloWithLink(petalos, splitted[0] || link);
-                    
-                    if (!p) return;
-                    
-                    if (splitted.length > 1) {
-                        if (p.separate) {
-                            p = { ...p, textField: splitted[1] };
-                        } else {
-                            p.textField = p.textField ? `${p.textField}:${splitted[1]}` : splitted[1];
-                        }
-                    }
-                }
-                
-                if (p) {
-                    if (ramificando) {
-                        if (!ramifiArray.find(item => item.linkName === p.linkName) || p.linkName.includes("petalo-5/7")) 
-                            ramifiArray.push(p);
-                    } else {
-                        if (!petalosArray.find(item => item.linkName === p.linkName) || p.linkName.includes("petalo-5/7")) 
-                            petalosArray.push(p);
-                    }
-                }
+        ordenarRamiLinks(ramiLinks)
+
+        ramiLinks.forEach(rami => {
+            const indexRamificar = rami.indexOf("ramificar");
+            if (indexRamificar !== -1) {
+                const primeros = rami.slice(0, indexRamificar + 1);
+                console.log("PRIMEROS " +  primeros);
+                const resto = rami.slice(indexRamificar + 1);
+                console.log("RESTO " +  resto);
+                const restoOrdenado = Array.from(new Set(resto)).sort(sortArray);
+                rami.splice(0, rami.length, ...primeros, ...restoOrdenado);
             }
         });
-        
-        // Si falto cerrar la ramificacion
-        if (ramificando && ramifiArray.length > 0) {
-            ramifiArray.push({title: "RAMIFICARCLOSE"});
-            ramificaciones.push([...ramifiArray]);
+
+        console.log(ramiLinks)
+        // Los convierte a cada link en objeto petalo.
+        let correcciones = 0;
+        const getObjectOfLink = (link) => { 
+            let p;
+            if (link === "correccion") {
+                // Verificar si la corrección abre o cierra
+                    p = {title: ((correcciones%2) === 0) ? "CORRECCIONOPEN" : "CORRECCIONCLOSE"}
+                
+                    correcciones++;
+                } else {
+                    p = getPetaloWithLink(petalos, link);
+                    
+
+                    //SI NO ENCUENTRA EL PETALO (PORQUE EL LINK TIENE TEXTFIELD)
+                    if (!p || p.fieldText) {
+                        const splitted = link.split(":");
+                        p = getPetaloWithLink(petalos, splitted[0] || link);
+                        
+                        if (!p) return;
+                        
+                        if (splitted.length > 1) {
+                            if (p.separate) {
+                                p = { ...p, textField: splitted[1] };
+                            } else {
+                                p.textField = p.textField ? `${p.textField}:${splitted[1]}` : splitted[1];
+                            }
+                        }
+                    }
+                    
+                }
+                return p;
         }
+
+        //CONSIGUE EL OBJETO PETALO DE CADA LINK DE CADA PETALO.
+        historyArrayOrden.forEach((link) => {
+            console.log("LINK ", link);
+            
+            const p = getObjectOfLink(link)
+            if (p) {
+                if (!p.linkName || !petalosArray.find(item => item.linkName === p.linkName) || p.linkName.includes("petalo-5/7")) 
+                    petalosArray.push(p);
+            }
+
+        });
+
+
+        //CONSIGUE EL OBJETO PETALO DE CADA LINK DE CADA RAMIFICACION
+        let x = 0;
+        let ramificando = false;
+        console.log(ramiLinks)
+        ramiLinks.forEach((rami) => {
+            rami.forEach((link) => {
+                let p;
+                if (link === "ramificar") {
+                    p = {title: ramificando ? "RAMIFICARCLOSE" : "RAMIFICAROPEN"}
+                    ramificando = !ramificando
+                }else 
+                    p = getObjectOfLink(link)
+                     
+                if (p) {
+                    if (!p.linkName || !ramiLinks[x].find(item => item.linkName === p.linkName) || p.linkName.includes("petalo-5/7"))
+                        ramifiArray.push(p);
+                }
+            })
+            x++;
+        })
     }
 
     console.log("HISTORIAL", petalosArray);
-    console.log("RAMIFICACIONES", JSON.stringify(ramificaciones));
-    console.log("RAMIFICACIONES", ramificaciones);
-    return { petalosArray, ramificaciones };
+    console.log("RAMIFICACIONES", ramifiArray);
+    return { petalosArray, ramifiArray };
 }
 
-
 const ordenarPetalo = (historyArray) => {
+
+    //PRIMER PASO DE LA CADENA. RECORRE TODO EL HISTORIAL Y SEPARA EN DISTINTOS PETALOS, ADEMAS DE EN RAMIFICACIONES
+    //LUEGO LLAMA AL METODO PARA ORDENAR CADA PETALO (EN CASO DE FUENTE 5 HACE UNA EXEPCION PARA VIDAS PASADAS)
+
     console.log(historyArray)
     const petalos = {
         1: ["petalo-1"],
@@ -629,7 +648,10 @@ const ordenarPetalo = (historyArray) => {
         7: ["petalo-7"]
     }
 
-    let lastPetalo = 1;
+    let ramificacion = []
+    const ramiLinks = []
+
+    let lastPetalo = 1; //ES PARA IDENTIFICAR EN QUE ARRAY PONERLO (DEPENDE EL NUMERO DEL PETALO)
     
     let ramificando = false;
 
@@ -640,14 +662,22 @@ const ordenarPetalo = (historyArray) => {
             return;
 
         if (link === "ramificar") {
-            petalos[lastPetalo].push("ramificar")
+            ramificacion.push(link);
+
+            if (ramificando) {
+                ramiLinks.push([...ramificacion])
+                ramificacion = []
+            }
+
             ramificando = !ramificando
             return;
-        }
-
-        if (link === "correccion") {
+        } else if (link === "correccion") {
             petalos[lastPetalo].push("correccion")
             correccion = !correccion;
+            return;
+        }
+        else if (ramificando) {
+            ramificacion.push(link)
             return;
         }
 
@@ -655,7 +685,7 @@ const ordenarPetalo = (historyArray) => {
 
         const number = match ? parseInt(match[1], 10) : null;
 
-        if (ramificando || correccion)
+        if (correccion)
             petalos[lastPetalo].push(link)
         else {
             petalos[number].push(link)
@@ -664,8 +694,12 @@ const ordenarPetalo = (historyArray) => {
     })
 
     console.log(petalos)
+    console.log(ramiLinks)
+
     const historyArrayOrden = []
 
+    
+    //RECORRE TODOS LOS PETALOS Y LOS ORDENA UNO POR UNO.
     for (let i = 1; i < 8; i++) {
         if (petalos[i].length === 1)
             continue
@@ -686,11 +720,31 @@ const ordenarPetalo = (historyArray) => {
         }
     }
 
-    return historyArrayOrden;
+    
+    return {historyArrayOrden,ramiLinks};
+}
+
+const ordenarRamiLinks = (ramiLinks) => {
+    ramiLinks.forEach(ramificacion => {
+
+        console.log(ramificacion)
+        console.log(ramificacion[2])
+        const toCheck = ramificacion[2];
+        const petaloToCheck = getPetaloWithLink(petalos, toCheck.split(":")[0]);
+
+        ramificacion.splice(0, 1);
+
+        if (petaloToCheck.title.length === 1) 
+            ramificacion.splice(3, 0, "ramificar");
+        else 
+            ramificacion.splice(2, 0, "ramificar");
+
+    });
 }
 
 const OrdenarFuenteByVidas = (links) => {
 
+    //ORDENA LOS PETALOS Y LAS VIDAS PASADAS
     const linksWithOutVidas = []
     const vidasPasadas = []
 
@@ -702,6 +756,7 @@ const OrdenarFuenteByVidas = (links) => {
     links.forEach(link => {
         x++;
         if (link.includes("petalo-5/7/1:")) {
+            //APERTURA Y CIERRE DE LAS VIDAS PASADAS
             if (vidasp) {
                 console.log("VIDA PASADA FINALIZADA", vidasPasadasPetalos);
                 vidasPasadas.push({
@@ -716,6 +771,7 @@ const OrdenarFuenteByVidas = (links) => {
             linksWithOutVidas.push(link)
             return;
         } else if ((!link.includes("petalo-5/7") && vidasp) || (x === links.length)) {
+            //CIERRE EN CASO DE NO IR AL INICIO.
             console.log("VIDA PASADA FINALIZADA", vidasPasadasPetalos);
             vidasp = false;
             vidasPasadas.push({
@@ -734,22 +790,20 @@ const OrdenarFuenteByVidas = (links) => {
         }
     })
 
-    const fuenteOrdenada = OrdenarFuente(linksWithOutVidas);
+    const fuenteOrdenada = OrdenarFuente(linksWithOutVidas); //UTILIZA EL ORDENAR FUENTE COMO LAS DEMAS Y LUEGO LES AGREGA LAS VIDAS PASADAS
     return vidasPasadas.length > 1 ? putVidasPasadas(vidasPasadas, fuenteOrdenada) : fuenteOrdenada;
 }
 
 const OrdenarFuente = (links) => {
-    const linksWithOutRami = [];
-    const ramificaciones = [];
-    const correcciones = [];
+    const linksWithOutCorreciones = [];
     let antLink;
-    let ramificando = false;
-    let ramificandoPetalos = [];
+
+    const correcciones = [];
     let correccion = false;
     let correccionPetalos = [];
 
     links.forEach(link => {
-        if (link === "ramificar") {
+        /*if (link === "ramificar") {
             if (ramificando) {
                 // Fin de la ramificación
                 
@@ -775,7 +829,10 @@ const OrdenarFuente = (links) => {
                 antLink = linksWithOutRami[linksWithOutRami.length - 1];
             }
             ramificando = !ramificando;
-        } else if (link === "correccion") {
+            */
+
+
+        if (link === "correccion") {
             if (correccion) {
                 correcciones.push({
                     antLink: antLink,
@@ -784,21 +841,17 @@ const OrdenarFuente = (links) => {
                 correccionPetalos = []
             }
             else 
-                antLink = linksWithOutRami[linksWithOutRami.length - 1];
+                antLink = linksWithOutCorreciones[linksWithOutCorreciones.length - 1];
             
             correccion = !correccion;
-        } else if (ramificando) {
-            ramificandoPetalos.push(link);
         } else if (correccion) {
             correccionPetalos.push(link);
-        } else linksWithOutRami.push(link);
+        } else linksWithOutCorreciones.push(link);
     });
 
-    linksWithOutRami.sort(sortArray);
+    linksWithOutCorreciones.sort(sortArray);
 
-    const uniqueLinks = Array.from(new Set(linksWithOutRami));
-    const linksWithRamificaciones = putRamificaciones(ramificaciones, uniqueLinks);
-    return putCorrecciones(correcciones, linksWithRamificaciones);
+    return putCorrecciones(correcciones, Array.from(new Set(linksWithOutCorreciones)))
 }
 
 const sortArray = (a, b) => {
@@ -834,19 +887,6 @@ const sortArray = (a, b) => {
 
     return 0;
 };
-
-const putRamificaciones = (ramificaciones, arrayWithOutRami) => {
-    let newArray = [];
-    arrayWithOutRami.forEach(link => {
-        newArray.push(link);
-        ramificaciones.forEach(rami => {
-            if (rami.antLink === link) {
-                newArray.push(...rami.ramificandoPetalos);
-            }
-        });
-    });
-    return newArray;
-}
 
 const putCorrecciones = (correcciones, arrayWithOutCorrecciones) => {
     let newArray = [];
