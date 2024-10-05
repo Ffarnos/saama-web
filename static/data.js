@@ -1477,15 +1477,7 @@ const petalos = [
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "A",
                                         index: 0,
-                                        subPetalos: [
-                                            {
-                                                linkName: "petalo-3/2/2/5/1/1",
-                                                image: 'boton3',
-                                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
-                                                title: "LEGADO TRANSGENERACIONAL A",
-                                                text: "SANANDO"
-                                            },
-                                        ]
+                                        text: "SANANDO"
                                     },
                                     {
                                         linkName: "petalo-3/2/2/5/2",
@@ -1493,15 +1485,7 @@ const petalos = [
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "B",
                                         index: 1,
-                                        subPetalos: [
-                                            {
-                                                linkName: "petalo-3/2/2/5/2/1",
-                                                image: 'boton3',
-                                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
-                                                title: "LEGADO TRANSGENERACIONAL B",
-                                                text: "REPARANDO"
-                                            },
-                                        ]
+                                        text: "REPARANDO"
                                     },
                                     {
                                         linkName: "petalo-3/2/2/5/3",
@@ -1509,15 +1493,7 @@ const petalos = [
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "C",
                                         index: 2,
-                                        subPetalos: [
-                                            {
-                                                linkName: "petalo-3/2/2/5/3/1",
-                                                image: 'boton3',
-                                                titlePage: "COMPORTAMIENTOS COTIDIANOS B",
-                                                title: "LEGADO TRANSGENERACIONAL C",
-                                                text: "REVIVIENDO"
-                                            },
-                                        ]
+                                        text: "REVIVIENDO"
                                     },
                                 ]
                             },
