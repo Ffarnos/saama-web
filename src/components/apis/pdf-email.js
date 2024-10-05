@@ -82,6 +82,40 @@ const createAndSendPDF = async () => {
             const result = await textPetalo(petalo, currentPage, y, pdfDoc, maxWidth, font);
             y = result.y;
             currentPage = result.currentPage
+            
+            //VIDAS PASADAS DEFAULT TEXT
+            if (petalo.title === "BLOQUEO EN LA ACTUALIDAD") {
+                const index = petalosArray.indexOf(petalo);
+                const lastBloqueoIndex = petalosArray.reduceRight((acc, item, index) => {
+                    return item.title === "BLOQUEO EN LA ACTUALIDAD" && acc === -1 ? index : acc;
+                }, -1);
+
+                if (index === lastBloqueoIndex) {
+                    console.log("PUSO TEXTO")
+                    const defaultText = "Mediante la transmutación de Registros Akáshicos liberamos el bloqueo detectado en la actualidad, así de este modo incorporarlo en diferentes ámbitos de nuestra vida";
+                    const wrappedDefaultText = wrapText(defaultText, maxWidth, font, 12);
+                    const lines = wrappedDefaultText.split("\n");
+
+                    for (const line of lines) {
+                        currentPage.drawText(line, {
+                            x: 22,
+                            y: y,
+                            size: 12,
+                            color: rgb(0.6, 0, 0.6), // Color violeta más intenso
+                        });
+                        y = y - 15;
+                        if (y <= 30) {
+                            currentPage = pdfDoc.addPage([595, 842]);
+                            y = 780;
+                        }
+                    }
+                    y = y-20
+                    if (y <= 30) {
+                        currentPage = pdfDoc.addPage([595, 842]);
+                        y = 780;
+                    }
+                }
+            }
         }
     }
 
@@ -388,7 +422,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                     currentPage.drawText((petalo.useText && !petalo.useDesc ? (petalo.linkName !== "petalo-5/7/1" ? petalo.title : petalo.titlePage) + ": " : "- ") + petalo.textField, {
                         x: 22,
                         y: y,
-                        size: 12,
+                        size: (petalo.linkName !== "petalo-5/7/1") ? 12 : 14,
                         color: rgb(0, 0, 0),
                     });
                 }
@@ -413,7 +447,11 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                         y = 780;
                     }
                 }
-                y = y - 20;
+
+                if (petalo.linkName.includes("petalo-5/7") && (petalo.title !== "BLOQUEO EN LA ACTUALIDAD"))
+                    y = y-5
+                else y = y-20
+                
 
                 if (petalo.imageBody) {
                     y = y - (lines.length * 14)
