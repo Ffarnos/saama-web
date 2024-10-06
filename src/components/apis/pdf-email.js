@@ -609,7 +609,6 @@ const getListOfPetalos = () => {
                 } else {
                     p = getPetaloWithLink(petalos, link);
                     
-
                     //SI NO ENCUENTRA EL PETALO (PORQUE EL LINK TIENE TEXTFIELD)
                     if (!p || p.fieldText) {
                         const splitted = link.split(":");
@@ -627,7 +626,7 @@ const getListOfPetalos = () => {
                     }
                     
                 }
-                return p;
+                return {...p}
         }
 
         //CONSIGUE EL OBJETO PETALO DE CADA LINK DE CADA PETALO.
@@ -644,6 +643,19 @@ const getListOfPetalos = () => {
 
 
         //CONSIGUE EL OBJETO PETALO DE CADA LINK DE CADA RAMIFICACION
+
+        const clearTextFields = (petalo) => {
+            if (petalo.textField) {
+                console.log("ENCONTRO PETALO CON TEXTFIELD Y LO SACO")
+                petalo.textField = '';
+            }
+            if (petalo.subPetalos) 
+                petalo.subPetalos.forEach(clearTextFields);
+        };
+
+        petalos.forEach(petalo => clearTextFields(petalo));
+
+        
         let x = 0;
         let ramificando = false;
         console.log(ramiLinks)
