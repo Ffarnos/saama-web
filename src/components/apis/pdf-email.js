@@ -215,6 +215,39 @@ const createAndSendPDF = async () => {
             const result = await textPetalo(petalo, currentPage, y, pdfDoc, maxWidth, font);
             y = result.y;
             currentPage = result.currentPage
+
+            if (petalo.title === "BLOQUEO EN LA ACTUALIDAD") {
+                const index = petalosArray.indexOf(petalo);
+                const lastBloqueoIndex = petalosArray.reduceRight((acc, item, index) => {
+                    return item.title === "BLOQUEO EN LA ACTUALIDAD" && acc === -1 ? index : acc;
+                }, -1);
+
+                if (index === lastBloqueoIndex) {
+                    console.log("PUSO TEXTO")
+                    const defaultText = "Mediante la transmutación de Registros Akáshicos liberamos el bloqueo detectado en la actualidad, así de este modo incorporarlo en diferentes ámbitos de nuestra vida";
+                    const wrappedDefaultText = wrapText(defaultText, maxWidth, font, 12);
+                    const lines = wrappedDefaultText.split("\n");
+
+                    for (const line of lines) {
+                        currentPage.drawText(line, {
+                            x: 22,
+                            y: y,
+                            size: 12,
+                            color: rgb(0.6, 0, 0.6), // Color violeta más intenso
+                        });
+                        y = y - 15;
+                        if (y <= 30) {
+                            currentPage = pdfDoc.addPage([595, 842]);
+                            y = 780;
+                        }
+                    }
+                    y = y-20
+                    if (y <= 30) {
+                        currentPage = pdfDoc.addPage([595, 842]);
+                        y = 780;
+                    }
+                }
+            }
         }
     }
 
@@ -591,7 +624,9 @@ const getListOfPetalos = () => {
                 console.log("PRIMEROS " +  primeros);
                 const resto = rami.slice(indexRamificar + 1);
                 console.log("RESTO " +  resto);
-                const restoOrdenado = Array.from(new Set(resto)).sort(sortArray);
+
+                const restoOrdenado = OrdenarFuenteByVidas(resto);
+
                 rami.splice(0, rami.length, ...primeros, ...restoOrdenado);
             }
         });
@@ -722,7 +757,10 @@ const ordenarPetalo = (historyArray) => {
             ramificando = !ramificando
             return;
         } else if (link === "correccion") {
-            petalos[lastPetalo].push("correccion")
+            if (ramificando)
+                ramificacion.push(link)
+            else 
+                petalos[lastPetalo].push("correccion")
             correccion = !correccion;
             return;
         }
@@ -735,9 +773,12 @@ const ordenarPetalo = (historyArray) => {
 
         const number = match ? parseInt(match[1], 10) : null;
 
-        if (correccion)
-            petalos[lastPetalo].push(link)
-        else {
+        if (correccion) {
+            if (ramificando)
+                ramificacion.push(link)
+            else 
+                petalos[lastPetalo].push(link)
+        } else {
             petalos[number].push(link)
             lastPetalo = number;
         }
@@ -769,7 +810,6 @@ const ordenarPetalo = (historyArray) => {
             })
         }
     }
-
     
     return {historyArrayOrden,ramiLinks};
 }
@@ -778,7 +818,6 @@ const ordenarRamiLinks = (ramiLinks) => {
     ramiLinks.forEach(ramificacion => {
 
         console.log(ramificacion)
-        console.log(ramificacion[2])
         const toCheck = ramificacion[2];
         const petaloToCheck = getPetaloWithLink(petalos, toCheck.split(":")[0]);
 
@@ -792,7 +831,7 @@ const ordenarRamiLinks = (ramiLinks) => {
     });
 }
 
-const OrdenarFuenteByVidas = (links) => {
+const OrdenarFuenteByVidas = (links, sort) => {
 
     //ORDENA LOS PETALOS Y LAS VIDAS PASADAS
     const linksWithOutVidas = []
@@ -853,35 +892,6 @@ const OrdenarFuente = (links) => {
     let correccionPetalos = [];
 
     links.forEach(link => {
-        /*if (link === "ramificar") {
-            if (ramificando) {
-                // Fin de la ramificación
-                
-                const toCheck = ramificandoPetalos[1];
-                const petaloToCheck = getPetaloWithLink(petalos, toCheck);
-                const primeros = petaloToCheck && petaloToCheck.title && petaloToCheck.title.length === 1 
-                    ? ramificandoPetalos.slice(0, 3) 
-                    : ramificandoPetalos.slice(0, 2);
-                const resto = petaloToCheck && petaloToCheck.title && petaloToCheck.title.length === 1 
-                    ? ramificandoPetalos.slice(3) 
-                    : ramificandoPetalos.slice(2);
-
-            
-                const restoOrdenado = Array.from(new Set(resto)).sort(sortArray);
-                
-                ramificaciones.push({
-                    antLink: antLink,
-                    ramificandoPetalos: ["ramificar", ...primeros, ...restoOrdenado, "ramificar"]
-                });
-                ramificandoPetalos = [];
-            } else {
-                // Inicio de la ramificación
-                antLink = linksWithOutRami[linksWithOutRami.length - 1];
-            }
-            ramificando = !ramificando;
-            */
-
-
         if (link === "correccion") {
             if (correccion) {
                 correcciones.push({
@@ -901,8 +911,18 @@ const OrdenarFuente = (links) => {
 
     linksWithOutCorreciones.sort(sortArray);
 
-    return putCorrecciones(correcciones, Array.from(new Set(linksWithOutCorreciones)))
+    const uniqueCorrecciones = []
+
+    correcciones.forEach(({ antLink, correccionPetalos }) => {
+        uniqueCorrecciones.push({
+            antLink,
+            correccionPetalos: new Set(correccionPetalos)
+        });
+    });
+
+    return putCorrecciones(uniqueCorrecciones, Array.from(new Set(linksWithOutCorreciones)))
 }
+
 
 const sortArray = (a, b) => {
     const parsePath = (str) => {
