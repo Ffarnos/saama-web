@@ -670,8 +670,7 @@ const getListOfPetalos = () => {
             
             const p = getObjectOfLink(link)
             if (p) {
-                if (!p.linkName || !petalosArray.find(item => item.linkName === p.linkName) || p.linkName.includes("petalo-5/7")) 
-                    petalosArray.push(p);
+                 petalosArray.push(p);
             }
 
         });
@@ -703,10 +702,9 @@ const getListOfPetalos = () => {
                 }else 
                     p = getObjectOfLink(link)
                      
-                if (p) {
-                    if (!p.linkName || !ramiLinks[x].find(item => item.linkName === p.linkName) || p.linkName.includes("petalo-5/7"))
-                        ramifiArray.push(p);
-                }
+                if (p) 
+                    ramifiArray.push(p);
+                
             })
             x++;
         })
