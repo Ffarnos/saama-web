@@ -390,7 +390,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
             y = y - 30;
         }
     } else if (petalo.title === "CORRECCIONOPEN" || petalo.title === "CORRECCIONCLOSE") {
-        const text = petalo.title === "CORRECCIONOPEN" ? "INICIO" : "FIN";
+        const text = petalo.title === "CORRECCIONOPEN" ? "DESDE AQUI SE TRABAJO, LA SIGUIENTE INFORMACION DEL LEGADO" : "HASTA AQUI SE TRABAJO, LA INFORMACION DEL LEGADO";
         currentPage.drawText(text, {
             x: 22,
             y: y,
