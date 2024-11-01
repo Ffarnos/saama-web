@@ -668,9 +668,11 @@ const getListOfPetalos = () => {
         historyArrayOrden.forEach((link) => {
             console.log("LINK ", link);
             
+            
             const p = getObjectOfLink(link)
             if (p) {
-                 petalosArray.push(p);
+                if (!p.linkName || (!petalosArray.find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(historyArrayOrden,link)) 
+                    petalosArray.push(p);
             }
 
         });
@@ -702,8 +704,10 @@ const getListOfPetalos = () => {
                 }else 
                     p = getObjectOfLink(link)
                      
-                if (p) 
-                    ramifiArray.push(p);
+                if (p) {
+                    if (!p.linkName || !ramiLinks[x].find(item => item.linkName === p.linkName) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(ramiLinks,link))
+                        ramifiArray.push(p);
+                }
                 
             })
             x++;
@@ -984,5 +988,31 @@ const putVidasPasadas = (vidasPasadas, arrayWithOutVidas) => {
     })
     return newArray;
 }
+
+const isStringInCorrecciones = (array, targetString) => {
+    let inCorreccion = false;
+    let foundTarget = false;
+
+    for (const item of array) {
+        if (item === "correccion") {
+            if (inCorreccion) {
+                // Si ya está en corrección y encontramos otra, salimos
+                inCorreccion = false; // Cambiamos el estado al salir de la corrección
+            } else {
+                inCorreccion = true; // Entramos en una nueva corrección
+                foundTarget = false; // Reiniciamos la búsqueda al entrar en una nueva corrección
+            }
+        } else if (inCorreccion) {
+            if (item === targetString) {
+                if (foundTarget) {
+                    return false; // El string ya fue encontrado en esta corrección
+                }
+                foundTarget = true; // Marcamos que encontramos el string
+            }
+        }
+    }
+
+    return foundTarget; // Retorna true si el string fue encontrado en la corrección
+};
 
 export default createAndSendPDF;
