@@ -606,8 +606,8 @@ const getPetaloWithLink = (petalos, linkName) => {
 };
 
 const getListOfPetalos = () => {
-    const petalosArray = [];
-    const ramifiArray = [];
+    let petalosArray = [];
+    let ramifiArray = [];
     const history = localStorage.getItem("history");
 
     console.log("COMENZANDO VER HISTORIAL");
@@ -671,7 +671,10 @@ const getListOfPetalos = () => {
             
             const p = getObjectOfLink(link)
             if (p) {
-                if (!p.linkName || (!petalosArray.find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(historyArrayOrden,link)) 
+                if (petalosArray.find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(historyArrayOrden,link)) 
+                    petalosArray = petalosArray.filter(item => item.linkName !== p.linkName);
+
+                if (!p.linkName || (!petalosArray.find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(historyArrayOrden,link))
                     petalosArray.push(p);
             }
 
@@ -705,8 +708,11 @@ const getListOfPetalos = () => {
                     p = getObjectOfLink(link)
                      
                 if (p) {
-                    if (!p.linkName || !ramiLinks[x].find(item => item.linkName === p.linkName) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(ramiLinks,link))
-                        ramifiArray.push(p);
+                    if (ramiLinks[x].find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(ramiLinks,link)) 
+                        petalosArray = petalosArray.filter(item => item.linkName !== p.linkName);
+    
+                    if (!p.linkName || (!ramiLinks[x].find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(ramiLinks,link))
+                        petalosArray.push(p);
                 }
                 
             })
