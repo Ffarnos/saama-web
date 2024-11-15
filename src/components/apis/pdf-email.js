@@ -634,23 +634,23 @@ const getListOfPetalos = () => {
         console.log(ramiLinks)
         // Los convierte a cada link en objeto petalo.
         let correcciones = 0;
-        const getObjectOfLink = (link) => { 
+        const getObjectOfLink = (link) => {
             let p;
             if (link === "correccion") {
                 // Verificar si la corrección abre o cierra
                     p = {title: ((correcciones%2) === 0) ? "CORRECCIONOPEN" : "CORRECCIONCLOSE"}
-                
+
                     correcciones++;
                 } else {
                     p = getPetaloWithLink(petalos, link);
-                    
+
                     //SI NO ENCUENTRA EL PETALO (PORQUE EL LINK TIENE TEXTFIELD)
                     if (!p || p.fieldText) {
                         const splitted = link.split(":");
                         p = getPetaloWithLink(petalos, splitted[0] || link);
-                        
+
                         if (!p) return;
-                        
+
                         if (splitted.length > 1) {
                             if (p.separate) {
                                 p = { ...p, textField: splitted[1] };
@@ -659,7 +659,7 @@ const getListOfPetalos = () => {
                             }
                         }
                     }
-                    
+
                 }
                 return {...p}
         }
@@ -667,11 +667,11 @@ const getListOfPetalos = () => {
         //CONSIGUE EL OBJETO PETALO DE CADA LINK DE CADA PETALO.
         historyArrayOrden.forEach((link) => {
             console.log("LINK ", link);
-            
-            
+
+
             const p = getObjectOfLink(link)
             if (p) {
-                if (petalosArray.find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(historyArrayOrden,link)) 
+                if (petalosArray.find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(historyArrayOrden,link))
                     petalosArray = petalosArray.filter(item => item.linkName !== p.linkName);
 
                 if (!p.linkName || (!petalosArray.find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(historyArrayOrden,link))
@@ -688,13 +688,13 @@ const getListOfPetalos = () => {
                 console.log("ENCONTRO PETALO CON TEXTFIELD Y LO SACO")
                 petalo.textField = '';
             }
-            if (petalo.subPetalos) 
+            if (petalo.subPetalos)
                 petalo.subPetalos.forEach(clearTextFields);
         };
 
         petalos.forEach(petalo => clearTextFields(petalo));
 
-        
+
         let x = 0;
         let ramificando = false;
         console.log(ramiLinks)
@@ -704,17 +704,16 @@ const getListOfPetalos = () => {
                 if (link === "ramificar") {
                     p = {title: ramificando ? "RAMIFICARCLOSE" : "RAMIFICAROPEN"}
                     ramificando = !ramificando
-                }else 
+                }else
                     p = getObjectOfLink(link)
-                     
+
                 if (p) {
-                    if (ramiLinks[x].find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(ramiLinks,link)) 
-                        petalosArray = petalosArray.filter(item => item.linkName !== p.linkName);
-    
-                    if (!p.linkName || (!ramiLinks[x].find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(ramiLinks,link))
-                        petalosArray.push(p);
+                    if (ramiLinks[x].find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(ramiLinks[x],link))
+                        ramifiArray = ramifiArray.filter(item => item.linkName !== p.linkName);
+
+                    if (!p.linkName || (!ramiLinks[x].find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(ramiLinks[x],link))
+                        ramifiArray.push(p);
                 }
-                
             })
             x++;
         })
