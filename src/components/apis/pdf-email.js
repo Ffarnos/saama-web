@@ -1,6 +1,6 @@
 import 'firebase/auth';
-import {petalos} from "../../../static/data";
-import {PDFDocument, rgb} from 'pdf-lib';
+import { petalos } from "../../../static/data";
+import { PDFDocument, rgb } from 'pdf-lib';
 
 const createAndSendPDF = async () => {
     const existingPdfBytes = await loadPDF();
@@ -51,7 +51,7 @@ const createAndSendPDF = async () => {
     let y = 780;
     let currentPage = pdfDoc.addPage([595, 842]);
     const petalosCopy = JSON.parse(JSON.stringify(petalos));
-    const {petalosArray, ramifiArray} = getListOfPetalos();
+    const { petalosArray, ramifiArray } = getListOfPetalos();
 
     console.log(petalosArray);
     console.log(ramifiArray);
@@ -82,7 +82,7 @@ const createAndSendPDF = async () => {
             const result = await textPetalo(petalo, currentPage, y, pdfDoc, maxWidth, font);
             y = result.y;
             currentPage = result.currentPage
-            
+
             //VIDAS PASADAS DEFAULT TEXT
             if (petalo.title === "BLOQUEO EN LA ACTUALIDAD") {
                 const index = petalosArray.indexOf(petalo);
@@ -109,7 +109,7 @@ const createAndSendPDF = async () => {
                             y = 780;
                         }
                     }
-                    y = y-20
+                    y = y - 20
                     if (y <= 30) {
                         currentPage = pdfDoc.addPage([595, 842]);
                         y = 780;
@@ -131,7 +131,7 @@ const createAndSendPDF = async () => {
         color: rgb(0.865, 0, 1),
     });
 
-    y = y-20
+    y = y - 20
 
     const subTitleRami = "Aquí se verán reflejados los puntos trabajados y profundizados para lograr desbloquear la corrección seleccionada";
     wrapText(subTitleRami, maxWidth, font, 12).split('\n').forEach(line => {
@@ -144,16 +144,16 @@ const createAndSendPDF = async () => {
         y = y - 15;
     });
 
-    y = y-30
+    y = y - 30
 
-    for (let i = 0; i < ramifiArray.length; i++) {        
+    for (let i = 0; i < ramifiArray.length; i++) {
         if (ramifiArray[i].length >= 3) {
             const firstElement = ramifiArray[i].shift(); // Elimina y guarda el primer elemento
             ramifiArray[i].splice(2, 0, firstElement); // Inserta el primer elemento en la posición 2
         }
-        
+
     }
-    
+
 
     for (const petalo of ramifiArray) {
         if (y <= 30) {
@@ -165,9 +165,9 @@ const createAndSendPDF = async () => {
 
             if (petalo.title === "RAMIFICAROPEN") {
                 const startX = 50;
-                const startY = y+15;
+                const startY = y + 15;
                 const endX = 50;
-                const endY = y-20;
+                const endY = y - 20;
 
                 currentPage.drawLine({
                     start: { x: startX, y: startY },
@@ -241,7 +241,7 @@ const createAndSendPDF = async () => {
                             y = 780;
                         }
                     }
-                    y = y-20
+                    y = y - 20
                     if (y <= 30) {
                         currentPage = pdfDoc.addPage([595, 842]);
                         y = 780;
@@ -253,7 +253,7 @@ const createAndSendPDF = async () => {
 
     currentPage = pdfDoc.addPage([595, 842]);
     y = 780;
-    
+
     currentPage.drawText("CAMBIO CURATIVO", {
         x: 22,
         y: y,
@@ -261,7 +261,7 @@ const createAndSendPDF = async () => {
         color: rgb(0, 0, 0),
         font: font,
     });
-    
+
     y = y - 30;
 
     const textoFinal = "DESPUÉS DE REALIZAR LA TERAPIA CUÁNTICA GENESIS, EN ALGUNAS OCASIONES SE PUEDE INICIAR UN PROCESO DE SANACIÓN CONOCIDA COMO ¨¡CAMBIO CURATIVO!¨, DONDE TANTO EL CUERPO COMO LA MENTE Y EL ESPÍRITU SE LIBERAN! AL DESBLOQUEARSE LAS EMOCIONES ATRAPADAS, TAMBIÉN SE LIBERAN TOXINAS Y DESECHOS DEL CUERPO. ESTO HACE QUE ALGUNAS VECES EL DOLOR Y LOS SÍNTOMAS DE AGUDICEN, PERO ESTE PROCESO ES PASAJERO Y NECESARIO PARA LA SANACIÓN DEFINITIVALAS REACCIONES FÍSICAS QUE SE EXPERIMENTAN DURANTE UNA CRISIS CURATIVA PUEDEN INCLUIR ERUPCIONES EN LA PIEL, NÁUSEAS, VÓMITOS, DOLOR DE CABEZA, SOMNOLENCIA, INSOMNIO, FATIGA, ESTREÑIMIENTO, RESFRIADO, ATAQUE DE RISA, LLANTO, SUBIDA DE TEMPERATURA CORPORAL, ETC. UNA CRISIS DE CURACIÓN NORMALMENTE DURA ALREDEDOR DE UNO O TRES DÍAS, PERO SI LA ENERGÍA O VITALIDAD DE LA PERSONA ES BAJA, PUEDE DURAR UN POCO MÁS... EN ESTE MOMENTO EL CUERPO NECESITA MUCHA AGUA Y EN LO POSIBLE DESCANSO LA MAYORÍADE LAS VECES, LA CRISIS CURATIVA ES POCO PERCEPTIBLE Y LA PERSONA CONTINÚA SU VIDA NORMAL. SIEMPRE DESPUÉS DE LA CRISIS CURATIVA VIENE EL PROCESO DE SANACIÓN."
@@ -289,7 +289,7 @@ const createAndSendPDF = async () => {
             x: 22,
             y: y,
             size: 12,
-            color: rgb(0.8, 0.6, 1), 
+            color: rgb(0.8, 0.6, 1),
         });
         y -= 15;
         if (y <= 30) {
@@ -482,9 +482,9 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                 }
 
                 if (petalo.linkName.includes("petalo-5/7") && (petalo.title !== "BLOQUEO EN LA ACTUALIDAD"))
-                    y = y-5
-                else y = y-20
-                
+                    y = y - 5
+                else y = y - 20
+
 
                 if (petalo.imageBody) {
                     y = y - (lines.length * 14)
@@ -613,7 +613,7 @@ const getListOfPetalos = () => {
     console.log("COMENZANDO VER HISTORIAL");
 
     if (history) {
-        const {historyArrayOrden, ramiLinks} = ordenarPetalo(JSON.parse(history).map(item => item.replace("/circulo-base/", "")));
+        const { historyArrayOrden, ramiLinks } = ordenarPetalo(JSON.parse(history).map(item => item.replace("/circulo-base/", "")));
 
         ordenarRamiLinks(ramiLinks)
 
@@ -621,9 +621,9 @@ const getListOfPetalos = () => {
             const indexRamificar = rami.indexOf("ramificar");
             if (indexRamificar !== -1) {
                 const primeros = rami.slice(0, indexRamificar + 1);
-                console.log("PRIMEROS " +  primeros);
+                console.log("PRIMEROS " + primeros);
                 const resto = rami.slice(indexRamificar + 1);
-                console.log("RESTO " +  resto);
+                console.log("RESTO " + resto);
 
                 const restoOrdenado = OrdenarFuenteByVidas(resto);
 
@@ -638,30 +638,30 @@ const getListOfPetalos = () => {
             let p;
             if (link === "correccion") {
                 // Verificar si la corrección abre o cierra
-                    p = {title: ((correcciones%2) === 0) ? "CORRECCIONOPEN" : "CORRECCIONCLOSE"}
+                p = { title: ((correcciones % 2) === 0) ? "CORRECCIONOPEN" : "CORRECCIONCLOSE" }
 
-                    correcciones++;
-                } else {
-                    p = getPetaloWithLink(petalos, link);
+                correcciones++;
+            } else {
+                p = getPetaloWithLink(petalos, link);
 
-                    //SI NO ENCUENTRA EL PETALO (PORQUE EL LINK TIENE TEXTFIELD)
-                    if (!p || p.fieldText) {
-                        const splitted = link.split(":");
-                        p = getPetaloWithLink(petalos, splitted[0] || link);
+                //SI NO ENCUENTRA EL PETALO (PORQUE EL LINK TIENE TEXTFIELD)
+                if (!p || p.fieldText) {
+                    const splitted = link.split(":");
+                    p = getPetaloWithLink(petalos, splitted[0] || link);
 
-                        if (!p) return;
+                    if (!p) return;
 
-                        if (splitted.length > 1) {
-                            if (p.separate) {
-                                p = { ...p, textField: splitted[1] };
-                            } else {
-                                p.textField = p.textField ? `${p.textField}:${splitted[1]}` : splitted[1];
-                            }
+                    if (splitted.length > 1) {
+                        if (p.separate) {
+                            p = { ...p, textField: splitted[1] };
+                        } else {
+                            p.textField = p.textField ? `${p.textField}:${splitted[1]}` : splitted[1];
                         }
                     }
-
                 }
-                return {...p}
+
+            }
+            return { ...p }
         }
 
         //CONSIGUE EL OBJETO PETALO DE CADA LINK DE CADA PETALO.
@@ -671,10 +671,10 @@ const getListOfPetalos = () => {
 
             const p = getObjectOfLink(link)
             if (p) {
-                if (petalosArray.find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(historyArrayOrden,link))
+                if ((!p.linkName?.includes("petalo-5/7/1")) && petalosArray.find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(historyArrayOrden, link))
                     petalosArray = petalosArray.filter(item => item.linkName !== p.linkName);
 
-                if (!p.linkName || (!petalosArray.find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(historyArrayOrden,link))
+                if (!p.linkName || (!petalosArray.find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(historyArrayOrden, link))
                     petalosArray.push(p);
             }
 
@@ -702,16 +702,16 @@ const getListOfPetalos = () => {
             rami.forEach((link) => {
                 let p;
                 if (link === "ramificar") {
-                    p = {title: ramificando ? "RAMIFICARCLOSE" : "RAMIFICAROPEN"}
+                    p = { title: ramificando ? "RAMIFICARCLOSE" : "RAMIFICAROPEN" }
                     ramificando = !ramificando
-                }else
+                } else
                     p = getObjectOfLink(link)
 
                 if (p) {
-                    if (ramiLinks[x].find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(ramiLinks[x],link))
+                    if ((!p.linkName?.includes("petalo-5/7")) && ramiLinks[x].find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(ramiLinks[x], link))
                         ramifiArray = ramifiArray.filter(item => item.linkName !== p.linkName);
 
-                    if (!p.linkName || (!ramiLinks[x].find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(ramiLinks[x],link))
+                    if (!p.linkName || (!ramiLinks[x].find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(ramiLinks[x], link))
                         ramifiArray.push(p);
                 }
             })
@@ -744,7 +744,7 @@ const ordenarPetalo = (historyArray) => {
     const ramiLinks = []
 
     let lastPetalo = 1; //ES PARA IDENTIFICAR EN QUE ARRAY PONERLO (DEPENDE EL NUMERO DEL PETALO)
-    
+
     let ramificando = false;
 
     let correccion = false;
@@ -766,7 +766,7 @@ const ordenarPetalo = (historyArray) => {
         } else if (link === "correccion") {
             if (ramificando)
                 ramificacion.push(link)
-            else 
+            else
                 petalos[lastPetalo].push("correccion")
             correccion = !correccion;
             return;
@@ -783,7 +783,7 @@ const ordenarPetalo = (historyArray) => {
         if (correccion) {
             if (ramificando)
                 ramificacion.push(link)
-            else 
+            else
                 petalos[lastPetalo].push(link)
         } else {
             petalos[number].push(link)
@@ -796,7 +796,7 @@ const ordenarPetalo = (historyArray) => {
 
     const historyArrayOrden = []
 
-    
+
     //RECORRE TODOS LOS PETALOS Y LOS ORDENA UNO POR UNO.
     for (let i = 1; i < 8; i++) {
         if (petalos[i].length === 1)
@@ -817,22 +817,31 @@ const ordenarPetalo = (historyArray) => {
             })
         }
     }
-    
-    return {historyArrayOrden,ramiLinks};
+
+    return { historyArrayOrden, ramiLinks };
 }
 
 const ordenarRamiLinks = (ramiLinks) => {
     ramiLinks.forEach(ramificacion => {
 
-        console.log(ramificacion)
         const toCheck = ramificacion[2];
         const petaloToCheck = getPetaloWithLink(petalos, toCheck.split(":")[0]);
 
+        const toCheck2 = ramificacion[3]
+        const petaloToCheck2 = getPetaloWithLink(petalos, toCheck2.split(":")[0]);
+
         ramificacion.splice(0, 1);
 
-        if (petaloToCheck.title.length === 1) 
-            ramificacion.splice(3, 0, "ramificar");
-        else 
+        // Verificar el pétalo en la posición 3 antes de hacer el splice
+
+        if (petaloToCheck.title.length === 1) {
+            if (petaloToCheck2 && petaloToCheck2.subPetalos) {
+                ramificacion.splice(3, 0, "ramificar");
+            } else {
+                ramificacion.splice(1, 0, "ramificar");
+            }
+        }
+        else
             ramificacion.splice(2, 0, "ramificar");
 
     });
@@ -866,7 +875,7 @@ const OrdenarFuenteByVidas = (links, sort) => {
             startLink = link;
             linksWithOutVidas.push(link)
             return;
-        } else if ((!link.includes("petalo-5/7") && vidasp) || (x === links.length)) {
+        } else if (vidasp && (!link.includes("petalo-5/7") || (x === links.length))) {
             //CIERRE EN CASO DE NO IR AL INICIO.
             console.log("VIDA PASADA FINALIZADA", vidasPasadasPetalos);
             vidasp = false;
@@ -887,7 +896,8 @@ const OrdenarFuenteByVidas = (links, sort) => {
     })
 
     const fuenteOrdenada = OrdenarFuente(linksWithOutVidas); //UTILIZA EL ORDENAR FUENTE COMO LAS DEMAS Y LUEGO LES AGREGA LAS VIDAS PASADAS
-    return vidasPasadas.length > 1 ? putVidasPasadas(vidasPasadas, fuenteOrdenada) : fuenteOrdenada;
+
+    return vidasPasadas.length > 0 ? putVidasPasadas(vidasPasadas, fuenteOrdenada) : fuenteOrdenada;
 }
 
 const OrdenarFuente = (links) => {
@@ -907,9 +917,9 @@ const OrdenarFuente = (links) => {
                 })
                 correccionPetalos = []
             }
-            else 
+            else
                 antLink = linksWithOutCorreciones[linksWithOutCorreciones.length - 1];
-            
+
             correccion = !correccion;
         } else if (correccion) {
             correccionPetalos.push(link);
