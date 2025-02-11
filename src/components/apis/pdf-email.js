@@ -617,6 +617,7 @@ const getListOfPetalos = () => {
 
         ordenarRamiLinks(ramiLinks)
 
+
         ramiLinks.forEach(rami => {
             const indexRamificar = rami.indexOf("ramificar");
             if (indexRamificar !== -1) {
@@ -729,7 +730,7 @@ const ordenarPetalo = (historyArray) => {
     //PRIMER PASO DE LA CADENA. RECORRE TODO EL HISTORIAL Y SEPARA EN DISTINTOS PETALOS, ADEMAS DE EN RAMIFICACIONES
     //LUEGO LLAMA AL METODO PARA ORDENAR CADA PETALO (EN CASO DE FUENTE 5 HACE UNA EXEPCION PARA VIDAS PASADAS)
 
-    console.log(historyArray)
+    console.log("HISTOY ARRAY", historyArray)
     const petalos = {
         1: ["petalo-1"],
         2: ["petalo-2"],
@@ -792,6 +793,7 @@ const ordenarPetalo = (historyArray) => {
     })
 
     console.log(petalos)
+    console.log(JSON.stringify(ramiLinks))
     console.log(ramiLinks)
 
     const historyArrayOrden = []
@@ -835,11 +837,7 @@ const ordenarRamiLinks = (ramiLinks) => {
         // Verificar el pétalo en la posición 3 antes de hacer el splice
 
         if (petaloToCheck.title.length === 1) {
-            if (petaloToCheck2 && petaloToCheck2.subPetalos) {
-                ramificacion.splice(3, 0, "ramificar");
-            } else {
-                ramificacion.splice(1, 0, "ramificar");
-            }
+            ramificacion.splice(3, 0, "ramificar");
         }
         else
             ramificacion.splice(2, 0, "ramificar");
