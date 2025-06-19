@@ -27,7 +27,14 @@ const Finish = styled.div`
 `;
 
 const FinishResponsive = styled(Finish)`
+   pointer-events: auto;
+  z-index: 9999;
+
   @media (min-height: 1300px) {
+    margin-top: -180px;
+  }  
+
+ @media (min-height: 1300px) {
     margin-top: -180px;
   }
 

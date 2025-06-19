@@ -5,6 +5,7 @@ import {useState} from "react";
 import {navigate} from "gatsby";
 import {Alert, TextField, ThemeProvider, createTheme} from "@mui/material";
 import {FinishButtonResponsive} from "../navigation/FinishButton";
+import { LoadButton } from '../navigation/LoadButton';
 import LoginCheck from "../login/LoginCheck";
 import {Background} from "../Commons";
 import historySave from "../navigation/History";
@@ -102,6 +103,7 @@ const PetalosTemplate = ({ pageContext }) => {
                 }}
             />
             <FinishButtonResponsive/>
+            <LoadButton/>
         </Container>
     </Background>
     </LoginCheck>;
