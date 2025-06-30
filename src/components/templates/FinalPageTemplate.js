@@ -9,6 +9,7 @@ import LoginCheck from "../login/LoginCheck";
 import createAndSendPDF from "../apis/pdf-email";
 import {Alert, TextField} from "@mui/material";
 import {petalos} from "../../../static/data";
+import { LoadButton } from '../navigation/LoadButton';
 
 const FinalPageTemplate = ({ pageContext }) => {
 
@@ -178,6 +179,7 @@ const FinalPageTemplate = ({ pageContext }) => {
                 <Container>
                     <NavigationButtonsInLine/>
                 </Container>
+                <LoadButton/>
             </Content>
         </Background>
     </LoginCheck>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {navigate} from "gatsby";
 import FinishButton from "./FinishButton";
 import ResponsiveText from "../apis/ResponsiveText";
-import { LoadButton } from '../navigation/LoadButton';
+
 
 
 
@@ -24,7 +24,7 @@ export const NavigationButtonsInLine = () => <>
             FUENTE MADRE
         </ResponsiveText>
     </GuiaButton>
-    <LoadButton/>
+    
 </>
 
 

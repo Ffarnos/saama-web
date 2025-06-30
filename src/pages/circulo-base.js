@@ -72,7 +72,7 @@ const CirculoBase = () => {
                         }
                     }}
                 />
-                <FinishButtonResponsive/>
+                
             </Container>
         </Background>
     </LoginCheck>;
