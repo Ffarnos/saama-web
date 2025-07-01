@@ -19,4 +19,8 @@ export const Background = styled.div`
     background-color: #888888;
     border-radius: 2px;
   }
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 `;

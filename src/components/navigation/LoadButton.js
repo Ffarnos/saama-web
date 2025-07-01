@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {navigate} from "gatsby";
+
 import createAndSendPDF from "../apis/pdf-email";
 
 
@@ -25,15 +26,15 @@ const Finish = styled.div`
 `;
 
 const Load = styled(Finish)`
-  position: absolute;
-  bottom: 0px;     /* distancia desde abajo */
-  right: 1px;      /* distancia desde el borde derecho */
-  z-index: 9999;
-
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
   pointer-events: auto;
+  z-index: 9999;
+  align-self: flex-end;  /* 👈 Esto lo alinea a la izquierda dentro del contenedor */
+  margin-top: auto;
+  margin-left: auto;       /* opcional: separa del borde izquierdo */
+  
+  display: flex;     /* Asegura que los hijos se alineen */
+  flex-direction: row;  /* o 'row' según el diseño */
+  gap: 10px;         /* Espacio entre los hijos */
 
 `;
 
