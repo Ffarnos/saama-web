@@ -1,65 +1,76 @@
+import { useState } from 'react';
 import styled from 'styled-components';
-import {navigate} from "gatsby";
+import { navigate } from "gatsby";
 import createAndSendPDF from "../apis/pdf-email";
 
+export const LoadButton = () => {
+  const [open, setOpen] = useState(false);
 
-export const LoadButton = () => <Load>
-      <LoadB src="/images/simbolos/guardado.png" alt="GuardarPDF" title="Guardar como PDF" onClick={handlePDF} />
-      <LoadB src="/images/simbolos/proximo.png" alt="Inicio" title="Inicio" onClick={()=>navigate('/')} />
-</Load>
-;
-
-
-const handlePDF = () => {
+  const handlePDF = () => {
     createAndSendPDF().then(() => console.log("PDF CREADO CORRECTAMENTE"));
+  };
+
+  return (
+    <Container>
+      <Toggle onClick={() => setOpen(!open)}>
+      {open ? '✖' : '☰'}
+      </Toggle>
+
+      <LoadButtons $open={open}>
+        <LoadB src="/images/simbolos/guardado.png" alt="GuardarPDF" title="Guardar como PDF" onClick={handlePDF} />
+        <LoadB src="/images/simbolos/proximo.png" alt="Inicio" title="Inicio" onClick={() => navigate('/')} />
+      </LoadButtons>
+    </Container>
+  );
 };
 
+const Container = styled.div`
+  display: flex;
+  justify-content: flex-end; /* 👈 lo alinea a la derecha */
+  align-items: center;
+  gap: 10px;
+  width: 100%;  /* para ocupar el ancho completo del contenedor padre */
+  margin-top: auto;
 
-
-const Finish = styled.div`
- 
-  padding: 10px 50px;
-  cursor: pointer;
-  user-select: none;
- 
+  @media (max-width: 600px) {
+    padding-bottom: 80px; /* deja espacio para botones en mobile si querés */
+    
+  }
 `;
 
-const Load = styled(Finish)`
-  pointer-events: auto;
-  z-index: 9999;
-  align-self: flex-end;  /* 👈 Esto lo alinea a la izquierda dentro del contenedor */
-  margin-top: 30px;
-  margin-left: 15px;       /* opcional: separa del borde izquierdo */
-  
-  display: flex;     /* Asegura que los hijos se alineen */
-  flex-direction: row;  /* o 'row' según el diseño */
-  gap: 10px;         /* Espacio entre los hijos */
+const Toggle = styled.button`
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 
-  /* Responsive: achicar en pantallas pequeñas */
-  @media (max-width: 600px) {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    transform: scale(0.9);  /* Hace el botón más chico */
+  @media (min-width: 600px) {
+    display: none;
   }
+`;
 
-  @media (max-width: 400px) {
-    position: fixed;  
-    bottom: 10px;
-    right: 10px;
-    transform: scale(0.75);
+const LoadButtons = styled.div`
+  display: ${props => props.$open ? "flex" : "none"};
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+
+  @media (min-width: 600px) {
+    display: flex;
+    margin-top: 0;
   }
-
-
 `;
 
 const LoadB = styled.img`
   width: 50px;
   height: 50px;
   cursor: pointer;
-  background-color: white; /* ✅ Fondo blanco */
-  padding: 1px;            /* opcional: separa la imagen del borde */
-  border-radius: 50px;      /* opcional: bordes redondeados */
+  background-color: white;
+  padding: 1px;
+  border-radius: 50%;
   transition: box-shadow 0.3s ease;
 
   &:hover {
@@ -71,7 +82,5 @@ const LoadB = styled.img`
       0 0 50px #ffffff;
   }
 `;
-
-
 
   export default LoadButton;
