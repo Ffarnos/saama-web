@@ -179,8 +179,8 @@ const FinalPageTemplate = ({ pageContext }) => {
                 <Container>
                     <NavigationButtonsInLine/>
                 </Container>
-                <LoadButton/>
             </Content>
+            <LoadButton/>
         </Background>
     </LoginCheck>
 }
