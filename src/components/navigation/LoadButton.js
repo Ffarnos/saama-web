@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {navigate} from "gatsby";
-
 import createAndSendPDF from "../apis/pdf-email";
 
 
@@ -29,12 +28,28 @@ const Load = styled(Finish)`
   pointer-events: auto;
   z-index: 9999;
   align-self: flex-end;  /* 👈 Esto lo alinea a la izquierda dentro del contenedor */
-  margin-top: auto;
-  margin-left: auto;       /* opcional: separa del borde izquierdo */
+  margin-top: 30px;
+  margin-left: 15px;       /* opcional: separa del borde izquierdo */
   
   display: flex;     /* Asegura que los hijos se alineen */
   flex-direction: row;  /* o 'row' según el diseño */
   gap: 10px;         /* Espacio entre los hijos */
+
+  /* Responsive: achicar en pantallas pequeñas */
+  @media (max-width: 600px) {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    transform: scale(0.9);  /* Hace el botón más chico */
+  }
+
+  @media (max-width: 400px) {
+    position: fixed;  
+    bottom: 10px;
+    right: 10px;
+    transform: scale(0.75);
+  }
+
 
 `;
 
