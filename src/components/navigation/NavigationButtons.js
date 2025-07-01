@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {navigate} from "gatsby";
-import FinishButton from "./FinishButton";
 import ResponsiveText from "../apis/ResponsiveText";
 
 
@@ -15,16 +14,15 @@ const NavigationButtons = () => <>
 
 export const NavigationButtonsInLine = () => <>
     <ContainerInLine>
-        <BackButtonInLine color="white" onClick={()=> navigate(-1)}/>
-        <FinishButton/>
-        <NextButtonInLine color="white" onClick={()=> navigate(+1)}/>
-    </ContainerInLine>
-    <GuiaButton onClick={()=>navigate('/circulo-base')}>
+        <BackButtonInLine color="white" onClick={()=> navigate(-1)}/> 
+           <GuiaButton onClick={()=>navigate('/circulo-base')}>
         <ResponsiveText scale={0.6} bold color={"#413f3f"}>
             FUENTE MADRE
         </ResponsiveText>
     </GuiaButton>
-    
+        <NextButtonInLine color="white" onClick={()=> navigate(+1)}/>
+    </ContainerInLine>
+   
 </>
 
 

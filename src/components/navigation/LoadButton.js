@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import {navigate} from "gatsby";
-import ResponsiveText from "../apis/ResponsiveText";
 import createAndSendPDF from "../apis/pdf-email";
 
 
 export const LoadButton = () => <Load>
-      <LoadB src="/images/simbolos/guardado.png" alt="Guardar" title="Guardar como PDF" onClick={handlePDF} />
+      <LoadB src="/images/simbolos/guardado.png" alt="GuardarPDF" title="Guardar como PDF" onClick={handlePDF} />
+      <LoadB src="/images/simbolos/proximo.png" alt="Inicio" title="Inicio" onClick={()=>navigate('/')} />
 </Load>
 ;
 
@@ -25,12 +25,16 @@ const Finish = styled.div`
 `;
 
 const Load = styled(Finish)`
-  pointer-events: auto;
+  position: absolute;
+  bottom: 0px;     /* distancia desde abajo */
+  right: 1px;      /* distancia desde el borde derecho */
   z-index: 9999;
-  align-self: flex-end;  /* 👈 Esto lo alinea a la izquierda dentro del contenedor */
-  margin-top: 30px;
-  margin-left: 20px;       /* opcional: separa del borde izquierdo */
-  
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  pointer-events: auto;
+
 `;
 
 const LoadB = styled.img`
@@ -51,5 +55,7 @@ const LoadB = styled.img`
       0 0 50px #ffffff;
   }
 `;
+
+
 
   export default LoadButton;
