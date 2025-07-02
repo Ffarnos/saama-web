@@ -17,9 +17,9 @@ export const LoadButton = () => {
       </Toggle>
 
       <LoadButtons $open={open}>
-        <LoadB src="/images/simbolos/descarga.png" alt="GuardarPDF" title="Guardar como PDF" onClick={handlePDF} />
-        <LoadB src="/images/simbolos/inicio.png" alt="Inicio" title="Inicio" onClick={() => navigate('/')} />
-        <LoadB src="/images/simbolos/oraciones.png" alt="Oraciones" title="Oraciones" onClick={() => navigate("/intro-text")} />
+        <LoadB src="/images/simbolos/descarga2.png" alt="GuardarPDF" title="Guardar como PDF" onClick={handlePDF} />
+        <LoadB src="/images/simbolos/inicio2.png" alt="Inicio" title="Inicio" onClick={() => navigate('/')} />
+        <LoadB src="/images/simbolos/oraciones2.png" alt="Oraciones" title="Oraciones" onClick={() => navigate("/intro-text")} />
       </LoadButtons>
     </Container>
   );
@@ -75,8 +75,8 @@ const LoadButtons = styled.div`
 `;
 
 const LoadB = styled.img`
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   cursor: pointer;
   background-color: white;
   padding: 1px;
