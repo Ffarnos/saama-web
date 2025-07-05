@@ -2,28 +2,81 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { navigate } from "gatsby";
 import createAndSendPDF from "../apis/pdf-email";
+import { Alert } from "@mui/material";
+
 
 export const LoadButton = () => {
   const [open, setOpen] = useState(false);
+  const [showAlertBorrar, setShowAlertBorrar] = useState(false);
 
   const handlePDF = () => {
     createAndSendPDF().then(() => console.log("PDF CREADO CORRECTAMENTE"));
   };
+  const handleDeleteHistoryItem = () => {
+  let history = localStorage.getItem("history");
+  let parsedHistory = [];
 
+  if (history) {
+    try {
+      parsedHistory = JSON.parse(history);
+    } catch (e) {
+      console.error("Historial corrupto:", e);
+    }
+  }
+
+  if (parsedHistory.length > 0) {
+    parsedHistory.pop();
+    localStorage.setItem("history", JSON.stringify(parsedHistory));
+  }
+
+  setShowAlertBorrar(true);
+  setTimeout(() => {
+    setShowAlertBorrar(false);
+  }, 4000);
+};
+/**history = lo que tenés guardado (los pasos que diste: PDF, pétalos tocados, etc.).
+  parsedHistory = esa historia, transformada en un array que podés manipular.
+  pop() = borra el último paso que hiciste.
+  setItem = guarda la nueva historia sin ese paso.
+setShowAlertBorrar(true) = muestra un cartel de "Punto borrado". 
+  
+  1-Obtienen el historial desde localStorage.
+  2-Lo convierten a un array con JSON.parse().
+  3-Hacen pop() para borrar el último elemento.
+  3-Lo guardan nuevamente en localStorage.*/
   return (
     <Container>
       <Toggle onClick={() => setOpen(!open)}>
-      {open ? '✖' : '☰'}
+        {open ? '✖' : '☰'}
       </Toggle>
 
       <LoadButtons $open={open}>
         <LoadB src="/images/simbolos/descarga2.png" alt="GuardarPDF" title="Guardar como PDF" onClick={handlePDF} />
-        <LoadB src="/images/simbolos/inicio2.png" alt="Inicio" title="Inicio" onClick={() => navigate('/')} />
+        <LoadB src="/images/simbolos/borrado.png" alt="Borrar Ultimo" title="Borrar Ultimo" onClick={handleDeleteHistoryItem} />
         <LoadB src="/images/simbolos/oraciones2.png" alt="Oraciones" title="Oraciones" onClick={() => navigate("/intro-text")} />
+        <LoadB src="/images/simbolos/inicio2.png" alt="Inicio" title="Inicio" onClick={() => navigate('/')} />
       </LoadButtons>
+
+      {showAlertBorrar && <ContainerAlert>
+        <Alert severity="success">
+          Punto borrado de la sesion
+        </Alert>
+      </ContainerAlert>}
+
+
+
     </Container>
+
+
   );
 };
+
+const ContainerAlert = styled.div`
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 999;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -94,4 +147,4 @@ const LoadB = styled.img`
   }
 `;
 
-  export default LoadButton;
+export default LoadButton;
