@@ -11,14 +11,7 @@ const createAndSendPDF = async () => {
     const maxWidth = page.getSize().width - 30;
     let now = new Date();
 
-    let options = {
-        timeZone: 'America/Argentina/Buenos_Aires',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-    };
-
-    let formattedDate = new Intl.DateTimeFormat('es-AR', options).format(now);
+    let formattedDate = `${now.getDate().toString().padStart(2, '0')}/${(now.getMonth() + 1).toString().padStart(2, '0')}/${now.getFullYear()}`;
 
     page.drawText(formattedDate, {
         x: 150,
