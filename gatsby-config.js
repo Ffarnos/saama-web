@@ -50,6 +50,9 @@ module.exports = {
       },
       __key: 'images',
     },
+    
+    `gatsby-plugin-react-helmet`,
+
     `gatsby-plugin-offline`,
     `gatsby-adapter-netlify`
   ],
