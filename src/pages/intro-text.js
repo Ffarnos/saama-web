@@ -16,6 +16,12 @@ const IntroText = () => {
     const [isTextFieldFocused, setIsTextFieldFocused] = useState(false);
 
     useEffect(() => {
+        document.documentElement.style.margin = "0";
+        document.documentElement.style.padding = "0";
+        document.body.style.margin = "0";
+        document.body.style.padding = "0";
+        document.body.style.overflowX = "hidden";
+        document.documentElement.style.overflowX = "hidden";
         const handleKeyDown = (event) => {
             if (isTextFieldFocused) return;
             switch (event.key) {
@@ -37,21 +43,30 @@ const IntroText = () => {
         document.addEventListener('keydown', handleKeyDown);
 
         return () => {
-            document.removeEventListener('keydown', handleKeyDown);
+             document.documentElement.style.margin = null;
+             document.documentElement.style.padding = null;
+             document.documentElement.style.overflowX = null;
+             document.body.style.margin = null;
+             document.body.style.padding = null;
+             document.body.style.overflowX = null;
+             document.removeEventListener('keydown', handleKeyDown);
         };
     }, [number, problems, isTextFieldFocused]);
 
     return <LoginCheck>
-        {(showAlert && !localStorage.getItem("problems")) && <ContainerAlert>
-            <Alert severity="error">
-                Debes completar todos los campos
-            </Alert>
-        </ContainerAlert>}
-        {TextComponent(number, setNumber)}
-        {(number === 6 && !localStorage.getItem("problems")) && <Problems problems={problems} setProblems={setProblems} setIsTextFieldFocused={setIsTextFieldFocused}/>}
+     <BackgroundContainer>
+         <BlurredBox>
+                {(showAlert && !localStorage.getItem("problems")) && <ContainerAlert>
+                    <Alert severity="error">
+                        Debes completar todos los campos
+                    </Alert>
+                </ContainerAlert>}
+                {TextComponent(number, setNumber)}
+                {(number === 6 && !localStorage.getItem("problems")) && <Problems problems={problems} setProblems={setProblems} setIsTextFieldFocused={setIsTextFieldFocused}/>}
 
-        <Navigate number={number} setNumber={setNumber} problems={problems} setShowAlert={setShowAlert}/>
-
+                <Navigate number={number} setNumber={setNumber} problems={problems} setShowAlert={setShowAlert}/>
+         </BlurredBox>
+     </BackgroundContainer>
     </LoginCheck>
 }
 
@@ -166,10 +181,17 @@ const Container = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 0 20px;
 `;
 
 const TextContainer = styled.div`
-  max-width: 95%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+  box-sizing: border-box;
 `;
 
 
@@ -350,7 +372,36 @@ const TextComponent = (number) => {
         </TextContainer>
     );
 }
+const BackgroundContainer = styled.div`
+ background-image: url('/images/portada.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
+  width: 100%; /* NO usar 100vw */
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-x: hidden;
+`;
+
+const BlurredBox = styled.div`
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 90vw;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px auto;
+`;
 
 const ContainerAlert = styled.div`
   position: absolute;
