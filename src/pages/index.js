@@ -49,7 +49,7 @@ const Index = () => {
         <LoginCheck>
             <Helmet>
                 <title>Terapia Genesís APP</title>
-                <meta name="description" content="Tu descripción personalizada para SEO."/>
+                <meta name="description" content="APP GÉNESIS®️ – Plataforma oficial para terapeutas certificados en Terapia Cuántica GÉNESIS®️. Aplicá protocolos cuánticos, conectá con el alma, liberá bloqueos, abrí caminos y acompañá procesos de profunda transformación. 📍Calle 26 N°4422, Necochea. ✉️ formacionterapiagenesis@gmail.com 📞 +54 9 2262 627113 / 497258"/>
             </Helmet>
             <Background>
                 <ContainerInstall>
