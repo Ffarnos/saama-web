@@ -102,11 +102,10 @@ const PetalosTemplate = ({ pageContext }) => {
                 }}
             />
             
-            <LoadButton/>
         </Container>
     </Background>
     </LoginCheck>;
-}
+} // BORRE LOAD BUTTON XQ LO AGREGUE EN BUTTONSs
 
 const getColorWithFuente = (link) => {
     const match = link.match(/petalo-(\d+)/);

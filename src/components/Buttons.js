@@ -5,12 +5,67 @@ import {navigate} from "gatsby";
 import {useEffect, useState} from "react";
 import createAndSendPDF from "./apis/pdf-email";
 import {Alert} from "@mui/material";
+import { useRamificacion } from "../context/RamificacionContext"; // Ajustá la ruta si es necesario
+//HASTA ESTE PUNTO SE MODIFICO EL RETURN CON LOS BOTONES
+//.
+//.
 
 const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
 
     const [showAlertRamificar, setShowAlertRamificar] = useState(false);
     const [showAlertBorrar, setShowAlertBorrar] = useState(false);
     const [showAlertCorreccion, setShowAlertCorreccion] = useState(false);
+    const { isRamificando, setIsRamificando } = useRamificacion();
+    const [open, setOpen] = useState(false);
+
+    const handleRamificar = () => {
+        let history = localStorage.getItem("history");
+        if (!history) history = [];
+        else history = JSON.parse(history);
+
+        setIsRamificando(prev => !prev); // Toggle ramificación
+        setShowAlertRamificar(true);
+        setTimeout(() => setShowAlertRamificar(false), 4000);
+
+        const ramificarCount = history.filter(item => item === "ramificar").length;
+
+        if (ramificarCount % 2 === 0 && history[history.length - 2]?.title !== "ramificar") {
+            const linkPetaloDosAtras = history[history.length - 2]
+                .replace('/circulo-base/', '')
+                .replace(/^\//, '');
+
+            const petaloDosAtras = findPetalo(petalos, linkPetaloDosAtras.split(':')[0] || linkPetaloDosAtras);
+
+            if (petaloDosAtras && petaloDosAtras.title.length === 1) {
+                history.splice(history.length - 3, 0, "ramificar");
+            } else {
+                history.splice(history.length - 2, 0, "ramificar");
+            }
+        } else {
+            if (history.length === 0 || history[history.length - 1] !== "ramificar")
+                history.push("ramificar");
+        }
+
+        localStorage.setItem("history", JSON.stringify(history));
+    };
+
+    const handleBorrar = () =>{
+        let history = localStorage.getItem("history");
+        if (!history) history = [];
+        else history = JSON.parse(history);
+
+        setShowAlertBorrar(true);
+        history.pop()
+        setTimeout(() => {
+            setShowAlertBorrar(false);
+        }, 4000);
+                        
+        localStorage.setItem("history", JSON.stringify(history));
+    };
+    
+    const handlePDF = () =>{
+        createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
+    };
 
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -31,42 +86,12 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                 }
                 else if (event.key === 'r' || event.key === 'R' || event.key === 'b' || event.key === 'B') {
                     if (event.key === 'r' || event.key === 'R') {
-                        setShowAlertRamificar(true);
-                        
-                        // Contar cuántos "ramificar" hay en el historial
-                        const ramificarCount = history.filter(item => item === "ramificar").length;
-                        
-                        if (ramificarCount % 2 === 0 && history[history.length - 2].title !== "ramificar") {
-
-                            const linkPetaloDosAtras = history[history.length - 2].replace('/circulo-base/', '').replace(/^\//, '');;
-                            
-                            // Verificar si el pétalo dos atrás existe y tiene un título de una sola letra
-                            const petaloDosAtras = findPetalo(petalos, linkPetaloDosAtras.split(':')[0] || linkPetaloDosAtras);
-
-                            if (petaloDosAtras && petaloDosAtras?.title.length === 1) {
-                                // Si es así, insertar "ramificar" tres posiciones atrás
-                                history.splice(history.length - 3, 0, "ramificar");
-                            } else {
-                                // Si no, mantener el comportamiento original
-                                history.splice(history.length - 2, 0, "ramificar");
-                            }
-                        } else {
-                            if (history.length === 0 || history[history.length - 1] !== "ramificar") 
-                                history.push("ramificar");
-                        }
-                        
-                        setTimeout(() => {
-                            setShowAlertRamificar(false);
-                        }, 4000);
+                        handleRamificar();
                     } else if (event.key === 'b' || event.key === 'B') {
-                        setShowAlertBorrar(true);
-                        history.pop()
-                        setTimeout(() => {
-                            setShowAlertBorrar(false);
-                        }, 4000);
+                        handleBorrar();
                     }
 
-                    localStorage.setItem("history", JSON.stringify(history));
+                    
                 } else if (event.key === 'Backspace')
                     navigate("/")
                 else if (event.key === 'o' || event.key === 'O')
@@ -100,60 +125,82 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
 
 
         return (
-        <ButtonsContainerCenter>
-            {showAlertRamificar && <ContainerAlert>
-                <Alert severity="success">
-                    Ramificacion
-                </Alert>
-            </ContainerAlert>}
+        <PageContainer>
+            <ButtonsContainerCenter>
+                {isRamificando && <ContainerAlert>
+                    <Alert severity="info">
+                        Ramificando
+                    </Alert> 
+                </ContainerAlert>}
 
-            {showAlertBorrar && <ContainerAlert>
-                <Alert severity="success">
-                    Punto borrado de la sesion
-                </Alert>
-            </ContainerAlert>}
+                {showAlertRamificar && <ContainerAlert>
+                    <Alert severity="success">
+                        Ramificacion
+                    </Alert>
+                </ContainerAlert>}
 
-            {showAlertCorreccion && <ContainerAlert>
-                <Alert severity="success">
-                    Correccion
-                </Alert>
-            </ContainerAlert>}
+                {showAlertBorrar && <ContainerAlert>
+                    <Alert severity="success">
+                        Punto borrado de la sesion
+                    </Alert>
+                </ContainerAlert>}
 
-            <ButtonBig onClick={()=>navigate("/circulo-base")}>
-                <ResponsiveText scale={0.55} color={"#6e6e6e"}>
-                    {bigButtonTitle}
-                </ResponsiveText>
-            </ButtonBig>
-            <ButtonsContainer>
-                {circuloBase && petalos.map((petalo) => (
-                    <Button
-                        onClick={()=>onClick(petalo.index + 1)}
-                        bordercolor={getColorWithText(petalo.colorBorder)}
-                        key={petalo.index}
-                        angle={(petalo.index / (noNumber ? petalos.length+2 : 11)) * 360}
-                    >
-                        <ResponsiveText scale={0.8} color={'#6e6e6e'}>
-                            {noNumber ? petalo.title : petalo.index + 1}
-                        </ResponsiveText>
-                    </Button>
-                ))}
-                {!circuloBase && Array.of(0,1,2,3,4,5,6,7,8,9).map((number) => (
-                    <Button
-                        onClick={()=>onClick(number)}
-                        key={number}
-                        bordercolor={getColorWithNumber(number)}
-                        angle={(number / 10) * 360}
-                    >
-                        <ResponsiveText scale={0.8} color={'#6e6e6e'}>
-                            {number}
-                        </ResponsiveText>
-                    </Button>
+                {showAlertCorreccion && <ContainerAlert>
+                    <Alert severity="success">
+                        Correccion
+                    </Alert>
+                </ContainerAlert>}
+
+                <ButtonBig onClick={()=>navigate("/circulo-base")}>
+                    <ResponsiveText scale={0.55} color={"#6e6e6e"}>
+                        {bigButtonTitle}
+                    </ResponsiveText>
+                </ButtonBig>
+                <ButtonsContainer>
+                    {circuloBase && petalos.map((petalo) => (
+                        <Button
+                            onClick={()=>onClick(petalo.index + 1)}
+                            bordercolor={getColorWithText(petalo.colorBorder)}
+                            key={petalo.index}
+                            angle={(petalo.index / (noNumber ? petalos.length+2 : 11)) * 360}
+                        >
+                            <ResponsiveText scale={0.8} color={'#6e6e6e'}>
+                                {noNumber ? petalo.title : petalo.index + 1}
+                            </ResponsiveText>
+                        </Button>
                     ))}
+                    {!circuloBase && Array.of(0,1,2,3,4,5,6,7,8,9).map((number) => (
+                        <Button
+                            onClick={()=>onClick(number)}
+                            key={number}
+                            bordercolor={getColorWithNumber(number)}
+                            angle={(number / 10) * 360}
+                        >
+                            <ResponsiveText scale={0.8} color={'#6e6e6e'}>
+                                {number}
+                            </ResponsiveText>
+                        </Button>
+                        ))}
 
-            </ButtonsContainer>
-            <NavigationButtons/>
-        </ButtonsContainerCenter>
-
+                </ButtonsContainer>
+                <NavigationButtons/>
+            </ButtonsContainerCenter>
+            <div style={{ flexGrow: 0.1 }} />
+            <BottomRightBox >
+                <Toggle onClick={() => setOpen(!open)}>
+                    {open ? '✖' : '☰'}
+                </Toggle>
+                                            
+                <LoadButtons $open={open}>
+                    <LoadB src="/images/simbolos/ramificacion.png" alt="Ramificacion" title="Ramificar" onClick={handleRamificar} />
+                    <LoadB src="/images/simbolos/descarga2.png" alt="GuardarPDF" title="Guardar como PDF" onClick={handlePDF} />
+                    <LoadB src="/images/simbolos/borrado.png" alt="Borrar Ultimo" title="Borrar Ultimo" onClick={handleBorrar} />
+                    <LoadB src="/images/simbolos/oraciones2.png" alt="Oraciones" title="Oraciones" onClick={() => navigate("/intro-text")} />
+                    <LoadB src="/images/simbolos/inicio2.png" alt="Inicio" title="Inicio" onClick={() => navigate('/')} />
+                </LoadButtons>
+                        
+            </BottomRightBox>
+        </PageContainer>
     );
 };
 
@@ -171,12 +218,79 @@ const findPetalo = (petalos, linkName) => {
 };
 
 const ContainerAlert = styled.div`
-  position: absolute;
+  position: fixed;
   left: 20px;
   top: 20px;
   z-index: 999;
 `;
 
+const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+
+const BottomRightBox = styled.div`
+position: absolute;
+bottom: 20px;
+right: 20px;
+  
+`;
+
+const Toggle = styled.button`
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 10000;
+
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 600px) {
+    display: none; /* Oculta el toggle en pantallas grandes */
+  }
+`;
+
+const LoadButtons = styled.div`
+  display: ${props => props.$open ? "flex" : "none"};
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 10px;
+
+  @media (min-width: 600px) {
+    display: flex;
+    margin-top: 0;
+  }
+`;
+
+const LoadB = styled.img`
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  background-color: white;
+  padding: 1px;
+  margin: 5px;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow:
+      0 0 10px white,
+      0 0 10px white,
+      0 0 10px white,
+      0 0 10px #ffffff,
+      0 0 10px #ffffff;
+  }
+`;
 
 const ButtonsContainerCenter = styled.div`
   display: flex;

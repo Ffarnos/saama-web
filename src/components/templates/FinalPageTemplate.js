@@ -10,13 +10,66 @@ import createAndSendPDF from "../apis/pdf-email";
 import {Alert, TextField} from "@mui/material";
 import {petalos} from "../../../static/data";
 import { LoadButton } from '../navigation/LoadButton';
-
+import { useRamificacion } from "../../context/RamificacionContext"; // Ajustá la ruta si es necesario
+//HASTA ACA SE HICIERRON LOS CAMBIOS EN LOS BOTONES DE ESTE COMPONENTE
+//.. 
 const FinalPageTemplate = ({ pageContext }) => {
 
     const [isTextFieldFocused, setIsTextFieldFocused] = useState(false);
     const [showAlertRamificar, setShowAlertRamificar] = useState(false);
     const [showAlertBorrar, setShowAlertBorrar] = useState(false);
     const [showAlertCorreccion, setShowAlertCorreccion] = useState(false);
+    const { isRamificando, setIsRamificando } = useRamificacion();
+    const [open, setOpen] = useState(false);
+
+
+    const handleRamificar = () => {
+        let history = localStorage.getItem("history");
+        if (!history) history = [];
+        else history = JSON.parse(history);
+
+        setIsRamificando(prev => !prev); // Toggle ramificación
+        setShowAlertRamificar(true);
+        setTimeout(() => setShowAlertRamificar(false), 4000);
+
+        const ramificarCount = history.filter(item => item === "ramificar").length;
+
+        if (ramificarCount % 2 === 0 && history[history.length - 2]?.title !== "ramificar") {
+            const linkPetaloDosAtras = history[history.length - 2]
+                .replace('/circulo-base/', '')
+                .replace(/^\//, '');
+
+            const petaloDosAtras = findPetalo(petalos, linkPetaloDosAtras.split(':')[0] || linkPetaloDosAtras);
+
+            if (petaloDosAtras && petaloDosAtras.title.length === 1) {
+                history.splice(history.length - 3, 0, "ramificar");
+            } else {
+                history.splice(history.length - 2, 0, "ramificar");
+            }
+        } else {
+            if (history.length === 0 || history[history.length - 1] !== "ramificar")
+                history.push("ramificar");
+        }
+
+        localStorage.setItem("history", JSON.stringify(history));
+    };
+
+    const handleBorrar = () =>{
+        let history = localStorage.getItem("history");
+        if (!history) history = [];
+        else history = JSON.parse(history);
+
+        setShowAlertBorrar(true);
+        history.pop()
+        setTimeout(() => {
+            setShowAlertBorrar(false);
+        }, 4000);
+                        
+        localStorage.setItem("history", JSON.stringify(history));
+    };
+    const handlePDF = () =>{
+        createAndSendPDF().then(r => console.log("PDF CREADO CORRECTAMENTE"))
+    };
 
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -40,43 +93,11 @@ const FinalPageTemplate = ({ pageContext }) => {
                  else if (event.key === 'r' || event.key === 'R' || event.key === 'b' || event.key === 'B') {
 
                      if (event.key === 'r' || event.key === 'R') {
-                        setShowAlertRamificar(true);
-                        
-                        // Contar cuántos "ramificar" hay en el historial
-                        const ramificarCount = history.filter(item => item === "ramificar").length;
-                        
-                        if ( ((ramificarCount % 2) === 0) && history[history.length - 2].title !== "ramificar") {
-
-                            // Obtener el pétalo que está dos atrás en el historial
-                            const linkPetaloDosAtras = history[history.length - 2].replace('/circulo-base/', '').replace(/^\//, '');;
-                            
-                            // Verificar si el pétalo dos atrás existe y tiene un título de una sola letra
-                            const petaloDosAtras = findPetalo(petalos, linkPetaloDosAtras.split(':')[0] || linkPetaloDosAtras);
-
-                            if (petaloDosAtras && petaloDosAtras?.title.length === 1) {
-                                // Si es así, insertar "ramificar" tres posiciones atrás
-                                history.splice(history.length - 3, 0, "ramificar");
-                            } else {
-                                // Si no, mantener el comportamiento original
-                                history.splice(history.length - 2, 0, "ramificar");
-                            }
-                        } else {
-                            if (history.length === 0 || history[history.length - 1] !== "ramificar") 
-                                history.push("ramificar");
-                        }
-                        
-                        setTimeout(() => {
-                            setShowAlertRamificar(false);
-                        }, 4000);
+                        handleRamificar();
                      } else if (event.key === 'b' || event.key === 'B') {
-                         setShowAlertBorrar(true);
-                         history.pop()
-                         setTimeout(() => {
-                             setShowAlertBorrar(false);
-                         }, 4000);
-                     }
-
-                     localStorage.setItem("history", JSON.stringify(history));
+                         handleBorrar();
+                        }
+                     
                  } else if (event.key === 'Backspace')
                      navigate("/")
                  else if (event.key === 'o' || event.key === 'O')
@@ -117,71 +138,94 @@ const FinalPageTemplate = ({ pageContext }) => {
         });
     }
     return <LoginCheck>
-        <Background style={{backgroundImage: `url(${imagePath})`}}>
-            <Content>
-                {showAlertRamificar && <ContainerAlert>
-                    <Alert severity="success">
-                        Ramificacion
-                    </Alert>
-                </ContainerAlert>}
+        <PageContainer>
+            <Background style={{backgroundImage: `url(${imagePath})`}}>
+                <Content>
+                    {isRamificando && <ContainerAlert>
+                        <Alert severity="info">
+                        Ramificando
+                        </Alert> 
+                    </ContainerAlert>}
+                    
+                    {showAlertRamificar && <ContainerAlert>
+                        <Alert severity="success">
+                            Ramificacion
+                        </Alert>
+                    </ContainerAlert>}
 
-                {showAlertBorrar && <ContainerAlert>
-                    <Alert severity="success">
-                        Punto borrado de la sesion
-                    </Alert>
-                </ContainerAlert>}
+                    {showAlertBorrar && <ContainerAlert>
+                        <Alert severity="success">
+                            Punto borrado de la sesion
+                        </Alert>
+                    </ContainerAlert>}
 
-                {showAlertCorreccion && <ContainerAlert>
-                    <Alert severity="success">
-                        Correccion
-                    </Alert>
-                </ContainerAlert>}
+                    {showAlertCorreccion && <ContainerAlert>
+                        <Alert severity="success">
+                            Correccion
+                        </Alert>
+                    </ContainerAlert>}
 
-                <ResponsiveText scale={0.9} color={color}>{titlePage}</ResponsiveText>
-                <ResponsiveText scale={0.7} color={color}>{titleText}</ResponsiveText>
-                {separation ? textComponents
-                    : <Text scale={0.5} color={color}>{desc}</Text>}
+                    <ResponsiveText scale={0.9} color={color}>{titlePage}</ResponsiveText>
+                    <ResponsiveText scale={0.7} color={color}>{titleText}</ResponsiveText>
+                    {separation ? textComponents
+                        : <Text scale={0.5} color={color}>{desc}</Text>}
 
-                {fieldText && <div>
-                    <TextField id="emocion" variant="filled" margin="normal"
-                               onChange={(e) => {
-                                   let history = localStorage.getItem("history");
+                    {fieldText && <div>
+                        <TextField id="emocion" variant="filled" margin="normal"
+                                onChange={(e) => {
+                                    let history = localStorage.getItem("history");
 
-                                   if (!history)
-                                       history = [];
-                                   else
-                                       history = JSON.parse(history);
+                                    if (!history)
+                                        history = [];
+                                    else
+                                        history = JSON.parse(history);
 
-                                   const lastLink = history[history.length - 1];
-                                   const lastEmotionLink = lastLink.split(":")[0];
+                                    const lastLink = history[history.length - 1];
+                                    const lastEmotionLink = lastLink.split(":")[0];
 
-                                   history[history.length - 1] = lastEmotionLink + ":" + e.target.value;
+                                    history[history.length - 1] = lastEmotionLink + ":" + e.target.value;
 
-                                   localStorage.setItem("history", JSON.stringify(history));
-                               }}
-                               onFocus={() => setIsTextFieldFocused(true)}
-                               onBlur={() => setIsTextFieldFocused(false)}
-                               sx={{
-                                   backgroundColor: 'white',
-                                   '&:hover': {
-                                       backgroundColor: 'white',
-                                   },
-                                   '&.Mui-focused': {
-                                       backgroundColor: 'white',
-                                   },
-                                   '& .MuiFilledInput-root': {
-                                       backgroundColor: 'white'
-                                   }
-                               }}
-                    />
-                </div>}
-                {imageBody && <BodyImage src={imageBodyPath} scale={4}/>}
-                <Container>
-                    <NavigationButtonsInLine/>
-                </Container>
-            </Content>
-            <LoadButton/>
-        </Background>
+                                    localStorage.setItem("history", JSON.stringify(history));
+                                }}
+                                onFocus={() => setIsTextFieldFocused(true)}
+                                onBlur={() => setIsTextFieldFocused(false)}
+                                sx={{
+                                    backgroundColor: 'white',
+                                    '&:hover': {
+                                        backgroundColor: 'white',
+                                    },
+                                    '&.Mui-focused': {
+                                        backgroundColor: 'white',
+                                    },
+                                    '& .MuiFilledInput-root': {
+                                        backgroundColor: 'white'
+                                    }
+                                }}
+                        />
+                    </div>}
+                    {imageBody && <BodyImage src={imageBodyPath} scale={4}/>}
+                    <Container>
+                        <NavigationButtonsInLine/>
+                    </Container>
+                </Content>
+                
+            </Background>
+            
+            <BottomRightBox >
+                <Toggle onClick={() => setOpen(!open)}>
+                    {open ? '✖' : '☰'}
+                </Toggle>
+                                                                        
+                <LoadButtons $open={open}>
+                    <LoadB src="/images/simbolos/Ramificacion.png" alt="Ramificacion" title="Ramificar" onClick={handleRamificar} />
+                    <LoadB src="/images/simbolos/descarga2.png" alt="GuardarPDF" title="Guardar como PDF" onClick={handlePDF} />
+                    <LoadB src="/images/simbolos/borrado.png" alt="Borrar Ultimo" title="Borrar Ultimo" onClick={handleBorrar} />
+                    <LoadB src="/images/simbolos/oraciones2.png" alt="Oraciones" title="Oraciones" onClick={() => navigate("/intro-text")} />
+                    <LoadB src="/images/simbolos/inicio2.png" alt="Inicio" title="Inicio" onClick={() => navigate('/')} />
+                </LoadButtons>
+                                                
+            </BottomRightBox>
+        </PageContainer>
     </LoginCheck>
 }
 
@@ -242,6 +286,74 @@ const Container = styled.div`
     padding-bottom: 100px; /* Ajusta este valor según tus necesidades */
   }
 `;
+
+const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const BottomRightBox = styled.div`
+position: absolute;
+bottom: 20px;
+right: 20px;
+  
+`;
+
+const Toggle = styled.button`
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 10000;
+
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 600px) {
+    display: none; /* Oculta el toggle en pantallas grandes */
+  }
+`;
+
+const LoadButtons = styled.div`
+  display: ${props => props.$open ? "flex" : "none"};
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 10px;
+
+  @media (min-width: 600px) {
+    display: flex;
+    margin-top: 0;
+  }
+`;
+
+const LoadB = styled.img`
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  background-color: white;
+  padding: 1px;
+  margin: 5px;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow:
+      0 0 10px white,
+      0 0 10px white,
+      0 0 10px white,
+      0 0 10px #ffffff,
+      0 0 10px #ffffff;
+  }
+`;
+
 
 
 export default FinalPageTemplate;

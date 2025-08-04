@@ -1,13 +1,16 @@
 
 import React from 'react';
 import {FirebaseProvider} from "./src/components/FirebaseContext";
+import { RamificacionProvider } from "./src/context/RamificacionContext";
 
 
 export const wrapRootElement = ({ element }) => {
   return (
       <FirebaseProvider>
-        {element}
-      </FirebaseProvider>
+        <RamificacionProvider>
+         {element}
+       </RamificacionProvider>
+    </FirebaseProvider>
   );
 };
 
