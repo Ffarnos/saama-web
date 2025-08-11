@@ -2,13 +2,11 @@ import styled from 'styled-components';
 import Buttons from "../components/Buttons";
 import ResponsiveText from "../components/apis/ResponsiveText";
 import {navigate} from "gatsby";
-import {FinishButtonResponsive} from "../components/navigation/FinishButton";
 import LoginCheck from "../components/login/LoginCheck";
 import {Background} from "../components/Commons";
 import historySave from "../components/navigation/History";
 import {Alert} from "@mui/material";
 import {useState} from "react";
-import { LoadButton } from '../components/navigation/LoadButton';
 const createdPages = require('../../../createdPages.json');
 
 const CirculoBase = () => {
@@ -75,7 +73,6 @@ const CirculoBase = () => {
                 />
                 
             </Container>
-            <LoadButton/>
         </Background>
     </LoginCheck>;
 }

@@ -9,7 +9,6 @@ import LoginCheck from "../login/LoginCheck";
 import createAndSendPDF from "../apis/pdf-email";
 import {Alert, TextField} from "@mui/material";
 import {petalos} from "../../../static/data";
-import { LoadButton } from '../navigation/LoadButton';
 import { useRamificacion } from "../../context/RamificacionContext"; // Ajustá la ruta si es necesario
 //HASTA ACA SE HICIERRON LOS CAMBIOS EN LOS BOTONES DE ESTE COMPONENTE
 //.. 
