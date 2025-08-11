@@ -1,6 +1,9 @@
 import { createContext, useContext, useState } from "react";
 
-const RamificacionContext = createContext();
+const RamificacionContext = createContext({
+    isRamificando: false,
+    setIsRamificando: () => {}
+});
 
 export const RamificacionProvider = ({ children }) => {
   const [isRamificando, setIsRamificando] = useState(false);
