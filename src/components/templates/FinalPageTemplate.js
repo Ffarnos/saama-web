@@ -10,8 +10,7 @@ import createAndSendPDF from "../apis/pdf-email";
 import {Alert, TextField} from "@mui/material";
 import {petalos} from "../../../static/data";
 import { useRamificacion } from "../../context/RamificacionContext"; // Ajustá la ruta si es necesario
-//HASTA ACA SE HICIERRON LOS CAMBIOS EN LOS BOTONES DE ESTE COMPONENTE
-//.. 
+import { LegadoButton  } from "../navigation/LegadoButton";
 const FinalPageTemplate = ({ pageContext }) => {
 
     const [isTextFieldFocused, setIsTextFieldFocused] = useState(false);
@@ -163,45 +162,47 @@ const FinalPageTemplate = ({ pageContext }) => {
                             Correccion
                         </Alert>
                     </ContainerAlert>}
+                    
+                    <BlurredBox>
+                        <ResponsiveText scale={0.9} color={color}>{titlePage}</ResponsiveText>
+                        <ResponsiveText scale={0.7} color={color}>{titleText}</ResponsiveText>
+                        {separation ? textComponents
+                            : <Text scale={0.5} color={color}>{desc}</Text>}
 
-                    <ResponsiveText scale={0.9} color={color}>{titlePage}</ResponsiveText>
-                    <ResponsiveText scale={0.7} color={color}>{titleText}</ResponsiveText>
-                    {separation ? textComponents
-                        : <Text scale={0.5} color={color}>{desc}</Text>}
+                        {fieldText && <div style={{ display: "grid", placeItems: "center", height: "100px" }}>
+                            <TextField id="emocion" variant="filled" margin="normal"
+                                    onChange={(e) => {
+                                        let history = localStorage.getItem("history");
 
-                    {fieldText && <div>
-                        <TextField id="emocion" variant="filled" margin="normal"
-                                onChange={(e) => {
-                                    let history = localStorage.getItem("history");
+                                        if (!history)
+                                            history = [];
+                                        else
+                                            history = JSON.parse(history);
 
-                                    if (!history)
-                                        history = [];
-                                    else
-                                        history = JSON.parse(history);
+                                        const lastLink = history[history.length - 1];
+                                        const lastEmotionLink = lastLink.split(":")[0];
 
-                                    const lastLink = history[history.length - 1];
-                                    const lastEmotionLink = lastLink.split(":")[0];
+                                        history[history.length - 1] = lastEmotionLink + ":" + e.target.value;
 
-                                    history[history.length - 1] = lastEmotionLink + ":" + e.target.value;
-
-                                    localStorage.setItem("history", JSON.stringify(history));
-                                }}
-                                onFocus={() => setIsTextFieldFocused(true)}
-                                onBlur={() => setIsTextFieldFocused(false)}
-                                sx={{
-                                    backgroundColor: 'white',
-                                    '&:hover': {
+                                        localStorage.setItem("history", JSON.stringify(history));
+                                    }}
+                                    onFocus={() => setIsTextFieldFocused(true)}
+                                    onBlur={() => setIsTextFieldFocused(false)}
+                                    sx={{
                                         backgroundColor: 'white',
-                                    },
-                                    '&.Mui-focused': {
-                                        backgroundColor: 'white',
-                                    },
-                                    '& .MuiFilledInput-root': {
-                                        backgroundColor: 'white'
-                                    }
-                                }}
-                        />
-                    </div>}
+                                        '&:hover': {
+                                            backgroundColor: 'white',
+                                        },
+                                        '&.Mui-focused': {
+                                            backgroundColor: 'white',
+                                        },
+                                        '& .MuiFilledInput-root': {
+                                            backgroundColor: 'white'
+                                        }
+                                    }}
+                            />
+                        </div>}
+                    </BlurredBox>
                     {imageBody && <BodyImage src={imageBodyPath} scale={4}/>}
                     <Container>
                         <NavigationButtonsInLine/>
@@ -212,7 +213,11 @@ const FinalPageTemplate = ({ pageContext }) => {
             
             <BottomRightBox >
                 <Toggle onClick={() => setOpen(!open)}>
-                    {open ? '✖' : '☰'}
+                    <img 
+                        src={open ? "/images/simbolos/cancelar2.png" : "/images/simbolos/opciones2.png"} 
+                        alt="menu toggle" 
+                        style={{ width: "55px", height: "55px"}} 
+                    />
                 </Toggle>
                                                                         
                 <LoadButtons $open={open}>
@@ -221,9 +226,11 @@ const FinalPageTemplate = ({ pageContext }) => {
                     <LoadB src="/images/simbolos/borrado.png" alt="Borrar Ultimo" title="Borrar Ultimo" onClick={handleBorrar} />
                     <LoadB src="/images/simbolos/oraciones2.png" alt="Oraciones" title="Oraciones" onClick={() => navigate("/intro-text")} />
                     <LoadB src="/images/simbolos/inicio2.png" alt="Inicio" title="Inicio" onClick={() => navigate('/')} />
+                    <LoadB src="/images/simbolos/legado.png" alt="Legado" title="Legado-C" onClick={() => navigate("/circulo-base/petalo-3/2/2/5/")} />
                 </LoadButtons>
                                                 
             </BottomRightBox>
+            <LegadoButton/>
         </PageContainer>
     </LoginCheck>
 }
@@ -248,7 +255,7 @@ const getColorWithFuente = (link) => {
 
     switch (number) {
         case 5:
-            return "#595959"
+            return "#292929ff"
         default:
             return "white"
 
@@ -300,37 +307,46 @@ right: 20px;
 `;
 
 const Toggle = styled.button`
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  z-index: 10000;
-
-  background-color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 10px;
+  width: 55px;
+  height: 55px;
   cursor: pointer;
+  background-color: white;
+  padding: 1px;
+  margin: 5px;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+  border: none;
 
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  &:hover {
+    box-shadow:
+      0 0 10px white,
+      0 0 10px white,
+      0 0 10px white,
+      0 0 10px #ffffff,
+      0 0 10px #ffffff;
+  }
+
+  
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @media (min-width: 600px) {
-    display: none; /* Oculta el toggle en pantallas grandes */
-  }
 `;
 
 const LoadButtons = styled.div`
-  display: ${props => props.$open ? "flex" : "none"};
-  flex-direction: row;
-  gap: 5px;
-  margin-top: 10px;
+ position: absolute;
+bottom: 0;
+right: 70px; /* ✅ typo corregido */
 
-  @media (min-width: 600px) {
-    display: flex;
-    margin-top: 0;
-  }
+display: flex;
+flex-direction: row-reverse; /* ✅ los ítems se alinean de derecha a izquierda */
+gap: 10px;
+
+opacity: ${props => props.$open ? 1 : 0};
+transform: ${props => props.$open ? "translateX(10px)" : "translateX(0)"};
+pointer-events: ${props => props.$open ? "auto" : "none"};
+transition: opacity 0.3s ease, transform 0.3s ease;
+ 
 `;
 
 const LoadB = styled.img`
@@ -351,6 +367,19 @@ const LoadB = styled.img`
       0 0 10px #ffffff,
       0 0 10px #ffffff;
   }
+`;
+
+const BlurredBox = styled.div`
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 90vw;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px auto;
+  
 `;
 
 

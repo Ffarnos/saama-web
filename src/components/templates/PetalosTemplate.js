@@ -4,7 +4,6 @@ import Buttons from "../Buttons";
 import {useState} from "react";
 import {navigate} from "gatsby";
 import {Alert, TextField, ThemeProvider, createTheme} from "@mui/material";
-import { LoadButton } from '../navigation/LoadButton';
 import LoginCheck from "../login/LoginCheck";
 import {Background} from "../Commons";
 import historySave from "../navigation/History";

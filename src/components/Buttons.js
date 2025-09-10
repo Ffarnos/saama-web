@@ -6,9 +6,7 @@ import {useEffect, useState} from "react";
 import createAndSendPDF from "./apis/pdf-email";
 import {Alert} from "@mui/material";
 import { useRamificacion } from "../context/RamificacionContext"; // Ajustá la ruta si es necesario
-//HASTA ESTE PUNTO SE MODIFICO EL RETURN CON LOS BOTONES
-//.
-//.
+import {LegadoButton} from "./navigation/LegadoButton";
 
 const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
 
@@ -185,10 +183,14 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                 </ButtonsContainer>
                 <NavigationButtons/>
             </ButtonsContainerCenter>
-            <div style={{ flexGrow: 0.1 }} />
+            <div style={{ flexGrow: 0.5 }} />
             <BottomRightBox >
                 <Toggle onClick={() => setOpen(!open)}>
-                    {open ? '✖' : '☰'}
+                    <img 
+                        src={open ? "/images/simbolos/cancelar2.png" : "/images/simbolos/opciones2.png"} 
+                        alt="menu toggle" 
+                        style={{ width: "55px", height: "55px"}} 
+                    />
                 </Toggle>
                                             
                 <LoadButtons $open={open}>
@@ -197,9 +199,11 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                     <LoadB src="/images/simbolos/borrado.png" alt="Borrar Ultimo" title="Borrar Ultimo" onClick={handleBorrar} />
                     <LoadB src="/images/simbolos/oraciones2.png" alt="Oraciones" title="Oraciones" onClick={() => navigate("/intro-text")} />
                     <LoadB src="/images/simbolos/inicio2.png" alt="Inicio" title="Inicio" onClick={() => navigate('/')} />
+                    <LoadB src="/images/simbolos/legado.png" alt="Legado" title="Legado-C" onClick={() => navigate("/circulo-base/petalo-3/2/2/5/")} />
                 </LoadButtons>
-                        
             </BottomRightBox>
+            
+            <LegadoButton/>
         </PageContainer>
     );
 };
@@ -239,37 +243,48 @@ right: 20px;
 `;
 
 const Toggle = styled.button`
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  z-index: 10000;
-
-  background-color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 10px;
+  width: 55px;
+  height: 55px;
   cursor: pointer;
+  background-color: white;
+  padding: 1px;
+  margin: 0px;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+  border: none;
+  margin-bottom: 7px;
+  
 
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  &:hover {
+    box-shadow:
+      0 0 10px white,
+      0 0 10px white,
+      0 0 10px white,
+      0 0 10px #ffffff,
+      0 0 10px #ffffff;
+  }
+
+  
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @media (min-width: 600px) {
-    display: none; /* Oculta el toggle en pantallas grandes */
-  }
 `;
 
 const LoadButtons = styled.div`
-  display: ${props => props.$open ? "flex" : "none"};
-  flex-direction: row;
-  gap: 5px;
-  margin-top: 10px;
+ position: absolute;
+ bottom: 0;
+ right: 70px; /* ✅ typo corregido */
 
-  @media (min-width: 600px) {
-    display: flex;
-    margin-top: 0;
-  }
+ display: flex;
+ flex-direction: row-reverse; /* ✅ los ítems se alinean de derecha a izquierda */
+ gap: 10px;
+
+ opacity: ${props => props.$open ? 1 : 0};
+ transform: ${props => props.$open ? "translateX(10px)" : "translateX(0)"};
+ pointer-events: ${props => props.$open ? "auto" : "none"};
+ transition: opacity 0.3s ease, transform 0.3s ease;
+ 
 `;
 
 const LoadB = styled.img`

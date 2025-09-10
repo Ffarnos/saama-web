@@ -363,7 +363,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                 x: 22,
                 y: y,
                 size: 16,
-                color: rgb(0, 0, 0),
+                color: getColorForTextField(petalo.text),
             });
             y = y - 20;
         }
@@ -378,7 +378,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                     x: 22,
                     y: y,
                     size: 12,
-                    color: rgb(0, 0, 0),
+                    color: getColorForTextField(petalo.text),
 
                 })
                 y = y - 15;
@@ -397,7 +397,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
             size: 14,
             color: rgb(0.5, 0, 0.5), // Color violeta
         });
-        y -= 20;
+        y -= (60);
     }
     else {
         //PETALO FINAL
@@ -413,7 +413,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                             x: 22,
                             y: y,
                             size: 12,
-                            color: rgb(0, 0, 0),
+                            color: getColorForTextField(petalo.textField),
 
                         })
                         y = y - 15;
@@ -443,7 +443,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                             x: 22,
                             y: y,
                             size: 12,
-                            color: rgb(0, 0, 0),
+                            color: getColorForTextField(text),
                         });
 
                         if (y <= 30) {
@@ -456,7 +456,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                         x: 22,
                         y: y,
                         size: (petalo.linkName !== "petalo-5/7/1") ? 12 : 14,
-                        color: rgb(0, 0, 0),
+                        color: getColorForTextField(petalo.textField)
                     });
                 }
                 y = y - 10;
@@ -472,7 +472,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                         x: 22,
                         y: y,
                         size: 12,
-                        color: rgb(0, 0, 0),
+                        color: getColorForTextField(petalo.text),
                     })
                     y = y - 15;
                     if (y <= 30) {
@@ -513,7 +513,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                     x: 22,
                     y: y,
                     size: 12,
-                    color: rgb(0, 0, 0),
+                    color: getColorForTextField(petalo.title),
                 });
             y = y - 20;
         }
@@ -543,6 +543,23 @@ const getColorOfFont = (link) => {
         default:
             return rgb(0.865, 0, 1);
     }
+}
+
+const getColorForTextField = (textField) => {
+    if (!textField) return rgb(0, 0, 0);
+    
+    const text = textField.toLowerCase();
+    
+    // Buscar palabras clave en el texto
+    const palabrasClave = ["sanando", "reparando", "reviviendo"];
+    const encontrado = palabrasClave.some(palabra => text.includes(palabra));
+    
+    if (encontrado) {
+        console.log("🎨 Aplicando color violeta a:", textField);
+        return rgb(0.6, 0, 0.6); // Color violeta
+    }
+    
+    return rgb(0, 0, 0); // Color negro por defecto
 }
 
 const wrapText = (text, width, font, fontSize) => {
@@ -631,7 +648,7 @@ const getListOfPetalos = () => {
                 rami.splice(0, rami.length, ...primeros, ...restoOrdenado);
             }
         });
-
+        console.log("RAMILINKS");
         console.log(ramiLinks)
         // Los convierte a cada link en objeto petalo.
         let correcciones = 0;
@@ -823,6 +840,49 @@ const ordenarPetalo = (historyArray) => {
     return { historyArrayOrden, ramiLinks };
 }
 
+const ordenarCorreccionesConOrden = (historyArray) => {
+    let resultado = [];
+    let correcciones = [];
+    let correccionActual = null;
+    
+    for (let i = 0; i < historyArray.length; i++) {
+        const link = historyArray[i];
+        
+        if (link === "correccion") {
+            if (!correccionActual) {
+                // Inicio de corrección
+                correccionActual = {
+                    startIndex: i,
+                    elementos: []
+                };
+            } else {
+                // Fin de corrección
+                if (correccionActual) {
+                    correcciones.push({
+                        startIndex: correccionActual.startIndex,
+                        elementos: [...correccionActual.elementos]
+                    });
+                    correccionActual = null;
+                }
+            }
+        } else if (correccionActual) {
+            // Elemento dentro de la corrección
+            correccionActual.elementos.push(link);
+        } else {
+            // Elemento normal
+            resultado.push(link);
+        }
+    }
+    
+    // Reinsertar correcciones en su orden original
+    correcciones.forEach(correccion => {
+        const insertIndex = correccion.startIndex;
+        resultado.splice(insertIndex, 0, "correccion", ...correccion.elementos, "correccion");
+    });
+    
+    return resultado;
+};
+
 const ordenarRamiLinks = (ramiLinks) => {
     ramiLinks.forEach(ramificacion => {
 
@@ -926,16 +986,55 @@ const OrdenarFuente = (links) => {
 
     linksWithOutCorreciones.sort(sortArray);
 
-    const uniqueCorrecciones = []
+    // ⚠️ NUEVO: Ordenar los elementos dentro de cada corrección
+    correcciones.forEach(correccion => {
+    // Arrays para los pétalos prioritarios y los demás especiales
+    const petalosPrioritarios = [];
+    const otrosEspeciales = [];
+    const elementosNormales = [];
 
-    correcciones.forEach(({ antLink, correccionPetalos }) => {
-        uniqueCorrecciones.push({
-            antLink,
-            correccionPetalos: new Set(correccionPetalos)
-        });
+    correccion.correccionPetalos.forEach(elemento => {
+        if (
+            elemento.startsWith("petalo-3/2/2/5/1/") ||
+            elemento.startsWith("petalo-3/2/2/5/2/") ||
+            elemento.startsWith("petalo-3/2/2/5/3/")
+        ) {
+            petalosPrioritarios.push(elemento);
+        } else if (elemento.startsWith("petalo-3/2/2/5/")) {
+            otrosEspeciales.push(elemento);
+        } else {
+            elementosNormales.push(elemento);
+        }
     });
 
-    return putCorrecciones(uniqueCorrecciones, Array.from(new Set(linksWithOutCorreciones)))
+    // Ordenar los prioritarios por el número final (1, 2, 3)
+    petalosPrioritarios.sort((a, b) => {
+        const numA = parseInt(a.split('/')[5]);
+        const numB = parseInt(b.split('/')[5]);
+        return numA - numB;
+    });
+
+    // Ordenar otros especiales por el número final
+    otrosEspeciales.sort((a, b) => {
+        const numA = parseInt(a.split('/')[5]);
+        const numB = parseInt(b.split('/')[5]);
+        return numA - numB;
+    });
+
+    // Ordenar normales
+    elementosNormales.sort(sortArray);
+
+    // Combinar: prioritarios arriba, luego otros especiales, luego normales
+    correccion.correccionPetalos = [
+        ...petalosPrioritarios,
+        ...otrosEspeciales,
+        ...elementosNormales
+    ];
+ });
+
+    console.log("🔧 Correcciones ordenadas:", correcciones);
+    console.log("🔧 Links sin correcciones:", linksWithOutCorreciones);
+    return putCorrecciones(correcciones, Array.from(new Set(linksWithOutCorreciones)))
 }
 
 
@@ -974,15 +1073,12 @@ const sortArray = (a, b) => {
 };
 
 const putCorrecciones = (correcciones, arrayWithOutCorrecciones) => {
-    let newArray = [];
-    arrayWithOutCorrecciones.forEach(link => {
-        newArray.push(link);
-        correcciones.forEach(correccion => {
-            if (correccion.antLink === link) {
-                newArray.push("correccion", ...correccion.correccionPetalos, "correccion");
-            }
-        });
+    let newArray = [...arrayWithOutCorrecciones];
+    correcciones.forEach(correccion => {
+        console.log("🔧 Insertando corrección ordenada para", correccion.antLink, ":", correccion.correccionPetalos);
+        newArray.push("correccion", ...correccion.correccionPetalos, "correccion");
     });
+    console.log("🔧 putCorrecciones resultado:", newArray);
     return newArray;
 }
 

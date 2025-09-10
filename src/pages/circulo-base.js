@@ -47,7 +47,7 @@ const CirculoBase = () => {
         <Background style={{backgroundImage: `url(/images/portada.webp)`}}>
             <Container>
                 <Title scale={0.8} color={"#fffdfd"}>
-                    Terapia GENESÍS
+                    Terapia Cuántica GENESÍS
                 </Title>
                 {showAlert && <ContainerAlert>
                     <Alert severity="error">
