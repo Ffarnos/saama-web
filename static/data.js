@@ -1480,7 +1480,7 @@ const petalos = [
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "A",
                                         index: 0,
-                                        text: "SANANDO"
+                                        text: "SANANDO LEGADO"
                                     },
                                     {
                                         linkName: "petalo-3/2/2/5/2",
@@ -1488,7 +1488,7 @@ const petalos = [
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "B",
                                         index: 1,
-                                        text: "REPARANDO"
+                                        text: "REPARANDO LEGADO"
                                     },
                                     {
                                         linkName: "petalo-3/2/2/5/3",
@@ -1496,7 +1496,7 @@ const petalos = [
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "C",
                                         index: 2,
-                                        text: "REVIVIENDO"
+                                        text: "REVIVIENDO LEGADO"
                                     },
                                 ]
                             },

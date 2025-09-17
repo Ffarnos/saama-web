@@ -1,13 +1,14 @@
 import 'firebase/auth';
 import { petalos } from "../../../static/data";
-import { PDFDocument, rgb } from 'pdf-lib';
+import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 
 const createAndSendPDF = async () => {
     const existingPdfBytes = await loadPDF();
     const pdfDoc = await PDFDocument.load(existingPdfBytes);
     const page = pdfDoc.getPage(0);
     const problems = localStorage.getItem("problems").split(",")
-    const font = await pdfDoc.embedFont('Helvetica');
+    const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+    const fontBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
     const maxWidth = page.getSize().width - 30;
     let now = new Date();
 
@@ -79,7 +80,7 @@ const createAndSendPDF = async () => {
             });
             y = y - 35;
         } else {
-            const result = await textPetalo(petalo, currentPage, y, pdfDoc, maxWidth, font);
+            const result = await textPetalo(petalo, currentPage, y, pdfDoc, maxWidth, font, fontBold);
             y = result.y;
             currentPage = result.currentPage
 
@@ -212,7 +213,7 @@ const createAndSendPDF = async () => {
 
         }
         else {
-            const result = await textPetalo(petalo, currentPage, y, pdfDoc, maxWidth, font);
+            const result = await textPetalo(petalo, currentPage, y, pdfDoc, maxWidth, font,fontBold);
             y = result.y;
             currentPage = result.currentPage
 
@@ -352,18 +353,19 @@ const createAndSendPDF = async () => {
 };
 
 
-const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
+const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font,fontBold) => {
     if (petalo.subPetalos) {
         if (petalo.title.length > 2) {
             console.log("2")
             if (petalo.title === 'Emociones')
                 petalo.title = 'EMOCIONES (se anularon las siguientes emociones)'
-
+            const estilo = getEstiloForTextField(petalo.title, font, fontBold, 16);
             currentPage.drawText(petalo.title, {
                 x: 22,
                 y: y,
-                size: 16,
-                color: getColorForTextField(petalo.text),
+                size: estilo.size,
+                color: estilo.color,
+                font: estilo.font,
             });
             y = y - 20;
         }
@@ -372,14 +374,14 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
             const text = petalo.text;
             const wrappedText = wrapText(text, maxWidth, font, 12);
             console.log("3")
-
             for (const line of wrappedText.split('\n')) {
+                const estilo = getEstiloForTextField(line, font, fontBold, 12);
                 currentPage.drawText(line, {
                     x: 22,
                     y: y,
-                    size: 12,
-                    color: getColorForTextField(petalo.text),
-
+                    size: estilo.size,
+                    color: estilo.color,
+                    font: estilo.font,
                 })
                 y = y - 15;
                 if (y <= 30) {
@@ -397,7 +399,27 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
             size: 14,
             color: rgb(0.5, 0, 0.5), // Color violeta
         });
-        y -= (60);
+                // Solo para HASTA AQUI (cierre) dibujar línea debajo
+        if (petalo.title === "CORRECCIONCLOSE") {
+           //Le doy el espacio que quiero entre el texto y la línea
+            y -= 22;
+            //si la línea se pasa de la página, crear una nueva
+            if (y <= 30) {
+                currentPage = pdfDoc.addPage([595, 842]);
+                y = 780;
+            }
+            const pageWidth = currentPage.getSize().width;
+            currentPage.drawLine({
+                start: { x: 22, y: y },
+                end:   { x: pageWidth - 22, y: y },
+                thickness: 0.5,
+                color: rgb(0, 0, 0),
+            });
+            y -= 30; // separación para lo siguiente
+        } else {
+            // si es OPEN, solo dejá un espacio estándar
+            y -= 45;
+        }
     }
     else {
         //PETALO FINAL
@@ -409,11 +431,13 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                     const text = petalo.title + ": " + petalo.text;
                     const wrappedText = wrapText(text, maxWidth, font, 12);
                     for (const line of wrappedText.split('\n')) {
+                        const estilo = getEstiloForTextField(line, font, fontBold, 12);
                         currentPage.drawText(line, {
                             x: 22,
                             y: y,
-                            size: 12,
-                            color: getColorForTextField(petalo.textField),
+                            size: estilo.size,
+                            color: estilo.color,
+                            font: estilo.font,
 
                         })
                         y = y - 15;
@@ -438,12 +462,13 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                         if (!first)
                             y = y - 30
                         else first = false;
-
+                        const estilo = getEstiloForTextField(text, font, fontBold, 12);
                         currentPage.drawText("- " + text, {
                             x: 22,
                             y: y,
-                            size: 12,
-                            color: getColorForTextField(text),
+                            size: estilo.size,
+                            color: estilo.color,
+                            font: estilo.font,
                         });
 
                         if (y <= 30) {
@@ -452,11 +477,13 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                         }
                     });
                 } else {
+                    const estilo = getEstiloForTextField(petalo.textField, font, fontBold , (petalo.linkName !== "petalo-5/7/1") ? 12 : 14);
                     currentPage.drawText((petalo.useText && !petalo.useDesc ? (petalo.linkName !== "petalo-5/7/1" ? petalo.title : petalo.titlePage) + ": " : "- ") + petalo.textField, {
                         x: 22,
                         y: y,
-                        size: (petalo.linkName !== "petalo-5/7/1") ? 12 : 14,
-                        color: getColorForTextField(petalo.textField)
+                        size: estilo.size,
+                        color: estilo.color,
+                        font: estilo.font,
                     });
                 }
                 y = y - 10;
@@ -468,11 +495,13 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                 const lines = wrappedText.split("\n");
 
                 for (const line of lines) {
+                    const estilo = getEstiloForTextField(line, font, fontBold, 12);
                     currentPage.drawText(line, {
                         x: 22,
                         y: y,
-                        size: 12,
-                        color: getColorForTextField(petalo.text),
+                        size: estilo.size,
+                        color: estilo.color,
+                        font: estilo.font,
                     })
                     y = y - 15;
                     if (y <= 30) {
@@ -485,9 +514,14 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                     y = y - 5
                 else y = y - 20
 
-
+                
                 if (petalo.imageBody) {
                     y = y - (lines.length * 14)
+
+                    // Verificar si la imagen entra en la página
+                    const imgHeight = 100;
+                    const imgWidth = 100;
+
 
                     if (y <= 30) {
                         currentPage = pdfDoc.addPage([595, 842]);
@@ -497,25 +531,29 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font) => {
                     const imageBody = await fetch(`/images/simbolos/${petalo.imageBody}`);
                     const imageBodyArrayBuffer = await imageBody.arrayBuffer();
                     const imageBodyImage = await pdfDoc.embedPng(imageBodyArrayBuffer);
+                    // Dibujar la imagen en la página actual, ajustando la posición Y (12/09/2025)
                     currentPage.drawImage(imageBodyImage, {
                         x: 22,
-                        y: y,
-                        width: 100,
-                        height: 100,
+                        y: y - 70, // Ajusto la base
+                        width: imgWidth,
+                        height: imgHeight,
                     });
-                    y = y - 100;
+                    y = y - imgHeight-70 ; // bajar cursor después de la imagen
                 }
             }
         } else {
             console.log("7")
-            if (petalo.title)
+            if (petalo.title){
+                const estilo = getEstiloForTextField(petalo.title, font, fontBold, 12);
                 currentPage.drawText(petalo.title, {
                     x: 22,
                     y: y,
-                    size: 12,
-                    color: getColorForTextField(petalo.title),
+                    size: estilo.size,
+                    color: estilo.color,
+                    font: estilo.font,
                 });
-            y = y - 20;
+             y = y - 20;
+            }
         }
         y = y - 20;
     }
@@ -545,22 +583,32 @@ const getColorOfFont = (link) => {
     }
 }
 
-const getColorForTextField = (textField) => {
-    if (!textField) return rgb(0, 0, 0);
-    
-    const text = textField.toLowerCase();
-    
-    // Buscar palabras clave en el texto
-    const palabrasClave = ["sanando", "reparando", "reviviendo"];
-    const encontrado = palabrasClave.some(palabra => text.includes(palabra));
-    
-    if (encontrado) {
-        console.log("🎨 Aplicando color violeta a:", textField);
-        return rgb(0.6, 0, 0.6); // Color violeta
-    }
-    
-    return rgb(0, 0, 0); // Color negro por defecto
-}
+const getEstiloForTextField = (textField, font, fontBold , defaultSize = 12) => {
+  if (!textField) {
+    return {
+      color: rgb(0, 0, 0),
+      font: font,
+      size: defaultSize,
+    };
+  }
+
+  const text = textField.toLowerCase();
+  const reSanado = /\b(sanando|reparando|reviviendo)(?:\s+legado)?\b/;
+
+  if (reSanado.test(text)) {
+    return {
+      color: rgb(0.6, 0, 0.6), // violeta
+      font: fontBold,          // bold
+      size: defaultSize + 2,                // más grande
+    };
+  }
+
+  return {
+    color: rgb(0, 0, 0),
+    font: font,
+    size: defaultSize,
+  };
+};
 
 const wrapText = (text, width, font, fontSize) => {
     const cleanText = text.replace(/[\u200B-\u200D\uFEFF]/g, '');
@@ -958,7 +1006,10 @@ const OrdenarFuenteByVidas = (links, sort) => {
     return vidasPasadas.length > 0 ? putVidasPasadas(vidasPasadas, fuenteOrdenada) : fuenteOrdenada;
 }
 
+
+//ORDENA LOS PETALOS DE LA FUENTE (EXCEPTO VIDAS PASADAS)
 const OrdenarFuente = (links) => {
+    // BUSCO TODAS LAS CORRECCIONES Y LAS GUARDO EN UN ARRAY APARTE , MIENTAS QUE LOS DEMAS LINKS LOS GUARDO EN OTRO ARRAY
     const linksWithOutCorreciones = [];
     let antLink;
 
@@ -984,8 +1035,26 @@ const OrdenarFuente = (links) => {
         } else linksWithOutCorreciones.push(link);
     });
 
-    linksWithOutCorreciones.sort(sortArray);
+    // ORDENAR LOS LINKS SIN CORRECCIONES, MANTENIENDO "petalo-3/2/2/5" AL FINAL
+    const petaloEspecial = [];
+    const linksNormales = [];
 
+    console.log("Links sin correcciones:", linksWithOutCorreciones);
+    linksWithOutCorreciones.forEach(link => {
+        if (link === "petalo-3/2/2/5") {
+            petaloEspecial.push(link);
+        } else {
+            linksNormales.push(link);
+        }
+    });
+
+    // Ordenar solo los PETALOS normales
+    linksNormales.sort(sortArray);
+    // Combinar los arrays: primero los normales ordenados, luego los especiales al final
+    const linksOrdenados = [...linksNormales, ...petaloEspecial];
+    console.log("Links finales ordenados:", linksOrdenados);
+    
+    
     // ⚠️ NUEVO: Ordenar los elementos dentro de cada corrección
     correcciones.forEach(correccion => {
     // Arrays para los pétalos prioritarios y los demás especiales
@@ -1033,8 +1102,8 @@ const OrdenarFuente = (links) => {
  });
 
     console.log("🔧 Correcciones ordenadas:", correcciones);
-    console.log("🔧 Links sin correcciones:", linksWithOutCorreciones);
-    return putCorrecciones(correcciones, Array.from(new Set(linksWithOutCorreciones)))
+    console.log("🔧 Links sin correcciones:", linksOrdenados);
+    return putCorrecciones(correcciones, Array.from(new Set(linksOrdenados)))
 }
 
 

@@ -9,6 +9,8 @@ import { useCorreccion } from "../../context/LegadoContext";
 export const LegadoButton = () => {
   const [showAlertCorreccion, setShowAlertCorreccion] = useState(false);
   const { isCorreccion, setIsCorreccion } = useCorreccion();
+  const [alertMessage, setAlertMessage] = useState(""); // 👈 mensaje dinámico
+  const [clickCount, setClickCount] = useState(0); // 👈 contador de clicks
   const location = useLocation();
   
   const mostrarExtra = [
@@ -23,15 +25,33 @@ export const LegadoButton = () => {
     if (!history) history = [];
     else history = JSON.parse(history);
 
-    setIsCorreccion(prev => !prev); // Toggle ramificación
-    setShowAlertCorreccion(true);
-    setTimeout(() => {
-      setShowAlertCorreccion(false);
-    }, 4000);
-    
-    history.push("correccion")
-    localStorage.setItem("history", JSON.stringify(history))
-  
+    if (clickCount === 0) {
+      // 👉 Primer click: arranca corrección
+      setIsCorreccion(true);
+      setAlertMessage("Activando Legado...");
+      setShowAlertCorreccion(true);
+
+      setTimeout(() => {
+        setShowAlertCorreccion(false);
+      }, 2000);
+
+      setClickCount(1);
+    } 
+    else if (clickCount === 1) {
+      // 👉 Segundo click: finaliza corrección
+      setIsCorreccion(false);
+      setAlertMessage("Finalizó Legado");
+      setShowAlertCorreccion(true);
+
+      setTimeout(() => {
+        setShowAlertCorreccion(false);
+      }, 3000);
+
+      setClickCount(0);
+    }
+
+    history.push("correccion");
+    localStorage.setItem("history", JSON.stringify(history));
   };
 
   return (
@@ -42,8 +62,8 @@ export const LegadoButton = () => {
             {mostrarExtra && (
               <LoadB 
                 src="/images/simbolos/correccion2.png" 
-                alt="Extra" 
-                title="Extra" 
+                alt="Legado" 
+                title="Legado" 
                 onClick={handleCorreccion}
               />
             )}
@@ -60,8 +80,8 @@ export const LegadoButton = () => {
 
 
       {showAlertCorreccion && <ContainerAlert>
-          <Alert severity="success">
-                Trabajando Legado
+          <Alert 
+            severity="success">{alertMessage}
           </Alert>
       </ContainerAlert>}
 
@@ -81,7 +101,7 @@ const PageContainer = styled.div`
 
 const ContainerAlert = styled.div`
   position: fixed;
-  left: 20px;
+  right: 20px;
   top: 20px;
   z-index: 999;
 `;

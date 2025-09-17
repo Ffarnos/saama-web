@@ -213,10 +213,10 @@ const FinalPageTemplate = ({ pageContext }) => {
             
             <BottomRightBox >
                 <Toggle onClick={() => setOpen(!open)}>
-                    <img 
+                    <ToggleIcon 
                         src={open ? "/images/simbolos/cancelar2.png" : "/images/simbolos/opciones2.png"} 
                         alt="menu toggle" 
-                        style={{ width: "55px", height: "55px"}} 
+                        
                     />
                 </Toggle>
                                                                         
@@ -300,22 +300,31 @@ const PageContainer = styled.div`
 `;
 
 const BottomRightBox = styled.div`
-position: absolute;
-bottom: 20px;
-right: 20px;
+  position: fixed;      /* 📌 fijo a la pantalla */
+  bottom: 20px;
+  right: 20px;          /* mejor usar px para que no se mueva con zoom */
   
+  display: flex;
+  flex-direction: column; /* apilar LoadButtons arriba y toggle abajo */
+  align-items: flex-end;  /* alineado a la derecha */
+  gap: 10px;
+  z-index: 1000; 
 `;
 
 const Toggle = styled.button`
-  width: 55px;
-  height: 55px;
+  width: 3vw;
+  height: 3vw;
   cursor: pointer;
   background-color: white;
   padding: 1px;
-  margin: 5px;
+  margin: 0vw;
   border-radius: 50%;
   transition: box-shadow 0.3s ease;
   border: none;
+  margin-bottom: 7px;
+  
+  max-width: 55px;   /* nunca más grande que el original */
+  max-height: 55px;
 
   &:hover {
     box-shadow:
@@ -332,26 +341,36 @@ const Toggle = styled.button`
   justify-content: center;
 
 `;
+const ToggleIcon = styled.img`
+  width: 3vw;
+  height: 3vw;
+  
+
+  max-width: 55px;   /* nunca más grande que el original */
+  max-height: 55px;
+
+`;
 
 const LoadButtons = styled.div`
  position: absolute;
-bottom: 0;
-right: 70px; /* ✅ typo corregido */
+ bottom: 0;
+ right: 70px; /* ✅ typo corregido */
 
-display: flex;
-flex-direction: row-reverse; /* ✅ los ítems se alinean de derecha a izquierda */
-gap: 10px;
+ display: flex;
+ flex-direction: row-reverse; /* ✅ los ítems se alinean de derecha a izquierda */
+ gap: 10px;
 
-opacity: ${props => props.$open ? 1 : 0};
-transform: ${props => props.$open ? "translateX(10px)" : "translateX(0)"};
-pointer-events: ${props => props.$open ? "auto" : "none"};
-transition: opacity 0.3s ease, transform 0.3s ease;
+ opacity: ${props => props.$open ? 1 : 0};
+ transform: ${props => props.$open ? "translateX(10px)" : "translateX(0)"};
+ pointer-events: ${props => props.$open ? "auto" : "none"};
+ transition: opacity 0.3s ease, transform 0.3s ease;
+
  
 `;
 
 const LoadB = styled.img`
-  width: 55px;
-  height: 55px;
+  width: 3vw;
+  height: 3vw;
   cursor: pointer;
   background-color: white;
   padding: 1px;
@@ -359,6 +378,9 @@ const LoadB = styled.img`
   border-radius: 50%;
   transition: box-shadow 0.3s ease;
 
+  max-width: 55px;   /* nunca más grande que el original */
+  max-height: 55px;
+  
   &:hover {
     box-shadow:
       0 0 10px white,
@@ -367,6 +389,8 @@ const LoadB = styled.img`
       0 0 10px #ffffff,
       0 0 10px #ffffff;
   }
+
+
 `;
 
 const BlurredBox = styled.div`

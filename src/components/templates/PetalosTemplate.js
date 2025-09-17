@@ -7,6 +7,7 @@ import {Alert, TextField, ThemeProvider, createTheme} from "@mui/material";
 import LoginCheck from "../login/LoginCheck";
 import {Background} from "../Commons";
 import historySave from "../navigation/History";
+import { LegadoButton  } from "../navigation/LegadoButton";
 
 const createdPages = require('../../../../createdPages.json');
 
@@ -102,6 +103,7 @@ const PetalosTemplate = ({ pageContext }) => {
             />
             
         </Container>
+        <LegadoButton />
     </Background>
     </LoginCheck>;
 } // BORRE LOAD BUTTON XQ LO AGREGUE EN BUTTONSs
