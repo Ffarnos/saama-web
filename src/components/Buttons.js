@@ -199,7 +199,7 @@ const Buttons = ({petalos,bigButtonTitle,circuloBase,onClick, noNumber}) => {
                     <LoadB src="/images/simbolos/borrado.png" alt="Borrar Ultimo" title="Borrar Ultimo" onClick={handleBorrar} />
                     <LoadB src="/images/simbolos/oraciones2.png" alt="Oraciones" title="Oraciones" onClick={() => navigate("/intro-text")} />
                     <LoadB src="/images/simbolos/inicio2.png" alt="Inicio" title="Inicio" onClick={() => navigate('/')} />
-                    <LoadB src="/images/simbolos/legado.png" alt="Legado" title="Legado-C" onClick={() => navigate("/circulo-base/petalo-3/2/2/5/")} />
+                    <LoadB src="/images/simbolos/legado.png" alt="Legado" title="Volver al Legado" onClick={() => navigate("/circulo-base/petalo-3/2/2/5/")} />
                 </LoadButtons>
             </BottomRightBox>
             
@@ -316,6 +316,9 @@ const LoadB = styled.img`
 
   max-width: 55px;   /* nunca más grande que el original */
   max-height: 55px;
+
+  min-width: 20px;   /* nunca más grande que el original */
+  min-height: 20px;
   
   &:hover {
     box-shadow:
