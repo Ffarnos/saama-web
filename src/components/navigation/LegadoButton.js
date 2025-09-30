@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { navigate } from "gatsby";
 import { useLocation } from "@reach/router";
 import { useState } from "react";
 import { Alert } from "@mui/material";
@@ -94,9 +93,9 @@ const Container = styled.div`
 
 
 const LoadButtons = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 15px; /* 👈 se abre a la derecha del toggle */
+  position: fixed;      /* 📌 fijo a la pantalla */
+  bottom: 20px;
+  left: 7px; /* 👈 se abre a la derecha del toggle */
 
   display: flex;
   flex-direction: row-reverse; /* 👈 en fila horizontal */

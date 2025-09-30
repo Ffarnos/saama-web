@@ -353,209 +353,148 @@ const createAndSendPDF = async () => {
 };
 
 
-const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font,fontBold) => {
+const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBold) => {
     if (petalo.subPetalos) {
         if (petalo.title.length > 2) {
-            console.log("2")
             if (petalo.title === 'Emociones')
                 petalo.title = 'EMOCIONES (se anularon las siguientes emociones)'
+
             const estilo = getEstiloForTextField(petalo.title, font, fontBold, 16);
-            currentPage.drawText(petalo.title, {
-                x: 22,
-                y: y,
-                size: estilo.size,
-                color: estilo.color,
-                font: estilo.font,
-            });
-            y = y - 20;
+            currentPage.drawText(petalo.title, { x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font });
+            y -= 20;
         }
 
         if (petalo.text) {
-            const text = petalo.text;
-            const wrappedText = wrapText(text, maxWidth, font, 12);
-            console.log("3")
+            const wrappedText = wrapText(petalo.text, maxWidth, font, 12);
             for (const line of wrappedText.split('\n')) {
                 const estilo = getEstiloForTextField(line, font, fontBold, 12);
-                currentPage.drawText(line, {
-                    x: 22,
-                    y: y,
-                    size: estilo.size,
-                    color: estilo.color,
-                    font: estilo.font,
-                })
-                y = y - 15;
-                if (y <= 30) {
-                    currentPage = pdfDoc.addPage([595, 842]);
-                    y = 780;
-                }
+                currentPage.drawText(line, { x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font });
+                y -= 15;
+                if (y <= 30) { currentPage = pdfDoc.addPage([595, 842]); y = 780; }
             }
-            y = y - 30;
+            y -= 30;
         }
     } else if (petalo.title === "CORRECCIONOPEN" || petalo.title === "CORRECCIONCLOSE") {
-        const text = petalo.title === "CORRECCIONOPEN" ? "DESDE AQUI SE TRABAJO, LA SIGUIENTE INFORMACION DEL LEGADO" : "HASTA AQUI SE TRABAJO, LA INFORMACION DEL LEGADO";
-        currentPage.drawText(text, {
-            x: 22,
-            y: y,
-            size: 14,
-            color: rgb(0.5, 0, 0.5), // Color violeta
-        });
-                // Solo para HASTA AQUI (cierre) dibujar línea debajo
+        // 🔹 Corrección con fuente 3
+        const text = petalo.title === "CORRECCIONOPEN"
+            ? "DESDE AQUI SE TRABAJO, LA SIGUIENTE INFORMACION DEL LEGADO"
+            : "HASTA AQUI SE TRABAJO, LA INFORMACION DEL LEGADO";
+        const estilo = getEstiloForTextField(text, font, fontBold, 14);
+        currentPage.drawText(text, { x: 22, y, size: estilo.size, color: rgb(0.6, 0, 0.6), font: estilo.font });
+
+        y -= (petalo.title === "CORRECCIONCLOSE") ? 22 : 45;
+
         if (petalo.title === "CORRECCIONCLOSE") {
-           //Le doy el espacio que quiero entre el texto y la línea
-            y -= 22;
-            //si la línea se pasa de la página, crear una nueva
-            if (y <= 30) {
-                currentPage = pdfDoc.addPage([595, 842]);
-                y = 780;
-            }
-            const pageWidth = currentPage.getSize().width;
+            if (y <= 30) { currentPage = pdfDoc.addPage([595, 842]); y = 780; }
             currentPage.drawLine({
-                start: { x: 22, y: y },
-                end:   { x: pageWidth - 22, y: y },
+                start: { x: 22, y },
+                end: { x: currentPage.getSize().width - 22, y },
                 thickness: 0.5,
-                color: rgb(0, 0, 0),
+                color: rgb(0, 0, 0)
             });
-            y -= 30; // separación para lo siguiente
-        } else {
-            // si es OPEN, solo dejá un espacio estándar
-            y -= 45;
+            y -= 30;
         }
-    }
-    else {
-        //PETALO FINAL
+    } else {
+        // PETALO FINAL
+        
+        //Texto Princiapal
         if (petalo.text) {
-            if (petalo.fieldText) {
-                const splittedTextField = petalo.textField ? petalo.textField.split(":") : [];
-                console.log("4");
-                if (petalo.useDesc) {
-                    const text = petalo.title + ": " + petalo.text;
-                    const wrappedText = wrapText(text, maxWidth, font, 12);
-                    for (const line of wrappedText.split('\n')) {
-                        const estilo = getEstiloForTextField(line, font, fontBold, 12);
-                        currentPage.drawText(line, {
-                            x: 22,
-                            y: y,
-                            size: estilo.size,
-                            color: estilo.color,
-                            font: estilo.font,
+            
+            if(!petalo.isLegado){
+                // 🔹 Siempre título + texto
+                const textToPrint = petalo.title
+                    ? `${petalo.title}: ${petalo.text}`
+                    : petalo.text;
 
-                        })
-                        y = y - 15;
-                        if (y <= 30) {
-                            currentPage = pdfDoc.addPage([595, 842]);
-                            y = 780;
-                        }
-                    }
-
-                    y = y - 10;
-                }
-
-                if (splittedTextField.length > 1) {
-                    if (y <= 30) {
-                        currentPage = pdfDoc.addPage([595, 842]);
-                        y = 780;
-                    }
-
-                    const splittedTextField = petalo.textField.split(":");
-                    let first = true;
-                    splittedTextField.forEach((text) => {
-                        if (!first)
-                            y = y - 30
-                        else first = false;
-                        const estilo = getEstiloForTextField(text, font, fontBold, 12);
-                        currentPage.drawText("- " + text, {
-                            x: 22,
-                            y: y,
-                            size: estilo.size,
-                            color: estilo.color,
-                            font: estilo.font,
-                        });
-
-                        if (y <= 30) {
-                            currentPage = pdfDoc.addPage([595, 842]);
-                            y = 780;
-                        }
-                    });
-                } else {
-                    const estilo = getEstiloForTextField(petalo.textField, font, fontBold , (petalo.linkName !== "petalo-5/7/1") ? 12 : 14);
-                    currentPage.drawText((petalo.useText && !petalo.useDesc ? (petalo.linkName !== "petalo-5/7/1" ? petalo.title : petalo.titlePage) + ": " : "- ") + petalo.textField, {
-                        x: 22,
-                        y: y,
-                        size: estilo.size,
-                        color: estilo.color,
-                        font: estilo.font,
-                    });
-                }
-                y = y - 10;
-            } else {
-                let titleWithoutSpaces = petalo.title.replace(/\s+/g, "");
-                console.log(petalo.title + " " + titleWithoutSpaces.length)
-                const text = (titleWithoutSpaces.length >= 4 ? petalo.title.toUpperCase() + ": " : "") + petalo.text;
-                const wrappedText = wrapText(text, maxWidth, font, 12);
-                const lines = wrappedText.split("\n");
-
-                for (const line of lines) {
+                const wrappedText = wrapText(textToPrint, maxWidth, font, 12);
+                for (const line of wrappedText.split('\n')) {
                     const estilo = getEstiloForTextField(line, font, fontBold, 12);
                     currentPage.drawText(line, {
                         x: 22,
-                        y: y,
+                        y,
                         size: estilo.size,
                         color: estilo.color,
-                        font: estilo.font,
-                    })
-                    y = y - 15;
-                    if (y <= 30) {
-                        currentPage = pdfDoc.addPage([595, 842]);
-                        y = 780;
-                    }
-                }
-
-                if (petalo.linkName.includes("petalo-5/7") && (petalo.title !== "BLOQUEO EN LA ACTUALIDAD"))
-                    y = y - 5
-                else y = y - 20
-
-                
-                if (petalo.imageBody) {
-                    y = y - (lines.length * 14)
-
-                    // Verificar si la imagen entra en la página
-                    const imgHeight = 100;
-                    const imgWidth = 100;
-
-
-                    if (y <= 30) {
-                        currentPage = pdfDoc.addPage([595, 842]);
-                        y = 780;
-                    }
-
-                    const imageBody = await fetch(`/images/simbolos/${petalo.imageBody}`);
-                    const imageBodyArrayBuffer = await imageBody.arrayBuffer();
-                    const imageBodyImage = await pdfDoc.embedPng(imageBodyArrayBuffer);
-                    // Dibujar la imagen en la página actual, ajustando la posición Y (12/09/2025)
-                    currentPage.drawImage(imageBodyImage, {
-                        x: 22,
-                        y: y - 70, // Ajusto la base
-                        width: imgWidth,
-                        height: imgHeight,
+                        font: estilo.font
                     });
-                    y = y - imgHeight-70 ; // bajar cursor después de la imagen
+                    y -= 15;
+                    if (y <= 30) {
+                        currentPage = pdfDoc.addPage([595, 842]);
+                        y = 780;
+                    }
+                }
+            }else{
+                //Solo para legado, de esta manera el titulo queda separado del texto a la hora de imprimir (SANANDO , REPARANDO, REVIVIENDO)
+                const textToPrint = petalo.text;
+
+                const wrappedText = wrapText(textToPrint, maxWidth, font, 12);
+                for (const line of wrappedText.split('\n')) {
+                    const estilo = getEstiloForTextField(line, font, fontBold, 12);
+                    currentPage.drawText(line, {
+                        x: 22,
+                        y,
+                        size: estilo.size,
+                        color: estilo.color,
+                        font: estilo.font
+                    });
+                    y -= 15;
+                    if (y <= 30) {
+                        currentPage = pdfDoc.addPage([595, 842]);
+                        y = 780;
+                    }
                 }
             }
-        } else {
-            console.log("7")
-            if (petalo.title){
-                const estilo = getEstiloForTextField(petalo.title, font, fontBold, 12);
-                currentPage.drawText(petalo.title, {
-                    x: 22,
-                    y: y,
-                    size: estilo.size,
-                    color: estilo.color,
-                    font: estilo.font,
-                });
-             y = y - 20;
+            y -= 20;
+
+            // LEGADO unificado
+            if (petalo.isLegado && petalo.textField) {
+                const contenido = petalo.textField;
+                currentPage.drawText("HEREDADO DE:", { x: 22, y, size: 13, font: fontBold, color: rgb(0, 0, 0) });
+                currentPage.drawText(contenido, { x: 127, y, size: 12, font, color: rgb(0, 0, 0) });
+                y -= 20;
             }
+
+            // Imagen
+            if (petalo.imageBody) {
+                
+                //verificar si la imagen entra en la pagina
+                const imgHeight = 100, imgWidth = 100;
+                 // Verificar si la imagen entra en la página
+                if (y - imgHeight <= 30) {
+                    currentPage = pdfDoc.addPage([595, 842]);
+                    y = 780;
+                }
+
+                const imageBody = await fetch(`/images/simbolos/${petalo.imageBody}`);
+                const imageBodyArrayBuffer = await imageBody.arrayBuffer();
+                const imageBodyImage = await pdfDoc.embedPng(imageBodyArrayBuffer);
+                
+                 currentPage.drawImage(imageBodyImage, {
+                    x: 22,
+                    y: y - imgHeight, // posición correcta arriba de y actual
+                    width: imgWidth,
+                    height: imgHeight,
+                });
+
+                // Ajustar el cursor Y **antes de continuar** con texto
+                y = y - imgHeight - 15; // 15px de espacio después de la imagen
+            }
+        } else if (petalo.title) {
+            const estilo = getEstiloForTextField(petalo.title, font, fontBold, 12);
+            currentPage.drawText(petalo.title, { x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font });
+            y -= 20;
         }
-        y = y - 20;
+        y -= 20;
+    }
+
+    // TEXTFIELD FINAL fuera de LEGADO
+    if (petalo.textField && !petalo.isLegado) {
+        const wrappedTextField = wrapText(petalo.textField, maxWidth, font, 12);
+        for (const line of wrappedTextField.split('\n')) {
+            currentPage.drawText("- " + line, { x: 22, y, size: 12, color: rgb(0, 0, 0), font });
+            y -= 15;
+            if (y <= 30) { currentPage = pdfDoc.addPage([595, 842]); y = 780; }
+        }
+        y -= 30;
     }
 
     return { y, currentPage };
@@ -833,7 +772,7 @@ const ordenarPetalo = (historyArray) => {
             if (ramificando)
                 ramificacion.push(link)
             else
-                petalos[lastPetalo].push("correccion")
+                petalos[3].push("correccion")
             correccion = !correccion;
             return;
         }
@@ -888,48 +827,6 @@ const ordenarPetalo = (historyArray) => {
     return { historyArrayOrden, ramiLinks };
 }
 
-const ordenarCorreccionesConOrden = (historyArray) => {
-    let resultado = [];
-    let correcciones = [];
-    let correccionActual = null;
-    
-    for (let i = 0; i < historyArray.length; i++) {
-        const link = historyArray[i];
-        
-        if (link === "correccion") {
-            if (!correccionActual) {
-                // Inicio de corrección
-                correccionActual = {
-                    startIndex: i,
-                    elementos: []
-                };
-            } else {
-                // Fin de corrección
-                if (correccionActual) {
-                    correcciones.push({
-                        startIndex: correccionActual.startIndex,
-                        elementos: [...correccionActual.elementos]
-                    });
-                    correccionActual = null;
-                }
-            }
-        } else if (correccionActual) {
-            // Elemento dentro de la corrección
-            correccionActual.elementos.push(link);
-        } else {
-            // Elemento normal
-            resultado.push(link);
-        }
-    }
-    
-    // Reinsertar correcciones en su orden original
-    correcciones.forEach(correccion => {
-        const insertIndex = correccion.startIndex;
-        resultado.splice(insertIndex, 0, "correccion", ...correccion.elementos, "correccion");
-    });
-    
-    return resultado;
-};
 
 const ordenarRamiLinks = (ramiLinks) => {
     ramiLinks.forEach(ramificacion => {

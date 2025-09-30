@@ -239,7 +239,8 @@ const BottomRightBox = styled.div`
   position: fixed;      /* 📌 fijo a la pantalla */
   bottom: 20px;
   right: 20px;          /* mejor usar px para que no se mueva con zoom */
-  
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: column; /* apilar LoadButtons arriba y toggle abajo */
   align-items: flex-end;  /* alineado a la derecha */
@@ -261,6 +262,8 @@ const Toggle = styled.button`
   
   max-width: 55px;   /* nunca más grande que el original */
   max-height: 55px;
+  min-width: 20px;   /* nunca más grande que el original */
+  min-height: 20px;
 
   &:hover {
     box-shadow:
@@ -284,6 +287,8 @@ const ToggleIcon = styled.img`
 
   max-width: 55px;   /* nunca más grande que el original */
   max-height: 55px;
+  min-width: 20px;   /* nunca más grande que el original */
+  min-height: 20px;
 
 `;
 

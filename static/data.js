@@ -1477,26 +1477,35 @@ const petalos = [
                                     {
                                         linkName: "petalo-3/2/2/5/1",
                                         image: 'boton3',
+                                        fieldText: true,
+                                        separation: true,
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "A",
                                         index: 0,
-                                        text: "SANANDO LEGADO"
+                                        text: "SANANDO LEGADO",
+                                        isLegado: true
                                     },
                                     {
                                         linkName: "petalo-3/2/2/5/2",
                                         image: 'boton3',
+                                        fieldText: true,
+                                        separation: true,
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "B",
                                         index: 1,
-                                        text: "REPARANDO LEGADO"
+                                        text: "REPARANDO LEGADO",
+                                        isLegado: true
                                     },
                                     {
                                         linkName: "petalo-3/2/2/5/3",
                                         image: 'boton3',
+                                        fieldText: true,
+                                        separation: true,
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "C",
                                         index: 2,
-                                        text: "REVIVIENDO LEGADO"
+                                        text: "REVIVIENDO LEGADO",
+                                        isLegado: true
                                     },
                                 ]
                             },

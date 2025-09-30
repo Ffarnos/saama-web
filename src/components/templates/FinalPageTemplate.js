@@ -118,7 +118,25 @@ const FinalPageTemplate = ({ pageContext }) => {
 
 
 
-    const {desc, titleText, image, titlePage, imageBody, separation, fieldText, linkName} = pageContext
+    const {desc, titleText, image, titlePage, imageBody, separation, fieldText, linkName, subPetalos} = pageContext
+    
+    // ✅ Chequea si el TextField debe mostrarse: propio o algún hijo
+    // Función recursiva que verifica si un pétalo o cualquiera de sus subPetalos
+    // tiene 'fieldText' habilitado. Devuelve true si encuentra alguno, false si no.
+    // Parámetro:
+    //   petalo -> objeto pétalo que puede tener 'fieldText' y un array de 'subPetalos'.
+    const hasFieldTextRecursive = (petalo) => {
+        if (!petalo) return false; // Si el pétalo no existe, devolvemos false
+        if (petalo.fieldText) return true; // Si el pétalo actual tiene fieldText, devolvemos true
+        if (petalo.subPetalos) {
+            // Revisamos recursivamente todos los subPetalos
+            return petalo.subPetalos.some(p => hasFieldTextRecursive(p));
+        }
+        return false; // Si no hay fieldText ni subPetalos, devolvemos false
+    };
+
+    const hasFieldText = hasFieldTextRecursive(pageContext);
+
     const imagePath = "/images/" + image + ".webp";
     const imageBodyPath = "/images/simbolos/" + imageBody;
 
@@ -169,39 +187,52 @@ const FinalPageTemplate = ({ pageContext }) => {
                         {separation ? textComponents
                             : <Text scale={0.5} color={color}>{desc}</Text>}
 
-                        {fieldText && <div style={{ display: "grid", placeItems: "center", height: "100px" }}>
-                            <TextField id="emocion" variant="filled" margin="normal"
+                        {hasFieldText && (
+                                <div
+                                style={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "12px",
+                                height: "100px",
+                                justifyContent: "center"
+                                }}
+                            >
+                                {/* Solo mostrar el label si es LEGADO */}
+                                {linkName.includes("/5/") && (
+                                <span
+                                    style={{
+                                    fontSize: "25px",
+                                    fontWeight: "bold",
+                                    color: "#ffffffff",
+                                    whiteSpace: "nowrap"
+                                    }}
+                                >
+                                    HEREDADO DE :
+                                </span>
+                                )}
+                                <TextField
+                                    id={`emocion-${linkName}`} // 🔹 ID único por pétalo
+                                    variant="filled"
+                                    margin="normal"
                                     onChange={(e) => {
-                                        let history = localStorage.getItem("history");
-
-                                        if (!history)
-                                            history = [];
-                                        else
-                                            history = JSON.parse(history);
-
-                                        const lastLink = history[history.length - 1];
-                                        const lastEmotionLink = lastLink.split(":")[0];
-
-                                        history[history.length - 1] = lastEmotionLink + ":" + e.target.value;
-
-                                        localStorage.setItem("history", JSON.stringify(history));
+                                    let history = localStorage.getItem("history");
+                                    history = history ? JSON.parse(history) : [];
+                                    const lastLink = history[history.length - 1] || "";
+                                    const lastEmotionLink = lastLink.split(":")[0];
+                                    history[history.length - 1] = lastEmotionLink + ":" + e.target.value;
+                                    localStorage.setItem("history", JSON.stringify(history));
                                     }}
                                     onFocus={() => setIsTextFieldFocused(true)}
                                     onBlur={() => setIsTextFieldFocused(false)}
                                     sx={{
-                                        backgroundColor: 'white',
-                                        '&:hover': {
-                                            backgroundColor: 'white',
-                                        },
-                                        '&.Mui-focused': {
-                                            backgroundColor: 'white',
-                                        },
-                                        '& .MuiFilledInput-root': {
-                                            backgroundColor: 'white'
-                                        }
+                                    backgroundColor: 'white',
+                                    '&:hover': { backgroundColor: 'white' },
+                                    '&.Mui-focused': { backgroundColor: 'white' },
+                                    '& .MuiFilledInput-root': { backgroundColor: 'white' }
                                     }}
-                            />
-                        </div>}
+                                />
+                                </div>
+                            )}
                     </BlurredBox>
                     {imageBody && <BodyImage src={imageBodyPath} scale={4}/>}
                     <Container>
@@ -325,6 +356,8 @@ const Toggle = styled.button`
   
   max-width: 55px;   /* nunca más grande que el original */
   max-height: 55px;
+  min-width: 20px;   /* nunca más grande que el original */
+  min-height: 20px;
 
   &:hover {
     box-shadow:
@@ -348,6 +381,8 @@ const ToggleIcon = styled.img`
 
   max-width: 55px;   /* nunca más grande que el original */
   max-height: 55px;
+  min-width: 20px;   /* nunca más grande que el original */
+  min-height: 20px;
 
 `;
 
