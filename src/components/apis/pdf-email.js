@@ -400,8 +400,11 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
         //Texto Princiapal
         if (petalo.text) {
             
-            if(!petalo.isLegado){
-                // 🔹 Siempre título + texto
+            // 🚨 Nuevo control: si hay fieldText y NO es legado, no imprimo petalo.text
+            if (petalo.fieldText && !petalo.isLegado) {
+                // no escribo nada del text normal
+            } else if (!petalo.isLegado) {
+                // 🔹 Imprime título + texto solo si no es legado y no hay fieldText
                 const textToPrint = petalo.title
                     ? `${petalo.title}: ${petalo.text}`
                     : petalo.text;
@@ -422,11 +425,9 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                         y = 780;
                     }
                 }
-            }else{
-                //Solo para legado, de esta manera el titulo queda separado del texto a la hora de imprimir (SANANDO , REPARANDO, REVIVIENDO)
-                const textToPrint = petalo.text;
-
-                const wrappedText = wrapText(textToPrint, maxWidth, font, 12);
+            } else if (petalo.isLegado) {
+                // 🔹 Solo para legado
+                const wrappedText = wrapText(petalo.text, maxWidth, font, 12);
                 for (const line of wrappedText.split('\n')) {
                     const estilo = getEstiloForTextField(line, font, fontBold, 12);
                     currentPage.drawText(line, {
@@ -443,6 +444,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                     }
                 }
             }
+    
             y -= 20;
 
             // LEGADO unificado
@@ -660,7 +662,13 @@ const getListOfPetalos = () => {
                         if (p.separate) {
                             p = { ...p, textField: splitted[1] };
                         } else {
-                            p.textField = p.textField ? `${p.textField}:${splitted[1]}` : splitted[1];
+                                if (isStringInCorrecciones(historyArrayOrden, link)) {
+                                    // ⚡ Si está en corrección, reemplazo el texto anterior
+                                    p.textField = splitted[1];
+                                } else {
+                                    // Caso normal → concateno
+                                    p.textField = p.textField ? `${p.textField}:${splitted[1]}` : splitted[1];
+                                }
                         }
                     }
                 }
