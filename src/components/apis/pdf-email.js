@@ -401,10 +401,28 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
         if (petalo.text) {
             
             // 🚨 Nuevo control: si hay fieldText y NO es legado, no imprimo petalo.text
-            if (petalo.fieldText && !petalo.isLegado) {
+            if (petalo.noText && !petalo.isLegado) {
                 // no escribo nada del text normal
+            }else if (petalo.isLegado || petalo.onlyText) {
+                // 🔹 Solo para  escibir en el pdf el texto del petalo, y no seguir el formato titulo:texto (Ejemplo legado : SANANDO, REPARANDO , REVIVIENDO)
+                const wrappedText = wrapText(petalo.text, maxWidth, font, 12);
+                for (const line of wrappedText.split('\n')) {
+                    const estilo = getEstiloForTextField(line, font, fontBold, 12);
+                    currentPage.drawText(line, {
+                        x: 22,
+                        y,
+                        size: estilo.size,
+                        color: estilo.color,
+                        font: estilo.font
+                    });
+                    y -= 15;
+                    if (y <= 30) {
+                        currentPage = pdfDoc.addPage([595, 842]);
+                        y = 780;
+                    }
+                }
             } else if (!petalo.isLegado) {
-                // 🔹 Imprime título + texto solo si no es legado y no hay fieldText
+                // 🔹 Imprime título + texto solo si no es legado , es decir a todos los demas que no entren en los else if de arriba
                 const textToPrint = petalo.title
                     ? `${petalo.title}: ${petalo.text}`
                     : petalo.text;
@@ -425,25 +443,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                         y = 780;
                     }
                 }
-            } else if (petalo.isLegado) {
-                // 🔹 Solo para legado
-                const wrappedText = wrapText(petalo.text, maxWidth, font, 12);
-                for (const line of wrappedText.split('\n')) {
-                    const estilo = getEstiloForTextField(line, font, fontBold, 12);
-                    currentPage.drawText(line, {
-                        x: 22,
-                        y,
-                        size: estilo.size,
-                        color: estilo.color,
-                        font: estilo.font
-                    });
-                    y -= 15;
-                    if (y <= 30) {
-                        currentPage = pdfDoc.addPage([595, 842]);
-                        y = 780;
-                    }
-                }
-            }
+            } 
     
             y -= 20;
 
