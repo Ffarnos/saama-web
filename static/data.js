@@ -1817,47 +1817,47 @@ const petalos = [
                         linkName: "petalo-3/6/1", image: 'boton3', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
                                 linkName: "petalo-3/6/1/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 1",
-                                text: "PASADO"
+                                text: "PASADO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/1/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 2",
-                                text: "PRESENTE"
+                                text: "PRESENTE",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/1/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 3",
-                                text: "FUTURO"
+                                text: "FUTURO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/1/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 4",
-                                text: "SENTIRSE RECHAZADO"
+                                text: "SENTIRSE RECHAZADO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/1/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 5",
-                                text: "SENTIRSE ABANDONADO"
+                                text: "SENTIRSE ABANDONADO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/1/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 6",
-                                text: "HOGAR"
+                                text: "HOGAR",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/1/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 7",
-                                text: "HABITACION DE LA CASA"
+                                text: "HABITACION DE LA CASA",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/1/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 8",
-                                text: "TRABAJO"
+                                text: "TRABAJO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/1/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 9",
-                                text: "LUGAR DE TRABAJO"
+                                text: "LUGAR DE TRABAJO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/1/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 10",
-                                text: "JEFE"
+                                text: "JEFE",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/1/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "A 11",
-                                text: "COMPAÑEROS LABORALES"
+                                text: "COMPAÑEROS LABORALES",onlyText: true
                             },
                         ]
                     },
@@ -1865,47 +1865,47 @@ const petalos = [
                         linkName: "petalo-3/6/2", image: 'boton3', title: "B", index: 1, colorBorder: "yellow", subPetalos: [
                             {
                                 linkName: "petalo-3/6/2/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 1",
-                                text: "POBREZA"
+                                text: "POBREZA",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/2/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 2",
-                                text: "ABUNDANCIA"
+                                text: "ABUNDANCIA",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/2/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 3",
-                                text: "EXITO"
+                                text: "EXITO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/2/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 4",
-                                text: "FRACASO"
+                                text: "FRACASO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/2/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 5",
-                                text: "RESPONSABILIDAD"
+                                text: "RESPONSABILIDAD",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/2/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 6",
-                                text: "COMPROMISO"
+                                text: "COMPROMISO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/2/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 7",
-                                text: "GANAR DINERO"
+                                text: "GANAR DINERO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/2/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 8",
-                                text: "NO GANAR DINERO"
+                                text: "NO GANAR DINERO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/2/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 9",
-                                text: "PERDER DINERO"
+                                text: "PERDER DINERO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/2/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 10",
-                                text: "ROBAR DINERO"
+                                text: "ROBAR DINERO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/2/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "B 11",
-                                text: "SER INCULTO"
+                                text: "SER INCULTO",onlyText: true
                             },
                         ]
                     },
@@ -1913,35 +1913,35 @@ const petalos = [
                         linkName: "petalo-3/6/3", image: 'boton3', title: "C", index: 2, colorBorder: "green", subPetalos: [
                             {
                                 linkName: "petalo-3/6/3/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 1",
-                                text: "ENFERMARSE"
+                                text: "ENFERMARSE",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/3/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 2",
-                                text: "AUSENCIA DE EJERCICIO"
+                                text: "AUSENCIA DE EJERCICIO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/3/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 3",
-                                text: "MAL DESCANSO"
+                                text: "MAL DESCANSO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/3/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 4",
-                                text: "MALA ALIMENTACION"
+                                text: "MALA ALIMENTACION",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/3/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 5",
-                                text: "PRIVACIDAD"
+                                text: "PRIVACIDAD",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/3/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 6",
-                                text: "SEXO"
+                                text: "SEXO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/3/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 7",
-                                text: "ENVEJECER"
+                                text: "ENVEJECER",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/3/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 8",
-                                text: "ABUSOS"
+                                text: "ABUSOS",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/3/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 9",
@@ -1949,11 +1949,11 @@ const petalos = [
                             },
                             {
                                 linkName: "petalo-3/6/3/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 10",
-                                text: "NUEVAS TECNOLOGIA"
+                                text: "NUEVAS TECNOLOGIA",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/3/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "C 11",
-                                text: "CIRCULO DE CONOCIDOS"
+                                text: "CIRCULO DE CONOCIDOS",onlyText: true
                             },
                         ]
                     },
@@ -1961,47 +1961,47 @@ const petalos = [
                         linkName: "petalo-3/6/4", image: 'boton3', title: "D", index: 3, colorBorder: "blue", subPetalos: [
                             {
                                 linkName: "petalo-3/6/4/1", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 1",
-                                text: "SER MADRE/PADRE"
+                                text: "SER MADRE/PADRE",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/4/2", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 2",
-                                text: "NO SER MADRE/PADRE"
+                                text: "NO SER MADRE/PADRE",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/4/3", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 3",
-                                text: "SER HIJO"
+                                text: "SER HIJO",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/4/4", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 4",
-                                text: "LA FAMILIA"
+                                text: "LA FAMILIA",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/4/5", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 5",
-                                text: "LOS ABUELOS"
+                                text: "LOS ABUELOS",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/4/6", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 6",
-                                text: "MADRE"
+                                text: "MADRE",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/4/7", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 7",
-                                text: "PADRE"
+                                text: "PADRE",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/4/8", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 8",
-                                text: "HERMANOS"
+                                text: "HERMANOS",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/4/9", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 9",
-                                text: "HIJOS"
+                                text: "HIJOS",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/4/10", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 10",
-                                text: "PAREJA"
+                                text: "PAREJA",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/6/4/11", image: 'boton3', titlePage: '¿Que me bloquea?', title: "D 11",
-                                text: "AMIGOS INTIMOS"
+                                text: "AMIGOS INTIMOS",onlyText: true
                             },
                         ]
                     },
@@ -2013,11 +2013,11 @@ const petalos = [
                         linkName: "petalo-3/7/1", image: 'boton3', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
                                 linkName: "petalo-3/7/1/1", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 1",
-                                text: "No quiero crecer. Nunca se lo que quiero de verdad. No sirvo para nada. No valgo nada.",
+                                text: "No quiero crecer. Nunca se lo que quiero de verdad. No sirvo para nada. No valgo nada.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/1/2", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 2",
-                                text: "A la gente no le gusta estar conmigo. Si consigo lo que quiero perderá algo. Quien no sufre, no ama. Desear a alguien diferente a mi pareja es algo malo."
+                                text: "A la gente no le gusta estar conmigo. Si consigo lo que quiero perderá algo. Quien no sufre, no ama. Desear a alguien diferente a mi pareja es algo malo.",onlyText: true
 
                             },
                             {
@@ -2025,21 +2025,21 @@ const petalos = [
                                 text: "No se puede tener mucho dinero y ser buena persona. " +
                                     "Si sufro en la vida obtendré recompensa. " +
                                     "Las cosas hay que conseguir sin ayuda. " +
-                                    "Nadie da algo sin esperar algo a cambio."
+                                    "Nadie da algo sin esperar algo a cambio.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/1/4", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 4",
                                 text: "Hay algo más fuerte que yo que me impide avanzar. " +
                                     "La felicidad completa no existe siempre hay algo malo. " +
                                     "No soy lo suficientemente bueno. " +
-                                    "No pertenezco a este clan."
+                                    "No pertenezco a este clan.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/1/5", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 5",
                                 text: "No pertenezco a este lugar. " +
                                     "Ser un buen hijo o nieto, es aguantar a mis padres o a mis abuelos contra mis deseos. " +
                                     "Para ser buen padre/madre, tengo que sufrir por mis hijos. " +
-                                    "No merezco ser amado."
+                                    "No merezco ser amado.",onlyText: true
 
                             },
                             {
@@ -2047,7 +2047,7 @@ const petalos = [
                                 text: "Los hombres son peligrosos. " +
                                     "Las mujeres son peligrosas. " +
                                     "Mi pareja me va a dejar tarde o temprano. " +
-                                    "Tengo que conformarme con lo que tengo. "
+                                    "Tengo que conformarme con lo que tengo. ",onlyText: true
 
                             },
                             {
@@ -2055,28 +2055,28 @@ const petalos = [
                                 text: "Siempre tengo mala suerte. " +
                                     "Me cuesta mucho esfuerzo aprender. " +
                                     "Mas vale malo conocido que arriesgarse a conocer alguien diferente. " +
-                                    "La vida es dura y difícil."
+                                    "La vida es dura y difícil.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/1/8", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 8",
                                 text: "Soy egoísta si pienso en mí. " +
                                     "Me da miedo fracasar. " +
                                     "Me da miedo el éxito. " +
-                                    "No tengo fuerza de voluntad"
+                                    "No tengo fuerza de voluntad",onlyText: true    
                             },
                             {
                                 linkName: "petalo-3/7/1/9", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 9",
                                 text: "Si expreso mis emociones los demás verán que soy vulnerable. " +
                                     "Ya estoy viejo para aprender cosas nuevas. " +
                                     "Tomar decisiones es un proceso angustioso para mí. " +
-                                    "No soy digno del amor de los demás."
+                                    "No soy digno del amor de los demás.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/1/10", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 10",
                                 text: "No puedo bajar la guardia. " +
                                     "No está bien cometer errores. " +
                                     "No puedo expresar lo que siento. " +
-                                    "No puedo confiar en nadie"
+                                    "No puedo confiar en nadie",onlyText: true
                             },
                         ]
                     },
@@ -2087,70 +2087,70 @@ const petalos = [
                                 text: "Tener pareja es peligroso para mí. " +
                                     "Tener hijos es peligroso para mí. " +
                                     "Las cosas que me pasan no son culpa mía. " +
-                                    "Tengo que agradar a mi pareja como sea."
+                                    "Tengo que agradar a mi pareja como sea.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/2/2", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 2",
                                 text: "Sin un diagnóstico de lo que tengo no podrán curarme. " +
                                     "Mi problema de salud o situación es más importante que la de los demás. " +
                                     "No merezco dar/recibir amor. " +
-                                    "Es inútil querer cambiar las cosas siempre van a ser así."
+                                    "Es inútil querer cambiar las cosas siempre van a ser así.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/2/3", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 3",
                                 text: "Debo sufrir y sacrificarme por los demás. " +
                                     "No soy capaz de digerir las cosas malas que me pasan. " +
                                     "La gente solo quiere estar conmigo por algún interés malo. " +
-                                    " Si digo no, la gente no me va querer. "
+                                    " Si digo no, la gente no me va querer. ",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/2/4", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 4",
                                 text: "La solución a mis problemas es responsabilidad de otros. " +
                                     "Lo que yo quiero no importa. " +
                                     "Yo soy así no quiero cambiar. " +
-                                    "La mejor defensa es un ataque."
+                                    "La mejor defensa es un ataque.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/2/5", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 5",
                                 text: "Es inútil esforzarme no lo voy a conseguir. " +
                                     "Yo no puedo ser. " +
                                     "Yo no puedo tener. " +
-                                    "No puedo lograr las metas que me eh fijado. "
+                                    "No puedo lograr las metas que me eh fijado. ",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/2/6", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 6",
                                 text: "No tengo tiempo para nada. " +
                                     "Mi felicidad depende de los demás. " +
                                     "Es peligro relacionarse con desconocido. " +
-                                    "No soy capaz de apartarme de personas que me perjudican."
+                                    "No soy capaz de apartarme de personas que me perjudican.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/2/7", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 7",
                                 text: "La gente me usa y luego me abandona. " +
                                     "Cuanto más difícil es algo mayor es la recompensa. " +
                                     "Hago cosas por todo el mundo y nadie me lo agradece como yo merezco. " +
-                                    "Solo debo portarme bien, con quien se porta bien conmigo."
+                                    "Solo debo portarme bien, con quien se porta bien conmigo.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/2/8", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 8",
                                 text: "Dependo del que dirán y necesito aprobación. " +
                                     "La gente no cambia. " +
                                     "Hay que analizar todo muy bien antes de dar el primer paso. " +
-                                    "No hago nada bien."
+                                    "No hago nada bien.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/2/9", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 9",
                                 text: "No quiero destacar para no ser criticado. " +
                                     "No merezco vivir en la vida con armonía/plenitud. " +
                                     "No se puede ser espiritual y no meditar. " +
-                                    "Tener confianza en uno mismo te lleva a la arrogancia."
+                                    "Tener confianza en uno mismo te lleva a la arrogancia.",onlyText: true
                             },
                             {
                                 linkName: "petalo-3/7/2/10", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 10",
                                 text: "No valgo como padre/madre. " +
                                     "No soy capaz de decir mi opinión frente a un grupo de personas. " +
                                     "No soy capaz de corregir mis errores y pedir disculpas. " +
-                                    "El dinero es difícil de ganar y fácil de perder"
+                                    "El dinero es difícil de ganar y fácil de perder",onlyText: true
                             },
                         ]
                     },
@@ -4133,83 +4133,83 @@ const petalos = [
                 linkName: "petalo-5/9", image: 'boton5', title: "CONSEJOS DEL SER", text: "Un consejo es una recomendación o sugerencia que te ofrece para ayudarte a tomar decisiones o enfrentar situaciones de manera más efectiva o beneficiosa. Los consejos pueden abordar una amplia variedad de temas, desde asuntos personales y profesionales hasta cuestiones prácticas o éticas. (Se integro el siguiente consejo/s)", noNumbers: true, subPetalos: [
                     {
                         linkName: "petalo-5/9/1", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A", index: 0, colorBorder: "red", subPetalos: [
-                            { linkName: "petalo-5/9/1/1", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 1", text: "Abraza la simplicidad" },
-                            { linkName: "petalo-5/9/1/2", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 2", text: "Anímate" },
-                            { linkName: "petalo-5/9/1/3", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 3", text: "Acepta" },
-                            { linkName: "petalo-5/9/1/4", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 4", text: "Ser mas consciente" },
-                            { linkName: "petalo-5/9/1/5", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 5", text: "Fijar metas" },
-                            { linkName: "petalo-5/9/1/6", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 6", text: "Fluye" },
-                            { linkName: "petalo-5/9/1/7", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 7", text: "Hacer afirmaciones" },
-                            { linkName: "petalo-5/9/1/8", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 8", text: "El momento es ahora" },
-                            { linkName: "petalo-5/9/1/9", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 9", text: "Ama-te" },
-                            { linkName: "petalo-5/9/1/10", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 10", text: "Mas Naturaleza" },
-                            { linkName: "petalo-5/9/1/11", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 11", text: "Ordénate" },
-                            { linkName: "petalo-5/9/1/12", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 12", text: "No te preocupes" },
-                            { linkName: "petalo-5/9/1/13", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 13", text: "Medita" },
-                            { linkName: "petalo-5/9/1/14", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 14", text: "Tomate un tiempo…" },
-                            { linkName: "petalo-5/9/1/15", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 15", text: "Haz lo que te guste" },
-                            { linkName: "petalo-5/9/1/16", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 16", text: "Responsabilízate" },
-                            { linkName: "petalo-5/9/1/17", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 17", text: "Vive el aquí y ahora" },
-                            { linkName: "petalo-5/9/1/18", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 18", text: "Agradece" },
-                            { linkName: "petalo-5/9/1/19", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 19", text: "Mantén la calma" },
-                            { linkName: "petalo-5/9/1/20", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 20", text: "Ve despacio" },
-                            { linkName: "petalo-5/9/1/21", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 21", text: "Estas protegido" },
-                            { linkName: "petalo-5/9/1/22", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 22", text: "Busca tu propósito" },
-                            { linkName: "petalo-5/9/1/23", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 23", text: "Tu debilidad es tu fortaleza" },
+                            { linkName: "petalo-5/9/1/1", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 1", text: "Abraza la simplicidad",onlyText: true },
+                            { linkName: "petalo-5/9/1/2", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 2", text: "Anímate",onlyText: true },
+                            { linkName: "petalo-5/9/1/3", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 3", text: "Acepta",onlyText: true },
+                            { linkName: "petalo-5/9/1/4", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 4", text: "Ser mas consciente",onlyText: true },
+                            { linkName: "petalo-5/9/1/5", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 5", text: "Fijar metas",onlyText: true },
+                            { linkName: "petalo-5/9/1/6", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 6", text: "Fluye",onlyText: true },
+                            { linkName: "petalo-5/9/1/7", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 7", text: "Hacer afirmaciones",onlyText: true },
+                            { linkName: "petalo-5/9/1/8", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 8", text: "El momento es ahora",onlyText: true },
+                            { linkName: "petalo-5/9/1/9", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 9", text: "Ama-te",onlyText: true },
+                            { linkName: "petalo-5/9/1/10", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 10", text: "Mas Naturaleza",onlyText: true },
+                            { linkName: "petalo-5/9/1/11", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 11", text: "Ordénate",onlyText: true },
+                            { linkName: "petalo-5/9/1/12", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 12", text: "No te preocupes",onlyText: true },
+                            { linkName: "petalo-5/9/1/13", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 13", text: "Medita",onlyText: true },
+                            { linkName: "petalo-5/9/1/14", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 14", text: "Tomate un tiempo…",onlyText: true },
+                            { linkName: "petalo-5/9/1/15", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 15", text: "Haz lo que te guste",onlyText: true },
+                            { linkName: "petalo-5/9/1/16", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 16", text: "Responsabilízate",onlyText: true },
+                            { linkName: "petalo-5/9/1/17", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 17", text: "Vive el aquí y ahora",onlyText: true },
+                            { linkName: "petalo-5/9/1/18", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 18", text: "Agradece",onlyText: true },
+                            { linkName: "petalo-5/9/1/19", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 19", text: "Mantén la calma",onlyText: true },
+                            { linkName: "petalo-5/9/1/20", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 20", text: "Ve despacio",onlyText: true },
+                            { linkName: "petalo-5/9/1/21", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 21", text: "Estas protegido",onlyText: true },
+                            { linkName: "petalo-5/9/1/22", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 22", text: "Busca tu propósito",onlyText: true },
+                            { linkName: "petalo-5/9/1/23", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "A 23", text: "Tu debilidad es tu fortaleza",onlyText: true },
                         ]
                     },
                     {
                         linkName: "petalo-5/9/2", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B", index: 1, colorBorder: "green", subPetalos: [
-                            { linkName: "petalo-5/9/2/1", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 1", text: "Compréndete mas" },
-                            { linkName: "petalo-5/9/2/2", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 2", text: "Deja ir el pasado" },
-                            { linkName: "petalo-5/9/2/3", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 3", text: "Se creativo" },
-                            { linkName: "petalo-5/9/2/4", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 4", text: "Tienes que cambiar" },
-                            { linkName: "petalo-5/9/2/5", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 5", text: "Cree en ti" },
-                            { linkName: "petalo-5/9/2/6", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 6", text: "Tómalo con calma" },
-                            { linkName: "petalo-5/9/2/7", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 7", text: "Puedes lograrlo" },
-                            { linkName: "petalo-5/9/2/8", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 8", text: "No prejuzgues" },
-                            { linkName: "petalo-5/9/2/9", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 9", text: "Preserva tu salud mental" },
-                            { linkName: "petalo-5/9/2/10", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 10", text: "Se autentico" },
-                            { linkName: "petalo-5/9/2/11", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 11", text: "Tienes que decidir" },
-                            { linkName: "petalo-5/9/2/12", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 12", text: "Manten la mente abierta" },
-                            { linkName: "petalo-5/9/2/13", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 13", text: "Acepta los desafíos" },
-                            { linkName: "petalo-5/9/2/14", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 14", text: "Incorpora conocimiento" },
-                            { linkName: "petalo-5/9/2/15", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 15", text: "Se positivo" },
-                            { linkName: "petalo-5/9/2/16", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 16", text: "Busca el equilibrio" },
-                            { linkName: "petalo-5/9/2/17", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 17", text: "No es ahora" },
-                            { linkName: "petalo-5/9/2/18", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 18", text: "Busca la calma" },
-                            { linkName: "petalo-5/9/2/19", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 19", text: "Mejora tu entorno" },
-                            { linkName: "petalo-5/9/2/20", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 20", text: "Piensa/actúa según la situacion" },
-                            { linkName: "petalo-5/9/2/21", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 21", text: "Mantén una mente abierta" },
-                            { linkName: "petalo-5/9/2/22", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 22", text: "Disfruta la vida" },
-                            { linkName: "petalo-5/9/2/23", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 23", text: "Persevera y triunfaras" },
+                            { linkName: "petalo-5/9/2/1", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 1", text: "Compréndete mas",onlyText: true },
+                            { linkName: "petalo-5/9/2/2", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 2", text: "Deja ir el pasado",onlyText: true },
+                            { linkName: "petalo-5/9/2/3", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 3", text: "Se creativo",onlyText: true },
+                            { linkName: "petalo-5/9/2/4", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 4", text: "Tienes que cambiar",onlyText: true },
+                            { linkName: "petalo-5/9/2/5", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 5", text: "Cree en ti",onlyText: true },
+                            { linkName: "petalo-5/9/2/6", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 6", text: "Tómalo con calma",onlyText: true },
+                            { linkName: "petalo-5/9/2/7", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 7", text: "Puedes lograrlo",onlyText: true },
+                            { linkName: "petalo-5/9/2/8", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 8", text: "No prejuzgues",onlyText: true },
+                            { linkName: "petalo-5/9/2/9", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 9", text: "Preserva tu salud mental",onlyText: true },
+                            { linkName: "petalo-5/9/2/10", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 10", text: "Se autentico",onlyText: true },
+                            { linkName: "petalo-5/9/2/11", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 11", text: "Tienes que decidir",onlyText: true },
+                            { linkName: "petalo-5/9/2/12", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 12", text: "Manten la mente abierta",onlyText: true },
+                            { linkName: "petalo-5/9/2/13", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 13", text: "Acepta los desafíos",onlyText: true },
+                            { linkName: "petalo-5/9/2/14", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 14", text: "Incorpora conocimiento",onlyText: true },
+                            { linkName: "petalo-5/9/2/15", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 15", text: "Se positivo",onlyText: true },
+                            { linkName: "petalo-5/9/2/16", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 16", text: "Busca el equilibrio",onlyText: true },
+                            { linkName: "petalo-5/9/2/17", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 17", text: "No es ahora",onlyText: true },
+                            { linkName: "petalo-5/9/2/18", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 18", text: "Busca la calma",onlyText: true },
+                            { linkName: "petalo-5/9/2/19", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 19", text: "Mejora tu entorno",onlyText: true },
+                            { linkName: "petalo-5/9/2/20", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 20", text: "Piensa/actúa según la situacion",onlyText: true },
+                            { linkName: "petalo-5/9/2/21", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 21", text: "Mantén una mente abierta",onlyText: true },
+                            { linkName: "petalo-5/9/2/22", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 22", text: "Disfruta la vida",onlyText: true },
+                            { linkName: "petalo-5/9/2/23", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "B 23", text: "Persevera y triunfaras",onlyText: true },
                         ]
                     },
                     {
                         linkName: "petalo-5/9/3", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C", index: 2, colorBorder: "yellow", subPetalos: [
-                            { linkName: "petalo-5/9/3/1", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 1", text: "Se mas afectuoso" },
-                            { linkName: "petalo-5/9/3/2", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 2", text: "Perdona/te" },
-                            { linkName: "petalo-5/9/3/3", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 3", text: "Haz que suceda" },
-                            { linkName: "petalo-5/9/3/4", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 4", text: "Cuida tu bienestar espiritual" },
-                            { linkName: "petalo-5/9/3/5", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 5", text: "Se paciente" },
-                            { linkName: "petalo-5/9/3/6", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 6", text: "Todo ira bien" },
-                            { linkName: "petalo-5/9/3/7", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 7", text: "Debes dar lo mejor de ti" },
-                            { linkName: "petalo-5/9/3/8", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 8", text: "Mas humilde de corazón" },
-                            { linkName: "petalo-5/9/3/9", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 9", text: "Cuida tu bienestar físico" },
-                            { linkName: "petalo-5/9/3/10", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 10", text: "Se intuitivo" },
-                            { linkName: "petalo-5/9/3/11", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 11", text: "Tienes potencial" },
-                            { linkName: "petalo-5/9/3/12", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 12", text: "Toma iniciativa" },
-                            { linkName: "petalo-5/9/3/13", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 13", text: "No es adecuado" },
-                            { linkName: "petalo-5/9/3/14", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 14", text: "Domina la situación" },
-                            { linkName: "petalo-5/9/3/15", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 15", text: "Confía" },
-                            { linkName: "petalo-5/9/3/16", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 16", text: "Mira mas allá de tus ojos" },
-                            { linkName: "petalo-5/9/3/17", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 17", text: "Mas tiempo libre" },
-                            { linkName: "petalo-5/9/3/18", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 18", text: "Toma un respiro" },
-                            { linkName: "petalo-5/9/3/19", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 19", text: "Todo llega" },
-                            { linkName: "petalo-5/9/3/20", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 20", text: "Respeta" },
-                            { linkName: "petalo-5/9/3/21", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 21", text: "Piensa en ti" },
-                            { linkName: "petalo-5/9/3/22", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 22", text: "No te limites" },
-                            { linkName: "petalo-5/9/3/23", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 23", text: "Suelta" },
+                            { linkName: "petalo-5/9/3/1", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 1", text: "Se mas afectuoso",onlyText: true },
+                            { linkName: "petalo-5/9/3/2", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 2", text: "Perdona/te",onlyText: true },
+                            { linkName: "petalo-5/9/3/3", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 3", text: "Haz que suceda",onlyText: true },
+                            { linkName: "petalo-5/9/3/4", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 4", text: "Cuida tu bienestar espiritual",onlyText: true },
+                            { linkName: "petalo-5/9/3/5", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 5", text: "Se paciente",onlyText: true },
+                            { linkName: "petalo-5/9/3/6", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 6", text: "Todo ira bien",onlyText: true },
+                            { linkName: "petalo-5/9/3/7", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 7", text: "Debes dar lo mejor de ti",onlyText: true },
+                            { linkName: "petalo-5/9/3/8", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 8", text: "Mas humilde de corazón",onlyText: true },
+                            { linkName: "petalo-5/9/3/9", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 9", text: "Cuida tu bienestar físico",onlyText: true },
+                            { linkName: "petalo-5/9/3/10", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 10", text: "Se intuitivo",onlyText: true },
+                            { linkName: "petalo-5/9/3/11", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 11", text: "Tienes potencial",onlyText: true },
+                            { linkName: "petalo-5/9/3/12", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 12", text: "Toma iniciativa",onlyText: true },
+                            { linkName: "petalo-5/9/3/13", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 13", text: "No es adecuado",onlyText: true },
+                            { linkName: "petalo-5/9/3/14", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 14", text: "Domina la situación",onlyText: true },
+                            { linkName: "petalo-5/9/3/15", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 15", text: "Confía",onlyText: true },
+                            { linkName: "petalo-5/9/3/16", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 16", text: "Mira mas allá de tus ojos",onlyText: true },
+                            { linkName: "petalo-5/9/3/17", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 17", text: "Mas tiempo libre",onlyText: true },
+                            { linkName: "petalo-5/9/3/18", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 18", text: "Toma un respiro",onlyText: true },
+                            { linkName: "petalo-5/9/3/19", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 19", text: "Todo llega",onlyText: true },
+                            { linkName: "petalo-5/9/3/20", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 20", text: "Respeta",onlyText: true },
+                            { linkName: "petalo-5/9/3/21", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 21", text: "Piensa en ti",onlyText: true },
+                            { linkName: "petalo-5/9/3/22", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 22", text: "No te limites",onlyText: true },
+                            { linkName: "petalo-5/9/3/23", image: 'boton5', titlePage: "CONSEJOS DEL SER", title: "C 23", text: "Suelta",onlyText: true },
                         ]
                     },
                 ]
