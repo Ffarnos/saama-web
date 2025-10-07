@@ -405,6 +405,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                 // no escribo nada del text normal
             }else if (petalo.isLegado || petalo.onlyText) {
                 // 🔹 Solo para  escibir en el pdf el texto del petalo, y no seguir el formato titulo:texto (Ejemplo legado : SANANDO, REPARANDO , REVIVIENDO)
+                y-= 15;
                 const wrappedText = wrapText(petalo.text, maxWidth, font, 12);
                 for (const line of wrappedText.split('\n')) {
                     const estilo = getEstiloForTextField(line, font, fontBold, 12);
@@ -415,7 +416,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                         color: estilo.color,
                         font: estilo.font
                     });
-                    y -= 15;
+                    y -= 35;
                     if (y <= 30) {
                         currentPage = pdfDoc.addPage([595, 842]);
                         y = 780;
@@ -423,11 +424,22 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                 }
             } else if (!petalo.isLegado) {
                 // 🔹 Imprime título + texto solo si no es legado , es decir a todos los demas que no entren en los else if de arriba
-                const textToPrint = petalo.title
-                    ? `${petalo.title}: ${petalo.text}`
-                    : petalo.text;
+                y-= 15;
+                
+                // 🔸 Dibuja el título en bold (14)
+                const titleText = `${petalo.title}:`;
+               
+                currentPage.drawText(titleText, {
+                    x: 22,
+                    y,
+                    size: 12,
+                    color: rgb(0, 0, 0),
+                    font: fontBold
+                });
 
-                const wrappedText = wrapText(textToPrint, maxWidth, font, 12);
+                y -= 18;
+                // 🔸Abajo del titulo dibuja el texto normal (12) 
+                const wrappedText = wrapText(petalo.text, maxWidth, font, 12);
                 for (const line of wrappedText.split('\n')) {
                     const estilo = getEstiloForTextField(line, font, fontBold, 12);
                     currentPage.drawText(line, {
@@ -445,14 +457,14 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                 }
             } 
     
-            y -= 20;
+            y -= 1;
 
             // LEGADO unificado
             if (petalo.isLegado && petalo.textField) {
                 const contenido = petalo.textField;
                 currentPage.drawText("HEREDADO DE:", { x: 22, y, size: 13, font: fontBold, color: rgb(0, 0, 0) });
                 currentPage.drawText(contenido, { x: 127, y, size: 12, font, color: rgb(0, 0, 0) });
-                y -= 20;
+                y -= 30;
             }
 
             // Imagen
@@ -483,21 +495,52 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
         } else if (petalo.title) {
             const estilo = getEstiloForTextField(petalo.title, font, fontBold, 12);
             currentPage.drawText(petalo.title, { x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font });
-            y -= 20;
+            y -= 70;
         }
-        y -= 20;
+        y -= 0;
     }
 
     // TEXTFIELD FINAL fuera de LEGADO
     if (petalo.textField && !petalo.isLegado) {
-        const wrappedTextField = wrapText(petalo.textField, maxWidth, font, 12);
-        for (const line of wrappedTextField.split('\n')) {
-            currentPage.drawText("- " + line, { x: 22, y, size: 12, color: rgb(0, 0, 0), font });
-            y -= 15;
-            if (y <= 30) { currentPage = pdfDoc.addPage([595, 842]); y = 780; }
+            // Detectar si es fuente 2 (o cualquier fuente que quieras compactar)
+        const esFuente2 = petalo.linkName?.startsWith("petalo-2/1");
+
+        // 🔹 Divide el texto por saltos de línea (manual o por \n o :)
+        y -= 10;
+        const lines = petalo.textField
+            .split(/\n|:/)
+            .map(l => l.trim())
+            .filter(Boolean);
+
+        for (const line of lines) {
+            const bullet = `- ${line}`;
+            const wrappedTextField = wrapText(bullet, maxWidth, font, 12);
+
+            for (const subLine of wrappedTextField.split('\n')) {
+                currentPage.drawText(subLine, {
+                    x: 22,
+                    y,
+                    size: 12,
+                    color: rgb(0, 0, 0),
+                    font
+                });
+                y -= 15;
+                if (y <= 30) {
+                    currentPage = pdfDoc.addPage([595, 842]);
+                    y = 780;
+                }
+            }
+
+            // 🔸 Espacio adicional entre ítems solo si NO es fuente 2
+            if (!esFuente2) y -= 5;
+
+            y -= 15
         }
-        y -= 30;
+
+      
     }
+     
+    
 
     return { y, currentPage };
 }
@@ -660,13 +703,15 @@ const getListOfPetalos = () => {
 
                     if (splitted.length > 1) {
                         if (p.separate) {
+                            // reemplaza directamente
                             p = { ...p, textField: splitted[1] };
-                        } else {
+                        }
+                        else {
                                 if (isStringInCorrecciones(historyArrayOrden, link)) {
                                     // ⚡ Si está en corrección, reemplazo el texto anterior
                                     p.textField = splitted[1];
                                 } else {
-                                    // Caso normal → concateno
+                                    // comportamiento por defecto: concatenar con “:”
                                     p.textField = p.textField ? `${p.textField}:${splitted[1]}` : splitted[1];
                                 }
                         }

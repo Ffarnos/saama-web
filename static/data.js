@@ -134,7 +134,7 @@ const petalos = [
 
             {
                 linkName: "petalo-1/4", image: 'boton1', title: "Limpiar nucleo del ser", fieldText: true, useText: true, useDesc: true,
-                text: "Limpiamos la información genética negativa que perjudica a las células, las cuales bloqueaban el libre flujo de energía. Para lograr esto se borraron las siguientes emociones:"
+                text: "Limpiamos la información genética negativa que perjudica a las células, las cuales bloqueaban el libre flujo de energía. Para lograr esto se borraron las siguientes emociones:",
             },
             {
                 linkName: "petalo-1/5", image: 'boton1', title: "Respetar/Aceptar", useText: true, useDesc: true,
@@ -345,47 +345,47 @@ const petalos = [
                 linkName: "petalo-2/2", image: 'boton2', title: "Bloqueos Emocionales A", subPetalos: [
                     {
                         linkName: "petalo-2/2/1", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en cuerpo emocional",
-                        text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano emocional…",noText: true
+                        text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano emocional…"
                     },
                     {
                         linkName: "petalo-2/2/2", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo mental",
-                        text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano mental…",noText: true
+                        text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano mental…"
                     },
                     {
                         linkName: "petalo-2/2/3", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo físico",
-                        text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano físico, ejemplos pueden ser músculos, huesos, órganos, glándulas, etc.",noText: true
+                        text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano físico, ejemplos pueden ser músculos, huesos, órganos, glándulas, etc."
                     },
                     {
                         linkName: "petalo-2/2/4", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas cuerpo espiritual",
-                        text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano espiritual…",noText: true
+                        text: "Se eliminaron las siguientes emociones que estaban impidiendo circular el libre flujo de energía de nuestro plano espiritual…"
                     },
                     {
                         linkName: "petalo-2/2/5", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones atrapadas en los ancestros",
-                        text: "Se eliminaron las siguientes emociones que sentimos en contacto reciente con nuestro clan familiar.",noText: true
+                        text: "Se eliminaron las siguientes emociones que sentimos en contacto reciente con nuestro clan familiar."
                     },
                     {
                         linkName: "petalo-2/2/6", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones en el ADN",
-                        text: "Se eliminaron las siguientes emociones las cuales son el resultado de una interacción compleja entre factores genéticos, cognitivos, sociales y ambientales. Estas emociones se encuentran por experiencias vividas en nuestro clan familiar, situaciones no resueltas, y con repeticiones en las diferentes generaciones.",noText: true
+                        text: "Se eliminaron las siguientes emociones las cuales son el resultado de una interacción compleja entre factores genéticos, cognitivos, sociales y ambientales. Estas emociones se encuentran por experiencias vividas en nuestro clan familiar, situaciones no resueltas, y con repeticiones en las diferentes generaciones."
                     },
                     {
                         linkName: "petalo-2/2/7", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones obstruidas de otras vidas",
-                        text: "Se eliminaron las siguientes emociones bloqueadas en otras vidas que se despiertan en este presente por situaciones no resueltas de vidas pasadas.",noText: true
+                        text: "Se eliminaron las siguientes emociones bloqueadas en otras vidas que se despiertan en este presente por situaciones no resueltas de vidas pasadas."
                     },
                     {
                         linkName: "petalo-2/2/8", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones dependientes del corazón",
-                        text: "Se eliminaron las siguientes emociones que el subconsciente vuelve a depender ante la primera situación de estrés, sin poder lograr deshacerse de ellas.",noText: true
+                        text: "Se eliminaron las siguientes emociones que el subconsciente vuelve a depender ante la primera situación de estrés, sin poder lograr deshacerse de ellas."
                     },
                     {
                         linkName: "petalo-2/2/9", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones bloqueadas recientemente",
-                        text: "Se eliminaron las siguientes emociones vividas ante un evento reciente.",noText: true
+                        text: "Se eliminaron las siguientes emociones vividas ante un evento reciente."
                     },
                     {
                         linkName: "petalo-2/2/10", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Barrera oculta de emociones",
-                        text: "Esta es una barrera de emociones la cual la persona no reconoce ni la cree en su existencia, al ser una barrera es muy fuerte su bloqueo. (Se anularon las siguientes emociones)",noText: true
+                        text: "Esta es una barrera de emociones la cual la persona no reconoce ni la cree en su existencia, al ser una barrera es muy fuerte su bloqueo. (Se anularon las siguientes emociones)"
                     },
                     {
                         linkName: "petalo-2/2/11", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Emociones absorbidas por resonancia",
-                        text: "Aquí se borraron los estados negativos o emociones que absorbemos de las personas que están en constante contacto con nosotros.",noText: true
+                        text: "Aquí se borraron los estados negativos o emociones que absorbemos de las personas que están en constante contacto con nosotros."
                     },
                     {
                         linkName: "petalo-2/2/12", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta a una creencia",
@@ -393,7 +393,7 @@ const petalos = [
                     },
                     {
                         linkName: "petalo-2/2/13", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta a un recuerdo",
-                        text: "Anulamos los estados que aparecen de un recuerdo traumático doloroso no expresado. (Se anulo la respuesta a ese recuerdo)",noText: true
+                        text: "Anulamos los estados que aparecen de un recuerdo traumático doloroso no expresado. (Se anulo la respuesta a ese recuerdo)"
                     },
                     {
                         linkName: "petalo-2/2/14", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un pensamiento",
@@ -401,11 +401,11 @@ const petalos = [
                     },
                     {
                         linkName: "petalo-2/2/15", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales A', title: "Respuesta emocional a un sentimiento",
-                        text: "Es la causa/efecto ante un sentimiento repetitivo negativo. (Se anulo la siguiente respuesta emocional)",noText: true
+                        text: "Es la causa/efecto ante un sentimiento repetitivo negativo. (Se anulo la siguiente respuesta emocional)"
                     },
                     {
                         linkName: "petalo-2/2/16", image: 'boton2', fieldText: true, useText: true, titlePage: 'Bloqueos Emocionales A', title: "Suceso traumático",
-                        text: "Situación vivida que nos generó un alto grado de estrés, generando un colapso emocional. (Se anulo la información en relación al suceso traumático)",noText: true
+                        text: "Situación vivida que nos generó un alto grado de estrés, generando un colapso emocional. (Se anulo la información en relación al suceso traumático)"
                     }
                 ]
             },
@@ -413,19 +413,19 @@ const petalos = [
                 linkName: "petalo-2/3", image: 'boton2', title: "Bloqueos Emocionales B", subPetalos: [
                     { linkName: "petalo-2/3/1", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Falta de interés por la vida", text: "Incapacidad para experimentar placer, la pérdida de interés o satisfacción en actividades de la vida. Se considera una falta de reactividad a los estímulos habitualmente placenteros. (Anulado)" },
                     { linkName: "petalo-2/3/2", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Temor al bienestar", text: "Es el resultado de traumas, tragedias o experiencias negativas que han alterado la forma en que una persona se desenvuelve en la vida, lo que desencadena un inexplicable temor a estar bien. Personas que no se permiten vivir en un estado de armonía y bienestar. (Anulado)" },
-                    { linkName: "petalo-2/3/3", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "Imagen grabada en la mente", text: "Es el concepto de memoria fotográfica, es el recuerdo de una situación negativa determinada o una imagen concreta con todo lujo de detalles, generando una reacción negativa e impidiendo fluir fácilmente en algún área o situación de nuestra vida. (Anulado)",noText: true },
-                    { linkName: "petalo-2/3/4", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "Anular muro del pasado", text: "Aquí se anulan las emociones pasadas que nos han marcado profundamente, simbolizadas por un imponente muro, asociadas con una situación que al liberarla dejamos libre nuestro futuro para seguir adelante sin la opresión del pasado. (Se anularon las siguientes emociones del muro)",noText: true },
+                    { linkName: "petalo-2/3/3", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "Imagen grabada en la mente", text: "Es el concepto de memoria fotográfica, es el recuerdo de una situación negativa determinada o una imagen concreta con todo lujo de detalles, generando una reacción negativa e impidiendo fluir fácilmente en algún área o situación de nuestra vida. (Anulado)"},
+                    { linkName: "petalo-2/3/4", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "Anular muro del pasado", text: "Aquí se anulan las emociones pasadas que nos han marcado profundamente, simbolizadas por un imponente muro, asociadas con una situación que al liberarla dejamos libre nuestro futuro para seguir adelante sin la opresión del pasado. (Se anularon las siguientes emociones del muro)"},
                     { linkName: "petalo-2/3/5", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Influencia hipnótica", text: "Proceso psicológico mediante el cual personas, medios de comunicación, libros y toda clase de entes que manipulen conceptos y sean capaces de emitir información puedan guiar o dirigir los pensamientos, emociones, sentimientos o comportamientos y estados físicos de otras personas. Ejemplo: televisión, redes sociales, imágenes sugestivas, etc. (Anulado)" },
                     { linkName: "petalo-2/3/6", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "Ataque emocional", text: "Un 'atentado emocional' es una acción o comportamiento que causa daño emocional o psicológico a una persona. Se refiere a situaciones en las que alguien manipula, insulta, humilla o lastima emocionalmente a otra persona con la intención de controlarla, hacerla sentir mal. (Se anularon siguientes emociones y correcciones que se asocian al ATAQUE EMOCIONAL)",noText: true },
-                    { linkName: "petalo-2/3/7", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales B', title: "Disfruto mi estado emocional (-)", text: "Comportamiento o actitud negativa en la que alguien se siente satisfecho o complacido al mantener una actitud o comportamiento al cual termina siendo dañino, perjudicial para sí mismo. (se anuló el siguiente estado emocional)",noText: true },
+                    { linkName: "petalo-2/3/7", image: 'boton2', fieldText: true, useText: true, useDesc: true, titlePage: 'Bloqueos Emocionales B', title: "Disfruto mi estado emocional (-)", text: "Comportamiento o actitud negativa en la que alguien se siente satisfecho o complacido al mantener una actitud o comportamiento al cual termina siendo dañino, perjudicial para sí mismo. (se anuló el siguiente estado emocional)"},
                     { linkName: "petalo-2/3/8", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Busco la atención", text: "Es el concepto de captar la atención mediante un comportamiento hacia sus semejantes, logrando un beneficio a corto o largo plazo, algunos ejemplos pueden ser… (Comportamiento disruptivo, búsqueda de conflictos, manipulación emocional, comportamiento autodestructivo, actitudes negativas constantes). (Anulado)" },
                     { linkName: "petalo-2/3/9", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "No soy merecedor de…", text: "El concepto de 'no soy merecedor de' se refiere a la creencia o sentimiento de una persona de que no es digna o no se merece algo en particular. Puede manifestarse en diversos aspectos de la vida, como las relaciones personales, el éxito profesional, la felicidad o el amor propio. El sentimiento de 'no soy merecedor de' puede ser limitante y puede llevar a la persona a sabotear sus propias oportunidades de crecimiento. (Anulado)",noText: true },
-                    { linkName: "petalo-2/3/10", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "No deseo ser como…", text: "El concepto de 'no deseo ser como' se refiere al rechazo hacia ciertos aspectos, comportamientos o características observadas en otras personas. Es el deseo de evitar adoptar esos mismos patrones y buscar una identidad propia separada de esas influencias negativas. Ejemplo… madre, padre, hermano… etc. (Anulado)",noText: true },
-                    { linkName: "petalo-2/3/11", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "Anhelo ser como…", text: "Se manifiesta en repetir de manera inconsciente, comportamientos, y actitudes involuntarias de otras personas por lo general de nuestros ancestros. (Anulado)",noText: true },
+                    { linkName: "petalo-2/3/10", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "No deseo ser como…", text: "El concepto de 'no deseo ser como' se refiere al rechazo hacia ciertos aspectos, comportamientos o características observadas en otras personas. Es el deseo de evitar adoptar esos mismos patrones y buscar una identidad propia separada de esas influencias negativas. Ejemplo… madre, padre, hermano… etc. (Anulado)"},
+                    { linkName: "petalo-2/3/11", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "Anhelo ser como…", text: "Se manifiesta en repetir de manera inconsciente, comportamientos, y actitudes involuntarias de otras personas por lo general de nuestros ancestros. (Anulado)"},
                     { linkName: "petalo-2/3/12", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Autoboicot", text: "Es la acción de boicotear o sabotear inconscientemente los propios esfuerzos, metas o éxito. Esta dinámica puede manifestarse en diferentes aspectos de la vida, como relaciones personales, carrera profesional, finanzas personales, salud mental, etc. La persona se convierte en su propio obstáculo para alcanzar sus objetivos. (Anulado)" },
                     { linkName: "petalo-2/3/13", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Obtengo un beneficio a cambio", text: "La causa-efecto de este punto significa que la persona busca obtener un beneficio de una situación en particular, aunque esto le termine afectando de algún modo u otro, los ejemplos pueden ser, comportamientos emocionales negativos, patrones mentales, o en algunos casos dolores, enfermedades, etc. (ejemplo, persona que enferma para obtener la atención de su pareja, y así retenerlo). (Anulado)" },
                     { linkName: "petalo-2/3/14", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Me han estructurado así", text: "Todo lo que hemos absorbido desde los 3 años hasta los 7 tiene que ver con nuestra estructura, la educación de nuestros padres, el colegio donde fuimos y la sociedad en general son los estructurantes que nos conformaron hasta el día de hoy… aquí buscamos romper con todo lo que nos limita… (Anulado)" },
-                    { linkName: "petalo-2/3/15", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "Para satisfacer a alguien", text: "Comportamiento obsesivo que nos lleva a hacer cosas para mantener conforme a una persona, perdiendo noción de que nuestra vida se nos pasa queriendo complacer a otros… los ejemplos pueden de hijo a padres, parejas, jefes, amigos, etc. (Anulado)",noText: true },
+                    { linkName: "petalo-2/3/15", image: 'boton2', useText: true, useDesc: true, fieldText: true, titlePage: 'Bloqueos Emocionales B', title: "Para satisfacer a alguien", text: "Comportamiento obsesivo que nos lleva a hacer cosas para mantener conforme a una persona, perdiendo noción de que nuestra vida se nos pasa queriendo complacer a otros… los ejemplos pueden de hijo a padres, parejas, jefes, amigos, etc. (Anulado)"},
                     { linkName: "petalo-2/3/16", image: 'boton2', titlePage: 'Bloqueos Emocionales B', title: "Lo hago por costumbre", text: "Es común que las personas adopten comportamientos arraigados por hábitos, ya sean heredados o no, sin cuestionarlos ni considerar cambiarlos. Estos patrones se mantienen en su rutina diaria y pueden perdurar toda su vida. Sin embargo, es posible liberarse de estos hábitos negativos y abrirse a nuevas posibilidades que brinden mayores beneficios y satisfacción. (Anulado)" }
                 ]
             },
