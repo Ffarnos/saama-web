@@ -361,7 +361,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
 
             const estilo = getEstiloForTextField(petalo.title, font, fontBold, 16);
             currentPage.drawText(petalo.title, { x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font });
-            y -= 26; // gap tras título de subPetalos
+            y -= 28; // gap tras título de subPetalos
         }
 
         if (petalo.text) {
@@ -372,7 +372,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                 y -= 15;// interlineado normal
                 if (y <= 30) { currentPage = pdfDoc.addPage([595, 842]); y = 780; }
             }
-            y -= 10; // 👈 antes era 30: espacio entre párrafos en subPetalos
+            y -= 12; // 👈 antes era 30: espacio entre párrafos en subPetalos
         }
     } else if (petalo.title === "CORRECCIONOPEN" || petalo.title === "CORRECCIONCLOSE") {
         // 🔹 Corrección con fuente 3
@@ -406,7 +406,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
             }else if (petalo.isLegado || petalo.onlyText) {
                 // 🔹 Solo para  escibir en el pdf el texto del petalo, y no seguir el formato titulo:texto (Ejemplo legado : SANANDO, REPARANDO , REVIVIENDO)
                 
-                y-= 10;// pequeña separación previa
+                y-= 12;// pequeña separación previa
                 const wrappedText = wrapText(petalo.text, maxWidth, font, 12);
                 for (const line of wrappedText.split('\n')) {
                     const estilo = getEstiloForTextField(line, font, fontBold, 12);
@@ -417,7 +417,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                         color: estilo.color,
                         font: estilo.font
                     });
-                    y -= 15;// 👈 antes: 35 por línea
+                    y -= 16;// 👈 antes: 35 por línea
                     if (y <= 30) {
                         currentPage = pdfDoc.addPage([595, 842]);
                         y = 780;
@@ -425,7 +425,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                 }
             } else if (!petalo.isLegado) {
                 // 🔹 Imprime título + texto solo si no es legado , es decir a todos los demas que no entren en los else if de arriba
-                y-= 15;
+                y-= 16;
                 
                 // 🔸 Dibuja el título en bold (14)
                 const titleText = `${petalo.title}:`;
@@ -438,7 +438,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                     font: fontBold
                 });
 
-                y -= 18;// gap entre título y párrafo
+                y -= 20;// gap entre título y párrafo
                 // 🔸Abajo del titulo dibuja el texto normal (12) 
                 const wrappedText = wrapText(petalo.text, maxWidth, font, 12);
                 for (const line of wrappedText.split('\n')) {
@@ -450,7 +450,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                         color: estilo.color,
                         font: estilo.font
                     });
-                    y -= 15;
+                    y -= 16;
                     if (y <= 30) {
                         currentPage = pdfDoc.addPage([595, 842]);
                         y = 780;
@@ -463,13 +463,13 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
             // LEGADO unificado
             if (petalo.isLegado && petalo.textField) {
                 
-                y-=14;
+                y-=16;
 
                 const contenido = petalo.textField;
                 currentPage.drawText("HEREDADO DE:", { x: 22, y, size: 13, font: fontBold, color: rgb(0, 0, 0) });
                 currentPage.drawText(contenido, { x: 127, y, size: 12, font, color: rgb(0, 0, 0) });
                 
-                y -= 30;
+                y -= 32;
             }
 
             // Imagen
@@ -503,7 +503,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
             y -= 18; // 👈 antes: 70
         }
         
-        y-=10;
+        y-=12;
     }
 
     // TEXTFIELD FINAL fuera de LEGADO
