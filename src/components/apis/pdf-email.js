@@ -405,7 +405,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                 // no escribo nada del text normal
             }else if (petalo.isLegado || petalo.onlyText) {
                 // 🔹 Solo para  escibir en el pdf el texto del petalo, y no seguir el formato titulo:texto (Ejemplo legado : SANANDO, REPARANDO , REVIVIENDO)
-                y-= 15;
+                y-= 10;
                 const wrappedText = wrapText(petalo.text, maxWidth, font, 12);
                 for (const line of wrappedText.split('\n')) {
                     const estilo = getEstiloForTextField(line, font, fontBold, 12);
@@ -497,7 +497,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
             currentPage.drawText(petalo.title, { x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font });
             y -= 70;
         }
-        y -= 0;
+        y -= 10;
     }
 
     // TEXTFIELD FINAL fuera de LEGADO
