@@ -361,7 +361,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
 
             const estilo = getEstiloForTextField(petalo.title, font, fontBold, 16);
             currentPage.drawText(petalo.title, { x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font });
-            y -= 20;
+            y -= 26; // gap tras título de subPetalos
         }
 
         if (petalo.text) {
@@ -369,10 +369,10 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
             for (const line of wrappedText.split('\n')) {
                 const estilo = getEstiloForTextField(line, font, fontBold, 12);
                 currentPage.drawText(line, { x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font });
-                y -= 15;
+                y -= 15;// interlineado normal
                 if (y <= 30) { currentPage = pdfDoc.addPage([595, 842]); y = 780; }
             }
-            y -= 30;
+            y -= 10; // 👈 antes era 30: espacio entre párrafos en subPetalos
         }
     } else if (petalo.title === "CORRECCIONOPEN" || petalo.title === "CORRECCIONCLOSE") {
         // 🔹 Corrección con fuente 3
@@ -405,7 +405,8 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                 // no escribo nada del text normal
             }else if (petalo.isLegado || petalo.onlyText) {
                 // 🔹 Solo para  escibir en el pdf el texto del petalo, y no seguir el formato titulo:texto (Ejemplo legado : SANANDO, REPARANDO , REVIVIENDO)
-                y-= 10;
+                
+                y-= 10;// pequeña separación previa
                 const wrappedText = wrapText(petalo.text, maxWidth, font, 12);
                 for (const line of wrappedText.split('\n')) {
                     const estilo = getEstiloForTextField(line, font, fontBold, 12);
@@ -416,7 +417,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                         color: estilo.color,
                         font: estilo.font
                     });
-                    y -= 35;
+                    y -= 15;// 👈 antes: 35 por línea
                     if (y <= 30) {
                         currentPage = pdfDoc.addPage([595, 842]);
                         y = 780;
@@ -437,7 +438,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                     font: fontBold
                 });
 
-                y -= 18;
+                y -= 18;// gap entre título y párrafo
                 // 🔸Abajo del titulo dibuja el texto normal (12) 
                 const wrappedText = wrapText(petalo.text, maxWidth, font, 12);
                 for (const line of wrappedText.split('\n')) {
@@ -461,9 +462,13 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
 
             // LEGADO unificado
             if (petalo.isLegado && petalo.textField) {
+                
+                y-=14;
+
                 const contenido = petalo.textField;
                 currentPage.drawText("HEREDADO DE:", { x: 22, y, size: 13, font: fontBold, color: rgb(0, 0, 0) });
                 currentPage.drawText(contenido, { x: 127, y, size: 12, font, color: rgb(0, 0, 0) });
+                
                 y -= 30;
             }
 
@@ -495,9 +500,10 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
         } else if (petalo.title) {
             const estilo = getEstiloForTextField(petalo.title, font, fontBold, 12);
             currentPage.drawText(petalo.title, { x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font });
-            y -= 70;
+            y -= 18; // 👈 antes: 70
         }
-        y -= 10;
+        
+        y-=10;
     }
 
     // TEXTFIELD FINAL fuera de LEGADO
@@ -505,8 +511,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
             // Detectar si es fuente 2 (o cualquier fuente que quieras compactar)
         const esFuente2 = petalo.linkName?.startsWith("petalo-2/1");
 
-        // 🔹 Divide el texto por saltos de línea (manual o por \n o :)
-        y -= 10;
+
         const lines = petalo.textField
             .split(/\n|:/)
             .map(l => l.trim())
@@ -524,19 +529,18 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                     color: rgb(0, 0, 0),
                     font
                 });
-                y -= 15;
+                y -= 12;
                 if (y <= 30) {
                     currentPage = pdfDoc.addPage([595, 842]);
                     y = 780;
                 }
             }
 
-            // 🔸 Espacio adicional entre ítems solo si NO es fuente 2
-            if (!esFuente2) y -= 5;
-
-            y -= 15
+            y -= (esFuente2 ? 1 : 2); // espacio entre bullets (más compacto si es fuente 2)
         }
 
+        // margen inferior del bloque de bullets (separación del próximo título, ej. "Miedos")
+        y -= 18;  // <-- NUEVO
       
     }
      
