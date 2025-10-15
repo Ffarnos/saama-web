@@ -4005,7 +4005,7 @@ const petalos = [
             },
             {
                 linkName: "petalo-5/7", image: 'boton5', title: "VIDAS PASADAS", text: "El concepto de vidas pasadas nos explica que después de la muerte, el alma o espíritu de una persona puede renacer en un nuevo cuerpo humano, y que las experiencias, lecciones y aprendizajes acumulados en vidas anteriores influyen en la vida actual, la reencarnación se considera un proceso continuo de evolución espiritual, donde el individuo tiene la oportunidad de aprender y crecer, lo importante de esta corrección es liberar la energía que se bloqueó de esa vida pasada, y devolverle su flujo energético natural para impedir los mismos patrones que la generaron. (Corregido)", noNumbers: true, subPetalos: [
-                    { linkName: "petalo-5/7/1", image: 'boton5', titlePage: "RECREACION DE VIDAS PASADAS", title: "A", text: "AÑO | AC-DC | SEXO | EDAD", useText: true, separate: true, index: 0, colorBorder: "red", fieldText: true },
+                    { linkName: "petalo-5/7/1", image: 'boton5', titlePage: "RECREACION DE VIDAS PASADAS", title: "A", text: "AÑO | AC-DC | SEXO | EDAD", useText: true, separate: true, index: 0, colorBorder: "red", fieldText: true,onlyTitleP: true},
                     {
                         linkName: "petalo-5/7/2", image: 'boton5', titlePage: "INDIVIDUOS INVOLUCRADOS", index: 1, colorBorder: "red", title: "B", subPetalos: [
                             { linkName: "petalo-5/7/2/1", image: 'boton5', titlePage: "VIDAS PASADAS", title: "INDIVIDUOS INVOLUCRADOS", text: "PADRE" },
@@ -4033,13 +4033,13 @@ const petalos = [
 
                     {
                         linkName: "petalo-5/7/3", image: 'boton5', titlePage: "¿QUE SUCEDIO?", index: 2, colorBorder: "green", title: "C", subPetalos: [
-                            { linkName: "petalo-5/7/3/1", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Abandono/Traicion" },
-                            { linkName: "petalo-5/7/3/2", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Ruptura/Separación" },
+                            { linkName: "petalo-5/7/3/1", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Abandono/Traicion",onlyT: true},
+                            { linkName: "petalo-5/7/3/2", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Ruptura/Separación", onlyT: true },
                             { linkName: "petalo-5/7/3/3", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Mentira" },
-                            { linkName: "petalo-5/7/3/4", fieldText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Venganza/Critica" },
+                            { linkName: "petalo-5/7/3/4", fieldText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Venganza/Critica",onlyT:true },
                             { linkName: "petalo-5/7/3/5", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Fanatismo" },
                             { linkName: "petalo-5/7/3/6", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Humillación" },
-                            { linkName: "petalo-5/7/3/7", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Robo/Estafa" },
+                            { linkName: "petalo-5/7/3/7", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Robo/Estafa",onlyT:true },
                             { linkName: "petalo-5/7/3/8", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Manipulación" },
                             { linkName: "petalo-5/7/3/9", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Perdida económica" },
                             { linkName: "petalo-5/7/3/10", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Muerte de ser querido" },
@@ -4047,13 +4047,13 @@ const petalos = [
                             { linkName: "petalo-5/7/3/12", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Indigencia" },
                             { linkName: "petalo-5/7/3/13", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Accidente" },
                             { linkName: "petalo-5/7/3/14", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Lesión física grave" },
-                            { linkName: "petalo-5/7/3/15", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Drogas/Alcohol" },
-                            { linkName: "petalo-5/7/3/16", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Acto violento/Asesinato" },
+                            { linkName: "petalo-5/7/3/15", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Drogas/Alcohol",onlyT: true },
+                            { linkName: "petalo-5/7/3/16", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Acto violento/Asesinato",onlyT: true },
                             { linkName: "petalo-5/7/3/17", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Acto suicida" },
-                            { linkName: "petalo-5/7/3/18", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Abuso sexual/Prostitución" },
+                            { linkName: "petalo-5/7/3/18", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Abuso sexual/Prostitución",onlyT: true },
                             { linkName: "petalo-5/7/3/19", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Sadismo" },
                             { linkName: "petalo-5/7/3/20", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Rechazo" },
-                            { linkName: "petalo-5/7/3/21", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Pánico/Locura" },
+                            { linkName: "petalo-5/7/3/21", fieldText: true, useText: true, image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Pánico/Locura",onlyT: true },
                             { linkName: "petalo-5/7/3/22", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Entrada en coma" },
                             { linkName: "petalo-5/7/3/23", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Ceguera" },
                             { linkName: "petalo-5/7/3/24", image: 'boton5', titlePage: "VIDAS PASADAS", title: "¿QUE SUCEDIO?", text: "Enfermedad" },

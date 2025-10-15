@@ -403,7 +403,32 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
             // 🚨 Nuevo control: si hay fieldText y NO es legado, no imprimo petalo.text
             if (petalo.noText && !petalo.isLegado) {
                 // no escribo nada del text normal
-            }else if (petalo.isLegado || petalo.onlyText) {
+            }else if(petalo.onlyTitleP || petalo.onlyT ){
+                // 🔹 Imprime SOLO títuloPage - title    ¡¡Especialmente en VIDAS PASADAS!!
+                y-= 16;
+                
+                //Va let porque es una variable no una constante
+                let titleText = '';
+               
+                // Asigno a la variable titlePage - title
+                if(petalo.onlyTitleP){
+                    titleText = `${petalo.titlePage}:`;
+                }else{
+                    titleText = `${petalo.title}:`;
+                }
+                
+                // 🔸 Dibuja el título en bold (12)
+                currentPage.drawText(titleText, {
+                    x: 22,
+                    y,
+                    size: 12,
+                    color: rgb(0, 0, 0),
+                    font: fontBold
+                });
+
+                y -= 10;// gap entre título y párrafo
+            }
+            else if (petalo.isLegado || petalo.onlyText) {
                 // 🔹 Solo para  escibir en el pdf el texto del petalo, y no seguir el formato titulo:texto (Ejemplo legado : SANANDO, REPARANDO , REVIVIENDO)
                 
                 y-= 12;// pequeña separación previa
