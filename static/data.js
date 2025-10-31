@@ -2017,7 +2017,7 @@ const petalos = [
                             },
                             {
                                 linkName: "petalo-3/7/1/2", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 2",
-                                text: "A la gente no le gusta estar conmigo. Si consigo lo que quiero perderá algo. Quien no sufre, no ama. Desear a alguien diferente a mi pareja es algo malo.",onlyText: true
+                                text: "A la gente no le gusta estar conmigo. Si consigo lo que quiero perderá algo. Quien no sufre, no ama. Desear a alguien diferente a mi pareja es algo malo.",noText: true
 
                             },
                             {
