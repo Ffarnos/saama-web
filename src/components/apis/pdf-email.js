@@ -6,7 +6,7 @@ const createAndSendPDF = async () => {
     const existingPdfBytes = await loadPDF();
     const pdfDoc = await PDFDocument.load(existingPdfBytes);
     const page = pdfDoc.getPage(0);
-    const problems = localStorage.getItem("problems").split(",")
+    const problems = (localStorage.getItem("problems") || "").split(",").filter(Boolean)
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
     const fontBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
     const maxWidth = page.getSize().width - 30;
@@ -51,7 +51,6 @@ const createAndSendPDF = async () => {
 
     let y = 780;
     let currentPage = pdfDoc.addPage([595, 842]);
-    const petalosCopy = JSON.parse(JSON.stringify(petalos));
     const { petalosArray, ramifiArray } = getListOfPetalos();
 
     console.log(petalosArray);
@@ -147,13 +146,7 @@ const createAndSendPDF = async () => {
 
     y = y - 30
 
-    for (let i = 0; i < ramifiArray.length; i++) {
-        if (ramifiArray[i].length >= 3) {
-            const firstElement = ramifiArray[i].shift(); // Elimina y guarda el primer elemento
-            ramifiArray[i].splice(2, 0, firstElement); // Inserta el primer elemento en la posición 2
-        }
-
-    }
+   
 
 
     for (const petalo of ramifiArray) {
@@ -318,7 +311,7 @@ const createAndSendPDF = async () => {
     link.download = localStorage.getItem("paciente") + '.pdf';
     link.click();
 
-    petalos = petalosCopy;
+   
 
     /*
     const pdfBase64 = arrayBufferToBase64(pdfBytes);
@@ -356,11 +349,11 @@ const createAndSendPDF = async () => {
 const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBold) => {
     if (petalo.subPetalos) {
         if (petalo.title.length > 2) {
-            if (petalo.title === 'Emociones')
-                petalo.title = 'EMOCIONES (se anularon las siguientes emociones)'
-
-            const estilo = getEstiloForTextField(petalo.title, font, fontBold, 16);
-            currentPage.drawText(petalo.title, { x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font });
+            const renderTitle = (petalo.title === 'Emociones')
+            ? 'EMOCIONES (se anularon las siguientes emociones)'
+            : petalo.title;
+            const estilo = getEstiloForTextField(renderTitle, font, fontBold, 16);
+            currentPage.drawText(renderTitle, {x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font});
             y -= 28; // gap tras título de subPetalos
         }
 
@@ -721,29 +714,26 @@ const getListOfPetalos = () => {
 
                 correcciones++;
             } else {
-                p = getPetaloWithLink(petalos, link);
+                // separar base y texto SIEMPRE (aunque p exista sin fieldText)
+                const [base, ...rest] = link.split(':');
+                p = getPetaloWithLink(petalos, base || link);
+                if (!p) return;
+                p = { ...p }; // clonar antes de tocar
 
-                //SI NO ENCUENTRA EL PETALO (PORQUE EL LINK TIENE TEXTFIELD)
-                if (!p || p.fieldText) {
-                    const splitted = link.split(":");
-                    p = getPetaloWithLink(petalos, splitted[0] || link);
-
-                    if (!p) return;
-
-                    if (splitted.length > 1) {
-                        if (p.separate) {
-                            // reemplaza directamente
-                            p = { ...p, textField: splitted[1] };
-                        }
-                        else {
-                                if (isStringInCorrecciones(historyArrayOrden, link)) {
-                                    // ⚡ Si está en corrección, reemplazo el texto anterior
-                                    p.textField = splitted[1];
-                                } else {
-                                    // comportamiento por defecto: concatenar con “:”
-                                    p.textField = p.textField ? `${p.textField}:${splitted[1]}` : splitted[1];
-                                }
-                        }
+                if (rest.length) {
+                    const tf = rest.join(':');
+                    
+                    if (p.separate) {
+                        
+                        p.textField = tf;
+                    } 
+                    else if (isStringInCorrecciones(historyArrayOrden, link)) {
+                        
+                        p.textField = tf; // reemplazo dentro de corrección
+                    } 
+                    else {
+                        
+                        p.textField = p.textField ? `${p.textField}:${tf}` : tf; // acumular en el clon
                     }
                 }
 
@@ -768,19 +758,6 @@ const getListOfPetalos = () => {
         });
 
 
-        //CONSIGUE EL OBJETO PETALO DE CADA LINK DE CADA RAMIFICACION
-
-        const clearTextFields = (petalo) => {
-            if (petalo.textField) {
-                console.log("ENCONTRO PETALO CON TEXTFIELD Y LO SACO")
-                petalo.textField = '';
-            }
-            if (petalo.subPetalos)
-                petalo.subPetalos.forEach(clearTextFields);
-        };
-
-        petalos.forEach(petalo => clearTextFields(petalo));
-
 
         let x = 0;
         let ramificando = false;
@@ -795,10 +772,10 @@ const getListOfPetalos = () => {
                     p = getObjectOfLink(link)
 
                 if (p) {
-                    if ((!p.linkName?.includes("petalo-5/7")) && ramiLinks[x].find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(ramiLinks[x], link))
+                    if ((!p.linkName?.includes("petalo-5/7")) && ramiLinks[x].includes(p.linkName) && p.textField && !isStringInCorrecciones(ramiLinks[x], link))
                         ramifiArray = ramifiArray.filter(item => item.linkName !== p.linkName);
 
-                    if (!p.linkName || (!ramiLinks[x].find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(ramiLinks[x], link))
+                    if (!p.linkName || (!ramiLinks[x].includes(p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(ramiLinks[x], link))
                         ramifiArray.push(p);
                 }
             })
@@ -1150,26 +1127,26 @@ const isStringInCorrecciones = (array, targetString) => {
     let inCorreccion = false;
     let foundTarget = false;
 
-    for (const item of array) {
+    for (let i = 0; i < array.length; i++) {
+        const item = array[i];
+
         if (item === "correccion") {
-            if (inCorreccion) {
-                // Si ya está en corrección y encontramos otra, salimos
-                inCorreccion = false; // Cambiamos el estado al salir de la corrección
-            } else {
-                inCorreccion = true; // Entramos en una nueva corrección
-                foundTarget = false; // Reiniciamos la búsqueda al entrar en una nueva corrección
-            }
-        } else if (inCorreccion) {
-            if (item === targetString) {
-                if (foundTarget) {
-                    return false; // El string ya fue encontrado en esta corrección
-                }
-                foundTarget = true; // Marcamos que encontramos el string
-            }
+        // Si hay dos 'correccion' seguidas => cierre + apertura (no cambia el estado neto)
+        if (array[i + 1] === "correccion") {
+            i++;                // consumir la segunda
+            continue;           // estado inCorreccion queda igual
+        }
+        inCorreccion = !inCorreccion; // toggle normal
+        continue;
+        }
+
+        if (inCorreccion && item === targetString) {
+        if (foundTarget) return false; // ya apareció antes dentro de la misma corrección
+        foundTarget = true;
         }
     }
 
-    return foundTarget; // Retorna true si el string fue encontrado en la corrección
+    return foundTarget;
 };
 
 export default createAndSendPDF;
