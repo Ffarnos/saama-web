@@ -760,27 +760,62 @@ const getListOfPetalos = () => {
 
 
         let x = 0;
-        let ramificando = false;
-        console.log(ramiLinks)
+        console.log(ramiLinks);
+
         ramiLinks.forEach((rami) => {
-            rami.forEach((link) => {
-                let p;
-                if (link === "ramificar") {
-                    p = { title: ramificando ? "RAMIFICARCLOSE" : "RAMIFICAROPEN" }
-                    ramificando = !ramificando
-                } else
-                    p = getObjectOfLink(link)
+        let ramificando = false;
+        const seenBase = new Set(); // bases ya agregadas en ESTA ramificación (sin :texto)
 
-                if (p) {
-                    if ((!p.linkName?.includes("petalo-5/7")) && ramiLinks[x].includes(p.linkName) && p.textField && !isStringInCorrecciones(ramiLinks[x], link))
-                        ramifiArray = ramifiArray.filter(item => item.linkName !== p.linkName);
+        rami.forEach((link) => {
+            let p;
+            if (link === "ramificar") {
+            p = { title: ramificando ? "RAMIFICARCLOSE" : "RAMIFICAROPEN" };
+            ramificando = !ramificando;
+            } else {
+            p = getObjectOfLink(link);
+            }
 
-                    if (!p.linkName || (!ramiLinks[x].includes(p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(ramiLinks[x], link))
-                        ramifiArray.push(p);
-                }
-            })
-            x++;
-        })
+            if (!p) return;
+
+            // Marcadores visuales de apertura/cierre: siempre se agregan
+            if (p.title === "RAMIFICAROPEN" || p.title === "RAMIFICARCLOSE") {
+            ramifiArray.push(p);
+            return;
+            }
+
+            const baseName = ((p.linkName || "")).split(":")[0];   // ej: "petalo-3/2/2/8"
+            const inCorreccion = isStringInCorrecciones(rami, link);
+
+            // Si no hay baseName (obj sin linkName) lo agrego igual
+            if (!baseName) {
+            ramifiArray.push(p);
+            return;
+            }
+
+            // Si aún no agregué esta base en ESTA ramificación, o es un caso especial
+            // (vidas pasadas petalo-5/7) o viene desde corrección, lo agrego.
+            if (!seenBase.has(baseName) || baseName.includes("petalo-5/7") || inCorreccion) {
+            ramifiArray.push(p);
+            seenBase.add(baseName);
+            return;
+            }
+
+            // Si ya estaba esa base y ahora viene una versión con textField (más “rica”),
+            // reemplazo la anterior por esta.
+            if (p.textField && !inCorreccion) {
+            ramifiArray = ramifiArray.filter(
+                (item) => ((item.linkName || "").split(":")[0]) !== baseName
+            );
+            ramifiArray.push(p);
+            // seenBase ya la tenía marcada
+            return;
+            }
+
+            // Si ya estaba y no trae nada nuevo, no hago nada.
+        });
+
+        x++;
+        });
     }
 
     console.log("HISTORIAL", petalosArray);
@@ -1124,29 +1159,29 @@ const putVidasPasadas = (vidasPasadas, arrayWithOutVidas) => {
 }
 
 const isStringInCorrecciones = (array, targetString) => {
-    let inCorreccion = false;
-    let foundTarget = false;
+   let inCorreccion = false;
+   let foundTarget = false;
 
-    for (let i = 0; i < array.length; i++) {
-        const item = array[i];
+  for (let i = 0; i < array.length; i++) {
+    const item = array[i];
 
-        if (item === "correccion") {
-        // Si hay dos 'correccion' seguidas => cierre + apertura (no cambia el estado neto)
-        if (array[i + 1] === "correccion") {
-            i++;                // consumir la segunda
-            continue;           // estado inCorreccion queda igual
-        }
-        inCorreccion = !inCorreccion; // toggle normal
-        continue;
-        }
-
-        if (inCorreccion && item === targetString) {
-        if (foundTarget) return false; // ya apareció antes dentro de la misma corrección
-        foundTarget = true;
-        }
+    if (item === "correccion") {
+      // Si hay dos 'correccion' seguidas => cierre + apertura (no cambia el estado neto)
+      if (array[i + 1] === "correccion") {
+        i++;                // consumir la segunda
+        continue;           // estado inCorreccion queda igual
+      }
+      inCorreccion = !inCorreccion; // toggle normal
+      continue;
     }
 
-    return foundTarget;
+    if (inCorreccion && item === targetString) {
+      if (foundTarget) return false; // ya apareció antes dentro de la misma corrección
+      foundTarget = true;
+    }
+  }
+
+  return foundTarget;
 };
 
 export default createAndSendPDF;
