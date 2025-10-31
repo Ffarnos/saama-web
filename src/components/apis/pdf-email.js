@@ -347,7 +347,7 @@ const createAndSendPDF = async () => {
 
 
 const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBold) => {
-    if (petalo.subPetalos) {
+    if (petalo.subPetalos && petalo.subPetalos.length > 0) {
         if (petalo.title.length > 2) {
             const renderTitle = (petalo.title === 'Emociones')
             ? 'EMOCIONES (se anularon las siguientes emociones)'
@@ -765,12 +765,15 @@ const getListOfPetalos = () => {
         ramiLinks.forEach((rami) => {
         let ramificando = false;
         const seenBase = new Set(); // bases ya agregadas en ESTA ramificación (sin :texto)
-
+        let lastRoot = null;        // 👈 nuevo: para trackear la raíz (ej: petalo-7)
+        
         rami.forEach((link) => {
             let p;
             if (link === "ramificar") {
             p = { title: ramificando ? "RAMIFICARCLOSE" : "RAMIFICAROPEN" };
             ramificando = !ramificando;
+            lastRoot = null; // 👈 resetea al abrir/cerrar rama
+
             } else {
             p = getObjectOfLink(link);
             }
@@ -786,6 +789,19 @@ const getListOfPetalos = () => {
             const baseName = ((p.linkName || "")).split(":")[0];   // ej: "petalo-3/2/2/8"
             const inCorreccion = isStringInCorrecciones(rami, link);
 
+            // 👇 NUEVO BLOQUE: inserta el padre antes del primer hijo de cada raíz
+            if (p.linkName) {
+                const root = p.linkName.split("/")[0]; // ej: "petalo-7"
+                if (root && root !== lastRoot) {
+                    const parent = getPetaloWithLink(petalos, root);
+                    if (parent) {
+                        ramifiArray.push({ ...parent });
+                    }
+                    lastRoot = root;
+                }
+            }
+            
+            
             // Si no hay baseName (obj sin linkName) lo agrego igual
             if (!baseName) {
             ramifiArray.push(p);
