@@ -478,17 +478,6 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
     
             y -= 1;
 
-            // LEGADO unificado
-            if (petalo.isLegado && petalo.textField) {
-                
-                y-=16;
-
-                const contenido = petalo.textField;
-                currentPage.drawText("HEREDADO DE:", { x: 22, y, size: 13, font: fontBold, color: rgb(0, 0, 0) });
-                currentPage.drawText(contenido, { x: 127, y, size: 12, font, color: rgb(0, 0, 0) });
-                
-                y -= 32;
-            }
 
             // Imagen
             if (petalo.imageBody) {
@@ -524,43 +513,60 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
         y-=12;
     }
 
-    // TEXTFIELD FINAL fuera de LEGADO
-    if (petalo.textField && !petalo.isLegado) {
-            // Detectar si es fuente 2 (o cualquier fuente que quieras compactar)
-        const esFuente2 = petalo.linkName?.startsWith("petalo-2/1");
+        // TEXTFIELD FINAL (para cualquier nodo)
+    if (petalo.textField) {
+        if (petalo.isLegado) {
+            y -= 16;
+            if (y <= 30) { currentPage = pdfDoc.addPage([595, 842]); y = 780; }
 
+            const contenido = (petalo.textField ?? "").toString();
+            currentPage.drawText("HEREDADO DE:", { x: 22, y, size: 13, font: fontBold, color: rgb(0,0,0) });
+            currentPage.drawText(contenido,       { x: 127, y, size: 12, font,       color: rgb(0,0,0) });
+            y -= 32;
+        } 
+    }
+    // arriba del archivo (opcional, para centralizar valores)
+const LEADING = 15;      // salto por renglón dentro del bullet
+const BULLET_GAP = 6;    // espacio extra entre bullets
 
-        const lines = petalo.textField
-            .split(/\n|:/)
-            .map(l => l.trim())
-            .filter(Boolean);
+// ...
 
-        for (const line of lines) {
-            const bullet = `- ${line}`;
-            const wrappedTextField = wrapText(bullet, maxWidth, font, 12);
+// TEXTFIELD FINAL fuera de LEGADO
+if (petalo.textField && !petalo.isLegado) {
+    const esFuente2 = petalo.linkName?.startsWith("petalo-2/1");
 
-            for (const subLine of wrappedTextField.split('\n')) {
-                currentPage.drawText(subLine, {
-                    x: 22,
-                    y,
-                    size: 12,
-                    color: rgb(0, 0, 0),
-                    font
-                });
-                y -= 12;
-                if (y <= 30) {
-                    currentPage = pdfDoc.addPage([595, 842]);
-                    y = 780;
-                }
-            }
+    const lines = petalo.textField
+        .split(/\n|:/)
+        .map(l => l.trim())
+        .filter(Boolean);
 
-            y -= (esFuente2 ? 1 : 2); // espacio entre bullets (más compacto si es fuente 2)
+    for (const line of lines) {
+        const bullet = `- ${line}`;
+        const wrappedTextField = wrapText(bullet, maxWidth, font, 12);
+
+        // cada renglón del bullet
+        for (const subLine of wrappedTextField.split('\n')) {
+        currentPage.drawText(subLine, {
+            x: 22,
+            y,
+            size: 12,
+            color: rgb(0, 0, 0),
+            font
+        });
+        y -= LEADING;                 // <-- antes 12
+        if (y <= 30) {                // control de salto de página
+            currentPage = pdfDoc.addPage([595, 842]);
+            y = 780;
+        }
         }
 
-        // margen inferior del bloque de bullets (separación del próximo título, ej. "Miedos")
-        y -= 18;  // <-- NUEVO
-      
+        // gap entre un bullet y el siguiente
+        y -= (esFuente2 ? BULLET_GAP : BULLET_GAP); // podés dejar un valor fijo
     }
+
+    // margen inferior del bloque de bullets (separación del próximo título)
+    y -= 18;
+}
      
     
 
@@ -745,16 +751,34 @@ const getListOfPetalos = () => {
         historyArrayOrden.forEach((link) => {
             console.log("LINK ", link);
 
+            const p = getObjectOfLink(link);
+            if (!p) return;
 
-            const p = getObjectOfLink(link)
-            if (p) {
-                if ((!p.linkName?.includes("petalo-5/7/1")) && petalosArray.find(item => item.linkName === p.linkName) && p.textField && !isStringInCorrecciones(historyArrayOrden, link))
-                    petalosArray = petalosArray.filter(item => item.linkName !== p.linkName);
+            const enCorreccion = isStringInCorrecciones(historyArrayOrden, link);
+            const key = p.linkName || "";
+            const idx = petalosArray.findIndex(item => item.linkName === key);
 
-                if (!p.linkName || (!petalosArray.find(item => item.linkName === p.linkName)) || p.linkName.includes("petalo-5/7") || isStringInCorrecciones(historyArrayOrden, link))
-                    petalosArray.push(p);
+            // Helper para acumular texto (a:b:c)
+            const acc = (prev, val) => (prev ? `${prev}:${val}` : val);
+
+            if (
+                idx !== -1 &&         // ya existe ese pétalo en el array
+                p.textField &&        // viene nuevo texto
+                !enCorreccion         // (si querés acumular también en corrección, quitá esta condición)
+            ) {
+                // ✅ MERGE en vez de reemplazar/borrar
+                const prev = petalosArray[idx];
+                petalosArray[idx] = {
+                ...prev,
+                ...p,
+                textField: acc(prev.textField, p.textField),
+                };
+            } else {
+                // Alta normal: no existe aún, o estamos en corrección, o casos especiales
+                if (!key || idx === -1 || key.includes("petalo-5/7") || enCorreccion) {
+                petalosArray.push(p);
+                }
             }
-
         });
 
 
@@ -1176,8 +1200,7 @@ const putVidasPasadas = (vidasPasadas, arrayWithOutVidas) => {
 
 const isStringInCorrecciones = (array, targetString) => {
    let inCorreccion = false;
-   let foundTarget = false;
-
+   
   for (let i = 0; i < array.length; i++) {
     const item = array[i];
 
@@ -1192,12 +1215,11 @@ const isStringInCorrecciones = (array, targetString) => {
     }
 
     if (inCorreccion && item === targetString) {
-      if (foundTarget) return false; // ya apareció antes dentro de la misma corrección
-      foundTarget = true;
+      return true;
     }
   }
 
-  return foundTarget;
+  return false;
 };
 
 export default createAndSendPDF;

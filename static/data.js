@@ -1477,7 +1477,6 @@ const petalos = [
                                     {
                                         linkName: "petalo-3/2/2/5/1",
                                         image: 'boton3',
-                                        fieldText: true,
                                         separation: true,
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "A",
@@ -1488,7 +1487,6 @@ const petalos = [
                                     {
                                         linkName: "petalo-3/2/2/5/2",
                                         image: 'boton3',
-                                        fieldText: true,
                                         separation: true,
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "B",
@@ -1499,7 +1497,6 @@ const petalos = [
                                     {
                                         linkName: "petalo-3/2/2/5/3",
                                         image: 'boton3',
-                                        fieldText: true,
                                         separation: true,
                                         titlePage: "LEGADO TRANSGENERACIONAL",
                                         title: "C",
@@ -1507,7 +1504,8 @@ const petalos = [
                                         text: "REVIVIENDO LEGADO",
                                         isLegado: true
                                     },
-                                ]
+                                ],
+                                isLegado: true
                             },
                             {
                                 linkName: "petalo-3/2/2/6",
@@ -1812,7 +1810,7 @@ const petalos = [
                 ]
             },
             {
-                linkName: "petalo-3/6", image: 'boton3', title: "¿Que me bloquea?", text: "Existen situaciones en las cuales nos debilitamos o estresamos y también nos podemos bloquear, creando un desgaste interno muy profundo, esta corrección nos ayuda inteligentemente a sanar el punto detectado de una manera armoniosa y liberadora. (Se anularon los siguientes bloqueos)", noNumbers: true, subPetalos: [
+                linkName: "petalo-3/6", image: 'boton3', title: "¿QUE ME BLOQUEA?", text: "Existen situaciones en las cuales nos debilitamos o estresamos y también nos podemos bloquear, creando un desgaste interno muy profundo, esta corrección nos ayuda inteligentemente a sanar el punto detectado de una manera armoniosa y liberadora. (Se anularon los siguientes bloqueos)", noNumbers: true, subPetalos: [
                     {
                         linkName: "petalo-3/6/1", image: 'boton3', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
@@ -2017,7 +2015,7 @@ const petalos = [
                             },
                             {
                                 linkName: "petalo-3/7/1/2", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 2",
-                                text: "A la gente no le gusta estar conmigo. Si consigo lo que quiero perderá algo. Quien no sufre, no ama. Desear a alguien diferente a mi pareja es algo malo.",noText: true
+                                text: "A la gente no le gusta estar conmigo. Si consigo lo que quiero perderá algo. Quien no sufre, no ama. Desear a alguien diferente a mi pareja es algo malo.",noTe: true
 
                             },
                             {

@@ -12,6 +12,7 @@ import { LegadoButton  } from "../navigation/LegadoButton";
 const createdPages = require('../../../../createdPages.json');
 
 const PetalosTemplate = ({ pageContext }) => {
+    const [isTextFieldFocused, setIsTextFieldFocused] = useState(false);
     const {linkName, title, image, subPetalos, noNumber, titlePage} = pageContext
     const [showAlert, setShowAlert] = useState(false);
     const [input, setInput] = useState(0);
@@ -45,6 +46,9 @@ const PetalosTemplate = ({ pageContext }) => {
         },
     });
 
+    const ln = (linkName || "").replace(/\/+$/, "");
+    const hasFieldText = ln === "petalo-3/2/2/5" || ln.startsWith("petalo-3/2/2/5/");
+    
     return <LoginCheck>
     <Background style={{backgroundImage: `url(${imagePath})`}}>
         <Container>
@@ -69,7 +73,53 @@ const PetalosTemplate = ({ pageContext }) => {
                     variant="standard"
                 />
                 </ThemeProvider>}
-                </ContainerHorizontal>
+                
+                </ContainerHorizontal> 
+                {hasFieldText && (
+                                <div
+                                style={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "12px",
+                                justifyContent: "center"
+                                }}
+                            >
+                                
+                                <span
+                                    style={{
+                                    fontSize: "25px",
+                                    fontWeight: "bold",
+                                    color: "#ffffffff",
+                                    whiteSpace: "nowrap"
+                                    }}
+                                >
+                                    HEREDADO DE :
+                                </span>
+                               
+
+                                <TextField
+                                    id={`emocion-${linkName}`} // 🔹 ID único por pétalo
+                                    variant="filled"
+                                    margin="normal"
+                                    onChange={(e) => {
+                                    let history = localStorage.getItem("history");
+                                    history = history ? JSON.parse(history) : [];
+                                    const lastLink = history[history.length - 1] || "";
+                                    const lastEmotionLink = lastLink.split(":")[0];
+                                    history[history.length - 1] = lastEmotionLink + ":" + e.target.value;
+                                    localStorage.setItem("history", JSON.stringify(history));
+                                    }}
+                                    onFocus={() => setIsTextFieldFocused(true)}
+                                    onBlur={() => setIsTextFieldFocused(false)}
+                                    sx={{
+                                    backgroundColor: 'white',
+                                    '&:hover': { backgroundColor: 'white' },
+                                    '&.Mui-focused': { backgroundColor: 'white' },
+                                    '& .MuiFilledInput-root': { backgroundColor: 'white' }
+                                    }}
+                                />
+                                </div>
+                            )}
             </NoCircleContainer>
             {showAlert && <ContainerAlert>
                 <Alert severity="error">

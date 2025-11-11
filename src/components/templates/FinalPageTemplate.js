@@ -197,19 +197,7 @@ const FinalPageTemplate = ({ pageContext }) => {
                                 justifyContent: "center"
                                 }}
                             >
-                                {/* Solo mostrar el label si es LEGADO */}
-                                {linkName.includes("/5/") && (
-                                <span
-                                    style={{
-                                    fontSize: "25px",
-                                    fontWeight: "bold",
-                                    color: "#ffffffff",
-                                    whiteSpace: "nowrap"
-                                    }}
-                                >
-                                    HEREDADO DE :
-                                </span>
-                                )}
+                               
                                 <TextField
                                     id={`emocion-${linkName}`} // 🔹 ID único por pétalo
                                     variant="filled"
