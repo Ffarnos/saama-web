@@ -354,7 +354,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
             : petalo.title;
             const estilo = getEstiloForTextField(renderTitle, font, fontBold, 16);
             currentPage.drawText(renderTitle, {x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font});
-            y -= 28; // gap tras título de subPetalos
+            y -= 18; // gap tras título de subPetalos
         }
 
         if (petalo.text) {
@@ -443,7 +443,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                 }
             } else if (!petalo.isLegado) {
                 // 🔹 Imprime título + texto solo si no es legado , es decir a todos los demas que no entren en los else if de arriba
-                y-= 16;
+                y-= 18;
                 
                 // 🔸 Dibuja el título en bold (14)
                 const titleText = `${petalo.title}:`;
@@ -476,7 +476,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                 }
             } 
     
-            y -= 1;
+            y -= 10;
 
 
             // Imagen
@@ -1053,7 +1053,7 @@ const OrdenarFuente = (links) => {
             if (correccion) {
                 correcciones.push({
                     antLink: antLink,
-                    correccionPetalos: correccionPetalos
+                    correccionPetalos: dedupeLinksByBase(correccionPetalos)
                 })
                 correccionPetalos = []
             }
@@ -1070,10 +1070,12 @@ const OrdenarFuente = (links) => {
     const petaloEspecial = [];
     const linksNormales = [];
 
+    
     console.log("Links sin correcciones:", linksWithOutCorreciones);
     linksWithOutCorreciones.forEach(link => {
-        if (link === "petalo-3/2/2/5") {
-            petaloEspecial.push(link);
+        const base = getBaseFromLink(link); // <-- usamos la base
+        if (base === "petalo-3/2/2/5") {
+            petaloEspecial.push(link);      // cualquier variante: con o sin :texto
         } else {
             linksNormales.push(link);
         }
@@ -1130,6 +1132,9 @@ const OrdenarFuente = (links) => {
         ...otrosEspeciales,
         ...elementosNormales
     ];
+    
+    // 🛡 Limpieza final por si todavía quedó algún duplicado
+    correccion.correccionPetalos = dedupeLinksByBase(correccion.correccionPetalos);
  });
 
     console.log("🔧 Correcciones ordenadas:", correcciones);
@@ -1220,6 +1225,40 @@ const isStringInCorrecciones = (array, targetString) => {
   }
 
   return false;
+};
+
+// Devuelve la parte "base" del link, sin el texto a la derecha de los :
+const getBaseFromLink = (link) => (link || "").split(':')[0];
+
+
+// Paso el Array de links y devuelve otro sin duplicados por base
+// Elimina duplicados por base (petalo-3/3/1/2) dejando, si es posible,
+// la versión que tenga texto (petalo-3/3/1/2:algo)
+const dedupeLinksByBase = (links) => {
+    const result = [];
+    const indexByBase = new Map();
+
+    links.forEach(link => {
+        const base = getBaseFromLink(link);
+        const hasText = (link || "").includes(':');
+
+        if (!indexByBase.has(base)) {
+            indexByBase.set(base, result.length);
+            result.push(link);
+        } else {
+            const idx = indexByBase.get(base);
+            const existing = result[idx];
+            const existingHasText = existing.includes(':');
+
+            // Si el nuevo tiene texto y el viejo no, reemplazo
+            if (hasText && !existingHasText) {
+                result[idx] = link;
+            }
+            // Si ambos tienen texto, dejo el primero (o podrías combinar, pero no hace falta)
+        }
+    });
+
+    return result;
 };
 
 export default createAndSendPDF;
