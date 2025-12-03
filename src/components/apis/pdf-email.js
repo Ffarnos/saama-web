@@ -308,7 +308,7 @@ const createAndSendPDF = async () => {
     const pdfUrl = URL.createObjectURL(pdfBlob);
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = localStorage.getItem("paciente") + '.pdf';
+    link.download = localStorage.getItem("paciente") +' DEVOLUCION TERAPIA GENESIS' + '.pdf';
     link.click();
 
    
@@ -476,7 +476,12 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
                 }
             } 
     
-            y -= 10;
+            // 👇 SOLO bajo 10 si realmente dibujé algo
+            // y no es un pétalo compacto de emociones
+            if (!(petalo.textFieldCompact && petalo.noText && !petalo.isLegado)) {
+                y -= 10;
+            }
+
 
 
             // Imagen
@@ -507,10 +512,15 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
         } else if (petalo.title) {
             const estilo = getEstiloForTextField(petalo.title, font, fontBold, 12);
             currentPage.drawText(petalo.title, { x: 22, y, size: estilo.size, color: estilo.color, font: estilo.font });
-            y -= 18; // 👈 antes: 70
+            y -= 18; // espacio después del título
         }
         
-        y-=12;
+        // 🔹 Solo agrego este espacio extra si NO es compacto
+        if (petalo.textFieldCompact) {
+            // no bajo nada
+        } else {
+            y -= 12;  // espacio normal
+        }
     }
 
         // TEXTFIELD FINAL (para cualquier nodo)
@@ -527,7 +537,7 @@ const textPetalo = async (petalo, currentPage, y, pdfDoc, maxWidth, font, fontBo
     }
     // arriba del archivo (opcional, para centralizar valores)
 const LEADING = 15;      // salto por renglón dentro del bullet
-const BULLET_GAP = 6;    // espacio extra entre bullets
+const BULLET_GAP = 10;    // espacio extra entre bullets
 
 // ...
 
@@ -565,7 +575,14 @@ if (petalo.textField && !petalo.isLegado) {
     }
 
     // margen inferior del bloque de bullets (separación del próximo título)
-    y -= 18;
+    if (petalo.textFieldCompact) {
+        // Emociones por teclado: casi sin espacio entre bloques
+        y -= 4;   // probá 0, 4 o 6 hasta que te guste
+    } else {
+        // Resto de los pétalos: separación normal
+        y -= 18;
+    }
+    
 }
      
     

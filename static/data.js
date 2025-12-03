@@ -210,36 +210,36 @@ const petalos = [
     {
         linkName: "petalo-2", image: 'boton2', text: "Aquí anulamos cada emoción que apareció en el transcurso de tu sesión, en algunos casos pudieron ser borradas directamente y en otras ocasiones necesita más trabajo de liberación para eliminarlas por completo. (Se anularon las siguientes emociones)", title: "Fuente Emocional", subPetalos: [
             {
-                linkName: "petalo-2/1", image: 'boton2', title: "EMOCIONES", noNumbers: true, subPetalos: [
+                linkName: "petalo-2/1", image: 'boton2', title: "EMOCIONES", noNumbers: true,subPetalos: [
                     {
                         linkName: "petalo-2/1/1", image: 'boton2', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
                                 linkName: "petalo-2/1/1/1", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "A 1",
-                                text: "ABRUMADO. ABURRIMIENTO. AGOBIO. AGOTADO",noText: true
+                                text: "ABRUMADO. ABURRIMIENTO. AGOBIO. AGOTADO",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-2/1/1/2", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "A 2",
-                                text: "ADICCIÓN AL PESIMISMO. ADICCIÓN AL SEXO. ADICCIÓN FELICIDAD. ADICCIÓN HUMILLACIÓN",noText: true
+                                text: "ADICCIÓN AL PESIMISMO. ADICCIÓN AL SEXO. ADICCIÓN FELICIDAD. ADICCIÓN HUMILLACIÓN",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-2/1/1/3", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "A 3",
-                                text: "AMARGURA. AMOR NO RECIBIDO. ANGUSTIA. ANSIEDAD",noText: true
+                                text: "AMARGURA. AMOR NO RECIBIDO. ANGUSTIA. ANSIEDAD",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-2/1/1/4", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "A 4",
-                                text: "APATÍA. ARREPENTIMIENTO. ASCO. AUTO DESPRECIO",noText: true              
+                                text: "APATÍA. ARREPENTIMIENTO. ASCO. AUTO DESPRECIO",noText: true,textFieldCompact: true             
                             },
                             {
                                 linkName: "petalo-2/1/1/5", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "A 5",
-                                text: "AUTOLESIÓN. BAJA AUTOESTIMA. CELOS. COLERA",noText: true 
+                                text: "AUTOLESIÓN. BAJA AUTOESTIMA. CELOS. COLERA",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-2/1/1/6", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "A 6",
-                                text: "COMPITIENDO CON.. CONFLICTO. CONFUSIÓN. CRITICAR O CRITICADO",noText: true
+                                text: "COMPITIENDO CON.. CONFLICTO. CONFUSIÓN. CRITICAR O CRITICADO",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-2/1/1/7", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "A 7",
-                                text: "CULPABILIDAD. DEPRESIÓN. DESAMPARO. DESÁNIMO",noText: true
+                                text: "CULPABILIDAD. DEPRESIÓN. DESAMPARO. DESÁNIMO",noText: true,textFieldCompact: true
                             },
                         ]
                     },
@@ -247,31 +247,31 @@ const petalos = [
                         linkName: "petalo-2/1/2", image: 'boton2', title: "B", index: 1, colorBorder: "blue", subPetalos: [
                             {
                                 linkName: "petalo-2/1/2/1", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "B 1",
-                                text: "DESCONECTADO DE ALGO/ALGUIEN. DESCONFIAR. DESCONSUELO. DESESPERACIÓN/DESESPERADO",noText: true
+                                text: "DESCONECTADO DE ALGO/ALGUIEN. DESCONFIAR. DESCONSUELO. DESESPERACIÓN/DESESPERADO",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-2/1/2/2", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "B 2",
-                                text: "DESESPERANZA. DESILUSIÓN. DESPRECIO. DESPROTECCIÓN",noText: true
+                                text: "DESESPERANZA. DESILUSIÓN. DESPRECIO. DESPROTECCIÓN",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-2/1/2/3", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "B 3",
-                                text: "DESTRUCTIVO. DESVALORIZACIÓN. DUDA. ENFADO",noText: true
+                                text: "DESTRUCTIVO. DESVALORIZACIÓN. DUDA. ENFADO",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-2/1/2/4", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "B 4",
-                                text: "EXCESO DE RESPONSABILIDAD. EXCESO FUERTE DE ALEGRÍA. FALTA DE CONTROL. FALTA DE IMAGINACIÓN",noText: true
+                                text: "EXCESO DE RESPONSABILIDAD. EXCESO FUERTE DE ALEGRÍA. FALTA DE CONTROL. FALTA DE IMAGINACIÓN",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-2/1/2/5", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "B 5",
-                                text: "FALTA DE PERDÓN. FALTA PERSONALIDAD. FURIA... FRACASO",noText: true
+                                text: "FALTA DE PERDÓN. FALTA PERSONALIDAD. FURIA... FRACASO",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-2/1/2/6", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "B 6",
-                                text: "HABER HUMILLADO A ALGUIEN. HAMBRE DE ALGO. HORROR. IMPACIENCIA",noText: true
+                                text: "HABER HUMILLADO A ALGUIEN. HAMBRE DE ALGO. HORROR. IMPACIENCIA",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-2/1/2/7", image: 'boton2', fieldText: true, separation: true, titlePage: 'Emociones', title: "B 7",
-                                text: "IMPOTENCIA. INDECISIÓN. INDIFERENCIA. INDIGNADO",noText: true
+                                text: "IMPOTENCIA. INDECISIÓN. INDIFERENCIA. INDIGNADO",noText: true,textFieldCompact: true
                             },
                         ]
                     },
@@ -2011,11 +2011,11 @@ const petalos = [
                         linkName: "petalo-3/7/1", image: 'boton3', title: "A", index: 0, colorBorder: "red", subPetalos: [
                             {
                                 linkName: "petalo-3/7/1/1", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 1",
-                                text: "No quiero crecer. Nunca se lo que quiero de verdad. No sirvo para nada. No valgo nada.",noText: true
+                                text: "No quiero crecer. Nunca se lo que quiero de verdad. No sirvo para nada. No valgo nada.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/1/2", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 2",
-                                text: "A la gente no le gusta estar conmigo. Si consigo lo que quiero perderá algo. Quien no sufre, no ama. Desear a alguien diferente a mi pareja es algo malo.",noTe: true
+                                text: "A la gente no le gusta estar conmigo. Si consigo lo que quiero perderá algo. Quien no sufre, no ama. Desear a alguien diferente a mi pareja es algo malo.",noText: true,textFieldCompact: true
 
                             },
                             {
@@ -2023,21 +2023,21 @@ const petalos = [
                                 text: "No se puede tener mucho dinero y ser buena persona. " +
                                     "Si sufro en la vida obtendré recompensa. " +
                                     "Las cosas hay que conseguir sin ayuda. " +
-                                    "Nadie da algo sin esperar algo a cambio.",noText: true
+                                    "Nadie da algo sin esperar algo a cambio.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/1/4", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 4",
                                 text: "Hay algo más fuerte que yo que me impide avanzar. " +
                                     "La felicidad completa no existe siempre hay algo malo. " +
                                     "No soy lo suficientemente bueno. " +
-                                    "No pertenezco a este clan.",noText: true
+                                    "No pertenezco a este clan.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/1/5", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 5",
                                 text: "No pertenezco a este lugar. " +
                                     "Ser un buen hijo o nieto, es aguantar a mis padres o a mis abuelos contra mis deseos. " +
                                     "Para ser buen padre/madre, tengo que sufrir por mis hijos. " +
-                                    "No merezco ser amado.",noText: true
+                                    "No merezco ser amado.",noText: true,textFieldCompact: true
 
                             },
                             {
@@ -2045,7 +2045,7 @@ const petalos = [
                                 text: "Los hombres son peligrosos. " +
                                     "Las mujeres son peligrosas. " +
                                     "Mi pareja me va a dejar tarde o temprano. " +
-                                    "Tengo que conformarme con lo que tengo. ",noText: true
+                                    "Tengo que conformarme con lo que tengo. ",noText: true,textFieldCompact: true
 
                             },
                             {
@@ -2053,28 +2053,28 @@ const petalos = [
                                 text: "Siempre tengo mala suerte. " +
                                     "Me cuesta mucho esfuerzo aprender. " +
                                     "Mas vale malo conocido que arriesgarse a conocer alguien diferente. " +
-                                    "La vida es dura y difícil.",noText: true
+                                    "La vida es dura y difícil.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/1/8", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 8",
                                 text: "Soy egoísta si pienso en mí. " +
                                     "Me da miedo fracasar. " +
                                     "Me da miedo el éxito. " +
-                                    "No tengo fuerza de voluntad",noText: true    
+                                    "No tengo fuerza de voluntad",noText: true,textFieldCompact: true    
                             },
                             {
                                 linkName: "petalo-3/7/1/9", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 9",
                                 text: "Si expreso mis emociones los demás verán que soy vulnerable. " +
                                     "Ya estoy viejo para aprender cosas nuevas. " +
                                     "Tomar decisiones es un proceso angustioso para mí. " +
-                                    "No soy digno del amor de los demás.",noText: true
+                                    "No soy digno del amor de los demás.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/1/10", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "A 10",
                                 text: "No puedo bajar la guardia. " +
                                     "No está bien cometer errores. " +
                                     "No puedo expresar lo que siento. " +
-                                    "No puedo confiar en nadie",noText: true
+                                    "No puedo confiar en nadie",noText: true,textFieldCompact: true
                             },
                         ]
                     },
@@ -2085,70 +2085,70 @@ const petalos = [
                                 text: "Tener pareja es peligroso para mí. " +
                                     "Tener hijos es peligroso para mí. " +
                                     "Las cosas que me pasan no son culpa mía. " +
-                                    "Tengo que agradar a mi pareja como sea.",noText: true
+                                    "Tengo que agradar a mi pareja como sea.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/2/2", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 2",
                                 text: "Sin un diagnóstico de lo que tengo no podrán curarme. " +
                                     "Mi problema de salud o situación es más importante que la de los demás. " +
                                     "No merezco dar/recibir amor. " +
-                                    "Es inútil querer cambiar las cosas siempre van a ser así.",noText: true
+                                    "Es inútil querer cambiar las cosas siempre van a ser así.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/2/3", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 3",
                                 text: "Debo sufrir y sacrificarme por los demás. " +
                                     "No soy capaz de digerir las cosas malas que me pasan. " +
                                     "La gente solo quiere estar conmigo por algún interés malo. " +
-                                    " Si digo no, la gente no me va querer. ",noText: true
+                                    " Si digo no, la gente no me va querer. ",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/2/4", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 4",
                                 text: "La solución a mis problemas es responsabilidad de otros. " +
                                     "Lo que yo quiero no importa. " +
                                     "Yo soy así no quiero cambiar. " +
-                                    "La mejor defensa es un ataque.",noText: true
+                                    "La mejor defensa es un ataque.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/2/5", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 5",
                                 text: "Es inútil esforzarme no lo voy a conseguir. " +
                                     "Yo no puedo ser. " +
                                     "Yo no puedo tener. " +
-                                    "No puedo lograr las metas que me eh fijado. ",noText: true
+                                    "No puedo lograr las metas que me eh fijado. ",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/2/6", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 6",
                                 text: "No tengo tiempo para nada. " +
                                     "Mi felicidad depende de los demás. " +
                                     "Es peligro relacionarse con desconocido. " +
-                                    "No soy capaz de apartarme de personas que me perjudican.",noText: true
+                                    "No soy capaz de apartarme de personas que me perjudican.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/2/7", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 7",
                                 text: "La gente me usa y luego me abandona. " +
                                     "Cuanto más difícil es algo mayor es la recompensa. " +
                                     "Hago cosas por todo el mundo y nadie me lo agradece como yo merezco. " +
-                                    "Solo debo portarme bien, con quien se porta bien conmigo.",noText: true
+                                    "Solo debo portarme bien, con quien se porta bien conmigo.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/2/8", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 8",
                                 text: "Dependo del que dirán y necesito aprobación. " +
                                     "La gente no cambia. " +
                                     "Hay que analizar todo muy bien antes de dar el primer paso. " +
-                                    "No hago nada bien.",noText: true
+                                    "No hago nada bien.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/2/9", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 9",
                                 text: "No quiero destacar para no ser criticado. " +
                                     "No merezco vivir en la vida con armonía/plenitud. " +
                                     "No se puede ser espiritual y no meditar. " +
-                                    "Tener confianza en uno mismo te lleva a la arrogancia.",noText: true
+                                    "Tener confianza en uno mismo te lleva a la arrogancia.",noText: true,textFieldCompact: true
                             },
                             {
                                 linkName: "petalo-3/7/2/10", image: 'boton3', fieldText: true, separation: true, titlePage: 'Creencias Limitantes', title: "B 10",
                                 text: "No valgo como padre/madre. " +
                                     "No soy capaz de decir mi opinión frente a un grupo de personas. " +
                                     "No soy capaz de corregir mis errores y pedir disculpas. " +
-                                    "El dinero es difícil de ganar y fácil de perder",noText: true
+                                    "El dinero es difícil de ganar y fácil de perder",noText: true,textFieldCompact: true
                             },
                         ]
                     },
