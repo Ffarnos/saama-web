@@ -18,8 +18,20 @@ const firebaseConfig = {
 
 initializeApp(firebaseConfig);
 
+// 👇 IMPORTANTE: adapter y flags
+const netlifyAdapter = require("gatsby-adapter-netlify").default;
+
 module.exports = {
   jsxRuntime: 'automatic',
+
+  // 👇 Desactiva los queries en paralelo (el origen del MDB_BAD_TXN)
+  flags: {
+    PARALLEL_QUERY_RUNNING: false,
+  },
+
+  // 👇 Usa el adapter “nuevo” para Netlify
+  adapter: netlifyAdapter(),
+
   siteMetadata: {
     title: 'Terapia Genesis',
     siteUrl: 'https://www.terapiagenesisapp.com',
@@ -45,15 +57,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        'name': 'images',
-        'path': './src/images/',
+        name: 'images',
+        path: './src/images/',
       },
       __key: 'images',
     },
-    
     `gatsby-plugin-react-helmet`,
-
     `gatsby-plugin-offline`,
-    `gatsby-adapter-netlify`
+    // ❌ OJO: gatsby-adapter-netlify NO va en plugins, va como "adapter" arriba
   ],
 };
