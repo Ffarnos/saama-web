@@ -18,52 +18,51 @@ const firebaseConfig = {
 
 initializeApp(firebaseConfig);
 
-// 👇 IMPORTANTE: adapter y flags
+// 👇 ESTA ES LA FORMA CORRECTA DEL ADAPTER
 const netlifyAdapter = require("gatsby-adapter-netlify").default;
 
 module.exports = {
-  jsxRuntime: 'automatic',
+  jsxRuntime: "automatic",
 
-  // 👇 Desactiva los queries en paralelo (el origen del MDB_BAD_TXN)
-  flags: {
-    PARALLEL_QUERY_RUNNING: false,
-  },
-
-  // 👇 Usa el adapter “nuevo” para Netlify
+  // 👇 ADAPTER OFICIAL (REEMPLAZA AL PLUGIN)
   adapter: netlifyAdapter(),
 
   siteMetadata: {
-    title: 'Terapia Genesis',
-    siteUrl: 'https://www.terapiagenesisapp.com',
+    title: "Terapia Genesis",
+    siteUrl: "https://www.terapiagenesisapp.com",
   },
+
   plugins: [
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sitemap",
+
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: 'Terapia Genesis',
-        start_url: '/',
-        background_color: '#100e17',
-        theme_color: '#100e17',
-        display: 'standalone',
-        icon: 'src/images/icon.png',
-        cache_busting_mode: 'none'
+        name: "Terapia Genesis",
+        start_url: "/",
+        background_color: "#100e17",
+        theme_color: "#100e17",
+        display: "standalone",
+        icon: "src/images/icon.png",
+        cache_busting_mode: "none",
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
-        path: './src/images/',
+        name: "images",
+        path: "./src/images/",
       },
-      __key: 'images',
+      __key: "images",
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-offline`,
-    // ❌ OJO: gatsby-adapter-netlify NO va en plugins, va como "adapter" arriba
+
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-offline",
   ],
 };

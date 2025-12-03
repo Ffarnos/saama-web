@@ -51,7 +51,7 @@ const CirculoBase = () => {
                 </Title>
                 {showAlert && <ContainerAlert>
                     <Alert severity="error">
-                        LA pagina solicitada no existe
+                        La pagina solicitada no existe
                     </Alert>
                 </ContainerAlert>}
                 <Buttons
