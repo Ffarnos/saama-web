@@ -18,7 +18,7 @@ const firebaseConfig = {
 
 initializeApp(firebaseConfig);
 
-// 👇 ESTA ES LA FORMA CORRECTA DEL ADAPTER
+// 👇 ESTA ES LA FORMA CORRECTA DEL ADAPTERR
 const netlifyAdapter = require("gatsby-adapter-netlify").default;
 
 module.exports = {
